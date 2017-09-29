@@ -1,0 +1,29 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family:'微軟正黑體';
+	
+}
+
+
+h1{
+	font-size:48px;
+}
+
+h2{
+	font-size:40px;
+}
+
+p{
+	font-size:22px;
+	letter-spacing: 1px;
+	line-height: 36px;
+}
+
+.btn{
+	font-size:24px;
+	font-family:'微軟正黑體';
+}
