@@ -1,5 +1,6 @@
+body {
+  background-color: #ca0; }
+
 h1 {
-  font-size: 100px; }
-h2 {
-	font-size: 200px;
-}
+  font-size: 50px;
+  background-color: #ccc; }
