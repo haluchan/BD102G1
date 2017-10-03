@@ -48,7 +48,7 @@ module.exports = function (grunt) {
           browser: "Google Chrome",
           server: {
             baseDir: './',
-            index: 'index.html'
+            index: 'event-inside.html'
           }
         }
       }
