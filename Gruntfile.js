@@ -45,7 +45,7 @@ module.exports = function (grunt) {
         },
         options: {
           watchTask: true,
-          browser: "Google Chrome",
+          browser: "Chrome",
           server: {
             baseDir: './',
             index: 'event-inside.html'
