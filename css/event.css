@@ -31,7 +31,7 @@
 		margin:0;
 		width:100%;
 		height:100vh;
-	  	background-image:url(img/bg2.gif);
+	  	background-image:url('../src/image/event/bg2.gif');
 	  	background-repeat: repeat;
 		
 	}
@@ -160,7 +160,7 @@
 	
 	}
 	.firstblockbg{
-		background-image: url('img/05.png');
+		background-image: url('../src/image/event/05.png');
 		background-repeat:repeat-x;
 		background-position: center;
 		background-size: contain;
@@ -291,7 +291,7 @@
 		content: '';
 		width: 370px;
 		height: 370px;
-		background-image: url('img/circle_pc_blue.png');
+		background-image: url('../src/image/event/circle_pc_blue.png');
 		background-size: contain;
 		position: absolute;
 		animation: 40s linear rot infinite;
@@ -303,7 +303,7 @@
 		content: '';
 		width: 370px;
 		height: 370px;
-		background-image: url('img/circle_pc_pink.png');
+		background-image: url('../src/image/event/circle_pc_pink.png');
 		background-size: contain;
 		position: absolute;
 		animation: 40s linear rot infinite;
@@ -315,7 +315,7 @@
 		content: '';
 		width: 370px;
 		height: 370px;
-		background-image: url('img/circle_pc_pink.png');
+		background-image: url('../src/image/event/circle_pc_pink.png');
 		background-size: contain;
 		position: absolute;
 		animation: 40s linear rot infinite;
@@ -434,7 +434,7 @@
 	}
 	/*==================*/
 	.campfieldblock{
-		background: url('fieldbc.png') fixed no-repeat;
+		background: url('../src/image/event/fieldbc.png') fixed no-repeat;
 		height:450px;
 		
 		text-align: center;
