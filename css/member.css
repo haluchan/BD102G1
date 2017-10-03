@@ -1,0 +1,25 @@
+	*{
+		margin:0px;
+		padding:0px;
+		font-family: "正黑體";
+	}
+	body{
+	  	background-image:url(img/img11.png);
+	}
+	.mem .table{
+		text-align: center;
+		margin: 0 auto;
+	}
+	.table table{
+		text-align: center;
+		margin: 0 auto;
+	}
+	.table{
+		box-shadow: 1px 1px 2px #000;
+		width: 300px;
+		background-image: url('img/bcg.png');
+	}
+	.table td{
+		border-radius: 50px;
+
+	}
