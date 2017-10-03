@@ -1,0 +1,26 @@
+@charset "UTF-8";
+//響應式
+	$moblie : 767px ; //小於719px->手機
+    $tablet_min : 1199px;//平板最大值
+    $tablet_max : 768px;//平板最小值
+    $desktop : 1200px;//大於1200px->桌機
+
+
+
+    @mixin rwd ($breakpoint) {
+        @if $breakpoint=="moblie" {
+            @media screen and (max-width: $moblie) {
+                @content;
+            }
+        }
+        @else if $breakpoint=="tablet" {
+            @media screen and (min-width: $tablet_min) and (max-width:$tablet_max) {
+                @content;
+            }
+        }
+        @else if $breakpoint=="desktop" {
+            @media screen and (min-width: $desktop) {
+                @content;
+            }
+        }
+    }

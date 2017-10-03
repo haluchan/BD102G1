@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+img {
+  width: 100%; }
+
+.clear:after {
+  clear: both;
+  content: "";
+  display: block; }
+
+section {
+  width: 100%;
+  background-image: url("../src/image/fish/star_base.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  section .fish_universeBase {
+    position: relative; }
+    section .fish_universeBase .star > img {
+      width: 90%; }
+    section .fish_universeBase .fish_universeTitle {
+      width: 30%;
+      border: 1px solid transparent;
+      position: absolute;
+      left: 50px;
+      top: 20%; }
+    section .fish_universeBase .fish_universeItem {
+      border: 1px solid transparent;
+      margin: auto;
+      position: absolute; }
+      section .fish_universeBase .fish_universeItem#rocket {
+        width: 13%;
+        left: 10%;
+        top: 70%; }
+      section .fish_universeBase .fish_universeItem#earth {
+        width: 30%;
+        transform: scale(0.8);
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 30%;
+        animation: earth 30s infinite linear; }
+        section .fish_universeBase .fish_universeItem#earth.big {
+          transform: scale(1); }
+      section .fish_universeBase .fish_universeItem#hand {
+        width: 30%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 0; }
+      section .fish_universeBase .fish_universeItem#tank {
+        width: 20%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 30%; }
+        section .fish_universeBase .fish_universeItem#tank #fish {
+          position: absolute;
+          width: 50%;
+          left: 0;
+          right: 0;
+          margin: auto;
+          bottom: 20%;
+          animation: swim 5s infinite linear; }
+      section .fish_universeBase .fish_universeItem#plant {
+        width: 15%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 10%; }
+      section .fish_universeBase .fish_universeItem#planet {
+        width: 10%;
+        right: 5%;
+        top: 60%; }
+
+@keyframes earth {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+@keyframes swim {
+  from {
+    left: -40%; }
+  20% {
+    left: 0;
+    bottom: 15%; }
+  50% {
+    left: 40%;
+    bottom: 20%;
+    transform: scaleX(1); }
+  50.5% {
+    transform: scaleX(-1); }
+  70% {
+    left: 0;
+    bottom: 10%; }
+  90% {
+    left: -20%;
+    bottom: 20%;
+    transform: scaleX(-1); }
+  to {
+    left: -40%;
+    bottom: 10%;
+    transform: scaleX(-1); } }
+@keyframes xAxis {
+  50% {
+    animation-timing-function: ease-in;
+    transform: translateX(100px); } }
+@keyframes yAxis {
+  50% {
+    animation-timing-function: ease-out;
+    transform: translateY(-100px); } }
+.container {
+  background-color: #eeeade; }
+  .container .step {
+    width: 50%;
+    margin: 0  auto 100px;
+    border: 1px solid transparent;
+    position: relative; }
+    @media screen and (max-width: 767px) {
+      .container .step {
+        width: 90%; } }
+    .container .step .stepFlow {
+      width: 100%;
+      margin: auto;
+      padding: 10% 0 0; }
+      @media screen and (min-width: 1199px) and (max-width: 768px) {
+        .container .step .stepFlow {
+          width: 100%;
+          padding: 0; } }
+      .container .step .stepFlow .stepFlowLeft {
+        width: 40%;
+        float: left; }
+        @media screen and (min-width: 1199px) and (max-width: 768px) {
+          .container .step .stepFlow .stepFlowLeft {
+            width: 100%;
+            padding: 0; } }
+        .container .step .stepFlow .stepFlowLeft .stepbig {
+          color: #7e7a7f;
+          margin: 5% 0;
+          text-align: center; }
+          @media screen and (max-width: 767px) {
+            .container .step .stepFlow .stepFlowLeft .stepbig p {
+              font-size: 18px; } }
+          .container .step .stepFlow .stepFlowLeft .stepbig#one {
+            left: 10%;
+            top: 10%; }
+            @media screen and (max-width: 767px) {
+              .container .step .stepFlow .stepFlowLeft .stepbig#one {
+                left: 0;
+                top: 0; } }
+          .container .step .stepFlow .stepFlowLeft .stepbig#two {
+            right: 10%;
+            top: 20%; }
+            @media screen and (max-width: 767px) {
+              .container .step .stepFlow .stepFlowLeft .stepbig#two {
+                left: 0; } }
+          .container .step .stepFlow .stepFlowLeft .stepbig#three {
+            right: 20%;
+            top: 50%; }
+            @media screen and (max-width: 767px) {
+              .container .step .stepFlow .stepFlowLeft .stepbig#three {
+                left: 0; } }
+          .container .step .stepFlow .stepFlowLeft .stepbig .stepCircle {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 100px;
+            border-radius: 50px; }
+            @media screen and (max-width: 767px) {
+              .container .step .stepFlow .stepFlowLeft .stepbig .stepCircle {
+                width: 50px;
+                height: 50px;
+                font-size: 18px;
+                line-height: 50px; } }
+            .container .step .stepFlow .stepFlowLeft .stepbig .stepCircle#stepOne {
+              background-color: #50b26d; }
+            .container .step .stepFlow .stepFlowLeft .stepbig .stepCircle#stepTwo {
+              background-color: #466f79; }
+            .container .step .stepFlow .stepFlowLeft .stepbig .stepCircle#stepThree {
+              background-color: #ebc125; }
+      .container .step .stepFlow .stepFlowRight {
+        width: 60%;
+        float: left; }
+        @media screen and (min-width: 1199px) and (max-width: 768px) {
+          .container .step .stepFlow .stepFlowRight {
+            width: 100%; } }
+    .container .step .stepContent {
+      width: 100%;
+      margin: auto;
+      padding: 5% 0%; }
+      .container .step .stepContent p {
+        color: #7e7a7f; }
+      @media screen and (max-width: 767px) {
+        .container .step .stepContent p {
+          font-size: 18px; } }
+    .container .step .stepBuy {
+      width: 150px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      background-color: #e8d59b;
+      margin: auto; }
+      .container .step .stepBuy a {
+        text-decoration: none;
+        color: #000; }
+  .container .theory {
+    border: 1px solid transparent;
+    width: 50%;
+    margin: 0 auto 100px; }
+    @media screen and (max-width: 767px) {
+      .container .theory {
+        width: 90%; } }
+    .container .theory .theoryTitle {
+      width: 30%;
+      margin: auto; }
+      @media screen and (max-width: 767px) {
+        .container .theory .theoryTitle {
+          width: 50%; } }
+  .container .role {
+    border: 1px solid transparent;
+    width: 50%;
+    margin: auto;
+    text-align: center; }
+    @media screen and (max-width: 767px) {
+      .container .role {
+        width: 100%; } }
+    .container .role .roleItem {
+      width: 30%;
+      display: inline-block;
+      vertical-align: top;
+      margin: auto; }
+      @media screen and (max-width: 767px) {
+        .container .role .roleItem {
+          width: 100%;
+          margin: 5% auto; } }
+      .container .role .roleItem .roleItemTitle {
+        text-align: center; }
+        @media screen and (max-width: 767px) {
+          .container .role .roleItem .roleItemTitle h2 {
+            font-size: 24px; } }
+      .container .role .roleItem .roleItemPic {
+        border: 1px solid transparent;
+        height: 100%; }
+        @media screen and (max-width: 767px) {
+          .container .role .roleItem .roleItemPic {
+            width: 40%;
+            float: left; } }
+      .container .role .roleItem .roleItemTxt {
+        width: 100%; }
+        @media screen and (max-width: 767px) {
+          .container .role .roleItem .roleItemTxt {
+            width: 50%;
+            float: left; } }
+        .container .role .roleItem .roleItemTxt p {
+          padding: 0 10px;
+          text-align: justify; }
+          @media screen and (max-width: 767px) {
+            .container .role .roleItem .roleItemTxt p {
+              font-size: 18px; } }
+
+#rocket {
+  animation: shakes 1s linear infinite; }
+
+@keyframes shakes {
+  10% {
+    transform: translate(2px, 10px); }
+  20% {
+    transform: translate(4px, 8px); }
+  30% {
+    transform: translate(1px, 10px); }
+  40% {
+    transform: translate(10px, 3px); }
+  50% {
+    transform: translate(8px, 3px); }
+  60% {
+    transform: translate(5px, 6px); }
+  70% {
+    transform: translate(10px, 3px); }
+  80% {
+    transform: translate(4px, 10px); }
+  90% {
+    transform: translate(7px, 8px); }
+  100% {
+    transform: translate(0, 0); } }
