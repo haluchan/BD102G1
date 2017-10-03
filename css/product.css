@@ -21,7 +21,7 @@ img {
 /* 種子市場 */
 .pro_seed {
   /*背景圖大小 1770*1337*/
-  background-image: url("../../src/image/product/pro-bg1.jpg");
+  background-image: url("../src/image/product/pro-bg1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   /* 商品區(種子)*/
@@ -132,7 +132,6 @@ img {
         opacity: 0; }
   .pro_seed .pro_s_end {
     width: 100%;
-    background-image: url("../../src/image/product/pro-s-end2.png");
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat; }
@@ -145,7 +144,7 @@ img {
 
 /* 魚缸超市 */
 .pro_tank {
-  background-image: url("../../src/image/product/pro-bg2.jpg");
+  background-image: url("../src/image/product/pro-bg2.jpg");
   /* 商品區(魚缸) */
   /* 層架圖 */
   /* 魚缸資料區 */ }
