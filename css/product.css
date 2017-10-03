@@ -1,5 +1,7 @@
 @charset "UTF-8";
+/* 共用設定 */
 img {
+  width: 100%;
   vertical-align: top; }
 
 .ccc {
@@ -8,86 +10,82 @@ img {
 /* 遮雨棚 */
 .pro_tent {
   position: relative; }
-  .pro_tent div img {
+  .pro_tent div {
     width: 100%; }
   .pro_tent h1 {
     position: absolute;
     margin: auto;
-    top: 68%;
+    top: 65%;
     right: 0;
     left: 0;
     text-align: center; }
+    @media all and (max-width: 1440px) and (min-width: 767px) {
+      .pro_tent h1 {
+        color: red;
+        font-size: 3.37vw; } }
 
 /* 種子市場 */
 .pro_seed {
   /*背景圖大小 1770*1337*/
-  background-image: url("../../src/image/product/pro-bg1.jpg");
+  background-image: url("../src/image/product/pro-bg1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   /* 商品區(種子)*/
   /* 攤販底部 */ }
   .pro_seed .pro_s_cabinet {
-    width: 1440px;
     margin: auto;
     list-style: none;
     border: 10px solid #6D5844;
     margin-top: 10%;
     /* 商品 */ }
     .pro_seed .pro_s_cabinet > li {
-      width: 340px;
-      height: 376px;
       border: 10px solid #6D5844;
       background-color: #514336;
       position: relative;
       float: left;
       /* hover */ }
-      .pro_seed .pro_s_cabinet > li .pro_s_vegetable {
-        width: 340px;
-        height: 376px; }
-        .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand {
-          width: 119.988px;
-          margin: auto;
-          left: 0;
-          right: 0;
-          top: -10%;
-          position: absolute; }
-          .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div {
-            border-radius: 6px; }
-            .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:first-child img {
-              width: 100%; }
-            .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:nth-child(2) {
-              background-color: #ccc;
-              text-align: center;
-              margin: auto;
-              margin-top: -80%;
-              font-size: 30px;
-              color: #F7931E; }
-            .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:last-child {
-              width: 60%;
-              margin: auto;
-              margin-right: -28%;
-              margin-top: -60%;
-              transform: rotateZ(25deg); }
-              .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:last-child img {
-                width: 100%; }
-        .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_img {
-          position: absolute;
-          width: 360px;
-          margin: auto;
-          left: -10px;
-          right: 0;
-          bottom: 0; }
-          .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_img img {
-            width: 100%; }
+      @media all and (min-width: 1440px) {
+        .pro_seed .pro_s_cabinet > li {
+          width: 340px;
+          height: 376px; } }
+      .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand {
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: -10%;
+        position: absolute; }
+        .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div {
+          border-radius: 6px; }
+          .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:nth-child(2) {
+            background-color: #ccc;
+            text-align: center;
+            margin: auto;
+            margin-top: -80%;
+            font-size: 30px;
+            color: #F7931E; }
+          .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:last-child {
+            width: 60%;
+            margin: auto;
+            margin-right: -28%;
+            margin-top: -60%;
+            transform: rotateZ(25deg); }
+      .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_img {
+        position: absolute;
+        margin: auto;
+        left: -10px;
+        right: 0;
+        bottom: 0; }
       .pro_seed .pro_s_cabinet > li .pro_s_white {
         opacity: 0;
-        width: 340px;
-        height: 376px;
         background-color: rgba(255, 255, 255, 0.9);
         position: absolute;
         margin: auto;
         top: 0;
         z-index: 5; }
+        @media all and (min-width: 1440px) {
+          .pro_seed .pro_s_cabinet > li .pro_s_white {
+            width: 340px;
+            height: 376px; } }
         .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info {
           width: 80%;
           margin: auto;
@@ -132,20 +130,16 @@ img {
         opacity: 0; }
   .pro_seed .pro_s_end {
     width: 100%;
-    background-image: url("../../src/image/product/pro-s-end2.png");
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat; }
     .pro_seed .pro_s_end div {
       margin: auto;
-      width: 1440px;
       border: 10px solid #877159; }
-      .pro_seed .pro_s_end div img {
-        width: 100%; }
 
 /* 魚缸超市 */
 .pro_tank {
-  background-image: url("../../src/image/product/pro-bg2.jpg");
+  background-image: url("../src/image/product/pro-bg2.jpg");
   /* 商品區(魚缸) */
   /* 層架圖 */
   /* 魚缸資料區 */ }
@@ -154,11 +148,9 @@ img {
     position: relative;
     margin-top: 9%; }
     .pro_tank .pro_t_wheel .pro_t_lightbox {
-      width: 1440px;
       margin: auto;
       overflow: hidden; }
       .pro_tank .pro_t_wheel .pro_t_lightbox .pro_t_shelf {
-        width: 1324.8px;
         text-align: center;
         list-style: none;
         margin: auto; }
@@ -174,8 +166,6 @@ img {
             border-radius: 10%;
             overflow: hidden;
             border: 1px solid rgba(0, 0, 0, 0.1); }
-            .pro_tank .pro_t_wheel .pro_t_lightbox .pro_t_shelf li > div:first-child img {
-              width: 100%; }
           .pro_tank .pro_t_wheel .pro_t_lightbox .pro_t_shelf li > div:last-child {
             margin: 5% auto; }
             .pro_tank .pro_t_wheel .pro_t_lightbox .pro_t_shelf li > div:last-child .pro_s_name {
@@ -185,7 +175,6 @@ img {
               font-size: 24px;
               color: #F7931E; }
     .pro_tank .pro_t_wheel .pro_t_toRL {
-      width: 1440px;
       height: 88%;
       margin: auto;
       left: 0;
@@ -207,12 +196,8 @@ img {
         .pro_tank .pro_t_wheel .pro_t_toRL > a:last-child {
           float: right; }
   .pro_tank .pro_t_shelfImg {
-    margin: auto;
-    width: 1440px; }
-    .pro_tank .pro_t_shelfImg img {
-      width: 100%; }
+    margin: auto; }
   .pro_tank .pro_t_info {
-    width: 1440px;
     margin: auto;
     padding: 5% 0;
     /* 大圖+標題+按鈕的部分 */
@@ -229,8 +214,6 @@ img {
           width: 80%;
           margin: auto;
           border: 1px solid rgba(0, 0, 0, 0.1); }
-          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTL div img {
-            width: 100%; }
       .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR {
         margin: auto;
         margin-top: 8%;
