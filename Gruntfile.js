@@ -25,7 +25,7 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'scss/product/',
+          cwd: 'scss/',
           src: ['*.scss'],
           dest: 'css/',
           ext: '.css'
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
           browser: "Chrome",
           server: {
             baseDir: './',
-            index: 'product.html'
+            index: 'index.html'
           }
         }
       }
