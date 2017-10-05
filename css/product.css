@@ -1,7 +1,43 @@
 @charset "UTF-8";
-/* 共用設定 */
+body {
+  font-family: "微軟正黑體"; }
+
+@media only screen and (min-width: 1440px) {
+  h1 {
+    font-size: 44px;
+    border: 2px solid blue; } }
+@media only screen and (min-width: 767px) and (max-width: 1440px) {
+  h1 {
+    font-size: 2.7vw;
+    border: 2px solid red; } }
+@media only screen and (max-width: 766px) {
+  h1 {
+    font-size: 26px;
+    border: 2px solid orange; } }
+
+@media only screen and (min-width: 1440px) {
+  h2 {
+    font-size: 40px;
+    border: 2px solid blue; } }
+@media only screen and (min-width: 767px) and (max-width: 1440px) {
+  h2 {
+    font-size: 2vw;
+    border: 2px solid red; } }
+@media only screen and (max-width: 766px) {
+  h2 {
+    font-size: 18px;
+    border: 2px solid orange; } }
+
+p {
+  font-size: 18px; }
+  @media only screen and (min-width: 767px) and (max-width: 1440px) {
+    p {
+      font-size: 18px; } }
+  @media only screen and (max-width: 766px) {
+    p {
+      font-size: 1em; } }
+
 img {
-  width: 100%;
   vertical-align: top; }
 
 .ccc {
@@ -10,19 +46,18 @@ img {
 /* 遮雨棚 */
 .pro_tent {
   position: relative; }
-  .pro_tent div {
+  @media only screen and (max-width: 766px) {
+    .pro_tent div {
+      transform: scale(1.9, 1.8); } }
+  .pro_tent div img {
     width: 100%; }
   .pro_tent h1 {
     position: absolute;
     margin: auto;
-    top: 65%;
+    top: 68%;
     right: 0;
     left: 0;
     text-align: center; }
-    @media all and (max-width: 1440px) and (min-width: 767px) {
-      .pro_tent h1 {
-        color: red;
-        font-size: 3.37vw; } }
 
 /* 種子市場 */
 .pro_seed {
@@ -30,62 +65,97 @@ img {
   background-image: url("../src/image/product/pro-bg1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /* 商品區(種子)*/
-  /* 攤販底部 */ }
+  /* 商品區(種子)*/ }
   .pro_seed .pro_s_cabinet {
     margin: auto;
     list-style: none;
     border: 10px solid #6D5844;
-    margin-top: 10%;
-    /* 商品 */ }
+    margin-top: 10%; }
+    @media only screen and (min-width: 1440px) {
+      .pro_seed .pro_s_cabinet {
+        width: 1440px; } }
+    @media only screen and (min-width: 767px) and (max-width: 1440px) {
+      .pro_seed .pro_s_cabinet {
+        width: 100%;
+        box-sizing: border-box; } }
+    @media only screen and (max-width: 766px) {
+      .pro_seed .pro_s_cabinet {
+        width: 100%;
+        box-sizing: border-box; } }
     .pro_seed .pro_s_cabinet > li {
-      border: 10px solid #6D5844;
+      /* 商品 */
+      border: 0.3em solid #6D5844;
       background-color: #514336;
       position: relative;
       float: left;
-      /* hover */ }
-      @media all and (min-width: 1440px) {
+      box-sizing: border-box; }
+      @media only screen and (min-width: 1440px) {
         .pro_seed .pro_s_cabinet > li {
-          width: 340px;
-          height: 376px; } }
+          width: 25%;
+          height: 40vh; } }
+      @media only screen and (min-width: 767px) and (max-width: 1440px) {
+        .pro_seed .pro_s_cabinet > li {
+          width: 25%;
+          height: 26vw; } }
+      @media only screen and (max-width: 766px) {
+        .pro_seed .pro_s_cabinet > li {
+          width: 50%;
+          height: 54vw; } }
       .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand {
+        width: 33.33%;
         margin: auto;
         left: 0;
         right: 0;
         top: -10%;
         position: absolute; }
+        @media only screen and (max-width: 766px) {
+          .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand {
+            width: 45%; } }
         .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div {
           border-radius: 6px; }
+          .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:first-child img {
+            width: 100%; }
           .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:nth-child(2) {
-            background-color: #ccc;
             text-align: center;
             margin: auto;
-            margin-top: -80%;
-            font-size: 30px;
-            color: #F7931E; }
+            margin-top: -80%; }
+            @media only screen and (min-width: 1440px) {
+              .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:nth-child(2) {
+                font-size: 30px;
+                color: #F7931E; } }
+            @media only screen and (min-width: 767px) and (max-width: 1440px) {
+              .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:nth-child(2) {
+                font-size: 1.1em;
+                color: #F7931E; } }
+            @media only screen and (max-width: 766px) {
+              .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:nth-child(2) {
+                font-size: 18px;
+                color: #F7931E; } }
           .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:last-child {
             width: 60%;
             margin: auto;
             margin-right: -28%;
             margin-top: -60%;
             transform: rotateZ(25deg); }
+            .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:last-child img {
+              width: 100%; }
       .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_img {
         position: absolute;
         margin: auto;
         left: -10px;
         right: 0;
         bottom: 0; }
+        .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_img img {
+          width: 100%; }
       .pro_seed .pro_s_cabinet > li .pro_s_white {
         opacity: 0;
+        width: 100%;
+        height: 100%;
         background-color: rgba(255, 255, 255, 0.9);
         position: absolute;
         margin: auto;
         top: 0;
         z-index: 5; }
-        @media all and (min-width: 1440px) {
-          .pro_seed .pro_s_cabinet > li .pro_s_white {
-            width: 340px;
-            height: 376px; } }
         .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info {
           width: 80%;
           margin: auto;
@@ -105,11 +175,21 @@ img {
             text-align: center;
             margin: 20px auto; }
             .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info .pro_s_buy span {
-              font-size: 24px;
-              color: #F15A24;
               display: inline-block;
               width: 40%;
               font-weight: bold; }
+              @media only screen and (min-width: 1440px) {
+                .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info .pro_s_buy span {
+                  font-size: 24px;
+                  color: #F15A24; } }
+              @media only screen and (min-width: 767px) and (max-width: 1440px) {
+                .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info .pro_s_buy span {
+                  font-size: 1.05em;
+                  color: #F15A24; } }
+              @media only screen and (max-width: 766px) {
+                .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info .pro_s_buy span {
+                  font-size: 18px;
+                  color: #F15A24; } }
             .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info .pro_s_buy .btn {
               padding: 4px 24px;
               min-width: 100px;
@@ -132,13 +212,20 @@ img {
     width: 100%;
     background-size: contain;
     background-position: center bottom;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    box-sizeing: border-box; }
     .pro_seed .pro_s_end div {
       margin: auto;
       border: 10px solid #877159; }
+      @media only screen and (min-width: 1440px) {
+        .pro_seed .pro_s_end div {
+          width: 1440px; } }
+      .pro_seed .pro_s_end div img {
+        width: 100%; }
 
 /* 魚缸超市 */
 .pro_tank {
+  width: 100%;
   background-image: url("../src/image/product/pro-bg2.jpg");
   /* 商品區(魚缸) */
   /* 層架圖 */
@@ -147,61 +234,123 @@ img {
     margin: auto;
     position: relative;
     margin-top: 9%; }
+    @media only screen and (min-width: 1440px) {
+      .pro_tank .pro_t_wheel {
+        width: 1440px; } }
+    @media only screen and (min-width: 767px) and (max-width: 1440px) {
+      .pro_tank .pro_t_wheel {
+        width: 100%; } }
+    @media only screen and (max-width: 766px) {
+      .pro_tank .pro_t_wheel {
+        width: 100%; } }
     .pro_tank .pro_t_wheel .pro_t_lightbox {
       margin: auto;
       overflow: hidden; }
-      .pro_tank .pro_t_wheel .pro_t_lightbox .pro_t_shelf {
-        text-align: center;
+      .pro_tank .pro_t_wheel .pro_t_lightbox ul {
         list-style: none;
-        margin: auto; }
-        .pro_tank .pro_t_wheel .pro_t_lightbox .pro_t_shelf li {
-          width: 33.33%;
+        margin: auto;
+        width: 150%; }
+        @media only screen and (min-width: 767px) and (max-width: 1440px) {
+          .pro_tank .pro_t_wheel .pro_t_lightbox ul {
+            margin-left: -10px; } }
+        @media only screen and (max-width: 766px) {
+          .pro_tank .pro_t_wheel .pro_t_lightbox ul {
+            width: 100%; } }
+        .pro_tank .pro_t_wheel .pro_t_lightbox ul li {
           padding: 0px 20px;
           box-sizing: border-box;
           float: left;
           text-align: center; }
-          .pro_tank .pro_t_wheel .pro_t_lightbox .pro_t_shelf li > div:first-child {
+          @media only screen and (min-width: 1440px) {
+            .pro_tank .pro_t_wheel .pro_t_lightbox ul li {
+              width: 480px; } }
+          @media only screen and (min-width: 767px) and (max-width: 1440px) {
+            .pro_tank .pro_t_wheel .pro_t_lightbox ul li {
+              width: 33.33vw; } }
+          @media only screen and (max-width: 766px) {
+            .pro_tank .pro_t_wheel .pro_t_lightbox ul li {
+              width: 50%; } }
+          .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:first-child {
             width: 60%;
             margin: auto;
             border-radius: 10%;
             overflow: hidden;
             border: 1px solid rgba(0, 0, 0, 0.1); }
-          .pro_tank .pro_t_wheel .pro_t_lightbox .pro_t_shelf li > div:last-child {
+            @media only screen and (max-width: 766px) {
+              .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:first-child {
+                width: 80%; } }
+            .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:first-child img {
+              width: 100%; }
+          .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child {
             margin: 5% auto; }
-            .pro_tank .pro_t_wheel .pro_t_lightbox .pro_t_shelf li > div:last-child .pro_s_name {
-              font-size: 30px;
-              color: #999; }
-            .pro_tank .pro_t_wheel .pro_t_lightbox .pro_t_shelf li > div:last-child div:last-child {
-              font-size: 24px;
-              color: #F7931E; }
+            @media only screen and (min-width: 1440px) {
+              .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child .pro_s_name {
+                font-size: 30px;
+                color: #999; } }
+            @media only screen and (min-width: 767px) and (max-width: 1440px) {
+              .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child .pro_s_name {
+                font-size: 1.1em;
+                color: #999; } }
+            @media only screen and (max-width: 766px) {
+              .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child .pro_s_name {
+                font-size: 18px;
+                color: #999; } }
+            @media only screen and (min-width: 1440px) {
+              .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child div:last-child {
+                font-size: 24px;
+                color: #F7931E; } }
+            @media only screen and (min-width: 767px) and (max-width: 1440px) {
+              .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child div:last-child {
+                font-size: 1.05em;
+                color: #F7931E; } }
+            @media only screen and (max-width: 766px) {
+              .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child div:last-child {
+                font-size: 18px;
+                color: #F7931E; } }
     .pro_tank .pro_t_wheel .pro_t_toRL {
-      height: 88%;
-      margin: auto;
+      height: 100%;
+      position: absolute;
       left: 0;
       right: 0;
-      bottom: 12%;
-      position: absolute; }
+      bottom: 0;
+      top: 0; }
+      @media only screen and (max-width: 766px) {
+        .pro_tank .pro_t_wheel .pro_t_toRL {
+          display: none; } }
       .pro_tank .pro_t_wheel .pro_t_toRL > a {
-        padding: 20px;
+        padding: 3vw 1vw;
         font-size: 30px;
         height: 100%;
-        color: #777; }
+        color: #777;
+        box-sizing: border-box; }
         .pro_tank .pro_t_wheel .pro_t_toRL > a:hover {
           background-color: #ccc;
           opacity: .5; }
         .pro_tank .pro_t_wheel .pro_t_toRL > a i {
-          margin-top: 130px; }
+          margin-top: 7vw; }
         .pro_tank .pro_t_wheel .pro_t_toRL > a:first-child {
           float: left; }
         .pro_tank .pro_t_wheel .pro_t_toRL > a:last-child {
           float: right; }
   .pro_tank .pro_t_shelfImg {
-    margin: auto; }
+    margin: auto;
+    padding: 0 5%; }
+    .pro_tank .pro_t_shelfImg img {
+      width: 100%; }
   .pro_tank .pro_t_info {
     margin: auto;
     padding: 5% 0;
     /* 大圖+標題+按鈕的部分 */
     /* 規格和注意事項 */ }
+    @media only screen and (min-width: 1440px) {
+      .pro_tank .pro_t_info {
+        width: 1440px; } }
+    @media only screen and (min-width: 767px) and (max-width: 1440px) {
+      .pro_tank .pro_t_info {
+        width: 100%; } }
+    @media only screen and (max-width: 766px) {
+      .pro_tank .pro_t_info {
+        width: 100%; } }
     .pro_tank .pro_t_info > div + div {
       margin-top: 4%; }
     .pro_tank .pro_t_info .pro_t_infoTop {
@@ -214,6 +363,8 @@ img {
           width: 80%;
           margin: auto;
           border: 1px solid rgba(0, 0, 0, 0.1); }
+          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTL div img {
+            width: 100%; }
       .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR {
         margin: auto;
         margin-top: 8%;
@@ -235,9 +386,19 @@ img {
           text-align: center;
           margin-top: 100px; }
           .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span {
-            font-size: 24px;
-            color: #F15A24;
             font-weight: bold; }
+            @media only screen and (min-width: 1440px) {
+              .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span {
+                font-size: 24px;
+                color: #F15A24; } }
+            @media only screen and (min-width: 767px) and (max-width: 1440px) {
+              .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span {
+                font-size: 1.05em;
+                color: #F15A24; } }
+            @media only screen and (max-width: 766px) {
+              .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span {
+                font-size: 18px;
+                color: #F15A24; } }
           .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy button {
             margin-left: 20px;
             color: #fff;
@@ -253,17 +414,28 @@ img {
             .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy button:hover {
               transform: translateY(0px);
               box-shadow: none; }
-    .pro_tank .pro_t_info .pro_t_infoBottom h3 {
-      font-size: 24px;
-      color: #333;
-      margin: 14px 0;
-      padding: 4px 10px;
-      background-color: #C19369;
-      color: #fff;
-      font-weight: normal; }
-    .pro_tank .pro_t_info .pro_t_infoBottom div {
-      width: 97%;
-      margin: 2% auto;
-      line-height: 26px;
-      letter-spacing: 1px;
-      color: #555; }
+    .pro_tank .pro_t_info .pro_t_infoBottom {
+      width: 100%; }
+      .pro_tank .pro_t_info .pro_t_infoBottom h3 {
+        margin: 14px 0;
+        padding: 4px 10px;
+        background-color: #C19369;
+        font-weight: normal; }
+        @media only screen and (min-width: 1440px) {
+          .pro_tank .pro_t_info .pro_t_infoBottom h3 {
+            font-size: 24px;
+            color: #fff; } }
+        @media only screen and (min-width: 767px) and (max-width: 1440px) {
+          .pro_tank .pro_t_info .pro_t_infoBottom h3 {
+            font-size: 1.05em;
+            color: #fff; } }
+        @media only screen and (max-width: 766px) {
+          .pro_tank .pro_t_info .pro_t_infoBottom h3 {
+            font-size: 18px;
+            color: #fff; } }
+      .pro_tank .pro_t_info .pro_t_infoBottom p {
+        width: 97%;
+        margin: 2% auto;
+        line-height: 26px;
+        letter-spacing: 1px;
+        color: #555; }
