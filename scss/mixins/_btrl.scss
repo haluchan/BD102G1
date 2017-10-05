@@ -1,0 +1,7 @@
+@mixin btrl($what,$num){
+	@for $i from 0 through $num{
+		.#{$what}-#{$i}{
+			#{$what}: $i+px;
+		}
+	}
+}

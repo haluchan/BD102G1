@@ -1,0 +1,7 @@
+@mixin margin_push($dis,$num){
+	@for $i from 1 through $num{
+		.margin-#{$dis}-#{$i}{
+			margin-#{$dis}: $i+px;
+		}
+	}
+}
