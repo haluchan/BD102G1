@@ -8,7 +8,7 @@ $highLight:#F7931E;
 //圖片的微微的框
 $imgBorder: 1px solid rgba(0,0,0,.1);
 
-//		  mixin變數
+
 //判斷變數是pc、pad還是mobile，再依照判斷出來的載入對應的media query
 @mixin pro_breakPoint($point){
 	@if $point == pc{
@@ -24,15 +24,6 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 			@content; 
 		}
 	}
-}
-
-//在不同螢幕尺寸下，蔬菜的格子一列分為幾格($part)
-@mixin pro_eachSeed($screen,$part:0.25){
-	$pro_eachSeedW: $screen*$part;
-	width: ($pro_eachSeedW)-20;
-	height: ($pro_eachSeedW)*1.1-20;
-	box-sizing: border-box;
-  
 }
 
 //第三階層標題(pc-30px): 菜牌的字、魚缸點進去詳細資訊的標題
@@ -83,8 +74,10 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 		box-shadow: none;
 	}
 }
+
+
 body{
-	font-family: "微軟正黑體"; 
+	font-family: "微軟正黑體";
 }
 
 h1{
@@ -107,7 +100,7 @@ h2{
 		border: 2px solid blue;
 	}
 	@include pro_breakPoint(pad){
-		font-size: 2vw;
+		font-size: 3vw;
 		border: 2px solid red;
 	}
 	@include pro_breakPoint(mobile){
@@ -117,15 +110,12 @@ h2{
 }
 p{
 	font-size: 18px;
-	@include pro_breakPoint(pad){
-		font-size: 18px;
-	}
 	@include pro_breakPoint(mobile){
 		font-size: 1em;
 	}
 }
 img{ 
-	// width: 100%;
+	width: 100%;
 	vertical-align: top; 
 }
 
@@ -151,6 +141,22 @@ img{
 		text-align: center;
 	}
 }
+.container{
+	overflow: hidden ;
+}
+
+@include pro_breakPoint(mobile){
+	.mobileHidden{
+		display: none; 
+	}
+	.pro_s_white{
+		display: none; 
+	}
+	.pro_s_mobileInfo{
+		display: block; 
+	}
+
+}
 
 
 
@@ -158,6 +164,10 @@ img{
 
 
 
+
+
+
+//==================================================
 
 /* 種子市場 */
 .pro_seed{
@@ -193,7 +203,7 @@ img{
 			}
 			@include pro_breakPoint(pad){
 				width: 25%;
-				height: 26vw;
+				height: 29vw;
 			}
 			@include pro_breakPoint(mobile){
 				width: 50%;
@@ -277,7 +287,8 @@ img{
 						height: 1px;
 						width: 90%;
 						background-color: #000;
-						margin: 20px auto; 
+						margin: 20px auto;
+						opacity: .2; 
 					}
 
 					//文字段
@@ -306,10 +317,20 @@ img{
 			}//--hover後
 
 			// hover 
-			&:hover{
-				.pro_s_white{ opacity: 1; }
-				.pro_s_brand{ opacity: 0; }
+			@include pro_breakPoint(pc){
+				&:hover{
+					.pro_s_white{ opacity: 1; }
+					.pro_s_brand{ opacity: 0; }
+				}	
 			}
+			@include pro_breakPoint(pad){
+				&:hover{
+					.pro_s_white{ opacity: 1; }
+					.pro_s_brand{ opacity: 0; }
+				}	
+			}
+			
+
 		}//--商品
 	}//--商品區(種子)
 
@@ -332,6 +353,69 @@ img{
 
 }
 
+//手機版的種子資訊，蓋全版
+.pro_s_mobileInfo{
+	display: none; 
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,.4);
+	margin: auto;
+	top: 0;
+	margin-left: -10px; 
+	z-index: 5;
+	.pro_s_info{
+		background-color: #fff;
+		height: 80vh;
+		width: 80vw;
+		margin: auto;
+		margin-top: 15%;
+		border-radius: 10px;
+		text-align: center;
+		overflow: hidden;
+		i{
+			float: right;
+			margin: 10px 12px 0 0;  
+			font-size: 8vw;
+			color: #555; 
+		}
+		.pro_s_real{
+			margin: auto;
+			margin-top: 50px; 
+			width: 70%;
+		}
+		//標題
+		h2{
+			text-align: center;
+			color: $highLight;
+		}
+
+		//黑色分隔線
+		.pro_s_line{
+			height: 1px;
+			width: 80%;
+			background-color: #000;
+			margin: 20px auto;
+			opacity: .2; 
+		}
+		//價格和購買按鈕
+		.pro_s_buy{
+			margin: auto;
+			text-align: center;
+			margin: 20px auto; 
+			span{
+				@include pro_fourthTitle(#F15A24);
+				display: inline-block;
+				width: 30%;
+				font-weight: bold;
+			}
+			.btn{
+				@include btn(16);
+				color: #fff; 
+			}
+		}
+	}
+}
 
 
 
@@ -345,6 +429,7 @@ img{
 
 
 
+//==================================================
 
 /* 魚缸超市 */
 .pro_tank{
@@ -374,11 +459,14 @@ img{
 				list-style:none;
 				margin: auto;
 				width: 150%;
-				@include pro_breakPoint(pad){
-					margin-left: -10px;
+				>div{
+					display: none;
 				}	
 				@include pro_breakPoint(mobile){
 					width: 100%;
+					>div{
+						display: block;
+					}
 				}				
 				//每個商品
 				li{
@@ -394,6 +482,7 @@ img{
 					}
 					@include pro_breakPoint(mobile){
 						width: 50%;
+						margin-top: 10px; 
 					}
 					&>div{
 						&:first-child{
@@ -421,12 +510,11 @@ img{
 					}
 				}//--li 每個商品
 			}//--商品選單
-		}
+		}//--幻燈箱可視區
+
+
 		// 向左右
 		.pro_t_toRL{
-			@include pro_breakPoint(mobile){
-				display: none;
-			}
 			height: 100%; 
 			position: absolute ;
 			left: 0;
@@ -451,15 +539,24 @@ img{
 
 	}//--商品區(魚缸)
 
-	/* 層架圖 */
-	.pro_t_shelfImg{
+
+
+	
+	.pro_t_shelfImg{/* 層架圖 */
 		margin: auto;
 		padding: 0 5%;
 		img{width: 100%} 
 	}
 
-	/* 魚缸資料區 */
-	.pro_t_info{
+
+
+	
+	.pro_t_info{/* 魚缸資料區 */
+		margin: auto;
+		padding: 5% 0; 
+		>div+div{
+			margin-top: 4%;
+		}
 		@include pro_breakPoint(pc){
 			width: $pc;
 		}
@@ -469,14 +566,10 @@ img{
 		@include pro_breakPoint(mobile){
 			width: 100%;
 		}
-		margin: auto;
-		padding: 5% 0; 
-		>div+div{
-			margin-top: 4%;
-		}
 		/* 大圖+標題+按鈕的部分 */
 		.pro_t_infoTop{
 			height: 100%;
+			overflow: hidden;
 			//左大圖
 			.pro_t_infoTL{
 				width: 50%;
@@ -487,24 +580,26 @@ img{
 					margin: auto;
 					border: $imgBorder;
 					img{ width: 100%;}
-					
 				}
 			}
-			//右邊
+			//右邊(pc+pad)
 			.pro_t_infoTR{ 
 				margin: auto;
 				margin-top: 8%;
 				width: 50%;
 				float: left;
+				padding: 0 1%;
+    			box-sizing: border-box;
 				h2{
 					text-align: center;
 					color: #999; 
 				}
-				.pro_t_imgGroup{
+				ul{
 					text-align: center;
 					font-size: 0px;
 					margin-top: 50px;
 					li{
+						width: 18%; 
 						display: inline-block;
 						border: $imgBorder;
 					}
@@ -527,6 +622,43 @@ img{
 					}
 				}
 			}
+			//右邊(mobile)
+			@include pro_breakPoint(mobile){
+				.pro_t_infoTR{
+					width: 100%; 
+					position: relative;
+					margin: 0px;
+					float: none;
+					margin-left: 5%;
+					h2{
+						color: #999;
+						position: absolute;
+						bottom: 13%;
+					}
+					ul{
+						width: 2000px;
+						margin: auto;
+						text-align: left;					
+						li{
+							width: 80vw;
+						}
+						& li+li{
+							margin-left: 1%;
+						}
+					}
+					.pro_t_TBuy{
+						text-align: left;
+						margin-top: 15%;
+						span{}
+						button{
+							display: inline-block;
+							float: right;
+							margin-right: 10%; 
+						}
+					}
+
+				}
+			}
 		}
 
 		/* 規格和注意事項 */
@@ -537,14 +669,18 @@ img{
 				margin: 14px 0;
 				padding: 4px 10px; 
 				background-color: #C19369;
-				font-weight: normal; 
+				font-weight: normal;
 			}
 			p{
 				width: 97%; 
 				margin: 2% auto;
 				line-height: 26px;
 				letter-spacing: 1px;
-				color: #555;   
+				color: #555;
+				@include pro_breakPoint(mobile){
+					width: 92%;
+					margin-left: 5%; 
+				}
 			}
 		}
 	} //--魚缸資料區

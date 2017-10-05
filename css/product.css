@@ -21,7 +21,7 @@ body {
     border: 2px solid blue; } }
 @media only screen and (min-width: 767px) and (max-width: 1440px) {
   h2 {
-    font-size: 2vw;
+    font-size: 3vw;
     border: 2px solid red; } }
 @media only screen and (max-width: 766px) {
   h2 {
@@ -30,14 +30,12 @@ body {
 
 p {
   font-size: 18px; }
-  @media only screen and (min-width: 767px) and (max-width: 1440px) {
-    p {
-      font-size: 18px; } }
   @media only screen and (max-width: 766px) {
     p {
       font-size: 1em; } }
 
 img {
+  width: 100%;
   vertical-align: top; }
 
 .ccc {
@@ -59,6 +57,18 @@ img {
     left: 0;
     text-align: center; }
 
+.container {
+  overflow: hidden; }
+
+@media only screen and (max-width: 766px) {
+  .mobileHidden {
+    display: none; }
+
+  .pro_s_white {
+    display: none; }
+
+  .pro_s_mobileInfo {
+    display: block; } }
 /* 種子市場 */
 .pro_seed {
   /*背景圖大小 1770*1337*/
@@ -96,7 +106,7 @@ img {
       @media only screen and (min-width: 767px) and (max-width: 1440px) {
         .pro_seed .pro_s_cabinet > li {
           width: 25%;
-          height: 26vw; } }
+          height: 29vw; } }
       @media only screen and (max-width: 766px) {
         .pro_seed .pro_s_cabinet > li {
           width: 50%;
@@ -167,7 +177,8 @@ img {
             height: 1px;
             width: 90%;
             background-color: #000;
-            margin: 20px auto; }
+            margin: 20px auto;
+            opacity: .2; }
           .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info p {
             text-align: center; }
           .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info .pro_s_buy {
@@ -204,10 +215,16 @@ img {
               .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info .pro_s_buy .btn:hover {
                 transform: translateY(0px);
                 box-shadow: none; }
-      .pro_seed .pro_s_cabinet > li:hover .pro_s_white {
-        opacity: 1; }
-      .pro_seed .pro_s_cabinet > li:hover .pro_s_brand {
-        opacity: 0; }
+      @media only screen and (min-width: 1440px) {
+        .pro_seed .pro_s_cabinet > li:hover .pro_s_white {
+          opacity: 1; }
+        .pro_seed .pro_s_cabinet > li:hover .pro_s_brand {
+          opacity: 0; } }
+      @media only screen and (min-width: 767px) and (max-width: 1440px) {
+        .pro_seed .pro_s_cabinet > li:hover .pro_s_white {
+          opacity: 1; }
+        .pro_seed .pro_s_cabinet > li:hover .pro_s_brand {
+          opacity: 0; } }
   .pro_seed .pro_s_end {
     width: 100%;
     background-size: contain;
@@ -223,13 +240,83 @@ img {
       .pro_seed .pro_s_end div img {
         width: 100%; }
 
+.pro_s_mobileInfo {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: auto;
+  top: 0;
+  margin-left: -10px;
+  z-index: 5; }
+  .pro_s_mobileInfo .pro_s_info {
+    background-color: #fff;
+    height: 80vh;
+    width: 80vw;
+    margin: auto;
+    margin-top: 15%;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden; }
+    .pro_s_mobileInfo .pro_s_info i {
+      float: right;
+      margin: 10px 12px 0 0;
+      font-size: 8vw;
+      color: #555; }
+    .pro_s_mobileInfo .pro_s_info .pro_s_real {
+      margin: auto;
+      margin-top: 50px;
+      width: 70%; }
+    .pro_s_mobileInfo .pro_s_info h2 {
+      text-align: center;
+      color: #F7931E; }
+    .pro_s_mobileInfo .pro_s_info .pro_s_line {
+      height: 1px;
+      width: 80%;
+      background-color: #000;
+      margin: 20px auto;
+      opacity: .2; }
+    .pro_s_mobileInfo .pro_s_info .pro_s_buy {
+      margin: auto;
+      text-align: center;
+      margin: 20px auto; }
+      .pro_s_mobileInfo .pro_s_info .pro_s_buy span {
+        display: inline-block;
+        width: 30%;
+        font-weight: bold; }
+        @media only screen and (min-width: 1440px) {
+          .pro_s_mobileInfo .pro_s_info .pro_s_buy span {
+            font-size: 24px;
+            color: #F15A24; } }
+        @media only screen and (min-width: 767px) and (max-width: 1440px) {
+          .pro_s_mobileInfo .pro_s_info .pro_s_buy span {
+            font-size: 1.05em;
+            color: #F15A24; } }
+        @media only screen and (max-width: 766px) {
+          .pro_s_mobileInfo .pro_s_info .pro_s_buy span {
+            font-size: 18px;
+            color: #F15A24; } }
+      .pro_s_mobileInfo .pro_s_info .pro_s_buy .btn {
+        padding: 4px 24px;
+        min-width: 100px;
+        border-radius: 10px;
+        border-style: none;
+        font-size: 16px;
+        background-color: #219B00;
+        letter-spacing: 1px;
+        transform: translateY(-2px);
+        box-shadow: 2px 2px 0 0 #ccc;
+        color: #fff; }
+        .pro_s_mobileInfo .pro_s_info .pro_s_buy .btn:hover {
+          transform: translateY(0px);
+          box-shadow: none; }
+
 /* 魚缸超市 */
 .pro_tank {
   width: 100%;
   background-image: url("../src/image/product/pro-bg2.jpg");
-  /* 商品區(魚缸) */
-  /* 層架圖 */
-  /* 魚缸資料區 */ }
+  /* 商品區(魚缸) */ }
   .pro_tank .pro_t_wheel {
     margin: auto;
     position: relative;
@@ -250,12 +337,13 @@ img {
         list-style: none;
         margin: auto;
         width: 150%; }
-        @media only screen and (min-width: 767px) and (max-width: 1440px) {
-          .pro_tank .pro_t_wheel .pro_t_lightbox ul {
-            margin-left: -10px; } }
+        .pro_tank .pro_t_wheel .pro_t_lightbox ul > div {
+          display: none; }
         @media only screen and (max-width: 766px) {
           .pro_tank .pro_t_wheel .pro_t_lightbox ul {
-            width: 100%; } }
+            width: 100%; }
+            .pro_tank .pro_t_wheel .pro_t_lightbox ul > div {
+              display: block; } }
         .pro_tank .pro_t_wheel .pro_t_lightbox ul li {
           padding: 0px 20px;
           box-sizing: border-box;
@@ -269,7 +357,8 @@ img {
               width: 33.33vw; } }
           @media only screen and (max-width: 766px) {
             .pro_tank .pro_t_wheel .pro_t_lightbox ul li {
-              width: 50%; } }
+              width: 50%;
+              margin-top: 10px; } }
           .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:first-child {
             width: 60%;
             margin: auto;
@@ -314,9 +403,6 @@ img {
       right: 0;
       bottom: 0;
       top: 0; }
-      @media only screen and (max-width: 766px) {
-        .pro_tank .pro_t_wheel .pro_t_toRL {
-          display: none; } }
       .pro_tank .pro_t_wheel .pro_t_toRL > a {
         padding: 3vw 1vw;
         font-size: 30px;
@@ -333,15 +419,19 @@ img {
         .pro_tank .pro_t_wheel .pro_t_toRL > a:last-child {
           float: right; }
   .pro_tank .pro_t_shelfImg {
+    /* 層架圖 */
     margin: auto;
     padding: 0 5%; }
     .pro_tank .pro_t_shelfImg img {
       width: 100%; }
   .pro_tank .pro_t_info {
+    /* 魚缸資料區 */
     margin: auto;
     padding: 5% 0;
     /* 大圖+標題+按鈕的部分 */
     /* 規格和注意事項 */ }
+    .pro_tank .pro_t_info > div + div {
+      margin-top: 4%; }
     @media only screen and (min-width: 1440px) {
       .pro_tank .pro_t_info {
         width: 1440px; } }
@@ -351,10 +441,9 @@ img {
     @media only screen and (max-width: 766px) {
       .pro_tank .pro_t_info {
         width: 100%; } }
-    .pro_tank .pro_t_info > div + div {
-      margin-top: 4%; }
     .pro_tank .pro_t_info .pro_t_infoTop {
-      height: 100%; }
+      height: 100%;
+      overflow: hidden; }
       .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTL {
         width: 50%;
         float: left;
@@ -369,18 +458,21 @@ img {
         margin: auto;
         margin-top: 8%;
         width: 50%;
-        float: left; }
+        float: left;
+        padding: 0 1%;
+        box-sizing: border-box; }
         .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR h2 {
           text-align: center;
           color: #999; }
-        .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup {
+        .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR ul {
           text-align: center;
           font-size: 0px;
           margin-top: 50px; }
-          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup li {
+          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR ul li {
+            width: 18%;
             display: inline-block;
             border: 1px solid rgba(0, 0, 0, 0.1); }
-          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup li + li {
+          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR ul li + li {
             margin-left: 2%; }
         .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy {
           text-align: center;
@@ -414,6 +506,32 @@ img {
             .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy button:hover {
               transform: translateY(0px);
               box-shadow: none; }
+      @media only screen and (max-width: 766px) {
+        .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR {
+          width: 100%;
+          position: relative;
+          margin: 0px;
+          float: none;
+          margin-left: 5%; }
+          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR h2 {
+            color: #999;
+            position: absolute;
+            bottom: 13%; }
+          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR ul {
+            width: 2000px;
+            margin: auto;
+            text-align: left; }
+            .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR ul li {
+              width: 80vw; }
+            .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR ul li + li {
+              margin-left: 1%; }
+          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy {
+            text-align: left;
+            margin-top: 15%; }
+            .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy button {
+              display: inline-block;
+              float: right;
+              margin-right: 10%; } }
     .pro_tank .pro_t_info .pro_t_infoBottom {
       width: 100%; }
       .pro_tank .pro_t_info .pro_t_infoBottom h3 {
@@ -439,3 +557,7 @@ img {
         line-height: 26px;
         letter-spacing: 1px;
         color: #555; }
+        @media only screen and (max-width: 766px) {
+          .pro_tank .pro_t_info .pro_t_infoBottom p {
+            width: 92%;
+            margin-left: 5%; } }
