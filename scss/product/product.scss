@@ -1,65 +1,70 @@
 @charset "UTF-8";
-$pc_media:1440px;
-$pad_media:767px;
-$phone_media:766px;
 
-@mixin pro_pc_media() {
-	@media all and (min-width: $pc_media) {
-		@content;
-	}
-}
-@mixin pro_pad_media(){
-	@media all and (max-width: $pc_media) and (min-width: $pad_media){
-		@content;
-	}
-}
-@mixin pro_phone_media(){
-	@media all and (max-width: $phone_media) {
-		@content;
-	}
-}
-
-@mixin pro_pad_width(){
-	@include pro_pad_media(){
-		color: red;
-		@content;
-	}
-}
-
-// @mixin pc_contain(){
-// 	@include pc_media(){
-// 		color: blue;
-// 		$pro_contain:0;
-// 		@content;
-// 	}	
-// }
-
-// 
-@mixin pro_pc_eachSeed(){
-	@include pro_pc_media(){
-		$pro_eachSeedW: $pc_media*0.25;
-		width: ($pro_eachSeedW)-20;
-		height: ($pro_eachSeedW)*1.1-20;
-	}
-	@content;
-}
-
-
-
-
-
-
-
-//圖片的些微邊框線
+$pc:1440px;
+$pad:767px;
+$mobile:766px;
+//醒目色:橘色
+$highLight:#F7931E;
+//圖片的微微的框
 $imgBorder: 1px solid rgba(0,0,0,.1);
 
+//		  mixin變數
+//判斷變數是pc、pad還是mobile，再依照判斷出來的載入對應的media query
+@mixin pro_breakPoint($point){
+	@if $point == pc{
+		@media only screen and (min-width: $pc){
+			@content;
+		}
+	}@else if $point == pad{ 
+		@media only screen and (min-width: $pad) and (max-width: $pc){  
+			@content;
+		}
+	}@else if $point == mobile{ 
+		@media only screen and (max-width: $mobile){
+			@content; 
+		}
+	}
+}
 
+//在不同螢幕尺寸下，蔬菜的格子一列分為幾格($part)
+@mixin pro_eachSeed($screen,$part:0.25){
+	$pro_eachSeedW: $screen*$part;
+	width: ($pro_eachSeedW)-20;
+	height: ($pro_eachSeedW)*1.1-20;
+	box-sizing: border-box;
+  
+}
 
-//填入字體大小和顏色，顏色預設為橘色
-$highLight:#F7931E;
-@mixin pro_sTitle($num,$color:#F7931E){
-	font-size: $num+px;
-	color: $color;
+//第三階層標題(pc-30px): 菜牌的字、魚缸點進去詳細資訊的標題
+@mixin pro_thirdTitle($color:$highLight){
+	@include pro_breakPoint(pc){
+		font-size: 30px;
+		color: $color;
+	}
+	@include pro_breakPoint(pad){
+		font-size: 1.1em;
+		color: $color;
+	}
+	@include pro_breakPoint(mobile){
+		font-size: 18px;
+		color: $color;
+	}
+}
+
+//第四階層標題(pc-24px): /、魚缸點進去詳細資訊的標題
+@mixin pro_fourthTitle($color:$highLight){
+	@include pro_breakPoint(pc){
+		font-size: 24px;
+		color: $color;
+	}
+	@include pro_breakPoint(pad){
+		font-size: 1.05em;
+		color: $color;
+	}
+	@include pro_breakPoint(mobile){
+		font-size: 18px;
+		color: $color;
+	}
 }
 
 //按鈕設定
@@ -78,21 +83,49 @@ $highLight:#F7931E;
 		box-shadow: none;
 	}
 }
+body{
+	font-family: "微軟正黑體"; 
+}
 
-
-
-
-
-
-
-
-/* 共用設定 */
-
+h1{
+	@include pro_breakPoint(pc){
+		font-size: 44px;
+		border: 2px solid blue;
+	}
+	@include pro_breakPoint(pad){
+		font-size: 2.7vw;
+		border: 2px solid red;
+	}
+	@include pro_breakPoint(mobile){
+		font-size: 26px;
+		border: 2px solid orange;
+	}
+}
+h2{
+	@include pro_breakPoint(pc){
+		font-size: 40px;
+		border: 2px solid blue;
+	}
+	@include pro_breakPoint(pad){
+		font-size: 2vw;
+		border: 2px solid red;
+	}
+	@include pro_breakPoint(mobile){
+		font-size: 18px;
+		border: 2px solid orange;
+	}
+}
 p{
-	// font-size:18px;
+	font-size: 18px;
+	@include pro_breakPoint(pad){
+		font-size: 18px;
+	}
+	@include pro_breakPoint(mobile){
+		font-size: 1em;
+	}
 }
 img{ 
-	width: 100%;
+	// width: 100%;
 	vertical-align: top; 
 }
 
@@ -102,40 +135,22 @@ img{
 
 /* 遮雨棚 */
 .pro_tent{
-	position: relative;
+	position: relative ;
 	div{
-		width: 100%; 
+		@include pro_breakPoint(mobile){
+	    	transform: scale(1.9,1.8);
+	    }
+		img{ width: 100%; }
 	}
 	h1{
 		position: absolute;
 		margin: auto;
-		top: 65%;
+		top: 68%;
 		right: 0;
 		left: 0;
 		text-align: center;
-		@include pro_pad_width(){
-			font-size: 3.37vw;
-		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -158,41 +173,61 @@ img{
 		list-style:none;
 		border: 10px solid #6D5844;
 		margin-top: 10%;
-		@include pro_pc_media(){
-			
-		} 
+		@include pro_breakPoint(pc){
+			width: $pc;
+		}
+		@include pro_breakPoint(pad){
+			width: 100%;
+			box-sizing: border-box;
+		}
+		@include pro_breakPoint(mobile){
+			width: 100%;
+			box-sizing: border-box;
+		}
 		
-		/* 商品 */
-		&>li{
-			@include pro_pc_eachSeed();
-			border: 10px solid #6D5844;
+		
+		&>li{/* 商品 */
+			@include pro_breakPoint(pc){
+				width: 25%;
+				height: 40vh;
+			}
+			@include pro_breakPoint(pad){
+				width: 25%;
+				height: 26vw;
+			}
+			@include pro_breakPoint(mobile){
+				width: 50%;
+				height: 54vw;
+			}			
+			border: 0.3em solid #6D5844;
 			background-color: #514336;
 			position: relative; 
 			float:left;
-			
+			box-sizing: border-box;
 			
 			//hover前
-			.pro_s_vegetable{
-				// @include pro_pc_eachSeed();
-				
+			.pro_s_vegetable{				
 				//菜的牌子+new
 				.pro_s_brand{
-					@include pro_pc_media(){
-						// width: $pro_eachSeedW*0.3333+px;
+					width: 33.33%;
+					@include pro_breakPoint(mobile){
+						width: 45%;
 					}
 					margin: auto;
 					left: 0;
 					right: 0;
 					top: -10%; 
 					position: absolute;
+
 					div{
 						border-radius: 6px;
+						&:first-child{
+							img{ width: 100%}}
 						&:nth-child(2){
-							background-color: #ccc;						
 							text-align: center;
 							margin: auto;
 							margin-top: -80%;
-							@include pro_sTitle(30);
+							@include pro_thirdTitle();
 						}
 						&:last-child{
 							width: 60%;
@@ -200,6 +235,7 @@ img{
 							margin-right: -28%;
 							margin-top: -60%;
 							transform: rotateZ(25deg);
+							img{ width: 100%;} 
 						}
 					}
 				}
@@ -207,23 +243,24 @@ img{
 				//菜菜
 				.pro_s_img{
 					position: absolute;
-					// width: $pro_eachSeedW+px;
 					margin: auto;
 					left: -10px;
 					right: 0;
 					bottom: 0;
+					img{width: 100%;}
 				}
 			}//--hover前
 
 			//hover後
 			.pro_s_white{
-				opacity: 0; 
-				@include pro_pc_eachSeed();
+				opacity: 0;
+				width: 100%;
+				height:100%;
 				background-color: rgba(255,255,255,.9);
 				position: absolute;
 				margin: auto;
 				top: 0;
-				z-index: 5; 
+				z-index: 5;		
 				//資訊
 				.pro_s_info{
 					width: 80%;
@@ -254,7 +291,7 @@ img{
 						text-align: center;
 						margin: 20px auto; 
 						span{
-							@include pro_sTitle(24,#F15A24);
+							@include pro_fourthTitle(#F15A24);
 							display: inline-block;
 							width: 40%;
 							font-weight: bold;
@@ -268,7 +305,7 @@ img{
 
 			}//--hover後
 
-			/* hover */
+			// hover 
 			&:hover{
 				.pro_s_white{ opacity: 1; }
 				.pro_s_brand{ opacity: 0; }
@@ -276,16 +313,20 @@ img{
 		}//--商品
 	}//--商品區(種子)
 
-	/* 攤販底部 */
+	//攤販底部 
 	.pro_s_end{
 		width: 100%;
 		background-size: contain;
 		background-position: center bottom;
 		background-repeat: no-repeat;
+		box-sizeing: border-box;
 		div{
 			margin: auto;
-			// width: $pro_contain+px;
+			@include pro_breakPoint(pc){
+				width: $pc;
+			}
 			border: 10px solid #877159;
+			img{width: 100%;}
 		}
 	}
 
@@ -307,49 +348,73 @@ img{
 
 /* 魚缸超市 */
 .pro_tank{
+	width: 100%;
 	background-image: url("../src/image/product/pro-bg2.jpg");
 	/* 商品區(魚缸) */
 	.pro_t_wheel{
 		margin: auto;
 		position: relative;
 		margin-top: 9%;
+		@include pro_breakPoint(pc){
+			width: $pc;
+		}
+		@include pro_breakPoint(pad){
+			width: 100%;
+		}
+		@include pro_breakPoint(mobile){
+			width: 100%;
+		}
 		
 		//幻燈箱可視區
-		.pro_t_lightbox{ 
-			// width: $pro_contain+px;
+		.pro_t_lightbox{
 			margin: auto;
 			overflow: hidden;
-		
 			// 商品選單
-			.pro_t_shelf{
-				// width: $pro_contain*0.92 +px;
-				text-align: center ;
+			ul{ 
 				list-style:none;
 				margin: auto;
-				
+				width: 150%;
+				@include pro_breakPoint(pad){
+					margin-left: -10px;
+				}	
+				@include pro_breakPoint(mobile){
+					width: 100%;
+				}				
 				//每個商品
 				li{
-					width: 33.33%;
 					padding: 0px 20px;
 					box-sizing: border-box; 
 					float: left;
 					text-align: center;
+					@include pro_breakPoint(pc){
+						width: (1440px/3); 
+					}
+					@include pro_breakPoint(pad){
+						width: 33.33vw;
+					}
+					@include pro_breakPoint(mobile){
+						width: 50%;
+					}
 					&>div{
 						&:first-child{
 							width: 60%;
+							@include pro_breakPoint(mobile){
+								width: 80%;
+							}
 							margin: auto;
 							border-radius: 10%;
 							overflow: hidden;
 							border: $imgBorder;
+							img{ width: 100%}
 						}
 						&:last-child{
 							margin: 5% auto;
 							.pro_s_name{
-								@include pro_sTitle(30,#999);
+								@include pro_thirdTitle(#999);
 							}
 							div{
 								&:last-child{
-									@include pro_sTitle(24);
+									@include pro_fourthTitle();
 								}
 							}
 						}
@@ -359,24 +424,26 @@ img{
 		}
 		// 向左右
 		.pro_t_toRL{
-			// width: $pro_contain+px;
-			height: 88%; 
-			margin: auto;
+			@include pro_breakPoint(mobile){
+				display: none;
+			}
+			height: 100%; 
+			position: absolute ;
 			left: 0;
 			right: 0;
-			bottom: 12%; 
-			// border:1px solid pink; 
-			position: absolute ;
+			bottom: 0;
+			top: 0;
 			&>a{ 
-				padding: 20px; 
+				padding: 3vw 1vw;
 				font-size: 30px; 
 				height: 100%;
-				color:#777;
+				color:#777;				
+				box-sizing: border-box;
 				&:hover{
 					background-color: #ccc;
 					opacity: .5; 
 				}
-				i{margin-top: 130px; }
+				i{margin-top: 7vw; }
 				&:first-child{ float: left; }
 				&:last-child{ float: right; }
 			}
@@ -387,12 +454,21 @@ img{
 	/* 層架圖 */
 	.pro_t_shelfImg{
 		margin: auto;
-		// width: $pro_contain+px;
+		padding: 0 5%;
+		img{width: 100%} 
 	}
 
 	/* 魚缸資料區 */
 	.pro_t_info{
-		// width: $pro_contain+px;
+		@include pro_breakPoint(pc){
+			width: $pc;
+		}
+		@include pro_breakPoint(pad){
+			width: 100%;
+		}
+		@include pro_breakPoint(mobile){
+			width: 100%;
+		}
 		margin: auto;
 		padding: 5% 0; 
 		>div+div{
@@ -409,7 +485,9 @@ img{
 				div{
 					width: 80%;
 					margin: auto;
-					border: $imgBorder;					
+					border: $imgBorder;
+					img{ width: 100%;}
+					
 				}
 			}
 			//右邊
@@ -439,7 +517,7 @@ img{
 					text-align: center;					
 					margin-top: 100px;
 					span{ 
-						@include pro_sTitle(24,#F15A24);
+						@include pro_fourthTitle(#F15A24);
 						font-weight: bold;
 					}
 					button{
@@ -453,15 +531,15 @@ img{
 
 		/* 規格和注意事項 */
 		.pro_t_infoBottom{
+			width: 100%;
 			h3{
-				@include pro_sTitle(24,#333);
+				@include pro_fourthTitle(#fff);
 				margin: 14px 0;
 				padding: 4px 10px; 
 				background-color: #C19369;
-				color: #fff;
 				font-weight: normal; 
 			}
-			div{
+			p{
 				width: 97%; 
 				margin: 2% auto;
 				line-height: 26px;
