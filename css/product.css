@@ -2,31 +2,27 @@
 body {
   font-family: "微軟正黑體"; }
 
-@media only screen and (min-width: 1440px) {
-  h1 {
-    font-size: 44px;
-    border: 2px solid blue; } }
-@media only screen and (min-width: 767px) and (max-width: 1440px) {
-  h1 {
-    font-size: 2.7vw;
-    border: 2px solid red; } }
-@media only screen and (max-width: 766px) {
-  h1 {
-    font-size: 26px;
-    border: 2px solid orange; } }
+h1 {
+  color: #fff; }
+  @media only screen and (min-width: 1440px) {
+    h1 {
+      font-size: 44px; } }
+  @media only screen and (min-width: 767px) and (max-width: 1440px) {
+    h1 {
+      font-size: 2.7vw; } }
+  @media only screen and (max-width: 766px) {
+    h1 {
+      font-size: 26px; } }
 
 @media only screen and (min-width: 1440px) {
   h2 {
-    font-size: 40px;
-    border: 2px solid blue; } }
+    font-size: 40px; } }
 @media only screen and (min-width: 767px) and (max-width: 1440px) {
   h2 {
-    font-size: 3vw;
-    border: 2px solid red; } }
+    font-size: 3vw; } }
 @media only screen and (max-width: 766px) {
   h2 {
-    font-size: 18px;
-    border: 2px solid orange; } }
+    font-size: 18px; } }
 
 p {
   font-size: 18px; }
@@ -128,35 +124,33 @@ img {
           .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:nth-child(2) {
             text-align: center;
             margin: auto;
-            margin-top: -80%; }
+            margin-top: -78%;
+            font-weight: bold;
+            text-shadow: 0 0 2px #999; }
             @media only screen and (min-width: 1440px) {
               .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:nth-child(2) {
                 font-size: 30px;
-                color: #F7931E; } }
+                color: #F6E895; } }
             @media only screen and (min-width: 767px) and (max-width: 1440px) {
               .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:nth-child(2) {
                 font-size: 1.1em;
-                color: #F7931E; } }
+                color: #F6E895; } }
             @media only screen and (max-width: 766px) {
               .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:nth-child(2) {
                 font-size: 18px;
-                color: #F7931E; } }
+                color: #F6E895; } }
           .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:last-child {
             width: 60%;
             margin: auto;
             margin-right: -28%;
             margin-top: -60%;
             transform: rotateZ(25deg); }
-            .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand div:last-child img {
-              width: 100%; }
       .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_img {
         position: absolute;
         margin: auto;
         left: -10px;
         right: 0;
         bottom: 0; }
-        .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_img img {
-          width: 100%; }
       .pro_seed .pro_s_cabinet > li .pro_s_white {
         opacity: 0;
         width: 100%;
@@ -315,6 +309,7 @@ img {
 /* 魚缸超市 */
 .pro_tank {
   width: 100%;
+  overflow: hidden;
   background-image: url("../src/image/product/pro-bg2.jpg");
   /* 商品區(魚缸) */ }
   .pro_tank .pro_t_wheel {
@@ -551,6 +546,10 @@ img {
           .pro_tank .pro_t_info .pro_t_infoBottom h3 {
             font-size: 18px;
             color: #fff; } }
+        .pro_tank .pro_t_info .pro_t_infoBottom h3:before {
+          content: "【"; }
+        .pro_tank .pro_t_info .pro_t_infoBottom h3:after {
+          content: "】"; }
       .pro_tank .pro_t_info .pro_t_infoBottom p {
         width: 97%;
         margin: 2% auto;
