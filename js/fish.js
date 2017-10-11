@@ -83,15 +83,15 @@ var scene = new ScrollMagic.Scene({
       
       triggerElement: "#trigger2",
       duration: 300,
-      offset: 10,
+      offset: -200,
       reverse: false
       
     })
 
     .setTween(stepr)
-    .addIndicators({
-            name: 'scene 02'
-        })
+    // .addIndicators({
+    //         name: 'scene 02'
+    //     })
 .addTo(controller);
 
 

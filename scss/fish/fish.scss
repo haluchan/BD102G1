@@ -74,7 +74,7 @@ section{
 			left:5%;
 			top:8%;
 			opacity:0;
-			animation:smoke 0.5s  0.5s  ease-out forwards;
+			animation:smoke 0.8s  0.6s  cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 
 
 			.title_txt{
@@ -218,16 +218,7 @@ section{
 	}
 }
 
-.stepFlow::before{
-   content:'';
-   width:0;
-   height:100%;
-   display:inline-block;
-   position:relative;
-   vertical-align:middle;
 
-   
- }
 
 //內容開始
 .container{
@@ -251,6 +242,8 @@ section{
 			margin:auto;
 			padding: 10% 0 0 ;
 			vertical-align:middle;
+			display:flex;
+			align-items:center;
 
 			@include rwd (tablet) {	
     			width:100%;
@@ -259,7 +252,7 @@ section{
 			.stepFlowLeft{
 				width:40%;
 				float:left;
-				// display:inline-block;
+
 				@include rwd (tablet) {	
     				width:100%;
     				padding:0;
@@ -338,7 +331,7 @@ section{
 
 
 			.stepFlowRight{
-				// display:inline-block;
+				
 				width:60%;
 				float:left;
 				position:relative;
@@ -385,6 +378,7 @@ section{
 			a{
 				text-decoration:none;
 				color:#000;
+				display:block;
 			}
 		}
 	}
