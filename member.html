@@ -3,29 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="member.css">
+	<link rel="stylesheet" type="text/css" href="css/member.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
 </head>
 <body>
-	<div class="mem">
-	<form action="" method="get" accept-charset="utf-8">
+<div class="mem">
+	<form method="get" accept-charset="utf-8">
 			
-	<div class="table">
-	<table>
-			<tr><th>帳號</th><td><input type="text" name=""></td></tr>
-			<tr><th>我的紅利</th><td><input type="text" name=""></td></tr>
-			<tr><th>我的種子</th><td><input type="text" name=""></td></tr>
-			<tr><th>暱稱</th><td><input type="text" name=""></td></tr>
-			<tr><th>email</th><td><input type="email" name="" placeholder="abcd@gmail.com"></td></tr>
-			<tr><th>生日</th><td><input type="date" name=""></td></tr>
-			<tr><th>居住地</th><td><input type="text" name=""></td></tr>
-			<tr><th>性別</th><td>男<input type="radio" name=""></td><td>女<input type="radio" name=""></td></tr>
-			
-	</table>
-	</div>	
+		<div class="table">
+			<h2>會員資料</h2>
+			<img src="src/image/member/child.png" alt="">
+					<div class="tableinput"><span>					
+					會員帳號:</span><input type="text" name=""  placeholder="becky"></div>
+					<div class="tableinput"><span>我的紅利:</span><input type="text" name="" placeholder="99"></div>
+					<div class="tableinput"><span>我的種子:</span><input type="text" name="" placeholder="99"></div>
+					<div class="tableinput"><span>會員暱稱:</span><input type="text" name="" placeholder="becky"></div>
+					<div class="tableinput"><span style="padding-right: 26px;">email:</span><input type="email" name="" placeholder="abcd@gmail.com"></div>
+					<div class="tableinput"><span>會員生日:</span><input type="date" name=""></div>
+					<div class="tableinput"><span>居住地:</span><select name="position">
+						<option value="">台北</option>
+						<option value="">桃園</option>
+						<option value="">新竹</option>
+						<option value="">苗栗</option>
+						
+					</select>
+					</div>
+					<div class="tableinput"><span>性別:</span><input type="radio" name="gender" value="1" checked="1">男
+					<input type="radio" name="gender">女</div>
+
+					
+		
+			<div class="btnbox">
+				<button class="btn" type="button">送出</button>	
+				<button class="btn" type="reset">重設</button>
+							
+			</div>	
+		</div>	
 	</form>	
 
 </div>
+<script type="text/javascript" src="js/event.js"></script>
 </body>
 </html>
