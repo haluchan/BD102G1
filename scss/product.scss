@@ -161,6 +161,18 @@ img{
 
 
 
+.cart{
+	position: fixed;
+	z-index: 7; 
+	right: 10px;
+	background-color: pink;
+	padding: 20px; 
+	border: 2px solid red; 
+}
+
+
+
+
 
 //==================================================
 
@@ -273,28 +285,20 @@ img{
 					margin-top: 30px; 
 					//標題
 					h2{
-						text-align: center;
 						color: $highLight;
 					}
 
 					//黑色分隔線
 					.pro_s_line{
 						height: 1px;
-						width: 90%;
 						background-color: #000;
-						margin: 20px auto;
+						margin: 10px 0px;
 						opacity: .2; 
-					}
-
-					//文字段
-					p{
-						text-align: center;
 					}
 
 					//價格和購買按鈕
 					.pro_s_buy{
 						margin: auto;
-						text-align: center;
 						margin: 20px auto; 
 						span{
 							@include pro_fourthTitle(#F15A24);
@@ -470,6 +474,7 @@ img{
 					box-sizing: border-box; 
 					float: left;
 					text-align: center;
+					cursor: pointer;
 					@include pro_breakPoint(pc){
 						width: (1440px/3); 
 					}
@@ -517,12 +522,13 @@ img{
 			right: 0;
 			bottom: 0;
 			top: 0;
-			&>a{ 
+			&>span{ 
 				padding: 3vw 1vw;
 				font-size: 30px; 
 				height: 100%;
 				color:#777;				
 				box-sizing: border-box;
+				cursor: pointer;
 				&:hover{
 					background-color: #ccc;
 					opacity: .5; 
