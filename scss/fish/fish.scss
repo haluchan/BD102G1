@@ -1,12 +1,9 @@
 @charset "UTF-8";
-$border-color:transparent;
-
-
-@import "mixins/media";
+@import "../mixins/media";
 
 
 
-
+//統一設定
 
 *{
 	margin:0;
@@ -21,112 +18,134 @@ img{
 	clear:both;
 	content:"";
 	display:block;
+}
+
+h2{
+	font-size:28px;
+	@include rwd (moblie) {	
+		font-size:24px;		
+	}
 
 }
 
+h3{
+	font-size:24px;
+	@include rwd (moblie) {	
+		font-size:20px;		
+	}
+
+}
+
+p{
+	font-size:18px;
+	color:#7e7a7f;
+	@include rwd (moblie) {	
+		font-size:14px;		
+	}
+
+}
+
+
+
+
+
+
+//星空section
 section{ 
 	width:100%;
 	// height:100vh;
-	background-image:url('../src/image/fish/star_base.png');
+	background-image:url('../../src/image/fish/base.svg');
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-attachment: fixed;
+	overflow:hidden;
 
 	.fish_universeBase{
-		// border:5px solid $border-color;
 		position:relative;
 		.star >img{
 			width:90%;
 		}
 
+		
 		.fish_universeTitle {
-			width:30%;
-			border:1px solid $border-color;
+			width:60%;
+
 			position:absolute;
-			left:50px;
-			top:20%;
-			// h1{
-			// 	color:#ccc;
-				
-			// 	font-weight:900;
-			// }
+			left:5%;
+			top:8%;
+			opacity:0;
+			animation:smoke 0.5s  0.5s  ease-out forwards;
+
+
+			.title_txt{
+				width:70%;
+
+				position:absolute;
+				left:5%;
+				top:10%;	
+			}		
 		}
 
 
-		.fish_universeItem {
-			border:1px solid $border-color;		
+		.fish_universeItem {	
 			margin:auto;
-			// float:left;
 			position:absolute;
-			img{
-				// margin:auto;
-				// display:block;
-				// position:absolute;
-				// z-index:10;
-			}
 
 			&#rocket{
-				width:13%;
-
-				left:10%;
-				top:70%;
-
-				// animation: xAxis 2.5s infinite alternate, yAxis 2.5s infinite alternate;
-				
+				width:20%;
+				left:55%;
+				top:13%;
 			}
+
 			&#earth{
 				width:30%;
-				transform: scale(0.8);
-				left:0;
+				left:70%;
 				right:0;
-				margin: auto;
 				top:30%;
-				&.big {
-        			transform: scale(1);
-				}
+				margin: auto;			
 
-				animation:earth 30s infinite linear;	
-					
+				animation:earth 30s infinite linear;			
 			}
+
 			&#hand{
-				width:30%;
-				left:0;
+				width:20%;
+				left:70%;
 				right:0;
+				bottom:-2%;
 				margin: auto;
-				bottom:0;
 			}
 			&#tank{
 				width:20%;
-				left:0;
+				left:70%;
 				right:0;
-				margin: auto;
 				bottom:30%;
+				margin: auto;
 
 				#fish{
 				position:absolute;
 				width:50%;
 				left:0;
 				right:0;
-				margin: auto;
 				bottom:20%;
+				margin: auto;
 
-				
-				animation:swim 5s infinite linear;	
+				animation:swim 5s infinite  linear;	
 				}	
 			}
+
 			&#plant{
 				width:15%;
-				left:0;
+				left:70%;
 				right:0;
-				margin: auto;
 				top:10%;
+				margin: auto;		
 			}
 					
 			
 			&#planet{
-				width:10%;
-				right:5%;
-				top:60%;
+				width:15%;
+				left:40%;
+				top:75%;
 			}
 		}
 	}
@@ -134,6 +153,19 @@ section{
 }
 
 
+@keyframes smoke{
+	from{
+		transform:scale(0.1);
+		left:30%;
+		top:5%;
+		opacity:0;
+	}
+	to{
+		transform:scale(1);
+		left:5%;
+		opacity:1;
+	}
+}
 
 
 
@@ -156,18 +188,14 @@ section{
 	20%{
 		left:0;
 		bottom:15%;
-
-	}
-	49.5%{
-		// transform:scaleX(1);
 	}
 
 	50%{
 		left:40%;
 		bottom:20%;
-		transform:scaleX(1);
-		
+		transform:scaleX(1);	
 	}
+
 	50.5%{
 		transform:scaleX(-1);
 	}
@@ -175,8 +203,8 @@ section{
 	70%{
 		left:0;
 		bottom:10%;
-		// transform:scaleX(-1);
 	}
+
 	90%{
 		left:-20%;
 		bottom:20%;
@@ -190,34 +218,28 @@ section{
 	}
 }
 
+.stepFlow::before{
+   content:'';
+   width:0;
+   height:100%;
+   display:inline-block;
+   position:relative;
+   vertical-align:middle;
 
-@keyframes xAxis {
-  50% {
-    animation-timing-function: ease-in;
-    transform: translateX(100px);
+   
+ }
 
-  }
-}
-
-@keyframes yAxis {
-  50% {
-    animation-timing-function: ease-out;
-    transform: translateY(-100px);
-  }
-}
-
-
-
-
-
+//內容開始
 .container{
-	background-color:#eeeade;
+	
 	
 	.step{
-		width:50%;
+		width:60%;
+		// max-width:1440px;
 		margin: 0  auto 100px;
-		border:1px solid $border-color;
+		
 		position:relative;
+		overflow:hidden;
 
 	
 		 @include rwd (moblie) {	
@@ -228,6 +250,7 @@ section{
 			width:100%;
 			margin:auto;
 			padding: 10% 0 0 ;
+			vertical-align:middle;
 
 			@include rwd (tablet) {	
     			width:100%;
@@ -236,21 +259,16 @@ section{
 			.stepFlowLeft{
 				width:40%;
 				float:left;
-
+				// display:inline-block;
 				@include rwd (tablet) {	
-    			width:100%;
-    			padding:0;
+    				width:100%;
+    				padding:0;
 				}
 				
 				.stepbig{
 					color:#7e7a7f;
-					margin:5% 0;
+					margin:10% 0;
 					text-align:center;
-					// position:absolute;
-					@include rwd (moblie) {	
-		    			
-		    			p{font-size:18px;}
-					}
 					
 					&#one{
 						left:10%;
@@ -266,9 +284,7 @@ section{
 						right:10%;
 						top:20%;
 						@include rwd (moblie) {	
-		    				// right:0;
-		    				left:0;
-		    				
+		    				left:0;	
 						}
 					}
 
@@ -322,11 +338,19 @@ section{
 
 
 			.stepFlowRight{
+				// display:inline-block;
 				width:60%;
 				float:left;
+				position:relative;
 				@include rwd (tablet) {	
     			   width:100%;
 				}
+
+				.arrow{
+					position:absolute;
+					z-index:-1;
+				}
+
 			}
 		}
 		
@@ -336,12 +360,13 @@ section{
 		.stepContent{
 			width:100%;
 			margin:auto;
-			padding:5% 0%;
+			padding:5% 10%;
+			box-sizing:border-box;
 			p{color:#7e7a7f;}
 
-			@include rwd (moblie) {	
-    			   p{font-size:18px;}
-				}
+			// @include rwd (moblie) {	
+   //  			   p{font-size:14px;}
+			// 	}
 		}
 
 		
@@ -365,107 +390,100 @@ section{
 	}
 
 
-
-
+// 運作原理
 	.theory{
-		border:1px solid $border-color;
-		width:50%;
+		width:60%;
 		margin: 0 auto 100px ;
 
 		@include rwd (moblie) {	
 		    width:90%;
 		}
-		.theoryTitle{
-			width:30%;
-			margin:auto;
-			@include rwd (moblie) {	
-		    width:50%;
+
+		.theory_word{
+			padding:5% 10%;
+			.theoryTitle{
+				text-align:left;
+				border-bottom:2px solid  #83827e;
+				margin:5% 0%;
+			}
+
+			// @include rwd (moblie) {	
+		 // 		p{font-size:14px;}   
+			// }
 		}
+
+		.theoryVideo{
+			width: 80%;			
+			height: 0;
+			padding-bottom: 45%;
+			margin: auto;
+			position: relative;
+			
+			iframe{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}			
 		}
 	}
 
 
+
+// 必備元素
 	.role{
-		border:1px solid $border-color;
-		width:50%;
+		width:60%;
 		margin: auto;
 		text-align:center;
 		@include rwd (moblie) {	
 		    width:100%;
 		}
 		
+		.role_word{
+			padding:5% 10%;
+
+			.roleTitle{
+				text-align:left;
+				border-bottom:2px solid  #83827e;	
+			}
+		}
+
 		.roleItem{
 			width:30%;
-			// text-align:center;
 			display:inline-block;
-			vertical-align:top;
+			// vertical-align:top;
 			margin:auto;
-			@include rwd (moblie) {	
-		    width:100%;
-		    margin:5% auto;
-		    				
-			}
-			.roleItemTitle{
-				text-align:center;
-				
-				h2{
-					@include rwd (moblie) {	
-		    		
-		    		font-size:24px;		
-				}
-				}
-				
-			}
-			.roleItemPic{
-				border:1px solid $border-color;
-				height:100%;
 				@include rwd (moblie) {	
-		    		width:40%;
-		    		float:left;			
+			    width:100%;
+			    margin:5% auto;   				
 				}
+			.roleItemTitle{
+				text-align:center;		
 			}
 
+			.roleItemPic{
+				margin:auto;
+				@include rwd (moblie) {	
+		    		width:50%;	
+				}
+			}
+			
 			.roleItemTxt{
 				width:100%;
+				margin:auto;
 				@include rwd (moblie) {	
-					width:50%;
-		    			
-		    		float:left;			
+					width:80%;					
 				}			 
-			
-				p{
-				padding:0 10px;
-				text-align:justify;	
-					@include rwd (moblie) {	
-					
-		    		font-size:18px;	
-		    					
-				}	
-				}
 				
-
+				p{
+					padding:0 10px;
+					text-align:justify;			
+				}
 			}
-
 			
-			
-
-		}
-	}
+		}//roleitem結束
+	}//role結束
 }
 
 
-#rocket{
-	 animation: shakes 1s linear infinite;
-  
-}
- @keyframes shakes{
-    @for $i from 1 through 9{
-      #{10*$i}%{
-      	transform: translate(#{random(10)}px, #{random(10)}px)
-      }
-        }
-    100%{
-      transform: translate(0,0)    }
-}
 
 
