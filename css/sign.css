@@ -18,12 +18,12 @@
     margin: auto;
     text-align: right; }
     .lightbox-bg .lightbox-target .cancel {
-      margin: auto;
+      margin: 0 auto;
       height: 10px;
       margin-top: -16px; }
     .lightbox-bg .lightbox-target h2 {
-      font-size: 20px;
-      padding-top: 6%;
+      font-size: 40px;
+    /*   padding-top: 4%; */
       color: #3260b5; }
     .lightbox-bg .lightbox-target .login-content {
       margin: auto;
@@ -33,11 +33,11 @@
         width: 200px;
         display: inline-block;
         height: 20px; }
-        .lightbox-bg .lightbox-target .login-content .login-account p {
+      .lightbox-bg .lightbox-target .login-content .login-account p {
           padding-right: 10px;
           display: inline-block;
           text-decoration: middle; }
-        .lightbox-bg .lightbox-target .login-content .login-account input {
+      .lightbox-bg .lightbox-target .login-content .login-account input {
           width: 150px;
           height: 20px;
           background-color: #F6F7ED;
@@ -48,8 +48,9 @@
         width: 200px;
         height: 20px;
         display: inline-block; }
+
         .lightbox-bg .lightbox-target .login-content .login-pws p {
-          padding-right: 10px;
+          padding-right: 6px;
           display: inline-block;
           text-decoration: bottom;
           line-height: 20px; }
@@ -60,11 +61,26 @@
           border-width: 0px;
           border-bottom-width: 1px;
           border-bottom-color: #444; }
+      /* .lightbox-bg .lightbox-target .login-content .login-gender {
+        width: 200px;
+        display: inline-block;
+        height: 20px; } */
+      .lightbox-bg .lightbox-target .login-content .login-gender p {
+          padding-right: 6px;
+          display: inline-block;
+          text-decoration: middle; }
+      /* .lightbox-bg .lightbox-target .login-content .login-gender input {
+          width: 150px;
+          height: 20px;
+          background-color: #F6F7ED;
+          border-width: 0px;
+          border-bottom-width: 1px;
+          border-bottom-color: #444; } */
       .lightbox-bg .lightbox-target .login-content .forget {
         width: 200px;
         text-align: right;
         margin: auto; }
-        .lightbox-bg .lightbox-target .login-content .forget a {
+      .lightbox-bg .lightbox-target .login-content .forget a {
           font-size: 12px;
           color: #777;
           text-decoration: none; }
@@ -85,7 +101,7 @@
         border: 1px solid #3260b5;
         transition-duration: 0.4s; }
       .lightbox-bg .lightbox-target .login-content .btn-login:hover {
-        transform: 0 0 2px;
+       /*  transform: 0 0 2px; */
         box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
         background-color: #F6F7ED;
         border: 1px solid #3260b5;
@@ -93,10 +109,9 @@
         cursor: pointer; }
       .lightbox-bg .lightbox-target .login-content .btn-login:focus {
         outline: 0px; }
-    .lightbox-bg .lightbox-target .login-bee {
-      position: relative;
-      bottom: -20px;
-      width: 50%; }
+  .login-gender input{
+    display: inline-block;
+  }
 
 .login-clear {
   clear: both; }

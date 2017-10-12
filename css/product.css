@@ -17,11 +17,9 @@ h1 {
 @media only screen and (min-width: 1440px) {
   h2 {
     font-size: 40px; } }
-
 @media only screen and (min-width: 767px) and (max-width: 1440px) {
   h2 {
     font-size: 3vw; } }
-
 @media only screen and (max-width: 766px) {
   h2 {
     font-size: 18px; } }
@@ -44,8 +42,6 @@ img {
   position: relative; }
   @media only screen and (max-width: 766px) {
     .pro_tent div {
-      -webkit-transform: scale(1.9, 1.8);
-      -ms-transform: scale(1.9, 1.8);
       transform: scale(1.9, 1.8); } }
   .pro_tent div img {
     width: 100%; }
@@ -63,11 +59,12 @@ img {
 @media only screen and (max-width: 766px) {
   .mobileHidden {
     display: none; }
+
   .pro_s_white {
     display: none; }
+
   .pro_s_mobileInfo {
     display: block; } }
-
 .cart {
   position: fixed;
   z-index: 7;
@@ -94,12 +91,10 @@ img {
     @media only screen and (min-width: 767px) and (max-width: 1440px) {
       .pro_seed .pro_s_cabinet {
         width: 100%;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box; } }
     @media only screen and (max-width: 766px) {
       .pro_seed .pro_s_cabinet {
         width: 100%;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box; } }
     .pro_seed .pro_s_cabinet > li {
       /* 商品 */
@@ -107,7 +102,6 @@ img {
       background-color: #514336;
       position: relative;
       float: left;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       @media only screen and (min-width: 1440px) {
         .pro_seed .pro_s_cabinet > li {
@@ -158,8 +152,6 @@ img {
             margin: auto;
             margin-right: -28%;
             margin-top: -60%;
-            -webkit-transform: rotateZ(25deg);
-            -ms-transform: rotate(25deg);
             transform: rotateZ(25deg); }
       .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_img {
         position: absolute;
@@ -214,17 +206,11 @@ img {
               font-size: 16px;
               background-color: #219B00;
               letter-spacing: 1px;
-              -webkit-transform: translateY(-2px);
-              -ms-transform: translateY(-2px);
               transform: translateY(-2px);
-              -webkit-box-shadow: 2px 2px 0 0 #ccc;
               box-shadow: 2px 2px 0 0 #ccc;
               color: #fff; }
               .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info .pro_s_buy .btn:hover {
-                -webkit-transform: translateY(0px);
-                -ms-transform: translateY(0px);
                 transform: translateY(0px);
-                -webkit-box-shadow: none;
                 box-shadow: none; }
       @media only screen and (min-width: 1440px) {
         .pro_seed .pro_s_cabinet > li:hover .pro_s_white {
@@ -316,17 +302,11 @@ img {
         font-size: 16px;
         background-color: #219B00;
         letter-spacing: 1px;
-        -webkit-transform: translateY(-2px);
-        -ms-transform: translateY(-2px);
         transform: translateY(-2px);
-        -webkit-box-shadow: 2px 2px 0 0 #ccc;
         box-shadow: 2px 2px 0 0 #ccc;
         color: #fff; }
         .pro_s_mobileInfo .pro_s_info .pro_s_buy .btn:hover {
-          -webkit-transform: translateY(0px);
-          -ms-transform: translateY(0px);
           transform: translateY(0px);
-          -webkit-box-shadow: none;
           box-shadow: none; }
 
 /* 魚缸超市 */
@@ -364,7 +344,6 @@ img {
               display: block; } }
         .pro_tank .pro_t_wheel .pro_t_lightbox ul li {
           padding: 0px 20px;
-          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           float: left;
           text-align: center;
@@ -428,7 +407,6 @@ img {
         font-size: 30px;
         height: 100%;
         color: #777;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         cursor: pointer; }
         .pro_tank .pro_t_wheel .pro_t_toRL > span:hover {
@@ -482,7 +460,6 @@ img {
         width: 50%;
         float: left;
         padding: 0 1%;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box; }
         .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR h2 {
           text-align: center;
@@ -524,16 +501,10 @@ img {
             font-size: 24px;
             background-color: #219B00;
             letter-spacing: 1px;
-            -webkit-transform: translateY(-2px);
-            -ms-transform: translateY(-2px);
             transform: translateY(-2px);
-            -webkit-box-shadow: 2px 2px 0 0 #ccc;
             box-shadow: 2px 2px 0 0 #ccc; }
             .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy button:hover {
-              -webkit-transform: translateY(0px);
-              -ms-transform: translateY(0px);
               transform: translateY(0px);
-              -webkit-box-shadow: none;
               box-shadow: none; }
       @media only screen and (max-width: 766px) {
         .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR {
