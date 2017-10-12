@@ -13,6 +13,7 @@
 
 </head>
 <body>
+	<?php require_once('Header.php'); ?>
 <div class="container">
 	<div class="nav">
 		
@@ -196,16 +197,7 @@
 				
 			</div>
 		</li>
-		<div class="littlelittle1">
-			<div class="littlelittle">
-			
-			</div>
-		</div>
-		<div class="littlelittle2">
-			<div class="littlelittle">
-				
-			</div>
-		</div>
+		
 		
 	</ul>
 	</div>
@@ -228,7 +220,7 @@
 					<img src="src/image/event/photo4.jpg" alt="">
 				</div>	
 				<div class="infobar1">
-					<h3>桃園</h3>
+					<h5>桃園</h5>
 					<div class="inforbar2">
 						舉辦日期：2016-11-24
 					</div>
@@ -242,7 +234,7 @@
 					<img src="src/image/event/event09.jpg" alt="">
 				</div>
 				<div class="infobar1">
-					<h3>台中</h3>
+					<h5>台中</h5>
 					<div class="inforbar2">
 						舉辦日期：2016-10-26
 					</div>
@@ -268,7 +260,7 @@
 					<img src="src/image/event/08.jpg" alt="">
 				</div>	
 				<div class="infobar1">
-					<h3>台南</h3>
+					<h5>台南</h5>
 					<div class="inforbar2">
 						舉辦日期：2016-09-09
 					</div>
@@ -295,7 +287,7 @@
 					<img src="src/image/event/img100.png" alt="">
 				</div>
 				<div class="infobar1">
-					<h3>台東</h3>
+					<h5>台東</h5>
 					<div class="inforbar2">
 						舉辦日期：2016-08-22
 					</div>
@@ -320,7 +312,7 @@
 					<img src="src/image/event/img101.png" alt="">
 				</div>
 				<div class="infobar1">
-				<h3>苗栗</h3>
+				<h5>苗栗</h5>
 					<div class="inforbar2">
 						舉辦日期：2016-07-24
 					</div>
@@ -344,7 +336,7 @@
 					<img src="src/image/event/c03_img04.jpg" alt="">
 				</div>
 				<div class="infobar1">
-					<h3>台東</h3>
+					<h5>台東</h5>
 					<div class="inforbar2">
 						舉辦日期：2016-06-24
 					</div>
@@ -355,7 +347,7 @@
 					<img src="src/image/event/010.png" alt="">
 				</div>
 				<div class="infobar1">
-					<h3>苗栗</h3>
+					<h5>苗栗</h5>
 					<div class="inforbar2">
 						舉辦日期：2016-05-24
 					</div>
@@ -366,7 +358,7 @@
 					<img src="src/image/event/011.png" alt="">
 				</div>
 				<div class="infobar1">
-					<h3>台東</h3>
+					<h5>台東</h5>
 					<div class="inforbar2">
 					舉辦日期：2016-04-24
 					</div>
@@ -378,7 +370,7 @@
 					<img src="src/image/event/011.png" alt="">
 				</div>
 				<div class="infobar1">
-					<h3>台東</h3>
+					<h5>台東</h5>
 					<div class="inforbar2">
 					舉辦日期：2016-04-24
 					</div>
@@ -435,6 +427,6 @@
 
 </div>
 <script type="text/javascript" src="js/event.js"></script>
-
+<?php require_once('Footer.php');?>
 </body>
 </html>
