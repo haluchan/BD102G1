@@ -8,6 +8,7 @@
 
 </head>
 <body>
+	<?php require_once('Header.php'); ?>
 	<div class="titlebg">
 		<img src="src/image/member/mv01.png" alt="">
 	</div>
@@ -29,8 +30,8 @@
 		<div class="table">
 			<h2></h2>
 			<img src="src/image/member/child.png" alt="">
-			<div>
-				<button class="btn" type="button">上傳圖檔</button>
+			<div class="btnbox">
+				<a href="">上傳圖檔</a>
 			</div>
 				<table>
 					<thead>
@@ -76,16 +77,18 @@
 					</tbody>
 				</table>
 			<div class="btnbox">
-				<button class="btn" type="button">確定修改</button>
-				<button class="btn" type="button">取消修改</button>
+				<a href="">確定修改</a>
+				<a href="">取消修改</a>
 			</div>	
+		
 		</div>	
 	
 				
 	
 	
-</div>
 
-	
+
+<?php require_once('Footer.php');?>
+</div>
 </body>
 </html>

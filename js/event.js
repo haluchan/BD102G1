@@ -6,7 +6,7 @@ var controller = new ScrollMagic.Controller();
     var tween_4 = TweenMax.staggerFromTo('.show', .8, {
         //做事情
         opacity: 0,
-        y: -500
+        y: -300
     }, {
         opacity: 1,
         y: 0
@@ -17,8 +17,8 @@ var controller = new ScrollMagic.Controller();
     var scene_t = new ScrollMagic.Scene({
       //做事情
       triggerElement: "#trigger1",
-      duration: 350,
-      offset: 90
+      duration: 150,
+      offset: 50
     //   reverse: false,
     })
     .setTween(tween_4)

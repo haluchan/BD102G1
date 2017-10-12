@@ -237,7 +237,7 @@
 	.balloon p {
 		padding: 2%;
 		color: #fff;
-		font-size: 20px;
+		font-size: 18px;
 
 	}	
 	.section-border{
@@ -264,6 +264,9 @@
 	}
 	.bluecircle img{
 		width: 80%;
+	}
+	.bluecircle p {
+		font-size: 1vw;
 	}
 	
 	/* ================== */

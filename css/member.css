@@ -35,7 +35,7 @@
 	.btnbox{
 		margin-top: 1%;
 	}
-	.btn {
+	.btnbox a{
 		font-family: Arial;
 		color: #ffffff;
 		font-size: 18px;
@@ -44,9 +44,10 @@
 		padding: 10px 20px 10px 20px;
 		border: solid #699c33 2px;
 	  	text-decoration: none;
+	  
 	}
 
-	.btn:hover {
+	.btnbox a:hover {
 		background: #ffffff;
 		text-decoration: none;
 		color: #699c33;
@@ -119,7 +120,7 @@
 	border: none;
 	padding: 5px;
 	background-color: rgba(105, 156, 51, .2);}
-.ml10 {
+/* .ml10 {
   position: relative;
   font-weight: 900;
   font-size: 4em;
@@ -138,5 +139,5 @@
   display: inline-block;
   line-height: 1em;
   transform-origin: 0 0;
-}
+} */
 	

@@ -28,7 +28,7 @@
 	.btnbox{
 		margin-top: 1%;
 	}
-	.btn {
+	.btnbox a{
 		font-family: Arial;
 		color: #ffffff;
 		font-size: 18px;
@@ -39,7 +39,7 @@
 	  	text-decoration: none;
 	}
 
-	.btn:hover {
+	.btnbox a:hover {
 		background: #ffffff;
 		text-decoration: none;
 		color: #699c33;
@@ -75,6 +75,10 @@
 	}
 	.table h2{
 		margin-bottom: 10px;
+		font-size: 40px;
+	}
+	.bigtitle{
+		font-size: 30px;
 	}
 	.bigtitle{
 		text-align: center;

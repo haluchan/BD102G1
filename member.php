@@ -10,6 +10,7 @@
 </head>
 
 <body>
+	<?php require_once('Header.php'); ?>
 	<div class="titlebg">
 		<img src="src/image/member/mv01.png" alt="">
 		
@@ -86,7 +87,7 @@
 				</table>
 			<div class="btnbox">
 			
-				<button class="btn" type="button">修改資料</button>
+				<a href="" class="btnbox">修改資料</a>
 			</div>	
 		</div>	
 	
@@ -173,6 +174,8 @@
 				</table>
 		</div>	
 	
+
+<?php require_once('Footer.php');?>
 </div>
 <script type="text/javascript">
     	document.getElementById("history").onclick=history;
