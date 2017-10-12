@@ -11,7 +11,7 @@
 
 
 	<body>  
-		
+		<?php require_once('Header.php') ?>
 	    <div class="container"> 	
 	    	<!-- 頁面標題 回報進度 -->
 	    	<div class="applicationTitle">
@@ -61,6 +61,6 @@
 	    </div>
 	    
 
-
+ <?php require_once('Footer.php') ?>
 	</body>
 </html>

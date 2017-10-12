@@ -11,6 +11,7 @@
 
 
 	<body>  
+		<?php require_once('Header.php') ?>
 	    <div class="container">
 	    	
 	    	<!-- 頁面標題 申請資助 -->
@@ -129,6 +130,6 @@
 	    </div>
 	    
 
-
+ <?php require_once('Footer.php') ?>
 	</body>
 </html>

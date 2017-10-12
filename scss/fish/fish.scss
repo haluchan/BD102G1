@@ -370,15 +370,18 @@ section{
 		
 		.stepBuy{
 			width:150px;
-			height:50px;
 			text-align:center;
-			line-height:50px;
+			// line-height:50px;
 			background-color:#e8d59b;
 			margin:auto;
 			a{
 				text-decoration:none;
-				color:#000;
+				// color:#000;
+				color: #ffffff;
 				display:block;
+			&:hover{
+				color: #699c33;
+			}
 			}
 		}
 	}

@@ -23,6 +23,7 @@
 
 
 <body>
+	<?php require_once('Header.php') ?>
 	<!-- 個人式小魚菜缸 -->
     <section>
     	
@@ -217,7 +218,7 @@
 
 	</div><!-- container說明內容結束 -->
 
-
+ <?php require_once('Footer.php') ?>
 <script src="js/fish.js"></script> 
 </body>
 	
