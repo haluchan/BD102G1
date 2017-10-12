@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-@mixin rwd($w,$num,$size,$cols){
+
+@mixin rwd_vivi($w,$num,$size,$cols){
 	@media screen and (#{$w}: #{$num}+px) {
 		@for $i from 1 through $cols{
 			.col-#{$size}-#{$i}{
@@ -17,31 +17,29 @@
 
 
 }
-=======
   
 // rwd 
-    $mobile : 767px ; 
-    $tablet_min : 768px;
-    $tablet_max : 1199px;
-    $desktop : 1200px;
+    // $mobile : 767px ; 
+    // $tablet_min : 768px;
+    // $tablet_max : 1199px;
+    // $desktop : 1200px;
 
 
 
-    @mixin rwd ($breakpoint) {
-        @if $breakpoint == "mobile" {
-            @media all and (max-width: $mobile) {
-                @content;
-            }
-        }
-        @else if $breakpoint == "tablet" {
-            @media all and (min-width: $tablet_min) and (max-width:$tablet_max) {
-                @content;
-            }
-        }
-        @else if $breakpoint == "desktop" {
-            @media all and (min-width: $desktop) {
-                @content;
-            }
-        }
-    }
->>>>>>> 8a5f3f6b8ddc5a055e9876c52874d6fd42ec781f
+    // @mixin rwd ($breakpoint) {
+    //     @if $breakpoint == "mobile" {
+    //         @media all and (max-width: $mobile) {
+    //             @content;
+    //         }
+    //     }
+    //     @else if $breakpoint == "tablet" {
+    //         @media all and (min-width: $tablet_min) and (max-width:$tablet_max) {
+    //             @content;
+    //         }
+    //     }
+    //     @else if $breakpoint == "desktop" {
+    //         @media all and (min-width: $desktop) {
+    //             @content;
+    //         }
+    //     }
+    // }
