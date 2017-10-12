@@ -1,26 +1,26 @@
-<<<<<<< HEAD
-@mixin rwd($w,$num,$size,$cols){
-	@media screen and (#{$w}: #{$num}+px) {
-		@for $i from 1 through $cols{
-			.col-#{$size}-#{$i}{
-				width: ($i / $cols) * 100%;
-				box-sizing: border-box; 
-				// padding: 10px; 
-				float: left;
-			}
-		}
-		.hidden-#{$size}{
-			display: none;
-		}
 
-	}
+// @mixin rwd($w,$num,$size,$cols){
+// 	@media screen and (#{$w}: #{$num}+px) {
+// 		@for $i from 1 through $cols{
+// 			.col-#{$size}-#{$i}{
+// 				width: ($i / $cols) * 100%;
+// 				box-sizing: border-box; 
+// 				// padding: 10px; 
+// 				float: left;
+// 			}
+// 		}
+// 		.hidden-#{$size}{
+// 			display: none;
+// 		}
+
+// 	}
 
 
-}
-=======
+// }
+//=======
   
 // rwd 
-    $mobile : 767px ; 
+    $mobile : 767px; 
     $tablet_min : 768px;
     $tablet_max : 1199px;
     $desktop : 1200px;
@@ -44,4 +44,4 @@
             }
         }
     }
->>>>>>> 8a5f3f6b8ddc5a055e9876c52874d6fd42ec781f
+

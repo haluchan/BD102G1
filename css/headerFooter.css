@@ -156,6 +156,11 @@ button{
   width: 20.972222222%;
   margin: 0 auto;
   margin-top:-134px; 
+  left: 0;
+  right: 0;
+  z-index: 100;
+  position: absolute;
+  text-align: center;
 }
 .head-3 img{
   margin: 0 auto;
