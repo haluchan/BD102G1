@@ -26,6 +26,28 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 	}
 }
 
+
+//動畫
+@mixin keyframes($name){
+  @-webkit-keyframes #{$name}{
+    @content;}
+  @-moz-keyframes #{$name}{
+    @content;}
+  @-ms-keyframes #{$name}{
+    @content;}
+  @keyframes #{$name}{
+    @content;}
+}
+@mixin animations($content){
+  -webkit-animation: $content;
+  -moz-animation: $content;
+  -o-animation: $content;
+  animation: $content;
+}
+      
+
+
+
 //第三階層標題(pc-30px): 菜牌的字、魚缸點進去詳細資訊的標題
 @mixin pro_thirdTitle($color:$highLight){
 	@include pro_breakPoint(pc){
@@ -58,33 +80,8 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 	}
 }
 
-//按鈕設定
-@mixin btn($font:24,$color:#219B00){
-	padding: 4px 24px;
-	min-width:100px;
-	border-radius: 10px;
-	border-style: none;
-	font-size: $font+px; 
-	background-color: $color;
-	letter-spacing: 1px;
-	transform: translateY(-2px);
-	box-shadow: 2px 2px 0 0 #ccc;
-	&:hover{
-		transform: translateY(0px);
-		box-shadow: none;
-	}
-}
-
-
-body{
-	font-family: "微軟正黑體";
-}
-
 h1{
 	color: #fff;
-	@include pro_breakPoint(pc){
-		font-size: 44px;
-	}
 	@include pro_breakPoint(pad){
 		font-size: 2.7vw;
 	}
@@ -93,9 +90,6 @@ h1{
 	}
 }
 h2{
-	@include pro_breakPoint(pc){
-		font-size: 40px;
-	}
 	@include pro_breakPoint(pad){
 		font-size: 3vw;
 	}
@@ -104,7 +98,6 @@ h2{
 	}
 }
 p{
-	font-size: 18px;
 	@include pro_breakPoint(mobile){
 		font-size: 1em;
 	}
@@ -144,13 +137,6 @@ img{
 	.mobileHidden{
 		display: none; 
 	}
-	.pro_s_white{
-		display: none; 
-	}
-	.pro_s_mobileInfo{
-		display: block; 
-	}
-
 }
 
 
@@ -215,6 +201,7 @@ img{
 			@include pro_breakPoint(mobile){
 				width: 50%;
 				height: 54vw;
+   				cursor: pointer;
 			}			
 			border: 0.3em solid #6D5844;
 			background-color: #514336;
@@ -277,7 +264,10 @@ img{
 				position: absolute;
 				margin: auto;
 				top: 0;
-				z-index: 5;		
+				z-index: 5;	
+				@include pro_breakPoint(mobile){
+					.pro_s_info{display: none; }
+				}	
 				//資訊
 				.pro_s_info{
 					width: 80%;
@@ -305,10 +295,6 @@ img{
 							display: inline-block;
 							width: 40%;
 							font-weight: bold;
-						}
-						.btn{
-							@include btn(16);
-							color: #fff; 
 						}
 					}
 				}//--資訊
@@ -362,7 +348,7 @@ img{
 	margin: auto;
 	top: 0;
 	margin-left: -10px; 
-	z-index: 5;
+	z-index: 9;
 	.pro_s_info{
 		background-color: #fff;
 		height: 80vh;
@@ -372,7 +358,8 @@ img{
 		border-radius: 10px;
 		text-align: center;
 		overflow: hidden;
-		i{
+		.icon{
+
 			float: right;
 			margin: 10px 12px 0 0;  
 			font-size: 8vw;
@@ -407,10 +394,6 @@ img{
 				display: inline-block;
 				width: 30%;
 				font-weight: bold;
-			}
-			.btn{
-				@include btn(16);
-				color: #fff; 
 			}
 		}
 	}
@@ -470,13 +453,15 @@ img{
 				}				
 				//每個商品
 				li{
+					margin-top: 4px;
 					padding: 0px 20px;
 					box-sizing: border-box; 
 					float: left;
 					text-align: center;
 					cursor: pointer;
+					z-index: 3; 
 					@include pro_breakPoint(pc){
-						width: (1440px/3); 
+						width: (1440px/3);
 					}
 					@include pro_breakPoint(pad){
 						width: 33.33vw;
@@ -484,6 +469,9 @@ img{
 					@include pro_breakPoint(mobile){
 						width: 50%;
 						margin-top: 10px; 
+					}
+					&:hover>div:first-child{
+						box-shadow: 0px 0px 1px 2px $highLight;
 					}
 					&>div{
 						&:first-child{
@@ -514,18 +502,19 @@ img{
 		}//--幻燈箱可視區
 
 
+
 		// 向左右
 		.pro_t_toRL{
-			height: 100%; 
+			height: 0; 
 			position: absolute ;
 			left: 0;
 			right: 0;
 			bottom: 0;
 			top: 0;
+			z-index: 1;
 			&>span{ 
-				padding: 3vw 1vw;
-				font-size: 30px; 
-				height: 100%;
+				padding: 5% 1vw 11%;
+				font-size: 30px;
 				color:#777;				
 				box-sizing: border-box;
 				cursor: pointer;
@@ -604,6 +593,7 @@ img{
 						width: 18%; 
 						display: inline-block;
 						border: $imgBorder;
+						cursor: pointer;
 					}
 					& li+li{
 						margin-left:2%;
@@ -611,16 +601,12 @@ img{
 
 				}
 				.pro_t_TBuy{
-					text-align: center;					
+					text-align: center;
 					margin-top: 100px;
 					span{ 
 						@include pro_fourthTitle(#F15A24);
 						font-weight: bold;
-					}
-					button{
-						margin-left: 20px;
-						color: #fff;
-						@include btn();
+						margin-right: 8%;
 					}
 				}
 			}
@@ -693,4 +679,3 @@ img{
 		}
 	} //--魚缸資料區
 }
-
