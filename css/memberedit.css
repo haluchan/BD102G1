@@ -1,0 +1,115 @@
+	*{
+		margin:0px;
+		padding:0px;
+		
+	}
+	body{
+  		font-family: '正黑體';
+		margin:0;
+		background-image:url('../src/image/event/23167-nupqqc-02.png');
+	  	background-repeat: repeat;
+	}
+	h2{
+		font-size: 30px;
+		color:#00802b;
+		font-weight: bold;
+
+	}
+	
+	.table img{
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.titlebg img{
+		width: 100%;
+		height: 50%;
+	}
+	
+	.btnbox{
+		margin-top: 1%;
+	}
+	.btnbox a{
+		font-family: Arial;
+		color: #ffffff;
+		font-size: 18px;
+		border-radius: 6px;
+		background: #699c33;
+		padding: 10px 20px 10px 20px;
+		border: solid #699c33 2px;
+	  	text-decoration: none;
+	}
+
+	.btnbox a:hover {
+		background: #ffffff;
+		text-decoration: none;
+		color: #699c33;
+	}
+	
+	
+	.table{
+		text-align: center;
+		margin: 0 auto;
+		background-color: rgba(255, 255, 255, 1);
+		margin-top: 4%;
+		width: 80%;
+		max-width: 600px;
+		padding: 2%;
+		border-radius: 4%;
+	}
+	table{
+		margin: 0 auto;
+	}
+	td{
+		text-align: center;
+		font-size: 24px;
+		padding: 5px 10px;
+		padding-bottom: 2px;
+		
+	}
+	th{
+		font-size: 24px;
+		border-bottom: 1px solid #699c33;
+	}
+	tr{
+		margin: 0 auto;
+	}
+	.table h2{
+		margin-bottom: 10px;
+		font-size: 40px;
+	}
+	.bigtitle{
+		font-size: 30px;
+	}
+	.bigtitle{
+		text-align: center;
+		padding: 2% 0;
+		letter-spacing: 6px;
+	}
+	.navbarli{
+		display: inline-block;
+		font-size: 24px;
+		background-color: #fff;
+		padding: 10px 10px;
+		border-radius: 10%;
+	}
+	.navbarli:hover{
+		
+		background-color: #699c33;
+		color: #fff;
+		transition: .5s;
+	
+	}
+	.navbar{
+		text-align: center;
+	}
+	.mem{
+	background-image:url('../src/image/member/greenbg.png');
+	background-size: cover;
+	}
+	input{border-radius: 6px;
+	outline: none;
+	border: none;
+	padding: 5px;
+	background-color: rgba(105, 156, 51, .2);}
+
+	

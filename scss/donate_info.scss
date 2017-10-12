@@ -1,0 +1,570 @@
+@charset "UTF-8";
+@import "mixins/setting";
+// 基本設定
+
+
+//手機
+@include rwd_vivi(max-width,767,xs,12);
+//手機以上
+@include rwd_vivi(min-width,768,sm,12);
+
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+
+.h_100vh{
+	height: 100vh;
+}
+.h_100p{
+	height: 100%;
+}
+.w_100vw{
+	width: 100vw;
+}
+.w_100p{
+	width: 100%;
+}
+.oh{
+	overflow: hidden;
+}
+.clear{
+	clear: both;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.txt{
+	font-size: 10px;
+}
+
+// ======================================================================
+
+$max-width :960px;
+.donate_info{
+	// max-width: 1440px;
+	max-width: $max-width;
+	margin: auto; 
+}
+
+
+.data_info{
+	width: 100%;
+	.case_title{
+		text-align: center;
+		line-height: 1.8;
+		margin: 2.5% 0;
+		color: #59493f;
+		h2{
+			color: #362e2b;
+		}
+		@media screen and (max-width: 767px) {
+			h2{
+				font-size: 24px;
+			}
+			h3{
+				font-size: 16px;
+			}
+			h4{
+				font-size: 12px;
+			}
+		}
+		h4{
+			span{
+				color:#a40000;  
+			}
+		}
+	}
+	.play-video{
+		.video_item{
+			width: 95%;
+			margin: 0 2.5%;
+			padding-bottom: 56.8125%;
+			position: relative;
+			.video{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+
+			}
+		}
+	}
+	.case_data{
+		background-image: url("../donate_case_img/sports_ouen.png");
+		background-size: 100%;
+		background-position: 0 -50px; //左右-上下
+		background-repeat: no-repeat;
+		@media screen and (max-width: 767px) {
+			background-image: none;
+		}
+		.case_tiem{
+			width: 90%;
+			margin: 0 5%;
+			p{
+				font-size: 42px;
+				line-height: 1.5;
+				color: #00561f;
+				span{
+					font-size: 16px;
+					color: #007130;
+				}
+			}
+			form{
+				margin-top: 25%;
+				@media screen and (max-width: 767px) {
+					margin-top: 3%;
+				}
+
+				select{
+					width: 100%;
+					height: 25px;
+					color:#59493f;
+				}
+				button{
+					margin: 5% 0px;
+					width: 100%;
+					padding: 5px 0;
+					border-radius: 25px;
+					background-color: #59493f;
+					color:#fff;
+					border:0px;
+					&:hover{
+						background-color: #f1ece4;
+						color:#59493f;
+					}
+				}
+			}
+			.case_ing{
+				margin-top: 6%;
+				font-size: 14px;
+				border-left: 5px solid #59493f;
+				color: #59493f;
+				padding-left: 10px;
+				@media screen and (max-width: 767px) {
+					font-size: 10px;
+					margin: 2% 0 5%;
+					background-image: url("../donate_case_img/sports_ouen.png");
+					background-size: 30%;
+					background-repeat: no-repeat;
+					background-position: right bottom;
+				}
+
+			}
+		}	
+	}
+	.progress{
+		margin-top: 3%;
+		padding: 0 2%;
+		background-image: url("../donate_case_img/deco-wood-01.gif");
+		background-repeat: no-repeat;
+		background-position: 20px 3px;
+		@media screen and (max-width: 767px) {
+			background-size: 20%;
+			background-position: 10px -12px;
+		}
+		.amt{
+			line-height: 3;
+			font-size: 16px;
+			text-align: center;
+			color: #00561f;
+			
+			;
+
+		}
+	}
+
+}
+
+// nav=================================================
+
+
+.main-nav{
+	background-color: #f1ece4;
+	width: 100%;
+	height: 65px;
+	.full-wrapper{
+		max-width: $max-width;
+		margin: auto;
+		overflow: hidden;
+		.inner-nav{
+			ul{
+				list-style: none;
+				li{
+					display: block;
+					float: left;
+					margin: 20px 10px 15px;
+					text-align: center;
+					width: 15%;
+					@media screen and (max-width: 767px) {
+						font-size: 12px;
+					}
+
+					a{
+						display: inline-block;
+						padding-bottom: 5px;
+						color:#59493f;
+						&:hover{
+							border-bottom:5px solid #59493f;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// case_content=================================================================================
+
+.case_content{
+	width: 100%;
+	// background-color: steelblue;
+	.content_title{
+		width: 95%;
+		margin: 0 2.5% ;
+		.title{
+			font-size: 24px;
+			line-height: 2;
+			margin-top: 5%;
+			margin-bottom: 3%;
+			border-bottom: 2px solid #59493f;
+		}
+	}
+
+	.content_txt{
+
+		.content_item{
+			padding: 0 1.5%;
+			.txt{
+				font-size: 14px;
+				text-indent: 2.2em;
+				line-height: 2.1;
+			}
+		}
+		.content_img{
+			img{
+				width: 100%;
+			}&:last-child{
+				margin-top: 8%;
+			}
+		}
+	}
+
+
+
+	.food{
+		.food_title{
+			margin:2.5% 0;
+			font-size: 18px;
+			
+		}
+		.food_item{
+			overflow: hidden;
+			// &:nth-child(odd){
+			// 	background-color: steelblue;
+			// }
+			.food_img1{
+				height: 130px;
+				margin: auto;
+				display: table;
+			}
+			.food_img2{
+				width: 80%;
+				margin: 5% 10% 20%;
+				border-radius: 50%;
+				// display: table;
+			}
+		}
+
+	}
+	
+}
+
+.food_hr{
+			width: 100%;
+		}
+
+
+
+
+
+// 進度回報========================================
+
+.progress_return{
+	width: 100%;
+	// background-image: url("../donate_case_img/deco-mainvisual-01.gif");
+	// // background-size: 40%;
+	// background-repeat: no-repeat;
+	// background-position: right top; 
+	
+	h2{
+		text-align: center;
+		line-height: 4;
+		background-image: url("../donate_case_img/deco-mainvisual-01.gif");
+		background-size: 20%;
+		background-repeat: no-repeat;
+		background-position: 80% center; 
+		@media screen and (max-width: 767px) {
+			font-size: 24px;
+			padding: 3%;
+			line-height: 3;
+		}
+	}
+	.type_1{
+		width: 80%;
+		margin-bottom: 5%;
+		padding: 0 10% 10%;
+		background-image: url("../donate_case_img/bg_foot01.png"), url("../donate_case_img/img_1400_sub.png");
+		background-repeat: no-repeat;
+		background-position: left bottom, right bottom;
+		.type_img{
+			img{
+				width: 100%;
+			}
+		}
+		.type_txt{
+			.title{
+				text-align: left;
+				color: #362e2b;
+				margin: 3% 0;
+				.date{
+					display: inline-block;
+					float: right;
+					// text-align: right;
+					font-size: 14px;
+					color: #7e6b5a;
+				}
+			}
+			.content{
+				font-size: 16px;
+				color: #59493f;
+				line-height: 2;
+
+			}
+
+		}
+
+	}
+	.type_2{
+		width: 80%;
+		margin: 0 auto;
+		padding-bottom: 15%;
+		background-image: url("../donate_case_img/bg_foot02.png"), url("../donate_case_img/img_830_sub.png");
+		background-repeat: no-repeat;
+		background-position: center bottom , right bottom;
+
+		.type_img{
+			img{
+				width: 95%;
+			}
+		}
+		.type_txt{
+			.title{
+				text-align: left;
+				color: #362e2b;
+				margin: 5% 0;
+				.date{
+					display: inline-block;
+					float: right;
+					// text-align: right;
+					font-size: 14px;
+					color: #7e6b5a;
+				}
+			}
+			.content{
+				font-size: 16px;
+				color: #59493f;
+				line-height: 2;
+			}
+
+		}
+
+	}
+	.type_3{
+		width: 80%;
+		margin: 0 auto;
+		padding-bottom: 15%;
+		background-image: url("../donate_case_img/bg_foot08.png"),url("../donate_case_img/img_500_sub.png");
+		background-repeat: no-repeat;
+		background-position: center bottom , left 300px;
+		.type_img{
+			float: right;
+			img{
+				width: 95%;
+			}
+		}
+		.type_txt{
+			.title{
+				text-align: left;
+				color: #362e2b;
+				margin: 5% 0;
+				.date{
+					display: inline-block;
+					float: right;
+					// text-align: right;
+					font-size: 14px;
+					color: #7e6b5a;
+				}
+			}
+			.content{
+				font-size: 16px;
+				color: #59493f;
+				line-height: 2;
+			}
+
+		}
+
+	}
+
+
+}
+
+
+
+
+//message====================================================
+.message{
+	width: 80%;
+	margin: auto;
+	
+	h2{
+		text-align: center;
+		line-height: 3;
+		background-image: url("../donate_case_img/deco-denim-01.png");
+		background-size: 30%;
+		background-repeat: no-repeat;
+		background-position: left center; 
+		@media screen and (max-width: 767px) {
+			font-size: 24px;
+			padding: 3%;
+			line-height: 2;
+		}
+	}
+	.message_box{
+		// background-color: #a6937c;
+		padding: 2% 4% 2% 2%;
+		margin-bottom: 2%;
+		border-radius: 15px;
+		border:1px solid #ddd0bb;
+		.mem_photo{
+			text-align: right;
+			box-sizing:border-box;
+			padding: 0 2% 2%;
+			img{
+				width: 100%;
+				border-radius: 50%;
+				display: block;
+			}
+			
+		}
+		.mem_txt{
+			.content{
+				font-size: 16px;
+				line-height: 1.5;
+				background-color: #ddd0bb;
+				border-radius: 15px;
+				padding: 2%;
+				margin-left: 3%;
+				position: relative;
+				 @media screen and (max-width: 767px) {
+						font-size: 14px;
+						padding: 3%;
+					}
+				&:before{
+					content: '';
+				    display: inline-block;
+				    width: 0;
+				    height: 0;
+				    border: 13px solid transparent;
+				    border-top-color: #ddd0bb;
+				    border-right-color: #ddd0bb;
+				    position: absolute;
+				    left: -4%;
+				    @media screen and (max-width: 767px) {
+						content: '';
+					    display: inline-block;
+					    width: 0;
+					    height: 0;
+					    border: 9px solid transparent;
+					    border-top-color: #ddd0bb;
+					    border-right-color: #ddd0bb;
+					    position: absolute;
+					    left: -6%;
+							 
+					}
+				}
+				.date{
+					font-size: 12px;
+					text-align: right;
+					// color:#fff;
+					display: block;
+				}
+			}
+		}
+
+	}
+
+}
+
+
+
+.message_form{
+	width: 80%;
+	margin: auto;
+	margin-bottom: 5%;
+
+	.message_box{
+		background-color: #f1ece4;
+		padding: 2% 4% 2% 2%;
+		margin-bottom: 2%;
+		border-radius: 15px;
+		.mem_photo{
+			text-align: right;
+			box-sizing:border-box;
+			padding: 0 2% 2%;
+			img{
+				width: 100%;
+				border-radius: 50%;
+				display: block;
+			}
+			
+		}
+		.mem_txt{
+			.content{
+				width: 95%;
+				font-size: 16px;
+				background-color: #fff;
+				padding: 2%;
+			}
+		}
+
+	}
+	button{
+		float: right;
+		margin-top: 2%;
+		padding: 1%;
+		color:#fff;
+		font-size: 16px;
+		background-color: #a6937c;
+		border:0px;
+		&:hover{
+			background-color: #FFF;
+			color: #a6937c;
+
+		}
+	}
+}
+
+
+
+
+
+
+
+

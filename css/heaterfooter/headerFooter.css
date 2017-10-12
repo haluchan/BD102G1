@@ -1,0 +1,132 @@
+body {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  border: 0; }
+
+header {
+  margin: 0 auto; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+a {
+  text-decoration: none; }
+
+.clear {
+  clear: both; }
+
+h6 {
+  font-size: 113%;
+  margin: 0;
+  color: #fff;
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 1px; }
+
+h5 {
+  font-size: 119%;
+  margin: 0;
+  color: #fff;
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 1px; }
+
+h4 {
+  font-size: 157%;
+  margin: 0;
+  color: #43612f;
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 1px; }
+
+.head-1 {
+  background-color: #699c33;
+  height: 40px; }
+
+.head-1-text {
+  width: 19.0972222222%;
+  float: right; }
+
+.head-1 h6 {
+  display: inline-block;
+  padding: 0 2.472222%;
+  height: 40px;
+  line-height: 40px; }
+
+.head-2 {
+  background-color: #ece7d4;
+  height: 138px;
+  margin: 0 auto; }
+
+.head-2:before {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle; }
+
+.head-2-box {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%; }
+
+.head-2-left {
+  display: inline-block;
+  padding-right: 27.7777777778%; }
+
+.head-2-right {
+  display: inline-block; }
+
+.head-2 .head-2-item {
+  display: inline-block;
+  margin: 0 50px;
+  width: 25.304%;
+  height: 96px; }
+
+.head-2 .head-2-item img {
+  width: 50%;
+  padding-bottom: 6px;
+  display: inline-block; }
+
+.head-3 {
+  width: 302px;
+  margin: -134px 569px 0 569px; }
+
+.head-3 img {
+  margin: 0 auto;
+  width: 302px;
+  height: 220px; }
+
+.backgroundimg {
+  background: url("../img/footer.png");
+  background-repeat: no-repeat; }
+
+.footerTitle {
+  width: 1173px;
+  margin: 0 auto;
+  padding-top: 60px; }
+
+.footerTitle img {
+  width: 35%;
+  float: left; }
+
+.footerItemList {
+  width: 1022px;
+  margin-left: 216px;
+  float: left;
+  margin-top: -28px; }
+  .footerItemList ul {
+    padding: 0;
+    margin: 0;
+    float: left;
+    padding-right: 100px; }
+    .footerItemList ul li {
+      list-style: none;
+      padding-bottom: 15px; }
+
+.footerIcon {
+  width: 127px;
+  float: right;
+  margin: 57px 24px 0 0; }
+
+.footerIcon img {
+  display: inline-block; }
