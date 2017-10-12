@@ -45,10 +45,10 @@ module.exports = function (grunt) {
         },
         options: {
           watchTask: true,
-          browser: "Chrome",
+          browser: "Google Chrome",
           server: {
             baseDir: './',
-            index: 'event-inside.html'
+            index: 'hopeFarm022.html'
           }
         }
       }
