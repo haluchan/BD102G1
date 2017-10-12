@@ -1,0 +1,150 @@
+@charset "UTF-8";
+@import "../mixins/media";
+
+
+h1{
+	font-size:44px;
+	color:#659e34;
+	
+}
+
+h2{
+	font-size:28px;
+	color:rgba(0,0,0,0.6);
+	@include rwd (moblie) {	
+		font-size:24px;		
+	}
+
+}
+
+p{
+	color:#43612f;
+	font-size:18px;
+	@include rwd (moblie) {						
+		font-size:14px;			    					
+	}
+}
+
+img{
+	width:100%;
+}
+
+.container{
+	padding-top:8%;
+	width:60%;
+	margin:auto;
+	@include rwd (moblie) {						
+		width:90%;	
+		overflow:hidden;		    					
+	}
+
+	.applicationTitle{
+		width:100%;
+		margin:auto;
+		text-align:center;
+		@include rwd (moblie) {						
+		    width:100%;
+		    text-align:center;			    					
+		}
+
+		.item{
+			width:40%;
+			text-align:right;		
+			display:inline-block;
+			vertical-align: middle;
+			@include rwd (moblie) {						
+		    	width:35%;
+		    	h1{font-size:24px;}			    					
+			}
+			img{
+				width:200px;
+				// text-align:right;
+				@include rwd (moblie) {						
+		    		width:100%;		    					
+				}
+			}
+			h1{
+				text-align:left;
+			}
+		}
+	}
+
+	form{	
+		margin: 50px auto;
+		padding: 50px 0;;
+		background-color: #ece7d4;
+		font-weight:bold;
+		font-size:20px;
+		.table{
+			width:80%;
+			margin:auto;
+			@include rwd (moblie) {						
+					 margin:auto;	    					
+				}
+			.tr{
+				display:table-row;
+				// display:block;
+				height:100px;
+				margin:auto;
+				text-align:center;
+				@include rwd (moblie) {						
+					 display:block;
+					 overflow:hidden;	 
+
+				}
+				.td{
+					width:30%;
+					display:table-cell;
+					vertical-align:middle;
+					&:first-child{
+						text-align:left;
+					}
+					label{
+						font-size:18px;
+					}	
+						input{
+							border-radius: 6px;
+							outline: none;
+							border: none;
+							padding: 5px;
+							// background-color: rgba(105, 156, 51, .2);
+							background-color: rgba(255, 255, 255, .9);
+							height: 30px;
+						}
+						textarea{
+							background-color: rgba(255, 255, 255, .9);
+							outline: none;
+							border: none;
+							border-radius: 6px;
+						}
+					@include rwd (moblie) {						
+					    display:block;	
+					    margin:auto;
+					    text-align:center;
+					    width:100%;
+					    &:first-child{
+							text-align:center;
+						}
+
+					}
+				}
+			}
+		}
+	}
+	.formSubmit{
+			width: 200px;
+			height: 50px;
+			left:0;
+			right:0;
+			margin: auto;
+
+			// input{
+			// 	width: 200px;
+			// 	height: 50px;
+			// 	background-color: #e8d59b;
+			// 	padding:10px 20px;
+			// 	border: 1px solid transparent;
+			// 				}
+		}
+}
+

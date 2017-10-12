@@ -1,0 +1,130 @@
+h1 {
+  font-size: 44px;
+  color: #659e34; }
+
+h2 {
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.6); }
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size: 20px; } }
+
+p {
+  color: #43612f;
+  font-size: 18px; }
+  @media screen and (max-width: 767px) {
+    p {
+      font-size: 14px; } }
+
+img {
+  width: 100%; }
+
+.container {
+  padding-top: 8%;
+  width: 60%;
+  margin: auto; }
+  @media screen and (max-width: 767px) {
+    .container {
+      width: 90%; } }
+  .container .applicationTitle {
+    width: 100%;
+    margin: auto;
+    text-align: center; }
+    @media screen and (max-width: 767px) {
+      .container .applicationTitle {
+        width: 100%;
+        text-align: center; } }
+    .container .applicationTitle .item {
+      width: 40%;
+      text-align: right;
+      display: inline-block;
+      vertical-align: middle; }
+      @media screen and (max-width: 767px) {
+        .container .applicationTitle .item {
+          width: 35%; }
+          .container .applicationTitle .item h1 {
+            font-size: 24px; } }
+      .container .applicationTitle .item img {
+        width: 200px; }
+        @media screen and (max-width: 767px) {
+          .container .applicationTitle .item img {
+            width: 100%; } }
+      .container .applicationTitle .item h1 {
+        text-align: left; }
+  .container .SubTitle {
+    text-align: center;
+    line-height: 25px; }
+    .container .SubTitle p {
+      line-height: 25px; }
+    @media screen and (max-width: 767px) {
+      .container .SubTitle {
+        width: 100%;
+        text-align: center;
+        margin: auto; }
+        .container .SubTitle p {
+          line-height: 20px; } }
+  .container form .stepContent {
+    background-color: #ece7d4;
+    margin: 50px auto;
+    padding: 50px 0;
+    text-align: center;
+    position: relative; }
+    .container form .stepContent:first-child {
+      background-color: white; }
+    @media screen and (max-width: 767px) {
+      .container form .stepContent#hidden {
+        display: none; } }
+    @media screen and (max-width: 767px) {
+      .container form .stepContent {
+        padding: 10% 0; } }
+    .container form .stepContent h2 {
+      text-align: center; }
+    .container form .stepContent .stepAll {
+      width: 30%;
+      display: inline-block; }
+    .container form .stepContent .stepContentNumber {
+      position: absolute;
+      left: -50px;
+      top: -50px; }
+      @media screen and (max-width: 767px) {
+        .container form .stepContent .stepContentNumber {
+          width: 20%;
+          left: -5%;
+          top: -35px; } }
+    .container form .stepContent table {
+      margin: auto; }
+      .container form .stepContent table tr {
+        height: 50px;
+        text-align: left; }
+      .container form .stepContent table input {
+        height: 30px;
+        border-radius: 6px;
+        border: none;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.9); }
+      .container form .stepContent table th {
+        font-weight: normal; }
+      .container form .stepContent table td {
+        text-align: center; }
+      .container form .stepContent table .gender {
+        width: 30%;
+        display: inline-block;
+        line-height: 30px;
+        vertical-align: middle; }
+    .container form .stepContent .upItem {
+      width: 80%;
+      margin: auto;
+      text-align: center; }
+      .container form .stepContent .upItem input {
+        width: 50%;
+        margin: auto;
+        border-radius: 6px;
+        border: none;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.9); }
+  .container form .formSubmit {
+    width: 200px;
+    height: 50px;
+    left: 0;
+    right: 0;
+    margin: auto; }
