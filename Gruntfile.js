@@ -45,7 +45,11 @@ module.exports = function (grunt) {
         },
         options: {
           watchTask: true,
+<<<<<<< HEAD
+          browser: "google chrome",
+=======
           browser: "Google Chrome",
+>>>>>>> 52ee638e2f490effa367db8c883ff7844d23211c
           server: {
             baseDir: './',
             index: 'hopeFarm.html'

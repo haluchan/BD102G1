@@ -227,6 +227,7 @@ button{
   background-size: 100%;
   position: relative;
   /*height: 10vh;*/
+  overflow: hidden;
 }
 .footerTitle{
   width: 81.458333333%;
@@ -413,10 +414,11 @@ button{
         /*background-color: pink;*/
         width: 30%;
         margin: 0 auto;
-        margin-top: -50px;
+        /*margin-top: -50px;  pon*/
         margin-left: 34.289439374%;
         float: left;
-        position: relative;
+        /*position: relative; pon */
+        position: absolute;
     }
     /*===========fix_navbar=========*/
     .fix_navbar{

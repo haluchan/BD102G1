@@ -295,15 +295,15 @@ section {
       color: #7e7a7f; }
   .container .step .stepBuy {
     width: 150px;
-    height: 50px;
     text-align: center;
-    line-height: 50px;
     background-color: #e8d59b;
     margin: auto; }
     .container .step .stepBuy a {
       text-decoration: none;
-      color: #000;
+      color: #ffffff;
       display: block; }
+      .container .step .stepBuy a:hover {
+        color: #699c33; }
 
 .container .theory {
   width: 60%;

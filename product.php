@@ -11,7 +11,7 @@
 <body>
     <?php require_once('Header.php') ?>
 
-    <div class="cart" id="cart">(0)</div>
+    <!-- <div class="cart" id="cart">(0)</div> -->
     <div class="container">
         <!-- 種子頁 -->
         <section class="pro_seed">
@@ -56,9 +56,9 @@
                             </p>
                             <div class="pro_s_buy">
                                 <span>$50/包</span>
-                                <button class="btn_green addButton" id="s001">加入購物
+                                <span class="btn_green addButton" id="s001">加入購物
                                     <input type="hidden" name="proInfo" value="朝天椒|s001.png|50">
-                                </button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -98,9 +98,9 @@
                             </p>
                             <div class="pro_s_buy">
                                 <span>$50/包</span>
-                                <button class="btn_green addButton" id="s002">加入購物
+                                <span class="btn_green addButton" id="s002">加入購物
                                     <input type="hidden" name="proInfo" value="青江菜|s002.png|50">
-                                </button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -140,9 +140,9 @@
                             </p>
                             <div class="pro_s_buy">
                                 <span>$50/包</span>
-                                <button class="btn_green addButton" id="s003">加入購物
+                                <span class="btn_green addButton" id="s003">加入購物
                                     <input type="hidden" name="proInfo" value="小南瓜|s003.png|50">
-                                </button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -177,9 +177,9 @@
                             </p>
                             <div class="pro_s_buy">
                                 <span>$50/包</span>
-                                <button class="btn_green addButton" id="s004">加入購物
+                                <span class="btn_green addButton" id="s004">加入購物
                                     <input type="hidden" name="proInfo" value="多彩椒|s004.png|50">
-                                </button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -215,9 +215,9 @@
                             </p>
                             <div class="pro_s_buy">
                                 <span>$50/包</span>
-                                <button class="btn_green addButton" id="s005">加入購物
+                                <span class="btn_green addButton" id="s005">加入購物
                                     <input type="hidden" name="proInfo" value="觀賞茄|s005.png|50">
-                                </button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -253,9 +253,9 @@
                             </p>
                             <div class="pro_s_buy">
                                 <span>$50/包</span>
-                                <button class="btn_green addButton" id="s006">加入購物
+                                <span class="btn_green addButton" id="s006">加入購物
                                     <input type="hidden" name="proInfo" value="紅蘿蔔|s006.png|50">
-                                </button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -291,9 +291,9 @@
                             </p>
                             <div class="pro_s_buy">
                                 <span>$50/包</span>
-                                <button class="btn_green addButton" id="s007">加入購物
+                                <span class="btn_green addButton" id="s007">加入購物
                                     <input type="hidden" name="proInfo" value="小番茄|s007.png|50">
-                                </button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -328,9 +328,9 @@
                             </p>
                             <div class="pro_s_buy">
                                 <span>$50/包</span>
-                                <button class="btn_green addButton" id="s008">加入購物
+                                <span class="btn_green addButton" id="s008">加入購物
                                     <input type="hidden" name="proInfo" value="四季蔥|s008.png|50">
-                                </button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -480,9 +480,9 @@
                         </ul>
                         <div class="pro_t_TBuy">
                             <span>$9999/個</span>
-                            <button class="btn_green addButton" id="t001">加入購物車
+                            <span class="btn_green addButton" id="t001">加入購物車
                                 <input type="hidden" name="proInfo" value="香草與魚I|t001.jpg|999">
-                            </button>
+                            </span>
                         </div>
                     
                     </div> <!--pro_t_infoR-->
@@ -520,11 +520,12 @@
                 </div>               
             </div> <!--pro_t_info-->
 
-            
+          <?php require_once('Footer.php') ?>  
         </section>
+
+
+        
     </div> <!--container-->
 
-
-    <?php require_once('Footer.php') ?>
 </body>
 </html>

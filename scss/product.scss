@@ -80,6 +80,10 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 	}
 }
 
+body{
+	font-family: '微軟正黑體';
+}
+
 h1{
 	color: #fff;
 	@include pro_breakPoint(pad){
@@ -291,10 +295,12 @@ img{
 						margin: auto;
 						margin: 20px auto; 
 						span{
-							@include pro_fourthTitle(#F15A24);
-							display: inline-block;
-							width: 40%;
-							font-weight: bold;
+							&:first-child{									
+								@include pro_fourthTitle(#F15A24);
+								display: inline-block;
+								width: 40%;
+								font-weight: bold;
+							}
 						}
 					}
 				}//--資訊
@@ -604,9 +610,11 @@ img{
 					text-align: center;
 					margin-top: 100px;
 					span{ 
-						@include pro_fourthTitle(#F15A24);
-						font-weight: bold;
-						margin-right: 8%;
+						&:first-child{							
+							@include pro_fourthTitle(#F15A24);
+							font-weight: bold;
+							margin-right: 8%;
+						}
 					}
 				}
 			}
@@ -637,8 +645,7 @@ img{
 					.pro_t_TBuy{
 						text-align: left;
 						margin-top: 15%;
-						span{}
-						button{
+						.btn_green{
 							display: inline-block;
 							float: right;
 							margin-right: 10%; 
