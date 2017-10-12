@@ -11,7 +11,7 @@
 <body>
     <?php require_once('Header.php') ?>
 
-    <div class="cart" id="cart">(0)</div>
+    <!-- <div class="cart" id="cart">(0)</div> -->
     <div class="container">
         <!-- 種子頁 -->
         <section class="pro_seed">
