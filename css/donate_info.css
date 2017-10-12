@@ -1,369 +1,58 @@
-@media screen and (max-width: 767px) {
-  .col-xs-1 {
-    width: 8.33333%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-xs-2 {
-    width: 16.66667%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-xs-3 {
-    width: 25%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-xs-4 {
-    width: 33.33333%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-xs-5 {
-    width: 41.66667%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-xs-6 {
-    width: 50%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-xs-7 {
-    width: 58.33333%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-xs-8 {
-    width: 66.66667%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-xs-9 {
-    width: 75%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-xs-10 {
-    width: 83.33333%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-xs-11 {
-    width: 91.66667%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-xs-12 {
-    width: 100%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .hidden-xs {
-    display: none;
-  }
-}
+/*
+Error: Mixin rwd takes 1 argument but 4 were passed.
+        on line 7 of scss/donate_info.scss, in `rwd'
+        from line 7 of scss/donate_info.scss
 
-@media screen and (min-width: 768px) {
-  .col-sm-1 {
-    width: 8.33333%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-sm-2 {
-    width: 16.66667%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-sm-3 {
-    width: 25%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-sm-4 {
-    width: 33.33333%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-sm-5 {
-    width: 41.66667%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-sm-6 {
-    width: 50%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-sm-7 {
-    width: 58.33333%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-sm-8 {
-    width: 66.66667%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-sm-9 {
-    width: 75%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-sm-10 {
-    width: 83.33333%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-sm-11 {
-    width: 91.66667%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .col-sm-12 {
-    width: 100%;
-    box-sizing: border-box;
-    float: left;
-  }
-  .hidden-sm {
-    display: none;
-  }
-}
+2: @import "mixins/setting";
+3: // 基本設定
+4: 
+5: 
+6: //手機
+7: @include rwd(max-width,767,xs,12);
+8: //手機以上
+9: @include rwd(min-width,768,sm,12);
+10: *{
+11: 	margin: 0;
+12: 	padding: 0;
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-.h_100vh {
-  height: 100vh;
-}
-
-.h_100p {
-  height: 100%;
-}
-
-.w_100vw {
-  width: 100vw;
-}
-
-.w_100p {
-  width: 100%;
-}
-
-.oh {
-  overflow: hidden;
-}
-
-.clear {
-  clear: both;
-}
-
-.fl {
-  float: left;
-}
-
-.fr {
-  float: right;
-}
-
-.donate_info {
-  max-width: 960px;
-  margin: auto;
-}
-
-.data_info {
-  width: 100%;
-}
-
-.data_info .case_title {
-  text-align: center;
-  line-height: 1.8;
-  margin: 2.5% 0;
-  color: #59493f;
-}
-
-.data_info .case_title h2 {
-  color: #362e2b;
-}
-
-.data_info .case_title h4 span {
-  color: #a40000;
-}
-
-.data_info .play-video .video_item {
-  width: 95%;
-  margin: 0 2.5%;
-  padding-bottom: 56.8125%;
-  position: relative;
-}
-
-.data_info .play-video .video_item .video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-.data_info .case_data {
-  background-image: url("../donate_case_img/sports_ouen.png");
-  background-size: 100%;
-  background-position: 0 -50px;
-  background-repeat: no-repeat;
-}
-
-.data_info .case_data .case_tiem {
-  width: 90%;
-  margin: 0 5%;
-}
-
-.data_info .case_data .case_tiem p {
-  font-size: 42px;
-  line-height: 1.5;
-  color: #00561f;
-}
-
-.data_info .case_data .case_tiem p span {
-  font-size: 16px;
-  color: #007130;
-}
-
-.data_info .case_data .case_tiem form {
-  margin-top: 25%;
-}
-
-.data_info .case_data .case_tiem form select {
-  width: 100%;
-  height: 25px;
-  color: #59493f;
-}
-
-.data_info .case_data .case_tiem form button {
-  margin: 5% 0px;
-  width: 100%;
-  padding: 5px 0;
-  border-radius: 25px;
-  background-color: #59493f;
-  color: #fff;
-}
-
-.data_info .case_data .case_tiem form button:hover {
-  background-color: #FFF;
-  color: #59493f;
-}
-
-.data_info .case_data .case_tiem .case_ing {
-  margin-top: 6%;
-  font-size: 14px;
-  border-left: 5px solid #59493f;
-  color: #59493f;
-  padding-left: 10px;
-}
-
-.data_info .progress {
-  margin-top: 3%;
-  padding: 0 2%;
-  background-image: url("../donate_case_img/deco-wood-01.gif");
-  background-repeat: no-repeat;
-  background-position: 20px 3px;
-}
-
-.data_info .progress .amt {
-  line-height: 3;
-  font-size: 16px;
-  text-align: center;
-  color: #00561f;
-}
-
-.main-nav {
-  background-color: #f1ece4;
-  width: 100%;
-  height: 65px;
-}
-
-.main-nav .full-wrapper {
-  max-width: 960px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.main-nav .full-wrapper .inner-nav ul {
-  list-style: none;
-}
-
-.main-nav .full-wrapper .inner-nav ul li {
-  display: block;
-  float: left;
-  margin: 20px 10px 15px;
-  text-align: center;
-  width: 15%;
-}
-
-.main-nav .full-wrapper .inner-nav ul li a {
-  display: inline-block;
-  padding-bottom: 5px;
-  color: #59493f;
-}
-
-.main-nav .full-wrapper .inner-nav ul li a:hover {
-  border-bottom: 5px solid #59493f;
-}
-
-.case_content {
-  width: 100%;
-}
-
-.case_content .content_title {
-  width: 95%;
-  margin: 0 2.5%;
-}
-
-.case_content .content_title .title {
-  font-size: 24px;
-  line-height: 2;
-  margin-top: 5%;
-  margin-bottom: 3%;
-  border-bottom: 2px solid #59493f;
-}
-
-.case_content .content_txt .content_item {
-  padding: 0 1.5%;
-}
-
-.case_content .content_txt .content_item .txt {
-  font-size: 14px;
-  text-indent: 4em;
-  line-height: 2.1;
-}
-
-.case_content .content_txt .content_img img {
-  width: 100%;
-}
-
-.case_content .content_txt .content_img:last-child {
-  margin-top: 8%;
-}
-
-.case_content .food .food_title {
-  margin: 2.5% 0;
-  font-size: 18px;
-}
-
-.case_content .food .food_item .food_img1 {
-  height: 130px;
-  width: 60%;
-  margin: 10% 20%;
-}
-
-.case_content .food .food_item .food_img2 {
-  width: 80%;
-  margin: 10%;
-  border-radius: 50%;
-}
-
-.case_content .food_hr {
-  width: 100%;
-}
+Backtrace:
+scss/donate_info.scss:7:in `rwd'
+scss/donate_info.scss:7
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:59:in `perform_arguments'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:362:in `block in visit_mixin'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `block in with_mixin'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `with_mixin'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/engine.rb:290:in `render'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:400:in `run'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:22:in `load'
+/usr/local/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Mixin rwd takes 1 argument but 4 were passed.\A         on line 7 of scss/donate_info.scss, in `rwd'\A         from line 7 of scss/donate_info.scss\A \A 2: @import \"mixins/setting\";\A 3: // 基本設定\A 4: \A 5: \A 6: //手機\A 7: @include rwd(max-width,767,xs,12);\A 8: //手機以上\A 9: @include rwd(min-width,768,sm,12);\A 10: *{\A 11: 	margin: 0;\A 12: 	padding: 0;"; }

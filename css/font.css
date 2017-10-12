@@ -4,30 +4,88 @@
 }
 
 body{
-<<<<<<< HEAD
 	font-family:'微軟正黑體';
-	
-=======
-	font-family:'微軟正黑體';	
->>>>>>> 8a5f3f6b8ddc5a055e9876c52874d6fd42ec781f
 }
 
 
 h1{
-	font-size:48px;
+	font-size:38px;
 }
 
 h2{
-	font-size:40px;
+	font-size:28px;
 }
 
 p{
-	font-size:22px;
+	font-size: 18px;
 	letter-spacing: 1px;
-	line-height: 36px;
+	line-height: 26px;
 }
 
-.btn{
-	font-size:24px;
-	font-family:'微軟正黑體';
+.btn_green{
+  font-family: Arial , '微軟正黑體';
+  color: #ffffff;
+  font-size: 18px;
+  background: #699c33;
+  padding: 10px 20px 10px 20px;
+  border: solid #699c33 2px;
+  text-decoration: none;
+  cursor:pointer;
+  letter-spacing: 1px;
+  transition: .4s;
+}
+
+.btn_green:hover {
+  background: #ffffff;
+  text-decoration: none;
+  color: #699c33;
+  cursor:pointer;
+  letter-spacing: 1px;
+  transition: .4s;
+}
+
+
+.btn_blue{
+  font-family: Arial , '微軟正黑體';
+  color: #ffffff;
+  font-size: 18px;
+  background: #6cbecc;
+  padding: 10px 20px 10px 20px;
+  border: solid #6cbecc 2px;
+  text-decoration: none;
+  cursor:pointer;
+  transition: .4s;
+}
+
+.btn_blue:hover {
+  background: #ffffff;
+  text-decoration: none;
+  color: #6cbecc;
+  cursor:pointer;
+  transition: .4s;
+}
+
+
+
+
+
+.btn_brown{
+  font-family: Arial , '微軟正黑體';
+  color: #ffffff;
+  font-size: 18px;
+  background: #5a3819;
+  padding: 10px 20px 10px 20px;
+  border: solid #5a3819 2px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor:pointer;
+  transition: .4s;
+}
+
+.btn_brown:hover {
+  background: #ffffff;
+  text-decoration: none;
+  color: #5a3819;
+  cursor:pointer;
+  transition: .4s;
 }
