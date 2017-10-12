@@ -7,9 +7,10 @@
 <link rel="stylesheet" href="css/product.css">
 <link rel="stylesheet" type="text/css" href="src/libs/font-awesome/css/font-awesome.min.css">
 <script src="js/product.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
 <body>
+    <?php require_once('Header.php') ?>
+
     <div class="cart" id="cart">(0)</div>
     <div class="container">
         <!-- 種子頁 -->
@@ -522,5 +523,8 @@
             
         </section>
     </div> <!--container-->
+
+
+    <?php require_once('Footer.php') ?>
 </body>
 </html>
