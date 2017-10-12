@@ -159,6 +159,8 @@ button{
   left: 0;
   right: 0;
   z-index: 100;
+  position: absolute;
+  text-align: center;
 }
 .head-3 img{
   margin: 0 auto;
