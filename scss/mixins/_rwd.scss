@@ -1,4 +1,50 @@
 
+<<<<<<< HEAD
+@mixin rwd_vivi($w,$num,$size,$cols){
+	@media screen and (#{$w}: #{$num}+px) {
+		@for $i from 1 through $cols{
+			.col-#{$size}-#{$i}{
+				width: ($i / $cols) * 100%;
+				box-sizing: border-box; 
+				// padding: 10px; 
+				float: left;
+			}
+		}
+		.hidden-#{$size}{
+			display: none;
+		}
+
+	}
+
+
+}
+  
+// rwd 
+    // $mobile : 767px ; 
+    // $tablet_min : 768px;
+    // $tablet_max : 1199px;
+    // $desktop : 1200px;
+
+
+
+    // @mixin rwd ($breakpoint) {
+    //     @if $breakpoint == "mobile" {
+    //         @media all and (max-width: $mobile) {
+    //             @content;
+    //         }
+    //     }
+    //     @else if $breakpoint == "tablet" {
+    //         @media all and (min-width: $tablet_min) and (max-width:$tablet_max) {
+    //             @content;
+    //         }
+    //     }
+    //     @else if $breakpoint == "desktop" {
+    //         @media all and (min-width: $desktop) {
+    //             @content;
+    //         }
+    //     }
+    // }
+=======
 // @mixin rwd($w,$num,$size,$cols){
 // 	@media screen and (#{$w}: #{$num}+px) {
 // 		@for $i from 1 through $cols{
@@ -45,3 +91,4 @@
         }
     }
 
+>>>>>>> 52ee638e2f490effa367db8c883ff7844d23211c

@@ -13,7 +13,7 @@ h2{
 	font-size:28px;
 	color:rgba(0,0,0,0.6);
 	@include rwd (moblie) {	
-		font-size:24px;		
+		font-size:20px;		
 	}
 
 }
@@ -34,6 +34,7 @@ img{
 }
 
 .container{
+	padding-top:8%;
 	width:60%;
 	margin:auto;
 
@@ -56,7 +57,7 @@ img{
 			display:inline-block;
 			vertical-align: middle;
 			@include rwd (moblie) {						
-		    	width:30%;
+		    	width:35%;
 		    	h1{font-size:24px;}			    					
 			}
 			img{
@@ -74,10 +75,17 @@ img{
 
 	.SubTitle{
 		text-align:center;
+		line-height:25px;
+		p{
+			line-height:25px;	
+		}
 		@include rwd (moblie) {						
-		    width:80%;
+		    width:100%;
 		    text-align:center;	
-		    margin:auto;		    					
+		    margin:auto;
+		    p{
+				line-height:20px;	
+			}		    					
 		}
 	}
 
@@ -88,31 +96,30 @@ img{
 			padding: 50px 0;
 			text-align:center;
 			position:relative;
-			
+			&:first-child{
+				background-color:white;
+			}
+
 			&#hidden{
 				@include rwd (moblie) {						
 		    		display:none;			    					
 				}
 			}
+
 			@include rwd (moblie) {						
 		    	padding: 10% 0;			    					
 			}
-			
-
 			h2{
 				text-align:center;
 			}
 			.stepAll{
 				width:30%;
-				display:inline-block;
-					
+				display:inline-block;		
 			}
-
 			.stepContentNumber{
 				position: absolute;
 				left:-50px;
 				top: -50px;
-
 				@include rwd (moblie) {						
 		    		width:20%;
 		    		left:-5%;
@@ -128,17 +135,35 @@ img{
 				}
 				input{
 					height:30px;
-					// width:80%;
+					border-radius: 6px;
+					border: none;
+					padding: 5px;
+					background-color: rgba(255, 255, 255, .9);
+				}
+				th{
+					font-weight:normal;
 				}
 				td{
 					text-align:center;
-
 				}
 				.gender{
 					width:30%;
 					display:inline-block;
 					line-height:30px;
 					vertical-align:middle;
+				}
+			}
+			.upItem{
+				width:80%;
+				margin:auto;
+				text-align:center;
+				input{
+					width:50%;
+					margin:auto;
+					border-radius: 6px;
+					border: none;
+					padding: 5px;
+					background-color: rgba(255, 255, 255, .9);
 				}
 			}
 
@@ -152,13 +177,13 @@ img{
 			right:0;
 			margin: auto;
 
-			input{
-				width: 200px;
-				height: 50px;
-				background-color: #e8d59b;
-				border: 1px solid transparent;
+			// input{
+			// 	width: 200px;
+			// 	height: 50px;
+			// 	background-color: #e8d59b;
+			// 	border: 1px solid transparent;
 				
-			}
+			// }
 		}
 	}
 }

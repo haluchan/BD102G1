@@ -11,6 +11,7 @@
 
 
 	<body>  
+		
 	    <div class="container"> 	
 	    	<!-- 頁面標題 回報進度 -->
 	    	<div class="applicationTitle">
@@ -31,7 +32,7 @@
 		    	<div  class="formContent table">		    		
 		    		<div class="tr">
 		    			<div class="td"><label for="number">案件編號:</label></div>
-		    			<div class="td"><input type="text" name="number" id="number"></div>
+		    			<div class="td"><input type="text" name="number" id="number" placeholder="請輸入案件編號共5碼"></div>
 		    		</div>
 		    		<div class="tr">
 		    			<div class="td"><label for="name">申請人姓名:</label></div>
@@ -43,19 +44,19 @@
 		    		</div>
 
 		    		<div class="tr">
-		    			<div class="td">上傳照片</div>
-						<div class="td"><input type="file" name="" style="width: 180px"></div>
+		    			<div class="td"><label for="photo">上傳照片</label></div>
+						<div class="td"><input type="file" name="" id="photo"></div>
 		    		</div>
 
 		    		<div class="tr">
-		    			<div class="td">進度說明</div>
-						<div class="td"><textarea ></textarea></div>
+		    			<div class="td"><label>進度說明</label></div>
+						<div class="td"><textarea  rows="10" cols="25"></textarea></div>
 		    		</div>
 		    	</div>
 	    	</form>
 			
 			<div class="formSubmit">
-		    	<input class="btn" type="submit" name="submit" value="確定送出">
+		    	<input class="btn_green" type="submit" name="submit" value="確定送出">
 		    </div>
 	    </div>
 	    

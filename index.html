@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <title>即刻菜援</title>
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
 
 <link rel="stylesheet" href="css/font.css">
 <link href="css/index.css" rel="stylesheet">
@@ -13,6 +13,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/parallax.mins.js"></script>
 <script src="js/change_SVG_color.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
 
 </head>
 <body>
@@ -27,8 +28,13 @@
 				<img src="index_img/6_hill_buttom.svg" data-depth=".1" class="bottom_5p w_120p">
 				<img src="index_img/7_grass.svg" data-depth=".2" class="bottom-0">
 				<img src="index_img/8_hill_top.svg" data-depth="0" class="bottom-0">
-				<img src="index_img/9_hole.svg" class="hole xs-hidden">
-				<img src="index_img/10_arrow.svg" class="arrow xs-hidden">
+
+
+				
+
+
+
+
 				<img src="index_img/3_cloud_top.svg" class="cloud margin-top-50" data-depth=".3">
 				<img src="index_img/3-5-4-cloud.svg" class="cloud_2 margin-top-100" data-depth=".5">
 				<img src="index_img/4_cloud_buttom.svg" class="cloud margin-top-80" data-depth=".8">
@@ -67,12 +73,15 @@
 		<!-- 募資倒數 -->
 		<section class="col-xs-12 col-sm-12 donate_banner">
 			
-			<div class="col-sm-4 col-xs-12 final_txt">
+			<div class="col-sm-4 final_txt hidden-xs">
 				<img src="index_img/final.svg" class="final_img">
 			</div>
 			<div class="col-sm-4 col-xs-12 donate_title">
-				<p class="title">想要無毒健康蔬菜│就來魚菜農場看一下</p>
+				<p class="title">友善稻田．夢想榖倉 募資計畫 <br><span>想要無毒有機有的蔬菜 | 就來魚菜農場看一下</span></p>
 				<a href="#"><p class="buttom">立即贊助</p></a>
+			</div>
+			<div class="col-xs-7 final_txt hidden-sm">
+				<img src="index_img/final.svg" class="final_img">
 			</div>
 		</section>
 
@@ -83,7 +92,6 @@
 		<section class="col-xs-12 col-sm-12 donate_ing">
 			<div class="donate_title">
 				<p>資助進行中</p>
-				
 			</div>
 
 			<div class="donate_txt col-sm-12 col-xs-12">
@@ -101,7 +109,7 @@
 				</a>
 
 				<a href="donate_info.html">
-					<div class="donate_info col-xs-12 col-sm-4">
+					<div class="donate_info col-xs-12 col-sm-4 hidden-xs">
 						
 						<div class="info">
 							<img src="index_img/index_div3_1.jpg">
@@ -114,7 +122,7 @@
 				</a>
 
 				<a href="donate_info.html">
-					<div class="donate_info col-xs-12 col-sm-4">
+					<div class="donate_info col-xs-12 col-sm-4 hidden-xs">
 						<div class="info">
 							<img src="index_img/index_div3_1.jpg">
 							<h4>愛土地．愛吃飯．我們要作最新鮮的米</h4>
@@ -137,23 +145,44 @@
 
 
 		<!-- 米的故鄉 -->
-		<section class="col-xs-12 col-sm-12 rice">
-			<img src="index_img/rice_cloud.svg" class="rice_img">
+		<section class="col-xs-12 col-sm-12 activity">
+			<!-- <img src="index_img/rice_cloud.svg" class="rice_img"> -->
+		
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 237.33" class="rice_img">
+					<defs>
+						<style>.rice_cloud-1{fill:#fff100;opacity:0;}.rice_cloud-2{fill:#fff;}</style>
+					</defs>
+					<title>rice_cloud</title>
+					<g id="圖層_2" data-name="圖層 2">
+						<g id="圖層_1-2" data-name="圖層 1">
+							<rect class="rice_cloud-1" width="1920" height="237.33"/>
+
+							<path class="rice_cloud-2 cloud_1" d=""/>
+							
+							<path class="rice_cloud-2 cloud_2" d=""/>
+						</g>
+					</g>
+				</svg>
+
+
+
+
+
 			<img src="index_img/rice_bird.svg" class="rice_img">
-			<img src="index_img/rice_tree.svg" class="rice_img">
-			<img src="index_img/inekari_man.png" class="rice_img bottom-0 rice-man">
-			<div class="rice_title">
-				<h1>
-					米的故鄉
-				</h1>
-				<h2>
-					友善稻田<br>
-					稻榖金黃熟成
-				</h2>
+			<img src="index_img/inekari_man.png" class="bottom-0 rice-man">
+			<div class="activity_title">
+				<h1>米的故鄉</h1>
+				<h2>友善稻田 <br class="hidden-xs">稻榖金黃熟成</h2>
 				<p>募資成功　小農家感恩回饋</p>
 			</div>
-			<div class="rice_info">
-				
+
+
+			<div class="activity_info">
+				<p>2017/11/10</p>
+				<p>邀請大家一起來碾米</p>
+				<p>費用包含:一食二泊、碾米體驗、當令鮮米（５斤裝）</p>
+				<p>$900NT/人</p>
+			</div>
 			</div>
 			
 		</section>
