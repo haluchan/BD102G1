@@ -1,0 +1,33 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+<<<<<<< HEAD
+	font-family:'微軟正黑體';
+	
+=======
+	font-family:'微軟正黑體';	
+>>>>>>> 8a5f3f6b8ddc5a055e9876c52874d6fd42ec781f
+}
+
+
+h1{
+	font-size:48px;
+}
+
+h2{
+	font-size:40px;
+}
+
+p{
+	font-size:22px;
+	letter-spacing: 1px;
+	line-height: 36px;
+}
+
+.btn{
+	font-size:24px;
+	font-family:'微軟正黑體';
+}
