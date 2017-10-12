@@ -48,7 +48,7 @@ module.exports = function (grunt) {
           browser: "Google Chrome",
           server: {
             baseDir: './',
-            index: 'hopeFarm022.html'
+            index: 'hopeFarm.html'
           }
         }
       }
