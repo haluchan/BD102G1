@@ -148,6 +148,10 @@
 		margin : 4% 0;
 		width: 100%;
 	}
+	.titletextli{
+		padding: 10px;
+		color: #00802b;
+	}
 	
 	
 	/* =================== */
@@ -208,7 +212,7 @@
 	
 	/* ========	 */
 	.balloon {
-		min-width:250px;
+		width:80%;
 		position: absolute;
 		background-color: #2aab95;
 		border-radius: 4px;
@@ -231,11 +235,11 @@
 	} */
 	
 	.balloon p {
-		padding: 4%;
+		padding: 2%;
 		color: #fff;
+		font-size: 20px;
+
 	}	
-	
-	
 	.section-border{
 		text-align: center;
 		
@@ -244,23 +248,24 @@
 		width: 90vw;
 	}
 	.bluecircle{
+		background: url('../src/image/event/circle_blue.png') no-repeat;
+		background-size: contain;
+		width: 130px;
+		height: 130px;
 		position: absolute;
-		top: 14%;
-		left: -24%;
+		top: 16%;
+		left: -20%;
+		font-size: 18px;
+		padding: 26px 0;
+		color: #000;
+		font-weight: bold;
+		text-align: center;
+		box-sizing: border-box;
 	}
 	.bluecircle img{
 		width: 80%;
 	}
-	.bluecircle p{
-		position: absolute;
-		top: 16%;
-		left: 14%;
-		font-size: 14px;
-		color: #000;
-		font-weight: bold;
-	}
 	
-
 	/* ================== */
 	.show{
 		margin: 4%;

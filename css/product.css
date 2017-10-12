@@ -8,6 +8,12 @@ h1 {
     h1 {
       font-size: 26px; } }
 
+<<<<<<< HEAD
+@media only screen and (min-width: 1440px) {
+  h2 {
+    font-size: 40px; } }
+=======
+>>>>>>> a4b3c3dcb8e969e00f067f9c7dcddfca4f2310af
 @media only screen and (min-width: 767px) and (max-width: 1440px) {
   h2 {
     font-size: 3vw; } }
@@ -47,7 +53,17 @@ img {
 
 @media only screen and (max-width: 766px) {
   .mobileHidden {
+<<<<<<< HEAD
+    display: none; }
+
+  .pro_s_white {
+    display: none; }
+
+  .pro_s_mobileInfo {
+    display: block; } }
+=======
     display: none; } }
+>>>>>>> a4b3c3dcb8e969e00f067f9c7dcddfca4f2310af
 .cart {
   position: fixed;
   z-index: 7;
@@ -185,6 +201,23 @@ img {
                 .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info .pro_s_buy span {
                   font-size: 18px;
                   color: #F15A24; } }
+<<<<<<< HEAD
+            .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info .pro_s_buy .btn {
+              padding: 4px 24px;
+              min-width: 100px;
+              border-radius: 10px;
+              border-style: none;
+              font-size: 16px;
+              background-color: #219B00;
+              letter-spacing: 1px;
+              transform: translateY(-2px);
+              box-shadow: 2px 2px 0 0 #ccc;
+              color: #fff; }
+              .pro_seed .pro_s_cabinet > li .pro_s_white .pro_s_info .pro_s_buy .btn:hover {
+                transform: translateY(0px);
+                box-shadow: none; }
+=======
+>>>>>>> a4b3c3dcb8e969e00f067f9c7dcddfca4f2310af
       @media only screen and (min-width: 1440px) {
         .pro_seed .pro_s_cabinet > li:hover .pro_s_white {
           opacity: 1; }
@@ -267,6 +300,23 @@ img {
           .pro_s_mobileInfo .pro_s_info .pro_s_buy span {
             font-size: 18px;
             color: #F15A24; } }
+<<<<<<< HEAD
+      .pro_s_mobileInfo .pro_s_info .pro_s_buy .btn {
+        padding: 4px 24px;
+        min-width: 100px;
+        border-radius: 10px;
+        border-style: none;
+        font-size: 16px;
+        background-color: #219B00;
+        letter-spacing: 1px;
+        transform: translateY(-2px);
+        box-shadow: 2px 2px 0 0 #ccc;
+        color: #fff; }
+        .pro_s_mobileInfo .pro_s_info .pro_s_buy .btn:hover {
+          transform: translateY(0px);
+          box-shadow: none; }
+=======
+>>>>>>> a4b3c3dcb8e969e00f067f9c7dcddfca4f2310af
 
 /* 魚缸超市 */
 .pro_tank {
@@ -456,6 +506,24 @@ img {
               .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span {
                 font-size: 18px;
                 color: #F15A24; } }
+<<<<<<< HEAD
+          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy button {
+            margin-left: 20px;
+            color: #fff;
+            padding: 4px 24px;
+            min-width: 100px;
+            border-radius: 10px;
+            border-style: none;
+            font-size: 24px;
+            background-color: #219B00;
+            letter-spacing: 1px;
+            transform: translateY(-2px);
+            box-shadow: 2px 2px 0 0 #ccc; }
+            .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy button:hover {
+              transform: translateY(0px);
+              box-shadow: none; }
+=======
+>>>>>>> a4b3c3dcb8e969e00f067f9c7dcddfca4f2310af
       @media only screen and (max-width: 766px) {
         .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR {
           width: 100%;

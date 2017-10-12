@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+$howMany:4;
+$list:1 2 3 4;
+
+// $total:0;
+
+// @mixin total($list){
+// 	@each $j in $list{
+// 		$total = $total + $j;
+// 	}
+// }
+
+@mixin eachCol{
+	@for $i from 1 through $howMany{
+		&:nth-child($i #{-1}){
+			width: 100% ;
+		}
+	}
+}
+
+
+.content{
+	width: 82%;
+	table{
+		&:first-child{
+			tr{
+				@include eachCol;
+			}
+			
+		}
+	}
+}
