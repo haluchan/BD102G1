@@ -1,22 +1,22 @@
 
-@mixin rwd($w,$num,$size,$cols){
-	@media screen and (#{$w}: #{$num}+px) {
-		@for $i from 1 through $cols{
-			.col-#{$size}-#{$i}{
-				width: ($i / $cols) * 100%;
-				box-sizing: border-box; 
-				// padding: 10px; 
-				float: left;
-			}
-		}
-		.hidden-#{$size}{
-			display: none;
-		}
+// @mixin rwd($w,$num,$size,$cols){
+// 	@media screen and (#{$w}: #{$num}+px) {
+// 		@for $i from 1 through $cols{
+// 			.col-#{$size}-#{$i}{
+// 				width: ($i / $cols) * 100%;
+// 				box-sizing: border-box; 
+// 				// padding: 10px; 
+// 				float: left;
+// 			}
+// 		}
+// 		.hidden-#{$size}{
+// 			display: none;
+// 		}
 
-	}
+// 	}
 
 
-}
+// }
 //=======
   
 // rwd 
