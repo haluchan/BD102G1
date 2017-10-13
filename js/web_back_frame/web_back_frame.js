@@ -5,9 +5,9 @@ $(document).ready(function(){
       $('.item').slideToggle(200, function(){
           
     if($('.item').is(':visible')){
-      self.attr('src','../src/image/webBack/circleWithLine.png');
+      self.attr('src','img/circleWithLine.png');
     } else {	
-      self.attr('src','../src/image/webBack/circleWithPlus.png');
+      self.attr('src','img/circleWithPlus.png');
     }
 	});
  });
