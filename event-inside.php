@@ -12,13 +12,17 @@
  
  <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-    <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> <!-- //scrollmagic 要拿掉滾動的名字 要跟ＪＳ另一個function 一起隱藏  -->
+    <!-- <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> --> 
+    <!-- //scrollmagic 要拿掉滾動的名字 要跟ＪＳ另一個function 一起隱藏  -->
 <title>活動詳情</title>
 <meta name="description" content="">
 
 <link href="css/event-inside.css" rel="stylesheet">
 </head>
 <body>
+
+	<?php require_once('Header.php'); ?>
+
 	<div class="event">
 		<!-- <?php require_once("Header.php"); ?> -->
 		<!-- banner  -->
@@ -150,6 +154,9 @@
 		
 
 	</div>
+
+
+	<?php require_once('Footer.php'); ?>
 
 	<script type="text/javascript" src="js/event-inside.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

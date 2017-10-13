@@ -8,8 +8,8 @@
 <script type="text/javascript" src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-<script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-<script type="text/javascript" src="src/js/parallax.min.js"></script>
+<!-- <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> -->
+
 
 </head>
 <body>
@@ -80,7 +80,7 @@
 		
 	<ul>
 		<li class="show col-xs-12">
-			<a href="#">
+			<a href="event-inside.php">
 				<div class="img">
 					<img src="src/image/event/06.jpg" alt="">
 				</div>	
@@ -100,7 +100,7 @@
 		
 		</li>
 		<li class="show col-xs-12">
-			<a href="#">
+			<a href="event-inside.php">
 				<div class="img">
 					<img src="src/image/event/07.jpg" alt="">
 				</div>
@@ -118,7 +118,7 @@
 			</div>	
 		</li>
 		<li class="show col-xs-12">
-			<a href="#">
+			<a href="event-inside.php">
 				<div class="img">
 					<img src="src/image/event/08.jpg" alt="">
 				</div>	
@@ -138,7 +138,7 @@
 		</li>
 
 		<li class="show col-xs-12">
-			<a href="#">
+			<a href="event-inside.php">
 			<div class="img">
 				<img src="src/image/event/09.jpg" alt="">
 				
@@ -158,7 +158,7 @@
 			</div>
 		</li>
 		<li class="show col-xs-12">
-			<a href="#">
+			<a href="event-inside.php">
 			<div class="img">
 				<img src="src/image/event/egg.png" alt="">
 				
@@ -178,7 +178,7 @@
 			</div>
 		</li>
 		<li class="show col-xs-12">
-			<a href="#">
+			<a href="event-inside.php">
 			<div class="img">
 				<img src="src/image/event/mikann.png" alt="">
 				
@@ -214,7 +214,7 @@
 <div class="thirdblock">
 	<div class="thirdblockin">
 	
-			<a href="#" class="eventreco">
+			<a href="event-inside.php" class="eventreco">
 
 				<div class="img">
 					<img src="src/image/event/photo4.jpg" alt="">
@@ -229,7 +229,7 @@
 			</a>
 			
 		
-			<a href="#" class="eventreco">
+			<a href="event-inside.php" class="eventreco">
 				<div class="img">
 					<img src="src/image/event/event09.jpg" alt="">
 				</div>
@@ -255,7 +255,7 @@
 			</div>	 -->
 			
 		
-			<a href="#" class="eventreco">
+			<a href="event-inside.php" class="eventreco">
 				<div class="img">
 					<img src="src/image/event/08.jpg" alt="">
 				</div>	
@@ -282,7 +282,7 @@
 			</div> -->
 			
 	
-			<a href="#" class="eventreco">
+			<a href="event-inside.php" class="eventreco">
 				<div class="img">
 					<img src="src/image/event/img100.png" alt="">
 				</div>
@@ -307,7 +307,7 @@
 				</p>
 			</div> -->
 	
-			<a href="#" class="eventreco">
+			<a href="event-inside.php" class="eventreco">
 				<div class="img">
 					<img src="src/image/event/img101.png" alt="">
 				</div>
@@ -331,7 +331,7 @@
 				</p>
 			</div> -->
 	
-			<a href="#" class="eventreco">
+			<a href="event-inside.php" class="eventreco">
 				<div class="img">
 					<img src="src/image/event/c03_img04.jpg" alt="">
 				</div>
@@ -342,7 +342,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="#" class="eventreco">
+			<a href="event-inside.php" class="eventreco">
 				<div class="img">
 					<img src="src/image/event/010.png" alt="">
 				</div>
@@ -353,7 +353,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="#" class="eventreco">
+			<a href="event-inside.php" class="eventreco">
 				<div class="img">
 					<img src="src/image/event/011.png" alt="">
 				</div>
@@ -365,7 +365,7 @@
 				</div>
 				
 			</a>
-				<a href="#" class="eventreco">
+				<a href="event-inside.php" class="eventreco">
 				<div class="img">
 					<img src="src/image/event/011.png" alt="">
 				</div>
@@ -423,10 +423,10 @@
 	
 	</div>
 </div>
-
+<?php require_once('Footer.php');?>
 
 </div>
 <script type="text/javascript" src="js/event.js"></script>
-<?php require_once('Footer.php');?>
+
 </body>
 </html>

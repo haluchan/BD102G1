@@ -43,9 +43,9 @@ var scene_1 = new ScrollMagic.Scene({
 
     })
     .setTween(tween_1)
-    .addIndicators({ //標示點 畫面才看得到作用範圍，做完可隱藏名字
-           name: 'scene 01'
-        })  
+    // .addIndicators({ //標示點 畫面才看得到作用範圍，做完可隱藏名字
+    //        name: 'scene 01'
+    //     })  
    .addTo(controller);
 
 var scene_2 = new ScrollMagic.Scene({
@@ -57,9 +57,9 @@ var scene_2 = new ScrollMagic.Scene({
 
     })
     .setTween(tween_2)
-    .addIndicators({ //標示點 畫面才看得到作用範圍，做完可隱藏名字
-           name: 'scene 02'
-        })  
+    // .addIndicators({ //標示點 畫面才看得到作用範圍，做完可隱藏名字
+    //        name: 'scene 02'
+    //     })  
    .addTo(controller);
 
 
@@ -72,9 +72,9 @@ var scene_2 = new ScrollMagic.Scene({
 
     })
     .setTween(tween_3)
-    .addIndicators({ //標示點 畫面才看得到作用範圍，做完可隱藏名字
-           name: 'scene 03'
-        })  
+    // .addIndicators({ //標示點 畫面才看得到作用範圍，做完可隱藏名字
+    //        name: 'scene 03'
+    //     })  
    .addTo(controller);
 
 

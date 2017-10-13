@@ -22,7 +22,7 @@ var controller = new ScrollMagic.Controller();
     //   reverse: false,
     })
     .setTween(tween_4)
-    .addIndicators({
-            name: 'scene 01'
-        })
+    // .addIndicators({
+    //         name: 'scene 01'
+    //     })
    .addTo(controller);

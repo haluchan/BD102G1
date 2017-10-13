@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>Login</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link href="css/login.css" rel="stylesheet">
-</head>
-<body>
+
+<link rel="stylesheet" type="text/css" href="css/login.css" >
+
 	<section>
  		
 	</section>
+	
 	<div class="lightbox-bg">
 		<div class="lightbox-target" id="login">
 			<div class="cancel">
@@ -25,13 +17,12 @@
 			  	<div class="forget">
 			  		<a href="">忘記密碼?</a>
 			  	</div>
-			  <button type="" class="btn-login">註冊</button>
-			  <button type="" class="btn-login">facebook登入</button>
-		  	<button type="" class="btn-login">登入</button>
+			  <button type="" class="btn_green">註冊</button>
+			  <button type="" class="btn_green">facebook登入</button>
+		  	<button type="" class="btn_green">登入</button>
 		  </div>
 		  <img class="login-bee" src="src/image/login/deco-img-03.gif">
 		</div>
 		<div class="login-clear"></div>
 	</div>
-</body>
-</html>
+

@@ -96,7 +96,7 @@ $max-width :960px;
 		}
 	}
 	.case_data{
-		background-image: url("../donate_case_img/sports_ouen.png");
+		background-image: url("../src/image/funded/sports_ouen.png");
 		background-size: 100%;
 		background-position: 0 -50px; //左右-上下
 		background-repeat: no-repeat;
@@ -149,7 +149,7 @@ $max-width :960px;
 				@media screen and (max-width: 767px) {
 					font-size: 10px;
 					margin: 2% 0 5%;
-					background-image: url("../donate_case_img/sports_ouen.png");
+					background-image: url("../src/image/funded/sports_ouen.png");
 					background-size: 30%;
 					background-repeat: no-repeat;
 					background-position: right bottom;
@@ -161,7 +161,7 @@ $max-width :960px;
 	.progress{
 		margin-top: 3%;
 		padding: 0 2%;
-		background-image: url("../donate_case_img/deco-wood-01.gif");
+		background-image: url("../src/image/funded/deco-wood-01.gif");
 		background-repeat: no-repeat;
 		background-position: 20px 3px;
 		@media screen and (max-width: 767px) {
@@ -298,7 +298,7 @@ $max-width :960px;
 
 .progress_return{
 	width: 100%;
-	// background-image: url("../donate_case_img/deco-mainvisual-01.gif");
+	// background-image: url("../src/image/funded/deco-mainvisual-01.gif");
 	// // background-size: 40%;
 	// background-repeat: no-repeat;
 	// background-position: right top; 
@@ -306,7 +306,7 @@ $max-width :960px;
 	h2{
 		text-align: center;
 		line-height: 4;
-		background-image: url("../donate_case_img/deco-mainvisual-01.gif");
+		background-image: url("../src/image/funded/deco-mainvisual-01.gif");
 		background-size: 20%;
 		background-repeat: no-repeat;
 		background-position: 80% center; 
@@ -320,7 +320,7 @@ $max-width :960px;
 		width: 80%;
 		margin-bottom: 5%;
 		padding: 0 10% 10%;
-		background-image: url("../donate_case_img/bg_foot01.png"), url("../donate_case_img/img_1400_sub.png");
+		background-image: url("../src/image/funded/bg_foot01.png"), url("../src/image/funded/img_1400_sub.png");
 		background-repeat: no-repeat;
 		background-position: left bottom, right bottom;
 		.type_img{
@@ -355,7 +355,7 @@ $max-width :960px;
 		width: 80%;
 		margin: 0 auto;
 		padding-bottom: 15%;
-		background-image: url("../donate_case_img/bg_foot02.png"), url("../donate_case_img/img_830_sub.png");
+		background-image: url("../src/image/funded/bg_foot02.png"), url("../src/image/funded/img_830_sub.png");
 		background-repeat: no-repeat;
 		background-position: center bottom , right bottom;
 
@@ -390,7 +390,7 @@ $max-width :960px;
 		width: 80%;
 		margin: 0 auto;
 		padding-bottom: 15%;
-		background-image: url("../donate_case_img/bg_foot08.png"),url("../donate_case_img/img_500_sub.png");
+		background-image: url("../src/image/funded/bg_foot08.png"),url("../src/image/funded/img_500_sub.png");
 		background-repeat: no-repeat;
 		background-position: center bottom , left 300px;
 		.type_img{
@@ -436,7 +436,7 @@ $max-width :960px;
 	h2{
 		text-align: center;
 		line-height: 3;
-		background-image: url("../donate_case_img/deco-denim-01.png");
+		background-image: url("../src/image/funded/deco-denim-01.png");
 		background-size: 30%;
 		background-repeat: no-repeat;
 		background-position: left center; 

@@ -12,6 +12,9 @@
 
 </head>
 <body>
+
+	<?php require_once('Header.php'); ?>
+
 	<div class="cart-container">
 		<div class="cart-bg">
 		<!-- 標題 -->
@@ -159,6 +162,9 @@
 		<input type="submit" class="btn_green" name="" value="結帳">
 		</div>
 		<div class="clear"></div>
-    </div>	
+    </div>
+
+	<?php require_once('Footer.php'); ?>
+
 </body>
 </html>
