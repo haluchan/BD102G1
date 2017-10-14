@@ -1,18 +1,26 @@
 ﻿//每個格子統一固定padding
 $cellPadding: 6px 4px;
+//note web_back_form.css修正
+.manage{width:16%}
+.content_form{width:84%;margin-top:155px;}
+botton{border:none;}
+//hover效果
 
 
 
 /* table起始 */
 .myForm{
-    //margin-top: -50px; //應該要去改top的css
-   	margin-left:6%; 
-	width: 100%;
+	width: 94%;
+	margin:auto;
     table{width:100%};
 
 	th, td{  /*每個格子統一固定padding*/    
 		padding:$cellPadding;
 		text-align: left;
+
+		//自動斷行
+		word-break:break-all;
+		text-overflow : ellipsis;
 	}
 
 	
@@ -26,6 +34,9 @@ $cellPadding: 6px 4px;
 		border-top: 2px solid #F29600;
 		border-bottom: 2px solid #F29600;
 	}
+	td{
+		font-weight: lighter;
+	}
 
     
 	.tdRow:nth-child(odd){/*基數白底，偶數灰底(第一row包th不算)*/
@@ -35,36 +46,51 @@ $cellPadding: 6px 4px;
 		background-color: #fff;
 	}
 
-
 	
+	//限制表格寬度固定
+	table{  		
+		table-layout:fixed
+	}
 
 	table{  /*每一欄的寬度設定。以百分比。剩的寬自動為最後一欄*/
 		/*不能動！！第一欄固定為5%*/
 		tr:first-child th:nth-child(1){
 			width: 5%;
 		}
-	}
-	table{
+
+
+
 		/*自行更改、增加 區域=================================*/
-		tr:first-child th:nth-child(2){
+		tr td:nth-child(2){
 			width: 10%;
 		}
-		tr:first-child th:nth-child(3){
+		tr td:nth-child(3){
 			width: 10%;
 		}
-		tr:first-child th:nth-child(4){
+		tr td:nth-child(4){
 			width: 20%;
 		}
-		tr:first-child th:nth-child(5){
+		tr td:nth-child(5){
 			width: 10%;
 		}
-		tr:first-child th:nth-child(6){
+		tr td:nth-child(6){
 			width: 25%;
 		}
-		tr:first-child th:nth-child(7){
+		tr td:nth-child(7){
 			width: 10%;
 		}
 	}
+
+//===========================================
+
+
+	//按鈕
+	.btn{
+		background-color: LemonChiffon ;
+		padding:4px 6px;
+		border:none
+	}
+
 
 }
 
