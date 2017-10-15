@@ -1,0 +1,143 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+* {
+  font-family: '微軟正黑體'; }
+
+img {
+  width: 100%; }
+
+.clear:after {
+  clear: both;
+  content: "";
+  display: block; }
+
+header {
+  width: 100%; }
+  header .topmenu {
+    background-color: #699c33;
+    height: 40px;
+    text-align: right; }
+    @media screen and (max-width: 767px) {
+      header .topmenu {
+        display: none; } }
+    header .topmenu ul {
+      display: inline-block;
+      width: 30%;
+      line-height: 40px; }
+      header .topmenu ul li {
+        display: inline-block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 2%; }
+        header .topmenu ul li a {
+          color: white;
+          font-size: 12px; }
+  header .mainmenu {
+    background-color: #ece7d4;
+    width: 100%;
+    text-align: center;
+    position: relative; }
+    @media screen and (max-width: 767px) {
+      header .mainmenu {
+        height: 50px;
+        position: relative; } }
+    header .mainmenu .ham {
+      display: none; }
+      @media screen and (max-width: 767px) {
+        header .mainmenu .ham {
+          display: block;
+          position: fixed; } }
+      header .mainmenu .ham .ham_circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #699c33;
+        position: absolute;
+        left: 2%;
+        top: 5px;
+        overflow: hidden;
+        margin: auto; }
+        header .mainmenu .ham .ham_circle .span_item {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -12px;
+          margin-left: -11px; }
+          header .mainmenu .ham .ham_circle .span_item span {
+            display: block;
+            width: 22px;
+            height: 3px;
+            margin-bottom: 7px;
+            border-radius: 4px;
+            background-color: white; }
+      header .mainmenu .ham .ham_menu {
+        position: fixed;
+        top: 50px;
+        background-color: rgba(236, 231, 212, 0.6);
+        width: 40%;
+        display: none;
+        height: 100%; }
+        header .mainmenu .ham .ham_menu a {
+          color: #699c33; }
+        header .mainmenu .ham .ham_menu .ham_main {
+          margin: 20px 0 20px; }
+          header .mainmenu .ham .ham_menu .ham_main li {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 40px auto; }
+        header .mainmenu .ham .ham_menu .ham_sub li {
+          font-size: 14px;
+          margin: 10px auto; }
+    header .mainmenu .menu_list {
+      width: 45%;
+      margin: auto;
+      display: inline-block; }
+      @media screen and (max-width: 767px) {
+        header .mainmenu .menu_list {
+          display: none; } }
+      header .mainmenu .menu_list ul {
+        text-align: center;
+        padding: 0% 10%; }
+        header .mainmenu .menu_list ul li {
+          width: 35%;
+          display: inline-block;
+          text-align: center;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 4%; }
+          header .mainmenu .menu_list ul li a {
+            color: #43612f;
+            font-size: 18px;
+            font-weight: bold;
+            display: block; }
+            header .mainmenu .menu_list ul li a .circle {
+              background-color: transparent;
+              border: 3px solid transparent;
+              border-radius: 50%;
+              width: 60%;
+              margin: auto;
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+              header .mainmenu .menu_list ul li a .circle svg:hover path {
+                fill: #fff; }
+    header .mainmenu .menu_logo {
+      width: 25%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto; }
+      @media screen and (max-width: 767px) {
+        header .mainmenu .menu_logo {
+          width: 150px; } }
+
+section {
+  background-color: #ccc;
+  height: 2000px; }

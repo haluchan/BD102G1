@@ -1,6 +1,10 @@
 
 <<<<<<< HEAD
+@mixin rwd($w,$num,$size,$cols){
+=======
+<<<<<<< HEAD
 @mixin rwd_vivi($w,$num,$size,$cols){
+>>>>>>> e548c08e3fcc52cdc64ce875df6ae7e85cd4b614
 	@media screen and (#{$w}: #{$num}+px) {
 		@for $i from 1 through $cols{
 			.col-#{$size}-#{$i}{
@@ -18,6 +22,8 @@
 
 
 }
+<<<<<<< HEAD
+=======
   
 // rwd 
     // $mobile : 767px ; 
@@ -64,14 +70,13 @@
 
 // }
 //=======
+>>>>>>> e548c08e3fcc52cdc64ce875df6ae7e85cd4b614
   
 // rwd 
     $mobile : 767px; 
     $tablet_min : 768px;
     $tablet_max : 1199px;
     $desktop : 1200px;
-
-
 
     @mixin rwd ($breakpoint) {
         @if $breakpoint == "mobile" {
@@ -87,8 +92,13 @@
         @else if $breakpoint == "desktop" {
             @media all and (min-width: $desktop) {
                 @content;
+
+
             }
         }
     }
 
+<<<<<<< HEAD
+=======
 >>>>>>> 52ee638e2f490effa367db8c883ff7844d23211c
+>>>>>>> e548c08e3fcc52cdc64ce875df6ae7e85cd4b614
