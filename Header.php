@@ -127,10 +127,10 @@
 	<!-- /header -->
 	<script type="text/javascript">
 	$( "#login-btn" ).click(function() {
-  	$( ".lightbox-bg" ).toggle( "slow" );
+  		$( ".lightbox-bg" ).fadeIn(500);
 	});
 	$( "#login-cancel" ).click(function() {
-  	$( ".lightbox-bg" ).toggle( "off" );
+  		$( ".lightbox-bg" ).fadeOut(500);
 	});
 	</script>
 
