@@ -25,8 +25,8 @@
 			  	<div class="forget">
 			  		<a href="">忘記密碼?</a>
 			  	</div>
-		  	<button type="" class="btn_green">登入</button>
-		  	 <button type="" class="btn_green">facebook登入</button>
+		  	<button type="submit" class="btn_green">登入</button>
+		  	 <button type="submit" class="btn_green">facebook登入</button>
 		  	<button type="" class="btn_green">註冊</button>
 			 
 		  	
