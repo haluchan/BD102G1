@@ -1,136 +1,139 @@
 
+	<link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/header.css">
 	<script src="src/libs/jquery/dist/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="CSS/headerFooter.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css" >
+	<!-- <script src="js/change.js"></script> -->
+	<!-- <script src="js/jquery-3.2.1.min.js"></script> -->
+	<script src="js/change_SVG_color.js"></script>
 	
-	<?php require_once('login.php'); ?>
-	<div class="header-cont">
-		<header id="header_none">
-			<div class="head-1">
-				<div class="head-1-text">
-					<a href="cart.php">
-						<h4 class="header-h4">購物車</h4>
-					</a>
-					<a id="login-btn">
-						<h4 class="header-h4">註冊/登入</h4>
-					</a>
-					<a href="application.php">
-						<h4 class="header-h4">申請資助</h4>
-					</a>
-					<div class="clear"></div>
-				</div>
-			</div>
-			<!-- hamberger -->
-			<btn>
-		        	<div class="starbtn btn-sidebar">
-		            	<span></span>
-		        	</div>
-		    	</btn>
-		    <div class="sidebar">
-		        <ul>
-		            <li><a href="hopeFarm.php"><h3 class="header-h3">希望農場</h3></a></li>
-		            <li><a href="event.php"><h3 class="header-h3">體驗活動</h3></a></li>
-		            <li><a href="fish.php"><h3 class="header-h3">都市小農</h3></a></li>
-		            <li><a href="pointFarm.php"><h3 class="header-h3">紅利菜園</h3></a></li>
-		            <li><a href="application.php"><h6 class="header-h6">申請資助</h6></a></li>
-		            <li><a href="application_search.php"><h6 class="header-h6">查詢案件</h6></a></li>
-		            <li><a href="application_report.php"><h6 class="header-h6">回報進度</h6></a></li>
-		            <li><a href="login.php"><h6 class="header-h6">註冊/登入</h6></a></li>
-		            <li><a href="memberedit.php"><h6 class="header-h6">會員專區</h6></a></li>
-		            <li><a href="cart.php"><h6 class="header-h6">購物車</h6></a></li>
-		        </ul>
-		    </div>
-		    <!-- ///hamberger -->
-			<div class="head-2">
-				<div class="head-2-box">
-					<div class="head-2-left">
-					<a href="hopeFarm.php">
-						<div class="head-2-item" id="nav01">
-							<img class="header-img" src="src/image/hopeFarm/farm.png" id="bg01">	
-							<h2 class="header-h2">希望農場</h2>
-						</div>
-					</a>
-					<a href="event.php">
-						<div class="head-2-item" id="nav02">
-							<img class="header-img"  src="src/image/hopeFarm/active.png" id="bg02">
-							<h2 class="header-h2" >體驗活動</h2>
-						</div>
-					</a>	
+		<!-- <?php require_once('login.php'); ?> -->
+	    <header>
+	    	<div class="topmenu">
+	    		<ul>	
+	    			<li><a href="cart.php">購物車<span class="cartNo">1</span></a></li>
+	    			<li><a  id="login-btn" >註冊/登入</a></li>
+	    			<li><a href="application.php">申請資助</a></li>
+	    		</ul>
+	    	</div>
+	    	<div class="mainmenu" id="menu">
+	    		<div class="ham ">
+	    			<div class="ham_circle" id="ham_button">
+	    				<img src="src/image/header/carrot2.png" id="hamicon">
+	    			</div>			
+					<div class="ham_menu" id="ham_menu">
+						<ul class="ham_main">
+							<li><a href="hopeFarm.php">希望農場</a></li>
+							<li><a href="event.php">體驗活動</a></li>
+							<li><a href="fish.php">都市小農</a></li>
+							<li><a href="pointFarm.php">紅利菜園</a></li>
+						</ul>
+						<ul class="ham_sub">
+							<li><a href="application.php">申請資助</a></li>
+							<li><a href="application.php">查詢案件</a></li>
+							<li><a href="application.php">回報進度</a></li>
+							<li><a id="login-btn2">註冊/登入</a></li>
+							<li><a href="memberedit.php">會員專區</a></li>
+							<li><a href="cart.php">購物車</a></li>
+						</ul>
 					</div>
-					<div class="head-2-right">
-					<a href="fish.php">
-						<div class="head-2-item" id="nav03">
-							<img class="header-img"  src="src/image/hopeFarm/city.png" id="bg03">
-							<h2 class="header-h2">都市小農</h2>
-							
-						</div>
-					</a>
-					<a href="pointFarm.php">	
-						<div class="head-2-item" id="nav04">
-							<img class="header-img"  src="src/image/hopeFarm/donate.png" id="bg04">
-							<h2 class="header-h2">紅利菜園</h2>
-						</div>
-					</a>
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="head-3 ">
-				<a href="">
-					<img class="header-img" src="src/image/hopeFarm/logo.png">
-				</a>
-			</div>
-			<div class="clear"></div>
-		</header>
-	</div>
-		<!-- ============///fix_navbar===================================== -->
-		<div class="fix_navbar" id="top-bar">
-			<div class="fix_navbar-box">
-				<div class="fix_navbar-left">
-				<a href="hopeFarm.php">
-					<div class="fix_navbar-item" id="fix_nav01">
-						<img class="header-img"  src="src/image/hopeFarm/farm.png" id="fix_bg01">	
-						<h2 class="header-h2">希望農場</h2>
-					</div>
-				</a>
-				<a href="event.php">
-					<div class="fix_navbar-item" id="ix_nav02">
-						<img class="header-img"  src="src/image/hopeFarm/active.png" id="bg02">
-						<h2 class="header-h2">體驗活動</h2>
-					</div>
-				</a>	
-				</div>
-				<div class="fix_navbar-right">
-				<a href="fish.php">
-					<div class="fix_navbar-item" id="ix_nav03">
-						
-						<img class="header-img"  src="src/image/hopeFarm/city.png" id="bg03">
-						<h2 class="header-h2">都市小農</h2>
-						
-					</div>
-				</a>
-				<a href="pointFarm.php">	
-					<div class="fix_navbar-item" id="ix_nav04">
-						<img class="header-img"  src="src/image/hopeFarm/donate.png" id="bg04">
-						<h2 class="header-h2">紅利菜園</h2>
-					</div>
-				</a>
-				</div>
-			</div>
+	    		</div>
+	    		<div class="menu_list">
+	    			<ul class="left">
+	    				<li>
+	    					<a href="hopeFarm.php">
+	    						<div class="circle">
+	    							<img src="src/image/header/donate.svg" class="icon">
+	    						</div>希望農場
+	    					</a>
+	    				</li>
+	    				<li>
+	    					<a href="event.php">
+	    						<div class="circle">
+	    							<img src="src/image/header/active.svg" class="icon">
+	    						</div>體驗活動
+	    					</a>
+	    				</li>
+	    			</ul>
+	    		</div>
+	    		<div class="menu_list">
+	    			<ul class="right">
+	    				<li>
+	    					<a href="fish.php">
+	    						<div class="circle">
+	    							<img src="src/image/header/city.svg" class="icon">
+	    						</div>都市小農
+	    					</a>
+	    				</li>
+	    				
+	    				<li>
+	    					<a href="pointFarm.php">
+	    						<div class="circle">
+	    							<img src="src/image/header/farm.svg" class="icon">
+	    						</div>紅利菜園
+	    					</a>
+	    				</li>
+	    			</ul>
+	    		</div>
+
+
+	    		<div class="menu_logo"><a href="index.php"><img src="src/image/header/logo_v2.png" id="logo"></a></div>
+	    		
+	    	</div>
+	    </header>
 		
-		<div class="fix_navbar-3 ">
-			<a href="index.html">
-				<img class="header-img" src="src/image/heatfooter/fix_navbar.png">
-			</a>
+
+	<section>
+ 		
+	</section>
+	
+	<div class="lightbox-bg">
+		<div class="lightbox-target" id="login">
+			<div class="cancel">
+				<a  id="login-cancel"><img src="src/image/login/pop_close.png"></a>
+			</div>
+		  <div class="login-content">
+			  	<h2>會員登入</h2>
+			   <div class="login-account">
+				   	<p>帳號</p>
+			   		<input type="text" name="memId" value="" placeholder="請輸入帳號">
+			   		<span class="focus-border"></span>
+			   </div>
+			  	<div class="login-pws">
+			  		<p>密碼</p>
+			  		<input type="password" name="" value="" placeholder="請輸入密碼">
+			  		<span class="focus-border"></span>
+			  	</div>
+			  	<div class="forget">
+			  		<a href="">忘記密碼?</a>
+			  	</div>
+		  	<button type="submit" class="btn_green">登入</button>
+		  	 <button type="submit" class="btn_green">facebook登入</button>
+		  	<button type="" class="btn_green">註冊</button>
+			 
+		  	
+		  </div>
+		  <img class="login-bee" src="src/image/login/deco-img-03.gif">
 		</div>
-		<div class="clear"></div>
+		<div class="login-clear"></div>
 	</div>
-	<!-- /header -->
-	<script type="text/javascript">
-	$( "#login-btn" ).click(function() {
-  	$( ".lightbox-bg" ).toggle( "slow" );
-	});
-	$( "#login-cancel" ).click(function() {
-  	$( ".lightbox-bg" ).toggle( "off" );
-	});
+
+	    <script type="text/javascript">
+			$(document).ready(function(){
+			$('#ham_button').click(function(){
+				$('#hamicon').toggleClass("hamicon_slide");
+				$('#ham_menu').toggleClass("ham_slide");
+				});
+		});		
+			$("#login-btn").click(function(){
+				$(".lightbox-bg").fadeIn();
+			});
+			$("#login-btn2").click(function(){
+				$(".lightbox-bg").fadeIn();
+			});
+			$(".cancel").click(function(){
+				$(".lightbox-bg").fadeOut();
+			});
 	</script>
 
+	

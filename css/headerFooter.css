@@ -170,7 +170,7 @@ p{
   margin: 0 auto;
   position: fixed;
     top: -200px;
-    z-index: 10;
+    z-index: 900;
 }
 .fix_navbar-box:before{
   content: '';
@@ -451,8 +451,7 @@ p{
       width: 60%;
     }
     .footerItemList{
-        visibility: hidden;
-        position: absolute;
+        display: none;
     }
     .footerIcon{
         bottom: 15px;

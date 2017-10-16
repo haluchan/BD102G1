@@ -144,8 +144,7 @@
 				<div class="form-group">
 					<span>卡號</span><br>
 					<input type="text" name="" value="" placeholder="">
-					<input type="text" name="" value="" placeholder="">
-					<input type="text" name="" value="" placeholder="">
+					
 				</div>
 				<div class="form-group">
 					<span>有效日期</span><br>

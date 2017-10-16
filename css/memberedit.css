@@ -4,18 +4,22 @@
 		
 	}
 	body{
-  		font-family: '正黑體';
+  		
 		margin:0;
 		background-image:url('../src/image/event/23167-nupqqc-02.png');
 	  	background-repeat: repeat;
 	}
-	h2{
-		font-size: 30px;
-		color:#00802b;
-		font-weight: bold;
-
-	}
-	
+	@keyframes rot {
+	0% {
+	    -moz-transform: translate(-50%, -50%) rotate(0deg);
+	    -ms-transform: translate(-50%, -50%) rotate(0deg);
+	    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+	    transform: translate(-50%, -50%) rotate(0deg); }
+	100% {
+	    -moz-transform: translate(-50%, -50%) rotate(360deg);
+	    -ms-transform: translate(-50%, -50%) rotate(360deg);
+	    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+	    transform: translate(-50%, -50%) rotate(360deg); } }
 	.table img{
 		border-radius: 50%;
 		overflow: hidden;
@@ -26,7 +30,8 @@
 	}
 	
 	.btnbox{
-		margin-top: 1%;
+		margin-top: 2%;
+		text-align: center;
 	}
 	.btnbox a{
 		font-family: Arial;
@@ -49,8 +54,8 @@
 	.table{
 		text-align: center;
 		margin: 0 auto;
-		background-color: rgba(255, 255, 255, 1);
-		margin-top: 4%;
+		background-color: rgba(255, 255, 255, .9);
+		
 		width: 80%;
 		max-width: 600px;
 		padding: 2%;
@@ -60,29 +65,31 @@
 		margin: 0 auto;
 	}
 	td{
-		text-align: center;
-		font-size: 24px;
+		text-align: right;
+		font-size: 18px;
+	letter-spacing: 1px;
+	line-height: 26px;
 		padding: 5px 10px;
 		padding-bottom: 2px;
-		
+	
 	}
 	th{
-		font-size: 24px;
+		text-align: right;
+		/* font-size: 24px; */
 		border-bottom: 1px solid #699c33;
 	}
 	tr{
-		margin: 0 auto;
+		margin: 10px auto;
 	}
-	.table h2{
-		margin-bottom: 10px;
-		font-size: 40px;
+ 	.bigtitle h2{
+		font-size: 28px;
+		color: #699c33;
 	}
-	.bigtitle{
-		font-size: 30px;
-	}
+	
 	.bigtitle{
 		text-align: center;
-		padding: 2% 0;
+		font-size: 30px;
+		padding: 4% 0;
 		letter-spacing: 6px;
 	}
 	.navbarli{
@@ -102,11 +109,34 @@
 	.navbar{
 		text-align: center;
 	}
-	.mem{
-	background-image:url('../src/image/member/greenbg.png');
-	background-size: cover;
+	.table select{
+		width: 150px;
+		color: #699c33;
+		border: 1px solid #699c33;
 	}
-	input{border-radius: 6px;
+	.mem{
+	position: relative;
+	}
+	.parallax{
+		position: absolute;
+		width: 100%;
+		z-index: -1;
+		margin: 0 auto;
+		left: 0%;
+		
+		top: 250px;
+	}
+	.parallax_area img{
+		width: 60vw;
+		animation: 150s linear rot infinite;
+	}
+	@media screen and (max-width: 767px) {
+		.parallax{
+		visibility: hidden;
+	}
+	}
+	input{
+	border-radius: 6px;
 	outline: none;
 	border: none;
 	padding: 5px;

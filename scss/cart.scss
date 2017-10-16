@@ -8,7 +8,7 @@ body{
 	max-width:1300px;
 	// height: 100vw;
 	margin: auto;
-	margin-top:10%;
+	margin-top:70px;
 	.cart-title{
 		width:322px;
 		margin: auto;
@@ -178,7 +178,7 @@ body{
 				display:inline-block;
 				box-sizing:border-box;
 				input{
-					width:30%;
+					width:100%;
 				}
 			}
 			&:nth-child(4){
@@ -297,7 +297,7 @@ body{
 				&:nth-child(3){
 				width:100%;
 				input{
-					width: 29%;
+					width: 98%;
 				}
 				}
 				&:nth-child(4){
