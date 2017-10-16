@@ -4,7 +4,7 @@ body {
 .cart-container {
   max-width: 1300px;
   margin: auto;
-  margin-top: 10%; }
+  margin-top: 70px; }
   .cart-container .cart-title {
     width: 322px;
     margin: auto; }
@@ -123,7 +123,7 @@ body {
         display: inline-block;
         box-sizing: border-box; }
         .cart-container .cart-pay .form-group:nth-child(3) input {
-          width: 30%; }
+          width: 100%; }
       .cart-container .cart-pay .form-group:nth-child(4) {
         width: 30%;
         display: inline-block;
@@ -194,7 +194,7 @@ body {
   .cart-container .cart-pay .form-group:nth-child(3) {
     width: 100%; }
     .cart-container .cart-pay .form-group:nth-child(3) input {
-      width: 29%; }
+      width: 98%; }
   .cart-container .cart-pay .form-group:nth-child(4) {
     width: 100%; }
   .cart-container .cart-pay .form-group:nth-child(5) {
