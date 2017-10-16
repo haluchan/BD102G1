@@ -6,6 +6,7 @@
 	<!-- <script src="js/change.js"></script> -->
 	<!-- <script src="js/jquery-3.2.1.min.js"></script> -->
 	<script src="js/change_SVG_color.js"></script>
+	<script src="js/header.js"></script>
 	
 		<!-- <?php require_once('login.php'); ?> -->
 	    <header>
