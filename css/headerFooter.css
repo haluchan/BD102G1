@@ -8,7 +8,7 @@
 a{
   text-decoration: none;
 }
-img{
+.header-img{
   max-width: 100%;
   width: auto;
   height: auto;
@@ -24,21 +24,21 @@ p{
   font-family:"Microsoft JhengHei";
   letter-spacing:1px;
 }
-h6 {
+.header-h6 {
   /*font-size: 19px; */
   font-size: 90%;
   margin: 0;
   font-family:"Microsoft JhengHei";
   letter-spacing:1px;
 }
-h5 {
+.header-h5 {
   /*font-size: 19px; */
   font-size: 100%;
   margin: 0;
   font-family:"Microsoft JhengHei";
   letter-spacing:1px;
 }
-h4 {
+.header-h4 {
   /*font-size: 19px; */
   font-size: 113%;
   margin: 0;
@@ -46,7 +46,7 @@ h4 {
   font-family:"Microsoft JhengHei";
   letter-spacing:1px;
 }
-h3 {
+.header-h3 {
   /*font-size: 19px; */
   font-size: 119%;
   margin: 0;
@@ -54,7 +54,7 @@ h3 {
   font-family:"Microsoft JhengHei";
   letter-spacing:1px;
 }
-h2 {
+.header-h2 {
   /*font-size: 25px; */
   font-size: 157%;
   margin: 0;
@@ -62,7 +62,7 @@ h2 {
   font-family:"Microsoft JhengHei";
   letter-spacing:1px;
 }
-h1{
+.header-h1{
   font-size:200%;
   margin: 0 auto;
   color:#43612f;  
@@ -73,7 +73,7 @@ h1{
   max-width: 1440px;
   margin: auto;
 }
-header {
+#header_none {
   margin: 0 auto; 
   opacity: 1;
   
@@ -95,11 +95,7 @@ header {
 .btn{
   display: none; 
 }
-button{
-  margin-top: 5px;
-  visibility: hidden;
-  position: absolute;
-}
+
 .sidebar{
   display: none;
 }
@@ -174,7 +170,7 @@ button{
   margin: 0 auto;
   position: fixed;
     top: -200px;
-    z-index: 10;
+    z-index: 900;
 }
 .fix_navbar-box:before{
   content: '';
@@ -311,6 +307,7 @@ button{
         /*background-color: rgba(0, 0, 0, 0.83);*/
         font-family: "Microsoft JhengHei";
         position: absolute;
+        z-index: 101;
         left: -100%;
         transition: .3s;
     }
@@ -533,28 +530,3 @@ button{
       width: 24%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -12,13 +12,17 @@
  
  <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-    <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> <!-- //scrollmagic 要拿掉滾動的名字 要跟ＪＳ另一個function 一起隱藏  -->
+    <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> 
+    <!-- //scrollmagic 要拿掉滾動的名字 要跟ＪＳ另一個function 一起隱藏  -->
 <title>活動詳情</title>
 <meta name="description" content="">
 
 <link href="css/event-inside.css" rel="stylesheet">
 </head>
 <body>
+
+	<?php require_once('Header.php'); ?>
+
 	<div class="event">
 		<!-- <?php require_once("Header.php"); ?> -->
 		<!-- banner  -->
@@ -41,8 +45,9 @@
 
 
 		<!-- 內容 -->
+		<div id="trigger1"></div>
+		<section class="main-bg event-ins-item1">
 
-		<section class="main-bg">
 			<div class="event-row">
 				<div class="main-container">
 					<div class="title-frame">
@@ -73,8 +78,8 @@
 		</section>
 		
 		<!-- 說明 -->
-		<div id="trigger1"></div>
-		<section class="event-cotent event-ins-item1">
+		<div id="trigger2"></div>
+		<section class="event-cotent event-ins-item2">
 			
 			<div class="main-container">
 				<br>
@@ -87,8 +92,8 @@
 
 		<!-- 活動地點 -->
 
-		<div id="trigger2"></div>
-		<section class="event-map event-ins-item2">
+		<div id="trigger3"></div>
+		<section class="event-map event-ins-item3">
 			<div class="event-row">
 				<div class="event-map-content">
 					<div class="event-info">
@@ -115,8 +120,8 @@
 
 		<!-- 活動回報 -->
 
-		<div id="trigger3"></div>
-		<section class="event-report event-ins-item3">
+		<div id="trigger4"></div>
+		<section class="event-report event-ins-item4">
 			<div class="event-report-title ">
 				<img src="src/image/event-inside-page
 				/event-report-title.png" alt="">
@@ -145,11 +150,12 @@
 
 		</section>
 		<div class="event-deck">
-			
+		<?php require_once('Footer.php'); ?>	
 		</div>
 		
+		
 
-	</div>
+	
 
 	<script type="text/javascript" src="js/event-inside.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -161,9 +167,9 @@
 	      $('.slides').slick({
 	        // setting-name: setting-value
 	        autoplay: true,
-	        // arrows: true,
 	        mobileFirst: true,
 	        pauseOnFocus: true,
+	        arrows:false,
 	        dots: true,
 	      });
 	    });

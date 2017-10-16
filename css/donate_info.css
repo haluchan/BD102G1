@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 @media screen and (max-width: 767px) {
   .col-xs-1 {
     width: 8.33333%;
@@ -228,7 +225,7 @@ a {
 }
 
 .data_info .case_data {
-  background-image: url("../donate_case_img/sports_ouen.png");
+  background-image: url("../src/image/funded/sports_ouen.png");
   background-size: 100%;
   background-position: 0 -50px;
   background-repeat: no-repeat;
@@ -299,7 +296,7 @@ a {
   .data_info .case_data .case_tiem .case_ing {
     font-size: 10px;
     margin: 2% 0 5%;
-    background-image: url("../donate_case_img/sports_ouen.png");
+    background-image: url("../src/image/funded/sports_ouen.png");
     background-size: 30%;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -309,7 +306,7 @@ a {
 .data_info .progress {
   margin-top: 3%;
   padding: 0 2%;
-  background-image: url("../donate_case_img/deco-wood-01.gif");
+  background-image: url("../src/image/funded/deco-wood-01.gif");
   background-repeat: no-repeat;
   background-position: 20px 3px;
 }
@@ -435,7 +432,7 @@ a {
 .progress_return h2 {
   text-align: center;
   line-height: 4;
-  background-image: url("../donate_case_img/deco-mainvisual-01.gif");
+  background-image: url("../src/image/funded/deco-mainvisual-01.gif");
   background-size: 20%;
   background-repeat: no-repeat;
   background-position: 80% center;
@@ -453,7 +450,7 @@ a {
   width: 80%;
   margin-bottom: 5%;
   padding: 0 10% 10%;
-  background-image: url("../donate_case_img/bg_foot01.png"), url("../donate_case_img/img_1400_sub.png");
+  background-image: url("../src/image/funded/bg_foot01.png"), url("../src/image/funded/img_1400_sub.png");
   background-repeat: no-repeat;
   background-position: left bottom, right bottom;
 }
@@ -485,7 +482,7 @@ a {
   width: 80%;
   margin: 0 auto;
   padding-bottom: 15%;
-  background-image: url("../donate_case_img/bg_foot02.png"), url("../donate_case_img/img_830_sub.png");
+  background-image: url("../src/image/funded/bg_foot02.png"), url("../src/image/funded/img_830_sub.png");
   background-repeat: no-repeat;
   background-position: center bottom , right bottom;
 }
@@ -517,7 +514,7 @@ a {
   width: 80%;
   margin: 0 auto;
   padding-bottom: 15%;
-  background-image: url("../donate_case_img/bg_foot08.png"), url("../donate_case_img/img_500_sub.png");
+  background-image: url("../src/image/funded/bg_foot08.png"), url("../src/image/funded/img_500_sub.png");
   background-repeat: no-repeat;
   background-position: center bottom , left 300px;
 }
@@ -557,7 +554,7 @@ a {
 .message h2 {
   text-align: center;
   line-height: 3;
-  background-image: url("../donate_case_img/deco-denim-01.png");
+  background-image: url("../src/image/funded/deco-denim-01.png");
   background-size: 30%;
   background-repeat: no-repeat;
   background-position: left center;
@@ -685,101 +682,3 @@ a {
   background-color: #FFF;
   color: #a6937c;
 }
-=======
->>>>>>> e548c08e3fcc52cdc64ce875df6ae7e85cd4b614
-/*
-Error: Mixin rwd takes 1 argument but 4 were passed.
-        on line 7 of scss/donate_info.scss, in `rwd'
-        from line 7 of scss/donate_info.scss
-
-2: @import "mixins/setting";
-3: // 基本設定
-4: 
-5: 
-6: //手機
-7: @include rwd(max-width,767,xs,12);
-8: //手機以上
-9: @include rwd(min-width,768,sm,12);
-10: *{
-11: 	margin: 0;
-12: 	padding: 0;
-
-Backtrace:
-scss/donate_info.scss:7:in `rwd'
-scss/donate_info.scss:7
-<<<<<<< HEAD
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:59:in `perform_arguments'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:362:in `block in visit_mixin'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `block in with_mixin'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `with_mixin'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/engine.rb:290:in `render'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:400:in `run'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
-=======
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:59:in `perform_arguments'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:362:in `block in visit_mixin'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/stack.rb:98:in `with_mixin'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
->>>>>>> e548c08e3fcc52cdc64ce875df6ae7e85cd4b614
-/usr/local/bin/sass:22:in `load'
-/usr/local/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Mixin rwd takes 1 argument but 4 were passed.\A         on line 7 of scss/donate_info.scss, in `rwd'\A         from line 7 of scss/donate_info.scss\A \A 2: @import \"mixins/setting\";\A 3: // 基本設定\A 4: \A 5: \A 6: //手機\A 7: @include rwd(max-width,767,xs,12);\A 8: //手機以上\A 9: @include rwd(min-width,768,sm,12);\A 10: *{\A 11: 	margin: 0;\A 12: 	padding: 0;"; }
-<<<<<<< HEAD
-=======
->>>>>>> 52ee638e2f490effa367db8c883ff7844d23211c
->>>>>>> e548c08e3fcc52cdc64ce875df6ae7e85cd4b614

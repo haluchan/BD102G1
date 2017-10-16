@@ -172,7 +172,7 @@ a{
 
 .donate_banner{
 	height: 100vh;
-	background-image: url("../index_img/index_banner_2.jpg");
+	background-image: url("../src/image/index/index_banner_2.jpg");
 	background-size:100%;
 	background-position: bottom center;
 	background-repeat: no-repeat;
@@ -255,7 +255,7 @@ a{
 
 .donate_ing{
 	height: 100vh;
-	background-image: url("../index_img/wave.svg");
+	background-image: url("../src/image/index/wave.svg");
 	background-size:100%;
 	background-position: bottom center;
 	background-repeat: no-repeat;
@@ -265,7 +265,7 @@ a{
 	.donate_title{
 		width: 80%;
 		margin: auto;
-		background-image: url("../index_img/donate_title.svg");
+		background-image: url("../src/image/index/donate_title.svg");
 		background-repeat: no-repeat;
 		background-position: bottom center;
 		background-size:100%;
@@ -335,7 +335,7 @@ a{
 
 .activity{
 	height: 100vh;
-	background-image: url("../index_img/index_div4_1.jpg");
+	background-image: url("../src/image/index/index_div4_1.jpg");
 	background-size:100%;
 	background-position: bottom center;
 	background-repeat: no-repeat;
@@ -358,7 +358,7 @@ a{
 	}
 	@media screen and(max-width: 767px){
 		background-position: bottom center;
-		background-size: 280%;
+		background-size: 340%; //vivi
 		.rice_img{
 			top: 15%;
 		}
@@ -483,7 +483,7 @@ a{
 
 .fish{
 	height: 100vh;
-	background-image: url("../index_img/ikea_3.png");
+	background-image: url("../src/image/index/ikea_3.png");
 	background-size:100%;
 	background-position: bottom center;
 	background-repeat: no-repeat;
@@ -576,18 +576,4 @@ a{
 
 
 
-<<<<<<< HEAD
-=======
 
-
-
-
-body{
-	background-color: #ca0;
-}
-h1{
- 	font-size: 50px;
- 	background-color: #ccc; 
-}
-
->>>>>>> 52ee638e2f490effa367db8c883ff7844d23211c

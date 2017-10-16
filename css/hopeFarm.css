@@ -1,187 +1,232 @@
-*{
-  margin: 0;
+body {
+  width: 1440px;
+  margin: 0 auto;
   padding: 0;
+  border: 0; }
 
-}
+header {
+  margin: 0 auto; }
 
+img {
+  display: block;
+  max-width: 100%; }
 
-a{
+a {
   text-decoration: none;
-}
-img{
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  display: inline-block;
-}
-.clear{
-  clear: both;
-}
-p{
-  /*font-size: 19px; */
+  color: #000; }
+
+.clear {
+  clear: both; }
+
+p {
   font-size: 100%;
   margin: 0;
-  font-family:"Microsoft JhengHei";
-  letter-spacing:1px;
-}
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 1px; }
+
 h6 {
-  /*font-size: 19px; */
   font-size: 90%;
   margin: 0;
-  font-family:"Microsoft JhengHei";
-  letter-spacing:1px;
-}
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 1px; }
+
 h5 {
-  /*font-size: 19px; */
   font-size: 100%;
   margin: 0;
-  font-family:"Microsoft JhengHei";
-  letter-spacing:1px;
-}
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 1px; }
+
 h4 {
-  /*font-size: 19px; */
   font-size: 113%;
   margin: 0;
   color: #fff;
-  font-family:"Microsoft JhengHei";
-  letter-spacing:1px;
-}
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 1px; }
+
 h3 {
-  /*font-size: 19px; */
   font-size: 119%;
   margin: 0;
   color: #fff;
-  font-family:"Microsoft JhengHei";
-  letter-spacing:1px;
-}
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 1px; }
+
 h2 {
-  /*font-size: 25px; */
   font-size: 157%;
   margin: 0;
-  color:#43612f;  
-  font-family:"Microsoft JhengHei";
-  letter-spacing:1px;
-}
-h1{
-  font-size:100%;
-  margin: 0 auto;
-  color:#43612f;  
-  font-family:"Microsoft JhengHei";
-  letter-spacing:1px;
-}
-.box{
-  max-width: 1440px;
-  margin: auto;
-}
+  color: #43612f;
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 1px; }
 
-/*==========//fix_navbar====================*/
-.section02{
-  margin-top:60px;
-}
-.sec02-1{
-  width: 81.916667%;
-  background-image: url("../src/image/hopefarm/decorate-backgrund1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 170px;
-  margin:0 auto;
-  text-align:center;
-  margin-top: 40px;
-}
-.sec02-1:before{
-  content:'';
-  display:inline-block;
-  vertical-align:middle;
+h1 {
+  font-size: 200%;
+  margin: 0 auto;
+  color: #43612f;
+  font-family: "Microsoft JhengHei";
+  letter-spacing: 1px; }
+
+.head-1 {
+  background-color: #699c33;
+  height: 40px; }
+
+.head-1-text {
+  width: 19.0972222222%;
+  float: right; }
+
+.head-1 h4 {
+  display: inline-block;
+  padding: 0 2.472222%;
+  height: 40px;
+  line-height: 40px; }
+
+.head-2 {
+  background-color: #ece7d4;
+  height: 138px;
+  margin: 0 auto; }
+
+.head-2:before {
+  content: '';
   height: 100%;
-}
-.sec02-1 h1{
-  display:inline-block;
-  vertical-align:middle;
-}
-.sec02-2-item{
-  width: 58.333333333%;
-  border:1px solid #6ba033;
-  margin:0 auto;
-  padding:0.69444444444%;
-}
-.sec02-2-item-1{
-  width: 47.619047619%;
-  padding-right:0.69444444444%;
-  float:left;
-}
-.sec02-2-item-1 img{
+  display: inline-block;
+  vertical-align: middle; }
+
+.head-2-box {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%; }
+
+.head-2-left {
+  display: inline-block;
+  padding-right: 27.7777777778%; }
+
+.head-2-right {
+  display: inline-block; }
+
+.head-2 .head-2-item {
+  display: inline-block;
+  margin: 0 50px;
+  width: 25.304%;
+  height: 96px; }
+
+.head-2 .head-2-item img {
+  width: 50%;
+  padding-bottom: 6px;
+  display: inline-block; }
+
+.head-3 {
+  width: 302px;
+  margin: -134px 569px 0 569px; }
+
+.head-3 img {
+  margin: 0 auto;
+  width: 302px;
+  height: 220px; }
+
+.section01 {
   width: 100%;
-}
-.sec02-2-item-2 h3{
-  color:#000;
-  padding-top:10%;
-}
-.sec02-2-item-2 h6{
+  height: 500px;
+  background-image: url("https://placem.at/places?h=500");
+  margin-top: -86px; }
+
+.section02 {
+  margin-top: 60px; }
+
+.sec02-1 {
+  width: 1050px;
+  height: 170px;
+  background-image: url("../src/image/hopefarm/decorate-backgrund1.png");
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  text-align: center; }
+
+.sec02-1:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%; }
+
+.sec02-1 h1 {
+  display: inline-block;
+  vertical-align: middle; }
+
+.sec02-2-item {
+  width: 840px;
+  border: 1px solid #6ba033;
+  margin: 0 auto;
+  padding: 0.69444444444%; }
+
+.sec02-2-item-1 {
+  padding-right: 0.69444444444%;
+  float: left; }
+
+.sec02-2-item-1 img {
+  width: 410px; }
+
+.sec02-2-item-2 h3 {
+  color: #000;
+  padding-top: 50px; }
+
+.sec02-2-item-2 h6 {
   float: left;
-  padding-top:2%;
-}
-.sec02-2-item-2 h6:last-child{
+  padding-top: 5px; }
+
+.sec02-2-item-2 h6:last-child {
+  padding-left: 53.380952%; }
+
+.sec02-2-item-2 img {
+  padding-top: 81px; }
+
+.sec02-2-item-2 {
+  width: 410px;
   float: right;
-}
-.sec02-2-item-2 img{
-  padding-top:18%;
-}
-.sec02-2-item-2{
-  width: 47.619047619%;
-  float:right;
-  margin-left:0.69444444444%; 
-}
-.sec02-2-item-3{
-  text-align:center;
-  margin-top:20px;
-}
-.sec02-2-item-3 h2{
+  margin-left: 0.69444444444%; }
+
+.sec02-2-item-3 {
+  text-align: center;
+  margin-top: 20px; }
+
+.sec02-2-item-3 h2 {
   width: 150px;
-  margin:0 auto;
-  color:#fff;
-  background-color:#6ba033;
-  padding:10px 0 10px 0;
-  border:2px solid#fff;
-}
-.sec02-2-item-3 h2:hover{
+  margin: 0 auto;
+  color: #fff;
+  background-color: #6ba033;
+  padding: 10px 0 10px 0;
+  border: 2px solid #fff; }
+
+.sec02-2-item-3 h2:hover {
   width: 150px;
-  margin:0 auto;
-  color:#6ba033;
-  background-color:#fff;
-  border:2px solid#6ba033;
-  
-}
-/*===========/section02 ================*/
-.section03{
-  margin-top:100px;
-  margin-bottom:100px;
+  margin: 0 auto;
+  color: #6ba033;
+  background-color: #fff;
+  border: 2px solid #6ba033; }
+
+.section03 {
+  margin-top: 100px;
+  margin-bottom: 100px;
   width: 100%;
   height: 200px;
-  background-image:url('https://placem.at/places');
-  text-align:center;
-}
-.section03:before{
+  background-image: url("https://placem.at/places");
+  text-align: center; }
+
+.section03:before {
   height: 100%;
-  content:'';
+  content: '';
   display: inline-block;
-  vertical-align:middle;
-}
-.section03-txt{
+  vertical-align: middle; }
+
+.section03-txt {
   display: inline-block;
-  vertical-align:middle;
-  width: 47.3194444444%;
-  margin:0 auto;
-}
-/*=====////section03===============*/
-.section04{
-  margin:0 auto;
+  vertical-align: middle;
+  width: 46.3194444444%;
+  margin: 0 auto; }
+
+.section04 {
+  margin: 0 auto;
   width: 77%;
   height: 300px;
-  background-image:url('../src/image/hopefarm/decorate-backgrund2.png');
-  background-repeat:no-repeat;
-  background-size: contain;
-}
-/*=====////section04===============*/
+  background-image: url("../src/image/hopefarm/decorate-backgrund2.png");
+  background-repeat: no-repeat; }
+
 .section05-1 {
   text-align: center; }
 
@@ -199,7 +244,7 @@ h1{
 
 .section05-2 {
   padding-top: 50px;
-  height: 1500px; }
+  height: 1308px; }
 
 .section05-2-group {
   width: 100%;
@@ -213,11 +258,8 @@ h1{
   margin-bottom: 100px; }
 
 .section05-2-group-outsidebox a {
-  margin: 0 5.0477430820465% 0 0;
-}
-.section05-2-group-outsidebox a:last-child{
-  margin: 0;
-}
+  margin: 0 5.13888888889% 0 0; }
+
 .section05-2-group-box {
   width: 29.5833333333%;
   border: 1px solid #6ba033;
@@ -242,7 +284,7 @@ h1{
 
 .section05-2-group-box-txt h6 {
   display: inline-block;
-  padding-right: 48.9%;
+  padding-right: 49.37412452%;
   padding-top: 10px; }
 
 .section05-2-group-box-txt h6:last-child {
@@ -250,7 +292,7 @@ h1{
 
 .section05-3 {
   text-align: center;
-  }
+  height: 300px; }
 
 .section05-3 img {
   display: inline-block; }
@@ -259,58 +301,52 @@ h1{
   color: #000;
   display: inline-block; }
 
-/*=====////section05===============*/
-.section06{
-  margin-top: 7%;
-}
-.section06-1{
-  width: 30%;
-  text-align: center;
-  left: 0;
-  right: 0;
-  margin: auto;
+.section06 {
+  background-color: #d7f9af;
+  padding: 20px 0;
+  margin-bottom: 100px; }
 
-}
-.section06-2{
-  margin-top:60px;
-  margin-bottom:100px;
-  width: 100%;
-  height: 300px;
-  background-image:url('https://placem.at/places');
-  text-align:center;
-}
-.section06-2:before{
-  height: 100%;
-  content:'';
-  display: inline-block;
-  vertical-align:middle;
-}
-.section06-2-txt{
-  display: inline-block;
-  vertical-align:middle;
-  width: 47.3194444444%;
-  margin:0 auto;
-}
-/*=====////section06===============*/
+.section06-1 {
+  text-align: center; }
 
+.section06-2 {
+  width: 71.4583333333%;
+  margin: 0 auto; }
 
+.section06-2 h4 {
+  color: #000; }
 
+.backgroundimg {
+  background: url("../src/image/hopefarm/footer.png");
+  background-repeat: no-repeat; }
 
+.footerTitle {
+  width: 1173px;
+  margin: 0 auto;
+  padding-top: 60px; }
 
+.footerTitle img {
+  width: 35%;
+  float: left; }
 
+.footerItemList {
+  width: 1022px;
+  margin-left: 216px;
+  float: left;
+  margin-top: -28px; }
+  .footerItemList ul {
+    padding: 0;
+    margin: 0;
+    float: left;
+    padding-right: 100px; }
+    .footerItemList ul li {
+      list-style: none;
+      padding-bottom: 15px; }
 
+.footerIcon {
+  width: 127px;
+  float: right;
+  margin: 57px 24px 0 0; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footerIcon img {
+  display: inline-block; }

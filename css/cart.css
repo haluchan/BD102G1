@@ -3,7 +3,8 @@ body {
 
 .cart-container {
   max-width: 1300px;
-  margin: auto; }
+  margin: auto;
+  margin-top: 10%; }
   .cart-container .cart-title {
     width: 322px;
     margin: auto; }

@@ -11,8 +11,8 @@
 	<link rel="stylesheet" href="css/headerFooter.css">
 </head>
 <body>
-
-	<header id="header_none">
+	<?php require_once('Header.php'); ?>
+	<!-- <header id="header_none">
 		<div class="head-1">
 			<div class="head-1-text">
 				<a href="">
@@ -26,9 +26,9 @@
 				</a>
 				<div class="clear"></div>
 			</div>
-		</div>
+		</div> -->
 		<!-- hamberger -->
-		<btn>
+		<!-- <btn>
         	<div class="starbtn btn-sidebar">
             	<span></span>
         	</div>
@@ -46,9 +46,9 @@
 	            <li><a href="#"><h6>會員專區</h6></a></li>
 	            <li><a href="#"><h6>購物車</h6></a></li>
 	        </ul>
-	    </div>
+	    </div> -->
 	    <!-- ///hamberger -->
-		<div class="head-2">
+		<!-- <div class="head-2">
 			<div class="head-2-box">
 				<div class="head-2-left">
 				<a href="">
@@ -89,9 +89,9 @@
 			</a>
 		</div>
 		<div class="clear"></div>
-	</header>
+	</header> -->
 		<!-- ============///fix_navbar===================================== -->
-		<div class="fix_navbar" id="top-bar">
+		<!-- <div class="fix_navbar" id="top-bar">
 			<div class="fix_navbar-box">
 				<div class="fix_navbar-left">
 				<a href="">
@@ -131,7 +131,7 @@
 			</a>
 		</div>
 		<div class="clear"></div>
-	</div>
+	</div> -->
 		<!-- ============///fix_navbar===================================== -->
 	
 
@@ -319,7 +319,7 @@
 		</div>
 	</section>
 	<!--=================== /section06 ================================-->
-	<footer class="col-xs-12">
+	<!-- <footer class="col-xs-12">
 			<div class="backgroundimg">
 
 				<div class="footerTitle">
@@ -352,10 +352,12 @@
 			  </div>
 			  <div class="clear"></div>
 			</div>
-	</footer>
+	</footer> -->
 </section>
+
+<?php require_once('Footer.php'); ?>
 <!--=================== /footer ===================================-->
-<script type="text/javascript" src="js/NAV-HEAD.js"></script>
+<!-- <script type="text/javascript" src="js/NAV-HEAD.js"></script> -->
 <script type="text/javascript" src="js/hopeFarm.js"></script>	
 </body>
 </html>

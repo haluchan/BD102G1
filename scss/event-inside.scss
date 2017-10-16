@@ -34,7 +34,6 @@
     }
 
 
-
 *{
 	margin: 0px;
 	padding:0px;
@@ -43,7 +42,7 @@ body{
 	background: url("../src/image/cart/cart-bg.png") repeat left top;
 }
 .event-banner{
-	max-width:1440px;
+	width:100%;
 	margin:auto;
 	.slides{
 		max-width: 1440px;
@@ -51,10 +50,12 @@ body{
 		
 
 		.slick-prev{
+			// display:none;
 			&::before{
-				// content:url("../../../src/image/event-inside-page/controls-left.png");
-				// position:absolute;
-				// z-index: 100;
+				display:none;
+				content:url("../src/image/event-inside-page/controls-left.png");
+				position:absolute;
+				z-index: 100;
 				left:0;
 				
 
@@ -74,11 +75,14 @@ body{
 			}
 		}
 		.slick-next{
+			// display:none;
 			&::before{
-				// content:url("../../../src/image/event-inside-page/controls-right.png");
-				// position:absolute;
-				// z-index: 100;
+				display:none;
+				content:url("../src/image/event-inside-page/controls-right.png");
+				position:absolute;
+				z-index: 100;
 				right:0px;
+				
 			}
 		}
 	}
@@ -112,6 +116,7 @@ body{
 					// width: 1440px;
 					// height: 100%;
 					// margin:auto;
+
 					
 
 				.title-frame{
@@ -120,13 +125,13 @@ body{
 					position:absolute;
 					left:880px;
 					top:-60px;
-					@keyframes myAnimation {
-						0% {transform:rotate(0deg);
-    						transform-origin:0% 34%;}
-						100%{transform:rotate(37deg);
-    						transform-origin:0% 34%;}
-					}
-					animation: myAnimation .4s  0s ease-out 1 reverse;
+					// @keyframes myAnimation {
+					// 	0% {transform:rotate(0deg);
+    	// 					transform-origin:0% 34%;}
+					// 	100%{transform:rotate(37deg);
+    	// 					transform-origin:0% 34%;}
+					// }
+					// animation: myAnimation .4s  2s ease-out 1 reverse;
 					
 					img{
 						width: 320px;
@@ -196,6 +201,7 @@ body{
 		text-align:justify;
 		p{
 			font-size:20px;
+			line-height:40px;
 		}
 	}
 }
@@ -271,7 +277,7 @@ body{
 	}
 }
 .event-report{
-	background-color:#ffc;
+	// background-color:#ffc;
 	padding:8% 0;
 	width: 100%;
 	margin:auto;
@@ -312,7 +318,9 @@ body{
 			}
 		}
 	}
-
+.event-deck{
+	// background-color:#ffc;
+}
 }
 
 @include rwd (desktop_spec) {
@@ -596,3 +604,18 @@ body{
 
 	}
 } 
+
+
+// sign up
+
+
+
+
+
+
+
+
+
+
+
+

@@ -131,7 +131,7 @@
 			
 			
 			<div class="stepBuy">
-				<div class="btn_green"><a href="#">前往選購</a></div>
+				<div class="btn_green"><a href="product.php">前往選購</a></div>
 			</div>
 
 

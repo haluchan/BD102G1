@@ -1,5 +1,6 @@
 @import "mixins/rwd";
 
+
 body{
 	background: url("../src/image/cart/cart-bg.png") repeat left top;
 }
@@ -7,6 +8,7 @@ body{
 	max-width:1300px;
 	// height: 100vw;
 	margin: auto;
+	margin-top:10%;
 	.cart-title{
 		width:322px;
 		margin: auto;
