@@ -136,26 +136,34 @@
 	.titletext h2{
 		letter-spacing: 12px;
 	}
+	.titletexts h2{
+		letter-spacing: 12px;
+	}
 	.titletext img{
 		margin-top: 1%;
 		width: 10vw;
 	}
 	.titleblock{
-		margin : 4% 0;
+		margin : 4% auto;
 		width: 80%;
 		background-image: url('../src/image/event/03333.jpg');
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center bottom;
-		margin: 0 auto;
+		
 		/* border-radius: 80% 20% 10% 90%/20% 20% 80% 90%;
 		overflow: hidden; */
 	}
 	.titleblocks{
-		margin : 4% 0;
+		margin : 6% auto;
 		width: 80%;
-		margin: 0 auto;
+		background-image: url('../src/image/event/mainimg2.jpg');
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center bottom;
+		
 		/* background-image: url('../src/image/event/03333.jpg');
 		background-attachment: fixed;
 		background-repeat: no-repeat;
@@ -169,9 +177,11 @@
 	}
 	.titletext{
 		padding: 18vh 0;
+		color: #fff;
 	}
 	.titletexts{
-		padding: 10vh 0;
+		padding: 18vh 0;
+		color: #fff;
 	}
 	.titletexts img{
 		width: 15%;
@@ -387,7 +397,7 @@
 	.eventreco{
 		margin-left: 1%;
 		margin-right: 1%;
-		margin-top: 1%;
+		margin-top:4%;
 		background-color: #fff;
 		border-radius:10%;
 		/* padding-top: 1%; */
@@ -411,7 +421,7 @@
 		.eventreco{
 			margin-left: 1%;
 			margin-right: 1%;
-			margin-top: 1%;
+			margin-top: 4%;
 			background-color: #fff;
 			border-radius:10%;
 			/* padding-top: 1%; */
@@ -432,7 +442,7 @@
 		content:url('../src/image/event/sun_yellow2.png');
 		display: block;
 		position: absolute;
-		top: -40px;
+		top: -10px;
 		left: -20px;
 	}
 	
@@ -440,7 +450,7 @@
 		content:url('../src/image/event/ki5.png');
 		display: block;
 		position: absolute;
-		bottom: 0;
+		bottom: 30px;
 		left: 0;
 	}
 	
