@@ -73,6 +73,9 @@
 		padding-bottom: 2px;
 	
 	}
+	td p {
+		text-align: center;
+	}
 	th{
 		text-align: right;
 		/* font-size: 24px; */
@@ -108,6 +111,9 @@
 	}
 	.navbar{
 		text-align: center;
+	}
+	.imguplod{
+		margin: 6% 0 ;
 	}
 	.table select{
 		width: 150px;
