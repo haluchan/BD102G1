@@ -125,6 +125,7 @@
 				$('#ham_menu').toggleClass("ham_slide");
 				});
 		});		
+			
 			$("#login-btn").click(function(){
 				$(".lightbox-bg").fadeIn();
 			});
