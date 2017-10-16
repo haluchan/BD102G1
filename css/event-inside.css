@@ -6,12 +6,16 @@ body {
   background: url("../src/image/cart/cart-bg.png") repeat left top; }
 
 .event-banner {
-  max-width: 1440px;
+  width: 100%;
   margin: auto; }
   .event-banner .slides {
     max-width: 1440px;
     margin: auto; }
     .event-banner .slides .slick-prev::before {
+      display: none;
+      content: url("../src/image/event-inside-page/controls-left.png");
+      position: absolute;
+      z-index: 100;
       left: 0; }
     .event-banner .slides div {
       width: 100%;
@@ -21,6 +25,10 @@ body {
       .event-banner .slides div img {
         width: 100%; }
     .event-banner .slides .slick-next::before {
+      display: none;
+      content: url("../src/image/event-inside-page/controls-right.png");
+      position: absolute;
+      z-index: 100;
       right: 0px; }
 
 .clear {
@@ -48,15 +56,7 @@ body {
       max-height: 400px;
       position: absolute;
       left: 880px;
-      top: -60px;
-      animation: myAnimation .4s  0s ease-out 1 reverse; }
-@keyframes myAnimation {
-  0% {
-    transform: rotate(0deg);
-    transform-origin: 0% 34%; }
-  100% {
-    transform: rotate(37deg);
-    transform-origin: 0% 34%; } }
+      top: -60px; }
       .main-bg .event-row .main-container .title-frame img {
         width: 320px; }
     .main-bg .event-row .main-container .main-img {
@@ -71,7 +71,7 @@ body {
       background-color: #fff;
       width: 420px;
       padding: 100px 0 90px;
-      border-radius: 250px 250px 235px 235px/260px 220px 235px 180px;
+      border-radius: 250px 250px 235px 235px / 260px 220px 235px 180px;
       text-align: center;
       position: absolute;
       top: 80px;
@@ -103,7 +103,8 @@ body {
     line-height: 60px;
     text-align: justify; }
     .event-cotent .main-container p {
-      font-size: 20px; }
+      font-size: 20px;
+      line-height: 40px; }
 
 .event-map {
   max-width: 1300px;
@@ -158,7 +159,6 @@ body {
           width: 100%; }
 
 .event-report {
-  background-color: #ffc;
   padding: 8% 0;
   width: 100%;
   margin: auto;
@@ -186,6 +186,8 @@ body {
         border-radius: 50%;
         box-sizing: border-box; }
         .event-report .event-report-main .event-report-photo img:hover {
+          -webkit-transform: scale(1.1, 1.1);
+          -ms-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
           transition: all 0.3s ease-out;
           cursor: pointer; }
@@ -195,9 +197,9 @@ body {
     left: 790px; }
   .main-bg .event-row .main-container .main-img {
     margin-left: 200px; }
-
   .event-map .event-row .event-map-content .event-map-right {
     margin-left: 400px; } }
+
 @media all and (min-width: 1000px) and (max-width: 1199px) {
   .main-bg .event-row .main-container .title-frame {
     left: 510px;
@@ -214,10 +216,8 @@ body {
     margin-left: 0px; }
     .main-bg .event-row .main-container .main-img img {
       max-width: 90%; }
-
   .tree {
     margin-top: 60px; }
-
   .event-map .event-row .event-map-content .event-info {
     left: auto;
     right: 0px;
@@ -227,9 +227,9 @@ body {
   .event-map .event-row .event-map-content .event-map-img {
     width: 380px;
     bottom: -180px; }
-
   .event-report {
     margin-top: 200px; } }
+
 @media all and (min-width: 768px) and (max-width: 999px) {
   .main-bg .event-row .main-container .title-frame {
     left: auto;
@@ -254,10 +254,8 @@ body {
     margin-left: 0px; }
     .main-bg .event-row .main-container .main-img img {
       max-width: 90%; }
-
   .tree {
     margin-top: 60px; }
-
   .event-map .event-row .event-map-content .event-info {
     left: auto;
     right: 0px;
@@ -267,9 +265,9 @@ body {
   .event-map .event-row .event-map-content .event-map-img {
     width: 380px;
     bottom: -180px; }
-
   .event-report {
     margin-top: 220px; } }
+
 @media all and (max-width: 767px) {
   .main-bg {
     background-size: 54px auto,70px auto; }
@@ -301,14 +299,12 @@ body {
       padding-top: 40px; }
       .main-bg .event-row .main-container .main-img img {
         max-width: 100%; }
-
   .tree {
     margin-top: 240px; }
     .tree .tree-left {
       margin-left: 10px; }
     .tree .tree-right {
       margin-right: 10px; }
-
   .event-cotent {
     max-width: 90%;
     margin: 10px auto;
@@ -317,7 +313,6 @@ body {
     .event-cotent .main-container {
       line-height: 32px;
       margin: 50px 0; }
-
   .event-map .event-row .event-map-content .event-info {
     max-width: 90%;
     margin: auto;
@@ -328,7 +323,6 @@ body {
     height: 100%; }
   .event-map .event-row .event-map-content .event-map-img {
     display: none; }
-
   .event-report .event-report-title {
     background-image: none;
     width: 90%;
