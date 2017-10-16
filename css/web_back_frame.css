@@ -2,33 +2,29 @@
 	margin: 0;
 	padding: 0;
 }
-body{
-	font-family: '微軟正黑體',Apple LiGothic ;
-}
 .container{
 	width: 100%;
 	height: 100vh;
-	background-image: url('../src/image/webBack/back.png');
-	background-size: cover ;
-
+	margin: auto;
+	background-image: url('../src/image/web_back_frame/background.png');
+	background-size: 100% 100% ;
 }
 .clearfix{
 	clear: both;
 }
 nav{
 	width: 100%;
-	float: left;
 	margin-right: 30px;
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid #ABCD87;
+	position: fixed;
+	z-index: 1;
+	background-color: #FFF8E6;
 }
 .nav_item{
 	float: left;
-	width: 20%;
+	width: 258px;
 	box-sizing: border-box;
 	padding: 40px 10px 10px 10px;
-}
-.logo{
-	margin-bottom: 10px;
 }
 /* 如果沒有這行，把這裡打開 */
 /* .nav_item:nth-child(3){
@@ -39,12 +35,8 @@ nav{
 .nav_item:nth-child(5){
 	padding-top: 50px;
 }
-.nav_item:nth-child(5){
-	box-sizing: border-box;
-	padding-right: 40px;
-}
 .nav_item .search{
-	background-color: #fcf3db;
+	background-color: white;
 }
 .nav_item .search button{
 	background: transparent;
@@ -62,21 +54,20 @@ nav{
 	background-color: gray;
 }
 .nav_item select{
-	background-color: #fcf3db;
+	background-color: white;
 	width: 80px;
 	height: 30px;
-    vertical-align: text-bottom;
 }
 .nav_item input{
-	background-color: #fcf3db;
+	background-color: white;
 	padding: 15px;
-	width: 220px;
+	width: 120px;
 	border: none;
 }
 .nav_item h2{
 	font-weight: 200;
 	position: relative;
-	font-size: 48px;
+	font-size: 44px;
 }
 .nav_item h2:before{
 	content: "";
@@ -102,26 +93,23 @@ nav{
 	display: block;
 	margin: auto;     
 }
-article{
-	width: 100%;
-/*	float: left;*/
-/*	background-image: url('../src/image/webBack/back.png');*/
-	background-size: cover;
+.article{
+	width: 1440px;
+	float: left;
 }
 .manage{
-	width: 210px;
-	height: 740px;
+	width: 228px;
+	height: 100vh;
 	float: left;
-	background-image: url('../src/image/webBack/pic.png');
-	font-size: 18px;
-	margin: 20px 0 0 15px;
+	font-size: 16px;
 	position: relative;
+	background-color: #ABCD87;
 }
 .manage ol:nth-child(1){
 	box-sizing: border-box;
 	width: 190px;
 	padding: 10px 20px;
-	margin:20px 20px 0 20px;
+	margin:140px 20px 0 20px;
 }
 .manage li{
 	margin: auto;
@@ -150,7 +138,8 @@ article{
 	color: white;
 	position: absolute;
 	left: 40px;
-	bottom: 20px;	
+	bottom: 20px;
+	background: #F29600;	
 }
 .content{
 	width: 1000px;
@@ -176,6 +165,23 @@ article{
 }
 .item li{
 	padding-top: 0;
+}
+.save{
+	display: block;
+	width: 110px;
+	height: 25px;
+	margin: auto;
+	border-radius: 10px;
+	color: white;
+	float: right;
+	background: #F29600;
+	position: relative;
+	top: 640px;
+	right: 100px;
+}
+.content_form{
+	float: left;
+	margin-top: 240px;
 }
 a{
 	cursor: pointer;

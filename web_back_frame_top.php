@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/web_back_frame/web_back_frame.js"></script>
-</head>
-<body>
 	<div class="container">
 		<!-- nav -->
 		<nav>
@@ -64,17 +54,10 @@
 			 	<button class="logout" type="button">登出</button>
 			 </div>
 		<!-- 內容 -->
-			<div class="content">
-				
-			</div>
-			<div class="clearfix"></div>
-		</article>
+			<div class="content_form">
 
 
-		<!-- 內容 -->
-		<div class="content">
-			
-		</div>
-	</div>
-</body>
-</html>
+				<!-- 表格位置，按鈕自己開 -->
+				<!-- <button class="save" type="button">儲存</button> -->
+
+
