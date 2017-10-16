@@ -183,14 +183,12 @@ body {
           text-align: center;
           width: 100%;
           margin: auto; }
-
   .cart-total-panel {
     width: 100%;
     box-sizing: border-box;
     display: inline-block; }
     .cart-total-panel .cart-total {
       text-align: center; }
-
   .cart-container .cart-address .cart-shipping-info .form-group {
     width: 96%; }
   .cart-container .cart-pay .form-group:nth-child(3) {
@@ -201,11 +199,11 @@ body {
     width: 100%; }
   .cart-container .cart-pay .form-group:nth-child(5) {
     width: 100%; } }
+
 @media all and (min-width: 768px) and (max-width: 1199px) {
   .cart-container .cart-list .cart-item {
     width: 100%;
     border: none; }
-
   .cart-total-panel {
     width: 100%;
     box-sizing: border-box; }
