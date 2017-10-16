@@ -36,7 +36,7 @@
 		<div class="table">
 			<h2></h2>
 			<img src="src/image/member/child.png" alt="">
-			<div class="btnbox">
+			<div class="imguplod btnbox">
 				<a href="">上傳圖檔</a>
 			</div>
 				<table>
@@ -62,22 +62,17 @@
 						</tr>
 						<tr>
 							<td>會員生日:</td>
-							<td>10/06/1998</td>
+							<td><p>10/06/1998</p></td>
 						
 						</tr>
 						<tr>
 							<td>居住地:</td>
-							<td><select name="" >
-								<option value="">台北</option>
-								<option value="">台中</option>
-								<option value="">高雄</option>
-								
-							</select></td>
+							<td><input type="text" name="" ></td>
 						
 						</tr>
 						<tr>
 							<td>性別:</td>
-							<td>女</td>
+							<td><p>女</p></td>
 						
 						</tr>
 					</tbody>

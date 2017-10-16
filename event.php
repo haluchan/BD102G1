@@ -214,7 +214,7 @@
 <div class="thirdblock" >
 	
 	<div class="thirdblockin">
-		<div id="trigger"></div>
+		<div id="trigger2"></div>
 		<div class="eventreco">
 			<a href="#">
 				<div class="img">
