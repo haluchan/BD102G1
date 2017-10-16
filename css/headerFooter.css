@@ -451,8 +451,7 @@ p{
       width: 60%;
     }
     .footerItemList{
-        visibility: hidden;
-        position: absolute;
+        display: none;
     }
     .footerIcon{
         bottom: 15px;

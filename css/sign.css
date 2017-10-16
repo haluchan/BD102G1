@@ -85,6 +85,8 @@
         border: 1px solid #3260b5;
         transition-duration: 0.4s; }
       .lightbox-bg .lightbox-target .login-content .btn-login:hover {
+        -webkit-transform: 0 0 2px;
+        -ms-transform: 0 0 2px;
         transform: 0 0 2px;
         box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
         background-color: #F6F7ED;

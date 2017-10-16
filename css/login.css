@@ -29,7 +29,7 @@
       color: #699c33; }
     .lightbox-bg .lightbox-target .login-content {
       margin: auto;
-      width: 300px;
+      max-width: 300px;
       text-align: center; }
       .lightbox-bg .lightbox-target .login-content .login-account {
         width: 200px;
@@ -119,3 +119,8 @@
 
 .login-clear {
   clear: both; }
+
+@media all and (max-width: 767px) {
+  .lightbox-bg .lightbox-target {
+    z-index: 999;
+    width: 90%; } }
