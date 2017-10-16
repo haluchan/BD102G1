@@ -438,7 +438,7 @@
 		transition: .5s;
 	}
 	
-	.eventreco:nth-child(3n)::after{
+	.eventreco:nth-child(4n)::after{
 		content:url('../src/image/event/sun_yellow2.png');
 		display: block;
 		position: absolute;
@@ -446,7 +446,7 @@
 		left: -20px;
 	}
 	
-	.eventreco:nth-child(3n-1)::after{
+	.eventreco:nth-child(3n)::after{
 		content:url('../src/image/event/ki5.png');
 		display: block;
 		position: absolute;
@@ -462,7 +462,7 @@
 		left: 10px;
 	} 
 	 */
-	.eventreco:nth-child(3n+1)::after{
+	.eventreco:nth-child(5n)::after{
 		content:url('../src/image/event/sankaku_garland1.png');
 		display: block;
 		position: absolute;

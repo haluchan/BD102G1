@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>會員修改</title>
 	<link rel="stylesheet" type="text/css" href="css/memberedit.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -66,7 +66,7 @@
 						
 						</tr>
 						<tr>
-							<td>居住地:</td>
+							<td>居住地址:</td>
 							<td><input type="text" name="" ></td>
 						
 						</tr>

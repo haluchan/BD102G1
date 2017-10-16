@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>會員專區</title>
 	<link rel="stylesheet" type="text/css" href="css/member.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -50,7 +50,10 @@
 		            	<img src="src/image/member/suika.png" alt="">
 		            </div> -->
 		</div>
-	</div>
+
+			
+		
+	</div>	<div class="clear"></div>
 </div>
 
 		<div class="table" id="memdetail">
@@ -192,7 +195,7 @@
 							<td>阿水</td>
 						</tr>
 					</tbody>
-				</table>
+				</table><div class="clear"></div>
 		</div>	
 
 
