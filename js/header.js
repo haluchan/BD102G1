@@ -5,7 +5,7 @@ function doFirst(){
 	
 	
 	
-// 漢堡選單下滑
+// 漢堡選單下滑(已移到header.php下)
 $(document).ready(function(){
 	$('#ham_button').click(function(){
 		$('#hamicon').toggleClass("hamicon_slide");
