@@ -1,0 +1,148 @@
+@charset "UTF-8";
+@import "../mixins/media";
+
+
+
+
+
+
+.container{
+	&>div{
+		margin:5% 0;
+	}
+	padding-top:8%;
+	width:60%;
+	margin:auto;
+	// background-color: #ece7d4;
+	h1{
+		font-size:44px;
+		color:#659e34;	
+	}
+	h2{
+		font-size:28px;
+		color:rgba(0,0,0,0.6);
+		@include rwd (moblie) {	
+			font-size:20px;		
+		}
+	}
+	p{
+		color:#659e34;
+		font-size:28px;
+		font-weight:bold;
+		@include rwd (moblie) {						
+		    font-size:14px;			    					
+		}
+	}
+	img{
+		width:100%;
+	}
+	padding-top:8%;
+
+	@include rwd (moblie) {						
+		width:90%;			    					
+	}
+
+	a{
+		text-decoration:none;
+
+	}
+
+	.applicationTitle{
+		width:100%;
+		margin:auto;
+		text-align:center;
+		@include rwd (moblie) {						
+		    	width:100%;
+		    	text-align:center;			    					
+			}
+		.item{
+			// width:40%;
+			// text-align:right;		
+			display:inline-block;
+			vertical-align: middle;
+			@include rwd (moblie) {						
+		    	width:50%;
+		    	h1{font-size:24px;}			    					
+			}		
+		}		
+	}
+	.applicationContent{
+		background-color: #ece7d4;
+		.table{
+			width:80%;
+			margin:auto;
+			@include rwd (moblie) {						
+				 margin:auto;	    					
+			}
+			.tr{
+				display:table-row;
+				// display:block;
+				height:100px;
+				margin:auto;
+				text-align:center;
+				@include rwd (moblie) {						
+					 display:block;
+					 overflow:hidden;
+				}
+				.td{
+					width:30%;
+					display:table-cell;
+					vertical-align:middle;
+					&:first-child{
+						text-align:left;
+					}
+					label{
+						font-size:18px;
+					}	
+					@include rwd (moblie) {						
+					    display:block;	
+					    margin:auto;
+					    text-align:center;
+					    width:100%;
+					    &:first-child{
+							text-align:center;
+						}
+					}
+				}
+			}
+		}													
+	}
+	.applicationConfirm{
+		text-align:center;
+	}
+}
+
+.feedback{
+	padding:5% 0;
+	width:100%;
+	background-color:#ece7d4;
+	color:#51504d;
+	// border-radius:2%;
+	text-align:center;
+	
+	span{
+		display:inline-block;
+		padding-left:5%;
+		color:#000;
+		font-size:20px;
+		font-weight:bold;
+		text-align:center;
+		@include rwd (moblie) {						
+			display:block;	 
+		}
+	}
+	
+	.feedbackCotent{
+
+		width:50%;
+		text-align:left;
+		// padding-left:20%;
+		margin:auto;
+		>div{
+			margin:10% 0;
+		}
+		@include rwd (moblie) {						
+			text-align:center;	 
+		}
+	}
+}
