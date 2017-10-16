@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/memberedit.css">
+	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
-</head>
-<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script type="text/javascript" src="js/parallax.min.js"></script>
+	</head>
+	<body>
 	<?php require_once('Header.php'); ?>
 	<div class="titlebg">
 		<img src="src/image/member/mv01.png" alt="">
@@ -15,18 +17,22 @@
 <div class="bigtitle">
 	<h2>會員資料修改</h2>
 </div>
-<!-- <div class="navbar">
-	<div class="navbarli">
-		<p>我的資料</p>
-	</div>
-	<div class="navbarli">
-		<p>歷史訂單</p>
-	</div>
-	<div class="navbarli">
-		<p>資助紀錄</p>
-	</div>
-</div> -->
+
 <div class="mem">
+	<!-- <section class="parallax">	
+<div id="scenes" data-hover-only="false">
+            <div class="parallax_area" data-depth="0.5">
+            	<img src="src/image/member/concept_index.png" alt="">
+            </div> -->
+            <!-- <div class="parallax_area_01" data-depth="0.4">
+            	<img src="src/image/event/hatsuka_daikon.png" alt="">
+            </div> -->
+       <!--      <div class="parallax_area_02" data-depth="0.8"><img src="src/image/event/ninjin_carrot2.png" alt=""></div> -->
+</div>
+</section>
+	<form action="" method="get" accept-charset="utf-8">
+	
+	
 		<div class="table">
 			<h2></h2>
 			<img src="src/image/member/child.png" alt="">
@@ -76,19 +82,22 @@
 						</tr>
 					</tbody>
 				</table>
-			<div class="btnbox">
+			
+		</form>
+			
+				
+	</div>
+	<div class="btnbox">
 				<a href="">確定修改</a>
 				<a href="">取消修改</a>
 			</div>	
-		
-		</div>	
 	
-				
-	
-	
+
 
 
 <?php require_once('Footer.php');?>
 </div>
+
+<script type="text/javascript" src="js/member.js"></script>
 </body>
 </html>

@@ -4,8 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/member.css">
+	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script type="text/javascript" src="js/parallax.min.js"></script>
+
 
 </head>
 
@@ -13,7 +16,6 @@
 	<?php require_once('Header.php'); ?>
 	<div class="titlebg">
 		<img src="src/image/member/mv01.png" alt="">
-		
 	</div>
 	
 <div class="bigtitle">
@@ -30,16 +32,36 @@
 		<p>資助紀錄</p>
 	</div>
 </div>
-<div class="mem">
-		<div class="table" id="memdetail">
 
+		
+<div class="mem">
+	<div class="parallax">	
+		<div id="scenes" data-hover-only="false" >
+		            <div class="parallax_area" data-depth="0.5">
+		            	<img src="src/image/member/concept_index.png" alt="">
+		            </div>
+		           <!--  <div class="parallax_area_01" data-depth="5">
+		            	<img src="src/image/event/hatsuka_daikon.png" alt="">
+		            </div>
+		            <div class="parallax_area_02" data-depth="10">
+		            	<img src="src/image/event/ninjin_carrot2.png" alt="">
+		            </div>
+		            <div class="parallax_area_03" data-depth="15">
+		            	<img src="src/image/member/suika.png" alt="">
+		            </div> -->
+		</div>
+	</div>
+</div>
+
+		<div class="table" id="memdetail">
 			<h2>我的資料</h2>
-			<img src="src/image/member/child.png" alt="">
-				<table>
-					
+				<table>					
 					<thead>
 						<tr>
-														
+							<img src="src/image/member/child.png" alt="">
+							<!-- <div class="btnbox" id="changeimg">
+								<a href="">修改資料</a>
+							</div>		 -->				
 						</tr>
 					</thead>
 					<tbody>
@@ -50,47 +72,46 @@
 						</tr>
 						<tr>
 							<td>會員暱稱:</td>
-							<td>becky</td>
+							<td><p>becky</p></td>
 							
 						</tr>
 						<tr>
 							<td>我的種子:</td>
-							<td>9</td>
+							<td><p>9</p></td>
 						
 						</tr>
 						<tr>
 							<td>我的紅利:</td>
-							<td>10</td>
+							<td><p>10</p></td>
 						
 						</tr>
 						<tr>
 							<td>e-mail:</td>
-							<td>nobody@gmail.com</td>
+							<td><p>nobody@gmail.com</p></td>
 						
 						</tr>
 						<tr>
 							<td>會員生日:</td>
-							<td>01/01/1998</td>
+							<td><p>01/01/1998</p></td>
 						
 						</tr>
 						<tr>
 							<td>居住地:</td>
-							<td>台北</td>
+							<td><p>台北</p></td>
 						
 						</tr>
 						<tr>
 							<td>性別:</td>
-							<td>女</td>
+							<td><p>女</p></td>
 						
 						</tr>
 					</tbody>
 				</table>
 			<div class="btnbox">
-			
-				<a href="" class="btnbox">修改資料</a>
+				<a href="memberedit.php" class="btnbox">修改資料</a>
 			</div>	
 		</div>	
-	
+			
 				
 	<div class="table" id="oderhis">
 			<h2>歷史訂單</h2>
@@ -173,9 +194,10 @@
 					</tbody>
 				</table>
 		</div>	
-	
+
 
 <?php require_once('Footer.php');?>
+
 </div>
 <script type="text/javascript">
     	document.getElementById("history").onclick=history;
@@ -199,7 +221,7 @@
 
  	window.onload=detail;
   </script>
-
+<script type="text/javascript" src="js/member.js"></script>
 	
 </body>
 </html>
