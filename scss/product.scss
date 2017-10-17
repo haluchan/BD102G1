@@ -68,7 +68,9 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 
 
 .pro_container{
-	margin-top: 50px;
+	@include pro_breakPoint(mobile){
+		margin-top: 50px;
+	}
 	h1{
 		color: #fff;
 		@include pro_breakPoint(pad){

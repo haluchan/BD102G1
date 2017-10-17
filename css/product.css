@@ -4,8 +4,10 @@
   z-index: 5;
 }
 
-.pro_container {
-  margin-top: 50px;
+@media only screen and (max-width: 766px) {
+  .pro_container {
+    margin-top: 50px;
+  }
 }
 
 .pro_container h1 {
