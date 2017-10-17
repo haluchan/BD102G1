@@ -302,7 +302,7 @@ a {
 .donate_banner {
   height: 100vh;
   background-image: url("../src/image/index/index_banner_2.jpg");
-  background-size: 100%;
+  background-size: 200vh;
   background-position: bottom center;
   background-repeat: no-repeat;
 }
@@ -489,7 +489,7 @@ a {
 .activity {
   height: 100vh;
   background-image: url("../src/image/index/index_div4_1.jpg");
-  background-size: 100%;
+  background-size: 200vh;
   background-position: bottom center;
   background-repeat: no-repeat;
   position: relative;
@@ -517,7 +517,6 @@ a {
 @media screen and (max-width: 767px) {
   .activity {
     background-position: bottom center;
-    background-size: 340%;
   }
   .activity .rice_img {
     top: 15%;
@@ -530,8 +529,7 @@ a {
 .activity .activity_title {
   color: #fff;
   writing-mode: vertical-lr;
-  margin: 6% auto 3%;
-  height: 350px;
+  margin: 8% auto 3%;
 }
 
 .activity .activity_title h1 {
@@ -595,6 +593,10 @@ a {
     font-size: 14px;
     line-height: 1.5;
   }
+}
+
+.activity .activity_info .btn_brown {
+  line-height: 4.5;
 }
 
 @keyframes cloud_1 {
@@ -661,6 +663,7 @@ a {
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+  z-index: -5;
 }
 
 @media screen and (max-width: 767px) {
@@ -684,31 +687,70 @@ a {
   font-size: 42px;
   text-align: center;
   margin: 10px 0 30px;
+  line-height: 1.3;
 }
 
 .fish .fish_info p {
   text-align: center;
 }
 
-.fish .fish_info p .buttom {
-  width: 25%;
-  text-align: center;
-  padding: 5px 25px;
-  font-size: 14px;
-  margin: 20px auto;
-  border-radius: 50px;
-  background-color: rgba(35, 24, 21, 0.7);
-  color: #fff;
+.fish .fish_info p .btn {
+  display: inline-block;
 }
 
-.fish .fish_info p .buttom:hover {
-  color: #231815;
-  background-color: rgba(255, 255, 255, 0.7);
+.fish .fish_info .fish_icon {
+  width: 5%;
+  position: absolute;
+  left: 12%;
+  bottom: 40%;
+}
+
+.fish .fish_info .fish_icon:nth-child(4) {
+  left: 22%;
+  bottom: 44%;
+  animation: fish_icon 3s -0.35s linear infinite;
+}
+
+.fish .fish_info .fish_icon:nth-child(5) {
+  left: 21%;
+  bottom: 46%;
+  animation: fish_icon 3s -0.45s linear infinite;
+}
+
+.fish .fish_info .fish_icon:nth-child(6) {
+  left: 25%;
+  bottom: 33%;
+  animation: fish_icon 3s -0.34s linear infinite;
+}
+
+.fish .fish_info .fish_icon:nth-child(7) {
+  left: 18%;
+  bottom: 23%;
+  animation: fish_icon 3s -0.11s linear infinite;
+}
+
+.fish .fish_info .fish_icon:nth-child(8) {
+  left: 13%;
+  bottom: 42%;
+  animation: fish_icon 3s -0.33s linear infinite;
+}
+
+.fish .fish_info .fish_icon:nth-child(9) {
+  left: 26%;
+  bottom: 43%;
+  animation: fish_icon 3s -0.48s linear infinite;
+}
+
+.fish .fish_info .fish_icon:nth-child(10) {
+  left: 14%;
+  bottom: 50%;
+  animation: fish_icon 3s -0.36s linear infinite;
 }
 
 .fish .fish_info .phone {
   position: absolute;
   bottom: 0;
+  z-index: -1;
 }
 
 @media screen and (max-width: 767px) {
@@ -716,11 +758,23 @@ a {
     margin-top: 45%;
   }
   .fish .fish_info .p_2 {
-    font-size: 18px;
+    font-size: 32px;
+    line-height: 1.7;
   }
   .fish .fish_info .phone {
     width: 180%;
     left: -5%;
+  }
+}
+
+@keyframes fish_icon {
+  0% {
+    transform: translate(5px, -15px) scale(0.3) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100px, -150px) scale(1.3) rotate(180deg);
+    opacity: 0;
   }
 }
 

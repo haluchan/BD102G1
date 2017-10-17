@@ -141,8 +141,7 @@ a{
 		}
 		.info_icon{
 			vertical-align: bottom;
-			width: 45%;
-
+			width: 45%;	
 			// background-color: pink;
 		}
 	}
@@ -173,7 +172,7 @@ a{
 .donate_banner{
 	height: 100vh;
 	background-image: url("../src/image/index/index_banner_2.jpg");
-	background-size:100%;
+	background-size:200vh;
 	background-position: bottom center;
 	background-repeat: no-repeat;
 	@media screen and (max-width: 767px){
@@ -336,7 +335,7 @@ a{
 .activity{
 	height: 100vh;
 	background-image: url("../src/image/index/index_div4_1.jpg");
-	background-size:100%;
+	background-size:200vh;
 	background-position: bottom center;
 	background-repeat: no-repeat;
 	position: relative;
@@ -358,7 +357,6 @@ a{
 	}
 	@media screen and(max-width: 767px){
 		background-position: bottom center;
-		background-size: 340%; //vivi
 		.rice_img{
 			top: 15%;
 		}
@@ -370,8 +368,7 @@ a{
 	.activity_title{
 		color:#fff;
 		writing-mode: vertical-lr;
-		margin: 6% auto 3%;
-		height: 350px;
+		margin: 8% auto 3%;
 		h1{
 			line-height: 2;
 			margin-top: 10%;
@@ -426,6 +423,9 @@ a{
 				font-size: 14px;
 				line-height: 1.5;
 			}
+		}
+		.btn_brown{
+			line-height: 4.5;
 		}
 
 	}
@@ -489,6 +489,7 @@ a{
 	background-repeat: no-repeat;
 	position: relative;
 	overflow: hidden;
+	z-index: -5;
 	@media screen and(max-width: 767px){
 		background-size: 330%;
 		background-position: -560px bottom;
@@ -504,34 +505,42 @@ a{
 			font-size: 42px;
 			text-align: center;
 			margin: 10px 0 30px; 
+			line-height: 1.3;
 		}
 		p{
 			text-align: center;
-			.buttom{
-				width: 25%;
-				text-align: center;
-				padding: 5px 25px;
-				font-size: 14px;
-				margin: 20px auto;
-				border-radius: 50px;
-				background-color: rgba(35,24,21,.7);
-				color: #fff;
-				&:hover{
-				color: #231815;			
-				background-color: rgba(255,255,255,.7);
-				}
+			.btn{
+				display: inline-block;
 			}
+		}
+		.fish_icon{
+			width: 5%;
+			position: absolute;
+			left: 12%;
+			bottom: 40%;
+			// animation: fish_icon 3s -1.7s linear infinite ;
+			@for $i from 4 through 10{
+				&:nth-child(#{$i}){
+					$b:random(20)+12;
+					$c:random(30)+20;
+					left: ($b)+%;
+					bottom: $c+%;
+					$a:random(50)* -(0.01);
+					animation: fish_icon 3s $a+s linear infinite ;
+				}
+			} 
 
 		}
-		
 		.phone{
 			position: absolute;
 			bottom: 0;
+			z-index: -1;
 		}
 		@media screen and(max-width: 767px){
 			margin-top: 45%;
 				.p_2{
-					font-size: 18px;
+					font-size: 32px;
+					line-height: 1.7;
 				}
 			.phone{
 				width: 180%;
@@ -542,6 +551,18 @@ a{
 }
 
 
+@keyframes fish_icon{
+	0%{
+		transform: translate(5px,-15px) scale(0.3) rotate(00deg);
+		opacity: 1;
+	}
+	
+	100%{
+		transform: translate(100px,-150px) scale(1.3) rotate(180deg);
+		opacity: 0;
+	}
+
+}
 
 
 

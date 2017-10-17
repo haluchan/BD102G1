@@ -8,6 +8,8 @@
 
 <link rel="stylesheet" href="css/font.css">
 <link href="css/donate_info.css" rel="stylesheet">
+<!-- web-font -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 <script src="src/libs/jquery/dist/jquery.min.js"></script>
 <script src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
@@ -48,9 +50,12 @@
 			</div>
 		</div>
 		<div class="progress col-xs-12 hidden-sm">
-
-			<img src="src/image/index/run.svg">
-			<p class="amt">$192,400 / $200,000 還剩 22 天</p>
+			<!-- <img src="src/image/index/run.svg"> -->
+			<div class="progress_bar">
+				<div class="bar">
+					<img src="src/image/funded/run.gif" class="running_man"></div>
+			</div>
+			<p class="amt">$<span class="now_money">132400</span> / $<span class="target_money">200000</span></p>
 		</div>	
 
 		<div class="case_data  col-xs-12  col-sm-4">
@@ -76,8 +81,16 @@
 
 		</div>
 		<div class="progress hidden-xs col-sm-12 ">
-			<img src="src/image/index/run.svg">
-			<p class="amt">$192,400 / $200,000</p>
+			<!-- <img src="src/image/index/run.svg"> -->
+
+			
+			
+			<div class="progress_bar">
+				<div class="bar">
+					<img src="src/image/funded/run.gif" class="running_man">
+				</div>
+			</div>
+			<p class="amt">$<span class="now_money">132400</span> / $<span class="target_money">200000</span></p>
 		</div>	
 		<div class="clear"></div>
 	</section>
@@ -98,7 +111,8 @@
 
 
 <!-- nva=================================================================================	 -->
-	<nav class="col_xs_12 col_sm_12 main-nav ">
+	<nav class="col_xs_12 col_sm_12 main-nav">
+		<div id="nav"></div>
 		<div class="full-wrapper ">
 			<div class="inner-nav xs_hidden">
 				<ul>
@@ -110,6 +124,9 @@
 					</li>
 					<li>
 						<a href="#">留言評論</a>
+					</li>
+					<li class="donate_nav">
+						<a href="want_donate.html">我 要 資 助</a>
 					</li>
 				</ul>
 			</div>
@@ -132,7 +149,7 @@
 
 <section class="donate_info">
 
-	<section class="case_content col-sm-12 col-xs-12">
+	<section class="case_content col-sm-12 col-xs-12 ">
 		<dir id="trigger1"></dir>
 		<div class="content_title col-xs-12 col-sm-12">
 			<p class="title">尋找童年土地的記憶</p>
@@ -261,6 +278,23 @@
 <!-- 留言評論======================================== -->
 	<section class="message">
 		<h2>留言評論</h2>
+		<!-- 送出留言======================================== -->
+
+		<form class="message_form" >
+			<div class="message_box msg_box col-xs-12 col-sm-12">
+				<div class="mem_photo col-sm-2 col-xs-2">
+					<img src="src/image/funded/food_img2-1.png">
+				</div>
+				<div class="mem_txt col-sm-10 col-xs-10">
+					<textarea cols="50" rows="3" wrap="off" class="content" placeholder="留言支持這個計畫!"></textarea>
+				</div>
+				
+				<button class="col-sm-10 col-xs-10">送出</button>
+				
+			</div>
+		<!-- </form> -->
+		<!-- <div class="clear"></div> -->
+
 
 		<div class="message_box col-xs-12 col-sm-12">
 			<div class="mem_photo col-sm-2 col-xs-2">
@@ -271,46 +305,52 @@
 				
 				<p class="content">
 					總會有時候，莫名地想要逃離城市踏入自然，支持有夢想的人，讓自己可以更有勇氣。 
-					<span class="date">2017/10/05 08:31PM</span>
-				</p>
-			</div>
-			<div class="clear"></div>
-		</div>
-
-		<div class="message_box col-xs-12 col-sm-12">
-			<div class="mem_photo col-sm-2 col-xs-2">
-				<img src="src/image/funded/food_img2-1.png">
-			</div>
-
-			<div class="mem_txt col-sm-10 col-xs-10">
-				
-				<p class="content">
-					總會有時候，莫名地想要逃離城市踏入自然，支持有夢想的人，讓自己可以更有勇氣。 
-					<span class="date">2017/10/05 08:31PM</span>
+					<span class="date">2017/10/05 08:31PM <img src="src/image/funded/report.svg" class="report"></span>
 				</p>
 			</div>
 			<div class="clear"></div>
 		</div>
 		<div class="clear"></div>
-	</section>
-
-<!-- 送出留言======================================== -->
-
-	<form class="message_form" >
 		<div class="message_box col-xs-12 col-sm-12">
 			<div class="mem_photo col-sm-2 col-xs-2">
 				<img src="src/image/funded/food_img2-1.png">
 			</div>
+
 			<div class="mem_txt col-sm-10 col-xs-10">
-				<textarea cols="50" rows="3" wrap="off" class="content">
-				　輸入你想要寫的內容...
-				</textarea>
+				
+				<p class="content">
+					總會有時候，莫名地想要逃離城市踏入自然，支持有夢想的人，讓自己可以更有勇氣。 
+					<span class="date">2017/10/05 08:31PM <img src="src/image/funded/report.svg" class="report"></span>
+				</p>
 			</div>
-			
-			<button class="col-sm-10 col-xs-10">送出</button>
 			<div class="clear"></div>
 		</div>
-	</form>
+		<div class="clear"></div>
+		<div class="report_box">
+			<div class="report_title"><p>
+				協助我們瞭解發生的狀況<span class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+			</p></div>
+			<div class="report_detail">
+				<p>發生了什麼問題?</p>
+				<ul>
+					<li>
+						<input type="radio" name="report_ans" value="1"> 暴力或禁止的內容
+					</li>
+					<li>
+						<input type="radio" name="report_ans" value="2"> 這會冒犯他人
+					</li>
+					<li>
+						<input type="radio" name="report_ans" value="3"> 內容有所誤導或詐騙
+					</li>
+				</ul>
+				<button>確定</button>
+				<div class="clear"></div>
+			</div>
+		</div>
+		</form>
+		<div class="clear"></div>
+	</section>
+
 
 
 
@@ -323,6 +363,7 @@
 
 
 <script type="text/javascript" src="js/donate_info_tweenmax.js"></script>
+
 	
 </body>
 </html>
