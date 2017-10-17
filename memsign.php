@@ -5,13 +5,13 @@
  		
 	</section>
 	
-	<div class="lightbox-bg">
-		<div class="lightbox-target" id="login">
-			<div class="cancel">
+	<div class="lightbox-bg" id="sign-lightbox">
+		<div class="lightbox-target" >
+			<div class="cancel" id="cancel-sign">
 				<a  id="login-cancel"><img src="src/image/login/pop_close.png"></a>
 			</div>
 		  <div class="login-content">
-			  	<h2>會員登入</h2>
+			  	<h2>會員註冊</h2>
 			   <div class="login-account">
 				   	<p>帳號</p>
 			   		<input type="text" name="memId" value="" placeholder="請輸入帳號">
@@ -25,7 +25,7 @@
 			  	<div class="forget">
 			  		<a href="">忘記密碼?</a>
 			  	</div>
-		  	<button type="submit" class="btn_green">登入</button>
+		  	<button type="submit" class="btn_green">確定</button>
 		  	 <button type="submit" class="btn_green">facebook登入</button>
 		  	<button type="" class="btn_green">註冊</button>
 			 
