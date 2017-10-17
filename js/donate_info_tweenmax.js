@@ -1,18 +1,44 @@
 $(function() {
-	
+	//progress_bar
+	var now_money = parseInt($('.now_money').text());
+	var target_money = parseInt($('.target_money').text());
+	var bar =(now_money/target_money)*100;
+	var bar_run =new TimelineMax();
+	bar_run.staggerFromTo('.bar',5,{
+		width:0,
+	},{
+		width:bar.toString()+'%',
+		ease:Expo.easeOut
+	});
+
+	// var man_run =new TimelineMax();
+	// man_run.staggerFromTo('.running_man',3,{
+	// 	x:0,
+	// },{
+	// 	x:(bar),
+	// 	ease:Expo.easeOut
+	// });
+
+
+
+
+
+
+
+
 
 	// new一個scrollmagic物件
 	var controller = new ScrollMagic.Controller();
 	//tweenmax.fromto(目標物件,時間)用法
-	var tween_1 = TweenMax.staggerFromTo( '.donate_info .case_content .content_txt' , 1 , {
+	var tween_1 = TweenMax.staggerFromTo( '.donate_info .case_content .content_txt' , 3 , {
 	    opacity : 0,
 	 }, {
 	    opacity : 1,
 	});
 	var scene_t = new ScrollMagic.Scene({
 		triggerElement:'#trigger1',
-		duration:300,
-		offset:-200
+		// duration:300,
+		offset:-100
 	})
 	.setTween(tween_1)
 	.addIndicators({
@@ -55,7 +81,7 @@ $(function() {
 	},.5);
 	var scene_t = new ScrollMagic.Scene({
 		triggerElement:'.trigger3',
-		duration:2000,
+		duration:1500,
 		offset:-100
 	})
 	.setTween(tween_3)
@@ -65,6 +91,47 @@ $(function() {
 	.addTo(controller);
 
 
+	// nav_fixed========================
+	var tween_nav = TweenMax.staggerFromTo( '.donate_nav' , 1 , {
+	    opacity : 0,
+	    x:300
+
+	 }, {
+	    opacity : 1,
+	    x:0
+	});
+	var scene_t = new ScrollMagic.Scene({
+		triggerElement:'#nav'
+		,offset:300
+	})
+	.setTween(tween_nav)
+	.addIndicators({
+		name:'nav'
+	})
+	.addTo(controller);
+	
+	$(window).bind('scroll', function () {
+	    if ($(window).scrollTop() > 675) {
+	        $('.main-nav').addClass('fixed');
+
+	    }
+	    else{
+	    	$('.main-nav').removeClass('fixed');
+	    }
+	});
+
+
+	$(".date").click(function(){
+	   $(".report_box").css({
+			'display':'block'
+		});
+	 });
+
+	$(".close").click(function(){
+	   $(".report_box").css({
+			'display':'none'
+		});
+	 });
 
 
 

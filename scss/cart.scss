@@ -8,7 +8,7 @@ body{
 	max-width:1300px;
 	// height: 100vw;
 	margin: auto;
-	margin-top:70px;
+	margin-top:30px;
 	.cart-title{
 		width:322px;
 		margin: auto;
@@ -77,6 +77,7 @@ body{
 			border-radius: 25px;
 			padding:0 10px 0;
 			float:right;
+			min-width: 20%;
 
 			.cart-total-title{
 				width: 50%;
@@ -93,6 +94,13 @@ body{
 			.cart-total{
 				border-top:solid 1px #bbb;
 				clear: both; 
+				@include rwd("desktop") {
+			text-align: right;
+			}
+			@include rwd("tablet") {
+			text-align: center;
+			}
+
 			}
 		
 			

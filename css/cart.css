@@ -4,7 +4,7 @@ body {
 .cart-container {
   max-width: 1300px;
   margin: auto;
-  margin-top: 70px; }
+  margin-top: 30px; }
   .cart-container .cart-title {
     width: 322px;
     margin: auto; }
@@ -50,6 +50,7 @@ body {
     border-radius: 25px;
     padding: 0 10px 0;
     float: right;
+    min-width: 20%;
     line-height: 300%; }
     .cart-container .cart-total-panel .cart-total-title {
       width: 50%;
@@ -62,6 +63,12 @@ body {
     .cart-container .cart-total-panel .cart-total {
       border-top: solid 1px #bbb;
       clear: both; }
+      @media all and (min-width: 1200px) {
+        .cart-container .cart-total-panel .cart-total {
+          text-align: right; } }
+      @media all and (min-width: 768px) and (max-width: 1199px) {
+        .cart-container .cart-total-panel .cart-total {
+          text-align: center; } }
   .cart-container .keep-shopping {
     margin: auto; }
     .cart-container .keep-shopping .btn_green {

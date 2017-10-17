@@ -115,7 +115,8 @@
 	.mem{
 	/* background-image:url('../src/image/member/greenbg2.png');
 	background-size: 90%; */
-	position: relative;
+	/* position: relative; */
+	width: 100%;
 	}
 	.table h2{
 		margin-bottom: 10px;
@@ -153,42 +154,49 @@
 	padding: 5px;
 	background-color: rgba(105, 156, 51, .2);
     }
-	.parallax{
+	/* .parallax{
 		width: 100%;
 		z-index: -1;
 		margin: 0 auto;
 		top: 250px;
 		text-align: center;
-	}
+	} */
 	.parallax_area img{
-		width:70vw;
+		width:60vw;
 		animation: 150s linear rot infinite;
 	}
-	/* .parallax_area{
-		position: relative;
-		top: 20%;
-		left: 50%;
-		/* width: 100%;
-		text-align: center;
-		margin: auto;
-	} */ 
+
 	#scenes{
 		position: absolute;
 		margin: auto;
 		z-index: -2;
 		top: -30px;
-	
+		float: left;
+		width: 100%;
 	}
 	@media screen and (max-width: 767px) {
 		.parallax{
 		visibility: hidden;
 	}
 	}
+	.parallax_area{
+		position: absolute;
+		top: 500px;
+	/* 	left: 50%; */
+		height: 100%;
+		text-align: center;
+		width: 100%;
+	}
+
+		/* width: 100%;
+		text-align: center;
+		margin: auto;
+	}
 	/* .parallax_area_01{
 		position:relative;
 		z-index: -1;
 		right: 50%;
-		top:30%;
+		bottom:0;
 	} */
 	/* .parallax_area_02{
 		position: absolute;

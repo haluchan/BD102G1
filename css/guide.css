@@ -1,0 +1,68 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+img{
+	width: 100%;
+	vertical-align: top;
+}
+body{
+	background-color: #BCE2F7;
+}
+
+
+/*真身*/
+/*section{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}*/
+/*section>div{
+	position: absolute;
+	margin: auto;
+}*/
+
+/*.background{
+	width: 100%;
+}*/
+
+
+/*代打*/
+section{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../src/image/guide/guide_fake-01.png);
+	background-size: cover;
+}
+.conterImg{
+	position: relative;
+	width: 70%;
+	/*border: 2px solid red;*/
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: -70px;
+}
+
+.goTo{
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: 100px;
+	width: 55%;
+	/*border: 2px solid orange;*/
+	font-size: 0;
+
+}
+.goTo>a{
+	display: inline-block;
+	width: 50%;
+	height: 30vh;
+	/*background-color: pink;*/
+	border-radius: 600px;
+}
+.goTo>a:last-child{
+	/*height: 330px;*/
+	margin-bottom: 50px; 
+}

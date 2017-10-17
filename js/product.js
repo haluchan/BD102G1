@@ -33,12 +33,11 @@ function $qsa(qsa){
 	function proCartNumber(){
 		//1.建立空storage 放購買順序
 		if (storage['addItemList'] == null){
-			alert('0000');
 			storage['addItemList'] = '';
 		}else{ //已存在則計算數量	
 			var itemString = storage.getItem('addItemList');
 			var items = itemString.substr(0 , itemString.length-2).split(', ');
-			document.getElementById('cart').innerText =  '(' + items.length + ')';
+			document.getElementById('cart').innerText =  items.length;
 		}
 
 
@@ -66,8 +65,6 @@ function $qsa(qsa){
 		if (storage[proId]){
 			alert('購物車裡已經有了喔！');
 		}else{
-
-			alert('!!!!!!');
 			storage['addItemList'] += proId + ', ';
 			storage[proId] = proInfo;
 		}
@@ -75,7 +72,7 @@ function $qsa(qsa){
 		//2.更改購物車數字
 		var itemString = storage.getItem('addItemList');
 		var items = itemString.substr(0 , itemString.length-2).split(', ');
-		document.getElementById('cart').innerText =  '(' + items.length + ')';
+		document.getElementById('cart').innerText =  items.length;
 	}
 
 //==========================================================================================

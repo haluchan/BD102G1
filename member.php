@@ -35,23 +35,23 @@
 
 		
 <div class="mem">
-	<div class="parallax">	
+	<!-- <div class="parallax">	 -->
 		<div id="scenes" data-hover-only="false" >
 		            <div class="parallax_area" data-depth="0.5">
 		            	<img src="src/image/member/concept_index.png" alt="">
 		            </div>
 		           <!--  <div class="parallax_area_01" data-depth="5">
 		            	<img src="src/image/event/hatsuka_daikon.png" alt="">
-		            </div>
-		            <div class="parallax_area_02" data-depth="10">
+		            </div> -->
+		        <!--     <div class="parallax_area_02" data-depth="10">
 		            	<img src="src/image/event/ninjin_carrot2.png" alt="">
 		            </div>
 		            <div class="parallax_area_03" data-depth="15">
 		            	<img src="src/image/member/suika.png" alt="">
-		            </div> -->
-		</div>
+		            </div>
+		</div> -->
 	</div>
-</div>
+
 
 		<div class="table" id="memdetail">
 			<h2>我的資料</h2>
