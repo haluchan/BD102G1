@@ -1,17 +1,19 @@
 body {
   background: url("../src/image/cart/cart-bg.png"); }
 
-.lightbox-bg {
+.sign-up {
+  display: block;
   width: 100%;
   height: 100%;
   padding: 5%;
   box-sizing: border-box;
   z-index: 101; }
-  .lightbox-bg .lightbox-target {
+  .sign-up .lightbox-target {
     background-color: #FFF;
     max-width: 400px;
     height: 500px;
-    border-radius: 5% 30%;
+    border-radius: 20px;
+    border: 2px solid #699c33;
     position: relative;
     box-sizing: border-box;
     top: 0;
@@ -19,24 +21,24 @@ body {
     right: 0;
     bottom: 0;
     margin: auto; }
-    .lightbox-bg .lightbox-target .cancel {
+    .sign-up .lightbox-target .cancel {
       margin: auto;
       height: 10px;
       margin-top: 6px; }
-    .lightbox-bg .lightbox-target h2 {
+    .sign-up .lightbox-target h2 {
       text-align: center;
       font-size: 32px;
       padding-top: 6%;
       color: #699c33; }
-    .lightbox-bg .lightbox-target .sign-content {
+    .sign-up .lightbox-target .sign-content {
       margin: auto;
       max-width: 400px;
       text-align: center; }
-      .lightbox-bg .lightbox-target .sign-content .sign-title {
+      .sign-up .lightbox-target .sign-content .sign-title {
         width: 49%;
         display: inline-block;
         box-sizing: border-box; }
-        .lightbox-bg .lightbox-target .sign-content .sign-title ul li {
+        .sign-up .lightbox-target .sign-content .sign-title ul li {
           width: 100%;
           height: 20px;
           padding-top: 14px;
@@ -45,22 +47,23 @@ body {
           color: #61ABD4;
           border-bottom-width: 2px;
           border-bottom-color: transparent; }
-      .lightbox-bg .lightbox-target .sign-content .sign-info {
+      .sign-up .lightbox-target .sign-content .sign-info {
         width: 49%;
         display: inline-block;
         box-sizing: border-box; }
-        .lightbox-bg .lightbox-target .sign-content .sign-info ul {
+        .sign-up .lightbox-target .sign-content .sign-info ul {
           text-align: left; }
-          .lightbox-bg .lightbox-target .sign-content .sign-info ul li {
+          .sign-up .lightbox-target .sign-content .sign-info ul li {
             width: 100%;
             height: 20px;
             padding-top: 14px;
+            font-weight: 800;
             vertical-align: top;
             display: block;
-            color: #61ABD4;
+            color: #5a3819;
             border-bottom-width: 2px;
             border-bottom-color: transparent; }
-          .lightbox-bg .lightbox-target .sign-content .sign-info ul input {
+          .sign-up .lightbox-target .sign-content .sign-info ul input {
             width: 130px;
             height: 20px;
             background-color: #fff;
@@ -69,12 +72,12 @@ body {
             border-bottom-color: #ccc;
             letter-spacing: 1px;
             transition: 0.4s; }
-          .lightbox-bg .lightbox-target .sign-content .sign-info ul input:focus {
+          .sign-up .lightbox-target .sign-content .sign-info ul input:focus {
             outline: none;
             border-width: 0px;
             border-bottom-width: 2px;
             border-bottom-color: #61ABD4; }
-      .lightbox-bg .lightbox-target .sign-content .btn-item button {
+      .sign-up .lightbox-target .sign-content .btn-item button {
         margin-top: 20px;
         width: 120px; }
 
