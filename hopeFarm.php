@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>hopeFarm</title>
-	<script src="js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/hopeFarm.js"></script>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
 	<link rel="stylesheet" href="css/hopeFarm.css">
 	<link rel="stylesheet" href="css/headerFooter.css">
@@ -332,7 +333,7 @@
 </section>
 <?php require_once("Footer.php"); ?>
 <!-- -============= -->
-<script type="text/javascript" src="js/hopeFarm.js"></script>
+
 </body>
 </html>
 
