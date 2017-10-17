@@ -162,7 +162,7 @@
 		text-align: center;
 	} */
 	.parallax_area img{
-		width:70vw;
+		width:60vw;
 		animation: 150s linear rot infinite;
 	}
 
