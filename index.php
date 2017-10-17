@@ -8,16 +8,28 @@
 <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
 <link rel="stylesheet" href="css/font.css">
 <link href="css/index.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font.css">
 
 <script src="src/libs/jquery/dist/jquery.min.js"></script>
+<!-- TweenMax -->
+<script src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
+<script src="src/libs/gsap/src/minified/TimelineLite.min.js"></script>
+
 <script src="js/parallax.mins.js"></script>
 <script src="js/change_SVG_color.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
+
+
+<!-- scrollmagic -->
+<script src="src/libs/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script src="src/libs/ScrollMagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+<script src="src/libs/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
 
 </head>
 <body>
 
 
+<?php require_once('header.php');  ?>
 		<!-- 發揚農民心血的募資平台 src/image/index/ -->
 		<section class="col-xs-12 col-sm-12">
 			<div class="h_100vh fill_screen" id="background">
@@ -42,8 +54,8 @@
 				<!-- <img src="src/image/index/16_farmer_close.svg" class="farm"> -->
 
 				<div class="title_info">
-					<h1>發揚農民心血的募資平台</h1>
-					<h3>為消費者健康把關也給農民一個豐年。</h3>
+					<h1 class="h1">發揚農民心血的募資平台</h1>
+					<h3 class="h3">為消費者健康把關也給農民一個豐年。</h3>
 					<div class="cir">
 						<img src="src/image/index/11_amt.svg" class="info_icon margin-top-20 margin-bottom-13">
 						<p>5億總集資金額</p>	
@@ -67,11 +79,9 @@
 
 
 
-
-
 		<!-- 募資倒數 -->
 		<section class="col-xs-12 col-sm-12 donate_banner">
-			
+			<dir id="trigger1"></dir>
 			<div class="col-sm-4 final_txt hidden-xs">
 				<img src="src/image/index/final.svg" class="final_img">
 			</div>
@@ -95,7 +105,7 @@
 
 			<div class="donate_txt col-sm-12 col-xs-12">
 
-				<a href="donate_info.html">
+				<a href="donate_info.php">
 					<div class="donate_info col-xs-12 col-sm-4">
 						<div class="info">
 							<img src="src/image/index/index_div3_1.jpg">
@@ -107,7 +117,7 @@
 					</div>
 				</a>
 
-				<a href="donate_info.html">
+				<a href="donate_info.php">
 					<div class="donate_info col-xs-12 col-sm-4 hidden-xs">
 						
 						<div class="info">
@@ -120,7 +130,7 @@
 					</div>
 				</a>
 
-				<a href="donate_info.html">
+				<a href="donate_info.php">
 					<div class="donate_info col-xs-12 col-sm-4 hidden-xs">
 						<div class="info">
 							<img src="src/image/index/index_div3_1.jpg">
@@ -145,6 +155,7 @@
 
 		<!-- 米的故鄉 -->
 		<section class="col-xs-12 col-sm-12 activity">
+			<dir id="trigger4"></dir>
 			<!-- <img src="src/image/index/rice_cloud.svg" class="rice_img"> -->
 		
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 237.33" class="rice_img">
@@ -164,15 +175,12 @@
 				</svg>
 
 
-
-
-
 			<img src="src/image/index/rice_bird.svg" class="rice_img">
 			<img src="src/image/index/inekari_man.png" class="bottom-0 rice-man">
 			<div class="activity_title">
 				<h1>米的故鄉</h1>
-				<h2>友善稻田 <br class="hidden-xs">稻榖金黃熟成</h2>
-				<p>募資成功　小農家感恩回饋</p>
+				<h2><span class="h2_1">友善稻田 </span><br class="hidden-xs"><span class="h2_2">稻榖金黃熟成</span></h2>
+				<p class="p_3">募資成功　小農家感恩回饋</p>
 			</div>
 
 
@@ -181,6 +189,7 @@
 				<p>邀請大家一起來碾米</p>
 				<p>費用包含:一食二泊、碾米體驗、當令鮮米（５斤裝）</p>
 				<p>$900NT/人</p>
+				<a href="#" class="btn_brown">我要報名</a>
 			</div>
 			</div>
 			
@@ -195,12 +204,20 @@
 		<!-- 第二代知能魚缸新上市 -->
 		<section class="col-xs-12 col-sm-12 fish">
 			<div class="fish_info col-sm-11 col-xs-12">
+
 				<h3>第二代智能魚缸新上市</h3>
 				<p class="p_2">早鳥限定優惠五折起</p>
 				<p>
-					<a href="#" class="buttom">了解魚菜共生</a>
-					<a href="#" class="buttom">前往購買</a>
+					<a href="#" class="btn_blue btn">了解魚菜共生</a>
+					<a href="#" class="btn_green btn">前往購買</a>
 				</p>
+				<img src="src/image/index/fish_icon_1.svg" class="fish_icon">
+				<img src="src/image/index/fish_icon_2.svg" class="fish_icon">
+				<img src="src/image/index/fish_icon_3.svg" class="fish_icon">
+				<img src="src/image/index/fish_icon_4.svg" class="fish_icon">
+				<img src="src/image/index/fish_icon_5.svg" class="fish_icon">
+				<img src="src/image/index/fish_icon_6.svg" class="fish_icon">
+				<img src="src/image/index/fish_icon_7.svg" class="fish_icon">
 				<img src="src/image/index/phone-02-02.svg" class="phone">
 			</div>
 			
@@ -220,6 +237,7 @@
 
 
 
+<?php require_once('Footer.php');  ?> 
 		
 
 

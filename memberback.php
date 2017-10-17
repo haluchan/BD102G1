@@ -70,7 +70,7 @@
 			<td>4</td>
 			<td>2AA</td>
 			<td>3AA</td>
-			<td>4aaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbb</td>
+			<td>4aaaaaaaaaa</td>
 			<td>Lo</td>
 			<td></td>
 			<td></td>

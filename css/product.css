@@ -1,4 +1,12 @@
 @charset "UTF-8";
+.btn_green {
+  position: relative;
+  z-index: 5; }
+
+@media only screen and (max-width: 766px) {
+  .pro_container {
+    margin-top: 50px; } }
+
 .pro_container h1 {
   color: #fff; }
   @media only screen and (min-width: 767px) and (max-width: 1440px) {
@@ -21,14 +29,18 @@
     font-size: 1em; } }
 
 .pro_container img {
-  width: 100%;
   vertical-align: top; }
+
+.pro_container .pro_seed img {
+  width: 100%; }
+
+.pro_container .pro_tank > div img {
+  width: 100%; }
 
 .pro_container .ccc {
   clear: both; }
 
 .pro_click {
-  -webkit-box-shadow: 0px 0px 1px 2px #F7931E;
   box-shadow: 0px 0px 1px 2px #F7931E; }
 
 /* 遮雨棚 */
@@ -82,12 +94,10 @@
     @media only screen and (min-width: 767px) and (max-width: 1440px) {
       .pro_seed .pro_s_cabinet {
         width: 100%;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box; } }
     @media only screen and (max-width: 766px) {
       .pro_seed .pro_s_cabinet {
         width: 100%;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box; } }
     .pro_seed .pro_s_cabinet > li {
       /* 商品 */
@@ -95,7 +105,6 @@
       background-color: #514336;
       position: relative;
       float: left;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       @media only screen and (min-width: 1440px) {
         .pro_seed .pro_s_cabinet > li {
@@ -284,7 +293,7 @@
 /* 魚缸超市 */
 .pro_tank {
   width: 100%;
-  overflow: hidden;
+  overflow: hiden;
   background-image: url("../src/image/product/pro-bg2.jpg");
   /* 商品區(魚缸) */ }
   .pro_tank .pro_t_wheel {
@@ -317,7 +326,6 @@
         .pro_tank .pro_t_wheel .pro_t_lightbox ul li {
           margin-top: 6px;
           padding: 0px 20px;
-          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           float: left;
           text-align: center;
@@ -335,14 +343,10 @@
               margin-top: 10px; } }
           .pro_tank .pro_t_wheel .pro_t_lightbox ul li:hover > div:first-child {
             top: -4px;
-            -webkit-transition: .3s;
-            -o-transition: .3s;
             transition: .3s; }
           .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div {
             position: relative;
             top: 0px;
-            -webkit-transition: .3s;
-            -o-transition: .3s;
             transition: .3s; }
             .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:first-child {
               width: 60%;
@@ -392,7 +396,6 @@
       .pro_tank .pro_t_wheel .pro_t_toRL > span {
         padding: 5% 1vw 11%;
         font-size: 30px;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         cursor: pointer;
         opacity: .2; }
@@ -446,7 +449,6 @@
         width: 50%;
         float: left;
         padding: 0 1%;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box; }
         .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR h2 {
           text-align: center;
@@ -491,12 +493,11 @@
             color: #999;
             position: absolute;
             bottom: 13%; }
+          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-list {
+            overflow: initial; }
           .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-track {
-            width: 2735px;
             margin: auto;
             text-align: left; }
-            .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-track li {
-              width: 80vw; }
             .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-track li + li {
               margin-left: 1%; }
           .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy {
