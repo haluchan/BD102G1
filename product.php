@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css">
 <link rel="stylesheet" href="css/font.css">
-<link rel="stylesheet" type="text/css" href="src/libs/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="src/libs/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
