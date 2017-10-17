@@ -9,10 +9,15 @@
 <link rel="stylesheet" type="text/css" href="css/font.css">
 </head>
 <body>
-    <div class="sign-up lightbox-bg">
+
+	<?php require_once('Header.php'); ?>
+
+
+
+    <div class="sign-up">
 		<div class="lightbox-target">
-			<div class="cancel">
-				<a  id="sign-cancel"><img src="src/image/login/pop_close.png"></a>
+			<div >
+				<!-- <a  id="sign-cancel"><img src="src/image/login/pop_close.png"></a> -->
 			</div>
 			<div class="sign-content">
 				<h2>活動報名</h2>
@@ -36,7 +41,7 @@
 						<li>V00021</li>
 						<li>NT:1000元</li>
 						<li>王小明</li>
-						<li><input type="number" name="Number-of-people" value="" minlength="0" placeholder="輸入參加人數"></li>
+						<li><input type="number" name="Number-of-people" value="" min="0" placeholder="輸入參加人數"></li>
 						<li><input type="text" name="email" value="" placeholder="輸入連絡信箱"></li>
 						<li><input type="text" name="phone" value="" placeholder="輸入聯絡電話"></li>
 					</ul>
@@ -52,5 +57,8 @@
 		</div>
 		<div class="sign-clear"></div>
 	</div>
+
+
+	<?php require_once('Footer.php'); ?>
 </body>
 </html>

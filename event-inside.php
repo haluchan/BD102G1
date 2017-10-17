@@ -32,7 +32,7 @@
 				<div><img src="src/image/event-inside-page/event-banner9.jpg"></div>
 				<div><img src="src/image/event-inside-page/event-banner10.jpg"></div>
 				<div><img src="src/image/event-inside-page/event-banner7.jpg"></div>
-				<div><img src="src/image/event-inside-page/event-banner13.jpg"></div>
+				<div><img src="src/image/event-inside-page/event-banner14.jpg"></div>
 			</div>
 		</div>
 
@@ -102,7 +102,7 @@
 						<ul>電話：<li>03-345678</li></ul>
 						<ul>費用：<li>NT 1000 元</li></ul>
 						<ul>地址：<li>桃園市藍埔里11鄰52號</li></ul>
-						<a href="">
+						<a href="sign-up.php">
 							<div class="btn_green">我要報名</div>
 						</a>
 					</div>
