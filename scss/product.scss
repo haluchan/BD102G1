@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 $pc:1440px;
 $pad:767px;
 $mobile:766px;
@@ -7,6 +6,7 @@ $mobile:766px;
 $highLight:#F7931E;
 //圖片的微微的框
 $imgBorder: 1px solid rgba(0,0,0,.1);
+
 
 
 //判斷變數是pc、pad還是mobile，再依照判斷出來的載入對應的media query
@@ -80,39 +80,44 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 	}
 }
 
-body{
-	font-family: '微軟正黑體';
+
+.pro_container{
+
+	h1{
+		color: #fff;
+		@include pro_breakPoint(pad){
+			font-size: 2.7vw;
+		}
+		@include pro_breakPoint(mobile){
+			font-size: 26px;
+		}
+	}
+	h2{
+		@include pro_breakPoint(pad){
+			font-size: 3vw;
+		}
+		@include pro_breakPoint(mobile){
+			font-size: 18px;
+		}
+	}
+	p{
+		@include pro_breakPoint(mobile){
+			font-size: 1em;
+		}
+	}
+	img{ 
+		width: 100%;
+		vertical-align: top; 
+	}
+
+	.ccc{
+		clear: both;
+	}
 }
 
-h1{
-	color: #fff;
-	@include pro_breakPoint(pad){
-		font-size: 2.7vw;
-	}
-	@include pro_breakPoint(mobile){
-		font-size: 26px;
-	}
-}
-h2{
-	@include pro_breakPoint(pad){
-		font-size: 3vw;
-	}
-	@include pro_breakPoint(mobile){
-		font-size: 18px;
-	}
-}
-p{
-	@include pro_breakPoint(mobile){
-		font-size: 1em;
-	}
-}
-img{ 
-	width: 100%;
-	vertical-align: top; 
-}
-
-.ccc{
-	clear: both;
+//魚缸點選的效果
+.pro_click{
+	box-shadow: 0px 0px 1px 2px $highLight;
 }
 
 /* 遮雨棚 */
@@ -133,7 +138,7 @@ img{
 		text-align: center;
 	}
 }
-.container{
+.pro_container{
 	overflow: hidden ;
 }
 
@@ -301,6 +306,9 @@ img{
 								width: 40%;
 								font-weight: bold;
 							}
+							&:last-child{
+								display: inline-block; 
+							}
 						}
 					}
 				}//--資訊
@@ -355,54 +363,52 @@ img{
 	top: 0;
 	margin-left: -10px; 
 	z-index: 9;
-	.pro_s_info{
+	.pro_s_white{
 		background-color: #fff;
-		height: 80vh;
-		width: 80vw;
+		width: 90%;
+		height: 465px;
 		margin: auto;
 		margin-top: 15%;
-		border-radius: 10px;
-		text-align: center;
-		overflow: hidden;
-		.icon{
-
+		border-radius: 5% 30%;
+		.iii{
 			float: right;
-			margin: 10px 12px 0 0;  
-			font-size: 8vw;
-			color: #555; 
+			color: #fff;
+			font-size: 40px;
+			margin-top: 2%;
+   			margin-right: 4px; 
 		}
-		.pro_s_real{
-			margin: auto;
-			margin-top: 50px; 
-			width: 70%;
-		}
-		//標題
-		h2{
-			text-align: center;
-			color: $highLight;
-		}
-
-		//黑色分隔線
-		.pro_s_line{
-			height: 1px;
-			width: 80%;
-			background-color: #000;
-			margin: 20px auto;
-			opacity: .2; 
-		}
-		//價格和購買按鈕
-		.pro_s_buy{
-			margin: auto;
-			text-align: center;
-			margin: 20px auto; 
-			span{
-				@include pro_fourthTitle(#F15A24);
-				display: inline-block;
-				width: 30%;
-				font-weight: bold;
+		.pro_s_info{
+			padding-top: 28%;
+			//標題
+			h2{
+				text-align: center;
+				color: $highLight;
+			}
+			//黑色分隔線
+			.pro_s_line{
+				height: 1px;
+				width: 80%;
+				background-color: #000;
+				margin: 20px auto;
+				opacity: .2; 
+			}
+			.pro_s_txt{
+				text-align: center;				
+			}
+			//價格和購買按鈕
+			.pro_s_buy{
+				text-align: center;
+				margin: 60px auto; 
+				span:first-child{
+					@include pro_fourthTitle(#F15A24);
+					display: inline-block;
+					width: 30%;
+					font-weight: bold;
+				}
 			}
 		}
 	}
+
 }
 
 
@@ -459,7 +465,7 @@ img{
 				}				
 				//每個商品
 				li{
-					margin-top: 4px;
+					margin-top: 6px;
 					padding: 0px 20px;
 					box-sizing: border-box; 
 					float: left;
@@ -477,9 +483,13 @@ img{
 						margin-top: 10px; 
 					}
 					&:hover>div:first-child{
-						box-shadow: 0px 0px 1px 2px $highLight;
+						top: -4px;
+						transition: .3s;					
 					}
 					&>div{
+						position: relative ;
+						top: 0px;	
+						transition: .3s;
 						&:first-child{
 							width: 60%;
 							@include pro_breakPoint(mobile){
@@ -521,11 +531,10 @@ img{
 			&>span{ 
 				padding: 5% 1vw 11%;
 				font-size: 30px;
-				color:#777;				
 				box-sizing: border-box;
 				cursor: pointer;
+				opacity: .2; 
 				&:hover{
-					background-color: #ccc;
 					opacity: .5; 
 				}
 				i{margin-top: 7vw; }
@@ -591,7 +600,7 @@ img{
 					text-align: center;
 					color: #999; 
 				}
-				ul{
+				.pro_t_imgGroup{
 					text-align: center;
 					font-size: 0px;
 					margin-top: 50px;
@@ -631,8 +640,8 @@ img{
 						position: absolute;
 						bottom: 13%;
 					}
-					ul{
-						width: 2000px;
+					.slick-track{
+						width: 2735px;
 						margin: auto;
 						text-align: left;					
 						li{

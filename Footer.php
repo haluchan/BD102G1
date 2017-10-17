@@ -16,7 +16,7 @@
 						<li><a class="header-a" href="pointFarm.php"><h3 class="header-h3">紅利菜園</h3></a></li>
 					</ul>
 					<ul>
-						<li><a class="header-a" href="memberedit.php"><h3 class="header-h3">會員專區</h3></a></li>
+						<li><a class="header-a" href="member.php"><h3 class="header-h3">會員專區</h3></a></li>
 						<li><a class="header-a" href="application.php"><h3 class="header-h3">申請資助</h3></a></li>
 						<li><a class="header-a" href="application_search.php"><h3 class="header-h3">查詢案件</h3></a></li>
 						<li><a class="header-a" href="application_report.php"><h3 class="header-h3">回報進度</h3></a></li>

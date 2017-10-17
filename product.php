@@ -3,16 +3,21 @@
 <head>
 <meta charset="utf-8">
 <title>商品頁</title>
-<link rel="stylesheet" href="css/font.css">
-<link rel="stylesheet" href="css/product.css">
-<link rel="stylesheet" type="text/css" href="src/libs/font-awesome/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<script src="src/libs/jquery/dist/jquery.min.js"></script>
+<script src="src/libs/slick/slick/slick.min.js"></script>
 <script src="js/product.js"></script>
+<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" type="text/css" href="src/libs/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/product.css">
 </head>
 <body>
-    <?php require_once('Header.php') ?>
+    <!-- <?php require_once('Header.php') ?> -->
 
-    <!-- <div class="cart" id="cart">(0)</div> -->
-    <div class="container">
+    <div class="cart" id="cart">(0)</div>
+    <div class="pro_container">
         <!-- 種子頁 -->
         <section class="pro_seed">
             
@@ -339,21 +344,26 @@
 
                 <!-- 手機版的種子資訊，蓋全版，透過js抽換資料 -->
                 <div class="pro_s_mobileInfo" id="pro_s_mobileInfo">
-                    <!-- <div class="pro_s_info"> -->
-                        <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
-                        <!-- <h2>朝天椒</h2>
-                        <div class="pro_s_line"></div>
-                        <p class="pro_s_txt">
-                            發芽適溫：25~30℃<br>
-                            平均採收：75-90天<br>
-                            日照條件：半日照可<br>
-                            辣味極強，早生，豐產<br>
-                        </p>
-                        <div class="pro_s_buy">
-                            <span>$50/包</span>
-                            <button class="btn_green">加入購物</button>
-                        </div> -->
-                    <!-- </div> -->
+
+  <!--                   <div class="pro_s_white">
+  						<span class="iii"><img src="src/image/login/pop_close.png"></span>
+                        <div class="pro_s_info">
+                            <h2>多彩椒</h2>
+                            <div class="pro_s_line"></div>
+                            <p class="pro_s_txt">
+                                發芽適溫：20~30℃<br>
+                                平均採收：45-60天<br>
+                                可生食，結果即可食用<br>
+                            </p>
+                            <div class="pro_s_buy">
+                                <span>$50/包</span>
+                                <span class="btn_green addButton" id="s004">加入購物
+                                    <input type="hidden" name="proInfo" value="多彩椒|s004.png|50">
+                                </span>
+                            </div>
+                        </div>
+                    </div> -->
+
                 </div>
                 <div class="ccc"></div>
             </ul>
@@ -395,8 +405,8 @@
                     <!-- 商品選單 -->
                     <ul class="pro_t_shelf" id="pro_t_shelf">
 
-                        <li class="pro_t_each">
-                            <div>
+                        <li class="pro_t_each" id="t001">
+                            <div class="pro_click">
                                 <img src="src/image/product/pro-t0011.jpg" alt="">
                             </div>
                             <div>
@@ -405,7 +415,7 @@
                             </div>
                         </li>
 
-                        <li class="pro_t_each">
+                        <li class="pro_t_each" id="t004">
                             <div>
                                 <img src="src/image/product/pro-t0011.jpg" alt="">
                             </div>
@@ -419,7 +429,7 @@
                             <img src="src/image/product/pro-shelf.png">
                         </div>
 
-                        <li class="pro_t_each">
+                        <li class="pro_t_each" id="t002">
                             <div>
                                 <img src="src/image/product/pro-t0021.jpg" alt="">
                             </div>
@@ -429,7 +439,7 @@
                             </div>
                         </li>
                                         
-                        <li class="pro_t_each">
+                        <li class="pro_t_each" id="t003">
                             <div>
                                 <img src="src/image/product/pro-t0031.jpg" alt="">
                             </div>
@@ -471,7 +481,7 @@
                     <div class="pro_t_infoTR">
                     
                         <h2>香草與魚 Herb & Fish</h2>
-                        <ul class="pro_t_imgGroup" id="pro_t_imgGroup">
+                        <ul class="pro_t_imgGroup" id="myElement" >
                             <li><img src="src/image/product/pro-t0011.jpg" alt="主圖"></li>
                             <li><img src="src/image/product/pro-t0012.jpg" alt="結構圖"></li>
                             <li><img src="src/image/product/pro-t0013.jpg" alt="細部圖"></li>
@@ -520,7 +530,7 @@
                 </div>               
             </div> <!--pro_t_info-->
 
-          <?php require_once('Footer.php') ?>  
+          <!-- <?php require_once('Footer.php') ?>   -->
         </section>
 
 

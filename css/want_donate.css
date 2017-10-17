@@ -154,6 +154,7 @@ body {
 .want_donate {
   max-width: 960px;
   margin: auto;
+  margin-top: 3%;
 }
 
 .want_donate .donate_title {

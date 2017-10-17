@@ -2,14 +2,15 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>體驗活動</title>
 <link rel="stylesheet" type="text/css" href="css/event.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <script type="text/javascript" src="src/libs/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-<!-- <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> -->
-
+<script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
 
 </head>
 <body>
@@ -66,10 +67,10 @@
 			<div class="titletext">
 				<h2>報名中</h2>
 				<div class="titletextli">
-					<p>特過專業領域的小農帶路，</p>
+					<p>透過專業領域的小農帶路，</p>
 					<p>體驗另一種人生。</p>
 				</div>
-				<div id="trigger1"></div>
+				
 				<img src="" alt="">
 			</div>
 			
@@ -77,10 +78,10 @@
 
 <div class="secondblock">
 	<div class="secondblockin">
-		
+		<div id="trigger1"></div>
 	<ul>
 		<li class="show col-xs-12">
-			<a href="event-inside.php">
+			<a href="#">
 				<div class="img">
 					<img src="src/image/event/06.jpg" alt="">
 				</div>	
@@ -89,7 +90,7 @@
 					<p>櫻桃季節，甜酸好吃</p> 		
 				
 			</div>
-			<div class="bluecircle">
+			<!-- <div class="bluecircle">
 			
 				
 					<p>南投</p>
@@ -97,10 +98,10 @@
 					<p>費用：2750</p>
 				
 			</div>
-		
+		 -->
 		</li>
 		<li class="show col-xs-12">
-			<a href="event-inside.php">
+			<a href="#">
 				<div class="img">
 					<img src="src/image/event/07.jpg" alt="">
 				</div>
@@ -108,37 +109,37 @@
 				<div class="balloon">
 					<p>農家講解，了解小農</p> 		
 				</div>
-			<div class="bluecircle">
+			<!-- <div class="bluecircle">
 				
 				
 					<p>宜蘭</p>
 					<p>報名中</p>
 					<p>費用：3460</p>
 				
-			</div>	
+			</div>	 -->
 		</li>
 		<li class="show col-xs-12">
-			<a href="event-inside.php">
+			<a href="#">
 				<div class="img">
 					<img src="src/image/event/08.jpg" alt="">
 				</div>	
 			</a>
 				<div class="balloon">
-					<p>香甜哈密瓜</p> 		
+					<p>香香甜甜哈密瓜</p> 		
 					
 				</div>
-			<div class="bluecircle">
+		<!-- 	<div class="bluecircle">
 				
 				<p>彰化</p>
 				<p>開始報名：12月</p>
 				<p>費用：2980</p>
 					
 				
-			</div>
+			</div> -->
 		</li>
 
 		<li class="show col-xs-12">
-			<a href="event-inside.php">
+			<a href="#">
 			<div class="img">
 				<img src="src/image/event/09.jpg" alt="">
 				
@@ -148,17 +149,17 @@
 				<div class="balloon">
 					<p>來採葡萄，自釀葡酒</p> 		
 				</div>	
-			<div class="bluecircle">
+		<!-- 	<div class="bluecircle">
 				
 				
 					<p>台中</p>
 					<p>開始報名：12月</p>
 					<p>費用：2750</p>
 				
-			</div>
+			</div> -->
 		</li>
 		<li class="show col-xs-12">
-			<a href="event-inside.php">
+			<a href="#">
 			<div class="img">
 				<img src="src/image/event/egg.png" alt="">
 				
@@ -166,19 +167,19 @@
 			</a>
 
 				<div class="balloon">
-					<p>在地好農無毒雞蛋</p> 		
+					<p>在地好農，無毒雞蛋</p> 		
 				</div>	
-			<div class="bluecircle">
+		<!-- 	<div class="bluecircle">
 				
 					
 					<p>台中</p>
 					<p>開始報名：11月</p>
 					<p>費用：2750</p>
 			
-			</div>
+			</div> -->
 		</li>
 		<li class="show col-xs-12">
-			<a href="event-inside.php">
+			<a href="#">
 			<div class="img">
 				<img src="src/image/event/mikann.png" alt="">
 				
@@ -188,14 +189,14 @@
 				<div class="balloon">
 					<p>花媽：橘子啊！~</p> 		
 				</div>	
-			<div class="bluecircle">
+			<!-- <div class="bluecircle">
 				
 				<p>桃園</p>
 					<p>開始報名：11月</p>
 					<p>費用：2750</p>
 					
 				
-			</div>
+			</div> -->
 		</li>
 		
 		
@@ -204,18 +205,19 @@
 </div>
 <div class="clear"></div>
 <!-- ================ -->
-<div class="titleblock">
-		<div class="titletext">
+<div class="titleblocks">
+		<div class="titletexts">
 				<h2>活動紀錄</h2>
 				<img src="src/image/event/sankaku_garland4.png" alt="">
 			</div>
 </div>	
 <!-- ================ -->
-<div class="thirdblock">
-	<div class="thirdblockin">
+<div class="thirdblock" >
 	
-			<a href="event-inside.php" class="eventreco">
-
+	<div class="thirdblockin">
+		<div id="trigger2"></div>
+		<div class="eventreco">
+			<a href="#">
 				<div class="img">
 					<img src="src/image/event/photo4.jpg" alt="">
 				</div>	
@@ -227,9 +229,11 @@
 				</div>
 				
 			</a>
+					</div>
+		<div class="eventreco" >
 			
 		
-			<a href="event-inside.php" class="eventreco">
+			<a href="#">
 				<div class="img">
 					<img src="src/image/event/event09.jpg" alt="">
 				</div>
@@ -240,22 +244,14 @@
 					</div>
 				</div>
 			</a>
-
+</div>
 				
-			<!-- 	<div class="balloon">
-					<p>梨山蘋果，小朋友最愛</p> 		
-				</div>
-			<div class="bluecircle">
-				<img src="src/image/event/circle_blue.png" alt="">
-				<p style="font-size: 20px;text-align: center;">	
-					台中<br>
-					4月<br>
-					
-				</p>
-			</div>	 -->
-			
 		
-			<a href="event-inside.php" class="eventreco">
+			
+		<div class="eventreco" >
+			
+	
+			<a href="#">
 				<div class="img">
 					<img src="src/image/event/08.jpg" alt="">
 				</div>	
@@ -266,23 +262,12 @@
 					</div>
 				</div>
 			</a>
-				
-			<!-- 	<div class="balloon">
-					<p>七股哈密瓜體驗活動
-					</p> 		
-				
-				</div>
-			<div class="bluecircle">
-				<img src="src/image/event/circle_blue.png" alt="">
-				<p style="font-size: 20px;text-align: center;">	
-					台南<br>
-					6月<br>
-					
-				</p>
-			</div> -->
+				</div>	
 			
+	<div class="eventreco" >
+		
 	
-			<a href="event-inside.php" class="eventreco">
+			<a href="#">
 				<div class="img">
 					<img src="src/image/event/img100.png" alt="">
 				</div>
@@ -293,21 +278,13 @@
 					</div>
 				</div>
 			</a>
-				
+		</div>		
 
-		<!-- 		<div class="balloon">
-					<p>下田體驗一日農夫，還可住果宿！</p> 		
-				</div>	
-			<div class="bluecircle">
-				<img src="src/image/event/circle_blue.png" alt="">
-				<p style="font-size: 20px;text-align: center;">	
-					宜蘭	<br>
-					9月<br>
-					
-				</p>
-			</div> -->
 	
-			<a href="event-inside.php" class="eventreco">
+	<div class="eventreco" >
+		
+	
+			<a href="#">
 				<div class="img">
 					<img src="src/image/event/img101.png" alt="">
 				</div>
@@ -318,20 +295,12 @@
 					</div>
 				</div>
 			</a>
-				
-		<!-- 		<div class="balloon">
-					<p>下田體驗一日農夫，還可住果宿！</p> 		
-				</div>	
-			<div class="bluecircle">
-				<img src="src/image/event/circle_blue.png" alt="">
-				<p style="font-size: 20px;text-align: center;">	
-					宜蘭	<br>
-					9月<br>
-					
-				</p>
-			</div> -->
+		</div>	
 	
-			<a href="event-inside.php" class="eventreco">
+	<div class="eventreco" >
+		
+	
+			<a href="#">
 				<div class="img">
 					<img src="src/image/event/c03_img04.jpg" alt="">
 				</div>
@@ -342,7 +311,10 @@
 					</div>
 				</div>
 			</a>
-			<a href="event-inside.php" class="eventreco">
+				
+			</div>
+			<div class="eventreco" >
+			<a href="#">
 				<div class="img">
 					<img src="src/image/event/010.png" alt="">
 				</div>
@@ -353,7 +325,11 @@
 					</div>
 				</div>
 			</a>
-			<a href="event-inside.php" class="eventreco">
+				</div>
+		<div class="eventreco" >
+			
+		
+			<a href="#">
 				<div class="img">
 					<img src="src/image/event/011.png" alt="">
 				</div>
@@ -362,35 +338,13 @@
 					<div class="inforbar2">
 					舉辦日期：2016-04-24
 					</div>
-				</div>
-				
-			</a>
-				<a href="event-inside.php" class="eventreco">
-				<div class="img">
-					<img src="src/image/event/011.png" alt="">
-				</div>
-				<div class="infobar1">
-					<h5>台東</h5>
-					<div class="inforbar2">
-					舉辦日期：2016-04-24
-					</div>
-				</div>
-				
-			</a>
-
-		<!-- 		<div class="balloon">
-					<p>下田體驗一日農夫，還可住果宿！</p> 		
-				</div>	
-			<div class="bluecircle">
-				<img src="src/image/event/circle_blue.png" alt="">
-				<p style="font-size: 20px;text-align: center;">	
-					宜蘭	<br>
-					9月<br>
 					
-				</p>
-			</div> -->
+				</div>
+			</a>
+	</div>
 	
-
+	
+<div class="clear"></div>
 		<div class="littlelittle2">
 			<div class="littlelittle">
 				
@@ -401,20 +355,8 @@
 	</div>
 </div>
 <div class="clear"></div>
-<div class="bestsale">
-	<div class="saleblock">
-	
-	</div>
-	
-</div>
-<!-- ======================== -->
-<div class="newp">
-	<div class="newpblock">
-	
-	</div>
-	
 
-</div>
+<!-- ======================== -->
 
 <!-- ====================================== -->
 <div class="footer ">
@@ -423,10 +365,10 @@
 	
 	</div>
 </div>
-<?php require_once('Footer.php');?>
+
 
 </div>
 <script type="text/javascript" src="js/event.js"></script>
-
+<?php require_once('Footer.php');?>
 </body>
 </html>

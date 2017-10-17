@@ -8,7 +8,7 @@ body {
 }
 
 .event-banner {
-  max-width: 1440px;
+  width: 100%;
   margin: auto;
 }
 
@@ -18,6 +18,10 @@ body {
 }
 
 .event-banner .slides .slick-prev::before {
+  display: none;
+  content: url("../src/image/event-inside-page/controls-left.png");
+  position: absolute;
+  z-index: 100;
   left: 0;
 }
 
@@ -33,6 +37,10 @@ body {
 }
 
 .event-banner .slides .slick-next::before {
+  display: none;
+  content: url("../src/image/event-inside-page/controls-right.png");
+  position: absolute;
+  z-index: 100;
   right: 0px;
 }
 
@@ -68,38 +76,6 @@ body {
   position: absolute;
   left: 880px;
   top: -60px;
-  -webkit-animation: myAnimation .4s  0s ease-out 1 reverse;
-  animation: myAnimation .4s  0s ease-out 1 reverse;
-}
-
-@-webkit-keyframes myAnimation {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transform-origin: 0% 34%;
-    transform-origin: 0% 34%;
-  }
-  100% {
-    -webkit-transform: rotate(37deg);
-    transform: rotate(37deg);
-    -webkit-transform-origin: 0% 34%;
-    transform-origin: 0% 34%;
-  }
-}
-
-@keyframes myAnimation {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transform-origin: 0% 34%;
-    transform-origin: 0% 34%;
-  }
-  100% {
-    -webkit-transform: rotate(37deg);
-    transform: rotate(37deg);
-    -webkit-transform-origin: 0% 34%;
-    transform-origin: 0% 34%;
-  }
 }
 
 .main-bg .event-row .main-container .title-frame img {
@@ -166,6 +142,7 @@ body {
 
 .event-cotent .main-container p {
   font-size: 20px;
+  line-height: 40px;
 }
 
 .event-map {
@@ -244,7 +221,6 @@ body {
 }
 
 .event-report {
-  background-color: #ffc;
   padding: 8% 0;
   width: 100%;
   margin: auto;

@@ -144,6 +144,16 @@ $(function(){
 	.addTo(controller);
 
 
+	$(window).bind('scroll', function () {
+	    if ($(window).scrollTop() < 675) {
+	        $('header').addClass('db');
+	    }
+	    else{
+	    	$('header').removeClass('db');
+	    }
+	});
+
+
 
 
 

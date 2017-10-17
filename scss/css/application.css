@@ -1,44 +1,75 @@
-h1 {
+.tabmenu {
+  width: 100%;
+  background-color: #e9dcb0;
+}
+
+.tabmenu ul {
+  list-style: none;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.tabmenu ul li {
+  display: inline-block;
+  padding: 2%;
+  font-size: 16px;
+  border-bottom: 5px solid transparent;
+}
+
+.tabmenu ul li a {
+  text-decoration: none;
+  display: block;
+  color: #58483e;
+}
+
+.tabmenu ul li:hover {
+  border-bottom: 5px solid #58483e;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+.container h1 {
   font-size: 44px;
   color: #659e34;
 }
 
-h2 {
+.container h2 {
   font-size: 28px;
   color: rgba(0, 0, 0, .6);
 }
 
 @media screen and (max-width: 767px) {
-  h2 {
+  .container h2 {
     font-size: 20px;
   }
 }
 
-p {
+.container p {
   color: #43612f;
   font-size: 18px;
 }
 
 @media screen and (max-width: 767px) {
-  p {
+  .container p {
     font-size: 14px;
   }
 }
 
-img {
+.container img {
   width: 100%;
-}
-
-.container {
-  padding-top: 8%;
-  width: 60%;
-  margin: auto;
 }
 
 @media screen and (max-width: 767px) {
   .container {
     width: 90%;
   }
+}
+
+.container a {
+  text-decoration: none;
 }
 
 .container .applicationTitle {
@@ -130,6 +161,7 @@ img {
 
 .container form .stepContent h2 {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .container form .stepContent .stepAll {
@@ -204,4 +236,206 @@ img {
   left: 0;
   right: 0;
   margin: auto;
+  text-align: center;
+}
+
+.two, .three {
+  width: 60%;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .two, .three {
+    width: 90%;
+    overflow: hidden;
+  }
+}
+
+.two .applicationTitle, .three .applicationTitle {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .two .applicationTitle, .three .applicationTitle {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.two .applicationTitle .item, .three .applicationTitle .item {
+  width: 40%;
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 767px) {
+  .two .applicationTitle .item, .three .applicationTitle .item {
+    width: 35%;
+  }
+  .two .applicationTitle .item h1, .three .applicationTitle .item h1 {
+    font-size: 24px;
+  }
+}
+
+.two .applicationTitle .item img, .three .applicationTitle .item img {
+  width: 200px;
+}
+
+@media screen and (max-width: 767px) {
+  .two .applicationTitle .item img, .three .applicationTitle .item img {
+    width: 100%;
+  }
+}
+
+.two .applicationTitle .item h1, .three .applicationTitle .item h1 {
+  text-align: left;
+}
+
+.two form, .three form {
+  margin: 50px auto;
+  padding: 50px 0;
+  background-color: #ece7d4;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.two form .table, .three form .table {
+  width: 80%;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .two form .table, .three form .table {
+    margin: auto;
+  }
+}
+
+.two form .table .tr, .three form .table .tr {
+  display: table-row;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .two form .table .tr, .three form .table .tr {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+.two form .table .tr .td, .three form .table .tr .td {
+  width: 30%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.two form .table .tr .td:first-child, .three form .table .tr .td:first-child {
+  text-align: left;
+}
+
+.two form .table .tr .td label, .three form .table .tr .td label {
+  font-size: 18px;
+}
+
+.two form .table .tr .td input, .three form .table .tr .td input {
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, .9);
+  height: 30px;
+}
+
+.two form .table .tr .td textarea, .three form .table .tr .td textarea {
+  background-color: rgba(255, 255, 255, .9);
+  outline: none;
+  border: none;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 767px) {
+  .two form .table .tr .td, .three form .table .tr .td {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+  }
+  .two form .table .tr .td:first-child, .three form .table .tr .td:first-child {
+    text-align: center;
+  }
+}
+
+.two .formSubmit, .three .formSubmit {
+  width: 200px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.feedback {
+  width: 100%;
+  background-color: #ece7d4;
+  color: #51504d;
+  text-align: center;
+}
+
+.feedback span {
+  display: inline-block;
+  padding-left: 5%;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .feedback span {
+    display: block;
+  }
+}
+
+.feedback .feedbackCotent {
+  width: 50%;
+  text-align: left;
+  margin: auto;
+}
+
+.feedback .feedbackCotent > div {
+  margin: 5% 0;
+}
+
+@media screen and (max-width: 767px) {
+  .feedback .feedbackCotent {
+    text-align: center;
+  }
+}
+
+.navbarli {
+  display: inline-block;
+  font-size: 24px;
+  background-color: #fff;
+  color: #699c33;
+  padding: 2px 2vw;
+  /* border-radius: 10%; */
+  /* margin: 0 2%; */
+  /* width: 100%; */
+}
+
+.navbarli:hover {
+  background-color: #699c33;
+  color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.navbar {
+  text-align: center;
+  width: 100%;
+  margin-top: 10%;
 }
