@@ -1,0 +1,53 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h2 id="lettering-js-a-jquery-plugin-for-radical-web-typography">Lettering.js, a jQuery plugin for radical Web Typography</h2>
+<p><a href="https://cdnjs.com/libraries/lettering.js"><img src="https://img.shields.io/cdnjs/v/lettering.js.svg" alt="CDNJS"></a></p>
+<p>We developed a lightweight, easy to use Javascript <code>span</code> injector for radical Web Typography, we&#39;re calling it &quot;lettering-jay-ess&quot;, and we&#39;re releasing it today for free over on Github. Let me demo it for you: <code>&lt;/stevejobs&gt;</code></p>
+<h3 id="individual-letter-control-with-lettering-js">Individual Letter Control with Lettering.js</h3>
+<p>We&#39;ll start with some really basic markup:</p>
+<pre><code class="lang-html">&lt;h1 class=&quot;fancy_title&quot;&gt;Some Title&lt;/h1&gt;
+</code></pre>
+<p>After including <code>jQuery 1.6.2+</code>, <a href="http://github.com/davatron5000/Lettering.js/downloads">download and include the minified version of Lettering.js</a>, then a script block with the magical <code>.lettering()</code> method:</p>
+<pre><code class="lang-html">&lt;script&gt;
+      $(document).ready(function() {
+        $(&quot;.fancy_title&quot;).lettering();
+      });
+&lt;/script&gt;
+</code></pre>
+<p>The resulting code will churn your <code>.fancy_title</code> and output the following:</p>
+<pre><code class="lang-html">&lt;h1 class=&quot;fancy_title&quot;&gt;
+  &lt;span class=&quot;char1&quot;&gt;S&lt;/span&gt;
+  &lt;span class=&quot;char2&quot;&gt;o&lt;/span&gt;
+  &lt;span class=&quot;char3&quot;&gt;m&lt;/span&gt;
+  &lt;span class=&quot;char4&quot;&gt;e&lt;/span&gt;
+  &lt;span class=&quot;char5&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;char6&quot;&gt;T&lt;/span&gt;
+  &lt;span class=&quot;char7&quot;&gt;i&lt;/span&gt;
+  &lt;span class=&quot;char8&quot;&gt;t&lt;/span&gt;
+  &lt;span class=&quot;char9&quot;&gt;l&lt;/span&gt;
+  &lt;span class=&quot;char10&quot;&gt;e&lt;/span&gt;
+&lt;/h1&gt;
+</code></pre>
+<p>Magical. Now the text is easy to manipulate in your CSS using an ordinal <code>.char#</code> pattern.  This plugin assumes basic counting skills, but it&#39;s a pretty fast and easy way to get control over every letter.</p>
+<h3 id="letters-words-lines-and-more-">Letters, words, lines, and more!</h3>
+<p>There you have it, but Lettering.js does even more! Lettering.js has the ability to split <code>words</code> and <code>lines</code> as well. If you want more information on how you can get radical with text, read the Lettering.js Wiki:</p>
+<p><a href="https://github.com/davatron5000/Lettering.js/wiki">https://github.com/davatron5000/Lettering.js/wiki</a></p>
+<h4 id="best-practices">Best Practices</h4>
+<p>We&#39;ve found this to be a pretty quick and elegant solution to create typographical CSS3 posters. It&#39;s also a great solution for really custom type headings, while keeping the text selectable. Be smart and use sparingly. You&#39;ll probably break your browser if you try to wrap every letter on your page in a <code>span</code> tag, so don&#39;t do that.  Look to use this in your Headings, Blockquotes, Asides, etc.</p>
+<h4 id="kern-well">Kern Well</h4>
+<p>If you&#39;re going through the trouble to load a fancy font and that word or phrase is the largest on the site, then it&#39;s important for it to be kerned well.  With Lettering.js, kerning is a breeze. You can simply use <code>$(&quot;#id-of-what-i-want-to-kern&quot;).lettering();</code> and then on each <code>.char#</code>, you can set relative position or left/right margin. Works like a charm.</p>
+<h3 id="accessibility">Accessibility</h3>
+<p>Lettering.js is now accessible by default. It uses an <code>aria-label</code> on the parent element and <code>aria-hidden</code> on each of the children to prevent screenreaders from pausing while reading each individual characters or words.</p>
+<h3 id="non-javascript-fallback">Non-Javascript Fallback</h3>
+<p>As with any kind of Javascript, have a fall back plan in case the user doesn&#39;t have javascript enabled.  The bottom line is up to you, my bottom line would be &quot;legible and on the screen&quot;. Also, use <code>lettering.min.js</code> <a href="http://github.com/davatron5000/Lettering.js/downloads">Download the Minified Version of Lettering.js here</a></p>
+<h4 id="performance-anti-pattern">Performance Anti-Pattern</h4>
+<p>Web performance patterns advise that you put Javascripts at the bottom of your page before your <code>&lt;/body&gt;</code> tag.  There is an unfortunate side effect where you may experience a <a href="http://paulirish.com/2009/fighting-the-font-face-fout/">FOUT (Flash of Unstyled Text)</a> when you&#39;re manipulating your text after the DOM has loaded.  Unfortunately, we found the best solution to avoid/minimize the FOUT caused by this plugin is to put your scripts (jQuery, Lettering.js) in the document <code>&lt;head&gt;</code>. On the one hand, your page will load slower. On the other hand, a flash/restyling makes your site feel slow. Users might ultimately feel the site is faster if they don&#39;t see the FOUT.</p>
+<h3 id="download-fork-commit-please-">Download, Fork, Commit, Please.</h3>
+<p>We really want Lettering.js to be a quality helper for web typography.  If you have any feedback or suggestions, please leave those over on the Github.  We&#39;re excited about typography on the web and want to help make it print quality.</p>
+
+      </body>
+    </html>

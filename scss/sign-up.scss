@@ -37,8 +37,8 @@ body{
 	background: url("../src/image/cart/cart-bg.png");
 }
 
-.lightbox-bg{
-	// display: none;
+.sign-up{
+	display: block;
 	// opacity: 0;
 	width: 100%;
 	height: 100%;
@@ -51,7 +51,8 @@ body{
 		background-color: #FFF;
 		max-width: 400px;
 		height: 500px;
-		border-radius:5% 30%;
+		border-radius:20px;
+		border: 2px solid #699c33;
 		position: relative;
 		box-sizing:border-box;
 			top:0;
@@ -91,7 +92,8 @@ body{
 						padding-top:14px;
 						// padding-right:10px;
 						vertical-align:top;
-						display:block;						color:#61ABD4;
+						display:block;						
+						color:#61ABD4;
 						border-bottom-width: 2px;
 						border-bottom-color:transparent;
 						
@@ -110,11 +112,12 @@ body{
 						width: 100%;
 						height: 20px;
 						padding-top:14px;
+						font-weight: 800;
 						// padding-right:10px;
 						vertical-align:top;
 						display:block;
 						
-						color:#61ABD4;
+						color:#5a3819;
 						border-bottom-width: 2px;
 						border-bottom-color:transparent;
 						}
