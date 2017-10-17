@@ -1,0 +1,151 @@
+﻿//每個格子統一固定padding
+$cellPadding: 16px 4px;
+//note web_back_form.css修正
+.manage{width:16%}
+.content_form{width:84%;margin-top:155px;}
+button{border:none;}
+
+
+
+//遮掉篩選條件
+nav{
+	.nav_item{
+		&:nth-child(3){
+			display:none;
+		}
+		&:nth-child(4){
+			display:none;
+		}
+		&:nth-child(5){
+			display:none;
+		}
+	}
+}
+
+/* table起始 */
+.myForm{
+	width: 94%;
+	margin:auto;		
+	//固定線
+	position: relative;
+	.pro_line{
+		position: absolute;
+		width: 1px;
+		height: 344px;
+		margin:auto;
+		left: 63.4%;
+		top: 84px;
+		background-color: #aaa;
+	}
+	table{  
+		width: 100%;
+		//限制表格寬度固定		
+		table-layout:fixed;
+		background-color:#fff;
+		border-radius: 10px;
+		padding: 0px 6px;
+	}
+
+    tr:not(.hide) >td{  /*每個格子統一固定padding*/    
+		padding:$cellPadding;
+
+		//自動斷行
+		word-break:break-all;
+		text-overflow : ellipsis;
+	}
+
+	tr:not(.hide) >th{
+		font-weight: normal;
+		text-align: center;
+	}
+
+	//所有輸入格的統一樣式
+	@mixin boxSet{		
+		padding: 6px 0px 6px 10px;
+		background-color:  LemonChiffon;
+		border: none;
+
+		&:focus{
+			outline-color: #F29600;
+		}
+	}
+	select,option{
+		width: 91%;
+		@include boxSet;
+	}
+	input,textarea{
+		width: 90%;
+		@include boxSet;
+	}
+	textarea{
+		resize: none;
+	}
+
+
+	//商品編號那一條
+	.pro_numDisable{
+		color: #fff;
+		span{
+			display: inline-block;
+			width: 100%;
+			padding: 2px 0px;
+			background-color:SaddleBrown;
+		}
+		input{
+			width:99%;
+			background-color:SaddleBrown;
+			color: #fff;
+		}
+	}
+	
+	
+
+
+	table{  /*每一欄的寬度設定。以百分比。剩的寬自動為最後一欄*/
+		/*不能動！！第一欄固定為5%*/
+		tr th:nth-child(1){
+			width: 10%;
+		}
+		tr td:nth-child(2){
+			width: 55%;
+		}
+		tr th:nth-child(3){
+			width: 10%;
+		}
+	}
+
+
+
+	
+//===========================================
+
+
+	//按鈕
+	.btn{
+		background-color: LemonChiffon ;
+		padding:4px 6px;
+		border:none
+	}
+
+
+}
+.proSave{
+	margin:auto;
+	margin-top: 20px;
+	button{
+		margin: auto;
+		display: block;
+		background-color: #F29600;
+		padding:10px 0px;
+		width: 50%;
+		border:none;
+		color: #fff;
+		&:hover{
+			color: #F29600;
+			border: 2px solid  #F29600;
+			background-color: #fff;
+		}
+	}
+}
+
+/* table結束 */

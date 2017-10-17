@@ -2,55 +2,70 @@
 @import "../mixins/media";
 
 
-h1{
-	font-size:44px;
-	color:#659e34;
-	
-}
-
-
-h2{
-	font-size:28px;
-	color:rgba(0,0,0,0.6);
-	@include rwd (moblie) {	
-		font-size:20px;		
+.tabmenu{
+		width:100%;
+		background-color:#e9dcb0;
+		ul{
+			list-style:none;
+			width:60%;
+			margin-left:20%;
+			li{
+				display:inline-block;
+				padding:2%;
+				font-size:16px;
+				border-bottom:5px solid transparent;
+				a{
+					text-decoration:none;
+					display:block;
+					color:#58483e;
+				}
+				&:hover{
+					border-bottom:5px solid #58483e;
+				}
+			}
+		}
 	}
 
-}
-
-
-
-p{
-	color:#43612f;
-	font-size:18px;
-	@include rwd (moblie) {						
-		    	font-size:14px;			    					
-			}
-
-}
-
-img{
-	width:100%;
-}
 
 .container{
-	padding-top:8%;
+	h1{
+		font-size:44px;
+		color:#659e34;	
+	}
+	h2{
+		font-size:28px;
+		color:rgba(0,0,0,0.6);
+		@include rwd (moblie) {	
+			font-size:20px;		
+		}
+	}
+	p{
+		color:#43612f;
+		font-size:18px;
+		@include rwd (moblie) {						
+		    font-size:14px;			    					
+		}
+	}
+	img{
+		width:100%;
+	}
+	// padding-top:8%;
 	width:60%;
 	margin:auto;
-
 	@include rwd (moblie) {						
 		width:90%;			    					
 	}
-
+	a{
+		text-decoration:none;
+	}
 	.applicationTitle{
 		width:100%;
 		margin:auto;
 		text-align:center;
 		@include rwd (moblie) {						
-		    	width:100%;
-		    	text-align:center;			    					
-			}
-
+		    width:100%;
+		    text-align:center;			    					
+		}
 		.item{
 			width:40%;
 			text-align:right;		
@@ -62,7 +77,6 @@ img{
 			}
 			img{
 				width:200px;
-				// text-align:right;
 				@include rwd (moblie) {						
 		    		width:100%;		    					
 				}
@@ -72,7 +86,6 @@ img{
 			}
 		}
 	}
-
 	.SubTitle{
 		text-align:center;
 		line-height:25px;
@@ -99,18 +112,17 @@ img{
 			&:first-child{
 				background-color:white;
 			}
-
 			&#hidden{
 				@include rwd (moblie) {						
 		    		display:none;			    					
 				}
 			}
-
 			@include rwd (moblie) {						
 		    	padding: 10% 0;			    					
 			}
 			h2{
 				text-align:center;
+				margin-bottom:30px;
 			}
 			.stepAll{
 				width:30%;
@@ -126,7 +138,6 @@ img{
 		    		top:-35px;			    					
 				}
 			}
-
 			table{
 				margin:auto;
 				tr{
@@ -166,8 +177,6 @@ img{
 					background-color: rgba(255, 255, 255, .9);
 				}
 			}
-
-
 		}
 
 		.formSubmit{
@@ -176,14 +185,167 @@ img{
 			left:0;
 			right:0;
 			margin: auto;
-
-			// input{
-			// 	width: 200px;
-			// 	height: 50px;
-			// 	background-color: #e8d59b;
-			// 	border: 1px solid transparent;
-				
-			// }
+			text-align:center;
 		}
 	}
 }
+
+
+.two, .three{
+	width:60%;
+	margin:auto;
+	@include rwd (moblie) {						
+		width:90%;	
+		overflow:hidden;		    					
+	}
+
+	.applicationTitle{
+		width:100%;
+		margin:auto;
+		text-align:center;
+		@include rwd (moblie) {						
+		    width:100%;
+		    text-align:center;			    					
+		}
+		.item{
+			width:40%;
+			text-align:right;		
+			display:inline-block;
+			vertical-align: middle;
+			@include rwd (moblie) {						
+		    	width:35%;
+		    	h1{font-size:24px;}			    					
+			}
+			img{
+				width:200px;
+				@include rwd (moblie) {						
+		    		width:100%;		    					
+				}
+			}
+			h1{
+				text-align:left;
+			}
+		}
+	}
+	form{	
+		margin: 50px auto;
+		padding: 50px 0;;
+		background-color: #ece7d4;
+		font-weight:bold;
+		font-size:20px;
+		.table{
+			width:80%;
+			margin:auto;
+			@include rwd (moblie) {						
+				margin:auto;	    					
+			}
+			.tr{
+				display:table-row;
+				height:100px;
+				margin:auto;
+				text-align:center;
+				@include rwd (moblie) {						
+					 display:block;
+					 overflow:hidden;	 
+				}
+				.td{
+					width:30%;
+					display:table-cell;
+					vertical-align:middle;
+					&:first-child{
+						text-align:left;
+					}
+					label{
+						font-size:18px;
+					}	
+					input{
+						border-radius: 6px;
+						outline: none;
+						border: none;
+						padding: 5px;
+						background-color: rgba(255, 255, 255, .9);
+						height: 30px;
+					}
+					textarea{
+						background-color: rgba(255, 255, 255, .9);
+						outline: none;
+						border: none;
+						border-radius: 6px;
+					}
+					@include rwd (moblie) {						
+					    display:block;	
+					    margin:auto;
+					    text-align:center;
+					    width:100%;
+					    &:first-child{
+							text-align:center;
+						}
+					}
+				}
+			}
+		}
+	}
+	.formSubmit{
+		width: 200px;
+		height: 50px;
+		left:0;
+		right:0;
+		margin: auto;
+		text-align:center;
+	}
+}
+
+
+.feedback{
+	width:100%;
+	background-color:#ece7d4;
+	color:#51504d;
+	text-align:center;
+	span{
+		display:inline-block;
+		padding-left:5%;
+		color:#000;
+		font-size:20px;
+		font-weight:bold;
+		text-align:center;
+		@include rwd (moblie) {						
+			display:block;	 
+		}
+	}
+	.feedbackCotent{
+		width:50%;
+		text-align:left;
+		margin:auto;
+		>div{
+			margin:5% 0;
+		}
+		@include rwd (moblie) {						
+			text-align:center;	 
+		}
+	}
+}
+
+
+
+
+
+.navbarli{
+		display: inline-block;
+		font-size: 24px;
+		background-color: #fff;
+		color: #699c33;
+		padding:2px 2vw ;
+		/* border-radius: 10%; */
+		/* margin: 0 2%; */
+		/* width: 100%; */
+	}
+	.navbarli:hover{
+		background-color:#699c33;
+		color: #fff;
+		transition: .5s;
+	}
+	.navbar{
+		text-align: center;
+		width: 100%;
+		margin-top:10%;
+	}
