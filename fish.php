@@ -23,11 +23,11 @@
 
 
 <body>
-	 <?php require_once('Header.php') ?> 
+	  <?php require_once('Header.php') ?>
 	
-    <section><!-- 都市第一屏 -->
+    <section class="fish_first"><!-- 都市第一屏 -->
     	<div class="fishbase">
-    		<img id="title" src="src/image/fish/title.svg">
+    		<img id="title" src="src/image/fish/title-01.png">
     	</div>	
    </section><!-- 都市第一屏結束 -->
 
@@ -37,9 +37,9 @@
 			<div class="stepFlow clear">
 				<div id="trigger2"></div>
 				<div class="stepFlowRight ">
-					<img src="src/image/fish/arrow1.svg" class="arrow" id="arrow1">
-					<img src="src/image/fish/arrow3.svg" class="arrow" id="arrow3">
-					<img src="src/image/fish/arrow2.svg" class="arrow" id="arrow2">
+					<img src="src/image/fish/arrow1.png" class="arrow" id="arrow1">
+					<img src="src/image/fish/arrow3.png" class="arrow" id="arrow3">
+					<img src="src/image/fish/arrow2.png" class="arrow" id="arrow2">
 					<img src="src/image/fish/flow_pic.svg" class="front" >
 				</div>
 			</div>

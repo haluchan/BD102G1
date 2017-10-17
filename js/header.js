@@ -6,19 +6,19 @@ function doFirst(){
 	
 	
 // 漢堡選單下滑(已移到header.php下)
-// $(document).ready(function(){
-// 			$('#ham_button').click(function(){
-// 				$('#hamicon').toggleClass("hamicon_slide");
-// 				$('#ham_menu').toggleClass("ham_slide");
-// 				});
-// 		});		
+$(document).ready(function(){
+	$('#ham_button').click(function(){
+		$('#hamicon').toggleClass("hamicon_slide");
+		$('#ham_menu').toggleClass("ham_slide");
+		});
+});
 
 
 
 
 
 
-//scroll選單 漸變
+//scroll選單 漸變(已移到header.php下)
 	$(function(){
 		var fixed = false;//設定fix變數 false未fixed, true已fixed
 		$(window).scroll(function () {
@@ -45,6 +45,7 @@ function doFirst(){
 				}
 			}else{
 				$('#logo').css({"width":"100%"});
+				$('#logo').attr('src','src/image/header/logo_v2.png');
 		 		$(".mainmenu").css({"position": "fixed"});
 		 	}
 		});

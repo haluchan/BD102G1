@@ -15,7 +15,7 @@
 
 
 //section
-section{ 
+section.fish_first{ 
 	width:100%;
 	// height:100vh;
 	background-image:url('../../src/image/fish/fish_baner.svg');
@@ -23,6 +23,9 @@ section{
 	background-size:contain;
 	// background-attachment: fixed;
 	overflow:hidden;
+	img{
+		width:100%;
+	}
 
 }
 
