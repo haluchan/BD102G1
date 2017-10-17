@@ -143,7 +143,7 @@
 					$(window).scroll(function () {
 				var scrollVal = $(this).scrollTop();
 				// var adscrtop=$(".topmenu").offset().bottom;
-				 var adscrtop=100;
+				 var adscrtop=24;
 				if(window.innerWidth>767){ //RWD 767以下寬不動作
 					if(scrollVal>adscrtop ){//捲動超過 處理方式
 						if( ! fixed){
