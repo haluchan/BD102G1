@@ -1,50 +1,62 @@
 @media screen and (max-width: 767px) {
   .col-xs-1 {
     width: 8.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-2 {
     width: 16.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-3 {
     width: 25%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-4 {
     width: 33.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-5 {
     width: 41.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-6 {
     width: 50%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-7 {
     width: 58.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-8 {
     width: 66.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-9 {
     width: 75%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-10 {
     width: 83.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-11 {
     width: 91.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-12 {
     width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .hidden-xs {
@@ -53,50 +65,62 @@
 @media screen and (min-width: 768px) {
   .col-sm-1 {
     width: 8.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-2 {
     width: 16.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-3 {
     width: 25%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-4 {
     width: 33.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-5 {
     width: 41.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-6 {
     width: 50%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-7 {
     width: 58.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-8 {
     width: 66.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-9 {
     width: 75%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-10 {
     width: 83.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-11 {
     width: 91.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-12 {
     width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .hidden-sm {
@@ -404,6 +428,7 @@ a {
     border: 1px solid #ddd0bb; }
     .message .message_box .mem_photo {
       text-align: right;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       padding: 0 2% 2%; }
       .message .message_box .mem_photo img {
@@ -459,6 +484,7 @@ a {
     border-radius: 15px; }
     .message_form .message_box .mem_photo {
       text-align: right;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       padding: 0 2% 2%; }
       .message_form .message_box .mem_photo img {

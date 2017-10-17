@@ -1,4 +1,11 @@
 @charset "UTF-8";
+* {
+  outline: 2px solid red; }
+
+.btn_green {
+  position: relative;
+  z-index: 5; }
+
 .pro_container h1 {
   color: #fff; }
   @media only screen and (min-width: 767px) and (max-width: 1440px) {
@@ -491,12 +498,11 @@
             color: #999;
             position: absolute;
             bottom: 13%; }
+          .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-list {
+            overflow: initial; }
           .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-track {
-            width: 2735px;
             margin: auto;
             text-align: left; }
-            .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-track li {
-              width: 80vw; }
             .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-track li + li {
               margin-left: 1%; }
           .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .pro_t_TBuy {

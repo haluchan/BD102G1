@@ -7,7 +7,13 @@ $highLight:#F7931E;
 //圖片的微微的框
 $imgBorder: 1px solid rgba(0,0,0,.1);
 
-
+*{
+	outline:2px solid red;
+}
+.btn_green{
+	position: relative;
+	z-index: 5;
+}
 
 //判斷變數是pc、pad還是mobile，再依照判斷出來的載入對應的media query
 @mixin pro_breakPoint($point){
@@ -640,13 +646,13 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 						position: absolute;
 						bottom: 13%;
 					}
+					.slick-list{
+						overflow: initial;
+						//left:10px;
+					}
 					.slick-track{
-						width: 2735px;
 						margin: auto;
-						text-align: left;					
-						li{
-							width: 80vw;
-						}
+						text-align: left;
 						& li+li{
 							margin-left: 1%;
 						}
