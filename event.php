@@ -70,7 +70,7 @@
 					<p>透過專業領域的小農帶路，</p>
 					<p>體驗另一種人生。</p>
 				</div>
-				<div id="trigger1"></div>
+				
 				<img src="" alt="">
 			</div>
 			
@@ -78,7 +78,7 @@
 
 <div class="secondblock">
 	<div class="secondblockin">
-		
+		<div id="trigger1"></div>
 	<ul>
 		<li class="show col-xs-12">
 			<a href="#">

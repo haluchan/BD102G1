@@ -83,6 +83,7 @@
 		font-size: 18px;
 	letter-spacing: 1px;
 	line-height: 26px;
+	color: rgba(0, 0, 0, 0.6);
 		/* font-max-size: 10px; */
 		/* 	padding-bottom: 2px; */
 		/* background-color: blue; */
@@ -99,9 +100,10 @@
 	
 	td p {
 		text-align: center;
+		color: rgba(0, 0, 0, 0.6);
 	}
 	th{
-		/* font-size: 24px; */
+		color: rgba(0, 0, 0, 0.8);
 		border-bottom: 1px solid #699c33;
 		/* text-align: right; */
 	}
