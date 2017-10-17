@@ -7,7 +7,13 @@ $highLight:#F7931E;
 //圖片的微微的框
 $imgBorder: 1px solid rgba(0,0,0,.1);
 
-
+*{
+	//outline:2px solid red;
+}
+.btn_green{
+	position: relative;
+	z-index: 5;
+}
 
 //判斷變數是pc、pad還是mobile，再依照判斷出來的載入對應的media query
 @mixin pro_breakPoint($point){
@@ -25,26 +31,6 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 		}
 	}
 }
-
-
-//動畫
-@mixin keyframes($name){
-  @-webkit-keyframes #{$name}{
-    @content;}
-  @-moz-keyframes #{$name}{
-    @content;}
-  @-ms-keyframes #{$name}{
-    @content;}
-  @keyframes #{$name}{
-    @content;}
-}
-@mixin animations($content){
-  -webkit-animation: $content;
-  -moz-animation: $content;
-  -o-animation: $content;
-  animation: $content;
-}
-      
 
 
 
@@ -82,7 +68,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 
 
 .pro_container{
-
+	margin-top: 50px;
 	h1{
 		color: #fff;
 		@include pro_breakPoint(pad){
@@ -106,8 +92,21 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 		}
 	}
 	img{ 
-		width: 100%;
 		vertical-align: top; 
+	}
+
+	//種子區的img
+	.pro_seed{
+		& img{
+			width: 100%;
+		}
+	}
+
+	//避免影響footer
+	.pro_tank{
+		&>div img{
+			width: 100%;
+		}
 	}
 
 	.ccc{
@@ -428,7 +427,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 /* 魚缸超市 */
 .pro_tank{
 	width: 100%;
-	overflow: hidden;
+	overflow: hiden;
 	background-image: url("../src/image/product/pro-bg2.jpg");
 	/* 商品區(魚缸) */
 	.pro_t_wheel{
@@ -640,13 +639,13 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 						position: absolute;
 						bottom: 13%;
 					}
+					.slick-list{
+						overflow: initial;
+						//left:10px;
+					}
 					.slick-track{
-						width: 2735px;
 						margin: auto;
-						text-align: left;					
-						li{
-							width: 80vw;
-						}
+						text-align: left;
 						& li+li{
 							margin-left: 1%;
 						}

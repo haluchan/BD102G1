@@ -14,9 +14,8 @@
 <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
-    <!-- <?php require_once('Header.php') ?> -->
+    <?php require_once('Header.php') ?> 
 
-    <div class="cart" id="cart">(0)</div>
     <div class="pro_container">
         <!-- 種子頁 -->
         <section class="pro_seed">
@@ -530,7 +529,7 @@
                 </div>               
             </div> <!--pro_t_info-->
 
-          <!-- <?php require_once('Footer.php') ?>   -->
+          <?php require_once('Footer.php') ?>
         </section>
 
 

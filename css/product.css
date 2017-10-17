@@ -1,4 +1,13 @@
 @charset "UTF-8";
+.btn_green {
+  position: relative;
+  z-index: 5;
+}
+
+.pro_container {
+  margin-top: 50px;
+}
+
 .pro_container h1 {
   color: #fff;
 }
@@ -34,8 +43,15 @@
 }
 
 .pro_container img {
-  width: 100%;
   vertical-align: top;
+}
+
+.pro_container .pro_seed img {
+  width: 100%;
+}
+
+.pro_container .pro_tank > div img {
+  width: 100%;
 }
 
 .pro_container .ccc {
@@ -422,7 +438,7 @@
 /* 魚缸超市 */
 .pro_tank {
   width: 100%;
-  overflow: hidden;
+  overflow: hiden;
   background-image: url("../src/image/product/pro-bg2.jpg");
   /* 商品區(魚缸) */
 }
@@ -751,13 +767,13 @@
     position: absolute;
     bottom: 13%;
   }
+  .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-list {
+    overflow: visible;
+    overflow: initial;
+  }
   .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-track {
-    width: 2735px;
     margin: auto;
     text-align: left;
-  }
-  .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-track li {
-    width: 80vw;
   }
   .pro_tank .pro_t_info .pro_t_infoTop .pro_t_infoTR .slick-track li + li {
     margin-left: 1%;

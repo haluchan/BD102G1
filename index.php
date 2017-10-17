@@ -175,9 +175,6 @@
 				</svg>
 
 
-
-
-
 			<img src="src/image/index/rice_bird.svg" class="rice_img">
 			<img src="src/image/index/inekari_man.png" class="bottom-0 rice-man">
 			<div class="activity_title">
@@ -240,7 +237,7 @@
 
 
 
-<?php require_once('Footer.php');  ?>
+<?php require_once('Footer.php');  ?> 
 		
 
 
