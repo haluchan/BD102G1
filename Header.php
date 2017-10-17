@@ -12,7 +12,7 @@
 	    <header>
 	    	<div class="topmenu">
 	    		<ul>	
-	    			<li><a href="cart.php">購物車<span class="cartNo">1</span></a></li>
+	    			<li><a href="cart.php">購物車<span class="cartNo" id="cart">1</span></a></li>
 	    			<li><a  id="login-btn" >註冊/登入</a></li>
 	    			<li><a href="application.php">申請資助</a></li>
 	    		</ul>
