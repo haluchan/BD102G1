@@ -34,7 +34,7 @@
 							<li><a href="application.php">查詢案件</a></li>
 							<li><a href="application.php">回報進度</a></li>
 							<li><a id="login-btn2">註冊/登入</a></li>
-							<li><a href="memberedit.php">會員專區</a></li>
+							<li><a href="member.php">會員專區</a></li>
 							<li><a href="cart.php">購物車</a></li>
 						</ul>
 					</div>

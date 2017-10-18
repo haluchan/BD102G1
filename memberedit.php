@@ -7,8 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-	<script type="text/javascript" src="js/parallax.min.js"></script>
-	</head>
+	
 	<body>
 	<?php require_once('Header.php'); ?>
 	<div class="titlebg">
@@ -79,13 +78,13 @@
 				</table>
 			
 		</form>
-			
-				
-	</div>
-	<div class="btnbox">
+			<div class="btnbox">
 				<a href="">確定修改</a>
 				<a href="">取消修改</a>
 			</div>	
+				
+	</div>
+	
 	
 
 
@@ -93,6 +92,6 @@
 <?php require_once('Footer.php');?>
 </div>
 
-<script type="text/javascript" src="js/member.js"></script>
+
 </body>
 </html>

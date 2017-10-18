@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" type="text/css" href="css/login.css" >
+<link rel="stylesheet" type="text/css" href="css/sign.css" >
 
 	<section>
  		
@@ -12,26 +12,55 @@
 			</div>
 		  <div class="login-content">
 			  	<h2>會員註冊</h2>
-			   <div class="login-account">
+			   <div class="sign-account">
 				   	<p>帳號</p>
 			   		<input type="text" name="memId" value="" placeholder="請輸入帳號">
 			   		<span class="focus-border"></span>
 			   </div>
-			  	<div class="login-pws">
+			  	<div class="sign-pws">
 			  		<p>密碼</p>
 			  		<input type="password" name="" value="" placeholder="請輸入密碼">
 			  		<span class="focus-border"></span>
 			  	</div>
+			  	<div class="sign-repws">
+			  		<p>確認密碼</p>
+			  		<input type="password" name="" value="" placeholder="請輸入密碼">
+			  		<span class="focus-border"></span>
+			  	</div>
+			  		<div class="sign-birth">
+			  		<p>生日</p>
+			  		<input type="date" name="" value="" placeholder="">
+			  		<span class="focus-border"></span>
+			  	</div>
+			  	<div class="sign-gender">
+			  		<p>性別</p>
+			  		男<input type="radio" name="gender" value="" >
+			  		女<input type="radio" name="gender" value="" >
+			  		
+			  	</div>
+			  		<div class="sign-mail">
+			  		<p>email</p>
+			  		<input type="email" name="" value="" placeholder="gb@gmail.com">
+			  		<span class="focus-border"></span>
+			  	</div>
+			  
+			  		<div class="sign-add">
+			  		<p>居住地址</p>
+			  		<input type="text" name="" value="" placeholder="">
+			  		<span class="focus-border"></span>
+			  	</div>
+			  
 			  	<div class="forget">
 			  		<a href="">忘記密碼?</a>
 			  	</div>
 		  	<button type="submit" class="btn_green">確定</button>
-		  	 <button type="submit" class="btn_green">facebook登入</button>
-		  	<button type="" class="btn_green">註冊</button>
+		  	 <!-- <button type="submit" class="btn_green">facebook登入</button> -->
+		  	<!-- <button type="" class="btn_green">註冊</button> -->
 			 
 		  	
-		  </div>
-		  <img class="login-bee" src="src/image/login/deco-img-03.gif">
+		  </div>	
+			</div>
+		 <!--  <img class="login-bee" src="src/image/login/deco-img-03.gif"> -->
 		</div>
 		<div class="login-clear"></div>
 	</div>

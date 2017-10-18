@@ -48,11 +48,11 @@ botton {
     .myForm table tr th:nth-child(3) {
       width: 10%; }
     .myForm table tr th:nth-child(4) {
-      width: 20%; }
+      width: 10%; }
     .myForm table tr th:nth-child(5) {
       width: 10%; }
     .myForm table tr th:nth-child(6) {
-      width: 25%; }
+      width: 15%; }
     .myForm table tr th:nth-child(7) {
       width: 10%; }
   .myForm .btn {
