@@ -130,7 +130,6 @@ body {
         line-height: 2;
         vertical-align: middle;
         display: inline-block;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         border-radius: 5px; }
       .container form .stepContent table th {
@@ -238,7 +237,6 @@ body {
             line-height: 2;
             vertical-align: middle;
             display: inline-block;
-            -webkit-box-sizing: border-box;
             box-sizing: border-box;
             border-radius: 5px; }
           .two form .table .tr .td textarea, .three form .table .tr .td textarea {
@@ -309,13 +307,10 @@ body {
     .navbar .navbarli:hover {
       background-color: #699c33;
       color: #fff;
-      -webkit-transition: .5s;
-      -o-transition: .5s;
       transition: .5s; }
   @media screen and (max-width: 767px) {
     .navbar {
       padding-top: 15%;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       .navbar .navbarli {
         font-size: 18px; } }

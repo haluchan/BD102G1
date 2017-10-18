@@ -12,7 +12,7 @@
 	    <header>
 	    	<div class="topmenu">
 	    		<ul>	
-	    			<li><a href="cart.php">購物車<span class="cartNo" id="cart">1</span></a></li>
+	    			<li><a href="cart.php">購物車<span class="cartNo">0</span></a></li>
 	    			<li><a  id="login-btn" >註冊/登入</a></li>
 	    			<li><a href="application.php">申請資助</a></li>
 	    		</ul>
@@ -34,8 +34,13 @@
 							<li><a href="application.php">查詢案件</a></li>
 							<li><a href="application.php">回報進度</a></li>
 							<li><a id="login-btn2">註冊/登入</a></li>
+<<<<<<< HEAD
 							<li><a href="member.php">會員專區</a></li>
 							<li><a href="cart.php">購物車</a></li>
+=======
+							<li><a href="memberedit.php">會員專區</a></li>
+							<li><a href="cart.php">購物車(<span class="cartNo">0</span>)</a></li>
+>>>>>>> dc16d1e1c91fc74ca743428368d672462b03a637
 						</ul>
 					</div>
 	    		</div>
@@ -153,6 +158,8 @@
 		 	}
 		});
 	});
+
+		
 
 	</script>
 
