@@ -1,27 +1,15 @@
 $(document).ready(function(){
-	$('#slideButton').click(function(){
-      var self = $(this);
+	$('.slideButton').click(function(){
+     
  
-      $('.item').slideToggle(200, function(){
+      $(this).parent().children('.item').slideToggle(200, function(){
           
     if($('.item').is(':visible')){
-      self.attr('src','src/image/web_back_frame/circleWithLine.png');
+     $(this).parent().children('.slideButton').children('img').attr('src','src/image/web_back_frame/circleWithLine.png');
     } else {	
-      self.attr('src','src/image/web_back_frame/circleWithPlus.png');
+      $(this).parent().children('.slideButton').children('img').attr('src','src/image/web_back_frame/circleWithPlus.png');
     }
 	});
- });
-$('#slideButton-pro').click(function(){
-      var self = $(this);
- 
-      $('.item').slideToggle(200, function(){
-          
-    if($('.item').is(':visible')){
-      self.attr('src','src/image/web_back_frame/circleWithLine.png');
-    } else {  
-      self.attr('src','src/image/web_back_frame/circleWithPlus.png');
-    }
-  });
  });
 });
 

@@ -41,7 +41,8 @@
 			</div>
 			 	<ol>
 			 		<li><img src="src/image/web_back_frame/logo.png"></li>
-			 		<li><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton"><span>資助管理</span>
+			 		<li>
+			 			<span class="slideButton"><img src="src/image/web_back_frame/circleWithPlus.png">資助管理</span>
 			 			<ol class="item">
 			 				<li><a href="#" class="itemClick"><img src="src/image/web_back_frame/line.png">案件審核</a></li>
 			 				<li><a href="#" class="itemClick"><img src="src/image/web_back_frame/line.png">狀態異動</a></li>
@@ -51,11 +52,13 @@
 			 		<li><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">活動管理</li>
 			 		<li><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">會員管理</li>
 			 		<li><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">訂單管理</li>
-			 		<li><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton-pro">商品管理</li>
+			 		<li>
+			 		<span class="slideButton"><img src="src/image/web_back_frame/circleWithPlus.png">商品管理</span>
 			 			<ol class="item">
 			 				<li><a href="#" class="itemClick-pro"><img src="src/image/web_back_frame/line.png">商品全覽</a></li>
 			 				<li><a href="#" class="itemClick-pro"><img src="src/image/web_back_frame/line.png">新增商品</a></li>
 			 			</ol>
+			 		</li>
 			 		<li><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">管理員管理</li>
 			 	</ol>
 			 	<button class="logout" type="button">登出</button>
