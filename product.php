@@ -5,15 +5,15 @@
 <title>商品頁</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <script src="src/libs/jquery/dist/jquery.min.js"></script>
-<script src="src/libs/slick/slick/slick.min.js"></script>
 <script src="js/product.js"></script>
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css">
-<link rel="stylesheet" href="css/font.css">
 <link rel="stylesheet" type="text/css" href="src/libs/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/product.css">
+
 </head>
 <body>
+    <a href="cart.php"><div class="cart cartNo cartAnimatMobile">0</div></a>
     <?php require_once('Header.php') ?> 
 
     <div class="pro_container">
@@ -23,7 +23,7 @@
             <!-- 遮雨棚+標題 -->
             <div class="pro_tent">
                 <div><img src="src/image/product/pro-tent.png"></div>
-                <h1>種子市場</h1>
+                <h2>種子市場</h2>
             </div>
         
             <!-- 商品區 -->
@@ -50,7 +50,7 @@
                     <!-- hover後:資訊+購買 -->
                     <div class="pro_s_white">
                         <div class="pro_s_info">
-                            <h2>朝天椒</h2>
+                            <h3>朝天椒</h3>
                             <div class="pro_s_line"></div>
                             <p class="pro_s_txt">
                                 發芽適溫：25~30℃<br>
@@ -92,7 +92,7 @@
                     <!-- hover後:資訊+購買 -->
                     <div class="pro_s_white">
                         <div class="pro_s_info">
-                            <h2>青江菜</h2>
+                            <h3>青江菜</h3>
                             <div class="pro_s_line"></div>
                             <p class="pro_s_txt">
                                 發芽適溫：20~30℃<br>
@@ -135,7 +135,7 @@
                     <!-- hover後:資訊+購買 -->
                     <div class="pro_s_white">
                         <div class="pro_s_info">
-                            <h2>小南瓜</h2>
+                            <h3>小南瓜</h3>
                             <div class="pro_s_line"></div>
                             <p class="pro_s_txt">
                                 發芽適溫：22~30℃<br>
@@ -172,7 +172,7 @@
                     <!-- hover後:資訊+購買 -->
                     <div class="pro_s_white">
                         <div class="pro_s_info">
-                            <h2>多彩椒</h2>
+                            <h3>多彩椒</h3>
                             <div class="pro_s_line"></div>
                             <p class="pro_s_txt">
                                 發芽適溫：20~30℃<br>
@@ -209,7 +209,7 @@
                     <!-- hover後:資訊+購買 -->
                     <div class="pro_s_white">
                         <div class="pro_s_info">
-                            <h2>觀賞茄</h2>
+                            <h3>觀賞茄</h3>
                             <div class="pro_s_line"></div>
                             <p class="pro_s_txt">
                                 發芽適溫：22~30℃<br>
@@ -247,7 +247,7 @@
                     <!-- hover後:資訊+購買 -->
                     <div class="pro_s_white">
                         <div class="pro_s_info">
-                            <h2>紅蘿蔔</h2>
+                            <h3>紅蘿蔔</h3>
                             <div class="pro_s_line"></div>
                             <p class="pro_s_txt">
                                 發芽適溫：20~30℃<br>
@@ -285,7 +285,7 @@
                     <!-- hover後:資訊+購買 -->
                     <div class="pro_s_white">
                         <div class="pro_s_info">
-                            <h2>小番茄</h2>
+                            <h3>小番茄</h3>
                             <div class="pro_s_line"></div>
                             <p class="pro_s_txt">
                                 發芽適溫：25-32℃<br>
@@ -323,7 +323,7 @@
                     <!-- hover後:資訊+購買 -->
                     <div class="pro_s_white">
                         <div class="pro_s_info">
-                            <h2>四季蔥</h2>
+                            <h3>四季蔥</h3>
                             <div class="pro_s_line"></div>
                             <p class="pro_s_txt">
                                 發芽適溫：20~30℃<br>
@@ -347,7 +347,7 @@
   <!--                   <div class="pro_s_white">
   						<span class="iii"><img src="src/image/login/pop_close.png"></span>
                         <div class="pro_s_info">
-                            <h2>多彩椒</h2>
+                            <h3>多彩椒</h3>
                             <div class="pro_s_line"></div>
                             <p class="pro_s_txt">
                                 發芽適溫：20~30℃<br>
@@ -394,7 +394,7 @@
             <!-- 遮雨棚+標題 -->
             <div class="pro_tent">
                 <div><img src="src/image/product/pro-tent.png"></div>
-                <h1>魚缸超市</h1>
+                <h2>魚缸超市</h2>
             </div>
 
             <!-- 商品區-魚缸 -->
@@ -479,7 +479,7 @@
                     <!-- 右-大標小圖按鈕 -->
                     <div class="pro_t_infoTR">
                     
-                        <h2>香草與魚 Herb & Fish</h2>
+                        <h3>香草與魚 Herb & Fish</h3>
                         <ul class="pro_t_imgGroup" id="myElement" >
                             <li><img src="src/image/product/pro-t0011.jpg" alt="主圖"></li>
                             <li><img src="src/image/product/pro-t0012.jpg" alt="結構圖"></li>
@@ -492,6 +492,7 @@
                             <span class="btn_green addButton" id="t001">加入購物車
                                 <input type="hidden" name="proInfo" value="香草與魚I|t001.jpg|999">
                             </span>
+                            <div class="ccc"></div>
                         </div>
                     
                     </div> <!--pro_t_infoR-->
@@ -501,7 +502,7 @@
 
                 <!-- 規格和注意事項 -->
                 <div class="pro_t_infoBottom">
-                    <h3 class="pro_t_caption">產品規格</h3>
+                    <h4 class="pro_t_caption">產品規格</h4>
                     <p>
                         包裝內容：香草與魚2.0智能版x1組(包含魚缸主體、燈架)、發泡煉石x1包、植物固定海綿、USB充電線x1(不含插頭)<br>
                         材　　質：鋁合金、塑料 <br>
@@ -517,7 +518,7 @@
                 </div>
 
                 <div class="pro_t_infoBottom">
-                    <h3 class="pro_t_caption">注意事項</h3>
+                    <h4 class="pro_t_caption">注意事項</h4>
                     <p>
                         ※原廠保留產品規格修改權利，數據請以原廠資料為準。 <br>
                         ※PC缸體建議使用超細纖維布清洗，禁止使用菜瓜布、鋼刷等硬材質，以免造成缸面刮花。 <br>
@@ -535,6 +536,36 @@
 
         
     </div> <!--container-->
+
+
+<!-- 魚缸詳細資料輪播 -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        if (document.body.clientWidth < 767){
+            $('.pro_t_imgGroup').slick({
+              dots:true,
+              centerMode: true,
+              centerPadding: '60px',
+              slidesToShow: 3,
+              responsive: [
+                {
+                  breakpoint: 480,
+                  settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '0',
+                    slidesToShow: 1
+                  }
+                }
+              ]
+            });
+        }
+    });
+</script>
 
 </body>
 </html>

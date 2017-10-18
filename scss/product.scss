@@ -67,26 +67,28 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 }
 
 
+
+
 .pro_container{
 	@include pro_breakPoint(mobile){
 		margin-top: 50px;
 	}
-	h1{
+	h2{
 		color: #fff;
 		@include pro_breakPoint(pad){
-			font-size: 2.7vw;
+			font-size: 2.6vw;
 		}
 		@include pro_breakPoint(mobile){
-			font-size: 26px;
+			font-size: 24px;
 		}
 	}
-	h2{
+	h3,h4{
 		@include pro_breakPoint(pad){
 			font-size: 3vw;
 		}
 		@include pro_breakPoint(mobile){
 			font-size: 18px;
-		}
+		}		
 	}
 	p{
 		@include pro_breakPoint(mobile){
@@ -126,17 +128,23 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 	position: relative ;
 	div{
 		@include pro_breakPoint(mobile){
-	    	transform: scale(1.9,1.8);
+	    	transform: scale(1.9,1.9) translateY(8px);
 	    }
-		img{ width: 100%; }
 	}
-	h1{
+	h2{
 		position: absolute;
 		margin: auto;
-		top: 68%;
 		right: 0;
 		left: 0;
 		text-align: center;
+		letter-spacing: 4px;
+		top: 76%;
+		@include pro_breakPoint(pc){
+	    	font-size: 40px;
+	    }
+		@include pro_breakPoint(mobile){
+			top: 113%;
+	    }
 	}
 }
 .pro_container{
@@ -152,18 +160,80 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 
 
 
+@keyframes cartPc {
+    0%   {bottom: 20px;top:auto;}
+    5%  {bottom: 0px;}
+    10%  {bottom: 0px;transform: scale(1 ,.8)}
+    15%  {bottom: 0px;transform: scale(1 ,1);}
+    20%  {bottom: 20px;right:20px;}
+    25%  {opacity:1;}
+    100% {bottom: 120vh; right:160px;opacity: .0;transform: scale(.1 ,.1);}
+}
+@keyframes cartMobile {
+    0%   {bottom: 20px;top:auto;}
+    5%  {bottom: 0px;}
+    10%  {bottom: 0px;transform: scale(1 ,.8)}
+    15%  {bottom: 0px;transform: scale(1 ,1);}
+    20%  {bottom: 20px;right:20px;}
+    25%  {opacity:1;}
+    // 100% {bottom: 80vh; right:80vw;opacity: .0;transform: scale(.8 ,.8);}
+    100% {bottom: 0; right:0;left:10px; top:10px;opacity: .0;transform: scale(.8 ,.8);}
 
-
-
-
+}
+//感測scroll到最上面時，加上class，
+	//PC.Pad加cartAnimatPc執行 cartPc
+	.cartAnimatPc{
+		animation: cartPc 1s 1s cubic-bezier(.14,.87,.25,.7);
+		// opacity: 0;
+	}
+	//Mobile加cartAnimatMobile執行 cartMobile
+	.cartAnimatMobile{
+		animation: cartMobile 1s 1s linear;
+		// opacity: 0;
+	}
 
 .cart{
+	text-align: center;
+	height: 10vw;
+	width: 10vw;
+	min-width: 60px;
+	min-height: 60px;
+	max-width: 120px;
+	max-height: 120px;
 	position: fixed;
-	z-index: 7; 
-	right: 10px;
-	background-color: pink;
-	padding: 20px; 
-	border: 2px solid red; 
+	z-index: 1000; 
+	right: 20px;
+	bottom: 20px;
+	top: auto;
+	background-color: #ffdbb0;
+	border: 2px solid #699c33; 
+	color: #699c33;
+	font-weight: bold;
+	font-size: 150%;
+	line-height: 8px;
+	padding-top: 1.5vw;
+	border-radius: 50%;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 14px 2px rgba(0,0,0,.2);
+	overflow: hidden;
+	@include pro_breakPoint(mobile){
+		font-size: 18px;
+	}
+	&::after{
+		content: "";
+		display: block;
+		height: 4vw;
+		max-height: 60px;
+		min-height: 28px;
+		background-image: url('../src/image/product/cart.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 45% center;
+		margin-top: 10%;
+		@include pro_breakPoint(mobile){
+			// margin-top: 5%;
+		}
+	}
 }
 
 
@@ -176,16 +246,15 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 .pro_seed{
 	/*背景圖大小 1770*1337*/
 	background-image: url("../src/image/product/pro-bg1.jpg");
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
-
 
 	/* 商品區(種子)*/
 	.pro_s_cabinet{
 		margin: auto;
 		list-style:none;
 		border: 10px solid #6D5844;
-		margin-top: 10%;
+		margin-top: 12%;
 		@include pro_breakPoint(pc){
 			width: $pc;
 		}
@@ -196,6 +265,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 		@include pro_breakPoint(mobile){
 			width: 100%;
 			box-sizing: border-box;
+			margin-top: 22%;
 		}
 		
 		
@@ -284,7 +354,8 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 					margin: auto;
 					margin-top: 30px; 
 					//標題
-					h2{
+					h3{
+						font-size: 32px;
 						color: $highLight;
 					}
 
@@ -367,23 +438,29 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 	.pro_s_white{
 		background-color: #fff;
 		width: 90%;
-		height: 465px;
+		height: 428px;
 		margin: auto;
-		margin-top: 15%;
-		border-radius: 5% 30%;
+		margin-top: 27%;
+		border-radius: 12px 30%;
 		.iii{
 			float: right;
 			color: #fff;
 			font-size: 40px;
-			margin-top: 2%;
-   			margin-right: 4px; 
+			margin-top: 2%; 
 		}
 		.pro_s_info{
-			padding-top: 28%;
+			padding-top: 26%;
 			//標題
-			h2{
+			h3{
 				text-align: center;
 				color: $highLight;
+				font-size: 32px;
+				@include pro_breakPoint(pad){
+					font-size: 2.7vw;
+				}
+				@include pro_breakPoint(mobile){
+					font-size: 26px;
+				}
 			}
 			//黑色分隔線
 			.pro_s_line{
@@ -399,7 +476,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 			//價格和購買按鈕
 			.pro_s_buy{
 				text-align: center;
-				margin: 60px auto; 
+				margin: 50px auto; 
 				span:first-child{
 					@include pro_fourthTitle(#F15A24);
 					display: inline-block;
@@ -435,7 +512,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 	.pro_t_wheel{
 		margin: auto;
 		position: relative;
-		margin-top: 9%;
+		margin-top: 18%;
 		@include pro_breakPoint(pc){
 			width: $pc;
 		}
@@ -597,7 +674,8 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 				float: left;
 				padding: 0 1%;
     			box-sizing: border-box;
-				h2{
+				h3{
+					font-size: 32px; 
 					text-align: center;
 					color: #999; 
 				}
@@ -635,7 +713,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 					position: relative;
 					margin: 0px;
 					float: none;
-					margin-left: 5%;
+					// margin-left: 5%;
 					h2{
 						color: #999;
 						position: absolute;
@@ -644,6 +722,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 					.slick-list{
 						overflow: initial;
 						//left:10px;
+						margin-left: 10%;
 					}
 					.slick-track{
 						margin: auto;
@@ -652,13 +731,21 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 							margin-left: 1%;
 						}
 					}
+					.slick-dots li{
+						border:none;
+						margin: 0;
+						width: auto; 
+
+					}
 					.pro_t_TBuy{
-						text-align: left;
+						text-align: center;
 						margin-top: 15%;
+						span{
+							display: inline-block;
+							padding: 20px;
+						}
 						.btn_green{
 							display: inline-block;
-							float: right;
-							margin-right: 10%; 
 						}
 					}
 
@@ -669,7 +756,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 		/* 規格和注意事項 */
 		.pro_t_infoBottom{
 			width: 100%;
-			h3{
+			h4{
 				@include pro_fourthTitle(#fff);
 				margin: 14px 0;
 				padding: 4px 10px; 
