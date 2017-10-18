@@ -40,6 +40,7 @@ body {
         .cart-container .cart-list .cart-item .item-left-group .cart-item-left .item-price {
           width: 18%;
           float: left;
+          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           line-height: 280%; }
           .cart-container .cart-list .cart-item .item-left-group .cart-item-left .item-price a {
@@ -54,10 +55,12 @@ body {
     line-height: 300%; }
     .cart-container .cart-total-panel .cart-total-title {
       width: 50%;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       float: left; }
     .cart-container .cart-total-panel .cart-total-money {
       width: 50%;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       float: left; }
     .cart-container .cart-total-panel .cart-total {
@@ -78,6 +81,7 @@ body {
       text-decoration: none;
       vertical-align: middle;
       margin-top: 3%;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
   .cart-container .cart-address {
     width: 90%;
@@ -99,6 +103,7 @@ body {
       margin: auto;
       display: inline-block;
       padding: 0 10px;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       .cart-container .cart-address .cart-shipping-info .form-group input {
         width: 100%;
@@ -120,26 +125,31 @@ body {
       .cart-container .cart-pay .form-group:nth-child(1) {
         width: 49%;
         display: inline-block;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box; }
       .cart-container .cart-pay .form-group:nth-child(2) {
         width: 49%;
         display: inline-block;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box; }
       .cart-container .cart-pay .form-group:nth-child(3) {
         width: 49%;
         display: inline-block;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box; }
         .cart-container .cart-pay .form-group:nth-child(3) input {
           width: 100%; }
       .cart-container .cart-pay .form-group:nth-child(4) {
         width: 30%;
         display: inline-block;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box; }
         .cart-container .cart-pay .form-group:nth-child(4) input {
           width: 40%; }
       .cart-container .cart-pay .form-group:nth-child(5) {
         width: 18%;
         display: inline-block;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box; }
         .cart-container .cart-pay .form-group:nth-child(5) input {
           width: 50%; }
@@ -150,6 +160,7 @@ body {
     text-decoration: none;
     vertical-align: middle;
     margin-top: 3%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; }
 
 .cart-bg {
@@ -166,6 +177,7 @@ body {
       max-width: 80%; }
   .cart-container .cart-list {
     width: 90%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; }
     .cart-container .cart-list .cart-item {
       width: 100%;
@@ -176,12 +188,15 @@ body {
         margin: auto; }
         .cart-container .cart-list .cart-item .item-left-group .cart-item-left div:nth-child(2) {
           width: 40%;
+          -webkit-box-sizing: border-box;
           box-sizing: border-box; }
         .cart-container .cart-list .cart-item .item-left-group .cart-item-left div:nth-child(3) {
           width: 30%;
+          -webkit-box-sizing: border-box;
           box-sizing: border-box; }
         .cart-container .cart-list .cart-item .item-left-group .cart-item-left div:nth-child(4) {
           width: 30%;
+          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           padding-right: 6%; }
         .cart-container .cart-list .cart-item .item-left-group .cart-item-left .item-price {
@@ -192,6 +207,7 @@ body {
           margin: auto; }
   .cart-total-panel {
     width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block; }
     .cart-total-panel .cart-total {
@@ -213,6 +229,7 @@ body {
     border: none; }
   .cart-total-panel {
     width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; }
     .cart-total-panel .cart-total {
       text-align: right; }

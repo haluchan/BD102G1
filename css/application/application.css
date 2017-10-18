@@ -1,3 +1,7 @@
+@charset "UTF-8";
+body {
+  background-image: url("../../src/image/cart/cart-bg.png"); }
+
 .tabmenu {
   width: 100%;
   background-color: #e9dcb0; }
@@ -86,7 +90,7 @@
     text-align: center;
     position: relative; }
     .container form .stepContent:first-child {
-      background-color: white; }
+      background-color: transparent; }
     @media screen and (max-width: 767px) {
       .container form .stepContent#hidden {
         display: none; } }
@@ -108,19 +112,30 @@
           width: 20%;
           left: -5%;
           top: -35px; } }
+    .container form .stepContent .btn_brown {
+      font-weight: normal; }
     .container form .stepContent table {
       margin: auto; }
       .container form .stepContent table tr {
-        height: 50px;
+        height: 60px;
         text-align: left; }
       .container form .stepContent table input {
-        height: 30px;
-        border-radius: 6px;
-        border: none;
-        padding: 5px;
-        background-color: rgba(255, 255, 255, 0.9); }
+        border: 1px solid #759944;
+        color: #759944;
+        background-color: #FFF;
+        height: auto;
+        padding-left: 3.5%;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 2;
+        vertical-align: middle;
+        display: inline-block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 5px; }
       .container form .stepContent table th {
-        font-weight: normal; }
+        font-weight: normal;
+        font-size: 20px; }
       .container form .stepContent table td {
         text-align: center; }
       .container form .stepContent table .gender {
@@ -128,6 +143,11 @@
         display: inline-block;
         line-height: 30px;
         vertical-align: middle; }
+      @media screen and (max-width: 767px) {
+        .container form .stepContent table input {
+          font-size: 14px; }
+        .container form .stepContent table th {
+          font-size: 16px; } }
     .container form .stepContent .upItem {
       width: 80%;
       margin: auto;
@@ -180,10 +200,8 @@
       .two .applicationTitle .item h1, .three .applicationTitle .item h1 {
         text-align: left; }
   .two form, .three form {
-    margin: 50px auto;
     padding: 50px 0;
     background-color: #ece7d4;
-    font-weight: bold;
     font-size: 20px; }
     .two form .table, .three form .table {
       width: 80%;
@@ -209,17 +227,27 @@
           .two form .table .tr .td label, .three form .table .tr .td label {
             font-size: 18px; }
           .two form .table .tr .td input, .three form .table .tr .td input {
-            border-radius: 6px;
-            outline: none;
-            border: none;
-            padding: 5px;
-            background-color: rgba(255, 255, 255, 0.9);
-            height: 30px; }
+            border: 1px solid #759944;
+            color: #759944;
+            background-color: #FFF;
+            height: auto;
+            padding-left: 3.5%;
+            font-size: 18px;
+            font-family: '微軟正黑體';
+            font-weight: bold;
+            line-height: 2;
+            vertical-align: middle;
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 5px; }
           .two form .table .tr .td textarea, .three form .table .tr .td textarea {
             background-color: rgba(255, 255, 255, 0.9);
             outline: none;
             border: none;
             border-radius: 6px; }
+          .two form .table .tr .td #photo, .three form .table .tr .td #photo {
+            width: 80%; }
           @media screen and (max-width: 767px) {
             .two form .table .tr .td, .three form .table .tr .td {
               display: block;
@@ -234,9 +262,11 @@
     left: 0;
     right: 0;
     margin: auto;
-    text-align: center; }
+    text-align: center;
+    margin: 10% auto; }
 
 .feedback {
+  display: none;
   width: 100%;
   background-color: #ece7d4;
   color: #51504d;
@@ -261,24 +291,31 @@
       .feedback .feedbackCotent {
         text-align: center; } }
 
-.navbarli {
-  display: inline-block;
-  font-size: 24px;
-  background-color: #fff;
-  color: #699c33;
-  padding: 2px 2vw;
-  /* border-radius: 10%; */
-  /* margin: 0 2%; */
-  /* width: 100%; */ }
-
-.navbarli:hover {
-  background-color: #699c33;
-  color: #fff;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s; }
-
 .navbar {
   text-align: center;
   width: 100%;
   margin-top: 10%; }
+  .navbar .navbarli {
+    display: inline-block;
+    font-size: 24px;
+    background-color: #fff;
+    color: #699c33;
+    padding: 2px 2vw;
+    border: 2px solid #699c33;
+    cursor: pointer;
+    /* border-radius: 10%; */
+    /* margin: 0 2%; */
+    /* width: 100%; */ }
+    .navbar .navbarli:hover {
+      background-color: #699c33;
+      color: #fff;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+  @media screen and (max-width: 767px) {
+    .navbar {
+      padding-top: 15%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+      .navbar .navbarli {
+        font-size: 18px; } }

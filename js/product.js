@@ -11,8 +11,7 @@ function proSreenWidth(){
 	}else{      //手機版
 		//點到跳出燈箱顯示種子資訊
 		proMobileClickSeed();
-		//魚缸資訊滑動--外掛
-		proTankDetail();
+		//魚缸資訊滑動--外掛--在php檔裡面
 	}
 }
 
@@ -37,7 +36,15 @@ function $qsa(qsa){
 		}else{ //已存在則計算數量	
 			var itemString = storage.getItem('addItemList');
 			var items = itemString.substr(0 , itemString.length-2).split(', ');
-			document.getElementById('cart').innerText =  items.length;
+			var eachCart = $qsa('.cartNo');
+			for (var j = 0; j<eachCart.length; j++){
+				if(items ==""){
+					eachCart[j].innerText = 0;			    
+				}else{
+					eachCart[j].innerText =  items.length;
+				}	
+			}
+					
 		}
 
 
@@ -55,12 +62,8 @@ function $qsa(qsa){
 
 
 
-	// 2.把資料存進storage+更改購物車數字
-	function proAddItem( proId , proInfo , e){
-		//取消泡泡現象
-		// e ? e.stopPropagation() : window.event.cancelBubble = true;
-			// alert('有了喔！');
-		
+	// 2.按下去後，把資料存進storage+更改購物車數字
+	function proAddItem( proId , proInfo , e){		
 		//1.將購買訊息存入storage中
 		if (storage[proId]){
 			alert('購物車裡已經有了喔！');
@@ -72,7 +75,12 @@ function $qsa(qsa){
 		//2.更改購物車數字
 		var itemString = storage.getItem('addItemList');
 		var items = itemString.substr(0 , itemString.length-2).split(', ');
-		document.getElementById('cart').innerText =  items.length;
+		var eachCart = $qsa('.cartNo');
+		for (var j = 0; j<eachCart.length; j++){
+			eachCart[j].innerText = items.length;
+		}
+
+		// document.getElementById('cart').innerText =  items.length;
 	}
 
 //==========================================================================================
@@ -127,44 +135,49 @@ function $qsa(qsa){
 //==========================================================================================
 
 //點到跳出燈箱顯示種子資訊
-//1.每個種子li建立事件聆聽功能
-function proMobileClickSeed(){
-	var lists = document.querySelectorAll('.pro_s_white');
-	for (var i=0; i<lists.length; i++){
-		lists[i].addEventListener('click' ,proMobileInfoMove, false);
+	//1.每個種子li建立事件聆聽功能
+	function proMobileClickSeed(){
+		var lists = document.querySelectorAll('.pro_s_white');
+		for (var i=0; i<lists.length; i++){
+			lists[i].addEventListener('click' ,proMobileInfoMove, false);
+		}
 	}
-}
-//2.移動code
-function proMobileInfoMove(e){
+	//2.移動code
+	function proMobileInfoMove(e){
 
-	//抓到要複製或是移動的code
-	// alert(e.target.innerHTML);
-	var moveFrom = e.target.innerHTML;
-	var code = '<div class="pro_s_white"><span class="iii" id="iii_close"><img src="src/image/login/pop_close.png"></span>' + moveFrom +'</div>';
-		
+		//抓到要複製或是移動的code
+		// alert(e.target.innerHTML);
+		var moveFrom = e.target.innerHTML;
+		var code = '<div class="pro_s_white"><span class="iii" id="iii_close"><img src="src/image/login/pop_close.png"></span>' + moveFrom +'</div>';
+			
 
-	//抓到目標位置
-	var moveTo = document.querySelector('#pro_s_mobileInfo');
-	//把資料放入燈箱資料區
-	moveTo.innerHTML = code;
-	//把燈箱打開
-	moveTo.style.display = 'block';
+		//抓到目標位置
+		var moveTo = document.querySelector('#pro_s_mobileInfo');
+		//把資料放入燈箱資料區
+		moveTo.innerHTML = code;
 
-	//加入購物車
-	$qs('#pro_s_mobileInfo .addButton').addEventListener('click', function(){
-		var proInfo = document.querySelector('#' + this.id + ' input').value;
-		// alert('55555');
-		
-		// 執行另一個函數，資料帶過去
-		proAddItem( this.id , proInfo);
-	},false);
+		//把燈箱打開
+		moveTo.style.display = 'block';
+
+		//加入購物車
+		$qs('#pro_s_mobileInfo .addButton').addEventListener('click', function(){
+			var proInfo = document.querySelector('#' + this.id + ' input').value;
+			// alert('55555');
+			
+			// 執行另一個函數，資料帶過去
+			proAddItem( this.id , proInfo);
+			proCloseLightbox();
+		},false);
 
 
-	// 關掉燈箱
-	$id('iii_close').addEventListener('click', function(){
-		$qs('#pro_s_mobileInfo').style.display = 'none';
-	},false);
-}
+		// 關掉燈箱
+		$id('iii_close').addEventListener('click',proCloseLightbox ,false);
+	}
+
+//關掉燈箱
+  function proCloseLightbox(){
+  	$qs('#pro_s_mobileInfo').style.display = 'none';
+  }
 
 //==========================================================================================
 
@@ -191,36 +204,42 @@ function proMobileInfoMove(e){
 
 //==========================================================================================
 
-//魚缸詳細資料輪播
-	function proTankDetail(){	
+//購物車圖示，scroll時的觸發效果--jQ
+//有空再改成tweenmax
+  // $(document).ready(function(){
+ //  	var fixed = false; //false:從上往下；true:從下往上
+	// $(window).scroll(function(){
+	// 	var scrollValue = $(this).scrollTop();
+	// 	var anchor = 24;
+	// 	// console.log(scrollValue);
+	// 	if (window.innerWidth > 767) {  //PC的效果
+	// 		$('#cartCircle').addClass('cartAnimatPc');
+	// 		if (scrollValue > anchor) {  
+	// 			if(!fixed){ //尚未被fix就加
+	// 				$('.cartAnimatPc').css({
+	// 					'display'  : 'block',
+	// 					'animation': 'cartPc 1s -.1s cubic-bezier(.14,.87,.25,.7) reverse;'
+	// 				});
+	// 				fixed = true;
+	// 			}
+	// 		}else{  //由下往上
+	// 			$('.cartAnimatPc').css({
+	// 				'animation': 'cartPc 1s cubic-bezier(.14,.87,.25,.7)',
+	// 				// 'display'  : 'none'
+	// 			});
+	// 			fixed = false;
+	// 		}
 
-		$('.pro_t_imgGroup').slick({
-		  centerMode: true,
-		  centerPadding: '60px',
-		  slidesToShow: 3,
-		  responsive: [
-		    {
-		      breakpoint: 768,
-		      settings: {
-		        arrows: false,
-		        centerMode: true,
-		        centerPadding: '40px',
-		        slidesToShow: 3
-		      }
-		    },
-		    {
-		      breakpoint: 480,
-		      settings: {
-		        arrows: false,
-		        centerMode: true,
-		        centerPadding: '0',
-		        slidesToShow: 1
-		      }
-		    }
-		  ]
-		});
+	// 	}else{ //mobile效果
+	// 		$('#cartCircle').addClass('cartAnimatMobile');
 
-	}
+	// 	}
+	// });
+
+
+  // });
+
+
 
 
 
