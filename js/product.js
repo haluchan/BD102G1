@@ -36,11 +36,15 @@ function $qsa(qsa){
 		}else{ //已存在則計算數量	
 			var itemString = storage.getItem('addItemList');
 			var items = itemString.substr(0 , itemString.length-2).split(', ');
-			if(items ==""){
-				$id('cart').innerText = 0;			    
-			}else{
-				$id('cart').innerText =  items.length;
-			}			
+			var eachCart = $qsa('.cartNo');
+			for (var j = 0; j<eachCart.length; j++){
+				if(items ==""){
+					eachCart[j].innerText = 0;			    
+				}else{
+					eachCart[j].innerText =  items.length;
+				}	
+			}
+					
 		}
 
 
@@ -162,14 +166,18 @@ function $qsa(qsa){
 			
 			// 執行另一個函數，資料帶過去
 			proAddItem( this.id , proInfo);
+			proCloseLightbox();
 		},false);
 
 
 		// 關掉燈箱
-		$id('iii_close').addEventListener('click', function(){
-			$qs('#pro_s_mobileInfo').style.display = 'none';
-		},false);
+		$id('iii_close').addEventListener('click',proCloseLightbox ,false);
 	}
+
+//關掉燈箱
+  function proCloseLightbox(){
+  	$qs('#pro_s_mobileInfo').style.display = 'none';
+  }
 
 //==========================================================================================
 
@@ -197,19 +205,39 @@ function $qsa(qsa){
 //==========================================================================================
 
 //購物車圖示，scroll時的觸發效果--jQ
-  $(document).ready(function(){
-  
-	$(window).scroll(function(){
-		var scrollValue = $(this).scrollTop();
-		var anchor = 24;
-		console.log(scrollValue);
-	});
-  
+//有空再改成tweenmax
+  // $(document).ready(function(){
+ //  	var fixed = false; //false:從上往下；true:從下往上
+	// $(window).scroll(function(){
+	// 	var scrollValue = $(this).scrollTop();
+	// 	var anchor = 24;
+	// 	// console.log(scrollValue);
+	// 	if (window.innerWidth > 767) {  //PC的效果
+	// 		$('#cartCircle').addClass('cartAnimatPc');
+	// 		if (scrollValue > anchor) {  
+	// 			if(!fixed){ //尚未被fix就加
+	// 				$('.cartAnimatPc').css({
+	// 					'display'  : 'block',
+	// 					'animation': 'cartPc 1s -.1s cubic-bezier(.14,.87,.25,.7) reverse;'
+	// 				});
+	// 				fixed = true;
+	// 			}
+	// 		}else{  //由下往上
+	// 			$('.cartAnimatPc').css({
+	// 				'animation': 'cartPc 1s cubic-bezier(.14,.87,.25,.7)',
+	// 				// 'display'  : 'none'
+	// 			});
+	// 			fixed = false;
+	// 		}
+
+	// 	}else{ //mobile效果
+	// 		$('#cartCircle').addClass('cartAnimatMobile');
+
+	// 	}
+	// });
 
 
-
-
-  });
+  // });
 
 
 

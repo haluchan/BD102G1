@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <a href="cart.php"><div class="cart cartNo cartAnimatMobile">0</div></a>
+    <a href="cart.php"><div class="cart cartNo" id="cartCircle">0</div></a>
     <?php require_once('Header.php') ?> 
 
     <div class="pro_container">
