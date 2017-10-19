@@ -1,5 +1,5 @@
 
-	<link rel="stylesheet" type="text/css" href="CSS/headerFooter.css">
+	
 	
 
 	<footer class="col-xs-12 backgroundimg">

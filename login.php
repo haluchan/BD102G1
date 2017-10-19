@@ -1,9 +1,6 @@
 
-<link rel="stylesheet" type="text/css" href="css/login.css" >
 
-	<section>
- 		
-	</section>
+
 	
 	<div class="lightbox-bg" id="lightbox-bg">
 		<div class="lightbox-target" id="login">
