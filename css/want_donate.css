@@ -157,6 +157,12 @@ body {
   margin-top: 3%;
 }
 
+@media screen and (max-width: 767px) {
+  .want_donate {
+    margin-top: 18%;
+  }
+}
+
 .want_donate .donate_title {
   text-align: center;
   line-height: 1.8;
@@ -382,7 +388,6 @@ body {
 }
 
 .want_donate .donate_back .pay_way_click + .pay_way_label {
-  z-index: 1;
   border: 1px solid #759944;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
@@ -398,32 +403,34 @@ body {
   padding: 1.5%;
   border: 1px solid #ccc;
   margin-top: 2.5%;
-}
-
-.want_donate .donate_back .donate_detail .mem_info td {
-  padding: 10px;
+  box-sizing: border-box;
 }
 
 .want_donate .donate_back .donate_detail .mem_info td .td_input {
   width: 100%;
-  padding: 5px;
+  padding: 15px;
   box-sizing: border-box;
   border: none;
 }
 
+.want_donate .donate_back .donate_detail .mem_info td .ym {
+  padding: 14px;
+  box-sizing: border-box;
+  width: 80px;
+}
+
+@media screen and (max-width: 767px) {
+  .want_donate .donate_back .donate_detail .mem_info td .ym {
+    width: 40px;
+    border: 0px;
+  }
+}
+
 .want_donate .donate_back .donate_detail .mem_info .td_title {
   width: 90px;
+  padding: 10px;
   background-color: #F9F9F9;
   letter-spacing: 2px;
-}
-
-.want_donate .donate_back .donate_detail .mem_info .td_icon {
-  width: 20px;
-  text-align: center;
-}
-
-.want_donate .donate_back .donate_detail .mem_info .td_icon .fa {
-  color: #444;
 }
 
 .want_donate .donate_back .donate_detail .pay_for_card, .want_donate .donate_back .donate_detail .pay_for_atm {

@@ -9,17 +9,27 @@ $(function(){
 				'display':'none'
 			});
 			$('.pay_for_card').css({
-				'display':'block'
+				'display':''
 			});
 		}else{
 			$('.pay_for_card').css({
 				'display':'none'
 			});
 			$('.pay_for_atm').css({
-				'display':'block'
+				'display':''
 			});
 		}
 	});
 
 
+//=========================================
+
+
+			
+
+
+
+
 })
+
+

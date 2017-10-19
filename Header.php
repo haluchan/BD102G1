@@ -1,15 +1,8 @@
 
-	<link rel="stylesheet" href="css/font.css">
-	<link rel="stylesheet" href="css/header.css">
-	<script src="src/libs/jquery/dist/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/login.css" >
-	<!-- <script src="js/change.js"></script> -->
-	<!-- <script src="js/jquery-3.2.1.min.js"></script> -->
-	<script src="js/change_SVG_color.js"></script>
-	<!-- <script src="js/header.js"></script> -->
+
 	
 		<!-- <?php require_once('login.php'); ?> -->
-	    <header>
+	    <header class="header">
 	    	<div class="topmenu">
 	    		<ul>	
 	    			<li><a href="cart.php">購物車<span class="cartNo" id="cart">1</span></a></li>
