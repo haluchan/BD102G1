@@ -44,46 +44,11 @@ body{
 .event-banner{
 	width:100%;
 	margin:auto;
-	.slides{
-		max-width: 1440px;
-		margin:auto;
-		
-
-		.slick-prev{
-			// display:none;
-			&::before{
-				display:none;
-				content:url("../src/image/event-inside-page/controls-left.png");
-				position:absolute;
-				z-index: 50;
-				left:0;
-				
-
-			}
-		}
-		.slick-arrow{
+	margin-top:0px;
+		.slick-slide{
 			
-		}
-		div{
-			width: 100%;
-			margin:auto;
-			position:relative;
-				z-index:-1;
-			img{
-				width: 100%;
-				
-			}
-		}
-		.slick-next{
-			// display:none;
-			&::before{
-				display:none;
-				content:url("../src/image/event-inside-page/controls-right.png");
-				position:absolute;
-				z-index: 50;
-				right:0px;
-				
-			}
+		img {
+			width:100%;
 		}
 	}
 
@@ -96,6 +61,7 @@ body{
 .event{
 	max-width:100%;
 	margin:auto;
+	margin-top:0px;
 }
 .main-bg{
 	background-image: url("../src/image/event-inside-page/tree-head-L.png"),url("../src/image/event-inside-page/tree-head-R.png");
@@ -267,6 +233,7 @@ body{
 			}		
 			.event-map-right{
 				max-width: 800px;
+				height:500px;
 				margin-left:500px;
 				img{
 					width: 100%;
@@ -305,6 +272,7 @@ body{
 				width: 100%;
 				border-radius:50%;
 				box-sizing:border-box;
+				transition: all 0.3s ease-out;
 
 				&:hover{
 				transform: scale(1.1, 1.1);
@@ -484,6 +452,9 @@ body{
 	}
 } 
 @include rwd (mobile) {
+	.event-banner{
+		margin-top:0px;
+	}
 	.main-bg{
 		background-size: 54px auto,70px auto;
 		.event-row{

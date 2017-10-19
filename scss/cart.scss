@@ -8,7 +8,11 @@ body{
 	max-width:1300px;
 	// height: 100vw;
 	margin: auto;
-	margin-top:30px;
+	margin-top:10%;
+
+	
+
+
 	.cart-title{
 		width:322px;
 		margin: auto;
@@ -54,7 +58,22 @@ body{
 						padding-left: 10px;
 						float: left;
 						line-height: 280%;
-					
+						input{
+						border: 1px solid #759944;
+						color: #759944;
+						background-color: #FFF;
+						margin: 0 15px 0 0;
+						padding-left: 3%;
+						font-size: 26px;
+						font-weight: bold;
+						// line-height: 2;
+						vertical-align: middle;
+						display: inline-block;
+						box-sizing: border-box;
+						border-radius: 5px;
+						outline:none;
+
+							}
 					}
 					.item-price{
 						width:18%;
@@ -94,6 +113,11 @@ body{
 			.cart-total{
 				border-top:solid 1px #bbb;
 				clear: both; 
+					span{
+					color:#f00;
+					font-size:20px;
+					font-weight:800;
+				}
 				@include rwd("desktop") {
 			text-align: right;
 			}
@@ -143,12 +167,30 @@ body{
 				width: 49%;
 				margin:auto;
 				display:inline-block;
-				padding:0 10px;
+				padding:10px 10px;
 				box-sizing:border-box;
-				 input{
+				.required{
+					margin-bottom:10px;
+				}
+				 .form-control{
 				 	width:100%;
 				 	margin:4px 0;
 				 	height: 20px;
+				 	border: 1px solid #759944;
+					color: #759944;
+					background-color: #FFF;
+					margin: 5px 15px 10px 0;
+					padding-left: 3.5%;
+					padding-top:15px;
+					padding-bottom:15px;
+					font-size: 26px;
+					font-weight: bold;
+					line-height: 2;
+					vertical-align: middle;
+					display: inline-block;
+					box-sizing: border-box;
+					border-radius: 5px;
+					outline:none;
 				 }	
 			}
 
@@ -169,7 +211,7 @@ body{
 		}
 		@include rwd("mobile") {}
 		.form-group{
-			padding:0 10px 0;
+			padding:20px 10px 0;
 			&:nth-child(1){
 				width: 49%;
 				display:inline-block;
@@ -208,6 +250,27 @@ body{
 				}
 
 			}
+			 .form-control{
+				 	width:100%;
+				 	margin:4px 0;
+				 	height: 20px;
+				 	border: 1px solid #759944;
+					color: #759944;
+					background-color: #FFF;
+					margin: 5px 15px 10px 0;
+					padding-left: 3.5%;
+					padding-top:15px;
+					padding-bottom:15px;
+					font-size: 26px;
+					font-weight: bold;
+					line-height: 2;
+					vertical-align: middle;
+					display: inline-block;
+					box-sizing: border-box;
+					border-radius: 5px;
+					outline:none;
+
+				 }	
 		}
 	}
 	.btn_green{
@@ -218,6 +281,7 @@ body{
 		   vertical-align: middle;
 		   margin-top:3%;
 		   box-sizing: border-box;	
+		   outline:none;
 		}
 }
 .cart-bg{
@@ -230,6 +294,7 @@ body{
 
 @include rwd("mobile") {
 	.cart-container{
+		margin-top:18%;
 		.cart-title{
 			text-align:center;
 			width:100%;
@@ -289,6 +354,7 @@ body{
 		display:inline-block;
 		.cart-total{
 			text-align:center;
+
 		}
 	}
 
@@ -297,6 +363,7 @@ body{
 			.cart-shipping-info{
 				.form-group{
 					width: 96%;
+					
 				}
 			}
 		}
@@ -330,6 +397,7 @@ body{
 
 @include rwd("tablet") {
 	.cart-container{
+		margin-top:10%;
 		.cart-list{
 			.cart-item{
 			width:100%;

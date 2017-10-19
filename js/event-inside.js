@@ -5,6 +5,61 @@
  * @version $Id$
  */
 
+$(document).ready(function(){
+
+
+
+
+
+
+
+//slick
+
+        $('.slides').slick({
+          // setting-name: setting-value
+          infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+          autoplay: true,
+          mobileFirst: true,
+          pauseOnFocus: true,
+          arrows:false,
+          dots: true,
+          centerPadding: '0px',
+          // centerMode: true,
+          responsive: [
+            // {
+            //   breakpoint: 1024,
+            //   settings: {
+            //     slidesToShow: 3,
+            //     slidesToScroll: 3,
+            //     infinite: true,
+            //     dots: true
+            //   }
+            // },
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+
+     
+
+
+//ScrollMagic
+
+
 var controller = new ScrollMagic.Controller();//寫一個共用就可，不然會重複出現
 //tween
     var tween_1 = TweenMax.staggerFromTo('.event-ins-item1', .8, {
@@ -99,3 +154,4 @@ var scene_2 = new ScrollMagic.Scene({
         })  
    .addTo(controller);
 
+ });

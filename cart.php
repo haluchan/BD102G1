@@ -80,7 +80,7 @@
 			</div>
 		</div>
 		<div class="keep-shopping">
-				<input type="submit" class="btn_green" value="繼續購物">
+				<button type="submit" class="btn_green" value="">繼續購物</button>
 		</div>
 		<!-- 運送地址 -->
 
@@ -129,6 +129,7 @@
 			<h2>付款方式</h2>
 			<form action="cart_submit" method="get" accept-charset="utf-8">
 				<div class="form-group">
+					<span>選擇付款方式</span>
 					<select name="pay-way" >
 						<option value="card">信用卡</option>
 						<option value="trans">轉帳</option>
@@ -143,22 +144,22 @@
 				</div>
 				<div class="form-group">
 					<span>卡號</span><br>
-					<input type="text" name="" value="" placeholder="">
+					<input type="text" class="form-control" name="" value="" placeholder="">
 					
 				</div>
 				<div class="form-group">
 					<span>有效日期</span><br>
-					<input type="text" name="" value="" placeholder="">
-					<input type="text" name="" value="" placeholder="">
+					<input type="text" class="form-control" name="" value="" placeholder="">
+					<input type="text" class="form-control" name="" value="" placeholder="">
 				</div>
 				<div class="form-group">
 					<span>後三碼</span><br>
-					<input type="text" name="" value="" placeholder="">
+					<input type="text" class="form-control" name="" value="" placeholder="">
 				</div>
 				
 			</form>
 		</div>
-		<input type="submit" class="btn_green" name="" value="結帳">
+		<button type="submit" class="btn_green" name="" value="">結帳</button>
 		</div>
 		<div class="clear"></div>
     </div>
