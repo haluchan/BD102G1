@@ -84,7 +84,9 @@
 			<a href="#">
 				<div class="img">
 					<img src="src/image/event/06.jpg" alt="">
-
+				<!-- 	<a href="#" class="imgtext">詳細資料</a> -->
+							
+				
 				</div>	
 		</a>
 			<div class="balloon">
@@ -214,10 +216,13 @@
 <div class="titleblocks">
 		<div class="titletexts">
 				<h2>活動紀錄</h2>
-				<img src="src/image/event/sankaku_garland4.png" alt="">
+				<!-- <img src="src/image/event/sankaku_garland4.png" alt=""> -->
 			</div>
+			<img class=" bglineyama" src="src/image/event/bg_line_yama_white.png" alt="">
 </div>	
 <!-- ================ -->
+<div class="bgyama">
+</div>
 <div class="thirdblock" >
 	
 	<div class="thirdblockin">
