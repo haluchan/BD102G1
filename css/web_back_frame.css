@@ -12,6 +12,9 @@
 .clearfix{
 	clear: both;
 }
+select{
+	outline-style: none;
+}
 nav{
 	width: 100%;
 	margin-right: 20px;
@@ -152,10 +155,11 @@ nav{
 	color: #946134;
 	position: absolute;
 	left:0px;
-	bottom: 200px;
+	bottom: 50px;
 	right: 0px;
 	background: #d7fffe;	
 	padding: 4px;
+	outline-style: none;
 }
 .content{
 	width: 1000px;
@@ -165,7 +169,7 @@ nav{
 	/* margin: 10px 20px 0 20px; */
 	display: none;
 }
-#itemClick{
+.itemClick,.slideButton{
 	display: inline-block;
 	width: 120px;
 	height: 20px;
@@ -175,8 +179,9 @@ nav{
 	font-size: 16px;
 	padding: 4px 0;
 
+
 }
-#itemClick:hover{
+.itemClick:hover,.slideButton:hover{
 	background-color:#d6d6d8;
 }
 .item li{
@@ -201,6 +206,8 @@ nav{
 }
 a{
 	cursor: pointer;
+	text-decoration: none;
+
 
 }
 button{

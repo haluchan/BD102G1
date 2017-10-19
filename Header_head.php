@@ -6,3 +6,7 @@
 	<!-- <script src="js/jquery-3.2.1.min.js"></script> -->
 	<script src="js/change_SVG_color.js"></script>
 	<!-- <script src="js/header.js"></script> -->
+
+	<link rel="stylesheet" type="text/css" href="css/sign.css" >
+	<link rel="stylesheet" type="text/css" href="css/login.css" >
+	<link rel="stylesheet" type="text/css" href="CSS/headerFooter.css">

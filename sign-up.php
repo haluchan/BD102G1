@@ -15,10 +15,14 @@
 
 
     <div class="sign-up">
+    	<div class="sign-up-bg">
+				<img src="src/image/sign-up/sign-up-bg.jpg" alt="幫助小農">
+			</div>
 		<div class="lightbox-target">
 			<div >
 				<!-- <a  id="sign-cancel"><img src="src/image/login/pop_close.png"></a> -->
 			</div>
+			
 			<div class="sign-content">
 				<h2>活動報名</h2>
 				<div class="sign-title">
@@ -48,17 +52,18 @@
 				</div>
 				<div class="sign-clear"></div>
 				<div class="btn-item">
-					<button type="submit" class="btn_green">取消</button>
 					<button type="submit" class="btn_green">
 				確定報名</button>
 				</div>
 				<div class="sign-clear"></div>
+
 			</div>
 		</div>
 		<div class="sign-clear"></div>
+
 	</div>
+<?php require_once('Footer.php'); ?>
 
-
-	<?php require_once('Footer.php'); ?>
+	
 </body>
 </html>

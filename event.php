@@ -11,7 +11,7 @@
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-
+<?php require_once('Header_head.php'); ?>
 </head>
 <body>
 	<?php require_once('Header.php'); ?>
@@ -84,7 +84,9 @@
 			<a href="#">
 				<div class="img">
 					<img src="src/image/event/06.jpg" alt="">
-
+				<!-- 	<a href="#" class="imgtext">詳細資料</a> -->
+							
+				
 				</div>	
 		</a>
 			<div class="balloon">
@@ -214,10 +216,13 @@
 <div class="titleblocks">
 		<div class="titletexts">
 				<h2>活動紀錄</h2>
-				<img src="src/image/event/sankaku_garland4.png" alt="">
+				<!-- <img src="src/image/event/sankaku_garland4.png" alt=""> -->
 			</div>
+			<img class=" bglineyama" src="src/image/event/bg_line_yama_white.png" alt="">
 </div>	
 <!-- ================ -->
+<div class="bgyama">
+</div>
 <div class="thirdblock" >
 	
 	<div class="thirdblockin">
@@ -374,6 +379,7 @@
 
 
 </div>
+<script type="text/javascript" src="js/header.js"></script>
 <script type="text/javascript" src="js/event.js"></script>
 <?php require_once('Footer.php');?>
 </body>

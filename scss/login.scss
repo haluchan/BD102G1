@@ -12,7 +12,7 @@ body{
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(0,0,0,.6);
 	z-index: 101;
 	// transition:0.6s;
 	.lightbox-target{
@@ -21,16 +21,70 @@ body{
 		height: 500px;
 		border-radius:5% 30%;
 		position: fixed;
-			top:0;
-			left:0;
-			right:0;
-			bottom:0;
-			margin:auto;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:auto;
+			.wrapper{
+				margin: 50px auto;
+  				width: 100px;
+				.button-block{
+				width: 20px;
+				  height: 20px;
+				  border-radius: 100%; 
+				  margin: 0 auto;
+				  position: relative;
+				  display: block;
+				  position: relative;
+				  border: 19px solid #F0544E;
+				  box-sizing: border-box;
+				  transition: border 600ms ease-in-out;
+				  outline:none;
+				
+					.button-x {
+					  position: absolute;
+					  left: 50%;
+					  top: 50%;
+					  width: 30px;
+					  height: 30px;
+					  background: transparent;
+					  border: 0;
+					  margin: -11px 0 0 -14px;
+					  outline:none;
+					  cursor: pointer;
+					.mark {
+					  background-color: #fff;
+					  position: absolute;
+					  height: 20px;
+					  width: 3px;
+					  display: block;
+					  top: 0;
+					  transition: all 600ms ease-in-out;
+						}
+					.x  { 
+					  right: 14px; 
+					  transform:rotate(45deg);
+					  outline:none;
+						}
+					.xx { 
+						  left: 12px; 
+						  transform:rotate(-45deg);
+						  outline:none;
+						}
+
+					}
+
+				}
+			}
+
+
 			.cancel{
 				margin:auto;
 				height: 10px;
 				margin-top:6px;
-
+				right:-45%;
+				position:relative;
 			}
 
 			h2{
@@ -151,12 +205,14 @@ body{
 				}
 			}
 			text-align:right;
-			.login-bee{
+
+	}
+	.login-bee{
 				position:relative;
 				bottom:-20px;
+				right:-72%;
 				width:50%;
 			}
-	}
 }
 
 .login-clear{
