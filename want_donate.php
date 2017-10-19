@@ -8,6 +8,8 @@
 
 <link rel="stylesheet" type="text/css" href="css/font.css">
 <link rel="stylesheet" type="text/css" href="css/want_donate.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" type="text/css" href="css/login.css" >
 <!-- web-font -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -45,7 +47,7 @@
 						<p><i class="fa fa-angle-right" aria-hidden="true"></i>資助金額<span> 最低金額為資助選項價格。可向上加碼幫助計畫加速成功。</span></p>
 					</div>
 					<span class="symbol">$</span>
-					<input class="order_sum" min="2000" name="order_sum" type="number" value="2000">
+					<input class="order_sum" min="2000" step="100" name="order_sum" type="number" value="2000">
 					<div class="title">
 						<p><i class="fa fa-angle-right" aria-hidden="true"></i>付款方式</p>
 					</div>
@@ -58,44 +60,46 @@
 					<div class="title donate_detail">
 						<p><i class="fa fa-angle-right" aria-hidden="true"></i>贊助細節</p>
 						<table class="mem_info">
-							<tr>
-								<td class="td_title">收件人姓名</td>
-								<td><input type="text" name="mem_name" class="td_input"></td>
-								<td class="td_icon"><i class="fa fa-info-circle" aria-hidden="true"></i></td>
-							</tr>
-							<tr>
-								<td class="td_title">收件人電話</td>
-								<td><input type="text" name="mem_tel" class="td_input"></td>
-								<td class="td_icon"><i class="fa fa-info-circle" aria-hidden="true"></i></td>
-							</tr>
-							<tr>
-								<td class="td_title">收件地址</td>
-								<td><input type="text" name="mem_add" class="td_input"></td>
-							</tr>
+							<tbody>
+								<tr>
+									<td class="td_title">收件人姓名</td>
+									<td><input type="text" name="mem_name" class="td_input"></td>
+								</tr>
+								<tr>
+									<td class="td_title">收件人電話</td>
+									<td><input type="text" name="mem_tel" class="td_input"></td>
+								</tr>
+								<tr>
+									<td class="td_title">收件地址</td>
+									<td><input type="text" name="mem_add" class="td_input"></td>
+								</tr>
+							</tbody>
 						</table>
+
 						<table class="mem_info pay_for_card">
-							<tr>
-								<td class="td_title">持卡人姓名</td>
-								<td><input type="text" name="card_name" class="td_input"></td>
-							</tr>
-							<tr>
-								<td class="td_title">交易金額</td>
-								<td>NT $2,000 元</td>
-							</tr>
-							<tr>
-								<td class="td_title">信用卡號</td>
-								<td><input type="text" name="card_number" class="td_input" placeholder="0000-0000-0000-0000"></td>
-							</tr>
-							<tr>
-								<td class="td_title">到期日</td>
-								<td>月(MM)<input type="number" name="mm">/年(YY)<input type="number" name="yy"></td>
-							</tr>
+							<tbody>
+								<tr>
+									<td class="td_title">持卡人姓名</td>
+									<td><input type="text" name="card_name" class="td_input"></td></tr>
+								<tr>
+									<td class="td_title">交易金額</td>
+									<td> NT $2,000 元</td>
+								</tr>
+								<tr>
+									<td class="td_title">信用卡號</td>
+									<td><input type="text" name="card_number" class="td_input" placeholder="0000-0000-0000-0000"></td>
+								</tr>
+								<tr>
+									<td class="td_title">到期日</td>
+									<td> 月(MM)<input type="number" name="mm" class="ym"> / 年(YY)<input type="number" name="yy" class="ym"></td>
+								</tr>
+							</tbody>
 						</table>
 
 						<table class="mem_info pay_for_atm">
 							<tr>
 								<td class="td_title">匯款戶名</td>
-								<td>即刻菜援線上金流股份有限公司</td>
+								<td>即刻菜援股份有限公司</td>
 							</tr>
 							<tr>
 								<td class="td_title">銀行代碼</td>

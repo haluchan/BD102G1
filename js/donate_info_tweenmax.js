@@ -113,10 +113,16 @@ $(function() {
 	$(window).bind('scroll', function () {
 	    if ($(window).scrollTop() > 675) {
 	        $('.main-nav').addClass('fixed');
+	        $("header").css({
+	        	"display":"none"
+	        });
 
 	    }
 	    else{
 	    	$('.main-nav').removeClass('fixed');
+	    	 $("header").css({
+	        	"display":"block"
+	        });
 	    }
 	});
 

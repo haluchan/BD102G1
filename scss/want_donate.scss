@@ -32,6 +32,9 @@ $max-width :960px;
 	max-width: $max-width;
 	margin: auto;
 	margin-top: 3%;
+	@media screen and (max-width: 767px) {
+		margin-top: 18%;
+	}
 
 	.donate_title{
 		text-align: center;
@@ -223,7 +226,6 @@ $max-width :960px;
 			border-bottom:0px;
 		}
 		.pay_way_click + .pay_way_label{
-			z-index: 1;
 			border:1px solid #759944;
 			transition: 0.3s ease-in; 
 		}
@@ -237,29 +239,32 @@ $max-width :960px;
 				padding: 1.5%;
 				border: 1px solid #ccc;
 				margin-top:2.5%;
+				box-sizing:border-box;
 				td{
-					padding: 10px;
 					.td_input{
 						width: 100%;
-						padding: 5px;
+						padding: 15px;
 						box-sizing: border-box;
 						border: none;
+					}
+					.ym{
+						padding: 14px;
+						box-sizing:border-box;
+						width: 80px;
+						@media screen and (max-width: 767px) {
+							width: 40px;
+							border:0px;
+						}
 					}
 
 				}
 				.td_title{
 					width:90px;
+					padding: 10px;
 					background-color: #F9F9F9;
 					letter-spacing:2px;
 				}
-				.td_icon{
-					width: 20px;
-					text-align: center;
-					.fa{
-						color: #444;
-					}
-
-				}
+				
 			}
 			.pay_for_card , .pay_for_atm{
 				box-sizing:border-box;

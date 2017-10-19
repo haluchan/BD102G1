@@ -1,5 +1,9 @@
-		
-	    <header>
+
+
+	
+		<!-- <?php require_once('login.php'); ?> -->
+	    <header class="header">
+
 	    	<div class="topmenu">
 	    		<ul>	
 	    			<li><a href="cart.php">購物車<span class="cartNo">0</span></a></li>
