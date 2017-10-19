@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-	
+	<?php require_once('Header_head.php'); ?>
+	</head>
 	<body>
 	<?php require_once('Header.php'); ?>
 	<div class="titlebg">
@@ -91,7 +92,7 @@
 
 <?php require_once('Footer.php');?>
 </div>
-
+ <script type="text/javascript" src="js/header.js"></script>
 
 </body>
 </html>
