@@ -209,7 +209,6 @@
     .containerhope .section02 .section02-g3 .section02-g3-carousel .section02-g3-i2 {
       width: 88%;
       float: left;
-      -webkit-box-shadow: 0px 0px 15px 0px #ccc;
       box-shadow: 0px 0px 15px 0px #ccc;
       border-radius: 38px;
       position: relative; }
@@ -267,8 +266,6 @@
             text-decoration: none;
             cursor: pointer;
             letter-spacing: 1px;
-            -webkit-transition: .4s;
-            -o-transition: .4s;
             transition: .4s; }
           .containerhope .section02 .section02-g3 .section02-g3-carousel .section02-g3-i2 .section02-g3-i2-shadow .section02-g3-i2-btn h2:hover {
             background: #ffffff;
@@ -276,8 +273,6 @@
             color: #6cbecc;
             cursor: pointer;
             letter-spacing: 1px;
-            -webkit-transition: .4s;
-            -o-transition: .4s;
             transition: .4s; }
     .containerhope .section02 .section02-g3 .section02-g3-carousel .section02-g3-i3 {
       width: 6%;
@@ -334,8 +329,6 @@
       background: #6cbecc;
       padding: 10px 20px 10px 20px;
       cursor: pointer;
-      -webkit-transition: .4s;
-      -o-transition: .4s;
       transition: .4s;
       text-align: center; }
     .containerhope .section05 .section05-g1 ul li:hover {
@@ -344,8 +337,6 @@
       border: 2px solid #6cbecc;
       color: #6cbecc;
       cursor: pointer;
-      -webkit-transition: .4s;
-      -o-transition: .4s;
       transition: .4s; }
   .containerhope .section05 .section05-g1 img {
     left: 0;
@@ -360,7 +351,6 @@
         background-color: #fff;
         position: relative; }
         .containerhope .section05 .section05-g2-i1 .section05-g2-i1-item a .item-box .item-box-shadow {
-          -webkit-box-shadow: 0px 0px 15px 0px #ccc;
           box-shadow: 0px 0px 15px 0px #ccc;
           border-radius: 38px; }
           .containerhope .section05 .section05-g2-i1 .section05-g2-i1-item a .item-box .item-box-shadow .box-img {
@@ -396,7 +386,6 @@
               left: -1px; }
           .containerhope .section05 .section05-g2-i1 .section05-g2-i1-item a .item-box .item-box-shadow .box-fontt {
             padding: 4%;
-            -webkit-box-sizing: border-box;
             box-sizing: border-box;
             float: left;
             padding-bottom: 6%;
@@ -511,73 +500,61 @@
   .col-sm-1 {
     float: left;
     width: 8.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-2 {
     float: left;
     width: 16.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-3 {
     float: left;
     width: 25%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-4 {
     float: left;
     width: 33.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-5 {
     float: left;
     width: 41.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-6 {
     float: left;
     width: 50%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-7 {
     float: left;
     width: 58.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-8 {
     float: left;
     width: 66.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-9 {
     float: left;
     width: 75%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-10 {
     float: left;
     width: 83.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-11 {
     float: left;
     width: 91.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-12 {
     float: left;
     width: 100%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   h4 {
@@ -587,73 +564,61 @@
   .col-xs-1 {
     float: left;
     width: 8.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-2 {
     float: left;
     width: 16.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-3 {
     float: left;
     width: 25%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-4 {
     float: left;
     width: 33.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-5 {
     float: left;
     width: 41.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-6 {
     float: left;
     width: 50%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-7 {
     float: left;
     width: 58.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-8 {
     float: left;
     width: 66.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-9 {
     float: left;
     width: 75%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-10 {
     float: left;
     width: 83.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-11 {
     float: left;
     width: 91.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-12 {
     float: left;
     width: 100%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0; }
   .containerhope {
@@ -665,7 +630,6 @@
     .containerhope .hopefarmrwd-select {
       display: block;
       width: 100%;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       padding-top: 25px;
       position: fixed;
@@ -690,8 +654,6 @@
             text-decoration: none;
             cursor: pointer;
             letter-spacing: 1px;
-            -webkit-transition: .4s;
-            -o-transition: .4s;
             transition: .4s; }
     .containerhope .section02 {
       display: none; }
