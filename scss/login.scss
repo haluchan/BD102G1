@@ -40,6 +40,7 @@ body{
 				  border: 19px solid #F0544E;
 				  box-sizing: border-box;
 				  transition: border 600ms ease-in-out;
+				  outline:none;
 				
 					.button-x {
 					  position: absolute;
@@ -64,10 +65,12 @@ body{
 					.x  { 
 					  right: 14px; 
 					  transform:rotate(45deg);
+					  outline:none;
 						}
 					.xx { 
 						  left: 12px; 
 						  transform:rotate(-45deg);
+						  outline:none;
 						}
 
 					}

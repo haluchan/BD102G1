@@ -32,7 +32,8 @@
         position: relative;
         border: 19px solid #F0544E;
         box-sizing: border-box;
-        transition: border 600ms ease-in-out; }
+        transition: border 600ms ease-in-out;
+        outline: none; }
         .lightbox-bg .lightbox-target .wrapper .button-block .button-x {
           position: absolute;
           left: 50%;
@@ -56,12 +57,14 @@
             right: 14px;
             -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
-            transform: rotate(45deg); }
+            transform: rotate(45deg);
+            outline: none; }
           .lightbox-bg .lightbox-target .wrapper .button-block .button-x .xx {
             left: 12px;
             -webkit-transform: rotate(-45deg);
             -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
+            transform: rotate(-45deg);
+            outline: none; }
     .lightbox-bg .lightbox-target .cancel {
       margin: auto;
       height: 10px;
