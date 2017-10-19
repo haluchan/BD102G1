@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		 <?php require_once('Header_head.php') ?>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -8,7 +9,7 @@
 		<title>都市小農</title>
 
 
-		<link rel="stylesheet" href="css/font.css">
+		<!-- <link rel="stylesheet" href="css/font.css"> -->
 		<link rel="stylesheet" href="css/fish/fish.css">
 
 		<!-- <script src="src/libs/jquery/dist/jquery.min.js"></script> -->
@@ -128,6 +129,7 @@
 	</div><!-- container說明內容結束 -->
 
   <?php require_once('Footer.php') ?> 
+  <script src="js/header.js"></script>
 	<script src="js/fish.js"></script> 
 </body>
 	

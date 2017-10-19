@@ -19,6 +19,7 @@ botton {
     padding: 6px 4px;
     text-align: left;
     word-break: break-all;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis; }
   .myForm tr > td:first-child {
     /*每row第一個格子(編號)固定置中，灰色*/

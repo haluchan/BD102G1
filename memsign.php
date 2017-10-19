@@ -1,9 +1,6 @@
 
-<link rel="stylesheet" type="text/css" href="css/sign.css" >
 
-	<section>
- 		
-	</section>
+
 	
 	<div class="lightbox-bg" id="sign-lightbox">
 		<div class="lightbox-target" >

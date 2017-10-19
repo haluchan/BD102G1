@@ -61,7 +61,6 @@ $(function(){
 	},{
 		y: 0,
 		opacity: 1,
-		delay:1,
 		ease: Strong.easeInOut
 	});
 	var tween_4 = TweenMax.staggerFromTo(".activity_title .h2_2",1,{
@@ -70,7 +69,6 @@ $(function(){
 	},{
 		y: 0,
 		opacity: 1,
-		delay:2,
 		ease: Strong.easeInOut
 	});
 	var tween_5 = TweenMax.staggerFromTo(".activity_title .p_3",1,{
@@ -79,7 +77,6 @@ $(function(){
 	},{
 		y: 0,
 		opacity: 1,
-		delay:3,
 		ease: Strong.easeInOut
 	});
 	var tween_6 = TweenMax.staggerFromTo(".activity_info",1,{
@@ -88,7 +85,6 @@ $(function(){
 	},{
 		y: 0,
 		opacity: 1,
-		delay:4,
 		ease: Strong.easeInOut
 	});
 
@@ -143,9 +139,10 @@ $(function(){
 	})
 	.addTo(controller);
 
+	$('header').addClass('db');
 
 	$(window).bind('scroll', function () {
-	    if ($(window).scrollTop() < 675) {
+	    if ($(window).scrollTop() < 667) {
 	        $('header').addClass('db');
 	    }
 	    else{
@@ -153,6 +150,24 @@ $(function(){
 	    }
 	});
 
+//=========================================
+
+
+	// $('#fullpage').fullpage({
+	// 	anchors: ['section1', 'section2', 'section3', 'section4','section5'],
+	// 	continuousVertical: true,
+	//     navigation: true,
+	//     // navigationPosition: 'left',
+		
+	// 	easingcss3: 'ease',
+	//     scrollOverflow: true,
+	//     recordHistory: false,
+	//     touchSensitivity: 35,
+
+
+	// 	 verticalCentered: false,
+	// });
+		
 
 
 
