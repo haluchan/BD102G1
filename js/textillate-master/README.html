@@ -1,0 +1,140 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="textillate-js-v0-4-1-js-org-https-img-shields-io-badge-js-org-textillate-ffb400-svg-style-flat-square-http-js-org-">Textillate.js v0.4.1  <a href="http://js.org"><img src="https://img.shields.io/badge/js.org-textillate-ffb400.svg?style=flat-square" alt="JS.ORG"></a></h1>
+<p>See a live demo <a href="http://textillate.js.org/">here</a>.</p>
+<p>Textillate.js combines some awesome libraries to provide an easy-to-use plugin for applying CSS3 animations to any text.</p>
+<h2 id="usage">Usage</h2>
+<p>Let&#39;s start with the basic markup:</p>
+<pre><code class="lang-html">&lt;h1 class=&quot;tlt&quot;&gt;My Title&lt;/h1&gt;
+</code></pre>
+<p>And your JavaScript should look like this:</p>
+<pre><code class="lang-js">$(function () {
+    $(&#39;.tlt&#39;).textillate();
+})
+</code></pre>
+<p>This will animate using the default options. To change the defaults, you can either use the html data api:</p>
+<pre><code class="lang-html">&lt;h1 class=&quot;tlt&quot; data-in-effect=&quot;rollIn&quot;&gt;Title&lt;/h1&gt;
+</code></pre>
+<p>or pass in options on initialization (see full list of options below):</p>
+<pre><code class="lang-js">$(&#39;.tlt&#39;).textillate({ in: { effect: &#39;rollIn&#39; } });
+</code></pre>
+<p>You can also tell textillate.js to animate a list with the following markup:</p>
+<pre><code class="lang-html">&lt;h1 class=&quot;tlt&quot;&gt;
+    &lt;ul class=&quot;texts&quot;&gt;
+        &lt;li data-out-effect=&quot;fadeOut&quot; data-out-shuffle=&quot;true&quot;&gt;Some Title&lt;/li&gt;
+        &lt;li data-in-effect=&quot;fadeIn&quot;&gt;Another Title&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/h1&gt;
+</code></pre>
+<pre><code class="lang-js">$(&#39;.tlt&#39;).textillate();
+</code></pre>
+<p>Notice that you can control the animation parameters on each text (<code>&lt;li&gt;</code>) using the data api.</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>To start using textillate.js, you will need the following:</p>
+<ul>
+<li><a href="http://jquery.com/download/">jQuery</a></li>
+<li><a href="https://github.com/davatron5000/Lettering.js">lettering.js</a></li>
+<li><a href="https://github.com/daneden/animate.css">animate.css</a></li>
+</ul>
+<h2 id="options">Options</h2>
+<pre><code class="lang-js">$(&#39;.tlt&#39;).textillate({
+  // the default selector to use when detecting multiple texts to animate
+  selector: &#39;.texts&#39;,
+
+  // enable looping
+  loop: false,
+
+  // sets the minimum display time for each text before it is replaced
+  minDisplayTime: 2000,
+
+  // sets the initial delay before starting the animation
+  // (note that depending on the in effect you may need to manually apply
+  // visibility: hidden to the element before running this plugin)
+  initialDelay: 0,
+
+  // set whether or not to automatically start animating
+  autoStart: true,
+
+  // custom set of &#39;in&#39; effects. This effects whether or not the
+  // character is shown/hidden before or after an animation
+  inEffects: [],
+
+  // custom set of &#39;out&#39; effects
+  outEffects: [ &#39;hinge&#39; ],
+
+  // in animation settings
+  in: {
+      // set the effect name
+    effect: &#39;fadeInLeftBig&#39;,
+
+    // set the delay factor applied to each consecutive character
+    delayScale: 1.5,
+
+    // set the delay between each character
+    delay: 50,
+
+    // set to true to animate all the characters at the same time
+    sync: false,
+
+    // randomize the character sequence
+    // (note that shuffle doesn&#39;t make sense with sync = true)
+    shuffle: false,
+
+    // reverse the character sequence
+    // (note that reverse doesn&#39;t make sense with sync = true)
+    reverse: false,
+
+    // callback that executes once the animation has finished
+    callback: function () {}
+  },
+
+  // out animation settings.
+  out: {
+    effect: &#39;hinge&#39;,
+    delayScale: 1.5,
+    delay: 50,
+    sync: false,
+    shuffle: false,
+    reverse: false,
+    callback: function () {}
+  },
+
+  // callback that executes once textillate has finished
+  callback: function () {},
+
+  // set the type of token to animate (available types: &#39;char&#39; and &#39;word&#39;)
+  type: &#39;char&#39;
+});
+</code></pre>
+<h2 id="events">Events</h2>
+<p>Textillate triggers the following events:</p>
+<ul>
+<li><code>start.tlt</code> - triggered when textillate starts</li>
+<li><code>inAnimationBegin.tlt</code> - triggered when the in animation begins</li>
+<li><code>inAnimationEnd.tlt</code> - triggered when the in animation ends</li>
+<li><code>outAnimationBegin.tlt</code> - triggered when the out animation begins</li>
+<li><code>outAnimationEnd.tlt</code> - triggered when the in animation ends</li>
+<li><code>end.tlt</code> - triggered when textillate ends</li>
+</ul>
+<pre><code class="lang-js">$(&#39;.tlt&#39;).on(&#39;inAnimationBegin.tlt&#39;, function () {
+  // do something
+});
+</code></pre>
+<h2 id="methods">Methods</h2>
+<ul>
+<li><code>$element.textillate(&#39;start&#39;)</code> - Manually start/restart textillate</li>
+<li><code>$element.textillate(&#39;stop&#39;)</code> - Manually pause/stop textillate</li>
+<li><code>$element.textillate(&#39;in&#39;)</code> - Trigger the current text&#39;s in animation</li>
+<li><code>$element.textillate(&#39;out&#39;)</code> - Trigger the current text&#39;s out animation</li>
+</ul>
+<h2 id="code-samples">Code Samples</h2>
+<ul>
+<li><a href="http://codepen.io/jschr/pen/GaJCi">textillate.js + bounce.js</a></li>
+</ul>
+
+      </body>
+    </html>

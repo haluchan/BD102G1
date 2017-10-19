@@ -9,7 +9,7 @@
 		background-image:url('../src/image/event/23167-nupqqc-02.png');
 	  	background-repeat: repeat;
 	}
-	@keyframes rot {
+	/* @keyframes rot {
 	0% {
 	    -moz-transform: translate(-50%, -50%) rotate(0deg);
 	    -ms-transform: translate(-50%, -50%) rotate(0deg);
@@ -19,7 +19,7 @@
 	    -moz-transform: translate(-50%, -50%) rotate(360deg);
 	    -ms-transform: translate(-50%, -50%) rotate(360deg);
 	    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-	    transform: translate(-50%, -50%) rotate(360deg); } }
+	    transform: translate(-50%, -50%) rotate(360deg); } } */
 	.table img{
 		border-radius: 50%;
 		overflow: hidden;
@@ -30,18 +30,19 @@
 	}
 	
 	.btnbox{
-		margin-top: 2%;
+		margin: 6% 0;
 		text-align: center;
 	}
 	.btnbox a{
 		font-family: Arial;
 		color: #ffffff;
 		font-size: 18px;
-		border-radius: 6px;
+		/* border-radius: 6px; */
 		background: #699c33;
 		padding: 10px 20px 10px 20px;
 		border: solid #699c33 2px;
 	  	text-decoration: none;
+	  	transition: 1s;
 	}
 
 	.btnbox a:hover {
@@ -67,15 +68,20 @@
 	td{
 		color: rgba(0, 0, 0, 0.6);
 		text-align: right;
-		font-size: 18px;
-	letter-spacing: 1px;
-	line-height: 26px;
-		padding: 5px 10px;
+		font-size: 22px;
+		letter-spacing: 2px;
+		line-height: 26px;
+		padding: 10px 10px;
 		padding-bottom: 2px;
 	
 	}
 	td p {
 		text-align: center;
+	}
+	@media screen and (max-width: 767px) {
+		td{
+			font-size: 13px;
+		}
 	}
 	th{
 		text-align: right;
@@ -143,7 +149,7 @@
 	}
 	}
 	input{
-	border-radius: 6px;
+	
 	outline: none;
 	border: none;
 	padding: 5px;

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>即刻菜援</title>
+<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+
+<link rel="stylesheet" href="css/font.css">
+<link href="css/donate_info.css" rel="stylesheet">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" type="text/css" href="css/login.css" >
+<!-- web-font -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<script src="src/libs/jquery/dist/jquery.min.js"></script>
+<script src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
+<script src="js/change_SVG_color.js"></script>
+
+<!-- scrollmagic -->
+<script src="src/libs/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script src="src/libs/ScrollMagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+<script src="src/libs/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+</head>
+<body>
+<?php require_once('header.php');  ?>
+
+<section class="donate_info">
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 第一屏數據 -->
+	<section class="data_info">
+		<div class="case_title">
+			<h2>台中「親農」嚴選在地好物 </h2>
+			<h3>台中青年農夫的堅持，唯有善耕才能結善果</h3>
+			<h4>在地 | 由 <span>親農運銷合作社</span>	提案</h4>
+		</div>
+
+		<div class='play-video col-xs-12  col-sm-8' >
+
+			<div class="video_item">
+				<iframe class="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/xV8-_0NtKg0?rel=0&amp;controls=0&amp;showinfo=0" style='background-image: url(src/image/funded/video_img.jpg);' frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="progress col-xs-12 hidden-sm">
+			<!-- <img src="src/image/index/run.svg"> -->
+			<div class="progress_bar">
+				<div class="bar">
+					<img src="src/image/funded/run.gif" class="running_man"></div>
+			</div>
+			<p class="amt">$<span class="now_money">132400</span> / $<span class="target_money">200000</span></p>
+		</div>	
+
+		<div class="case_data  col-xs-12  col-sm-4">
+			<div class="case_tiem">
+				<p class="hidden-xs">17 <span>人資助</span></p>
+				<p class="hidden-xs">22 <span>天結束</span></p>
+
+				<form>
+					<select name="Program">
+					　<option value="A">A. 1,000元小資自理餐</option>
+					　<option value="B">B. 2,000元夏祭限定蔬果禮盒</option>
+					　<option value="C">C. 3,000元夏祭限定蔬果禮盒(大)</option>
+					</select><br>
+					<button>我 要 資 助</button>
+				</form>
+				<p class="case_ing">
+					專案正在募資中！<br>
+					在 2017/10/31 23:59 募資結束前，<br>
+					至少募得 $50,000 便募資成功。
+				</p>
+
+			</div>
+
+		</div>
+		<div class="progress hidden-xs col-sm-12 ">
+			<!-- <img src="src/image/index/run.svg"> -->
+
+			
+			
+			<div class="progress_bar">
+				<div class="bar">
+					<img src="src/image/funded/run.gif" class="running_man">
+				</div>
+			</div>
+			<p class="amt">$<span class="now_money">132400</span> / $<span class="target_money">200000</span></p>
+		</div>	
+		<div class="clear"></div>
+	</section>
+
+	<div class="clear"></div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nva=================================================================================	 -->
+	<nav class="col_xs_12 col_sm_12 main-nav">
+		<div id="nav"></div>
+		<div class="full-wrapper ">
+			<div class="inner-nav xs_hidden">
+				<ul>
+					<li>
+						<a href="#">專案內容</a>
+					</li>
+					<li>
+						<a href="#">專案進度</a>
+					</li>
+					<li>
+						<a href="#">留言評論</a>
+					</li>
+					<li class="donate_nav">
+						<a href="want_donate.php">我 要 資 助</a>
+					</li>
+				</ul>
+			</div>
+		<div class="clear"></div>
+		</div>
+	</nav>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================================================================================= -->
+
+
+<section class="donate_info">
+
+	<section class="case_content col-sm-12 col-xs-12 ">
+		<dir id="trigger1"></dir>
+		<div class="content_title col-xs-12 col-sm-12">
+			<p class="title">尋找童年土地的記憶</p>
+		</div>
+
+
+		<div class="content_txt col-sm-12 col-xs-12">
+			<div class=" content_img col-sm-2 col-xs-2">
+				<img src="src/image/funded/case_content.png">
+			</div>
+			<div class="content_item col-sm-7 col-xs-10">
+				<p class="txt">我們是一群台中的青年，偶然回鄉發現家門外水道不再有魚，不見蜻蜓滿天飛舞，夏夜沒了蟲鳴鳥叫，擾人清夢的呱呱聲稀稀落落;看著農田被一棟棟鐵皮怪物吞噬，我們開始思考…還有什麼可以留給孩子們?</p>
+				<p class="txt">近年屢見化學肥料、農藥濫用的問題，不但造成農產品有害物質殘留危害人體健康，也使得農地汙染日趨嚴重，進而影響到農田生態，害蟲殺死了，益蟲也沒了。因不捨農地逐漸惡化，我們返鄉成為青年農夫，期許用自己的力量找回純淨的土地，種出健康好蔬果。</p>
+				<p class="txt">【友善耕作果園】藉由善耕，尋回土地與生命最佳平衡。</p>
+			</div>
+			<div class="content_img col-sm-3 hidden-xs">
+				<img src="src/image/funded/farmer.png">
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="food col-sm-12 col-xs-12">
+			<div id="trigger2"></div>
+			<div class="food_title">
+				<p>主要作物</p>
+			</div>
+			<div class="food_item col-xs-6 col-sm-3">
+				<img src="src/image/funded/food_img1-1.png" class="food_img1">
+				<img src="src/image/funded/food_img2-4.png" class="food_img2">
+			</div>
+			<div class="food_item col-xs-6 col-sm-3">
+				<img src="src/image/funded/food_img1-2.png" class="food_img1">
+				<img src="src/image/funded/food_img2-4.png" class="food_img2">
+			</div>
+			<div class="food_item col-xs-6 col-sm-3">
+				<img src="src/image/funded/food_img1-3.png" class="food_img1">
+				<img src="src/image/funded/food_img2-4.png" class="food_img2">
+			</div>
+			<div class="food_item col-xs-6 col-sm-3">
+				<img src="src/image/funded/food_img1-4.png" class="food_img1">
+				<img src="src/image/funded/food_img2-4.png" class="food_img2">
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+	</section>
+
+	<img src="src/image/funded/hr.png" class="food_hr">
+
+	<!-- 進度回報==================================== -->
+	<section class="progress_return">
+
+		<h2>進度回報</h2>
+
+		<div class="type type_1">
+			<div class="trigger3"></div>
+			<div class="type_img col-xs-12 col-sm-12">
+				<img src="src/image/funded/p0001_1.jpg">
+			</div>
+			<div class="type_txt col-xs-12 col-sm-12">
+				<p class="title">
+					第一次回報 <span class="date">2017 年 08 月 16 日</span> 
+				</p>
+				<p class="content">
+					播下種子，每天細心照顧, 期待種子成熟的那一天。雖然辛苦，但能一步步，影響周遭的田地，是我們回到土地上耕作的初衷，我們期待，透過友善稻田一季又一季的表現與收成，讓更多的種籽發芽，同時，也期待，更多愛吃飯．愛土地的朋友們的加入，用吃飯，支持愛護這片美麗稻野。
+				</p>
+				
+			</div>
+			<div class="clear"></div>
+			
+		</div>
+
+
+		<div class="type type_2">
+			<div class="trigger3"></div>
+			<div class="type_img col-xs-12 col-sm-6">
+				<img src="src/image/funded/p0001_2.png">
+			</div>
+			<div class="type_txt col-xs-12 col-sm-6">
+				<p class="title">
+					第二次回報 <span class="date">2017 年 08 月 16 日</span> 
+				</p>
+				<p class="content">
+					播下種子，每天細心照顧, 期待種子成熟的那一天。雖然辛苦，但能一步步，影響周遭的田地，是我們回到土地上耕作的初衷，我們期待，透過友善稻田一季又一季的表現與收成，讓更多的種籽發芽，同時，也期待，更多愛吃飯．愛土地的朋友們的加入，用吃飯，支持愛護這片美麗稻野。
+				</p>
+			</div>
+			<div class="clear"></div>
+			
+		</div>
+
+
+		<div class="type type_3">
+			<div class="trigger3"></div>
+			<div class="type_img col-xs-12 col-sm-6">
+				<img src="src/image/funded/p0001_3.png">
+			</div>
+			<div class="type_txt col-xs-12 col-sm-6">
+				<p class="title">
+					第三次回報 <span class="date">2017 年 09 月 16 日</span> 
+				</p>
+				<p class="content">
+					播下種子，每天細心照顧, 期待種子成熟的那一天。雖然辛苦，但能一步步，影響周遭的田地，是我們回到土地上耕作的初衷，我們期待，透過友善稻田一季又一季的表現與收成，讓更多的種籽發芽，同時，也期待，更多愛吃飯．愛土地的朋友們的加入，用吃飯，支持愛護這片美麗稻野。
+				</p>
+				
+			</div>
+
+			<div class="clear"></div>
+			
+		</div>
+		<div class="clear"></div>
+
+	</section>
+
+
+
+
+
+
+
+
+<!-- 留言評論======================================== -->
+	<section class="message">
+		<h2>留言評論</h2>
+		<!-- 送出留言======================================== -->
+
+		<form class="message_form" >
+			<div class="message_box msg_box col-xs-12 col-sm-12">
+				<div class="mem_photo col-sm-2 col-xs-2">
+					<img src="src/image/funded/food_img2-1.png">
+				</div>
+				<div class="mem_txt col-sm-10 col-xs-10">
+					<textarea cols="50" rows="3" wrap="off" class="content" placeholder="留言支持這個計畫!"></textarea>
+				</div>
+				
+				<button class="col-sm-10 col-xs-10">送出</button>
+				
+			</div>
+		<!-- </form> -->
+		<!-- <div class="clear"></div> -->
+
+
+		<div class="message_box col-xs-12 col-sm-12">
+			<div class="mem_photo col-sm-2 col-xs-2">
+				<img src="src/image/funded/food_img2-1.png">
+			</div>
+
+			<div class="mem_txt col-sm-10 col-xs-10">
+				
+				<p class="content">
+					總會有時候，莫名地想要逃離城市踏入自然，支持有夢想的人，讓自己可以更有勇氣。 
+					<span class="date">2017/10/05 08:31PM <img src="src/image/funded/report.svg" class="report"></span>
+				</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div class="message_box col-xs-12 col-sm-12">
+			<div class="mem_photo col-sm-2 col-xs-2">
+				<img src="src/image/funded/food_img2-1.png">
+			</div>
+
+			<div class="mem_txt col-sm-10 col-xs-10">
+				
+				<p class="content">
+					總會有時候，莫名地想要逃離城市踏入自然，支持有夢想的人，讓自己可以更有勇氣。 
+					<span class="date">2017/10/05 08:31PM <img src="src/image/funded/report.svg" class="report"></span>
+				</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div class="report_box">
+			<div class="report_title"><p>
+				協助我們瞭解發生的狀況<span class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+			</p></div>
+			<div class="report_detail">
+				<p>發生了什麼問題?</p>
+				<ul>
+					<li>
+						<input type="radio" name="report_ans" value="1"> 暴力或禁止的內容
+					</li>
+					<li>
+						<input type="radio" name="report_ans" value="2"> 這會冒犯他人
+					</li>
+					<li>
+						<input type="radio" name="report_ans" value="3"> 內容有所誤導或詐騙
+					</li>
+				</ul>
+				<button>確定</button>
+				<div class="clear"></div>
+			</div>
+		</div>
+		</form>
+		<div class="clear"></div>
+	</section>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<?php require_once('Footer.php');  ?>
+
+
+<script type="text/javascript" src="js/donate_info_tweenmax.js"></script>
+
+	
+</body>
+</html>

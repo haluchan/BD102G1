@@ -13,9 +13,11 @@
 *{
 	margin: 0;
 	padding: 0;
+	// overflow: hidden;
 }
 a{
 	text-decoration: none;
+	outline:none;
 }
 
 .h_100vh{
@@ -46,14 +48,17 @@ a{
 
 
 
-
-
-
+.db{
+	display: none;
+}
 
 
 
 //發揚農民心血的募資平台 ===================================================
-
+.index_1{
+	position: relative;
+	z-index: 900;
+}
 .fill_screen{
 	width: 100%;
 	height: 100vh;
@@ -141,8 +146,7 @@ a{
 		}
 		.info_icon{
 			vertical-align: bottom;
-			width: 45%;
-
+			width: 45%;	
 			// background-color: pink;
 		}
 	}
@@ -173,7 +177,7 @@ a{
 .donate_banner{
 	height: 100vh;
 	background-image: url("../src/image/index/index_banner_2.jpg");
-	background-size:100%;
+	background-size:200vh;
 	background-position: bottom center;
 	background-repeat: no-repeat;
 	@media screen and (max-width: 767px){
@@ -267,8 +271,8 @@ a{
 		margin: auto;
 		background-image: url("../src/image/index/donate_title.svg");
 		background-repeat: no-repeat;
-		background-position: bottom center;
-		background-size:100%;
+		background-position: center center;
+		// background-size:90%;
 		// border: 1px solid pink;
 		@media screen and(max-width: 767px){
 				width: 95%;
@@ -285,43 +289,49 @@ a{
 		}
 
 	}
-	.donate_txt{
-		width: 100%;
-		padding: 5.5% 5% 0%;
-		a{
-			color:#000;
+	.donate_top{
+		margin-top: 5%;
+		@media screen and(max-width: 767px){
+			margin-top: -25px;
+			// padding: 20px;
 		}
-		.donate_info{
-			float: left;
-			// background-color: #FF0;
-			.info{
-				width: 95%;
-				background-color: #fff;
-				margin: auto;
-				box-sizing:border-box;
-				padding: 15px;
-				margin: 2.5%;
-				border-radius: 15px;
 
-				img{
-					width: 100%;
-				}
-				h4{
-					line-height: 2;
-				}
-				p{
-					font-size: 14px;
-					line-height: 1.5;
-
-				}
-				.amt{
-					line-height: 1;
-					margin-top: 5px;
-					font-size: 12px;
-					text-align: center;
-				}
+		.donate_txt{
+			a{
+				color:#000;
 			}
-			
+			.donate_info{
+				float: left;
+				// background-color: #FF0;
+				.info{
+					width: 95%;
+					background-color: #fff;
+					margin: auto;
+					box-sizing:border-box;
+					padding: 15px;
+					margin: 2.5%;
+					border-radius: 15px;
+
+					img{
+						width: 100%;
+					}
+					h4{
+						line-height: 2;
+					}
+					p{
+						font-size: 14px;
+						line-height: 1.5;
+
+					}
+					.amt{
+						line-height: 1;
+						margin-top: 5px;
+						font-size: 12px;
+						text-align: center;
+					}
+				}
+				
+			}
 		}
 	}
 
@@ -336,7 +346,7 @@ a{
 .activity{
 	height: 100vh;
 	background-image: url("../src/image/index/index_div4_1.jpg");
-	background-size:100%;
+	background-size:200vh;
 	background-position: bottom center;
 	background-repeat: no-repeat;
 	position: relative;
@@ -358,7 +368,6 @@ a{
 	}
 	@media screen and(max-width: 767px){
 		background-position: bottom center;
-		background-size: 340%; //vivi
 		.rice_img{
 			top: 15%;
 		}
@@ -370,8 +379,7 @@ a{
 	.activity_title{
 		color:#fff;
 		writing-mode: vertical-lr;
-		margin: 6% auto 3%;
-		height: 350px;
+		margin: 8% auto 3%;
 		h1{
 			line-height: 2;
 			margin-top: 10%;
@@ -427,6 +435,9 @@ a{
 				line-height: 1.5;
 			}
 		}
+		.btn_brown{
+			line-height: 4.5;
+		}
 
 	}
 }
@@ -479,6 +490,7 @@ a{
 
 
 }
+
 // 第二代知能魚缸新上市========================================
 
 .fish{
@@ -489,6 +501,7 @@ a{
 	background-repeat: no-repeat;
 	position: relative;
 	overflow: hidden;
+	z-index: 1;
 	@media screen and(max-width: 767px){
 		background-size: 330%;
 		background-position: -560px bottom;
@@ -504,34 +517,48 @@ a{
 			font-size: 42px;
 			text-align: center;
 			margin: 10px 0 30px; 
+			line-height: 1.3;
 		}
 		p{
 			text-align: center;
-			.buttom{
-				width: 25%;
-				text-align: center;
-				padding: 5px 25px;
-				font-size: 14px;
-				margin: 20px auto;
-				border-radius: 50px;
-				background-color: rgba(35,24,21,.7);
-				color: #fff;
-				&:hover{
-				color: #231815;			
-				background-color: rgba(255,255,255,.7);
+			.btn{
+				box-sizing:border-box;
+				display: inline-block;
+				@media screen and(max-width: 767px){
+					width: 40%;
+					font-size: 16px;
 				}
+				
 			}
+		}
+		.fish_icon{
+			width: 5%;
+			position: absolute;
+			left: 12%;
+			bottom: 40%;
+			// animation: fish_icon 3s -1.7s linear infinite ;
+			@for $i from 4 through 10{
+				&:nth-child(#{$i}){
+					$b:random(20)+12;
+					$c:random(30)+20;
+					left: ($b)+%;
+					bottom: $c+%;
+					$a:random(50)* -(0.01);
+					animation: fish_icon 3s $a+s linear infinite ;
+				}
+			} 
 
 		}
-		
 		.phone{
 			position: absolute;
 			bottom: 0;
+			z-index: -1;
 		}
 		@media screen and(max-width: 767px){
 			margin-top: 45%;
 				.p_2{
-					font-size: 18px;
+					font-size: 32px;
+					line-height: 1.7;
 				}
 			.phone{
 				width: 180%;
@@ -542,6 +569,18 @@ a{
 }
 
 
+@keyframes fish_icon{
+	0%{
+		transform: translate(5px,-15px) scale(0.3) rotate(00deg);
+		opacity: 1;
+	}
+	
+	100%{
+		transform: translate(100px,-150px) scale(1.3) rotate(180deg);
+		opacity: 0;
+	}
+
+}
 
 
 

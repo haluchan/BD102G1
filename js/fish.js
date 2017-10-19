@@ -7,7 +7,7 @@ $(function(){
 
 
   //Title飛入
-   var title= TweenMax.fromTo( ".fishbase #title",1,{ 
+   var title= TweenMax.fromTo( ".fish_first #title",1,{ 
         y:-500,    
         opacity:0
     },{

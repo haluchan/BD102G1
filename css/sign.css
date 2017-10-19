@@ -31,17 +31,17 @@
       margin: auto;
       max-width: 300px;
       text-align: center; }
-      .lightbox-bg .lightbox-target .login-content .login-account {
-        width: 200px;
-        display: inline-block;
-        height: 20px; }
-        .lightbox-bg .lightbox-target .login-content .login-account p {
+      .lightbox-bg .lightbox-target .login-content .sign-account {
+        width: 300px;
+        display: inline-block; }
+        .lightbox-bg .lightbox-target .login-content .sign-account p {
+          width: 80px;
           padding-top: 14px;
           padding-right: 10px;
           display: inline-block;
           vertical-align: bottom;
           color: #61ABD4; }
-        .lightbox-bg .lightbox-target .login-content .login-account input {
+        .lightbox-bg .lightbox-target .login-content .sign-account input {
           width: 150px;
           height: 20px;
           background-color: #F6F7ED;
@@ -50,23 +50,24 @@
           border-bottom-color: #ccc;
           letter-spacing: 1px;
           transition: 0.4s; }
-        .lightbox-bg .lightbox-target .login-content .login-account input:focus {
+        .lightbox-bg .lightbox-target .login-content .sign-account input:focus {
           outline: none;
           border-width: 0px;
           border-bottom-width: 2px;
           border-bottom-color: #61ABD4; }
-      .lightbox-bg .lightbox-target .login-content .login-pws {
-        width: 200px;
+      .lightbox-bg .lightbox-target .login-content .sign-pws {
+        width: 300px;
         height: 20px;
         display: inline-block; }
-        .lightbox-bg .lightbox-target .login-content .login-pws p {
+        .lightbox-bg .lightbox-target .login-content .sign-pws p {
+          width: 80px;
           padding-top: 14px;
           padding-right: 10px;
           display: inline-block;
           vertical-align: bottom;
           line-height: 20px;
           color: #61ABD4; }
-        .lightbox-bg .lightbox-target .login-content .login-pws input {
+        .lightbox-bg .lightbox-target .login-content .sign-pws input {
           width: 150px;
           height: 20px;
           background-color: #F6F7ED;
@@ -75,19 +76,108 @@
           border-bottom-color: #ccc;
           letter-spacing: 1px;
           transition: 0.4s; }
-        .lightbox-bg .lightbox-target .login-content .login-pws input:focus {
+        .lightbox-bg .lightbox-target .login-content .sign-pws input:focus {
           outline: none;
           border-width: 0px;
           border-bottom-width: 2px;
           border-bottom-color: #61ABD4; }
-      .lightbox-bg .lightbox-target .login-content .forget {
-        width: 200px;
-        text-align: right;
-        margin: auto; }
-        .lightbox-bg .lightbox-target .login-content .forget a {
-          font-size: 12px;
-          color: #777;
-          text-decoration: none; }
+      .lightbox-bg .lightbox-target .login-content .sign-repws {
+        width: 300px;
+        display: inline-block; }
+        .lightbox-bg .lightbox-target .login-content .sign-repws p {
+          width: 80px;
+          padding-top: 14px;
+          padding-right: 10px;
+          display: inline-block;
+          vertical-align: bottom;
+          line-height: 20px;
+          color: #61ABD4; }
+        .lightbox-bg .lightbox-target .login-content .sign-repws input {
+          width: 150px;
+          height: 20px;
+          background-color: #F6F7ED;
+          border-width: 0px;
+          border-bottom-width: 2px;
+          border-bottom-color: #ccc;
+          letter-spacing: 1px;
+          transition: 0.4s; }
+        .lightbox-bg .lightbox-target .login-content .sign-repws input:focus {
+          outline: none;
+          border-width: 0px;
+          border-bottom-width: 2px;
+          border-bottom-color: #61ABD4; }
+      .lightbox-bg .lightbox-target .login-content .sign-mail {
+        width: 300px;
+        display: inline-block; }
+        .lightbox-bg .lightbox-target .login-content .sign-mail p {
+          width: 80px;
+          padding-top: 14px;
+          padding-right: 10px;
+          display: inline-block;
+          vertical-align: bottom;
+          line-height: 20px;
+          color: #61ABD4; }
+        .lightbox-bg .lightbox-target .login-content .sign-mail input {
+          width: 150px;
+          height: 20px;
+          background-color: #F6F7ED;
+          border-width: 0px;
+          border-bottom-width: 2px;
+          border-bottom-color: #ccc;
+          letter-spacing: 1px;
+          transition: 0.4s; }
+        .lightbox-bg .lightbox-target .login-content .sign-mail input:focus {
+          outline: none;
+          border-width: 0px;
+          border-bottom-width: 2px;
+          border-bottom-color: #61ABD4; }
+      .lightbox-bg .lightbox-target .login-content .sign-add {
+        width: 300px;
+        display: inline-block; }
+        .lightbox-bg .lightbox-target .login-content .sign-add p {
+          width: 80px;
+          margin-bottom: 12px;
+          padding-right: 10px;
+          display: inline-block;
+          vertical-align: bottom;
+          line-height: 20px;
+          color: #61ABD4; }
+        .lightbox-bg .lightbox-target .login-content .sign-add textarea {
+          display: inline-block;
+          width: 150px;
+          margin-top: 20px;
+          resize: none; }
+      .lightbox-bg .lightbox-target .login-content .sign-birth {
+        width: 300px;
+        display: inline-block; }
+        .lightbox-bg .lightbox-target .login-content .sign-birth p {
+          width: 80px;
+          padding-top: 14px;
+          padding-right: 10px;
+          display: inline-block;
+          vertical-align: bottom;
+          line-height: 20px;
+          color: #61ABD4; }
+        .lightbox-bg .lightbox-target .login-content .sign-birth input {
+          width: 150px; }
+      .lightbox-bg .lightbox-target .login-content .sign-gender {
+        width: 100%;
+        display: inline-block; }
+        .lightbox-bg .lightbox-target .login-content .sign-gender p {
+          width: 80px;
+          padding-top: 14px;
+          padding-right: 10px;
+          display: inline-block;
+          vertical-align: bottom;
+          line-height: 20px;
+          color: #61ABD4; }
+        .lightbox-bg .lightbox-target .login-content .sign-gender .genderinput {
+          padding: 0 0;
+          display: inline-block;
+          width: 150px;
+          text-align: left; }
+        .lightbox-bg .lightbox-target .login-content .sign-gender label + label {
+          margin-left: 20px; }
       .lightbox-bg .lightbox-target .login-content .btn_green {
         width: 200px;
         display: inline-block;

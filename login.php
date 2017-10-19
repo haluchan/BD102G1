@@ -1,12 +1,10 @@
 
-<link rel="stylesheet" type="text/css" href="css/login.css" >
 
-	<section>
- 		
-	</section>
+
 	
-	<div class="lightbox-bg">
+	<div class="lightbox-bg" id="lightbox-bg">
 		<div class="lightbox-target" id="login">
+<<<<<<< HEAD
 
 			<div class="wrapper cancel">
 			  <div class="button-block">
@@ -15,6 +13,10 @@
 			      <i class="mark xx"></i>
 			    </button>
 			  </div>
+=======
+			<div class="cancel" id="cancel">
+				<a  id="login-cancel"><img src="src/image/login/pop_close.png"></a>
+>>>>>>> 8dabc143198272433d5b1447d7ec848ff470195f
 			</div>
 
 			
@@ -34,6 +36,7 @@
 			  	<div class="forget">
 			  		<a href="">忘記密碼?</a>
 			  	</div>
+<<<<<<< HEAD
 			  	<button type="submit" class="btn_green">登入</button>
 			  	<button type="" class="btn_green">facebook登入</button>
 			  	<button type="" class="btn_green">註冊</button>
@@ -42,6 +45,13 @@
 
 		  <div class="login-bee">
 		  	<img  src="src/image/login/deco-img-03.gif">
+=======
+		  	<button type="submit" class="btn_green">登入</button>
+		  	 <button type="submit" class="btn_green">facebook登入</button>
+		  	<button type="" class="btn_green" id="sign-btn">註冊</button>
+			 
+		  	
+>>>>>>> 8dabc143198272433d5b1447d7ec848ff470195f
 		  </div>
 		</div>
 		<div class="login-clear"></div>

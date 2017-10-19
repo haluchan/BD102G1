@@ -46,12 +46,12 @@
 		font-family: Arial;
 		color: #ffffff;
 		font-size: 18px;
-		border-radius: 6px;
+	/* 	border-radius: 6px; */
 		background: #699c33;
 		padding: 10px 20px 10px 20px;
 		border: solid #699c33 2px;
 	  	text-decoration: none;
-	  
+	  transition: 1s;
 	}
 
 	.btnbox a:hover {
@@ -70,6 +70,7 @@
 		max-width: 600px;
 		padding: 2%;
 		border-radius: 4%;
+		min-height: 600px;
 		/* border: 1px blue solid; */
 
 	}
@@ -79,22 +80,23 @@
 	}
 	td{
 		text-align: right;
-		padding: 2px 2vw;
+		padding: 3px 2vw;
 		font-size: 18px;
-	letter-spacing: 1px;
-	line-height: 26px;
-	color: rgba(0, 0, 0, 0.6);
+		letter-spacing: 1px;
+		line-height: 26px;
+		color: rgba(0, 0, 0, 0.6);
 		/* font-max-size: 10px; */
 		/* 	padding-bottom: 2px; */
 		/* background-color: blue; */
 	}
 	@media screen and (max-width: 767px) {
 		td{
-		
 		font-size: 12px;
-		/* font-max-size: 10px; */
-		/* 	padding-bottom: 2px; */
-		/* background-color: blue; */
+	}
+	.navbarli{
+		
+		font-size:1vw;
+		
 	}
 	}
 	
@@ -116,6 +118,7 @@
 	/* background-image:url('../src/image/member/greenbg2.png');
 	background-size: 90%; */
 	position: relative;
+	width: 100%;
 	}
 	.table h2{
 		margin-bottom: 10px;
@@ -129,13 +132,20 @@
 	}
 	.navbarli{
 		display: inline-block;
-		font-size: 24px;
+		font-size:24px;
 		background-color: #fff;
 		color: #699c33;
-		padding:2px 2vw ;
-		/* border-radius: 10%; */
-		/* margin: 0 2%; */
+		padding:2px 4vw ;
+
 		/* width: 100%; */
+	}
+	@media screen and (max-width: 767px) {
+		
+	.navbarli{
+		
+		font-size:1vw;
+		
+	}
 	}
 	.navbarli:hover{
 		background-color:#699c33;
@@ -153,42 +163,49 @@
 	padding: 5px;
 	background-color: rgba(105, 156, 51, .2);
     }
-	.parallax{
+	/* .parallax{
 		width: 100%;
 		z-index: -1;
 		margin: 0 auto;
 		top: 250px;
 		text-align: center;
-	}
+	} */
 	.parallax_area img{
-		width:70vw;
+		width:60vw;
 		animation: 150s linear rot infinite;
 	}
-	/* .parallax_area{
-		position: relative;
-		top: 20%;
-		left: 50%;
-		/* width: 100%;
-		text-align: center;
-		margin: auto;
-	} */ 
+
 	#scenes{
 		position: absolute;
 		margin: auto;
 		z-index: -2;
 		top: -30px;
-	
+		
+		width: 100%;
 	}
 	@media screen and (max-width: 767px) {
-		.parallax{
+		#scenes{
 		visibility: hidden;
 	}
+	}
+	.parallax_area{
+		/* position: absolute; */
+		top: 500px;
+	/* 	left: 50%; */
+		height: 100%;
+		text-align: center;
+		width: 100%;
+	}
+
+		/* width: 100%;
+		text-align: center;
+		margin: auto;
 	}
 	/* .parallax_area_01{
 		position:relative;
 		z-index: -1;
 		right: 50%;
-		top:30%;
+		bottom:0;
 	} */
 	/* .parallax_area_02{
 		position: absolute;

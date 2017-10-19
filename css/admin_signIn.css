@@ -1,0 +1,147 @@
+@charset "UTF-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: #FFF8E6;
+	font-family: "微軟正黑體";
+}
+img{
+	width: 100%;
+}
+
+
+section{
+	overflow: hidden;
+	box-sizing: border-box;
+	height: 100vh;
+}
+
+section>div{
+	float: left;
+}
+.carrot{
+	position: relative;
+	left:-90px;
+	bottom: -130px;
+}
+.title{
+	writing-mode:vertical-rl;
+	margin-top: 70px;
+	margin-left: -50px;
+	font-size: 58px;
+	letter-spacing: 20px;
+	font-weight: bold;
+}
+
+.center{
+	margin-top: 190px;
+	margin-left: 64px;
+}
+.center>div{
+	float: left;
+}
+
+.greenLine{
+	width: 10px;
+	height: 500px;
+	background-color: green;
+	box-shadow: 2px 0px 10px 2px rgba(0,0,0,.23);
+	position: absolute;
+	top: 0;
+}
+.greenLine::before{
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: green;
+	position: relative;
+	top: -5px;
+	border-radius: 50%;
+}
+.greenLine::after{
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: green;
+	position: relative;
+	bottom: -485px;
+	border-radius: 50%;
+}
+
+.contain{
+	position: relative;
+	width: 600px;
+	margin: auto;
+}
+.logo{
+	position: absolute;
+	width: 160px;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+.vegetable{
+	position: absolute;
+	top: -50px;
+	width: 50px;
+	right: -24px;
+
+}
+.form{
+	background-color: #ABCD87;
+	height: 490px;
+	margin-top: 5px;
+	border: 1px solid rgba(0,0,0,0);
+}
+form{
+	margin: auto;
+	margin-top: 150px;
+}
+form>div{
+	width: 40%;
+	margin: auto;
+}
+form>div:first-child{
+	margin-top: 20px;
+}
+form>div:nth-child(2){
+	margin-top: 10px;
+}
+form>div:nth-child(3){
+	margin-top: 40px;
+}
+label{
+	display: block;
+	font-size: 18px;
+}
+input{
+	margin-top: 4px;
+	padding: 6px 10px;
+	width: 100%;
+	box-sizing: border-box;
+	border: none;
+}
+input:focus{
+	outline-color: #F29600;
+}
+a{
+	width: 80%;
+	margin: auto;
+	background-color: #F29600;
+	display: block;
+	text-align: center;
+	padding: 6px 50px;
+	color:white;
+	box-sizing: border-box;
+	text-decoration:none;
+	border-radius: 4px;
+}
+a:hover{
+	border: 2px solid #F29600;
+	background-color: #fff;
+	color: #F29600;
+}
