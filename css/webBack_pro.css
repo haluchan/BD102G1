@@ -3,8 +3,7 @@
   width: 16%; }
 
 .content_form {
-  width: 84%;
-  margin-top: 155px; }
+  width: 84%; }
 
 botton {
   border: none; }
@@ -28,8 +27,8 @@ botton {
     text-align: center; }
   .myForm th {
     /*th的樣式:上下有橘色線*/
-    border-top: 2px solid #F29600;
-    border-bottom: 2px solid #F29600; }
+    border-bottom: 2px solid #ddd;
+    background-color: #F29600; }
   .myForm td {
     font-weight: lighter; }
   .myForm .tdRow:nth-child(odd) {

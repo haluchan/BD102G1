@@ -107,7 +107,8 @@
   padding: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
 
 .h_100vh {
   height: 100vh; }
@@ -135,6 +136,10 @@ a {
 
 .db {
   display: none; }
+
+.index_1 {
+  position: relative;
+  z-index: 900; }
 
 .fill_screen {
   width: 100%;
@@ -326,8 +331,7 @@ a {
     margin: auto;
     background-image: url("../src/image/index/donate_title.svg");
     background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: 100%; }
+    background-position: center center; }
     @media screen and (max-width: 767px) {
       .donate_ing .donate_title {
         width: 95%; } }
@@ -340,14 +344,16 @@ a {
         .donate_ing .donate_title p {
           margin-top: 20%;
           margin-bottom: 5%; } }
-  .donate_ing .donate_txt {
-    width: 100%;
-    padding: 5.5% 5% 0%; }
-    .donate_ing .donate_txt a {
+  .donate_ing .donate_top {
+    margin-top: 5%; }
+    @media screen and (max-width: 767px) {
+      .donate_ing .donate_top {
+        margin-top: -25px; } }
+    .donate_ing .donate_top .donate_txt a {
       color: #000; }
-    .donate_ing .donate_txt .donate_info {
+    .donate_ing .donate_top .donate_txt .donate_info {
       float: left; }
-      .donate_ing .donate_txt .donate_info .info {
+      .donate_ing .donate_top .donate_txt .donate_info .info {
         width: 95%;
         background-color: #fff;
         margin: auto;
@@ -355,14 +361,14 @@ a {
         padding: 15px;
         margin: 2.5%;
         border-radius: 15px; }
-        .donate_ing .donate_txt .donate_info .info img {
+        .donate_ing .donate_top .donate_txt .donate_info .info img {
           width: 100%; }
-        .donate_ing .donate_txt .donate_info .info h4 {
+        .donate_ing .donate_top .donate_txt .donate_info .info h4 {
           line-height: 2; }
-        .donate_ing .donate_txt .donate_info .info p {
+        .donate_ing .donate_top .donate_txt .donate_info .info p {
           font-size: 14px;
           line-height: 1.5; }
-        .donate_ing .donate_txt .donate_info .info .amt {
+        .donate_ing .donate_top .donate_txt .donate_info .info .amt {
           line-height: 1;
           margin-top: 5px;
           font-size: 12px;
@@ -567,7 +573,7 @@ a {
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  z-index: -5; }
+  z-index: 1; }
   @media screen and (max-width: 767px) {
     .fish {
       background-size: 330%;
@@ -586,47 +592,52 @@ a {
     .fish .fish_info p {
       text-align: center; }
       .fish .fish_info p .btn {
+        box-sizing: border-box;
         display: inline-block; }
+        @media screen and (max-width: 767px) {
+          .fish .fish_info p .btn {
+            width: 40%;
+            font-size: 16px; } }
     .fish .fish_info .fish_icon {
       width: 5%;
       position: absolute;
       left: 12%;
       bottom: 40%; }
       .fish .fish_info .fish_icon:nth-child(4) {
-        left: 31%;
-        bottom: 37%;
-        -webkit-animation: fish_icon 3s -0.27s linear infinite;
-        animation: fish_icon 3s -0.27s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(5) {
         left: 18%;
-        bottom: 29%;
-        -webkit-animation: fish_icon 3s -0.25s linear infinite;
-        animation: fish_icon 3s -0.25s linear infinite; }
+        bottom: 25%;
+        -webkit-animation: fish_icon 3s -0.32s linear infinite;
+        animation: fish_icon 3s -0.32s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(5) {
+        left: 32%;
+        bottom: 32%;
+        -webkit-animation: fish_icon 3s -0.2s linear infinite;
+        animation: fish_icon 3s -0.2s linear infinite; }
       .fish .fish_info .fish_icon:nth-child(6) {
-        left: 22%;
-        bottom: 33%;
-        -webkit-animation: fish_icon 3s -0.05s linear infinite;
-        animation: fish_icon 3s -0.05s linear infinite; }
+        left: 28%;
+        bottom: 34%;
+        -webkit-animation: fish_icon 3s -0.44s linear infinite;
+        animation: fish_icon 3s -0.44s linear infinite; }
       .fish .fish_info .fish_icon:nth-child(7) {
-        left: 15%;
-        bottom: 35%;
-        -webkit-animation: fish_icon 3s -0.16s linear infinite;
-        animation: fish_icon 3s -0.16s linear infinite; }
+        left: 20%;
+        bottom: 25%;
+        -webkit-animation: fish_icon 3s -0.33s linear infinite;
+        animation: fish_icon 3s -0.33s linear infinite; }
       .fish .fish_info .fish_icon:nth-child(8) {
-        left: 25%;
-        bottom: 39%;
-        -webkit-animation: fish_icon 3s -0.3s linear infinite;
-        animation: fish_icon 3s -0.3s linear infinite; }
+        left: 18%;
+        bottom: 31%;
+        -webkit-animation: fish_icon 3s -0.34s linear infinite;
+        animation: fish_icon 3s -0.34s linear infinite; }
       .fish .fish_info .fish_icon:nth-child(9) {
-        left: 25%;
-        bottom: 21%;
-        -webkit-animation: fish_icon 3s -0.05s linear infinite;
-        animation: fish_icon 3s -0.05s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(10) {
-        left: 24%;
+        left: 18%;
         bottom: 37%;
-        -webkit-animation: fish_icon 3s -0.11s linear infinite;
-        animation: fish_icon 3s -0.11s linear infinite; }
+        -webkit-animation: fish_icon 3s -0.42s linear infinite;
+        animation: fish_icon 3s -0.42s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(10) {
+        left: 20%;
+        bottom: 35%;
+        -webkit-animation: fish_icon 3s -0.09s linear infinite;
+        animation: fish_icon 3s -0.09s linear infinite; }
     .fish .fish_info .phone {
       position: absolute;
       bottom: 0;

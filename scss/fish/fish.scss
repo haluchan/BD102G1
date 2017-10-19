@@ -11,22 +11,58 @@
 
 
 
-
+body{
+	background-image:url('../../src/image/cart/cart-bg.png');
+}
 
 
 //section
 section.fish_first{ 
 	width:100%;
-	// height:100vh;
-	background-image:url('../../src/image/fish/fish_baner.svg');
-	background-repeat:no-repeat;
-	background-size:contain;
-	// background-attachment: fixed;
-	overflow:hidden;
+	position:relative;
+	
+	// background-image:url('../../src/image/fish/fish_baner.svg');
+	// background-repeat:no-repeat;
+	// background-size:cover;
+	// background-position:center bottom;
+	// overflow:hidden;
 	img{
-		width:100%;
+		width:80%;
 	}
+	#fish_banner{
+		@include rwd (moblie){
+			opacity:0.7;
+			position:relative;
+		}
+	}
+	.fishbase{
+			width:45%;
+			position:absolute;
+			top:8%;
+			box-sizing:border-box;
+			text-align:center;	
+			h2,h3{
+			color:#6a3906;
+			line-height:2;
+			}
+			h2{
+				font-size:38px;
+			}
+			h3{
+				font-size:1.5em;
+			}
+			@include rwd (moblie) {	
+				// padding-top:12%;
+				width:80%;
+				h2{
+					font-size:16px;
+				}
+				h3{
+					font-size:14px;
+				}
 
+			}
+	}
 }
 
 
@@ -36,6 +72,12 @@ section.fish_first{
 	max-width:1440px;
 	margin:auto;
 	padding:0;
+	.baserotate{
+		position:absolute;
+		z-index:-100;
+		top:10%;
+		right:0%;
+	}
 	img{
 		width:100%;
 	}
@@ -52,28 +94,32 @@ section.fish_first{
 		}
 	}
 	p{
-		font-size:18px;
-		color:#7e7a7f;
+		font-size: 16px;
+		color: #59493f;
+		line-height: 2;
+		
+		margin-bottom:2%;
 		@include rwd (moblie) {	
-			font-size:14px;		
+    		font-size:14px;
 		}
 	}
-	
 	.step{
-		width:80%;
+		// background-image:url("../../src/image/fish/farmer.png");
+		// 	background-repeat:no-repeat;
+		// 	background-position:left top;
+		width:90%;
 		// max-width:1440px;
 		// margin:auto;
-		margin: 0  auto 100px;
-		
+		margin: 0  auto ;
 		position:relative;
 		overflow:hidden;
-
+		
 	
 		 @include rwd (moblie) {	
     		width:90%;
-
 		}
 		.stepFlow{
+			
 			width:100%;
 			margin:auto;
 			padding: 10% 0 0 ;
@@ -86,13 +132,20 @@ section.fish_first{
     			padding:0;
 			}
 			
+			.stepFlowLeft{
+				width:30%;
+				position:relative;
+				 @include rwd (moblie) {	
+    				display:none;
+				}
+			}
 			.stepFlowRight{
 				
-				width:60%;
+				width:50%;
 				margin:auto;
 				position:relative;
-				@include rwd (tablet) {	
-    			   width:100%;
+				@include rwd (moblie) {	
+    			   width:85%;
 				}
 
 				.arrow{
@@ -104,22 +157,32 @@ section.fish_first{
 		}
 		
 
-		
+		.swim{
+			width:15%;
+			position:absolute;
+			// animation:swim 10s infinite  linear;
+			// z-index:100;	
+		}
 
 		.stepContent{
 			width:100%;
 			margin:auto;
 			padding:5% 10%;
 			box-sizing:border-box;
-			p{color:#7e7a7f;}
-
-			// @include rwd (moblie) {	
-   //  			   p{font-size:14px;}
-			// 	}
+			p{
+    			text-indent:2.2em;
+    			margin-bottom:2%;
+			}
+			@include rwd (moblie) {	
+    			font-size:14px;
+			}
 		}
 
 		
-
+		.hr{
+			width:70%;
+			margin:auto;
+		}
 
 			
 
@@ -131,13 +194,14 @@ section.fish_first{
 			background-color:#e8d59b;
 			margin:auto;
 			a{
+				display:block;
 				text-decoration:none;
 				// color:#000;
-				color: #ffffff;
-				display:block;
-			&:hover{
-				color: #699c33;
-			}
+				// color: #ffffff;
+				
+			// &:hover{
+			// 	color: #699c33;
+			// }
 			}
 		}
 	}
@@ -145,8 +209,8 @@ section.fish_first{
 
 // 運作原理
 	.theory{
-		width:80%;
-		margin: 0 auto 100px ;
+		width:90%;
+		margin: 0 auto  ;
 
 		@include rwd (moblie) {	
 		    width:90%;
@@ -166,7 +230,7 @@ section.fish_first{
 		}
 
 		.theoryVideo{
-			width: 80%;			
+			width: 60%;			
 			height: 0;
 			padding-bottom: 45%;
 			margin: auto;
@@ -184,7 +248,7 @@ section.fish_first{
 
 // 必備元素
 	.role{
-		width:80%;
+		width:90%;
 		margin: auto;
 		text-align:center;
 		@include rwd (moblie) {	
@@ -207,16 +271,29 @@ section.fish_first{
 			margin:auto;
 				@include rwd (moblie) {	
 			    width:100%;
-			    margin:5% auto;   				
+			    margin:5% auto; 
+			     				
+				}
+				.center{
+					@include rwd (moblie) {	
+			    width:100%;
+			    // margin:5% auto; 
+			    display:flex;
+				align-items:center;  				
+				}
 				}
 			.roleItemTitle{
-				text-align:center;		
+				text-align:center;
+				@include rwd (moblie) {	
+		    		width:100%;
+				}		
 			}
 
 			.roleItemPic{
 				margin:auto;
 				@include rwd (moblie) {	
-		    		width:50%;	
+		    		width:50%;
+		    		display:inline-block;
 				}
 			}
 			
@@ -224,7 +301,9 @@ section.fish_first{
 				width:100%;
 				margin:auto;
 				@include rwd (moblie) {	
-					width:80%;					
+					width:80%;
+					display:inline-block;	
+									
 				}			 
 				
 				p{
@@ -240,3 +319,40 @@ section.fish_first{
 
 
 
+@keyframes swim{
+	from{
+		left:5%;
+	}
+
+	20%{
+		left:30%;
+		bottom:20%;
+	}
+
+	50%{
+		left:80%;
+		bottom:15%;
+		transform:scaleX(1);	
+	}
+
+	50.5%{
+		transform:scaleX(-1);
+	}
+
+	70%{
+		left:50%;
+		bottom:20%;
+	}
+
+	90%{
+		left:5%;
+		bottom:15%;
+		transform:scaleX(-1);
+	}
+
+	to{
+		left:0%;
+		bottom:10%;
+		transform:scaleX(-1);
+	}
+}

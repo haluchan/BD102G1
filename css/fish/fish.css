@@ -3,20 +3,49 @@
   content: "";
   display: block; }
 
+body {
+  background-image: url("../../src/image/cart/cart-bg.png"); }
+
 section.fish_first {
   width: 100%;
-  background-image: url("../../src/image/fish/fish_baner.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  overflow: hidden; }
+  position: relative; }
   section.fish_first img {
-    width: 100%; }
+    width: 80%; }
+  @media screen and (max-width: 767px) {
+    section.fish_first #fish_banner {
+      opacity: 0.7;
+      position: relative; } }
+  section.fish_first .fishbase {
+    width: 45%;
+    position: absolute;
+    top: 8%;
+    box-sizing: border-box;
+    text-align: center; }
+    section.fish_first .fishbase h2, section.fish_first .fishbase h3 {
+      color: #6a3906;
+      line-height: 2; }
+    section.fish_first .fishbase h2 {
+      font-size: 38px; }
+    section.fish_first .fishbase h3 {
+      font-size: 1.5em; }
+    @media screen and (max-width: 767px) {
+      section.fish_first .fishbase {
+        width: 80%; }
+        section.fish_first .fishbase h2 {
+          font-size: 16px; }
+        section.fish_first .fishbase h3 {
+          font-size: 14px; } }
 
 .container {
   width: 100%;
   max-width: 1440px;
   margin: auto;
   padding: 0; }
+  .container .baserotate {
+    position: absolute;
+    z-index: -100;
+    top: 10%;
+    right: 0%; }
   .container img {
     width: 100%; }
   .container h2 {
@@ -30,14 +59,16 @@ section.fish_first {
       .container h3 {
         font-size: 20px; } }
   .container p {
-    font-size: 18px;
-    color: #7e7a7f; }
+    font-size: 16px;
+    color: #59493f;
+    line-height: 2;
+    margin-bottom: 2%; }
     @media screen and (max-width: 767px) {
       .container p {
         font-size: 14px; } }
   .container .step {
-    width: 80%;
-    margin: 0  auto 100px;
+    width: 90%;
+    margin: 0  auto;
     position: relative;
     overflow: hidden; }
     @media screen and (max-width: 767px) {
@@ -48,11 +79,9 @@ section.fish_first {
       margin: auto;
       padding: 10% 0 0;
       vertical-align: middle;
-      display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
@@ -60,38 +89,50 @@ section.fish_first {
         .container .step .stepFlow {
           width: 100%;
           padding: 0; } }
+      .container .step .stepFlow .stepFlowLeft {
+        width: 30%;
+        position: relative; }
+        @media screen and (max-width: 767px) {
+          .container .step .stepFlow .stepFlowLeft {
+            display: none; } }
       .container .step .stepFlow .stepFlowRight {
-        width: 60%;
+        width: 50%;
         margin: auto;
         position: relative; }
-        @media screen and (min-width: 1199px) and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           .container .step .stepFlow .stepFlowRight {
-            width: 100%; } }
+            width: 85%; } }
         .container .step .stepFlow .stepFlowRight .arrow {
           position: absolute;
           z-index: -1; }
+    .container .step .swim {
+      width: 15%;
+      position: absolute; }
     .container .step .stepContent {
       width: 100%;
       margin: auto;
       padding: 5% 10%;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       .container .step .stepContent p {
-        color: #7e7a7f; }
+        text-indent: 2.2em;
+        margin-bottom: 2%; }
+      @media screen and (max-width: 767px) {
+        .container .step .stepContent {
+          font-size: 14px; } }
+    .container .step .hr {
+      width: 70%;
+      margin: auto; }
     .container .step .stepBuy {
       width: 150px;
       text-align: center;
       background-color: #e8d59b;
       margin: auto; }
       .container .step .stepBuy a {
-        text-decoration: none;
-        color: #ffffff;
-        display: block; }
-        .container .step .stepBuy a:hover {
-          color: #699c33; }
+        display: block;
+        text-decoration: none; }
   .container .theory {
-    width: 80%;
-    margin: 0 auto 100px; }
+    width: 90%;
+    margin: 0 auto; }
     @media screen and (max-width: 767px) {
       .container .theory {
         width: 90%; } }
@@ -102,7 +143,7 @@ section.fish_first {
         border-bottom: 2px solid  #83827e;
         margin: 5% 0%; }
     .container .theory .theoryVideo {
-      width: 80%;
+      width: 60%;
       height: 0;
       padding-bottom: 45%;
       margin: auto;
@@ -112,7 +153,7 @@ section.fish_first {
         height: 100%;
         position: absolute; }
   .container .role {
-    width: 80%;
+    width: 90%;
     margin: auto;
     text-align: center; }
     @media screen and (max-width: 767px) {
@@ -131,19 +172,89 @@ section.fish_first {
         .container .role .roleItem {
           width: 100%;
           margin: 5% auto; } }
+      @media screen and (max-width: 767px) {
+        .container .role .roleItem .center {
+          width: 100%;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center; } }
       .container .role .roleItem .roleItemTitle {
         text-align: center; }
+        @media screen and (max-width: 767px) {
+          .container .role .roleItem .roleItemTitle {
+            width: 100%; } }
       .container .role .roleItem .roleItemPic {
         margin: auto; }
         @media screen and (max-width: 767px) {
           .container .role .roleItem .roleItemPic {
-            width: 50%; } }
+            width: 50%;
+            display: inline-block; } }
       .container .role .roleItem .roleItemTxt {
         width: 100%;
         margin: auto; }
         @media screen and (max-width: 767px) {
           .container .role .roleItem .roleItemTxt {
-            width: 80%; } }
+            width: 80%;
+            display: inline-block; } }
         .container .role .roleItem .roleItemTxt p {
           padding: 0 10px;
           text-align: justify; }
+
+@-webkit-keyframes swim {
+  from {
+    left: 5%; }
+  20% {
+    left: 30%;
+    bottom: 20%; }
+  50% {
+    left: 80%;
+    bottom: 15%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  50.5% {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); }
+  70% {
+    left: 50%;
+    bottom: 20%; }
+  90% {
+    left: 5%;
+    bottom: 15%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); }
+  to {
+    left: 0%;
+    bottom: 10%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); } }
+
+@keyframes swim {
+  from {
+    left: 5%; }
+  20% {
+    left: 30%;
+    bottom: 20%; }
+  50% {
+    left: 80%;
+    bottom: 15%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  50.5% {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); }
+  70% {
+    left: 50%;
+    bottom: 20%; }
+  90% {
+    left: 5%;
+    bottom: 15%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); }
+  to {
+    left: 0%;
+    bottom: 10%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); } }

@@ -1,3 +1,3 @@
- var scence = document.getElementById('scence');
- var parallax = new Parallax(scence);
+ var scenes = document.getElementById('scenes');
+ var parallax = new Parallax(scenes);
  
