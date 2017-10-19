@@ -84,6 +84,7 @@
 			<a href="#">
 				<div class="img">
 					<img src="src/image/event/06.jpg" alt="">
+
 				</div>	
 		</a>
 			<div class="balloon">
@@ -103,7 +104,12 @@
 		<li class="show col-xs-12">
 			<a href="#">
 				<div class="img">
+					
+					
+						
 					<img src="src/image/event/07.jpg" alt="">
+				
+		
 				</div>
 			</a>
 				<div class="balloon">

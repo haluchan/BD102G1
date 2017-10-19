@@ -1,19 +1,10 @@
 .content {
-  width: 82%;
-}
-
-.content table:first-child tr:nth-child($i -1) {
-  width: 100%;
-}
-
-.content table:first-child tr:nth-child($i -1) {
-  width: 100%;
-}
-
-.content table:first-child tr:nth-child($i -1) {
-  width: 100%;
-}
-
-.content table:first-child tr:nth-child($i -1) {
-  width: 100%;
-}
+  width: 82%; }
+  .content table:first-child tr:nth-child($i -1) {
+    width: 100%; }
+  .content table:first-child tr:nth-child($i -1) {
+    width: 100%; }
+  .content table:first-child tr:nth-child($i -1) {
+    width: 100%; }
+  .content table:first-child tr:nth-child($i -1) {
+    width: 100%; }

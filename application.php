@@ -46,13 +46,13 @@
 			    	<div class="formStep">
 			    		<div class="stepContent" id="hidden"  >
 			    			<div class="stepAll item">
-			    				<img src="src/image/application/step1.png">
+			    				<img src="src/image/application/step1.svg">
 			    			</div>
 			    			<div class="stepAll item">
-			    				<img src="src/image/application/step2.png">
+			    				<img src="src/image/application/step2.svg">
 			    			</div>
 			    			<div class="stepAll item">
-			    				<img src="src/image/application/step3.png">
+			    				<img src="src/image/application/step3.svg">
 			    			</div>
 			    		</div>
 			    		<div class="stepContent">
@@ -69,11 +69,11 @@
 			    			<h2>填寫基本資料</h2>
 		    					<table>
 		    						<tr>
-		    							<th>姓名:</th>
+		    							<th>姓名</th>
 		    							<td><input type="text" name="name" ></td>
 		    						</tr>
 		    						<tr>
-		    							<th>性別:</th>
+		    							<th>性別</th>
 		    							<td class="radio">
 		    								<div class="gender"><input type="radio" name="gender" id="male" value="male" >
 		    								<label for="male">男</label></div>
@@ -82,27 +82,27 @@
 		    							</td>
 		    						</tr>
 		    						<tr>
-		    							<th>身分證字號:</th>
+		    							<th>身分證字號</th>
 		    							<td><input type="password" name="id" ></td>
 		    						</tr>
 		    						<tr>
-		    							<th>地址:</th>
+		    							<th>地址</th>
 		    							<td><input type="text" name="add" ></td>
 		    						</tr>
 		    						<tr>
-		    							<th>電話:</th>
+		    							<th>電話</th>
 		    							<td><input type="text" name="tel" ></td>
 		    						</tr>
 		    						<tr>
-		    							<th>電子信箱:</th>
+		    							<th>電子信箱</th>
 		    							<td><input type="text" name="mail" ></td>
 		    						</tr>
 		    						<tr>
-		    							<th>帳戶:</th>
+		    							<th>帳戶</th>
 		    							<td><input type="text" name="account" ></td>
 		    						</tr>
 		    						<tr>
-		    							<th>申請金額:</th>
+		    							<th>申請金額</th>
 		    							<td><input type="text" name="apply" ></td>
 		    						</tr>
 		    					</table>			
@@ -142,24 +142,16 @@
 			<form  action="" method="get">
 		    	<div  class="formContent table">		    		
 		    		<div class="tr">
-		    			<div class="td"><label for="number">案件編號:</label></div>
+		    			<div class="td"><label for="number">案件編號</label></div>
 		    			<div class="td"><input type="text" name="number" id="number" placeholder="請輸入案件編號共5碼"></div>
 		    		</div>
 		    		<div class="tr">
-		    			<div class="td"><label for="name">申請人姓名:</label></div>
+		    			<div class="td"><label for="name">申請人姓名</label></div>
 		    			<div class="td"><input type="text" name="name" id="name"></div>
 		    		</div>
 		    		<div class="tr">
-		    			<div class="td"><label for="id">申請人身分證字號:</label></div>
+		    			<div class="td"><label for="id">申請人身分證字號</label></div>
 		    			<div class="td"><input type="password" name="id" id="id"></div>
-		    		</div>
-		    		<div class="tr">
-		    			<div class="td">選擇版型:</div>
-		    			<div class="td">
-		    				<input type="radio" name="frame" id="frameA"><label for="frameA">A</label>
-		    				<input type="radio" name="frame" id="frameB"><label for="frameB">B</label>
-		    				<input type="radio" name="frame" id="frameC"><label for="frameC">C</label>
-		    			</div>
 		    		</div>
 		    		<div class="tr">
 		    			<div class="td"><label for="photo">上傳照片</label></div>
@@ -196,15 +188,15 @@
 			<form  action="" method="get">
 		    	<div  class="formContent table">		    		
 		    		<div class="tr">
-		    			<div class="td"><label for="number">案件編號:</label></div>
+		    			<div class="td"><label for="number">案件編號</label></div>
 		    			<div class="td"><input type="text" name="number" id="number" placeholder="請輸入案件編號共5碼"></div>
 		    		</div>
 		    		<div class="tr">
-		    			<div class="td"><label for="name">申請人姓名:</label></div>
+		    			<div class="td"><label for="name">申請人姓名</label></div>
 		    			<div class="td"><input type="text" name="name" id="name"></div>
 		    		</div>
 		    		<div class="tr">
-		    			<div class="td"><label for="id">申請人身分證字號:</label></div>
+		    			<div class="td"><label for="id">申請人身分證字號</label></div>
 		    			<div class="td"><input type="password" name="id" id="id"></div>
 		    		</div>	
 		    	</div>
@@ -215,9 +207,9 @@
 		    <div class="feedback">
 		    	<div class="feedbackTitle"><h2>查詢結果</h2></div>
 		    	<div class="feedbackCotent">
-		    		<div>您的案件編號為:<span>123</span></div>
-					<div>申請日期為:<span>2017-08-08</span></div>
-					<div>目前狀態為:<span>審核中</span></div>
+		    		<div>您的案件編號為<span>123</span></div>
+					<div>申請日期為<span>2017-08-08</span></div>
+					<div>目前狀態為<span>審核中</span></div>
 		    	</div>
 				<button class="btn_green">確認</button>	
 			</div>

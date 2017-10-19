@@ -28,8 +28,8 @@ section>div{
 }
 .title{
 	writing-mode:vertical-rl;
-	margin-top: 90px;
-	margin-left: 150px;
+	margin-top: 70px;
+	margin-left: -50px;
 	font-size: 58px;
 	letter-spacing: 20px;
 	font-weight: bold;
@@ -37,7 +37,7 @@ section>div{
 
 .center{
 	margin-top: 190px;
-	margin-left: 50px;
+	margin-left: 64px;
 }
 .center>div{
 	float: left;

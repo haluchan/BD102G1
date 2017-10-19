@@ -5,9 +5,9 @@
  		
 	</section>
 	
-	<div class="lightbox-bg">
+	<div class="lightbox-bg" id="lightbox-bg">
 		<div class="lightbox-target" id="login">
-			<div class="cancel">
+			<div class="cancel" id="cancel">
 				<a  id="login-cancel"><img src="src/image/login/pop_close.png"></a>
 			</div>
 		  <div class="login-content">
@@ -27,7 +27,7 @@
 			  	</div>
 		  	<button type="submit" class="btn_green">登入</button>
 		  	 <button type="submit" class="btn_green">facebook登入</button>
-		  	<button type="" class="btn_green">註冊</button>
+		  	<button type="" class="btn_green" id="sign-btn">註冊</button>
 			 
 		  	
 		  </div>

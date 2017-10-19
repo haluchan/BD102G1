@@ -29,29 +29,29 @@
 		<p>歷史訂單</p>
 	</div>
 	<div class="navbarli" id="payhisto">
-		<p>資助紀錄</p>
+		<p>贊助紀錄</p>
 	</div>
 </div>
 
 		
 <div class="mem">
-	<div class="parallax">	
+	<!-- <div class="parallax">	 -->
 		<div id="scenes" data-hover-only="false" >
-		            <div class="parallax_area" data-depth="0.5">
+		            <div class="parallax_area" data-depth="0.1">
 		            	<img src="src/image/member/concept_index.png" alt="">
 		            </div>
 		           <!--  <div class="parallax_area_01" data-depth="5">
 		            	<img src="src/image/event/hatsuka_daikon.png" alt="">
-		            </div>
-		            <div class="parallax_area_02" data-depth="10">
+		            </div> -->
+		        <!--     <div class="parallax_area_02" data-depth="10">
 		            	<img src="src/image/event/ninjin_carrot2.png" alt="">
 		            </div>
 		            <div class="parallax_area_03" data-depth="15">
 		            	<img src="src/image/member/suika.png" alt="">
-		            </div> -->
-		</div>
+		            </div>
+		</div> -->
 	</div>
-</div>
+
 
 		<div class="table" id="memdetail">
 			<h2>我的資料</h2>
@@ -160,36 +160,35 @@
 				
 		</div>	
 		<div class="table" id="date">
-			<h2>資助紀錄</h2>
+			<h2>贊助紀錄</h2>
 				<table>
-					
 					<thead>
 						<tr>
 							<th>金額</th>
 							<th>日期</th>
-							<th>資助農家</th>
+							<th>贊助專案</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>200</td>
+							<td>1200</td>
 							<td>01/04/2017</td>
-							<td>小美</td>
+							<td>水蜜桃園</td>
 						</tr>
 						<tr>
-							<td>300</td>
+							<td>1300</td>
 							<td>10/12/2017</td>
 							<td>無米樂</td>
 						</tr>
 						<tr>
-							<td>300</td>
+							<td>1300</td>
 							<td>01/01/2017</td>
-							<td>陳阿土</td>
+							<td>阿昌櫻桃</td>
 						</tr>
 						<tr>
-							<td>300</td>
+							<td>1300</td>
 							<td>01/05/2017</td>
-							<td>阿水</td>
+							<td>阿伯菜園</td>
 						</tr>
 					</tbody>
 				</table>

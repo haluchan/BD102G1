@@ -8,11 +8,45 @@
 	<!-- 不准動的部分，以下三行 -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
-	<link rel="stylesheet" href="css/webBack_pro.css">
+	<link rel="stylesheet" href="css/webBack_memberback.css">
 </head>
 <body>
 <?php require_once('web_back_frame_top.php') ?>
+		<nav>
+			
+			<div class="nav_item">
+
+				<h2>123會員</h2>
+			</div>
+			<div class="nav_item">
+				<span>狀態：</span>
+				<select>
+					<option value="">不限</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select>
+			</div>
+			<div class="nav_item">
+				<span>類別：</span>
+				<select>
+					<option value="">不限</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select>
+			</div>
+			<div class="nav_item">
+				<div class="search">
+					<input type="text" name="" placeholder="搜尋">
+
+					<button><img src="src/image/web_back_frame/seaech.png"></button>
+					<button><img src="src/image/web_back_frame/erase.png"></button>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</nav>
+
 <form class="myForm">
+
 	<table cellspacing="1">
 		<tr>
 			<th></th>
@@ -70,7 +104,7 @@
 			<td>4</td>
 			<td>2AA</td>
 			<td>3AA</td>
-			<td>4aaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbb</td>
+			<td>4aaaaaaaaaa</td>
 			<td>Lo</td>
 			<td></td>
 			<td></td>

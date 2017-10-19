@@ -118,7 +118,7 @@
 			<a href="#">
 				<ul>
 					<li>
-						<h1 class="t1 active">募資中</h1>
+						<h1 class="t1 active01">募資中</h1>
 					</li>
 					<li>
 						<h1 class="t2">已結案</h1>
@@ -131,17 +131,17 @@
 			</a>
 			<img src="src/image/hopeFarm/long.png" alt="">
 		</div>
-		<div class="section05-g2 active c1">
-			<div class="section05-g2-i1 active c1">
+		<div class="section05-g2 ">
+			<div class="section05-g2-i1 active01 c1">
 				<div class="section05-g2-i1-item">
 					<a href="#">
 						<div class="item-box col-xs-12 col-sm-4">
 							<div class="item-box-shadow">
-								
 								<div class="box-img">
 									<img src="src/image/hopeFarm/d01.jpg" alt="">
-									<div class="tr"></div>
+									
 									<div class="square">
+										
 										<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
 									</div>
 								</div>
