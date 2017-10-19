@@ -127,7 +127,7 @@ body{
 					position: absolute;
 
 					top:80px;
-					left:0px;
+					left:20px;
 
 					z-index: 50;
 
@@ -256,6 +256,9 @@ body{
 		background-position: left 70px top, right  30px center;
 		text-align:center;
 		padding-bottom: 8%;
+		img{
+			max-width:468px;
+		}
 	}
 	.event-report-main{
 		max-width: 1440px;

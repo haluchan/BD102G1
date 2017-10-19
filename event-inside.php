@@ -4,14 +4,18 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
- <script type="text/javascript" src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
- <link rel="stylesheet" type="text/css" href="css/font.css">
 
 
  <!-- plugin -->
- <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
  <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css"/>
 
+
+
+<script type="text/javascript" src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
+
+
+ 
 
 
  <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
@@ -19,6 +23,9 @@
     <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> 
     <!-- //scrollmagic 要拿掉滾動的名字 要跟ＪＳ另一個function 一起隱藏  -->
     <link href="css/event-inside.css" rel="stylesheet">
+
+<?php require_once("Header_head.php"); ?>
+   
    <title>活動詳情</title>
 
 </head>
@@ -30,7 +37,7 @@
 
 	<!-- nav -->
 
-	<?php require_once('Header.php'); ?>
+<?php require_once('Header.php'); ?>
 
 	<div class="event">
 		
@@ -171,17 +178,15 @@
 		<!-- footer -->
 		<?php require_once('Footer.php'); ?>
 
-		
 		</div>
-		
-		
-
+	</div>
 	
-
-	
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
+
+<script type="text/javascript" src="js/header.js"></script>
+   
   <script type="text/javascript" src="js/event-inside.js"></script>
 
 	 

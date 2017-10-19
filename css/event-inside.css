@@ -57,7 +57,7 @@ body {
       text-align: center;
       position: absolute;
       top: 80px;
-      left: 0px;
+      left: 20px;
       z-index: 50; }
       .main-bg .event-row .main-container .main-title h2:nth-child(1) {
         font-size: 48px;
@@ -153,6 +153,8 @@ body {
     background-position: left 70px top, right  30px center;
     text-align: center;
     padding-bottom: 8%; }
+    .event-report .event-report-title img {
+      max-width: 468px; }
   .event-report .event-report-main {
     max-width: 1440px;
     margin: auto;

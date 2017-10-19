@@ -1,15 +1,12 @@
 
-
-	
-<<<<<<< HEAD
 		
 	    <header>
 	    	<?php require_once('login.php'); ?> 
-=======
+
 		<!-- <?php require_once('login.php'); ?> -->
 	    <header class="header">
 
->>>>>>> 8dabc143198272433d5b1447d7ec848ff470195f
+
 	    	<div class="topmenu">
 	    		<ul>	
 	    			<li><a href="cart.php">購物車<span class="cartNo">0</span></a></li>
@@ -84,36 +81,6 @@
 	    </header>
 		
 
-<<<<<<< HEAD
-
-	
-
-	    <script type="text/javascript">
-			$(document).ready(function(){
-			$('#ham_button').click(function(){
-				$('#hamicon').toggleClass("hamicon_slide");
-				$('#ham_menu').toggleClass("ham_slide");
-				});
-		});		
-			
-			$("#login-btn").click(function(){
-				$(".lightbox-bg").fadeIn();
-			});
-			$("#login-btn2").click(function(){
-				$(".lightbox-bg").fadeIn();
-			});
-			$(".cancel").click(function(){
-				$(".lightbox-bg").fadeOut();
-			});
-=======
-	<!-- <section>
- 		
-	</section> -->
-	 <?php require_once('login.php'); ?> 
-	<?php require_once('memsign.php'); ?>
-	
-	  
->>>>>>> 8dabc143198272433d5b1447d7ec848ff470195f
 
 		
 

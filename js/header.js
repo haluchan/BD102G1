@@ -4,7 +4,7 @@
 				$('#hamicon').toggleClass("hamicon_slide");
 				$('#ham_menu').toggleClass("ham_slide");
 				});
-		});		
+			});		
 			//登入lightbox
 			$("#login-btn").click(function(){
 				$("#lightbox-bg").fadeIn();
@@ -14,7 +14,7 @@
 			$("#login-btn2").click(function(){
 				$("#lightbox-bg").fadeIn();
 			});
-			$("#cancel").click(function(){
+			$(".button-x").click(function(){
 				$("#lightbox-bg").fadeOut();
 			});
 			
