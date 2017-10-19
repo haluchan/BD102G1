@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 
 
 	
 		<!-- <?php require_once('login.php'); ?> -->
 	    <header class="header">
-=======
-		
-	    <header>
->>>>>>> 9c66061b0ddefb5eaf621996f30c65954fc84758
+
 	    	<div class="topmenu">
 	    		<ul>	
 	    			<li><a href="cart.php">購物車<span class="cartNo">0</span></a></li>
