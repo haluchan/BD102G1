@@ -43,7 +43,7 @@
 		    		<p>常為銷售收成的作物而傷透腦筋?　為收入不穩定、要不要繼續下去而苦惱??</p>
 		    		<p>填寫你的資助計劃，讓更多人看見你的理念!!</p>
 		    	</div>
-				<form action="php/applicationInsert.php" method="post">
+				<form  method="post">
 			    	<div class="formStep">
 			    		<div class="stepContent" id="hidden"  >
 			    			<div class="stepAll item">
@@ -124,7 +124,7 @@
 			    	</div>
 		    	
 			    	<div class="formSubmit">
-			    		<input class="btn_green" type="submit" name="submit" value="確定送出" disabled>
+			    		<input class="btn_green" type="submit" name="submit" value="確定送出" >
 			    	</div>
 		    	</form>
 		    </div>
@@ -226,7 +226,9 @@
 		
  		// 驗證表單value格式
  		$('#idno').blur(function(){
- 			$(this).css("background-color","red");
+ 			var id=$(this).value();
+ 			alert(id);
+ 			$(this).css("background-color","pink");
  		});
  		//身分證字號
  		function idconfirm(){}
