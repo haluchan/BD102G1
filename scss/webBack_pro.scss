@@ -1,5 +1,7 @@
 ﻿//每個格子統一固定padding
-$cellPadding: 6px 4px;
+$cellPadding: 6px 10px;
+//按鈕圓角
+$btnRadius: 6px;
 //note web_back_form.css修正
 .manage{width:16%}
 .content_form{width:84%;}
@@ -45,9 +47,7 @@ nav{
 		background-color: #F29600;
 
 	}
-	td{
-		font-weight: lighter;
-	}
+
 
     
 	.tdRow:nth-child(odd){/*基數白底，偶數灰底(第一row包th不算)*/
@@ -57,6 +57,11 @@ nav{
 		background-color: #fff;
 	}
 
+	//改radio btn
+	.trRow td:nth-child(7){
+		.on{}
+		.off{}
+	}
 	
 	//限制表格寬度固定
 	table{  		
@@ -72,20 +77,20 @@ nav{
 
 
 		/*自行更改、增加 區域=================================*/
-		tr th:nth-child(2){
-			width: 10%;
-		}
-		tr th:nth-child(3){
-			width: 10%;
-		}
-		tr th:nth-child(4){
-			width: 20%;
-		}
-		tr th:nth-child(5){
-			width: 10%;
-		}
+		// tr th:nth-child(2){
+		// 	width: 10%;
+		// }
+		// tr th:nth-child(3){
+		// 	width: 10%;
+		// }
+		// tr th:nth-child(4){
+		// 	width: 20%;
+		// }
+		// tr th:nth-child(5){
+		// 	width: 10%;
+		// }
 		tr th:nth-child(6){
-			width: 25%;
+			width: 10%;
 		}
 		tr th:nth-child(7){
 			width: 10%;
@@ -99,7 +104,16 @@ nav{
 	.btn{
 		background-color: LemonChiffon ;
 		padding:4px 6px;
-		border:none
+		border:none;
+		width: 60%;
+		margin: auto;
+		box-shadow: 2px 2px 1px rgba(0,0,0,.2);
+		border-radius: $btnRadius;
+		outline: pointer;
+		&:active{
+			transform: translate(2px ,2px);
+			box-shadow: none;
+		}
 	}
 
 
@@ -113,21 +127,25 @@ nav{
 	// margin-right: 0;
 	margin-top: 20px;
 	width: 97%;
-	button{
+	.submit{
+		border-radius: $btnRadius;
 		box-sizing: border-box;
 		float: right;
 		display: block;
 		background-color: #F29600;
 		padding:10px 0px;
 		width: 20%;
-		border:none;
+		border: 2px solid #F29600;
 		color: #fff;
-		// outline:none;
-			outline: 2px solid  #F29600;
+		outline:none;
+		cursor: pointer;
 		&:hover{
 			// box-sizing: border-box;
 			color: #F29600;
 			background-color: #fff;
+		}
+		&:active{
+			transform: scale(.98 ,.98);
 		}
 	}
 }
