@@ -11,7 +11,7 @@
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-
+<?php require_once('Header_head.php'); ?>
 </head>
 <body>
 	<?php require_once('Header.php'); ?>
@@ -379,6 +379,7 @@
 
 
 </div>
+<script type="text/javascript" src="js/header.js"></script>
 <script type="text/javascript" src="js/event.js"></script>
 <?php require_once('Footer.php');?>
 </body>

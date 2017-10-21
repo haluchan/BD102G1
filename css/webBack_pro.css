@@ -8,15 +8,20 @@
 botton {
   border: none; }
 
+nav .nav_item:nth-child(2) {
+  visibility: hidden; }
+
 /* table起始 */
 .myForm {
   width: 94%;
   margin: auto; }
   .myForm table {
     width: 100%; }
+  .myForm label + label {
+    margin-left: 14px; }
   .myForm th, .myForm td {
     /*每個格子統一固定padding*/
-    padding: 6px 4px;
+    padding: 6px 10px;
     text-align: left;
     word-break: break-all;
     -o-text-overflow: ellipsis;
@@ -29,8 +34,6 @@ botton {
     /*th的樣式:上下有橘色線*/
     border-bottom: 2px solid #ddd;
     background-color: #F29600; }
-  .myForm td {
-    font-weight: lighter; }
   .myForm .tdRow:nth-child(odd) {
     /*基數白底，偶數灰底(第一row包th不算)*/
     background-color: #ddd; }
@@ -44,21 +47,48 @@ botton {
     /*自行更改、增加 區域=================================*/ }
     .myForm table tr th:nth-child(1) {
       width: 5%; }
-    .myForm table tr th:nth-child(2) {
-      width: 10%; }
-    .myForm table tr th:nth-child(3) {
-      width: 10%; }
-    .myForm table tr th:nth-child(4) {
-      width: 20%; }
-    .myForm table tr th:nth-child(5) {
-      width: 10%; }
     .myForm table tr th:nth-child(6) {
-      width: 25%; }
+      width: 10%; }
     .myForm table tr th:nth-child(7) {
       width: 10%; }
   .myForm .btn {
     background-color: LemonChiffon;
     padding: 4px 6px;
-    border: none; }
+    border: none;
+    width: 60%;
+    margin: auto;
+    -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: pointer; }
+    .myForm .btn:active {
+      -webkit-transform: translate(2px, 2px);
+      -ms-transform: translate(2px, 2px);
+      transform: translate(2px, 2px);
+      -webkit-box-shadow: none;
+      box-shadow: none; }
 
 /* table結束 */
+.proSave {
+  margin-top: 20px;
+  width: 97%; }
+  .proSave .submit {
+    border-radius: 6px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: right;
+    display: block;
+    background-color: #F29600;
+    padding: 10px 0px;
+    width: 20%;
+    border: 2px solid #F29600;
+    color: #fff;
+    outline: none;
+    cursor: pointer; }
+    .proSave .submit:hover {
+      color: #F29600;
+      background-color: #fff; }
+    .proSave .submit:active {
+      -webkit-transform: scale(0.98, 0.98);
+      -ms-transform: scale(0.98, 0.98);
+      transform: scale(0.98, 0.98); }

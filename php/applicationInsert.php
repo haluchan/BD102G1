@@ -6,19 +6,24 @@
 	</head>
 
 	<body>
-		<?php
-		// 抓取前端送來資料
-	    $name=$_REQUEST["name"];
-	    $gender=$_REQUEST["gender"];
-	    $id=$_REQUEST["id"];
-	    $birth=$_REQUEST["birth"];
-	    $add=$_REQUEST["add"];
-	    $tel=$_REQUEST["tel"];
-	    $mail=$_REQUEST["mail"];
-	    $account=$_REQUEST["account"];
-	    $allow=$_REQUEST["allow"];
 
-	    echo $name;
-		?>
+	<?php
+		$form=$_REQUEST["form"];
+		switch ($form) {
+			case 'a':
+				echo "我從申請資助來";
+				break;
+			case 'b':
+				echo "我從回報進度來";
+				break;
+			case 'c':
+				echo "我從查詢案件來";
+				break;
+		}
+
+	?>
+		
+
+		
 	</body>
 </html>

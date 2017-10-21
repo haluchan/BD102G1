@@ -4,27 +4,43 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
- <script type="text/javascript" src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
- <link rel="stylesheet" type="text/css" href="css/font.css">
+
+
  <!-- plugin -->
- <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
  <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css"/>
+
+
+
+<script type="text/javascript" src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
+
+
  
+
+
  <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> 
     <!-- //scrollmagic 要拿掉滾動的名字 要跟ＪＳ另一個function 一起隱藏  -->
-<title>活動詳情</title>
-<meta name="description" content="">
+    <link href="css/event-inside.css" rel="stylesheet">
 
-<link href="css/event-inside.css" rel="stylesheet">
+<?php require_once("Header_head.php"); ?>
+   
+   <title>活動詳情</title>
+
 </head>
 <body>
 
-	<?php require_once('Header.php'); ?>
+
+
+
+
+	<!-- nav -->
+
+<?php require_once('Header.php'); ?>
 
 	<div class="event">
-		<!-- <?php require_once("Header.php"); ?> -->
+		
 		<!-- banner  -->
 		<div class="event-banner">
 			<div class="slides">
@@ -36,9 +52,7 @@
 			</div>
 		</div>
 
-		<!-- nav -->
-
-
+		
 
 
 
@@ -92,6 +106,11 @@
 
 		<!-- 活動地點 -->
 
+
+
+
+
+
 		<div id="trigger3"></div>
 		<section class="event-map event-ins-item3">
 			<div class="event-row">
@@ -106,7 +125,7 @@
 							<div class="btn_green">我要報名</div>
 						</a>
 					</div>
-				<div class="event-map-img">
+				<div class="event-map-img" >
 					<img src="src/image/event-inside-page/map-img.png" alt="">
 				</div>
 				<div class="event-map-right">
@@ -119,6 +138,11 @@
 		
 
 		<!-- 活動回報 -->
+
+
+
+
+
 
 		<div id="trigger4"></div>
 		<section class="event-report event-ins-item4">
@@ -147,32 +171,24 @@
 					<img src="src/image/event-inside-page/event-report-photo6.jpg" alt="">
 				</div>
 			</div>
-
+		
 		</section>
 		<div class="event-deck">
-		<?php require_once('Footer.php'); ?>	
+		
+		<!-- footer -->
+		<?php require_once('Footer.php'); ?>
+
 		</div>
-		
-		
-
+	</div>
 	
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
 
-	<script type="text/javascript" src="js/event-inside.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	  <script type="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+   
+  <script type="text/javascript" src="js/event-inside.js"></script>
 
-	  <script type="text/javascript">
-	    $(document).ready(function(){
-	      $('.slides').slick({
-	        // setting-name: setting-value
-	        autoplay: true,
-	        mobileFirst: true,
-	        pauseOnFocus: true,
-	        arrows:false,
-	        dots: true,
-	      });
-	    });
-  </script>
+	 
 </body>
 </html>

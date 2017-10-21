@@ -14,7 +14,7 @@
 			$("#login-btn2").click(function(){
 				$("#lightbox-bg").fadeIn();
 			});
-			$("#cancel").click(function(){
+			$(".button-x").click(function(){
 				$("#lightbox-bg").fadeOut();
 			});
 			

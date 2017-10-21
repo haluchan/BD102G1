@@ -1,8 +1,18 @@
 
+		
+	    <header>
+	    	<?php require_once('login.php'); ?> 
 
+
+			<?php require_once('login.php'); ?> 
+
+<<<<<<< HEAD
 	
 		
+=======
+>>>>>>> 0b2e4ac735090e666fecbdcc85acfb5176907019
 	    <header class="header">
+
 
 	    	<div class="topmenu">
 	    		<ul>	
@@ -78,13 +88,6 @@
 	    </header>
 		
 
-	<!-- <section>
- 		
-	</section> -->
-	 <?php require_once('login.php'); ?> 
-	<?php require_once('memsign.php'); ?>
-	
-	  
 
 		
 

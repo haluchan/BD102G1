@@ -43,7 +43,7 @@
 		    		<p>常為銷售收成的作物而傷透腦筋?　為收入不穩定、要不要繼續下去而苦惱??</p>
 		    		<p>填寫你的資助計劃，讓更多人看見你的理念!!</p>
 		    	</div>
-				<form  method="post">
+				<form action="php/applicationInsert.php" method="post">
 			    	<div class="formStep">
 			    		<div class="stepContent" id="hidden"  >
 			    			<div class="stepAll item">
@@ -124,6 +124,7 @@
 			    	</div>
 		    	
 			    	<div class="formSubmit">
+			    		<input type="hidden" name="form" value="a">
 			    		<input class="btn_green" type="submit" name="submit" value="確定送出" >
 			    	</div>
 		    	</form>
@@ -144,7 +145,7 @@
 	    			<h1>回報進度</h1>
 	    		</div>
 	    	</div>   	
-			<form  action="" method="get">
+			<form  action="php/applicationInsert.php" method="post">
 		    	<div  class="formContent table">		    		
 		    		<div class="tr">
 		    			<div class="td"><label for="number">案件編號</label></div>
@@ -168,11 +169,13 @@
 						<div class="td"><textarea  rows="10" cols="25"></textarea></div>
 		    		</div>
 		    	</div>
-	    	</form>
+	    	
 			
 			<div class="formSubmit">
+				<input type="hidden" name="form" value="b">
 		    	<input class="btn_green" type="submit" name="submit" value="確定送出">
 		    </div>
+		</form>
 	    </div>
 
 
@@ -190,25 +193,27 @@
 	    			<h1>查詢案件</h1>
 	    		</div>
 	    	</div>   	
-			<form  action="" method="get">
+			<form  action="php/applicationInsert.php" method="post">
 		    	<div  class="formContent table">		    		
 		    		<div class="tr">
 		    			<div class="td"><label for="number">案件編號</label></div>
-		    			<div class="td"><input type="text" name="number" id="number" placeholder="請輸入案件編號共5碼"></div>
+		    			<div class="td"><input type="text" name="event_no" placeholder="請輸入案件編號共5碼"></div>
 		    		</div>
 		    		<div class="tr">
 		    			<div class="td"><label for="name">申請人姓名</label></div>
-		    			<div class="td"><input type="text" name="name" id="name"></div>
+		    			<div class="td"><input type="text" name="event_name"></div>
 		    		</div>
 		    		<div class="tr">
 		    			<div class="td"><label for="id">申請人身分證字號</label></div>
-		    			<div class="td"><input type="password" name="id" id="id"></div>
+		    			<div class="td"><input type="password" name="event_idno"></div>
 		    		</div>	
 		    	</div>
-	    	</form>
+	    	
 			<div class="formSubmit">
+				<input type="hidden" name="form" value="c">
 		    	<input class="btn_green" type="submit" name="submit" value="確定送出">
 		    </div>
+		    </form>
 		    <div class="feedback">
 		    	<div class="feedbackTitle"><h2>查詢結果</h2></div>
 		    	<div class="feedbackCotent">
@@ -221,46 +226,8 @@
 	    </div>
 	</div>
 
-  <?php require_once('Footer.php') ?> 
- 	<script>
-		
- 		// 驗證表單value格式
- 		$('#idno').blur(function(){
- 			var id=$(this).value();
- 			alert(id);
- 			$(this).css("background-color","pink");
- 		});
- 		//身分證字號
- 		function idconfirm(){}
- 		
-
- 		//申請金額需全為數字
- 		function allow(){}
-
-
-
-		document.getElementById("bara").onclick=apply;
-    	function apply(){
-    		document.getElementById("search").style.display="none";
-    		document.getElementById("report").style.display="none";
-    		document.getElementById("apply").style.display="";
-    	}
-    	document.getElementById("barc").onclick=report;
-    	function report(){
-    		document.getElementById("report").style.display="";
-    		document.getElementById("apply").style.display="none";
-    		document.getElementById("search").style.display="none";
-    	}
-    	document.getElementById("barb").onclick=search;
-    	function search(){
-    		document.getElementById("apply").style.display="none";
-    		document.getElementById("report").style.display="none";
-    		document.getElementById("search").style.display="";
-    	}
-
-
-
- 	window.onload=apply;
- 	</script>
+  	<?php require_once('Footer.php') ?> 
+	<script src="js/application.js"></script>
 	</body>
+
 </html>
