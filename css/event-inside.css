@@ -256,7 +256,7 @@ body {
 
 @media all and (max-width: 767px) {
   .event-banner {
-    margin-top: 0px; }
+    margin-top: 50px; }
   .main-bg {
     background-size: 54px auto,70px auto; }
     .main-bg .event-row .main-container .title-frame {

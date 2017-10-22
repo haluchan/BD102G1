@@ -381,6 +381,7 @@
 </div>
 <script type="text/javascript" src="js/header.js"></script>
 <script type="text/javascript" src="js/event.js"></script>
+<script type="text/javascript" src="js/login-ajax.js"></script>
 <?php require_once('Footer.php');?>
 </body>
 </html>

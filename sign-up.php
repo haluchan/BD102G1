@@ -3,10 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<?php require_once('Header_head.php'); ?>
 <title>活動報名</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <link href="css/sign-up.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/font.css">
+
 </head>
 <body>
 
@@ -63,6 +65,7 @@
 
 	</div>
 <?php require_once('Footer.php'); ?>
+<script type="text/javascript" src="js/login-ajax.js"></script>
 
 	
 </body>

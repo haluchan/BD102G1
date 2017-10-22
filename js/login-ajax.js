@@ -13,6 +13,10 @@ function $id(id){
 	return document.getElementById(id);
 }
 
+
+
+
+
 // 重置
 
 function resetPsw(){
@@ -144,6 +148,8 @@ function cancelPanel(){
 	$("memPsw").value = "";
 	lightboxbg.style.display = "none";
 	lightboxbg.style.opacity = '0';
+	document.getElementById("forgotPsw").style.display="none";
+	document.getElementById("login_naka").style.display="";
 	// lightboxbg.style.transitionDuration = "1s";
 }
 
