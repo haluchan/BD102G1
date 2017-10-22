@@ -4,7 +4,7 @@
 	    	<?php require_once('login.php'); ?> 
 
 
-			<?php require_once('login.php'); ?> 
+			<!-- <?php //require_once('login.php'); ?>  -->
 
 	    <header class="header">
 
