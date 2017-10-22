@@ -14,6 +14,38 @@
 <body>
 <?php require_once('web_back_frame_top.php') ?>
 <form class="myForm">
+	<nav>
+			
+			<div class="nav_item">
+
+				<h2>訂單總覽</h2>
+			</div>
+			<div class="nav_item">
+				<span>狀態：</span>
+				<select>
+					<option value="">不限</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select>
+			</div>
+			<div class="nav_item">
+				<span>類別：</span>
+				<select>
+					<option value="">不限</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select>
+			</div>
+			<div class="nav_item">
+				<div class="search">
+					<input type="text" name="" placeholder="搜尋">
+
+					<button><img src="src/image/web_back_frame/seaech.png"></button>
+					<button><img src="src/image/web_back_frame/erase.png"></button>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</nav>
 	<table cellspacing="1">
 		<tr>
 			<th></th>

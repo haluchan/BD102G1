@@ -11,27 +11,27 @@
 	<link rel="stylesheet" href="css/webBack_memberback.css">
 </head>
 <body>
+
 <?php require_once('web_back_frame_top.php') ?>
-		<nav>
-			
+<nav>
 			<div class="nav_item">
 
-				<h2>123會員</h2>
+				<h2>會員名單</h2>
 			</div>
 			<div class="nav_item">
-				<span>狀態：</span>
+				<!-- <span>狀態：</span>
 				<select>
 					<option value="">不限</option>
 					<option value="">不限</option>
 					<option value="">不限</option>
-				</select>
+				</select> -->
 			</div>
 			<div class="nav_item">
-				<span>類別：</span>
+				<span>分類：</span>
 				<select>
-					<option value="">不限</option>
-					<option value="">不限</option>
-					<option value="">不限</option>
+					<option value="">會員編號</option>
+				<!-- 	<option value=""></option> -->
+					
 				</select>
 			</div>
 			<div class="nav_item">
@@ -39,202 +39,88 @@
 					<input type="text" name="" placeholder="搜尋">
 
 					<button><img src="src/image/web_back_frame/seaech.png"></button>
-					<button><img src="src/image/web_back_frame/erase.png"></button>
+					<!-- <button><img src="src/image/web_back_frame/erase.png"></button> -->
 				</div>
 			</div>
 			<div class="clearfix"></div>
 		</nav>
-
-<form class="myForm">
+		<div class="myForm" >
 
 	<table cellspacing="1">
 		<tr>
-			<th></th>
 			<th>會員編號</th>
 			<th>帳號</th>
+			<th>密碼</th>
 			<th>姓名</th>
-			<th>暱稱</th>
-			<th>照片</th>
 			<th>信箱</th>
-			<th>居住地</th>
+			<!-- <th>照片</th> -->
+			<th>生日</th>
+			<th>性別</th>
+		<!-- 	<th>居住地</th>
 			<th>紅利</th>
-			<th>種子</th>
+			<th>種子</th> -->
 			<th>資格</th>
+			<th>更改資格</th>
 		</tr>
+		<?php try {
+			require_once("php/connectBeck.php");
+	
+    $sql = "select * from member";
+    
+    $member = $pdo->query($sql);	
+	
+		while(  $resultset = $member ->fetchObject() ){
+		$mem_no = $resultset->mem_no ;
+		?>
 		<tr class="tdRow">
-			<td>1</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><?php echo $resultset->mem_no ;?></td>
+			<td><?php echo $resultset->mem_id ;?></td>
+			<td><?php echo $resultset->mem_psw ;?></td>
+			<td><?php echo $resultset->mem_name ;?></td>
+			<td><?php echo $resultset->mem_mail ;?></td>
+		<!-- 	<td><?php echo $resultset->mem_pho ;?></td> -->
+			<td><?php echo $resultset->mem_birth ;?></td>
+			<td><?php echo $resultset->mem_gender ;?></td>
+		<!-- 	<td><?php echo $resultset->mem_add ;?></td>
+			<td><?php echo $resultset->mem_seed ;?></td>
+			<td><?php echo $resultset->mem_bonus ;?></td> -->
+			<td><?php echo $resultset->mem_equity ;?></td>
+			<td style="padding-left: 20px;">
+				<form class="myForm" action="php/memequ.php">
+					<input type="hidden" name="mem_no" value="<?php echo $mem_no;?>">
+				<select name="mem_equity">
+					<option value="S">停權</option>
+					<option value="N">復權</option>
+				</select>
+				<button type="submit" style="width:50px;height:20px;background-color: #e6ac00;outline-style: none;border-radius: 20px;" 
+					id="chanmember">更改
+				</button>
+				</form>
+			</td>	
 		</tr>
-		<tr class="tdRow">
-			<td>2</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr class="tdRow">
-			<td>3</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr class="tdRow">
-			<td>4</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4aaaaaaaaaa</td>
-			<td>Lo</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr class="tdRow">
-			<td>5</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr class="tdRow">
-			<td>6</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr class="tdRow">
-			<td>7</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr class="tdRow">
-			<td>8</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr class="tdRow">
-			<td>9</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr class="tdRow">
-			<td>10</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr class="tdRow">
-			<td>11</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr class="tdRow">
-			<td>12</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
+		
+		
 
-		<tr class="tdRow">
-			<td>13</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
 
-	</table>
-</form>
+		
 
+
+
+	
+
+	
+
+<?php	
+}	
+
+}
+	catch (PDOException $e) {
+	echo "錯誤原因 : " , $e->getMessage(),"<br>";
+	echo "行號 : " , $e->getLine(),"<br>";	
+}
+?>	  
+</table>
+</div>
 <?php require_once('web_back_frame_bottom.php') ?>
 
 </body>

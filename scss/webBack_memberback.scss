@@ -57,29 +57,38 @@ botton{border:none;}
 	table{  /*每一欄的寬度設定。以百分比。剩的寬自動為最後一欄*/
 		/*不能動！！第一欄固定為5%*/
 		tr th:nth-child(1){
-			width: 5%;
+			width: 3%;
 		}
 
 
 
 		/*自行更改、增加 區域=================================*/
 		tr th:nth-child(2){
-			width: 10%;
+			width: 5%;
 		}
 		tr th:nth-child(3){
-			width: 10%;
+			width: 3%;
 		}
 		tr th:nth-child(4){
-			width: 10%;
+			width: 3%;
 		}
 		tr th:nth-child(5){
-			width: 10%;
+			width: 8%;
 		}
 		tr th:nth-child(6){
-			width: 15%;
+			width: 5%;
 		}
 		tr th:nth-child(7){
-			width: 10%;
+			width: 3%;
+		}
+		tr th:nth-child(8){
+			width:2%;
+		}
+		tr th:nth-child(9){
+			width: 5%;
+		}
+		tr th:nth-child(10){
+			width: 5%;
 		}
 	}
 
