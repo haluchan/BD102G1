@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <title>商品頁</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<script src="src/libs/jquery/dist/jquery.min.js"></script>
+
+
+<?php require_once('Header_head.php') ?>
 <script src="js/product.js"></script>
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css">
