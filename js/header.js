@@ -19,16 +19,15 @@
 			// });
 			
 			//註冊lightbox
-			$("#sign-btn").click(function(){
-				$("#lightbox-bg").fadeOut();
-				$("#sign-lightbox").fadeIn();
+			$("#memSignBtn").click(function(){
+				$("#lightbox-bg").css("display","none");
+				$("#memsign-lightbox").css("display","block");
 
 			});
-			$("#cancel-sign").click(function(){
-				$("#sign-lightbox").fadeOut();
-			});
+			$("#membutton_x").click(function(){
+				$("#memsign-lightbox").fadeOut(400);
 			//完成註冊
-
+			});
 
 			$(function(){
 				var fixed = false;//設定fix變數 false未fixed, true已fixed

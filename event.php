@@ -259,8 +259,8 @@
 				</div>
 				
 			</a>
-					</div>
-					";}?>
+				</div>
+				";}?>
 	<!-- 	<div class="eventreco" >
 			
 		

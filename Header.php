@@ -2,6 +2,7 @@
    	
    	<div>
    		<?php require_once('login.php'); ?> 
+        <?php require_once('memsign.php'); ?> 
    	</div>
 
     <header class="header">

@@ -29,7 +29,7 @@
 					  	</div>
 					  	<button type="submit" class="btn_green" id="login_btn">登入</button>
 					  	<button type="" class="btn_green">facebook登入</button>
-					  	<button type="" class="btn_green">註冊</button>
+					  	<button type="" class="btn_green" id="memSignBtn">註冊</button>
 					</div>
 					<div class="forgot_psw" id="forgotPsw">
 						<h2>忘記密碼</h2>

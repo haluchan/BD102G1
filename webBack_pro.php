@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/webBack_pro.css">
 </head>
 <body>
-<<<<<<< HEAD
+
 <?php require_once('web_back_frame_top.php') ?>
 <form class="myForm">
 	<nav>
@@ -332,7 +332,7 @@
 	<!-- 送去webBack_pro_resetStatus.php -->
 
 
->>>>>>> a5f704c71a900752d4735bdd52a61f70b787d8f2
+
 
 <?php require_once('web_back_frame_bottom.php') ?>
 

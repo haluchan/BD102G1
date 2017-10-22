@@ -147,7 +147,7 @@ function cancelPanel(){
 	$("memMail").value = "";
 	$("memPsw").value = "";
 	lightboxbg.style.display = "none";
-	lightboxbg.style.opacity = '0';
+	// lightboxbg.style.opacity = '0';
 	document.getElementById("forgotPsw").style.display="none";
 	document.getElementById("login_naka").style.display="";
 	// lightboxbg.style.transitionDuration = "1s";
