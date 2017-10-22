@@ -2,7 +2,7 @@
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
-	<title>後台::商品</title>
+	<title>後台::商品管理</title>
 	<!-- 不准動的部分，以下三行 -->	
 	<script src="js/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
@@ -16,7 +16,7 @@
 	<nav>
 				
 		<div class="nav_item">
-			<h2>商品管理</h2>
+			<h2>商品全覽</h2>
 		</div>
 		<div class="nav_item">
 			<span>類別：</span>
@@ -68,7 +68,8 @@
 		require_once("php/connectGrowing_hope.php");
 
 	    //加一個把編號和類別組合在一起並補齊三個位數的指令作為商品編號
-	    $sql = "select *, lpad(pro_no, 3, 0) pro_realNo from product";
+	    $sql = "select *, lpad(pro_no, 3, 0) pro_realNo 
+	    		from product";
 
 		$products = $pdo->query($sql);
 
@@ -79,22 +80,25 @@
 
 
 			<tr class="tdRow">
+				<!-- 行號 -->
 				<td><?php echo $x += 1 ; ?></td>
+
+				<!-- 組合過類別的商品編號 -->
 				<td>
 					<?php 
 						$typ ='';
 						//辨認類別給編號開頭
 						switch ($prodRow->pro_type) {
 							case 1:
-								$typ = 'S';
+								$typ = 's';
 								break;
 
 							case 2:
-								$typ = 'T';
+								$typ = 't';
 								break;
 							
 							default:
-								$typ = 'Z';
+								$typ = 'z';
 								break;
 						}
 						
@@ -104,9 +108,9 @@
 					?>
 						
 				</td>
+				<!-- 類別 辨認給中文 -->
 				<td>
-					<?php 
-						//辨認類別給中文
+					<?php 						
 						switch ($prodRow->pro_type) {
 							case 1:
 								$typ = '種子';
@@ -123,12 +127,19 @@
 						echo $typ; 
 					?>					
 				</td> 
+
+				<!-- 商品名稱 -->
 				<td><?php echo $prodRow->pro_name; ?></td>
+
+				<!-- 價格 -->
 				<td><?php echo $prodRow->pro_price; ?></td>
 				
+				<!-- 修改按鈕 -->
 				<td>
 					<input class="btn" type="button" name="revise" value="修改資料">
 				</td>
+
+				<!-- 狀態 -->
 				<td>
 					<?php $status = $prodRow->pro_status; ?>
 					<label><input type="radio" name="status<?php echo $prodRow->pro_no ?>" value="1" class="on" <?php if ( $status == 1){echo 'checked';}?> >上架</label>
@@ -157,13 +168,14 @@
 
 		</table>
 		
-
+		
 		<div class="proSave">
 			<input type="submit" class="submit" value="修改上下架">
 			<div class="ccc" style="clear: both;"></div>
 		</div>
 
 	</form>
+	<!-- 送去webBack_pro_resetStatus.php -->
 
 
 

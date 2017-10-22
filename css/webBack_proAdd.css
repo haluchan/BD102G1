@@ -3,20 +3,19 @@
   width: 16%; }
 
 .content_form {
-  width: 84%;
-  margin-top: 155px; }
+  width: 84%; }
 
-button {
-  border: none; }
+select {
+  outline: inherit; }
 
 nav .nav_item:nth-child(3) {
-  display: none; }
+  display: hidden; }
 
 nav .nav_item:nth-child(4) {
-  display: none; }
+  display: hidden; }
 
 nav .nav_item:nth-child(5) {
-  display: none; }
+  display: hidden; }
 
 /* table起始 */
 .myForm {
@@ -48,31 +47,38 @@ nav .nav_item:nth-child(5) {
     text-align: center; }
   .myForm select, .myForm option {
     width: 91%;
-    padding: 6px 0px 6px 10px;
+    padding: 6px 10px;
     background-color: LemonChiffon;
     border: none; }
     .myForm select:focus, .myForm option:focus {
       outline-color: #F29600; }
-  .myForm input, .myForm textarea {
-    width: 90%;
-    padding: 6px 0px 6px 10px;
+  .myForm input {
+    width: 88%;
+    padding: 6px 10px;
     background-color: LemonChiffon;
     border: none; }
-    .myForm input:focus, .myForm textarea:focus {
+    .myForm input:focus {
       outline-color: #F29600; }
   .myForm textarea {
+    padding: 6px 10px;
+    width: 88%;
+    background-color: LemonChiffon;
+    border: none;
     resize: none; }
+    .myForm textarea:focus {
+      outline-color: #F29600; }
   .myForm .pro_numDisable {
     color: #fff; }
-    .myForm .pro_numDisable span {
-      display: inline-block;
+    .myForm .pro_numDisable div {
       width: 100%;
-      padding: 2px 0px;
+      padding: 2px 2px;
       background-color: SaddleBrown; }
-    .myForm .pro_numDisable input {
-      width: 99%;
-      background-color: SaddleBrown;
-      color: #fff; }
+    .myForm .pro_numDisable .input {
+      width: 98%;
+      padding: 2px 10px;
+      font-size: 0; }
+      .myForm .pro_numDisable .input span {
+        font-size: 16px; }
   .myForm table {
     /*每一欄的寬度設定。以百分比。剩的寬自動為最後一欄*/
     /*不能動！！第一欄固定為5%*/ }
@@ -90,17 +96,25 @@ nav .nav_item:nth-child(5) {
 .proSave {
   margin: auto;
   margin-top: 20px; }
-  .proSave button {
+  .proSave .submit {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     margin: auto;
     display: block;
     background-color: #F29600;
     padding: 10px 0px;
     width: 50%;
-    border: none;
-    color: #fff; }
-    .proSave button:hover {
+    border: 2px solid #F29600;
+    color: #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer; }
+    .proSave .submit:hover {
       color: #F29600;
-      border: 2px solid  #F29600;
       background-color: #fff; }
+    .proSave .submit:active {
+      -webkit-transform: scale(0.98, 0.98);
+      -ms-transform: scale(0.98, 0.98);
+      transform: scale(0.98, 0.98); }
 
 /* table結束 */
