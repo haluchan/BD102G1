@@ -1,3 +1,7 @@
+<?php
+session_start();
+ob_start();
+?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -136,7 +140,7 @@
 				
 				<!-- 修改按鈕 -->
 				<td>
-					<input class="btn" type="button" name="revise" value="修改資料">
+					<a href="webBack_proUpdate.php?pro_no=<?php echo $prodRow->pro_no;?>" class="btn">修改資料</a>
 				</td>
 
 				<!-- 狀態 -->
@@ -180,6 +184,43 @@
 
 
 <?php require_once('web_back_frame_bottom.php') ?>
+
+<script>
+	//更動資料庫送來的結果，有就跳窗顯示然後清空$_SESSION，沒有就不跳窗
+	$(document).ready(function(){
+
+			//webBack_pro_add 或 webBack_pro_update傳來的資訊
+			var proAddErrorInfo = "<?php
+
+				if ( isset($_SESSION['proAddErrorInfo']) == 1){
+					echo $_SESSION['proAddErrorInfo']; 
+					session_unset($_SESSION['proAddErrorInfo']); 
+				}	
+
+			?>";
+
+			if (proAddErrorInfo != '') {
+				alert(proAddErrorInfo);
+			}		
+
+
+
+			//webBack_pro_resetStatus傳來的資訊
+			var proStatusResetInfo = "<?php 
+
+				if ( isset($_SESSION['proStatusResetInfo']) == 1){
+					echo $_SESSION['proStatusResetInfo']; 
+					session_unset($_SESSION['proStatusResetInfo']); 
+				}	
+
+			?>";
+
+			if (proStatusResetInfo != '') {
+				alert(proStatusResetInfo);
+			}	
+
+	});
+</script>
 
 </body>
 </html>

@@ -1,4 +1,7 @@
 <?php 
+session_start();
+ob_start();
+
 try { 
 	$howManyRow = $_REQUEST["howManyRow"];
 	echo $howManyRow . '<br>';
@@ -24,8 +27,8 @@ try {
 	}
 	
 
-
-		header("Location:../webBack_pro.php");
+	$_SESSION['proStatusResetInfo'] = '狀態更新成功';
+	header("Location: ../webBack_pro.php");
 	
 
 } catch (PDOException $e) {
