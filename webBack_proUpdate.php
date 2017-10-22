@@ -46,6 +46,7 @@
 	<form action="php/webBack_pro_update.php" method="post" enctype="multipart/form-data" class="myForm">
 
 		<input type="hidden" name="pro_no" value="<?php echo $pro_no?>">
+		<input type="hidden" name="pro_realNo" value="<?php echo $pro_realNo?>">
 
 		<div class="pro_line"></div>
 		<table cellspacing="0">
@@ -75,9 +76,9 @@
 			<tr>
 				<th>商品類別</th>
 				<td>
-					<select name="pro_type" id="typeSelect" required>
+					<select name="pro_type" id="typeSelect" >
 						<option value="">請選擇</option>	
-						<option value="1" id="000">種子</option>	
+						<option value="1">種子</option>	
 						<option value="2">魚缸</option>	
 						<option value="3">其他/未定義</option>	
 					</select>

@@ -11,7 +11,8 @@ try {
 	$pro_name = $_REQUEST["pro_name"];
 	$pro_price = $_REQUEST["pro_price"];
 	$pro_std = $_REQUEST["pro_std"];
-	$image = $_FILES["image"];
+	$pro_realNo = $_REQUEST["pro_realNo"];
+	// $image = $_FILES["image"];
 	
 
 
@@ -19,7 +20,7 @@ try {
 	require_once("connectGrowing_hope.php");
 
 		$sql = "update product
-				set    pro_type   = :pro_type, 
+				set    
 					   pro_name   = :pro_name, 
 					   pro_price  = :pro_price, 
 					   pro_std    = :pro_std, 
@@ -27,21 +28,25 @@ try {
 				where  pro_no = $pro_no";
 
 		$product = $pdo ->prepare( $sql );
-		$product -> bindValue(":pro_type" , $pro_type);
+		//類別也不給修改，因為關係到圖檔編號
+		// $product -> bindValue(":pro_type" , $pro_type);
 		$product -> bindValue(":pro_name" , $pro_name);
 		$product -> bindValue(":pro_price" , $pro_price);
 		$product -> bindValue(":pro_std" , $pro_std);
 		$product -> bindValue(":pro_status" , 0);
 		$product -> execute();
 
-		$errorInfo = productEnCode($pro_type).$pro_no.$pro_name.'\\n' ;
+		$errorInfo = productEnCode($pro_type).$pro_realNo. $pro_name . '\\n' ;
 		$errorInfo .= "資料修改成功\\n" ;
 
 
+$str = "s" . $i . ".jpg"
+
+<td> <?php echo '標題' ?> </td>
+<?php echo"<td>"   "</td>" ?>
 
 
-
-//存圖片到prophoto //不給改啦
+//存圖片到prophoto //不給改
 	// foreach( $image["error"] as $i => $value ){
 	// 	if ( $value != 0) {
 			
