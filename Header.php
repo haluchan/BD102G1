@@ -4,15 +4,13 @@
 	    	<?php require_once('login.php'); ?> 
 
 
-			<?php require_once('login.php'); ?> 
-
 	    <header class="header">
 
 
 	    	<div class="topmenu">
 	    		<ul>	
 	    			<li><a href="cart.php">購物車<span class="cartNo">0</span></a></li>
-	    			<li><a  id="login-btn" >註冊/登入</a></li>
+	    			<li><span id="memName"></span><a  id="spanLogin" >註冊/登入</a></li>
 	    			<li><a href="application.php">申請資助</a></li>
 	    		</ul>
 	    	</div>

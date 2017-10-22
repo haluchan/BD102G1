@@ -25,12 +25,12 @@ try {
 
 	// ===========
 
-	$sql ="select * from member where mem_mail = :memMail and mem_psw = :memPsw";
+	$sql ="select * from member where mem_Id = :memId and mem_mail = :memMail";
 	$member = $pdo->prepare($sql);
 
 	
+	$member->bindValue(":memId" , $loginObj->memId);
 	$member->bindValue(":memMail" , $loginObj->memMail);
-	$member->bindValue(":memPsw" , $loginObj->memPsw);
 
 
 	$member->execute();
@@ -42,11 +42,11 @@ try {
 	}else{ 
 		$memRow = $member->fetchObject();
 		//登入成功，將登入者資訊寫入session
-		$_SESSION["mem_no"] = $memRow->mem_no;
-		$_SESSION["mem_id"] = $memRow->mem_id;
-		$_SESSION["mem_name"] = $memRow->mem_name;
-		$_SESSION["mem_mail"] = $memRow->mem_mail;
-		echo $memRow->mem_name;
+		// $_SESSION["mem_no"] = $memRow->mem_no;
+		// $_SESSION["mem_id"] = $memRow->mem_id;
+		// $_SESSION["mem_name"] = $memRow->mem_name;
+		// $_SESSION["mem_mail"] = $memRow->mem_mail;
+		echo $memRow->mem_mail;
    
 
 
