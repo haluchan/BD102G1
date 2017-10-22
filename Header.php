@@ -4,6 +4,11 @@
 	    	<?php require_once('login.php'); ?> 
 
 
+<<<<<<< HEAD
+=======
+			<!-- <?php //require_once('login.php'); ?>  -->
+
+>>>>>>> 4af9075f5d36a7e8c0522fd583dfe497a8a62499
 	    <header class="header">
 
 
