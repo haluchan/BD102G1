@@ -140,7 +140,7 @@ ob_start();
 				
 				<!-- 修改按鈕 -->
 				<td>
-					<input class="btn" type="button" name="revise" value="修改資料">
+					<a href="webBack_proUpdate.php?pro_no=<?php echo $prodRow->pro_no;?>" class="btn">修改資料</a>
 				</td>
 
 				<!-- 狀態 -->
@@ -189,7 +189,7 @@ ob_start();
 	//更動資料庫送來的結果，有就跳窗顯示然後清空$_SESSION，沒有就不跳窗
 	$(document).ready(function(){
 
-			//webBack_pro_add傳來的資訊
+			//webBack_pro_add 或 webBack_pro_update傳來的資訊
 			var proAddErrorInfo = "<?php
 
 				if ( isset($_SESSION['proAddErrorInfo']) == 1){
