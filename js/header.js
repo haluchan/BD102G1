@@ -4,19 +4,19 @@
 				$('#hamicon').toggleClass("hamicon_slide");
 				$('#ham_menu').toggleClass("ham_slide");
 				});
-		});		
-			//登入lightbox
-			$("#login-btn").click(function(){
-				$("#lightbox-bg").fadeIn();
+			});		
+			// //登入lightbox
+			// $("#spanLogin").click(function(){
+			// 	$("#lightbox-bg").fadeIn();
 
-			});
+			// });
 
-			$("#login-btn2").click(function(){
-				$("#lightbox-bg").fadeIn();
-			});
-			$("#cancel").click(function(){
-				$("#lightbox-bg").fadeOut();
-			});
+			// $("#login-btn2").click(function(){
+			// 	$("#lightbox-bg").fadeIn();
+			// });
+			// $(".button-x").click(function(){
+			// 	$("#lightbox-bg").fadeOut();
+			// });
 			
 			//註冊lightbox
 			$("#sign-btn").click(function(){

@@ -8,6 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" href="css/hopeFarm.css">
 	<link rel="stylesheet" href="css/headerFooter.css">
+
+<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css">
 	
 
 </head>
@@ -58,13 +61,13 @@
 			<div class="cleare"></div>
 		</div>
 		<div class="section02-g3">
-			<div class="section02-g3-carousel">
-				<a href="#">
+			<div class="section02-g3-carousel kkk">
+        <!-- 				<a href="#">
 					<div class="section02-g3-i1">
 						<img src="src/image/hopeFarm/left.png" alt="">
 					</div>
-				</a>
-				<a href="#">
+				</a> -->
+				<!-- <a href="#"> -->
 					<div class="section02-g3-i2">
 						<div class="section02-g3-i2-shadow">
 							<div class="section02-g3-i2-left">
@@ -73,7 +76,7 @@
 							<div class="section02-g3-i2-right">
 								<h2>葡萄園</h2>
 								<p>清境農場</p>
-								<h4>滾滾長江東逝水，浪花淘盡英雄是非成敗轉頭空，青山依舊在付笑談中。青山依舊在，
+								<h4>滾滾長江東逝水，浪花淘盡英雄是非成敗轉頭空，青山依舊在付笑談中。青山依舊Q，
 								</h4>
 								<div class="bar">
 									<div class="inside-bar"></div>
@@ -90,18 +93,119 @@
 							<div class="cleare"></div>
 						</div>
 					</div>
-				</a>
-				<a href="#">
+					
+					<div class="section02-g3-i2">
+						<div class="section02-g3-i2-shadow">
+							<div class="section02-g3-i2-left">
+								<img src="src/image/hopeFarm/peiapple.jpg">
+							</div>
+							<div class="section02-g3-i2-right">
+								<h2>葡萄園</h2>
+								<p>清境農場</p>
+								<h4>滾滾長江東逝水，浪花淘盡英雄是非成敗轉頭空，青山依舊在付笑談中。青山依舊Q，
+								</h4>
+								<div class="bar">
+									<div class="inside-bar"></div>
+								</div>
+								<h3>累積金額 67,000</h3>
+								<h3>倒數28天</h3>
+							</div>
+							<div class="cleare"></div>
+							<div class="section02-g3-i2-btn">
+								<a href="#">
+									<h2>我要資助</h2>
+								</a>
+							</div>
+							<div class="cleare"></div>
+						</div>
+					</div>
+
+					<div class="section02-g3-i2">
+						<div class="section02-g3-i2-shadow">
+							<div class="section02-g3-i2-left">
+								<img src="src/image/hopeFarm/peiapple.jpg">
+							</div>
+							<div class="section02-g3-i2-right">
+								<h2>葡萄園</h2>
+								<p>清境農場</p>
+								<h4>滾滾長江東逝水，浪花淘盡英雄是非成敗轉頭空，青山依舊在付笑談中。青山依舊Q，
+								</h4>
+								<div class="bar">
+									<div class="inside-bar"></div>
+								</div>
+								<h3>累積金額 67,000</h3>
+								<h3>倒數28天</h3>
+							</div>
+							<div class="cleare"></div>
+							<div class="section02-g3-i2-btn">
+								<a href="#">
+									<h2>我要資助</h2>
+								</a>
+							</div>
+							<div class="cleare"></div>
+						</div>
+					</div>
+
+
+
+				<!-- </a> -->
+<!-- 				<a href="#">
 					<div class="section02-g3-i3">
 						<img src="src/image/hopeFarm/right.png" alt="">
 					</div>
-				</a><div class="cleare"></div>
-				</div>
+				</a> -->
+				<!-- <div class="cleare"></div>
+				</div> -->
 			
 			
 		</div>
 		
 	</section>
+
+
+
+
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+
+        $('.kkk').slick();
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- =============///section02=========== -->
 	<section class="section03  col-xs-12">
 		<div class="section03-g1">

@@ -1,18 +1,28 @@
 ﻿//每個格子統一固定padding
-$cellPadding: 6px 4px;
+$cellPadding: 6px 10px;
+//按鈕圓角
+$btnRadius: 6px;
 //note web_back_form.css修正
 .manage{width:16%}
 .content_form{width:84%;}
-botton{border:none;}
-//hover效果
 
-
+//遮掉一個篩選條件
+nav{
+	.nav_item{
+		&:nth-child(2){
+			visibility: hidden;
+		}
+	}
+}
 
 /* table起始 */
 .myForm{
 	width: 94%;
 	margin:auto;
     table{width:100%};
+    label+label{
+    	margin-left: 14px;
+    }
 
 	th, td{  /*每個格子統一固定padding*/    
 		padding:$cellPadding;
@@ -36,9 +46,7 @@ botton{border:none;}
 		background-color: #F29600;
 
 	}
-	td{
-		font-weight: lighter;
-	}
+
 
     
 	.tdRow:nth-child(odd){/*基數白底，偶數灰底(第一row包th不算)*/
@@ -48,6 +56,11 @@ botton{border:none;}
 		background-color: #fff;
 	}
 
+	//改radio btn
+	.trRow td:nth-child(7){
+		.on{}
+		.off{}
+	}
 	
 	//限制表格寬度固定
 	table{  		
@@ -63,20 +76,20 @@ botton{border:none;}
 
 
 		/*自行更改、增加 區域=================================*/
-		tr th:nth-child(2){
-			width: 10%;
-		}
-		tr th:nth-child(3){
-			width: 10%;
-		}
-		tr th:nth-child(4){
-			width: 20%;
-		}
-		tr th:nth-child(5){
-			width: 10%;
-		}
+		// tr th:nth-child(2){
+		// 	width: 10%;
+		// }
+		// tr th:nth-child(3){
+		// 	width: 10%;
+		// }
+		// tr th:nth-child(4){
+		// 	width: 20%;
+		// }
+		// tr th:nth-child(5){
+		// 	width: 10%;
+		// }
 		tr th:nth-child(6){
-			width: 25%;
+			width: 10%;
 		}
 		tr th:nth-child(7){
 			width: 10%;
@@ -90,11 +103,48 @@ botton{border:none;}
 	.btn{
 		background-color: LemonChiffon ;
 		padding:4px 6px;
-		border:none
+		border:none;
+		width: 60%;
+		margin: auto;
+		box-shadow: 2px 2px 1px rgba(0,0,0,.2);
+		border-radius: $btnRadius;
+		outline: pointer;
+		&:active{
+			transform: translate(2px ,2px);
+			box-shadow: none;
+		}
 	}
 
 
 }
 
-
 /* table結束 */
+
+
+
+.proSave{
+	// margin-right: 0;
+	margin-top: 20px;
+	width: 97%;
+	.submit{
+		border-radius: $btnRadius;
+		box-sizing: border-box;
+		float: right;
+		display: block;
+		background-color: #F29600;
+		padding:10px 0px;
+		width: 20%;
+		border: 2px solid #F29600;
+		color: #fff;
+		outline:none;
+		cursor: pointer;
+		&:hover{
+			// box-sizing: border-box;
+			color: #F29600;
+			background-color: #fff;
+		}
+		&:active{
+			transform: scale(.98 ,.98);
+		}
+	}
+}

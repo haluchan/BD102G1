@@ -131,6 +131,7 @@
   <?php require_once('Footer.php') ?> 
   <script src="js/header.js"></script>
 	<script src="js/fish.js"></script> 
+	<script type="text/javascript" src="js/login-ajax.js"></script>
 </body>
 	
 </html>

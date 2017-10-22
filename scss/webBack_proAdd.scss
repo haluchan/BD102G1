@@ -1,23 +1,24 @@
 ﻿//每個格子統一固定padding
 $cellPadding: 16px 4px;
+//按鈕圓角
+$btnRadius: 6px;
 //note web_back_form.css修正
 .manage{width:16%}
-.content_form{width:84%;margin-top:155px;}
-button{border:none;}
-
+.content_form{width:84%;}
+select{outline:inherit;}
 
 
 //遮掉篩選條件
 nav{
 	.nav_item{
 		&:nth-child(3){
-			display:none;
+			display:hidden;
 		}
 		&:nth-child(4){
-			display:none;
+			display:hidden;
 		}
 		&:nth-child(5){
-			display:none;
+			display:hidden;
 		}
 	}
 }
@@ -61,7 +62,7 @@ nav{
 
 	//所有輸入格的統一樣式
 	@mixin boxSet{		
-		padding: 6px 0px 6px 10px;
+		padding: 6px 10px;
 		background-color:  LemonChiffon;
 		border: none;
 
@@ -73,28 +74,37 @@ nav{
 		width: 91%;
 		@include boxSet;
 	}
-	input,textarea{
-		width: 90%;
+	input{
+		width: 88%;
 		@include boxSet;
 	}
 	textarea{
+		padding: 6px 10px;
+		width: 88%;
+		background-color:  LemonChiffon;
+		border: none;
 		resize: none;
+		&:focus{
+			outline-color: #F29600;
+		}
 	}
 
 
 	//商品編號那一條
 	.pro_numDisable{
 		color: #fff;
-		span{
-			display: inline-block;
+		div{
 			width: 100%;
-			padding: 2px 0px;
+			padding: 2px 2px;
 			background-color:SaddleBrown;
 		}
-		input{
-			width:99%;
-			background-color:SaddleBrown;
-			color: #fff;
+		.input{
+			width: 98%;
+			padding: 2px 10px;
+			font-size: 0;
+			span{
+				font-size: 16px;
+			}
 		}
 	}
 	
@@ -132,18 +142,24 @@ nav{
 .proSave{
 	margin:auto;
 	margin-top: 20px;
-	button{
+	.submit{
+		box-sizing: border-box;
 		margin: auto;
 		display: block;
 		background-color: #F29600;
 		padding:10px 0px;
 		width: 50%;
-		border:none;
+		border: 2px solid #F29600;
 		color: #fff;
+		outline:none;
+		border-radius: $btnRadius;
+		cursor: pointer;
 		&:hover{
 			color: #F29600;
-			border: 2px solid  #F29600;
 			background-color: #fff;
+		}
+		&:active{
+			transform: scale(.98 ,.98);
 		}
 	}
 }
