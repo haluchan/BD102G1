@@ -2,7 +2,7 @@
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
-	<title>後台::新增商品</title>
+	<title>後台::修改商品</title>
 	<!-- 不准動的部分，以下三行 -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
@@ -14,12 +14,40 @@
 <?php require_once('web_back_frame_top.php') ?>
 	<nav>				
 		<div class="nav_item">
-			<h2>新增商品</h2>
+			<h2>修改商品</h2>
 		</div>
 		<div class="clearfix"></div>
 	</nav>
 
-	<form action="php/webBack_pro_add.php" method="post" enctype="multipart/form-data" class="myForm">
+
+
+	<?php
+		//從網址送過來的商品編號
+		$pro_no = $_REQUEST["pro_no"];
+
+		try {
+			require_once("php/connectGrowing_hope.php");
+			$sql = "select *,lpad(pro_no, 3, 0) pro_realNo 
+					from product 
+					where pro_no = " . $pro_no . ";";
+			$product = $pdo->query($sql);
+			$proRow = $product->fetchObject();
+
+			$pro_no     = $proRow ->pro_no;
+			$pro_type   = $proRow ->pro_type;
+			$pro_name   = $proRow ->pro_name;
+			$pro_price  = $proRow ->pro_price;
+			$pro_std    = $proRow ->pro_std;
+			$pro_status = $proRow ->pro_status;
+			$pro_realNo = $proRow ->pro_realNo;
+			
+	?>
+
+	<form action="php/webBack_pro_update.php" method="post" enctype="multipart/form-data" class="myForm">
+
+		<input type="hidden" name="pro_no" value="<?php echo $pro_no?>">
+		<input type="hidden" name="pro_realNo" value="<?php echo $pro_realNo?>">
+
 		<div class="pro_line"></div>
 		<table cellspacing="0">
 			<!-- 寬度設定在第一行，隱藏 -->
@@ -35,38 +63,20 @@
 				<td colspan="3">
 					<div class="input">
 						<span id="typeEnName"></span>
-						<span>
-						<?php
-							try {
-								require_once("php/connectGrowing_hope.php");
-								$sql = "select lpad(MAX(pro_no)+1, 3, 0) from product";
-								$product = $pdo->query($sql);
-								$proNoNew = $product->fetchColumn(0); //目前編號到幾
-								echo $proNoNew;
-						?>
-						<!-- 目前的商品號偷偷送過去 -->
-						<input type="hidden" name="pro_no" value="<?php echo $proNoNew?>">
-						<?php
-							} catch (PDOException $e) {
-								echo "錯誤行號 : ", $e->getLine(), "<br>";
-								echo "錯誤訊息 : ", $e->getMessage(), "<br>";	
-							}
-						?>
-
-						</span>
+						<span><?php echo $pro_realNo ?></span>
 					</div>
 				</td>
 			</tr>
 			<tr>
 				<th>商品名稱</th>
-				<td><input type="text" name="pro_name" required></td>
+				<td><input type="text" name="pro_name" value="<?php echo $pro_name ?>" required></td>
 				<th>上傳圖檔</th>
-				<td><input type="file" name="image[]" multiple="multiple" draggable="true"></td>
+				<td><input type="file" name="image[]" multiple="multiple" draggable="true" disabled></td>
 			</tr>
 			<tr>
 				<th>商品類別</th>
 				<td>
-					<select name="pro_type" id="typeSelect" required>
+					<select name="pro_type" id="typeSelect" >
 						<option value="">請選擇</option>	
 						<option value="1">種子</option>	
 						<option value="2">魚缸</option>	
@@ -78,12 +88,14 @@
 			</tr>
 			<tr>
 				<th>商品價格</th>
-				<td><input type="text" name="pro_price" required></td>
+				<td><input type="text" name="pro_price" value="<?php echo $pro_price ?>" required></td>
 			</tr>
 			<tr>
 				<th>商品規格</th>
 				<td>
-					<textarea name="pro_std" cols="30" rows="10" required></textarea>
+					<textarea name="pro_std" cols="30" rows="10" required>
+						<?php echo $pro_std ?>
+					</textarea>
 				</td>
 			</tr>
 		</table>
@@ -93,6 +105,15 @@
 	</form>
 
 
+
+
+	<?php
+		} catch (PDOException $e) {
+			echo "錯誤行號 : ", $e->getLine(), "<br>";
+			echo "錯誤訊息 : ", $e->getMessage(), "<br>";	
+		}
+	?>
+
 <?php require_once('web_back_frame_bottom.php') ?>
 
 
@@ -101,6 +122,15 @@
 
 
 <script>
+
+	$(document).ready(function(){
+		var enType = productEnCode(<?php echo $pro_type?>);
+		$("#typeEnName").text(enType);
+
+		//預選
+		$('option[value *= "<?php echo $pro_type ?>"]').attr('selected','');
+	});
+
 
 	// 依據選擇不同自動立即更換編號首字母
 	$("#typeSelect").change(function(){

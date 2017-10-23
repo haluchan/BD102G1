@@ -6,8 +6,7 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 101;
-  opacity: 0; }
+  z-index: 101; }
   .lightbox-bg .lightbox-target {
     background-color: #F6F7ED;
     max-width: 400px;

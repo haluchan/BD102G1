@@ -21,17 +21,17 @@
 				<h2>訂單明細</h2>
 			</div>
 			<div class="nav_item">
-				<span>狀態：</span>
+				<!-- <span>狀態：</span>
 				<select>
 					<option value="">不限</option>
 					<option value="">不限</option>
 					<option value="">不限</option>
-				</select>
+				</select> -->
 			</div>
 			<div class="nav_item">
-				<span>類別：</span>
+				<span>分類：</span>
 				<select>
-					<option value="">不限</option>
+					<option value="">訂單編號</option>
 					<option value="">不限</option>
 					<option value="">不限</option>
 				</select>
@@ -41,7 +41,7 @@
 					<input type="text" name="" placeholder="搜尋">
 
 					<button><img src="src/image/web_back_frame/seaech.png"></button>
-					<button><img src="src/image/web_back_frame/erase.png"></button>
+				<!-- 	<button><img src="src/image/web_back_frame/erase.png"></button> -->
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -50,136 +50,44 @@
 <form class="myForm">
 	<table cellspacing="1">
 		<tr>
-			<th></th>
-			<th>123訂單編號</th>
+		
+			<th>訂單編號</th>
 			<th>商品編號</th>
 			<th>商品名稱</th>
 			<th>商品數量</th>
 			<th>商品價格</th>
 			
 		</tr>
+			<?php try {
+			require_once("php/connectBeck.php");
+    $sql = "select * from orderItem";
+    
+    $orderItem = $pdo->query($sql);	
+	
+	while(  $resultset = $orderItem ->fetchObject() ){
+?>
 		<tr class="tdRow">
-			<td>1</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
+			<td><?php echo $resultset->order_no ;?></td>
+			<td><?php echo $resultset->pro_no ;?></td>
+			<td><?php echo $resultset->pro_name ;?></td>
+			<td><?php echo $resultset->orderItem_qty ;?></td>
+			<td><?php echo $resultset->pro_price ;?></td>
+		
 		
 		</tr>
-		<tr class="tdRow">
-			<td>2</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-		
-		</tr>
-		<tr class="tdRow">
-			<td>3</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			
-		</tr>
-		<tr class="tdRow">
-			<td>4</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4aaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbb</td>
-			<td>Lo</td>
-			<td>Lo</td>
-			
-		</tr>
-		<tr class="tdRow">
-			<td>5</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td>Lo</td>
-		
-		</tr>
-		<tr class="tdRow">
-			<td>6</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td>Lo</td>
-		
-		</tr>
-		<tr class="tdRow">
-			<td>7</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			
-		</tr>
-		<tr class="tdRow">
-			<td>8</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-		
-		</tr>
-		<tr class="tdRow">
-			<td>9</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-		
-		</tr>
-		<tr class="tdRow">
-			<td>10</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			
-		</tr>
-		<tr class="tdRow">
-			<td>11</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			
-		</tr>
-		<tr class="tdRow">
-			<td>12</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			
-		</tr>
+	
 
-		<tr class="tdRow">
-			<td>13</td>
-			<td>2AA</td>
-			<td>3AA</td>
-			<td>4AA</td>
-			<td></td>
-			<td></td>
-			
-		</tr>
+<?php	
+}	
 
-	</table>
+}
+	catch (PDOException $e) {
+	echo "錯誤原因 : " , $e->getMessage(),"<br>";
+	echo "行號 : " , $e->getLine(),"<br>";	
+}
+?>	  
+</table>
 </form>
-
 <?php require_once('web_back_frame_bottom.php') ?>
 
 </body>

@@ -101,6 +101,8 @@ nav{
 
 	//按鈕
 	.btn{
+		display: inline-block;
+		text-align: center;
 		background-color: LemonChiffon ;
 		padding:4px 6px;
 		border:none;
@@ -108,7 +110,9 @@ nav{
 		margin: auto;
 		box-shadow: 2px 2px 1px rgba(0,0,0,.2);
 		border-radius: $btnRadius;
-		outline: pointer;
+		outline: none;
+		cursor: pointer;
+		color:#000;
 		&:active{
 			transform: translate(2px ,2px);
 			box-shadow: none;

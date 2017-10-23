@@ -1,3 +1,7 @@
+<?php
+session_start();
+ob_start();
+?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -11,6 +15,160 @@
 	<link rel="stylesheet" href="css/webBack_pro.css">
 </head>
 <body>
+
+<?php require_once('web_back_frame_top.php') ?>
+<form class="myForm">
+	<nav>
+			
+			<div class="nav_item">
+
+				<h2>訂單總覽</h2>
+			</div>
+			<div class="nav_item">
+				<span>狀態：</span>
+				<select>
+					<option value="">不限</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select>
+			</div>
+			<div class="nav_item">
+				<span>類別：</span>
+				<select>
+					<option value="">不限</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select>
+			</div>
+			<div class="nav_item">
+				<div class="search">
+					<input type="text" name="" placeholder="搜尋">
+
+					<button><img src="src/image/web_back_frame/seaech.png"></button>
+					<button><img src="src/image/web_back_frame/erase.png"></button>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</nav>
+	<table cellspacing="1">
+		<tr>
+			<th></th>
+			<th>商品編號</th>
+			<th>類別</th>
+			<th>商品名稱</th>
+			<th>價格</th>
+			<th>規格</th>
+			<th>狀態</th>
+			<th>修改</th>
+		</tr>
+		<tr class="tdRow">
+			<td>1</td>
+			<td>2AA</td>
+			<td>3AA</td>
+			<td>4AA</td>
+			<td></td>
+			<td></td>
+			<td>
+				<input type="radio" name="status" value="0"><label>上架</label>
+				<input type="radio" name="status" value="1"><label>下架</label>
+			</td>
+			<td>
+				<input class="btn" type="button" name="revise" value="修改資料">
+			</td>
+		</tr>
+		<tr class="tdRow">
+			<td>2</td>
+			<td>2AA</td>
+			<td>3AA</td>
+			<td>4AA</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="tdRow">
+			<td>3</td>
+			<td>2AA</td>
+			<td>3AA</td>
+			<td>4AA</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="tdRow">
+			<td>4</td>
+			<td>2AA</td>
+			<td>3AA</td>
+			<td>4AA</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="tdRow">
+			<td>5</td>
+			<td>2AA</td>
+			<td>3AA</td>
+			<td>4AA</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="tdRow">
+			<td>6</td>
+			<td>2AA</td>
+			<td>3AA</td>
+			<td>4AA</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="tdRow">
+			<td>7</td>
+			<td>2AA</td>
+			<td>3AA</td>
+			<td>4AA</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="tdRow">
+			<td>8</td>
+			<td>2AA</td>
+			<td>3AA</td>
+			<td>4AA</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="tdRow">
+			<td>9</td>
+			<td>2AA</td>
+			<td>3AA</td>
+			<td>4AA</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="tdRow">
+			<td>10</td>
+			<td>2AA</td>
+			<td>3AA</td>
+			<td>4AA</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</form>
+=======
 	<?php require_once('web_back_frame_top.php') ?>
 
 	<nav>
@@ -136,7 +294,7 @@
 				
 				<!-- 修改按鈕 -->
 				<td>
-					<input class="btn" type="button" name="revise" value="修改資料">
+					<a href="webBack_proUpdate.php?pro_no=<?php echo $prodRow->pro_no;?>" class="btn">修改資料</a>
 				</td>
 
 				<!-- 狀態 -->
@@ -179,7 +337,45 @@
 
 
 
+
 <?php require_once('web_back_frame_bottom.php') ?>
+
+<script>
+	//更動資料庫送來的結果，有就跳窗顯示然後清空$_SESSION，沒有就不跳窗
+	$(document).ready(function(){
+
+			//webBack_pro_add 或 webBack_pro_update傳來的資訊
+			var proAddErrorInfo = "<?php
+
+				if ( isset($_SESSION['proAddErrorInfo']) == 1){
+					echo $_SESSION['proAddErrorInfo']; 
+					session_unset($_SESSION['proAddErrorInfo']); 
+				}	
+
+			?>";
+
+			if (proAddErrorInfo != '') {
+				alert(proAddErrorInfo);
+			}		
+
+
+
+			//webBack_pro_resetStatus傳來的資訊
+			var proStatusResetInfo = "<?php 
+
+				if ( isset($_SESSION['proStatusResetInfo']) == 1){
+					echo $_SESSION['proStatusResetInfo']; 
+					session_unset($_SESSION['proStatusResetInfo']); 
+				}	
+
+			?>";
+
+			if (proStatusResetInfo != '') {
+				alert(proStatusResetInfo);
+			}	
+
+	});
+</script>
 
 </body>
 </html>
