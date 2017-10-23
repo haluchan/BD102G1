@@ -169,32 +169,33 @@
                                         order by  pro_no DESC;";
                                 // limit   0,4  要限制只顯示四筆以防萬一嗎?
 
-                            $product = $pdo->query($sql2);
+                            $product2 = $pdo->query($sql2);
                             
-                            while ( $tank = $product->fetchObject() ) {
-                                $tank_no     = $tank ->pro_no;
-                                $tank_type   = $tank ->pro_type;
-                                $tank_realno = $tank ->pro_realno;
-                                $tank_name   = $tank ->pro_name;
-                                $tank_price  = $tank ->pro_price;
-                                $tank_std    = $tank ->pro_std;
-                                $tank_status = $tank ->pro_status;
-                                $tank_pho    = $tank ->pro_pho;
-                                $tank_info   = $tank ->pro_info;
+                            while ( $allTank = $product2->fetchObject() ) {
+                                $tank_no     = $allTank ->pro_no;
+                                $tank_type   = $allTank ->pro_type;
+                                $tank_realno = $allTank ->pro_realno;
+                                $tank_name   = $allTank ->pro_name;
+                                $tank_price  = $allTank ->pro_price;
+                                $tank_std    = $allTank ->pro_std;
+                                $tank_status = $allTank ->pro_status;
+                                $tank_pho    = $allTank ->pro_pho;
+                                $tank_info   = $allTank ->pro_info;
                         ?>
 
+                            
                         <li class="pro_t_each" id="<?php echo $tank_realno?>">
-                            <div>
-                                <img src="src/image/product/<?php echo $tank_pho?>" alt="<?php echo $tank_name?>">
+                            <div class="pro_t_pho">
+                                <img src="src/image/product/<?php echo $tank_pho?>" alt="<?php echo $tank_info?>" title="<?php echo $tank_name?>">
                             </div>
                             <div>
-                                <div class="pro_s_name"><?php echo $tank_name?></div>
-                                <div>$<?php echo $tank_price?>/個</div>
+                                <div class="pro_t_name"><?php echo $tank_name?></div>
+                                <div class="pro_t_price">$<?php echo $tank_price?>/個</div>
                             </div>
+                            <input type="hidden" class="pro_t_std" value="<?php echo $tank_std ?>">
                         </li>
 
                         <?php
-
                                 }                       
                         ?>
 
@@ -257,7 +258,7 @@
                 </div> <!--pro_t_infoTop-->
 
 
-                <!-- 規格和注意事項 -->
+                <!-- 規格 -->
                 <div class="pro_t_infoBottom">
                     <h4 class="pro_t_caption">產品規格</h4>
                     <p>
@@ -274,6 +275,8 @@
                     </p>
                 </div>
 
+
+                <!-- 注意事項 -->
                 <div class="pro_t_infoBottom">
                     <h4 class="pro_t_caption">注意事項</h4>
                     <p>

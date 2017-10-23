@@ -2,6 +2,17 @@ var storage = sessionStorage;
 
 //特定螢幕尺寸觸動特定效果(無限制的效果在最尾端)
 function proSreenWidth(){
+	//點到魚缸有效果
+	proClickHighLight();
+	//點魚缸換下方資料
+	proEveryTank();
+	//購物車數字增加
+	proCartNumber();
+	//低一次的魚缸撈資料
+	proTankInfoChange();
+	
+
+
 	var w = document.body.clientWidth;
 	if( w >= 767){   //(only桌機&pad)
 		//魚缸的輪播
@@ -183,6 +194,7 @@ function $qsa(qsa){
 
 //點到魚缸有click效果
 	function proClickHighLight(){
+		$qs('.pro_t_each div').className = 'pro_click';
 		//每個li建立事件聆聽功能
 		var list = $qsa('.pro_t_each');
 		for (var i = 0; i<list.length; i++){
@@ -240,14 +252,55 @@ function $qsa(qsa){
   // });
 
 
+//==============================================================================
+//點魚缸換於資料
+	//1.每個li建立事件聆聽功能
+	function proEveryTank(){
+		var lists = document.querySelectorAll('.pro_t_each');
+		for (var i=0; i<lists.length; i++){
+			lists[i].addEventListener('click',proTankInfoChange,false);
+		}
+	}
+	//2.
+	function proTankInfoChange(e){
+		var pro_realno = $('.pro_click').parent().attr('id');
+		var pro_name = $('.pro_click').parent().find('.pro_t_name').text();
+		var pro_price = $('.pro_click').parent().find('.pro_t_price').text();
+		var pro_std = $('.pro_click').parent().find('.pro_t_std').attr('value');
+		var pro_info = $('.pro_click img').attr('alt');
+		var altArr= ["主圖", "結構圖", "細部圖", "情境圖", "尺寸圖"];
+		
+		// $('.pro_t_infoTop').children().remove();
+		// $('.pro_t_infoTop').html('');
+		// $('.pro_t_infoTop .pro_t_infoTL div img').attr('src','src/image/product/pro-'+pro_realno+'1.jpg');
+		// 大圖更新
+		$('.pro_t_infoTop .pro_t_infoTL div img').attr('src','src/image/product/pro-' + pro_realno + '1.jpg');
+		
+		//商品名稱更新
+		$('.pro_t_infoTop .pro_t_infoTR h3').text(pro_name);
+		
+		//商品li刪掉加進去
+		$('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup').children().remove();
+
+		for (var i = 1; i <=5; i++) {
+			$('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup').append('<li><img src="src/image/product/pro-'+pro_realno+i+'.jpg" alt="'+altArr[ (i-1) ]+'"></li>');
+		}
+
+		//價格更新
+		$('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span:first-child').text(pro_price);
+
+		//按鈕綁更新
+		$('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span:nth-child(2) input').attr('value', pro_info);
+
+		//規格更新
+		$('.pro_t_infoBottom p').first().text(pro_std);
+
+
+
+	}
 
 
 
 
-
-//購物車數字增加
-window.addEventListener('load', proCartNumber, false);
 //抓螢幕寬度去觸發特定裝置的事件
 window.addEventListener('load', proSreenWidth, false);
-//點到魚缸有效果
-window.addEventListener('load', proClickHighLight, false);

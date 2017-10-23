@@ -591,7 +591,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 						}
 						&:last-child{
 							margin: 5% auto;
-							.pro_s_name{
+							.pro_t_name{
 								@include pro_thirdTitle(#999);
 							}
 							div{
