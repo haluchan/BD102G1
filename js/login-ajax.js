@@ -7,6 +7,21 @@
 
 
 
+// test 
+
+    var storage = sessionStorage;
+    function getFirst(){
+        document.getElementById("")
+
+    }
+
+window.addEventListener('load',getFirst,false);
+
+
+
+
+
+
 
 
 function $id(id){
