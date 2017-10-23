@@ -115,9 +115,7 @@
 			<tr>
 				<th>商品規格</th>
 				<td>
-					<textarea name="pro_std" cols="30" rows="10" required>
-						<?php echo $pro_std ?>
-					</textarea>
+					<textarea name="pro_std" cols="30" rows="10" required><?php echo $pro_std ?></textarea>
 				</td>
 			</tr>
 		</table>
