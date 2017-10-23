@@ -38,6 +38,18 @@ nav{
 		top: 84px;
 		background-color: #aaa;
 	}
+	.pro_photos{
+		img{
+			width: 100%;
+			border: 1px solid #ddd;
+		}
+		div{
+			width: 30%;
+			float: left;
+			margin: 1% 0.5%;
+			padding: 1% 1%;
+		}
+	}
 	table{  
 		width: 100%;
 		//限制表格寬度固定		
