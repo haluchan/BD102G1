@@ -37,7 +37,7 @@
 			<h2></h2>
 			<img src="src/image/member/child.png" alt="">
 			<div class="imguplod btnbox">
-				<a href="">上傳圖檔</a>
+				<input type="file" name="upFile">
 			</div>
 				<table>
 					<thead>
@@ -53,11 +53,11 @@
 						</tr>
 						<tr>
 							<td>會員暱稱:</td>
-							<td><input type="text" name="" placeholder="becky"></td>
+							<td><input type="text" name="mem_name" placeholder="becky"></td>
 						</tr>
 						<tr>
 							<td>e-mail:</td>
-							<td><input type="email" name=""></td>
+							<td><input type="email" name="mem_mail"></td>
 						
 						</tr>
 						<tr>
@@ -67,7 +67,7 @@
 						</tr>
 						<tr>
 							<td>居住地:</td>
-							<td><input type="text" name="" ></td>
+							<td><input type="text" name="memadd" ></td>
 						
 						</tr>
 						<tr>

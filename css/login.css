@@ -82,7 +82,8 @@
       .lightbox-bg .lightbox-target .login-content .login-account {
         width: 200px;
         display: inline-block;
-        height: 20px; }
+        height: 20px;
+        text-align: left; }
         .lightbox-bg .lightbox-target .login-content .login-account p {
           padding-top: 14px;
           padding-right: 10px;
@@ -90,7 +91,7 @@
           vertical-align: bottom;
           color: #61ABD4; }
         .lightbox-bg .lightbox-target .login-content .login-account input {
-          width: 150px;
+          width: 200px;
           height: 20px;
           background-color: #F6F7ED;
           border-width: 0px;
@@ -106,7 +107,8 @@
       .lightbox-bg .lightbox-target .login-content .login-pws {
         width: 200px;
         height: 20px;
-        display: inline-block; }
+        display: inline-block;
+        text-align: left; }
         .lightbox-bg .lightbox-target .login-content .login-pws p {
           padding-top: 14px;
           padding-right: 10px;
@@ -115,7 +117,7 @@
           line-height: 20px;
           color: #61ABD4; }
         .lightbox-bg .lightbox-target .login-content .login-pws input {
-          width: 150px;
+          width: 200px;
           height: 20px;
           background-color: #F6F7ED;
           border-width: 0px;
@@ -135,7 +137,8 @@
         .lightbox-bg .lightbox-target .login-content .forget a {
           font-size: 12px;
           color: #777;
-          text-decoration: none; }
+          text-decoration: none;
+          cursor: pointer; }
       .lightbox-bg .lightbox-target .login-content .btn_green {
         width: 200px;
         display: inline-block;
@@ -160,6 +163,8 @@
         border: 1px solid #699c33;
         color: #699c33;
         cursor: pointer; }
+      .lightbox-bg .lightbox-target .login-content .forgot_psw {
+        display: none; }
   .lightbox-bg .login-bee {
     position: relative;
     bottom: -20px;

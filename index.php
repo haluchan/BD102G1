@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="css/font.css">
 <link href="css/index.css" rel="stylesheet">
 <link rel="stylesheet" href="css/font.css">
+<?php require_once('Header_head.php');  ?>
+
+
 
 <link rel="stylesheet" href="css/header.css">
 <link rel="stylesheet" type="text/css" href="css/login.css" >
@@ -274,7 +277,7 @@
 
 
 
-<?php require_once('Footer.php');  ?> 
+ 	<?php require_once('Footer.php');  ?> 
 		
 
 
@@ -288,6 +291,8 @@
 	
 
 	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript" src="js/login-ajax.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function(){

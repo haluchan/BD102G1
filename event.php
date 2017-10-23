@@ -80,20 +80,21 @@
 	<div class="secondblockin">
 		<div id="trigger1"></div>
 	<ul>
-		<li class="show col-xs-12">
-			<a href="#">
-				<div class="img">
-					<img src="src/image/event/06.jpg" alt="">
-				<!-- 	<a href="#" class="imgtext">詳細資料</a> -->
-							
-				
+		<?php 
+		
+		for($i=1;$i<=6;$i++){
+				echo"
+			<li class='show col-xs-12'>
+			<a href='#''>
+				<div class='img'>
+					<img src='src/image/event/06.jpg' alt=''>
 				</div>	
-		</a>
-			<div class="balloon">
+			</a>	
+			<div class='balloon'>
 					<p>櫻桃季節，甜酸好吃</p> 		
 				
 			</div>
-			<!-- <div class="bluecircle">
+			<!-- <div class='bluecircle'>
 			
 				
 					<p>南投</p>
@@ -102,7 +103,23 @@
 				
 			</div>
 		 -->
-		</li>
+		</li>"
+		;}
+			
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+		
 		<li class="show col-xs-12">
 			<a href="#">
 				<div class="img">
@@ -227,21 +244,24 @@
 	
 	<div class="thirdblockin">
 		<div id="trigger2"></div>
-		<div class="eventreco">
-			<a href="#">
-				<div class="img">
-					<img src="src/image/event/photo4.jpg" alt="">
+		<?php 
+			for($j=1;$j<=8;$j++){echo"
+		<div class='eventreco'>
+			<a href='#'>
+				<div class='img'>
+					<img src='src/image/event/photo4.jpg' alt=''>
 				</div>	
-				<div class="infobar1">
+				<div class='infobar1'>
 					<h5>桃園</h5>
-					<div class="inforbar2">
+					<div class='inforbar2'>
 						舉辦日期：2016-11-24
 					</div>
 				</div>
 				
 			</a>
-					</div>
-		<div class="eventreco" >
+				</div>
+				";}?>
+	<!-- 	<div class="eventreco" >
 			
 		
 			<a href="#">
@@ -353,7 +373,7 @@
 				</div>
 			</a>
 	</div>
-	
+	 -->
 	
 <div class="clear"></div>
 		<div class="littlelittle2">
@@ -381,6 +401,7 @@
 </div>
 <script type="text/javascript" src="js/header.js"></script>
 <script type="text/javascript" src="js/event.js"></script>
+<script type="text/javascript" src="js/login-ajax.js"></script>
 <?php require_once('Footer.php');?>
 </body>
 </html>

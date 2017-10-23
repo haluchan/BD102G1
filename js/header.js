@@ -5,30 +5,29 @@
 				$('#ham_menu').toggleClass("ham_slide");
 				});
 			});		
-			//登入lightbox
-			$("#login-btn").click(function(){
-				$("#lightbox-bg").fadeIn();
+			// //登入lightbox
+			// $("#spanLogin").click(function(){
+			// 	$("#lightbox-bg").fadeIn();
 
-			});
+			// });
 
-			$("#login-btn2").click(function(){
-				$("#lightbox-bg").fadeIn();
-			});
-			$(".button-x").click(function(){
-				$("#lightbox-bg").fadeOut();
-			});
+			// $("#login-btn2").click(function(){
+			// 	$("#lightbox-bg").fadeIn();
+			// });
+			// $(".button-x").click(function(){
+			// 	$("#lightbox-bg").fadeOut();
+			// });
 			
 			//註冊lightbox
-			$("#sign-btn").click(function(){
-				$("#lightbox-bg").fadeOut();
-				$("#sign-lightbox").fadeIn();
+			$("#memSignBtn").click(function(){
+				$("#lightbox-bg").css("display","none");
+				$("#memsign-lightbox").css("display","block");
 
 			});
-			$("#cancel-sign").click(function(){
-				$("#sign-lightbox").fadeOut();
-			});
+			$("#membutton_x").click(function(){
+				$("#memsign-lightbox").fadeOut(400);
 			//完成註冊
-
+			});
 
 			$(function(){
 				var fixed = false;//設定fix變數 false未fixed, true已fixed

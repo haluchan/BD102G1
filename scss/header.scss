@@ -218,8 +218,14 @@ header{
 			bottom:0;
 			margin:auto;
 			// z-index:999;
+			a{
+				img{
+					width: 80%;
+				}
+			}
 			@include rwd (moblie) {	
-				width:120px;		
+				width:120px;
+
 			}
 		}
 	}
