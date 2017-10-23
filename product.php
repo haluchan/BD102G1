@@ -15,7 +15,7 @@
 
 </head>
 <body>
-    <a href="cart.php"><div class="cart cartNo" id="cartCircle">0</div></a>
+    <a href="cart.php"><div class="cart cartNo cartBtn" id="cartCircle">0</div></a>
     <?php require_once('Header.php') ?> 
 
     <div class="pro_container">
@@ -570,6 +570,10 @@
 </script>
 <script type="text/javascript" src="js/header.js"></script>
 <script type="text/javascript" src="js/login-ajax.js"></script>
+
+
+
+
 
 </body>
 </html>

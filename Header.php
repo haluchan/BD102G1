@@ -10,7 +10,7 @@
 
     	<div class="topmenu">
     		<ul>	
-    			<li><a href="cart.php">購物車<span class="cartNo">0</span></a></li>
+    			<li><a href="cart.php" class="cartBtn">購物車<span class="cartNo">0</span></a></li>
     			<li><span id="memName"></span><a  id="spanLogin" >註冊/登入</a></li>
     			<li><a href="application.php">申請資助</a></li>
     		</ul>
@@ -33,7 +33,7 @@
 						<li><a href="application.php">回報進度</a></li>
 						<li><a id="login-btn2">註冊/登入</a></li>
 						<li><a href="memberedit.php">會員專區</a></li>
-						<li><a href="cart.php">購物車(<span class="cartNo">0</span>)</a></li>
+						<li><a href="cart.php" class="cartBtn" >購物車(<span class="cartNo">0</span>)</a></li>
 					</ul>
 				</div>
     		</div>
