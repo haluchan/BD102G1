@@ -46,7 +46,6 @@
 					 where pro_no =" . $pro_no . ";";
 			$count = $pdo->query($sql2);
 			$howMany = $count->fetchColumn(0);
-			echo $howMany;
 
 			$sql3 = "select pro_pho 
 					 from prophoto 
