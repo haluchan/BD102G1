@@ -32,6 +32,33 @@
             <ul class="pro_s_cabinet" id="pro_s_cabinet">
         
                 <!-- 商品:li*8>div*2 -->
+
+                <?php 
+                    try {
+                        require_once("php/connectGrowing_hope.php");
+                        $sql = "select *
+                                from      mixproduct 
+                                where     pro_type = 1
+                                and       pro_status = 1
+                                order by  pro_no DESC
+                                limit     0,8;";
+
+                        $product = $pdo->query($sql);
+                        
+                        while ( $proRow = $product->fetchObject() ) {
+                            $pro_no     = $proRow ->pro_no;
+                            $pro_type   = $proRow ->pro_type;
+                            $pro_realno = $proRow ->pro_realno;
+                            $pro_name   = $proRow ->pro_name;
+                            $pro_price  = $proRow ->pro_price;
+                            $pro_std    = $proRow ->pro_std;
+                            $pro_status = $proRow ->pro_status;
+                            $pro_pho    = $proRow ->pro_pho;
+                            $pro_info   = $proRow ->pro_info;
+
+                            // echo $pro_no.$pro_type.$pro_realno.$pro_name .$pro_price.$pro_status.$pro_pho.$pro_info."<br>";
+
+                ?>
                 <li class="pro_s_each">
                     
                     <!-- hover前:菜圖+菜名 -->
@@ -40,308 +67,34 @@
                         <!-- 菜的牌子 -->
                         <div class="pro_s_brand">
                             <div><img src="src/image/product/pro-brand.png"></div>
-                            <div>朝天椒</div>
+                            <div><?php echo $pro_name?></div>
 							<div class="pro_s_new"><img src="src/image/product/pro-new.png" alt=""></div>
                         </div>
                         
                         <!-- 菜菜 -->
-                        <div class="pro_s_img"><img src="src/image/product/pro-s001.png" alt></div>
+                        <div class="pro_s_img"><img src="src/image/product/<?php echo $pro_pho?>" alt=""></div>
         
                     </div>
         
                     <!-- hover後:資訊+購買 -->
                     <div class="pro_s_white">
                         <div class="pro_s_info">
-                            <h3>朝天椒</h3>
+                            <h3><?php echo $pro_name?></h3>
                             <div class="pro_s_line"></div>
-                            <p class="pro_s_txt">
-                                發芽適溫：25~30℃<br>
-                                    平均採收：75-90天<br>
-                                    日照條件：半日照可<br>
-                                    辣味極強，早生，豐產<br>
-                            </p>
+                            <p class="pro_s_txt"><?php echo $pro_std?></p>
                             <div class="pro_s_buy">
-                                <span>$50/包</span>
-                                <span class="btn_green addButton" id="s001">加入購物
-                                    <input type="hidden" name="proInfo" value="朝天椒|s001.png|50">
+                                <span>$<?php echo $pro_price?>/包</span>
+                                <span class="btn_green addButton" id="<?php echo $pro_realno?>">加入購物
+                                    <input type="hidden" name="proInfo" value="<?php echo $pro_info?>">
                                 </span>
                             </div>
                         </div>
                     </div>
         
                 </li>
-				
-
-
-
-
-                <li class="pro_s_each">  
-                    <!-- hover前:菜圖+菜名 -->
-                    <div class="pro_s_vegetable">
-        
-                        <!-- 菜的牌子 -->
-                        <div class="pro_s_brand">
-                            <div><img src="src/image/product/pro-brand.png"></div>
-                            <div>青江菜</div>
-							<div class="pro_s_new"><img src="src/image/product/pro-new.png" alt=""></div>
-                        </div>
-                        
-                        <!-- 菜菜 -->
-                        <div class="pro_s_img"><img src="src/image/product/pro-s002.png" alt></div>
-        
-                    </div>
-        
-                    <!-- hover後:資訊+購買 -->
-                    <div class="pro_s_white">
-                        <div class="pro_s_info">
-                            <h3>青江菜</h3>
-                            <div class="pro_s_line"></div>
-                            <p class="pro_s_txt">
-                                發芽適溫：20~30℃<br>
-                                平均採收：30-35天<br>
-                                日照條件：全日照<br>
-                                青梗湯匙菜，煮食口感佳<br>
-                            </p>
-                            <div class="pro_s_buy">
-                                <span>$50/包</span>
-                                <span class="btn_green addButton" id="s002">加入購物
-                                    <input type="hidden" name="proInfo" value="青江菜|s002.png|50">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-        
-                </li>
-				
-
-
-
-
-
-                <li class="pro_s_each">  
-                    <!-- hover前:菜圖+菜名 -->
-                    <div class="pro_s_vegetable">
-        
-                        <!-- 菜的牌子 -->
-                        <div class="pro_s_brand">
-                            <div><img src="src/image/product/pro-brand.png"></div>
-                            <div>小南瓜</div>
-							<div class="pro_s_new" hidden><img src="src/image/product/pro-new.png" alt=""></div>
-                        </div>
-                        
-                        <!-- 菜菜 -->
-                        <div class="pro_s_img"><img src="src/image/product/pro-s003.png" alt></div>
-        
-                    </div>
-        
-                    <!-- hover後:資訊+購買 -->
-                    <div class="pro_s_white">
-                        <div class="pro_s_info">
-                            <h3>小南瓜</h3>
-                            <div class="pro_s_line"></div>
-                            <p class="pro_s_txt">
-                                發芽適溫：22~30℃<br>
-                                平均採收：開花後35-40天<br>
-                                果皮墨綠色，黏性強，口感極佳<br>
-                            </p>
-                            <div class="pro_s_buy">
-                                <span>$50/包</span>
-                                <span class="btn_green addButton" id="s003">加入購物
-                                    <input type="hidden" name="proInfo" value="小南瓜|s003.png|50">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-        
-                </li>
-				
-                <li class="pro_s_each">  
-                    <!-- hover前:菜圖+菜名 -->
-                    <div class="pro_s_vegetable">
-        
-                        <!-- 菜的牌子 -->
-                        <div class="pro_s_brand">
-                            <div><img src="src/image/product/pro-brand.png"></div>
-                            <div>多彩椒</div>
-							<div class="pro_s_new" hidden><img src="src/image/product/pro-new.png" alt=""></div>
-                        </div>
-                        
-                        <!-- 菜菜 -->
-                        <div class="pro_s_img"><img src="src/image/product/pro-s004.png" alt></div>
-        
-                    </div>
-        
-                    <!-- hover後:資訊+購買 -->
-                    <div class="pro_s_white">
-                        <div class="pro_s_info">
-                            <h3>多彩椒</h3>
-                            <div class="pro_s_line"></div>
-                            <p class="pro_s_txt">
-                                發芽適溫：20~30℃<br>
-                                平均採收：45-60天<br>
-                                可生食，結果即可食用<br>
-                            </p>
-                            <div class="pro_s_buy">
-                                <span>$50/包</span>
-                                <span class="btn_green addButton" id="s004">加入購物
-                                    <input type="hidden" name="proInfo" value="多彩椒|s004.png|50">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-        
-                </li>
-				
-                <li class="pro_s_each">  
-                    <!-- hover前:菜圖+菜名 -->
-                    <div class="pro_s_vegetable">
-        
-                        <!-- 菜的牌子 -->
-                        <div class="pro_s_brand">
-                            <div><img src="src/image/product/pro-brand.png"></div>
-                            <div>觀賞茄</div>
-							<div class="pro_s_new" hidden><img src="src/image/product/pro-new.png" alt=""></div>
-                        </div>
-                        
-                        <!-- 菜菜 -->
-                        <div class="pro_s_img"><img src="src/image/product/pro-s005.png" alt></div>
-        
-                    </div>
-        
-                    <!-- hover後:資訊+購買 -->
-                    <div class="pro_s_white">
-                        <div class="pro_s_info">
-                            <h3>觀賞茄</h3>
-                            <div class="pro_s_line"></div>
-                            <p class="pro_s_txt">
-                                發芽適溫：22~30℃<br>
-                                平均採收：75天<br>
-                                日照條件：半日照<br>
-                                富含花青素，抗病性強<br>
-                            </p>
-                            <div class="pro_s_buy">
-                                <span>$50/包</span>
-                                <span class="btn_green addButton" id="s005">加入購物
-                                    <input type="hidden" name="proInfo" value="觀賞茄|s005.png|50">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-        
-                </li>
-				
-                <li class="pro_s_each">  
-                    <!-- hover前:菜圖+菜名 -->
-                    <div class="pro_s_vegetable">
-        
-                        <!-- 菜的牌子 -->
-                        <div class="pro_s_brand">
-                            <div><img src="src/image/product/pro-brand.png"></div>
-                            <div>紅蘿蔔</div>
-							<div class="pro_s_new" hidden><img src="src/image/product/pro-new.png" alt=""></div>
-                        </div>
-                        
-                        <!-- 菜菜 -->
-                        <div class="pro_s_img"><img src="src/image/product/pro-s006.png" alt></div>
-        
-                    </div>
-        
-                    <!-- hover後:資訊+購買 -->
-                    <div class="pro_s_white">
-                        <div class="pro_s_info">
-                            <h3>紅蘿蔔</h3>
-                            <div class="pro_s_line"></div>
-                            <p class="pro_s_txt">
-                                發芽適溫：20~30℃<br>
-                                平均採收：75-90天<br>
-                                日照條件：半日照<br>
-                                甜度高，適生鮮食用<br>
-                            </p>
-                            <div class="pro_s_buy">
-                                <span>$50/包</span>
-                                <span class="btn_green addButton" id="s006">加入購物
-                                    <input type="hidden" name="proInfo" value="紅蘿蔔|s006.png|50">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-        
-                </li>
-				
-                <li class="pro_s_each">  
-                    <!-- hover前:菜圖+菜名 -->
-                    <div class="pro_s_vegetable">
-        
-                        <!-- 菜的牌子 -->
-                        <div class="pro_s_brand">
-                            <div><img src="src/image/product/pro-brand.png"></div>
-                            <div>小番茄</div>
-							<div class="pro_s_new" hidden><img src="src/image/product/pro-new.png" alt=""></div>
-                        </div>
-                        
-                        <!-- 菜菜 -->
-                        <div class="pro_s_img"><img src="src/image/product/pro-s007.png" alt></div>
-        
-                    </div>
-        
-                    <!-- hover後:資訊+購買 -->
-                    <div class="pro_s_white">
-                        <div class="pro_s_info">
-                            <h3>小番茄</h3>
-                            <div class="pro_s_line"></div>
-                            <p class="pro_s_txt">
-                                發芽適溫：25-32℃<br>
-                                平均採收：60-75天<br>
-                                日照條件：全日照<br>
-                                果肉厚實飽滿，座果率高<br>
-                            </p>
-                            <div class="pro_s_buy">
-                                <span>$50/包</span>
-                                <span class="btn_green addButton" id="s007">加入購物
-                                    <input type="hidden" name="proInfo" value="小番茄|s007.png|50">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-        
-                </li>
-				
-                <li class="pro_s_each">  
-                    <!-- hover前:菜圖+菜名 -->
-                    <div class="pro_s_vegetable">
-        
-                        <!-- 菜的牌子 -->
-                        <div class="pro_s_brand">
-                            <div><img src="src/image/product/pro-brand.png"></div>
-                            <div>四季蔥</div>
-							<div class="pro_s_new" hidden><img src="src/image/product/pro-new.png" alt=""></div>
-                        </div>
-                        
-                        <!-- 菜菜 -->
-                        <div class="pro_s_img"><img src="src/image/product/pro-s008.png" alt></div>
-        
-                    </div>
-        
-                    <!-- hover後:資訊+購買 -->
-                    <div class="pro_s_white">
-                        <div class="pro_s_info">
-                            <h3>四季蔥</h3>
-                            <div class="pro_s_line"></div>
-                            <p class="pro_s_txt">
-                                發芽適溫：20~30℃<br>
-                                平均採收：100-120天<br>
-                                長壽蔥，肉質軟，味甜<br>
-                            </p>
-                            <div class="pro_s_buy">
-                                <span>$50/包</span>
-                                <span class="btn_green addButton" id="s008">加入購物
-                                    <input type="hidden" name="proInfo" value="四季蔥|s008.png|50">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-        
-                </li>
+				<?php
+                        }                       
+                ?>
 
                 <!-- 手機版的種子資訊，蓋全版，透過js抽換資料 -->
                 <div class="pro_s_mobileInfo" id="pro_s_mobileInfo">
@@ -405,50 +158,52 @@
                 <div class="pro_t_lightbox">
                     <!-- 商品選單 -->
                     <ul class="pro_t_shelf" id="pro_t_shelf">
+                        
+                        <?php
+                            $sql2 = "
+                                select  *
+                                from    mixproduct 
+                                where   pro_type = 2 
+                                        and pro_status = 1 
+                                        and pro_pho like '%1.jpg'
+                                        order by  pro_no DESC;";
+                                // limit   0,4  要限制只顯示四筆以防萬一嗎?
 
-                        <li class="pro_t_each" id="t001">
-                            <div class="pro_click">
-                                <img src="src/image/product/pro-t0011.jpg" alt="">
+                            $product = $pdo->query($sql2);
+                            
+                            while ( $tank = $product->fetchObject() ) {
+                                $tank_no     = $tank ->pro_no;
+                                $tank_type   = $tank ->pro_type;
+                                $tank_realno = $tank ->pro_realno;
+                                $tank_name   = $tank ->pro_name;
+                                $tank_price  = $tank ->pro_price;
+                                $tank_std    = $tank ->pro_std;
+                                $tank_status = $tank ->pro_status;
+                                $tank_pho    = $tank ->pro_pho;
+                                $tank_info   = $tank ->pro_info;
+                        ?>
+
+                        <li class="pro_t_each" id="<?php echo $tank_realno?>">
+                            <div>
+                                <img src="src/image/product/<?php echo $tank_pho?>" alt="<?php echo $tank_name?>">
                             </div>
                             <div>
-                                <div class="pro_s_name">香草與魚 Herb & Fish</div>
-                                <div>$9999/個</div>
+                                <div class="pro_s_name"><?php echo $tank_name?></div>
+                                <div>$<?php echo $tank_price?>/個</div>
                             </div>
                         </li>
 
-                        <li class="pro_t_each" id="t004">
-                            <div>
-                                <img src="src/image/product/pro-t0011.jpg" alt="">
-                            </div>
-                            <div>
-                                <div class="pro_s_name">香草與魚 Herb & Fish</div>
-                                <div>$9998/個</div>
-                            </div>
-                        </li>
+                        <?php
+
+                                }                       
+                        ?>
+
                         
                         <div class="pro_t_shelfImg">
                             <img src="src/image/product/pro-shelf.png">
                         </div>
 
-                        <li class="pro_t_each" id="t002">
-                            <div>
-                                <img src="src/image/product/pro-t0021.jpg" alt="">
-                            </div>
-                            <div>
-                                <div class="pro_s_name">水中幻月 Water Moon</div>
-                                <div>$8888/個</div>
-                            </div>
-                        </li>
-                                        
-                        <li class="pro_t_each" id="t003">
-                            <div>
-                                <img src="src/image/product/pro-t0031.jpg" alt="">
-                            </div>
-                            <div>
-                                <div class="pro_s_name">水中幻月 Water Moon</div>
-                                <div>$7777/個</div>
-                            </div>
-                        </li>
+
                         <div class="ccc"></div>
                     </ul>
                 </div>
@@ -531,6 +286,14 @@
                     </p>
                 </div>               
             </div> <!--pro_t_info-->
+
+
+            <?php
+                } catch (PDOException $e) {
+                    echo "錯誤原因 : " , $e->getMessage(),"<br>";
+                    echo "行號 : " , $e->getLine(),"<br>";
+                }
+            ?>
 
           <?php require_once('Footer.php') ?>
         </section>
