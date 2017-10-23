@@ -40,6 +40,19 @@
 			$pro_std    = $proRow ->pro_std;
 			$pro_status = $proRow ->pro_status;
 			$pro_realNo = $proRow ->pro_realNo;
+
+			$sql2 = "select count(pro_pho)
+					 from prophoto 
+					 where pro_no =" . $pro_no . ";";
+			$count = $pdo->query($sql2);
+			$howMany = $count->fetchColumn(0);
+			echo $howMany;
+
+			$sql3 = "select pro_pho 
+					 from prophoto 
+					 where pro_no =" . $pro_no . ";";
+			$prophoto = $pdo->query($sql3);	
+			//用在.pro_photos
 			
 	?>
 
@@ -47,6 +60,7 @@
 
 		<input type="hidden" name="pro_no" value="<?php echo $pro_no?>">
 		<input type="hidden" name="pro_realNo" value="<?php echo $pro_realNo?>">
+		<input type="hidden" name="pro_type" value="<?php echo $pro_type?>">
 
 		<div class="pro_line"></div>
 		<table cellspacing="0">
@@ -71,12 +85,14 @@
 				<th>商品名稱</th>
 				<td><input type="text" name="pro_name" value="<?php echo $pro_name ?>" required></td>
 				<th>上傳圖檔</th>
-				<td><input type="file" name="image[]" multiple="multiple" draggable="true" disabled></td>
+				<td>
+					<input type="file" name="image" disabled>
+				</td>
 			</tr>
 			<tr>
 				<th>商品類別</th>
 				<td>
-					<select name="pro_type" id="typeSelect" >
+					<select name="pro_type" id="typeSelect" disabled>
 						<option value="">請選擇</option>	
 						<option value="1">種子</option>	
 						<option value="2">魚缸</option>	
@@ -84,7 +100,14 @@
 					</select>
 
 				</td>
-				<th colspan="2" rowspan="3"></th>
+				<td colspan="2" rowspan="3" class="pro_photos">
+					<?php
+						for ( $n = 0; $n < $howMany ; $n++){
+							$photos = $prophoto->fetchColumn();
+							echo '<div><img src="src/image/product/'.$photos.'">'.$photos.' </div>';
+						}
+					?>
+				</td>
 			</tr>
 			<tr>
 				<th>商品價格</th>

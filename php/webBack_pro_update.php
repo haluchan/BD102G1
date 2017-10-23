@@ -40,11 +40,6 @@ try {
 		$errorInfo .= "資料修改成功\\n" ;
 
 
-$str = "s" . $i . ".jpg"
-
-<td> <?php echo '標題' ?> </td>
-<?php echo"<td>"   "</td>" ?>
-
 
 //存圖片到prophoto //不給改
 	// foreach( $image["error"] as $i => $value ){
