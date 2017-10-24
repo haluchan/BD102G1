@@ -369,7 +369,7 @@
       .pro_tank .pro_t_wheel .pro_t_lightbox ul {
         list-style: none;
         margin: auto;
-        width: 150%; }
+        width: 300%; }
         .pro_tank .pro_t_wheel .pro_t_lightbox ul > div {
           display: none; }
         @media only screen and (max-width: 766px) {

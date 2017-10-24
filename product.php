@@ -68,11 +68,11 @@
                         <div class="pro_s_brand">
                             <div><img src="src/image/product/pro-brand.png"></div>
                             <div><?php echo $pro_name?></div>
-							<div class="pro_s_new"><img src="src/image/product/pro-new.png" alt=""></div>
+							<div class="pro_s_new" hidden><img src="src/image/product/pro-new.png" ></div>
                         </div>
                         
                         <!-- 菜菜 -->
-                        <div class="pro_s_img"><img src="src/image/product/<?php echo $pro_pho?>" alt=""></div>
+                        <div class="pro_s_img"><img src="src/image/product/<?php echo $pro_pho?>" alt="<?php echo $pro_name?>"></div>
         
                     </div>
         
@@ -202,9 +202,7 @@
                         ?>
 
                         
-                       <!--  <div class="pro_t_shelfImg">
-                            <img src="src/image/product/pro-shelf.png">
-                        </div> -->
+
 
 
                         <div class="ccc"></div>
