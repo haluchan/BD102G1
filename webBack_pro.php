@@ -1,6 +1,13 @@
 <?php
 session_start();
 ob_start();
+//得到登入者的名字，然後清掉; 寫入登入時間
+$admin_name = $_SESSION['signInInfo'];
+$_SESSION['signInInfo'] = '';
+$_SESSION['adminName'] = $admin_name;
+$_SESSION['signInDate'] =  date ("Y-m-d H:i:s" , mktime(date('H')+8, date('i'), date('s'), date('m'), date('d'), date('Y')));
+
+echo '預計會加在後台公版裡$admin_name='.$admin_name .'  '.$_SESSION['signInDate'] ;
 ?>
 <!DOCTYPE html>
 <html lang="UTF-8">
@@ -199,7 +206,9 @@ ob_start();
 
 				if ( isset($_SESSION['proAddErrorInfo']) == 1){
 					echo $_SESSION['proAddErrorInfo']; 
-					session_unset($_SESSION['proAddErrorInfo']); 
+					// session_unset($_SESSION['proAddErrorInfo']);
+					$_SESSION['proAddErrorInfo'] = ''; 
+
 				}	
 
 			?>";
@@ -215,7 +224,7 @@ ob_start();
 
 				if ( isset($_SESSION['proStatusResetInfo']) == 1){
 					echo $_SESSION['proStatusResetInfo']; 
-					session_unset($_SESSION['proStatusResetInfo']); 
+					$_SESSION['proStatusResetInfo'] =''; 
 				}	
 
 			?>";
