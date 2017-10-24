@@ -1,14 +1,16 @@
 
-<link rel="stylesheet" type="text/css" href="css/sign.css" >
 
-	<section>
- 		
-	</section>
+
 	
-	<div class="lightbox-bg" id="sign-lightbox">
+	<div class="lightbox-bg" id="memsign-lightbox">
 		<div class="lightbox-target" >
-			<div class="cancel" id="cancel-sign">
-				<a  id="login-cancel"><img src="src/image/login/pop_close.png"></a>
+			<div class="wrapper cancel">
+				<div class="button-block">
+			    	<button type="button" class="button-x" id="membutton_x">
+			    	<i class="mark x"></i>
+			    	<i class="mark xx"></i>
+			    	</button>
+				</div>
 			</div>
 		  <div class="login-content">
 			  	<h2>會員註冊</h2>
@@ -33,9 +35,15 @@
 			  		<span class="focus-border"></span>
 			  	</div>
 			  	<div class="sign-gender">
+			  		
 			  		<p>性別</p>
-			  		男<input type="radio" name="gender" value="" >
-			  		女<input type="radio" name="gender" value="" >
+			  		
+			  		<div class="genderinput">
+			  			<label for="male">
+			  		<input type="radio" name="gender" value="male" id="male">&nbsp;&nbsp;男</label>
+			  		<label for="female">
+			  		<input type="radio" name="gender" value="female" id="female">&nbsp;&nbsp;女</label>
+			  		</div>
 			  		
 			  	</div>
 			  		<div class="sign-mail">
@@ -46,13 +54,15 @@
 			  
 			  		<div class="sign-add">
 			  		<p>居住地址</p>
-			  		<input type="text" name="" value="" placeholder="">
+			  		<textarea name="" value="" placeholder="" cols="2">
+			  			
+			  		</textarea>
 			  		<span class="focus-border"></span>
 			  	</div>
 			  
-			  	<div class="forget">
+			  <!-- 	<div class="forget">
 			  		<a href="">忘記密碼?</a>
-			  	</div>
+			  	</div> -->
 		  	<button type="submit" class="btn_green">確定</button>
 		  	 <!-- <button type="submit" class="btn_green">facebook登入</button> -->
 		  	<!-- <button type="" class="btn_green">註冊</button> -->

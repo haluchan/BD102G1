@@ -45,8 +45,10 @@ body{
 				.sign-account{
 					width:300px;
 					display:inline-block;
-					height: 20px;
+				
+					// overflow: hidden;
 					p{
+					width:80px;
 					padding-top:14px;
 					padding-right:10px;
 					display:inline-block;
@@ -72,13 +74,15 @@ body{
 						border-bottom-color:#61ABD4;
 						}
 					}
-			
+					
 				}
 				.sign-pws{
+
 					width:300px;
 					height: 20px;
 					display:inline-block;
 					p{
+					width:80px;
 					padding-top:14px;
 					padding-right:10px;
 					display:inline-block;
@@ -107,12 +111,14 @@ body{
 					}
 				}
 				.sign-repws{
+
 					width:300px;
-					height: 20px;
+					// height: 20px;
 					display:inline-block;
 					p{
+						width:80px;
 					padding-top:14px;
-					padding-right:2px;
+					padding-right:10px;
 					display:inline-block;
 					vertical-align:bottom;
 					line-height: 20px;
@@ -139,23 +145,23 @@ body{
 					}
 				}
 			
-				.forget{
-					width:200px;
-					text-align:right;
-					margin:auto;
-					a{
-						font-size:12px;
-						color:#777;
-						text-decoration:none;
-					}	
-				}
+				// .forget{
+				// 	width:200px;
+				// 	text-align:right;
+				// 	margin:auto;
+				// 	a{
+				// 		font-size:12px;
+				// 		color:#777;
+				// 		text-decoration:none;
+				// 	}	
+				// }
 				.sign-mail{
 					width:300px;
-					height: 20px;
 					display:inline-block;
 					p{
+						width:80px;
 					padding-top:14px;
-					padding-right:2px;
+					padding-right:10px;
 					display:inline-block;
 					vertical-align:bottom;
 					line-height: 20px;
@@ -183,61 +189,81 @@ body{
 				}
 					.sign-add{
 					width:300px;
-					height: 20px;
 					display:inline-block;
 					p{
-					padding-top:14px;
-					padding-right:2px;
+						width:80px;
+					margin-bottom: 12px;
+					padding-right:10px;
 					display:inline-block;
 					vertical-align:bottom;
 					line-height: 20px;
 					color:#61ABD4;
 					}
-					input{
-						
+					textarea{
+						display:inline-block;
 						width:150px;
-						height: 20px;
-						background-color:#F6F7ED;
-						border-width: 0px;
-						border-bottom-width: 2px;
-						border-bottom-color:#ccc;
-						letter-spacing:1px;
-						transition:0.4s;
+						margin-top:20px;
+						resize:none;
+
 					}
-					input{
-						&:focus{
-						outline:none;
-						border-width: 0px;
-						border-bottom-width: 2px;
-						border-bottom-color:#61ABD4;
-						}
-					}
+					// input{
+						
+					// 	width:150px;
+					// 	height: 20px;
+					// 	background-color:#F6F7ED;
+					// 	border-width: 0px;
+					// 	border-bottom-width: 2px;
+					// 	border-bottom-color:#ccc;
+					// 	letter-spacing:1px;
+					// 	transition:0.4s;
+					// }
+					// input{
+					// 	&:focus{
+					// 	outline:none;
+					// 	border-width: 0px;
+					// 	border-bottom-width: 2px;
+					// 	border-bottom-color:#61ABD4;
+					// 	}
+					// }
+					
 				}
 					.sign-birth{
 					width:300px;
-					height: 20px;
 					display:inline-block;
 					p{
+						width:80px;
 					padding-top:14px;
-					padding-right:2px;
+					padding-right:10px;
 					display:inline-block;
 					vertical-align:bottom;
 					line-height: 20px;
 					color:#61ABD4;
+					}
+					input{
+						width:150px;
 					}
 					
 				}
 				.sign-gender{
-					width:300px;
-					height: 20px;
+					width:100%;
 					display:inline-block;
 					p{
+					width:80px;
 					padding-top:14px;
-					padding-right:2px;
+					padding-right:10px;
 					display:inline-block;
 					vertical-align:bottom;
 					line-height: 20px;
 					color:#61ABD4;
+					}
+					.genderinput {
+						padding:0 0 ;
+						display:inline-block;
+						width:150px;
+						text-align: left;
+					}
+					label+label{
+					margin-left: 20px;
 					}
 				
 					

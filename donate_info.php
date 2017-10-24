@@ -6,6 +6,9 @@
 <title>即刻菜援</title>
 <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
 
+<?php require_once('Header_head.php');  ?>
+
+
 <link rel="stylesheet" href="css/font.css">
 <link href="css/donate_info.css" rel="stylesheet">
 <link rel="stylesheet" href="css/header.css">
@@ -369,7 +372,7 @@
 
 
 <script type="text/javascript" src="js/donate_info_tweenmax.js"></script>
-
+<script type="text/javascript" src="js/login-ajax.js"></script>
 	
 </body>
 </html>

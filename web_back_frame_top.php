@@ -55,8 +55,8 @@
 			 		<li>
 			 		<span class="slideButton"><img src="src/image/web_back_frame/circleWithPlus.png">商品管理</span>
 			 			<ol class="item">
-			 				<li><a href="#" class="itemClick-pro"><img src="src/image/web_back_frame/line.png">商品全覽</a></li>
-			 				<li><a href="#" class="itemClick-pro"><img src="src/image/web_back_frame/line.png">新增商品</a></li>
+			 				<li><a href="#" class="itemClick"><img src="src/image/web_back_frame/line.png">商品全覽</a></li>
+			 				<li><a href="#" class="itemClick"><img src="src/image/web_back_frame/line.png">新增商品</a></li>
 			 			</ol>
 			 		</li>
 			 		<li><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">管理員管理</li>

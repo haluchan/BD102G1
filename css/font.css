@@ -4,7 +4,7 @@
 }
 
 body{
-	font-family:'微軟正黑體','PingFang';
+	font-family:' Microsoft JhengHei','微軟正黑體','PingFang';
 }
 
 
@@ -33,7 +33,10 @@ p{
   cursor:pointer;
   letter-spacing: 1px;
   transition: .4s;
+  outline: none;
 }
+
+
  @media only screen and (min-width: 767px){
    .btn_green:hover {
       background: #ffffff;
@@ -73,6 +76,7 @@ p{
   text-decoration: none;
   cursor:pointer;
   transition: .4s;
+  outline: none;
 }
 
 
@@ -90,4 +94,5 @@ p{
   font-weight: bold;
   cursor:pointer;
   transition: .4s;
+  outline: none;
 }

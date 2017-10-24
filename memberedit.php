@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-	
+	<?php require_once('Header_head.php'); ?>
+	</head>
 	<body>
 	<?php require_once('Header.php'); ?>
 	<div class="titlebg">
@@ -36,7 +37,7 @@
 			<h2></h2>
 			<img src="src/image/member/child.png" alt="">
 			<div class="imguplod btnbox">
-				<a href="">上傳圖檔</a>
+				<input type="file" name="upFile">
 			</div>
 				<table>
 					<thead>
@@ -52,11 +53,11 @@
 						</tr>
 						<tr>
 							<td>會員暱稱:</td>
-							<td><input type="text" name="" placeholder="becky"></td>
+							<td><input type="text" name="mem_name" placeholder="becky"></td>
 						</tr>
 						<tr>
 							<td>e-mail:</td>
-							<td><input type="email" name=""></td>
+							<td><input type="email" name="mem_mail"></td>
 						
 						</tr>
 						<tr>
@@ -66,7 +67,7 @@
 						</tr>
 						<tr>
 							<td>居住地:</td>
-							<td><input type="text" name="" ></td>
+							<td><input type="text" name="memadd" ></td>
 						
 						</tr>
 						<tr>
@@ -91,7 +92,7 @@
 
 <?php require_once('Footer.php');?>
 </div>
-
+ <script type="text/javascript" src="js/header.js"></script>
 
 </body>
 </html>
