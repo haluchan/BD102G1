@@ -1,3 +1,10 @@
+<?php 
+
+ob_start();
+session_start();
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +17,8 @@
 <link rel="stylesheet" type="text/css" href="css/want_donate.css">
 <link rel="stylesheet" href="css/header.css">
 <link rel="stylesheet" type="text/css" href="css/login.css" >
+<link rel="stylesheet" type="text/css" href="css/headerFooter.css">
+<?php require_once('Header_head.php');  ?>
 <!-- web-font -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -17,8 +26,11 @@
 
 </head>
 <body>
+
+<?php require_once('Header.php');  ?>
 <?php 
-	require_once('Header.php'); 
+	
+	$_SESSION['mem_name'];	
 	// $event_no = $_REQUEST['event_no'];
 	try{
 
@@ -126,7 +138,7 @@
 							<tbody>
 								<tr>
 									<td class="td_title">持卡人姓名</td>
-									<td><input type="text" name="card_name" class="td_input"></td></tr>
+									<td><input type="text" name="card_name" class="td_input" value="<?php echo?>"></td></tr>
 								<tr>
 									<td class="td_title">交易金額</td>
 									<td> NT $2,000 元</td>
@@ -185,6 +197,7 @@ require_once('Footer.php');  ?>
 
 
 <script type="text/javascript" src="js/want_donate.js"></script>
+<script type="text/javascript" src="js/login-ajax.js"></script>
 
 
 	
