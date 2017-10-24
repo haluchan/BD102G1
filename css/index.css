@@ -728,45 +728,45 @@ a {
 }
 
 .fish .fish_info .fish_icon:nth-child(4) {
-  left: 31%;
-  bottom: 45%;
+  left: 28%;
+  bottom: 41%;
   animation: fish_icon 3s -0.31s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(5) {
   left: 19%;
-  bottom: 32%;
-  animation: fish_icon 3s -0.45s linear infinite;
+  bottom: 39%;
+  animation: fish_icon 3s -0.02s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(6) {
-  left: 20%;
-  bottom: 40%;
-  animation: fish_icon 3s -0.5s linear infinite;
+  left: 13%;
+  bottom: 33%;
+  animation: fish_icon 3s -0.27s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(7) {
-  left: 21%;
-  bottom: 37%;
-  animation: fish_icon 3s -0.17s linear infinite;
+  left: 26%;
+  bottom: 38%;
+  animation: fish_icon 3s -0.41s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(8) {
-  left: 20%;
-  bottom: 48%;
-  animation: fish_icon 3s -0.3s linear infinite;
+  left: 27%;
+  bottom: 34%;
+  animation: fish_icon 3s -0.12s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(9) {
-  left: 16%;
-  bottom: 38%;
-  animation: fish_icon 3s -0.21s linear infinite;
+  left: 19%;
+  bottom: 49%;
+  animation: fish_icon 3s -0.12s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(10) {
-  left: 24%;
-  bottom: 39%;
-  animation: fish_icon 3s -0.28s linear infinite;
+  left: 30%;
+  bottom: 34%;
+  animation: fish_icon 3s -0.3s linear infinite;
 }
 
 .fish .fish_info .phone {
