@@ -1,17 +1,7 @@
 
 		
 	    <header>
-	    	<?php require_once('login.php'); ?> 
-
-
-			<?php require_once('login.php'); ?> 
-
-<<<<<<< HEAD
-	
-		
-=======
->>>>>>> 0b2e4ac735090e666fecbdcc85acfb5176907019
-	    <header class="header">
+	    	<?php require_once('login.php'); ?>
 
 
 	    	<div class="topmenu">
