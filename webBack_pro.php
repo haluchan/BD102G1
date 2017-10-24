@@ -146,7 +146,12 @@ ob_start();
 				<!-- 狀態 -->
 				<td>
 					<?php $status = $prodRow->pro_status; ?>
-					<label><input type="radio" name="status<?php echo $prodRow->pro_no ?>" value="1" class="on" <?php if ( $status == 1){echo 'checked';}?> >上架</label>
+					<label>
+						<input type="radio" name="status<?php echo $prodRow->pro_no ?>" value="1" class="on" 
+						<?php if ( $status == 1){echo 'checked';}?> >上架
+					</label>
+
+					
 					<label><input type="radio" name="status<?php echo $prodRow->pro_no ?>" value="0" class="off"<?php if ( $status == 0){echo 'checked';}?> >下架</label>
 
 					<!-- 商品號碼最大到幾號 -->
