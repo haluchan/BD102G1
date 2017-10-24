@@ -181,6 +181,8 @@
                                 $tank_status = $allTank ->pro_status;
                                 $tank_pho    = $allTank ->pro_pho;
                                 $tank_info   = $allTank ->pro_info;
+
+
                         ?>
 
                             
@@ -200,9 +202,9 @@
                         ?>
 
                         
-                        <div class="pro_t_shelfImg">
+                       <!--  <div class="pro_t_shelfImg">
                             <img src="src/image/product/pro-shelf.png">
-                        </div>
+                        </div> -->
 
 
                         <div class="ccc"></div>
@@ -231,24 +233,24 @@
                     <!-- 左-大圖 -->
                     <div class="pro_t_infoTL mobileHidden">
                         <div>
-                            <img id="tank_Large" src="src/image/product/pro-t0011.jpg" alt="主圖">
+                            <img id="tank_Large" src="src/image/product/pro-t0091.jpg" alt="主圖">
                         </div>
                     </div>
                     <!-- 右-大標小圖按鈕 -->
                     <div class="pro_t_infoTR">
                     
-                        <h3>香草與魚 Herb & Fish</h3>
-                        <ul class="pro_t_imgGroup" id="myElement" >
-                            <li><img src="src/image/product/pro-t0011.jpg" alt="主圖"></li>
-                            <li><img src="src/image/product/pro-t0012.jpg" alt="結構圖"></li>
-                            <li><img src="src/image/product/pro-t0013.jpg" alt="細部圖"></li>
-                            <li><img src="src/image/product/pro-t0014.jpg" alt="情境圖"></li>
-                            <li><img src="src/image/product/pro-t0015.jpg" alt="尺寸圖"></li>
+                        <h3>香草與魚</h3>
+                        <ul class="pro_t_imgGroup pro_slick">
+                            <li><img src="src/image/product/pro-t0091.jpg" alt="主圖"></li>
+                            <li><img src="src/image/product/pro-t0092.jpg" alt="結構圖"></li>
+                            <li><img src="src/image/product/pro-t0093.jpg" alt="細部圖"></li>
+                            <li><img src="src/image/product/pro-t0094.jpg" alt="情境圖"></li>
+                            <li><img src="src/image/product/pro-t0095.jpg" alt="尺寸圖"></li>
                         </ul>
                         <div class="pro_t_TBuy">
-                            <span>$9999/個</span>
-                            <span class="btn_green addButton" id="t001">加入購物車
-                                <input type="hidden" name="proInfo" value="香草與魚I|t001.jpg|999">
+                            <span>$1950/個</span>
+                            <span class="btn_green addButton" id="t009">加入購物車
+                                <input type="hidden" name="proInfo" value="香草與魚|t009.jpg|1950">
                             </span>
                             <div class="ccc"></div>
                         </div>
@@ -311,10 +313,12 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
 <script>
-    $(document).ready(function(){
+    $(document).ready(proSlick);
+
+    function proSlick(){
 
         if (document.body.clientWidth < 767){
-            $('.pro_t_imgGroup').slick({
+            $('.pro_slick').slick({
               dots:true,
               centerMode: true,
               centerPadding: '60px',
@@ -332,7 +336,9 @@
               ]
             });
         }
-    });
+
+    }
+   
 </script>
 <script type="text/javascript" src="js/header.js"></script>
 <script type="text/javascript" src="js/login-ajax.js"></script>

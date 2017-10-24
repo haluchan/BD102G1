@@ -418,30 +418,30 @@
                   width: 80%; } }
               .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:first-child img {
                 width: 100%; }
-            .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child {
+            .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) {
               margin: 5% auto; }
               @media only screen and (min-width: 1440px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child .pro_t_name {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_name {
                   font-size: 30px;
                   color: #999; } }
               @media only screen and (min-width: 767px) and (max-width: 1440px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child .pro_t_name {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_name {
                   font-size: 1.1em;
                   color: #999; } }
               @media only screen and (max-width: 766px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child .pro_t_name {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_name {
                   font-size: 18px;
                   color: #999; } }
               @media only screen and (min-width: 1440px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child div:last-child {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_price {
                   font-size: 24px;
                   color: #F7931E; } }
               @media only screen and (min-width: 767px) and (max-width: 1440px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child div:last-child {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_price {
                   font-size: 1.05em;
                   color: #F7931E; } }
               @media only screen and (max-width: 766px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child div:last-child {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_price {
                   font-size: 18px;
                   color: #F7931E; } }
     .pro_tank .pro_t_wheel .pro_t_toRL {

@@ -8,9 +8,8 @@ function proSreenWidth(){
 	proEveryTank();
 	//購物車數字增加
 	proCartNumber();
-	//低一次的魚缸撈資料
-	proTankInfoChange();
-	
+	//第一次的魚缸撈資料
+	proTankInfoChange();	
 
 
 	var w = document.body.clientWidth;
@@ -167,6 +166,9 @@ function $qsa(qsa){
 		//把資料放入燈箱資料區
 		moveTo.innerHTML = code;
 
+		//可以做到一樣的效果，差了一個叉叉
+		// $(this).clone().appendTo($('#pro_s_mobileInfo'));
+
 		//把燈箱打開
 		moveTo.style.display = 'block';
 
@@ -268,7 +270,9 @@ function $qsa(qsa){
 		var pro_price = $('.pro_click').parent().find('.pro_t_price').text();
 		var pro_std = $('.pro_click').parent().find('.pro_t_std').attr('value');
 		var pro_info = $('.pro_click img').attr('alt');
-		var altArr= ["主圖", "結構圖", "細部圖", "情境圖", "尺寸圖"];
+
+		var oldProId = $('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span:nth-child(2)').attr('id');
+		// var altArr= ["主圖", "結構圖", "細部圖", "情境圖", "尺寸圖"];
 		
 		// $('.pro_t_infoTop').children().remove();
 		// $('.pro_t_infoTop').html('');
@@ -279,22 +283,33 @@ function $qsa(qsa){
 		//商品名稱更新
 		$('.pro_t_infoTop .pro_t_infoTR h3').text(pro_name);
 		
-		//商品li刪掉加進去
-		$('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup').children().remove();
-
-		for (var i = 1; i <=5; i++) {
-			$('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup').append('<li><img src="src/image/product/pro-'+pro_realno+i+'.jpg" alt="'+altArr[ (i-1) ]+'"></li>');
-		}
+		//換掉輪播圖片的src，原5張，因外掛自動產稱，故總共12張
+		var i = 1;
+		do{
+			console.log('i='+i);
+			var targetImg = $('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup li:nth-child('+ i +') img');
+			console.log('原'+targetImg.attr('src'));
+			// var newSrc = "src/image/product/pro-"+pro_realno+i+".jpg";
+			var newSrc = targetImg.attr('src').replace(oldProId,pro_realno);
+			console.log('新的'+ newSrc);
+			targetImg.attr('src',newSrc);
+			console.log('結果'+ targetImg.attr('src'));
+			i++;
+		}while( i <= 12 );
+		//重新呼叫點小圖換大圖，去建立事件聆聽功能
+		proClickSmall();
 
 		//價格更新
 		$('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span:first-child').text(pro_price);
+
+		//按鈕id更新
+		$('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy .addButton').attr('id', pro_realno);
 
 		//按鈕綁更新
 		$('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span:nth-child(2) input').attr('value', pro_info);
 
 		//規格更新
 		$('.pro_t_infoBottom p').first().text(pro_std);
-
 
 
 	}

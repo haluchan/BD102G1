@@ -85,7 +85,7 @@
 				<td><input type="text" name="pro_name" value="<?php echo $pro_name ?>" required></td>
 				<th>上傳圖檔</th>
 				<td>
-					<input type="file" name="image" disabled>
+					<input type="file" name="image[]" multiple="multiple" draggable="true">
 				</td>
 			</tr>
 			<tr>
