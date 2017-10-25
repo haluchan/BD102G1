@@ -19,8 +19,6 @@ nav .nav_item:nth-child(5) {
 
 /* table起始 */
 .myForm {
-  width: 94%;
-  margin: auto;
   position: relative; }
   .myForm .pro_line {
     position: absolute;
@@ -48,6 +46,7 @@ nav .nav_item:nth-child(5) {
     /*每個格子統一固定padding*/
     padding: 16px 4px;
     word-break: break-all;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis; }
   .myForm tr:not(.hide) > th {
     font-weight: normal;
@@ -104,6 +103,7 @@ nav .nav_item:nth-child(5) {
   margin: auto;
   margin-top: 20px; }
   .proSave .submit {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: auto;
     display: block;
