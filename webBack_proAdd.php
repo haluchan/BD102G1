@@ -97,27 +97,31 @@
 
 
 
-<!-- 依據選擇不同自動立即更換編號首字母 -->
-	<script>
 
-		$("#typeSelect").change(function(){
-			$("#typeEnName").empty(); //清空位置
-			var name = $("#typeSelect :selected").text(); //得到結果
-			var enType = productEnCode(name); //傳出中文傳回英文
-			// $("#typeEnName").text() = type;
-		  	$("#typeEnName").text(enType);
-		});
 
-		function productEnCode($txt){
-			if($txt == "種子" || $txt ==1){
-				return 's';
-			}else if($txt == "魚缸" || $txt ==2){
-				return 't';					
-			}else{
-				return 'z';
-			}
+
+<script>
+
+	// 依據選擇不同自動立即更換編號首字母
+	$("#typeSelect").change(function(){
+		$("#typeEnName").empty(); //清空位置
+		var name = $("#typeSelect :selected").text(); //得到結果
+		var enType = productEnCode(name); //傳出中文傳回英文
+		// $("#typeEnName").text() = type;
+	  	$("#typeEnName").text(enType);
+	});
+
+	//判斷是哪個英文字(之後可以單獨包出去再掛進來)
+	function productEnCode($txt){
+		if($txt == "種子" || $txt ==1){
+			return 's';
+		}else if($txt == "魚缸" || $txt ==2){
+			return 't';					
+		}else{
+			return 'z';
 		}
-	</script>
+	}
+</script>
 
 </body>
 </html>

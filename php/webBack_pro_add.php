@@ -1,5 +1,8 @@
 <?php
-$errorInfo = '結果:\n';
+session_start();
+ob_start();
+
+$errorInfo = '';
 
 
 try { 
@@ -26,6 +29,7 @@ try {
 		$product -> bindValue(":pro_status" , 0);
 		$product -> execute();
 
+		$errorInfo = productEnCode($pro_type).$pro_no.'\\n' ;
 		$errorInfo .= "商品資料建立成功\\n" ;
 
 
@@ -64,9 +68,12 @@ try {
 
 			//判斷種子或魚缸，圖片編號方式、副檔名不同: pro-s001.png, pro-t0011.jpg
 			if ($pro_type == 2) { //魚缸
-				$to   = "../src/image/product/"."pro-t".$pro_no.($i+1).".jpg";
+				$pro_pho = "pro-t".$pro_no.($i+1).".jpg";
+				$to   = "../src/image/product/" . $pro_pho;
+
 			}else{  //種子或其他
-				$to   = "../src/image/product/"."pro-s".$pro_no.".png";
+				$pro_pho = "pro-s".$pro_no.".png";
+				$to   = "../src/image/product/" . $pro_pho;
 			}
 			 
 			echo 'to: '.$to.'<br>';
@@ -74,25 +81,27 @@ try {
 			require_once("connectGrowing_hope.php");
 
 			$sql = "insert into prophoto
-					value( null, :pro_no)";
+					value( null, :pro_no, :pro_pho)";
 
 			$product = $pdo ->prepare( $sql );
 			// $product -> bindValue(":pro_no" ,$pro_no);
 			$product -> bindValue(":pro_no" , $pro_no);
+			$product -> bindValue(":pro_pho" , $pro_pho);
 			$product -> execute();
 
 			if (copy($from,$to))
-				$errorInfo .= "圖片上傳成功" ;
+				$errorInfo .= "第" .($i+1). "張圖片上傳成功\\n" ;
 			else
-				$errorInfo .= "圖片上傳失敗" ;
+				$errorInfo .= "第" .($i+1). "張圖片上傳失敗\\n" ;
 		}
 	}
 	
 
 
-	echo "<script>alert(' ". $errorInfo ." ')</script>";
+	// echo "<script>alert(' ". $errorInfo ." ')</script>";
+	$_SESSION['proAddErrorInfo'] = $errorInfo;
 
-	// header("Location:../webBack_proAdd.php");
+	header("Location:../webBack_pro.php");
 
 
 } catch (PDOException $e) {
@@ -100,6 +109,14 @@ try {
   echo "錯誤訊息 : ", $e->getMessage(), "<br>";	
 }
 
-
+function productEnCode($txt){
+	if($txt == "種子" || $txt ==1){
+		return 's';
+	}else if($txt == "魚缸" || $txt ==2){
+		return 't';					
+	}else{
+		return 'z';
+	}
+}
 
 ?>
