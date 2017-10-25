@@ -270,9 +270,9 @@ body{
 				color: green;
 				font-size: 37px;
 			}
-
-
-			
+		}
+		.c4{
+			display: none;
 		}
 	}
 	// ===========//latest================
@@ -326,11 +326,11 @@ body{
 						display: inline-block;
 						margin:auto; 
 						border-right: 9px solid #fff;
-						border: 2px solid #6cbecc ;
+						border: 2px solid #699c33 ;
 						font-family: Arial , '微軟正黑體';
 						font-size: 22px;
-	  					color: #ffffff;
-	  					background: #6cbecc;
+	  					color: #699c33;
+	  					background: #ffffff;
 	  					padding: 10px 20px 10px 20px;
 	  					margin: 0 0.5%;
 	  					cursor:pointer;
@@ -338,10 +338,10 @@ body{
 	  					text-align: center;
 					}
 					li:hover {
-	  					background: #ffffff;
+	  					background: #699c33;
 	  					border-right: 9px solid #fff;
-						border: 2px solid #6cbecc;
-	  					color: #6cbecc;
+						border: 2px solid #699c33;
+	  					color: #ffffff;
 	  					cursor:pointer;
 	  					transition: .4s;
 					}
@@ -418,13 +418,16 @@ body{
     								float: left;
     								padding-bottom: 6%;
     								margin-top: -5%;
-									p{
+    								
+									.txt_name{
 										margin-left:18%; 
 									}
-									h2{
+
+									.txt_title{
+										width: 100%;
 										margin-top: 5%;
 									}
-									h4{
+									.JQellipsis{
 										padding-top: 1%;
 									}
 									.bar{
@@ -441,12 +444,12 @@ body{
 											border-radius: 28px; 
 										}
 									}
-									h3{
+									h4{
 										width: 48%;
 										float: left;
 										padding-right: 28%;
 									}
-									h3:last-child{
+									h4:last-child{
 											width: 24%;
 											padding-right: 0;
 									
@@ -455,15 +458,22 @@ body{
 							
 							
 							}
+
 						}
-
 					}
-
+					a:nth-child(4) .item-box{
+						margin-top: 10%;
+					}
+					a:nth-child(5) .item-box{
+						margin-top: 10%;
+					}
+					a:nth-child(6) .item-box{
+						margin-top: 10%;
+					}
 				}
-				.mark_item:last-child{
-					margin: 10% auto;
-					margin-bottom: 0;
-				}
+			}
+			.c4{
+					display: none;
 			}
 		
 		.active01{
@@ -578,219 +588,308 @@ body{
 .col-xs-12{ float: left; width: 100%; box-sizing: border-box; padding: 0 10px; }
 
 
-.containerhope{
-	font-family: '微軟正黑體';
-	margin: 39% 0 0 0 ;
-	h2{
-		font-size: 34px;
-		letter-spacing: 2px;
-		font-weight: bold;
-		color: #161616;
-	}
-	h3{
-		font-size: 20px;
-		letter-spacing: 2px;
-		font-weight: bold;
-		color: #555555;
-	}
-
-	
-	.view{
-		height: 150px;
-		.view_container{			
-			.cloulds{
-				display: none;
-			}
-			.for_h2{
-				h2{
-				display: none;
-				}				
-			}
+	.containerhope{
+		font-family: '微軟正黑體';
+		margin: 34% 0 0 0 ;
+		h2{
+			font-size: 34px;
+			letter-spacing: 2px;
+			font-weight: bold;
+			color: #161616;
 		}
-			
-	}
-	
-
-	//========//section01
-	.hopefarmrwd-select{
-		display: block;
-		width: 100%;
-		top: 8%;
-		position: fixed;
-		background-color: #ffffff;
-		z-index: 98;
-		margin: auto;
-		ul{
-			padding: 11% 0 5% 0;
-			background-color: #ffffff;
-		    padding-bottom: 2px;
-		    text-align: center;
-			li{
-				width: 23.75%;
-		        display: inline-block;
-		        background-color: #699c33;
-				h2{
-					font-size: 15px;
-		        	text-align: center;
-					font-family: Arial , '微軟正黑體';
-		  			color: #ffffff;
-		  			background: #6cbecc;
-		  			padding: 10px 0 10px 0;
-		  			border: solid #6cbecc 2px;
-		  			text-decoration: none;
-		  			cursor:pointer;
-		  			letter-spacing: 1px;
-		  			transition: .4s;
+		h3{
+			font-size: 20px;
+			letter-spacing: 2px;
+			font-weight: bold;
+			color: #555555;
+		}
+			.view{
+				height: 150px;
+				.view_container{			
+					.cloulds{
+						display: none;
+					}
+					.for_h2{
+						h2{
+						display: none;
+						}				
+					}
+				}	
+			}
+			//========//section01
+			.hopefarmrwd-select{
+				display: block;
+				width: 100%;
+				top: 8%;
+				position: fixed;
+				background-color: #ffffff;
+				z-index: 98;
+				margin: auto;
+				ul{
+					padding: 6% 0 1% 0;
+					background-color: #ffffff;
+				    text-align: center;
+					li{
+						width: 22.75%;
+				        display: inline-block;
+				        background-color: #699c33;
+						h2{
+							font-size: 15px;
+				        	text-align: center;
+							font-family: Arial , '微軟正黑體';
+				  			color: #ffffff;
+				  			background: #6cbecc;
+				  			padding: 10px 0 10px 0;
+				  			border: solid #6cbecc 2px;
+				  			text-decoration: none;
+				  			cursor:pointer;
+				  			letter-spacing: 1px;
+				  			transition: .4s;
+						}
+					}
 				}
 			}
-		}
-	}
-	//========//hopefarmrwd-select
-	.latest{
-		display: none;
-		.latest_title{
-			h2{}
-			img{}
-		}
-		.latest_cloud{
-			img{}
-		}
-		.section02-g3{
-			.carousel_container{
-				.carouselson{
-					.carousel_shadow{
+			//========//hopefarmrwd-select
+			.latest{
+				
+				.latest_title{
+					display: none;
+					h2{}
+					img{}
+				}
+				.latest_cloud{
+					display: none;
+					img{}
+				}
+				.carousel{
+					display: none;
+					.carousel_container{
+						.carouselson{
+							.carousel_shadow{
+								a{
+									.c_left{
+										img{}
+									}
+									.c_right{
+										h2{}
+										p{}
+										h4{}
+										.bar{
+											.inside-bar{}
+										}
+										h3{}
+									}
+								}
+								.c_btn{
+									a{
+										h2{}
+									}
+								}
+							}
+						}
 						a{
-							.c_left{
+							.section02-g3-i3{
 								img{}
 							}
-							.c_right{
-								h2{}
-								p{}
-								h4{}
-								.bar{
-									.inside-bar{}
-								}
-								h3{}
-							}
-						}
-						.c_btn{
-							a{
-								h2{}
-							}
 						}
 					}
 				}
-				a{
-					.section02-g3-i3{
-						img{}
+			}
+			//========//latest
+			.purpose{
+				.purpose_img{
+					img{
+
 					}
 				}
-			}
-		}
-	}
-	//========//latest
-	.purpose{
-
-		.purpose_img{
-			img{
-
-			}
-		}
-		.purpose_txt{
-			width: 100%;
-			text-align: center;
-			h2{}
-			h3{}
-		}
-	}
-	// ========//purpose
-	.section04{
-		.section04-g4-left{
-			img{}
-		}
-		.section04-g4-right{
-			img{}
-		}
-
-	}
-	// ========//section04
-	.bookmark{
-		.mark_title{
-			display: none;
-			ul{
-				li{}
-			}
-		}
-		.mark_container{
-			.mark_item{
-				a{
-					.item-box{
-						margin-bottom: 5%;
-						.item-box-shadow{
-							box-shadow: 0 0 8px 0 #ccc;
-							.box-img{
-								img{}
-								.square{
-									img{}
-								}
-								.box-fontt{
-									p{
-										margin-left: 0;
-									}
-									h2{}
-									h4{}
-									.bar{
-										.inside-bar{}
-									}
-									h3{}
-								}
-							}
+				.purpose_txt{
+					width: 100%;
+					h2{}
+					h3{
+						text-overflow : ellipsis; 
+						&:nth-child(2):before{
+							content: '';
+							width: 10px;
+							height: 10px;
+							display: inline-block;
+							background-color: #699c33;
+							border-radius: 50px;
+							vertical-align: middle;
+							margin-top: -5px;
 						}
-					}
-				}
+						&:nth-child(2){
+							padding-bottom: 2px;
+						}
+						&:nth-child(3){
+							padding-bottom: 8px;
+						}
+						&:nth-child(4):before{
+							content: '';
+							width: 10px;
+							height: 10px;
+							display: inline-block;
+							background-color: #699c33;
+							border-radius: 50px;
+							vertical-align: middle;
+							margin-top: -5px;
+						}
+						&:nth-child(4){
+							padding-bottom: 2px;
+						}
+						&:nth-child(5){
+							padding-bottom: 8px;
+						}
+						&:nth-child(6):before{
+							content: '';
+							width: 10px;
+							height: 10px;
+							display: inline-block;
+							background-color: #699c33;
+							border-radius: 50px;
+							vertical-align: middle;
+							margin-top: -5px;
+						}
 
+					}
+					
+				}
 			}
-			.mark_deco{
-				img{
+			// ========//purpose
+			.section04{
+				.section04-g4-left{
+					img{}
+				}
+				.section04-g4-right{
+					img{}
+				}
+			}
+			// ========//section04
+			.bookmark{
+				.mark_title{
 					display: none;
+					ul{
+						li{}
+					}
+				}
+				.mark_container{
+					.mark_item{
+						a{
+							.item-box{
+								margin-bottom: 5%;
+								.item-box-shadow{
+									box-shadow: 0 0 8px 0 #ccc;
+									.box-img{
+										img{}
+										.square{
+											img{}
+										}
+										
+									}
+									.box-fontt{
+										.txt_name{
+											margin-left: 12%;
+											margin-top: -4%;
+											font-weight: bold;
+										}
+										.txt_title{
+											font-size: 26px;
+										}
+										.JQellipsis{
+											letter-spacing: 2px;
+											line-height: 160%;
+										}
+										.bar{
+											margin-top: 5px;
+											.inside-bar{}
+										}
+										h4{
+											font-size: 18px;
+											padding-right: 0;
+											width: 100%;
+											text-align: center;
+											padding-top: 5px;
+											&:last-child{
+												width: 100%;
+												padding-top: 2px;
+											}
+										}
+									}
+								}
+							}
+						}
+
+					}
+					.mark_deco{
+						img{
+							display: none;
+						}
+					}
+					.mark_more{
+						width: 50%;
+						img{
+							width: 20%;
+						}
+						a{
+							h3{}
+						}
+					}
+				}
+				// .c4{
+				// 	display: block;
+				// }
+			}
+			//========//bookmark
+			.risk{
+				margin-top: 20%;
+				.risk_title{
+					h2{}
 				}
 			}
-			.mark_more{
-				width: 50%;
-				img{
-					width: 20%;
-				}
-				a{
-					h3{}
+			//========//section06
+			.risk_container{
+				.risk_range{
+					.risk_txt{
+						width: 100%;
+						margin-top: 10px;
+						p{
+							letter-spacing: 2px;
+							line-height: 160%;
+							&:before{
+							content: '';
+							width: 10px;
+							height: 10px;
+							display: inline-block;
+							background-color: #699c33;
+							border-radius: 50px;
+							vertical-align: middle;
+							margin-top: -5px;
+							}
+							&:nth-child(2){
+								margin-top: 10px;
+							}
+							&:nth-child(3){
+								margin-top: 10px;
+							}
+							&:nth-child(4){
+								margin-top: 10px;
+							}
+							&:nth-child(5){
+								margin-top: 10px;
+							}
+						}
+					}
+					.risk_img{
+						img{
+							display: none;
+						}
+					}
 				}
 			}
-		}
-	}
-	//========//bookmark
-	.risk{
-		margin-top: 15%;
-		.risk_title{
-			h2{}
-		}
-	}
-	//========//section06
-	.risk_container{
-		.risk_range{
-			.risk_txt{
-				p{}
+			//========//risk_container
+			.stone_img{
+				img{}
 			}
-			.risk_img{
-				img{
-					display: none;
-				}
-			}
-		}
 	}
-	//========//risk_container
-	.stone_img{
-		img{}
-	}
-}
 }
 
 
