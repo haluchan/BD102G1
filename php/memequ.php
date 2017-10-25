@@ -15,9 +15,9 @@ try {
 	$member->bindValue( ":mem_no" , $_REQUEST["mem_no"]);
 	$member->execute();
 	// echo "異動成功~<br>";
-	header("location:../memberback.php");
+	}header("location:../memberback.php");
 	
-	} catch (PDOException $e) {
+	 catch (PDOException $e) {
   echo "錯誤行號 : ", $e->getLine(), "<br>";
   echo "錯誤訊息 : ", $e->getMessage(), "<br>";		
 }

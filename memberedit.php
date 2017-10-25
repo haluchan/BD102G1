@@ -28,9 +28,9 @@
 	<form action="php/memupdata.php" method="get" accept-charset="utf-8">
 		<div class="table">
 			<h2></h2>
-			<img src="src/image/member/child.png" alt="">
+			<img src="src/image/member/<?php echo $_SESSION['mem_pho'];?>" alt="">
 			<div class="imguplod btnbox">
-				<input type="file" name="upFile">
+				<input type="file" name="mem_pho">
 			</div>
 				<table>
 					<thead>
@@ -47,6 +47,10 @@
 						<tr>
 							<td>會員暱稱:</td>
 							<td><input type="text" name="mem_name" value="<?php echo $_SESSION['mem_name'] ;?>"></td>
+						</tr>
+						<tr>
+							<td>會員密碼:</td>
+							<td><input type="text" name="mem_psw" value="<?php echo $_SESSION['mem_psw'] ;?>"></td>
 						</tr>
 						<tr>
 							<td>e-mail:</td>

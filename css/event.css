@@ -371,9 +371,23 @@
 	}
 	.secondblockin{
 		margin: 0 auto;
-		width: 70%;
+		width: 80%;
 
 
+	}
+	@media screen and (max-width: 1024px) {
+	
+		.show{
+		margin:5% 8% ;
+		/* display: inline-block; */
+		position: relative;
+		float: left;
+		display: block;
+
+	}
+	
+		
+		
 	}
  	.secondblock ul li .img{
  		position: relative;
