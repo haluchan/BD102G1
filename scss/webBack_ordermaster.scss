@@ -5,7 +5,13 @@ $cellPadding: 6px 4px;
 .content_form{width:84%;}
 botton{border:none;}
 //hover效果
-
+a{
+	color: #000;
+	text-decoration: underline;
+}
+a:hover{
+	color:#fff;
+}
 
 
 /* table起始 */
@@ -25,10 +31,11 @@ botton{border:none;}
 
 	
 	tr>td:first-child{  /*每row第一個格子(編號)固定置中，灰色*/
-		color:#888;
+		background-color:#F29600;
+		font-weight: bold;
 		text-align: center;
-	}
 
+	}
 	
 	th{  /*th的樣式:上下有橘色線*/
 		// border-top: 2px solid #F29600;
@@ -76,7 +83,7 @@ botton{border:none;}
 			width: 5%;
 		}
 		tr th:nth-child(6){
-			width: 5%;
+			width: 8%;
 		}
 		tr th:nth-child(7){
 			width: 10%;

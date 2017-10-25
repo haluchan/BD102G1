@@ -17,27 +17,63 @@
 
 </head>
 <body>
-<?php require_once('header.php');  ?>
+<?php 
+	require_once('Header.php'); 
+	// $event_no = $_REQUEST['event_no'];
+	try{
+
+
+	require_once('php/connectGrowing_hope.php'); 
+	$sql = 'select * from event where event_no = 1' ;
+	$event = $pdo ->query($sql);
+	$eventRow = $event->fetchObject();
+
+
+?>
 	<section class="want_donate">
 
 		<div class="donate_title col-xs-12 col-sm-12">
-			<h2>台中「親農」嚴選在地好物 </h2>
-			<h3>台中青年農夫的堅持，唯有善耕才能結善果</h3>
-			<h4>在地 | 由 <span>親農運銷合作社</span>	提案</h4>
+			<h2><?php echo $eventRow -> event_title; ?></h2>
+			<h3><?php echo $eventRow -> event_title_2; ?></h3>
+			<h4>在地 | 由 <span><?php echo $eventRow -> event_dept; ?></span>	提案</h4>
 		</div>
 		<div class="donate_info col-xs-12 col-sm-12">
 			<ul>
 				<li class="dib your_itme"><i class="fa fa-check" aria-hidden="true"></i>你的資助選項</li>
-				<li class="db item_content"><p>B 2,000元夏祭限定蔬果禮盒<br>．友善稻田．當令鮮米（５斤入）-４包<br>．自然禾香．鮮磨玄米麩　　　　-２包<br>．以及一份我們細心栽培，盛夏限定的田野鮮果禮盒：白玉蜜香瓜．甜蜜嚴選伴手禮盒（中)</p>
+				<li class="db item_content">
+					<p><?php $dona_price = 'B';
+						switch ($dona_price) {
+							case 'A':
+								echo "A 1,000元小資自理餐<br>．友善稻田．當令鮮米（５斤入）-４包<br>．自然禾香．鮮磨玄米麩　　　　-1包";
+								break;
+							case 'B':
+								echo "B 2,000元夏祭限定蔬果禮盒<br>．友善稻田．當令鮮米（５斤入）-４包<br>．自然禾香．鮮磨玄米麩　　　　-２包<br>．以及一份我們細心栽培，盛夏限定的田野鮮果禮盒：白玉蜜香瓜．甜蜜嚴選伴手禮盒（中)";
+								break;
+							
+							default:
+								echo "C 3,000元夏祭限定蔬果禮盒(大)<br>．友善稻田．當令鮮米（５斤入）-４包<br>．自然禾香．鮮磨玄米麩　　　　-２包<br>．以及一份我們細心栽培，盛夏限定的田野鮮果禮盒：白玉蜜香瓜．甜蜜嚴選伴手禮盒（大)";
+								break;}?>
+					</p>
 				</li>
-				<li class="dib group_3">$1,000</li><li class="dib group_3">預計於2017年11月送出<i class="fa fa-question-circle" aria-hidden="true"></i></li><li class="dib group_3"><select name="Program">
-					　<option value="A">A. 1,000元小資自理餐</option>
-					　<option value="B">B. 2,000元夏祭限定蔬果禮盒</option>
-					　<option value="C">C. 3,000元夏祭限定蔬果禮盒(大)</option>
+				<li class="dib group_3"><?php 
+						switch ($dona_price) {
+							case 'A':
+								echo "$1,000";
+								break;
+							case 'B':
+								echo "$2,000";
+								break;
+							default:
+								echo "$3,000";
+								break;}?>					
+				</li><li class="dib group_3">預計於2018年03月送出<i class="fa fa-question-circle" aria-hidden="true"></i></li><li class="dib group_3"><select name="dona_price">
+					　<option value="A" <?php if ($dona_price =="A") echo 'selected'; ?>>A. 1,000元小資自理餐</option>
+					　<option value="B" <?php if ($dona_price =="B") echo 'selected'; ?>>B. 2,000元夏祭限定蔬果禮盒</option>
+					　<option value="C" <?php if ($dona_price =="C") echo 'selected'; ?>>C. 3,000元夏祭限定蔬果禮盒(大)</option>
 					</select>
 				</li>
 				<li class="db remark"><i class="fa fa-angle-right" aria-hidden="true"></i>備註 <span>可留空</span></li>
-				<li class="db"><textarea class="ta" rows="3" wrap="off" class="content" placeholder="填寫備註(參考回饋或計畫內容的說明，可留空!)"></textarea></li>
+				<li class="db"><textarea class="ta" rows="3" wrap="off" class="content" name ="dona_remark"placeholder="填寫備註(參考回饋或計畫內容的說明，可留空!)"></textarea></li>
 				<li class="clear db"></li>
 			</ul>
 
@@ -47,14 +83,24 @@
 						<p><i class="fa fa-angle-right" aria-hidden="true"></i>資助金額<span> 最低金額為資助選項價格。可向上加碼幫助計畫加速成功。</span></p>
 					</div>
 					<span class="symbol">$</span>
-					<input class="order_sum" min="2000" step="100" name="order_sum" type="number" value="2000">
+					<input class="order_sum" min="2000" step="100" name="order_sum" type="number" value="<?php 
+						switch ($dona_price) {
+							case 'A':
+								echo 1000;
+								break;
+							case 'B':
+								echo 2000;
+								break;
+							default:
+								echo 3000;
+								break;}?>" >
 					<div class="title">
 						<p><i class="fa fa-angle-right" aria-hidden="true"></i>付款方式</p>
 					</div>
-					<input type="radio" name="pay_way" class="pay_way_radio" id="pay_way_card" value="1">
+					<input type="radio" name="dona_payway" class="pay_way_radio" id="pay_way_card" value="1">
 					<label class="pay_way_label border_bottom" for="pay_way_card"><i class="fa fa-credit-card" aria-hidden="true"></i> 信用卡付款</label>
 
-					<input type="radio" name="pay_way" class="pay_way_radio" id="pay_way_atm" value="2">
+					<input type="radio" name="dona_payway" class="pay_way_radio" id="pay_way_atm" value="2">
 					<label class="pay_way_label border_top" for="pay_way_atm"><i class="fa fa-building-o" aria-hidden="true"></i> ATM機器轉帳或銀行臨櫃繳款</label>
 
 					<div class="title donate_detail">
@@ -63,15 +109,15 @@
 							<tbody>
 								<tr>
 									<td class="td_title">收件人姓名</td>
-									<td><input type="text" name="mem_name" class="td_input"></td>
+									<td><input type="text" name="dona_name" class="td_input" required="required"></td>
 								</tr>
 								<tr>
 									<td class="td_title">收件人電話</td>
-									<td><input type="text" name="mem_tel" class="td_input"></td>
+									<td><input type="text" name="dona_tel" class="td_input" required="required"></td>
 								</tr>
 								<tr>
 									<td class="td_title">收件地址</td>
-									<td><input type="text" name="mem_add" class="td_input"></td>
+									<td><input type="text" name="dona_add" class="td_input" required="required"></td>
 								</tr>
 							</tbody>
 						</table>
@@ -128,7 +174,15 @@
 
 
 
-<?php require_once('Footer.php');  ?>
+<?php 
+}catch (PDOException $e) {
+			  echo "錯誤行號 : ", $e->getLine(), "<br>";
+			  echo "錯誤訊息 : ", $e->getMessage(), "<br>";	
+		}
+
+
+require_once('Footer.php');  ?>
+
 
 <script type="text/javascript" src="js/want_donate.js"></script>
 

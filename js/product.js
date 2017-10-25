@@ -1,9 +1,23 @@
 var storage = sessionStorage;
 
+
+
 //特定螢幕尺寸觸動特定效果(無限制的效果在最尾端)
 function proSreenWidth(){
-	var w = document.body.clientWidth;
-	if( w >= 767){   //(only桌機&pad)
+	//偵測螢幕寬度
+	proScreenWidth = document.body.clientWidth;
+
+	//點到魚缸有效果
+	proClickHighLight();
+	//點魚缸換下方資料
+	proEveryTank();
+	//購物車數字增加
+	proCartNumber();
+	//第一次的魚缸撈資料
+	proTankInfoChange();
+	
+	
+	if( proScreenWidth >= 767){   //(only桌機&pad)
 		//魚缸的輪播
 		proTankWheel();
 		//點小圖換大圖
@@ -115,21 +129,23 @@ function $qsa(qsa){
 //點小圖換大圖
 	//1.每個li建立事件聆聽功能
 	function proClickSmall(){
-		var lists = document.querySelectorAll('#myElement>li>img');
+		var lists = document.querySelectorAll('#pro_t_shelf>li');
 		for (var i=0; i<lists.length; i++){
-			lists[i].addEventListener('click',proShowLarge,false);
+			lists[i].addEventListener('click',proShowLarge,true);
 		}
 	}
 	//2.
 	function proShowLarge(e){
 		//為什麼點什麼都會換圖??泡泡現象?
 		// e ? e.stopPropagation() : window.event.cancelBubble = true;
-		var small = e.target;
+		var small = $(this);
 		var large = $id('tank_Large');
 		// alert(large.src);
 		// alert(small.className);
 		large.src = small.src;
-		large.alt = small.alt;
+		console.log('large.src'+large.src);
+		console.log('small.src'+small.src);
+		// large.alt = small.alt;
 	}
 
 //==========================================================================================
@@ -156,6 +172,9 @@ function $qsa(qsa){
 		//把資料放入燈箱資料區
 		moveTo.innerHTML = code;
 
+		//可以做到一樣的效果，差了一個叉叉
+		// $(this).clone().appendTo($('#pro_s_mobileInfo'));
+
 		//把燈箱打開
 		moveTo.style.display = 'block';
 
@@ -181,8 +200,9 @@ function $qsa(qsa){
 
 //==========================================================================================
 
-//點到魚缸有click效果
+//點到魚缸有click效果pro_t_each
 	function proClickHighLight(){
+		$qs('.pro_t_each div').className = 'pro_click';
 		//每個li建立事件聆聽功能
 		var list = $qsa('.pro_t_each');
 		for (var i = 0; i<list.length; i++){
@@ -240,14 +260,93 @@ function $qsa(qsa){
   // });
 
 
+//==============================================================================
+//點魚缸換於資料pro_t_each
+	//1.每個li建立事件聆聽功能
+	function proEveryTank(){
+		var lists = document.querySelectorAll('.pro_t_each');
+		for (var i=0; i<lists.length; i++){
+			lists[i].addEventListener('click',proTankInfoChange,false);
+		// e ? e.stopPropagation() : window.event.cancelBubble = true;
+		}
+	}
+	//2.
+	function proTankInfoChange(e){
+		var pro_realno = $('.pro_click').parent().attr('id');
+		var pro_name = $('.pro_click').parent().find('.pro_t_name').text();
+		var pro_price = $('.pro_click').parent().find('.pro_t_price').text();
+		var pro_std = $('.pro_click').parent().find('.pro_t_std').text().replace(/\n/g,"<br>");
+		var pro_info = $('.pro_click img').attr('alt');
+
+		var oldProId = $('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span:nth-child(2)').attr('id');
+		console.log('oldProId'+oldProId);
+
+		// var altArr= ["主圖", "結構圖", "細部圖", "情境圖", "尺寸圖"];
+		
+		// $('.pro_t_infoTop').children().remove();
+		// $('.pro_t_infoTop').html('');
+		// $('.pro_t_infoTop .pro_t_infoTL div img').attr('src','src/image/product/pro-'+pro_realno+'1.jpg');
+		// 大圖更新
+		$('.pro_t_infoTop .pro_t_infoTL div img').attr('src','src/image/product/pro-' + pro_realno + '1.jpg');
+		
+		//商品名稱更新
+		$('.pro_t_infoTop .pro_t_infoTR h3').text(pro_name);
+		
+		//換掉輪播圖片的src，原5張，因外掛自動產稱，故總共12張，結論:桌機5張  手機12張
+		
+		if( proScreenWidth >= 767){
+			var proBecauseSlick = 0;
+		}else{
+			var proBecauseSlick = 5;
+		}
+
+		var i = 1;
+		while( i <= $('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup li').size()-proBecauseSlick ){
+			console.log('i='+i);
+			// var targetImg = $('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup li:nth-child('+ i +') img');
+			//捉雞OK
+			// var targetImg = $('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup li:nth-child('+ i +') img');
+			var targetImg = $('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup ').find('li:nth-child('+ i +') img');
+
+
+			console.log('原'+targetImg.attr('src'));
+			// var newSrc = "src/image/product/pro-"+pro_realno+i+".jpg";
+			var newSrc = targetImg.attr('src').replace(oldProId,pro_realno);
+			console.log('新的'+ newSrc);
+			targetImg.attr('src',newSrc);
+			console.log('結果'+ targetImg.attr('src'));
+			i++;
+		};
+		//重新呼叫點小圖換大圖，去建立事件聆聽功能
+		proClickSmall();
+
+		//價格更新
+		$('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span:first-child').text(pro_price);
+
+		//按鈕id更新
+		$('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy .addButton').attr('id', pro_realno);
+
+		//按鈕綁更新
+		$('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span:nth-child(2) input').attr('value', pro_info);
+
+		//規格更新
+		$('.pro_t_infoBottom p').first().html(pro_std);
+
+
+	}
+
+
+//========================================================================
+//前兩個菜菜的牌子才有new
+	// function seedNewBrandShow(){
+		// $('#pro_s_cabinet .pro_s_each:first-child .pro_s_vegetable .pro_s_brand .pro_s_new').addClass('hidden');
+		// $('pro_s_new')[1].removeClass('hidden');
+	// }
+
+//==========================================================
+//點到商品，卷軸自動下移
 
 
 
-
-
-//購物車數字增加
-window.addEventListener('load', proCartNumber, false);
 //抓螢幕寬度去觸發特定裝置的事件
 window.addEventListener('load', proSreenWidth, false);
-//點到魚缸有效果
-window.addEventListener('load', proClickHighLight, false);

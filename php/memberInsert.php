@@ -8,7 +8,6 @@
 	<?php 
 	try {
 		require_once("connectBeck.php");
-		$sql="insert into member()value()";
 		
 
 		
