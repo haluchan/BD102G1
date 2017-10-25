@@ -14,95 +14,115 @@
 
 <body>
 	<?php require_once('Header.php'); ?>
+		<?php 
+		ob_start();
+		session_start();
+		$eve=$_SESSION["mem_no"];
+
+		try {
+			require_once("php/connectBeck.php");
+	
+	 		$sql = "select dona_price,date(dona_date) as dona_date,event_title
+				from growing_hope.event, donate 
+				where event.event_no = donate.event_no 
+				and mem_no = '$eve';"; 
+	    
+	 	  	$event= $pdo->query($sql);	
+		
+			// while($resultset = $event ->fetchObject()) {
+	 	  	$resultset = $event ->fetchObject();
+			// $mem_no = $resultset->mem_no ;
+			$sql = "select pro_name,date(order_date) as order_date,orderItem_qty
+				from orderItem,ordermaster
+				where orderitem.order_no=ordermaster.order_no
+				 and mem_no= '$eve' and pro_no not in(13,14);";
+	    
+	 	  	$event= $pdo->query($sql);	
+		
+			// while($resultset = $event ->fetchObject()) {
+	 	  	$resultset2 = $event ->fetchObject();
+			// $mem_no = $resultset->mem_no ;
+		?>
 	<div class="titlebg">
 		<img src="src/image/member/mv01.png" alt="">
 	</div>
 	
-<div class="bigtitle">
-	<h2>會員專區</h2>
-</div>
-<div class="navbar">
-	<div class="navbarli" id="detail">
-		<p>我的資料</p>
+
+
+	<!-- 選單 -->
+	<div class="bigtitle">
+		<h2>會員專區</h2>
 	</div>
-	<div class="navbarli" id="history">
-		<p>歷史訂單</p>
+	<div class="navbar">
+		<div class="navbarli" id="detail">
+			<p>我的資料</p>
+		</div>
+		<div class="navbarli" id="history">
+			<p>歷史訂單</p>
+		</div>
+		<div class="navbarli" id="payhisto">
+			<p>贊助紀錄</p>
+		</div>
 	</div>
-	<div class="navbarli" id="payhisto">
-		<p>贊助紀錄</p>
-	</div>
-</div>
 
 		
-<div class="mem">
-	<!-- <div class="parallax">	 -->
+	<div class="mem">
+	
 		<div id="scenes" data-hover-only="false" >
-		            <div class="parallax_area" data-depth="0.1">
-		            	<img src="src/image/member/concept_index.png" alt="">
-		            </div>
-		           <!--  <div class="parallax_area_01" data-depth="5">
-		            	<img src="src/image/event/hatsuka_daikon.png" alt="">
-		            </div> -->
-		        <!--     <div class="parallax_area_02" data-depth="10">
-		            	<img src="src/image/event/ninjin_carrot2.png" alt="">
-		            </div>
-		            <div class="parallax_area_03" data-depth="15">
-		            	<img src="src/image/member/suika.png" alt="">
-		            </div>
-		</div> -->
-	</div>
+            <div class="parallax_area" data-depth="0.1">
+            	<img src="src/image/member/concept_index.png" alt="">
+            </div>
+		  
+		</div>
 
-
+		<!-- 我的資料 -->
 		<div class="table" id="memdetail">
 			<h2>我的資料</h2>
 				<table>					
 					<thead>
 						<tr>
-							<img src="src/image/member/child.png" alt="">
-							<!-- <div class="btnbox" id="changeimg">
-								<a href="">修改資料</a>
-							</div>		 -->				
+							<img src="src/image/member/<?php echo $_SESSION['mem_pho'];?>" alt="">
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>會員帳號:</td>
-							<td><p>becky</p></td>
+							<td><p><?php echo $_SESSION["mem_id"] ;?></p></td>
 							
 						</tr>
 						<tr>
 							<td>會員暱稱:</td>
-							<td><p>becky</p></td>
+							<td><p><?php echo $_SESSION["mem_name"] ;?></p></td>
 							
 						</tr>
 						<tr>
 							<td>我的種子:</td>
-							<td><p>9</p></td>
+							<td><p><?php echo $_SESSION["mem_seed"] ;?></p></td>
 						
 						</tr>
 						<tr>
 							<td>我的紅利:</td>
-							<td><p>10</p></td>
+							<td><p><?php echo $_SESSION["mem_bonus"] ;?></p></td>
 						
 						</tr>
 						<tr>
 							<td>e-mail:</td>
-							<td><p>nobody@gmail.com</p></td>
+							<td><p><?php echo $_SESSION["mem_mail"] ;?></p></td>
 						
 						</tr>
 						<tr>
 							<td>會員生日:</td>
-							<td><p>01/01/1998</p></td>
+							<td><p><?php echo $_SESSION["mem_birth"] ;?></p></td>
 						
 						</tr>
 						<tr>
 							<td>居住地:</td>
-							<td><p>台北</p></td>
+							<td><p><?php echo $_SESSION["mem_add"] ;?></td>
 						
 						</tr>
 						<tr>
 							<td>性別:</td>
-							<td><p>女</p></td>
+							<td><p><?php echo $_SESSION["mem_gender"] ;?></p></td>
 						
 						</tr>
 					</tbody>
@@ -112,8 +132,8 @@
 			</div>	
 		</div>	
 			
-				
-	<div class="table" id="oderhis">
+		<!-- 歷史訂單		 -->
+		<div class="table" id="oderhis">
 			<h2>歷史訂單</h2>
 				<table>
 					
@@ -126,39 +146,17 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>魚缸</td>
-							<td>01/09/2017</td>
-							<td>1</td>
+							<td><?php echo $resultset2->pro_name ;?></td>
+							<td><?php echo $resultset2->order_date ;?></td>
+							<td><?php echo $resultset2->orderItem_qty ;?></td>
 						</tr>
-						<tr>
-							<td>XL魚缸</td>
-							<td>01/01/2017</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>種子</td>
-							<td>01/06/2017</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>種子</td>
-							<td>01/01/2017</td>
-							<td>4</td>
-						</tr>
-						<tr>
-							<td>種子</td>
-							<td>01/12/2017</td>
-							<td>6</td>
-						</tr>
-						<tr>
-							<td>XXL魚缸</td>
-							<td>01/07/2017</td>
-							<td>2</td>
-						</tr>
+					
 					</tbody>
 				</table>
 				
-		</div>	
+		</div>
+
+		<!-- 贊助紀錄	 -->
 		<div class="table" id="date">
 			<h2>贊助紀錄</h2>
 				<table>
@@ -171,33 +169,27 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>1200</td>
-							<td>01/04/2017</td>
-							<td>水蜜桃園</td>
+							<td><?php echo $resultset->dona_price ;?></td>
+							<td><?php echo $resultset->dona_date ;?></td>
+							<td><?php echo $resultset->event_title ;?></td>
 						</tr>
-						<tr>
-							<td>1300</td>
-							<td>10/12/2017</td>
-							<td>無米樂</td>
-						</tr>
-						<tr>
-							<td>1300</td>
-							<td>01/01/2017</td>
-							<td>阿昌櫻桃</td>
-						</tr>
-						<tr>
-							<td>1300</td>
-							<td>01/05/2017</td>
-							<td>阿伯菜園</td>
-						</tr>
+					
 					</tbody>
 				</table>
 		</div>	
 
+	</div>
+<?php  
 
+}
+catch (PDOException $e) {
+  echo "錯誤行號 : ", $e->getLine(), "<br>";
+  echo "錯誤訊息 : ", $e->getMessage(), "<br>";		
+}
+?>
 <?php require_once('Footer.php');?>
 
-</div>
+
 <script type="text/javascript">
     	document.getElementById("history").onclick=history;
     	function history(){

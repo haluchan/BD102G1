@@ -65,22 +65,24 @@
 		</tr>
 		<?php try {
 			require_once("php/connectBeck.php");
-    $sql = "select * from ordermaster";
+    	$sql = "select * from ordermaster";
     
-    $ordermaster = $pdo->query($sql);	
+    	$ordermaster = $pdo->query($sql);	
 	
-	while(  $resultset = $ordermaster ->fetchObject() ){
-?>
+		while(  $resultset = $ordermaster ->fetchObject() ){
+		?>
 		<tr class="tdRow">
-			<td><?php echo $resultset->order_no ;?></td>
+			<td><a href="orderItem.php?order_no=<?php echo $resultset->order_no; ?>"><?php echo $resultset->order_no ;?></a></td>
 			<td><?php echo $resultset->mem_no ;?></td>
 			<td><?php echo $resultset->order_bonus ;?></td>
 			<td><?php echo $resultset->order_cut ;?></td>
 			<td><?php echo $resultset->order_total ;?></td>
-			<td><?php echo $resultset->order_status ;?></td>
+			<td><?php if( $resultset->order_status == 1){echo "已處理";}else{
+				echo "未處理";} ;?></td>
 			<td><?php echo $resultset->order_date ;?></td>
 			<td><?php echo $resultset->order_remark ;?></td>
-			<td><?php echo $resultset->order_send ;?></td>
+			<td><?php if( $resultset->order_send == 1){echo "宅配";}else{
+				echo "超商取貨";} ;?></td>
 			<td><?php echo $resultset->order_add ;?></td>
 			<td><?php echo $resultset->order_tel ;?></td>
 			<td><?php echo $resultset->order_name ;?></td>
