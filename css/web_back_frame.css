@@ -8,14 +8,6 @@ body{
 	background-color: rgba(255,245,230,0.65);
 }
 
-a{
-	cursor: pointer;
-	text-decoration: none;
-}
-button{
-	cursor: pointer;
-}
-
 
 
 /*大區塊排版
@@ -171,7 +163,14 @@ nav .select span{
 		text-align: left;
 		z-index: 99;
 	}
-
+	.manage a{
+		cursor: pointer;
+		text-decoration: none;
+	}
+		
+	.manage button{
+		cursor: pointer;
+	}	
 	/* LOGO */
 	.manage >ol >li:first-child{
 		margin: 10px 0px 10px 20px;		
@@ -281,7 +280,7 @@ nav .select span{
 /* 各自的表格 */
 	.myForm{
 		box-sizing: border-box;
-		padding: 2% 4%;
+		padding: 2% 2.5%;
 		margin-top: 86px;
 	}
 
@@ -294,7 +293,34 @@ nav .select span{
 		word-break:break-all;
 		text-overflow : ellipsis;
 	}
+	.myForm input,.myForm textarea{
+		padding: 6px 10px;
+		background-color:  LemonChiffon;
+		border: none;
+	}
+	.myForm input:focus,.myForm textarea:focus{
+		outline-color: #F29600;
+	}
 
+	/*按鈕*/
+	.btn{
+		display: inline-block;
+		text-align: center;
+		background-color: LemonChiffon ;
+		padding:4px 6px;
+		border:none;
+		width: 60%;
+		margin: auto;
+		box-shadow: 2px 2px 1px rgba(0,0,0,.2);
+		border-radius: $btnRadius;
+		outline: none;
+		cursor: pointer;
+		color:#000;
+	}
+	.btn:active{
+		transform: translate(2px ,2px);
+		box-shadow: none;
+	}
 
 
 
