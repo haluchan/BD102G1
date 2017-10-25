@@ -255,7 +255,7 @@
 		background-color: #2aab95;
 		border-radius: 4px;
 		top: -14px;
-		left: 0;
+		left: 30px;
 
 	}
 	/* .balloon:after{
@@ -309,10 +309,12 @@
 	
 	/* ================== */
 	.show{
-		margin: 4%;
-		display: inline-block;
+		margin:5% 6% ;
+		/* display: inline-block; */
 		position: relative;
-		
+		float: left;
+		display: block;
+
 	}
 	.imgtext{
 		width: 100px;
@@ -358,17 +360,19 @@
 	}
 	.secondblock{
 		position: relative;
+		width: 100%;
 		margin: 0 auto;
 		margin-top: 8% ;
 		margin-bottom: 4% ;
 		background-image: url('../src/image/event/bg_tree_white.png');
 		background-size: contain;
 		animation:slide-in-fwd-center 4s cubic-bezier(.25,.46,.45,.94);
-
+		
 	}
 	.secondblockin{
 		margin: 0 auto;
-		width: 80%;
+		width: 70%;
+
 
 	}
  	.secondblock ul li .img{
@@ -485,6 +489,7 @@
 		position: absolute;
 		top: -10px;
 		left: -20px;
+		width: 20%;
 	}
 	
 	.eventreco:nth-child(3n-1)::after{
@@ -493,6 +498,7 @@
 		position: absolute;
 		bottom: 30px;
 		left: 0;
+		width: 20%;
 	}
 	
 	/* .eventreco:nth-child(2n+3)::after{
@@ -509,6 +515,7 @@
 		position: absolute;
 		top: -20px;
 		left: 0px;
+		width: 20%;
 	} 
 	/* .eventreco:nth-child(5n)::after{
 		content:url('../src/image/event/tree_simple4.png');

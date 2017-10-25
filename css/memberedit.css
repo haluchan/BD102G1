@@ -33,7 +33,7 @@
 		margin: 6% 0;
 		text-align: center;
 	}
-	.btnbox a{
+	.btnbox .but {
 		font-family: Arial;
 		color: #ffffff;
 		font-size: 18px;
@@ -45,7 +45,7 @@
 	  	transition: 1s;
 	}
 
-	.btnbox a:hover {
+	.btnbox .but:hover {
 		background: #ffffff;
 		text-decoration: none;
 		color: #699c33;
