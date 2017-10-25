@@ -36,7 +36,7 @@ $_SESSION['signInInfo']='';
 
 
 				<div class="form">
-					<form action="php/webBack_admin_signIn.php">
+					<form action="php/webBack_admin_signIn.php" method="post">
 						<div class="input">
 							<label for="adm_id">帳號</label>
 							<input type="text" id="adm_id" name="admin_id">

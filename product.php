@@ -81,7 +81,7 @@
                         <div class="pro_s_info">
                             <h3><?php echo $pro_name?></h3>
                             <div class="pro_s_line"></div>
-                            <p class="pro_s_txt"><?php echo $pro_std?></p>
+                            <p class="pro_s_txt"><?php echo nl2br($pro_std)?></p>
                             <div class="pro_s_buy">
                                 <span>$<?php echo $pro_price?>/包</span>
                                 <span class="btn_green addButton" id="<?php echo $pro_realno?>">加入購物
@@ -178,10 +178,11 @@
                                 $tank_name   = $allTank ->pro_name;
                                 $tank_price  = $allTank ->pro_price;
                                 $tank_std    = $allTank ->pro_std;
+                                 // $std    = nl2br( $std);
                                 $tank_status = $allTank ->pro_status;
                                 $tank_pho    = $allTank ->pro_pho;
                                 $tank_info   = $allTank ->pro_info;
-
+                                
 
                         ?>
 
@@ -194,7 +195,7 @@
                                 <div class="pro_t_name"><?php echo $tank_name?></div>
                                 <div class="pro_t_price">$<?php echo $tank_price?>/個</div>
                             </div>
-                            <input type="hidden" class="pro_t_std" value="<?php echo $tank_std ?>">
+                            <textarea style="display:none;"class="pro_t_std"><?php echo $tank_std ?></textarea>
                         </li>
 
                         <?php
@@ -202,10 +203,6 @@
                         ?>
 
                         
-
-
-
-                        <div class="ccc"></div>
                     </ul>
                 </div>
 
@@ -262,7 +259,8 @@
                 <div class="pro_t_infoBottom">
                     <h4 class="pro_t_caption">產品規格</h4>
                     <p>
-                        包裝內容：香草與魚2.0智能版x1組(包含魚缸主體、燈架)、發泡煉石x1包、植物固定海綿、USB充電線x1(不含插頭)<br>
+                        <!-- <?php //echo $tank_std ;?> -->
+                        <!-- 包裝內容：香草與魚2.0智能版x1組(包含魚缸主體、燈架)、發泡煉石x1包、植物固定海綿、USB充電線x1(不含插頭)<br>
                         材　　質：鋁合金、塑料 <br>
                         商品尺寸：23.3 x 17.7 x 35.8 cm <br>
                         容　　量：1300 ml <br>
@@ -271,7 +269,7 @@
                         植物燈　：12 Light bulbs, 2w <br>
                         魚缸燈　：6 Light bulbs, 1w <br>
                         感溫棒　：IP67金屬導熱封裝ds18b20 溫度感測晶片 <br>
-                        產　　地：台灣製造 <br>
+                        產　　地：台灣製造 <br> -->
                     </p>
                 </div>
 
