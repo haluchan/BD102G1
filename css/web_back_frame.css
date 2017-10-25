@@ -1,53 +1,118 @@
 *{
 	margin: 0;
 	padding: 0;
+}
+body{
 	font-family: '蘋方黑體','微軟正黑體';
-	letter-spacing: 1px;
-}
-.container{
-	width: 100%;
-	height: 100vh;
-	margin: auto;
-	background-image: url('../src/image/web_back_frame/background.png');
-	background-size: 100% 100% ;
-}
-.clearfix{
-	clear: both;
-}
-nav select{
-	outline-style: none;
+	letter-spacing: 1px;	
+	background-color: rgba(255,245,230,0.65);
 }
 
-nav{
-	width: 100%;
-	margin-right: 20px;
-	/* border-bottom: 1px solid #ABCD87; */
-	/* position: fixed; */
-	z-index: 1;
-	background-color: #FFF8E6;
-	text-align: center;
-	margin: 20px 0;
+a{
+	cursor: pointer;
+	text-decoration: none;
 }
-.nav_item{
-	float: left;
-	width: 258px;
+button{
+	cursor: pointer;
+}
+
+
+
+/*大區塊排版
+左側 .manage        綠色13% fixed(不佔位)
+
+右側 .content_form  全區100%
+  上方<nav>    寬87% position: sticky(佔位)
+  下方.myForm  寬87% float:right
+  	PS.myForm  為個人的頁面，統一設定在最下方*/
+  	
+
+.manage{
+	width:13%
+}
+.content_form{
+	width:100%; 
+	/*min-height:100vh;*/
+}
+nav{
+	width: 87%;
+}
+.myForm{
+	float:right;
+	width: 87%;
+}
+
+.clearfix{clear: both;}
+
+
+
+
+
+
+
+
+
+
+
+
+nav{
+	/*position: sticky;*/
+	position: fixed;
+	float: right;
+	right: 0px;
+	top: 0px;
+	background-color: #FFF8E6;
+	padding: 28px 40px 16px 60px;
 	box-sizing: border-box;
-	padding: 41px 10px 20px 20px;
+	box-shadow: 0px 0px 6px rgba(0,0,0,.3);
+	z-index: 98;
 }
 /* 如果沒有這行，把這裡打開 */
 /* .nav_item:nth-child(3){
 	opacity: 0;
 } */
-.nav_item:nth-child(3),
-.nav_item:nth-child(5){
-	padding-top: 42px;
+.nav_item{
+	box-sizing: border-box;
+	height: 60px;
 }
-.nav_item:nth-child(4){
-	padding-top: 36px;
-	/* margin-left: 80px; */
+.nav_item:first-child{
+	float: left;
 }
+.nav_item:not(:first-child){
+	float: right;
+	margin-left: 20px;
+}
+
+/* 標題 */
+.nav_item h2{
+	font-weight: 400;
+	position: relative;
+	font-size: 44px;
+	box-sizing: border-box;
+}
+ .nav_item h2:before{
+	content: "";
+	position: absolute; 
+	display: block;
+	background-color: #946134;
+	width: 3px;
+	height: 35px;
+	left: -20px;
+	top: 15px;
+	border-radius: 10px;
+} 
+
+/* 搜尋區塊 */
 .nav_item .search{
+	margin-top: 10px;
 	background-color: white;
+	border:1px solid #999;
+}
+.nav_item input{
+	background-color: white;
+	padding: 15px;
+	width: 120px;
+	border: none;
 }
 .nav_item .search button{
 	background: transparent;
@@ -64,157 +129,174 @@ nav{
 	left: 1px;
 	background-color: gray;
 }
-.nav_item select{
+
+
+/* 下拉式選單 */
+nav .select {
+	padding-top: 10px;
+}
+nav .select select{
 	background-color: white;
 	vertical-align: text-bottom;
-	width: 80px;
-	height: 30px;
+	min-width: 100px;
+	height: 48px;
+	padding: 10px;
+	vertical-align: middle;
 }
-.nav_item input{
-	background-color: white;
-	padding: 15px;
-	width: 120px;
-	border: none;
-}
-.nav_item h2{
-	font-weight: 400;
-	position: relative;
-	font-size: 44px;
-}
-/* .nav_item h2:before{
-	content: "";
-	position: absolute; 
-	display: block;
-	background-color: #946134;
-	width: 3px;
-	height: 35px;
-	left: -20px;
-	top: 15px;
-	border-radius: 10px;
-} */
-.nav_item span{
-	font-size: 26px;
-}
-.nav_item:first-child{
-	padding: 25px 0 10px 0;
-	box-sizing: border-box;
-}
-.logo img{	
-	width: 120px;
-	height: 88px;
-	display: block;
-	margin: auto;     
-}
-.article{
-	width: 1440px;
-	float: left;
-}
-.manage{
-	width: 228px;
-	height: 100vh;
-	float: left;
-	font-size: 16px;
-	position: relative;
-	background-color: #ABCD87;
-	text-align: center;
-}
-.manage li:nth-child(1){
-	box-sizing: border-box;
-	width: 190px;
-	/* padding: 10px 20px; */
-	/* margin:20px 20px 0 20px; */
-}
-.manage li{
+nav .select span{
+	font-size: 20px;
+	/*display: inline-block;*/
+	height: 60px;
 	margin: auto;
-	padding:20px 0 0 0;
-	list-style: none;
-	text-align: center;
+	vertical-align: middle;
 }
-.manage  ol button{
-	color: black;
-	border: none;
-	background-color: transparent;
-}
-.manage  >ol{
-	margin-top: 10px;
-}
-.manage  > ol  ol{
-	margin-top: 10px;
-}
-.manage li img{
-	display: inline-block;
-	position: relative;
-	right: 5px;
-}
-/* .manage a{
-	font-size: 18px;
-} */
-.logout{
-	display: block;
-	width: 110px;
-	height: 40px;
-	margin: auto;
-	border-radius: 10px;
-	color: #946134;
-	position: absolute;
-	left:0px;
-	bottom: 50px;
-	right: 0px;
-	background: #d7fffe;	
-	padding: 4px;
-	outline-style: none;
-}
-.content{
-	width: 1000px;
-	float: left;
-}
-.item{
-	/* margin: 10px 20px 0 20px; */
-	display: none;
-}
-.itemClick,.slideButton{
-	display: inline-block;
-	width: 120px;
-	height: 20px;
-	text-align: center;
-	color: black;
-	text-decoration: none;
-	font-size: 16px;
-	padding: 4px 0;
 
 
-}
-.itemClick:hover,.slideButton:hover{
-	background-color:#d6d6d8;
-}
-.item li{
-	padding-top: 0;
-}
-.save{
-	display: block;
-	width: 110px;
-	height: 25px;
-	margin: auto;
-	border-radius: 10px;
-	color: white;
-	float: right;
-	background: #F29600;
-	position: relative;
-	top: 640px;
-	right: 100px;
-}
-.content_form{
-	float: left;
-	/* margin-top: 240px; */
-}
-a{
-	cursor: pointer;
-	text-decoration: none;
 
 
-}
-button{
-	cursor: pointer;
-}
+
+
+
+
+
+
+
+
+
+/* 左邊選單 */
+	.manage{
+		height: 100vh;
+		position: fixed;
+		background-color: #ABCD87;
+		text-align: left;
+		z-index: 99;
+	}
+
+	/* LOGO */
+	.manage >ol >li:first-child{
+		margin: 10px 0px 10px 20px;		
+	}
+
+	/* 每個母選單*/
+	.manage >ol >li{
+		margin-top: 10px;
+		list-style: none;
+	}
+	/*母選單標題*/
+	.motherTitle{
+		display: block;
+		padding: 10px 0 12px 30px;
+		cursor: pointer;
+		width: 	86%;
+		color: #000;
+	}
+	/* 子選單標題 */
+	.manage >ol >li >ol >li{
+		padding: 4px 0 6px 30px;
+		width: 60%;
+		cursor: pointer;
+	}
+	.motherTitle:hover,.manage >ol >li >ol >li:hover{
+		background-color: rgba(236,254,218,.6);
+		box-shadow: 0px 0px 6px rgba(0,0,0,.1);
+	}
+
+
+	/* 包 子選單的ol */
+	.manage  > ol .item{
+		margin-top: 0px;
+	}
+	.manage  > ol .item li+li{
+		margin: 2px 0;
+	}
+	/*加加減減的圖*/
+	.manage li:not(:first-child) img{
+		/*border: 1px solid blue;*/
+		display: inline-block;
+		position: relative;
+		right: 5px;
+	}
+
+
+
+
+	/* 子選單隱藏，點擊展開 */
+	.item{
+		display: none;
+		margin-left: 22px;
+		list-style: none;
+	}
+	/* 各個選單的標題 */
+	.itemClick,.slideButton{
+		display: inline-block;
+		/*width: 86%;*/
+		height: 20px;
+		color: black;
+		text-decoration: none;
+	}
+
+	/* 登出按鈕 */
+	.logout{
+		/*display: block;*/
+		width: 110px;
+		height: 40px;
+		margin: auto;
+		border-radius: 10px;
+		color: #946134;
+		position: absolute;
+		left:0px;
+		bottom: 50px;
+		right: 0px;
+		background: #d7fffe;	
+		padding: 4px;
+		outline: none;
+	}
+	
+	/* 登入資訊 */
+	.manage .signInInfo{
+
+		position: absolute;
+		left:0px;
+		bottom: 110px;
+		right: 0px;
+		padding: 10px 20px;
+		
+		opacity: .5;
+		width: 80%;
+		margin: auto;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 各自的表格 */
+	.myForm{
+		box-sizing: border-box;
+		padding: 2% 4%;
+		margin-top: 86px;
+	}
+
+	/*每個格子統一固定padding*/
+	.myForm th, .myForm td{      
+		padding:6px 10px;
+		text-align: left;
+
+		/* 自動斷行*/
+		word-break:break-all;
+		text-overflow : ellipsis;
+	}
+
+
+
+
 
 
