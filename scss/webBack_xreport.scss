@@ -3,16 +3,9 @@ $cellPadding: 6px 4px;
 //note web_back_form.css修正
 .manage{width:16%}
 .content_form{width:84%;}
-button{border:none;}
+botton{border:none;}
 
-//遮掉一個篩選條件
-nav{
-	.nav_item{
-		&:nth-child(2){
-			visibility: hidden;
-		}
-	}
-}
+
 
 /* table起始 */
 .myForm{
@@ -109,25 +102,3 @@ nav{
 
 
 
-.proSave{
-	// margin-right: 0;
-	margin-top: 20px;
-	width: 97%;
-	button{
-		box-sizing: border-box;
-		float: right;
-		display: block;
-		background-color: #F29600;
-		padding:10px 0px;
-		width: 20%;
-		border:none;
-		color: #fff;
-		// outline:none;
-			outline: 2px solid  #F29600;
-		&:hover{
-			// box-sizing: border-box;
-			color: #F29600;
-			background-color: #fff;
-		}
-	}
-}

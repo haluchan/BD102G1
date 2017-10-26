@@ -5,11 +5,8 @@
 .content_form {
   width: 84%; }
 
-button {
+botton {
   border: none; }
-
-nav .nav_item:nth-child(2) {
-  visibility: hidden; }
 
 /* table起始 */
 .myForm {
@@ -67,20 +64,3 @@ nav .nav_item:nth-child(2) {
     border: none; }
 
 /* table結束 */
-.proSave {
-  margin-top: 20px;
-  width: 97%; }
-  .proSave button {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    float: right;
-    display: block;
-    background-color: #F29600;
-    padding: 10px 0px;
-    width: 20%;
-    border: none;
-    color: #fff;
-    outline: 2px solid  #F29600; }
-    .proSave button:hover {
-      color: #F29600;
-      background-color: #fff; }
