@@ -69,7 +69,7 @@
 				</form>
 				<p class="case_ing">
 					專案正在募資中！<br>
-					在 <input type="date" id="event_enddate" class="change" value="<?php echo $eventsRow -> event_enddate;?>"> 23:59 募資結束前，<br>
+					在 <input type="date" id="event_enddate" class="change" value="<?php echo $eventsRow -> event_deadline;?>"> 23:59 募資結束前，<br>
 					至少募得 $<?php echo $eventsRow -> event_allow;?> 便募資成功。
 				</p>
 

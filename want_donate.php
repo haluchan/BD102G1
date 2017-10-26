@@ -24,20 +24,29 @@ session_start();
 
 <script src="src/libs/jquery/dist/jquery.min.js"></script>
 
+
 </head>
 <body>
 
 <?php require_once('Header.php');  ?>
+
 <?php 
-	
-	$_SESSION['mem_name'];	
-	// $event_no = $_REQUEST['event_no'];
+
+	$mem_no =$_SESSION['mem_no'];
+	$mem_name = $_SESSION['mem_name'];	
+	$mem_tel = $_SESSION['mem_tel'];
+	$mem_add = $_SESSION['mem_add'];	
+	$event_no = $_REQUEST['event_no'];
+	$dona_price = $_REQUEST['dona_price'];
 	try{
 
 
 	require_once('php/connectGrowing_hope.php'); 
-	$sql = 'select * from event where event_no = 1' ;
-	$event = $pdo ->query($sql);
+	$sql = 'select * from growing_hope.event where event_no = :event_no' ;
+	$event = $pdo ->prepare($sql);
+	$event->bindValue(":event_no", $event_no);
+	$event->execute();
+
 	$eventRow = $event->fetchObject();
 
 
@@ -53,7 +62,7 @@ session_start();
 			<ul>
 				<li class="dib your_itme"><i class="fa fa-check" aria-hidden="true"></i>你的資助選項</li>
 				<li class="db item_content">
-					<p><?php $dona_price = 'B';
+					<p><?php 
 						switch ($dona_price) {
 							case 'A':
 								echo "A 1,000元小資自理餐<br>．友善稻田．當令鮮米（５斤入）-４包<br>．自然禾香．鮮磨玄米麩　　　　-1包";
@@ -89,7 +98,6 @@ session_start();
 				<li class="clear db"></li>
 			</ul>
 
-			<form>
 				<div class="donate_back">
 					<div class="title">
 						<p><i class="fa fa-angle-right" aria-hidden="true"></i>資助金額<span> 最低金額為資助選項價格。可向上加碼幫助計畫加速成功。</span></p>
@@ -121,15 +129,15 @@ session_start();
 							<tbody>
 								<tr>
 									<td class="td_title">收件人姓名</td>
-									<td><input type="text" name="dona_name" class="td_input" required="required"></td>
+									<td><input type="text" name="dona_name" class="td_input" required="required" value="<?php echo $mem_name;?>"></td>
 								</tr>
 								<tr>
 									<td class="td_title">收件人電話</td>
-									<td><input type="text" name="dona_tel" class="td_input" required="required"></td>
+									<td><input type="text" name="dona_tel" class="td_input" required="required" value="<?php echo $mem_tel;?>"></td>
 								</tr>
 								<tr>
 									<td class="td_title">收件地址</td>
-									<td><input type="text" name="dona_add" class="td_input" required="required"></td>
+									<td><input type="text" name="dona_add" class="td_input" required="required" value="<?php echo $mem_add;?>"></td>
 								</tr>
 							</tbody>
 						</table>
@@ -138,7 +146,7 @@ session_start();
 							<tbody>
 								<tr>
 									<td class="td_title">持卡人姓名</td>
-									<td><input type="text" name="card_name" class="td_input" value="<?php echo?>"></td></tr>
+									<td><input type="text" name="card_name" class="td_input"></td></tr>
 								<tr>
 									<td class="td_title">交易金額</td>
 									<td> NT $2,000 元</td>
@@ -172,11 +180,9 @@ session_start();
 								<td>NT $2,000 元</td>
 							</tr>
 						</table>
-						<button class="btn_green">立即付款資助</button>
+						<button class="btn_green" id="pay_now">立即付款資助</button>
 					</div>
 				</div>
-
-			</form>
 
 		</div>
 		
@@ -198,6 +204,52 @@ require_once('Footer.php');  ?>
 
 <script type="text/javascript" src="js/want_donate.js"></script>
 <script type="text/javascript" src="js/login-ajax.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+
+<script type="text/javascript">
+
+	$('#pay_now').click(function(){
+		
+
+		var donateObj = {};
+			donateObj.event_no = <?php echo $event_no; ?> ;
+			donateObj.mem_no = <?php echo $mem_no; ?>;
+			donateObj.dona_price = $('.order_sum').val();
+			donateObj.payway = $("input[name='dona_payway']:checked").val();
+			donateObj.dona_name = $("input[name='dona_name']").val();
+			donateObj.dona_tel =$("input[name='dona_tel']").val();
+			donateObj.dona_add = $("input[name='dona_add']").val();
+			donateObj.dona_remark = $('.ta').val();
+
+
+
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange=function (){
+		 	if( xhr.readyState == 4){
+		    	if( xhr.status == 200 ){
+		    		alert('yaya');
+		       }else{
+		       		alert( xhr.status );
+		       }
+		   }
+		}
+		var data_info = "jsonStr=" + JSON.stringify(donateObj);
+		console.log( data_info);
+		var url = "want_donateupdate.php?" + data_info;
+		alert(url);
+		xhr.open("Get", url, true);
+		xhr.send(null);
+
+
+
+	});
+	
+
+
+
+</script>
+
+
 
 
 	

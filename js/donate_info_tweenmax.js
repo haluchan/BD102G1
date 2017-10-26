@@ -1,8 +1,10 @@
 $(function() {
 	//progress_bar
-	var now_money = parseInt($('.now_money').text());
-	var target_money = parseInt($('.target_money').text());
-	var bar =(now_money/target_money)*100;
+	// var now_money = parseInt($('.now_money').text());//累績金額
+	// var target_money = parseInt($('.target_money').text()); //核準金額
+
+	//  var bar =(now_money/target_money)*100; //%
+	var bar =  $("input[name='bar']").val();
 	var bar_run =new TimelineMax();
 	bar_run.staggerFromTo('.bar',5,{
 		width:0,
@@ -81,7 +83,7 @@ $(function() {
 	},.5);
 	var scene_t = new ScrollMagic.Scene({
 		triggerElement:'.trigger3',
-		duration:1500,
+		duration:300,
 		offset:-100
 	})
 	.setTween(tween_3)
@@ -127,17 +129,6 @@ $(function() {
 	});
 
 
-	$(".date").click(function(){
-	   $(".report_box").css({
-			'display':'block'
-		});
-	 });
-
-	$(".close").click(function(){
-	   $(".report_box").css({
-			'display':'none'
-		});
-	 });
 
 
 
