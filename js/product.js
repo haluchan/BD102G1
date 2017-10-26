@@ -129,7 +129,7 @@ function $qsa(qsa){
 //點小圖換大圖
 	//1.每個li建立事件聆聽功能
 	function proClickSmall(){
-		var lists = document.querySelectorAll('#pro_t_shelf>li');
+		var lists = document.querySelectorAll('.pro_t_imgGroup>li');
 		for (var i=0; i<lists.length; i++){
 			lists[i].addEventListener('click',proShowLarge,true);
 		}
@@ -138,7 +138,7 @@ function $qsa(qsa){
 	function proShowLarge(e){
 		//為什麼點什麼都會換圖??泡泡現象?
 		// e ? e.stopPropagation() : window.event.cancelBubble = true;
-		var small = $(this);
+		var small = e.target;
 		var large = $id('tank_Large');
 		// alert(large.src);
 		// alert(small.className);
