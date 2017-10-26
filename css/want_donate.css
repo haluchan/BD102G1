@@ -1,50 +1,62 @@
 @media screen and (max-width: 767px) {
   .col-xs-1 {
     width: 8.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-2 {
     width: 16.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-3 {
     width: 25%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-4 {
     width: 33.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-5 {
     width: 41.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-6 {
     width: 50%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-7 {
     width: 58.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-8 {
     width: 66.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-9 {
     width: 75%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-10 {
     width: 83.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-11 {
     width: 91.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-12 {
     width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .hidden-xs {
@@ -53,50 +65,62 @@
 @media screen and (min-width: 768px) {
   .col-sm-1 {
     width: 8.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-2 {
     width: 16.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-3 {
     width: 25%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-4 {
     width: 33.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-5 {
     width: 41.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-6 {
     width: 50%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-7 {
     width: 58.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-8 {
     width: 66.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-9 {
     width: 75%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-10 {
     width: 83.33333%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-11 {
     width: 91.66667%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-12 {
     width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .hidden-sm {
@@ -146,11 +170,13 @@ body {
       color: #a40000; }
   .want_donate .donate_info {
     padding: 3%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; }
     .want_donate .donate_info ul {
       width: 100%;
       border: 3px solid #759944;
       padding-right: 2.5%;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       .want_donate .donate_info ul .dib {
         display: inline-block;
@@ -205,6 +231,7 @@ body {
   .want_donate .donate_back {
     width: 100%;
     padding: 3%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -244,6 +271,7 @@ body {
       line-height: 2;
       vertical-align: middle;
       display: inline-block;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       border-radius: 5px; }
       @media screen and (max-width: 767px) {
@@ -263,6 +291,8 @@ body {
       border: 1px solid #ccc;
       padding: 2% 2% 2% 3.5%;
       font-size: 14px;
+      -webkit-transition: 0.3s ease-out;
+      -o-transition: 0.3s ease-out;
       transition: 0.3s ease-out; }
       @media screen and (max-width: 767px) {
         .want_donate .donate_back .pay_way_label {
@@ -271,6 +301,8 @@ body {
       border-bottom: 0px; }
     .want_donate .donate_back .pay_way_click + .pay_way_label {
       border: 1px solid #759944;
+      -webkit-transition: 0.3s ease-in;
+      -o-transition: 0.3s ease-in;
       transition: 0.3s ease-in; }
     .want_donate .donate_back .donate_detail {
       margin-top: 3%;
@@ -280,14 +312,17 @@ body {
         padding: 1.5%;
         border: 1px solid #ccc;
         margin-top: 2.5%;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box; }
         .want_donate .donate_back .donate_detail .mem_info td .td_input {
           width: 100%;
           padding: 15px;
+          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           border: none; }
         .want_donate .donate_back .donate_detail .mem_info td .ym {
           padding: 14px;
+          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           width: 80px; }
           @media screen and (max-width: 767px) {
@@ -300,6 +335,7 @@ body {
           background-color: #F9F9F9;
           letter-spacing: 2px; }
       .want_donate .donate_back .donate_detail .pay_for_card, .want_donate .donate_back .donate_detail .pay_for_atm {
+        -webkit-box-sizing: border-box;
         box-sizing: border-box; }
       .want_donate .donate_back .donate_detail .btn_green {
         margin-top: 2%;

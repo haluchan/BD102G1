@@ -51,20 +51,25 @@
 	<table cellspacing="1">
 		<tr>
 		
-			<th>訂單編號</th>
+			<th></th>
 			<th>商品編號</th>
 			<th>商品名稱</th>
 			<th>商品數量</th>
 			<th>商品價格</th>
 			
 		</tr>
-			<?php try {
+		<?php
+		$item=$_REQUEST["order_no"];
+
+		try {
 			require_once("php/connectBeck.php");
-    $sql = "select * from orderItem";
+
+    $sql = "select * from orderitem where order_no='$item' ";
     
-    $orderItem = $pdo->query($sql);	
+    $orderitem = $pdo->query($sql);	
 	
-	while(  $resultset = $orderItem ->fetchObject() ){
+	while($resultset = $orderitem ->fetchObject()) {
+	 
 ?>
 		<tr class="tdRow">
 			<td><?php echo $resultset->order_no ;?></td>
@@ -72,14 +77,9 @@
 			<td><?php echo $resultset->pro_name ;?></td>
 			<td><?php echo $resultset->orderItem_qty ;?></td>
 			<td><?php echo $resultset->pro_price ;?></td>
-		
-		
 		</tr>
-	
-
 <?php	
 }	
-
 }
 	catch (PDOException $e) {
 	echo "錯誤原因 : " , $e->getMessage(),"<br>";

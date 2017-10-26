@@ -80,47 +80,51 @@
 	<div class="secondblockin">
 		<div id="trigger1"></div>
 	<ul>
-		<?php 
+
+
+<?php try {
+			require_once("php/connectBeck.php");
+	
+    $sql = "select * from activity";
+    
+    $activity = $pdo->query($sql);	
+	
+	while($resultset = $activity ->fetchObject()){
 		
-		for($i=1;$i<=6;$i++){
-				echo"
+		$act_name = $resultset->act_name;
+		$act_no = $resultset->act_no;
+	
+		
+		// for($i=1;$i<=7;$i++){
+		echo"
 			<li class='show col-xs-12'>
 			<a href='#''>
 				<div class='img'>
-					<img src='src/image/event/06.jpg' alt=''>
+					<img src='src/image/event/".$act_no.'.jpg'."' alt=''>
 				</div>	
 			</a>	
 			<div class='balloon'>
-					<p>櫻桃季節，甜酸好吃</p> 		
+					<p>".$act_name."</p> 		
 				
 			</div>
-			<!-- <div class='bluecircle'>
 			
-				
-					<p>南投</p>
-					<p>報名中</p>
-					<p>費用：2750</p>
-				
-			</div>
-		 -->
-		</li>"
-		;}
-			
-?>
-
-
-
-
-
-
-
-
-
-
-
-
+		</li>";
 		
-		<li class="show col-xs-12">
+			
+		}
+	}
+	catch (PDOException $e) {
+	echo "錯誤原因 : " , $e->getMessage(),"<br>";
+	echo "行號 : " , $e->getLine(),"<br>";	
+}
+?>	  
+
+
+
+
+
+<!-- 
+			<li class="show col-xs-12">
 			<a href="#">
 				<div class="img">
 					
@@ -134,14 +138,19 @@
 				<div class="balloon">
 					<p>農家講解，了解小農</p> 		
 				</div>
-			<!-- <div class="bluecircle">
-				
-				
-					<p>宜蘭</p>
-					<p>報名中</p>
-					<p>費用：3460</p>
-				
-			</div>	 -->
+		
+		</li>
+		<li class="show col-xs-12">
+			<a href="#">
+				<div class="img">
+					
+					<img src="src/image/event/07.jpg" alt="">
+				</div>
+			</a>
+				<div class="balloon">
+					<p>農家講解，了解小農</p> 		
+				</div>
+		
 		</li>
 		<li class="show col-xs-12">
 			<a href="#">
@@ -153,14 +162,7 @@
 					<p>香香甜甜哈密瓜</p> 		
 					
 				</div>
-		<!-- 	<div class="bluecircle">
-				
-				<p>彰化</p>
-				<p>開始報名：12月</p>
-				<p>費用：2980</p>
-					
-				
-			</div> -->
+	
 		</li>
 
 		<li class="show col-xs-12">
@@ -174,14 +176,7 @@
 				<div class="balloon">
 					<p>來採葡萄，自釀葡酒</p> 		
 				</div>	
-		<!-- 	<div class="bluecircle">
-				
-				
-					<p>台中</p>
-					<p>開始報名：12月</p>
-					<p>費用：2750</p>
-				
-			</div> -->
+		
 		</li>
 		<li class="show col-xs-12">
 			<a href="#">
@@ -194,14 +189,7 @@
 				<div class="balloon">
 					<p>在地好農，無毒雞蛋</p> 		
 				</div>	
-		<!-- 	<div class="bluecircle">
-				
-					
-					<p>台中</p>
-					<p>開始報名：11月</p>
-					<p>費用：2750</p>
-			
-			</div> -->
+	
 		</li>
 		<li class="show col-xs-12">
 			<a href="#">
@@ -214,19 +202,14 @@
 				<div class="balloon">
 					<p>花媽：橘子啊！~</p> 		
 				</div>	
-			<!-- <div class="bluecircle">
-				
-				<p>桃園</p>
-					<p>開始報名：11月</p>
-					<p>費用：2750</p>
-					
-				
-			</div> -->
+		
 		</li>
-		
-		
+		 -->
+		<div class="clear"></div>
 	</ul>
+	<div class="clear"></div>
 	</div>
+	<div class="clear"></div>
 </div>
 <div class="clear"></div>
 <!-- ================ -->
@@ -245,7 +228,7 @@
 	<div class="thirdblockin">
 		<div id="trigger2"></div>
 		<?php 
-			for($j=1;$j<=8;$j++){echo"
+			for($j=1;$j<=10;$j++){echo"
 		<div class='eventreco'>
 			<a href='#'>
 				<div class='img'>

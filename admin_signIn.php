@@ -1,3 +1,8 @@
+<?php
+session_start();
+ob_start();
+$_SESSION['signInInfo']='';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,17 +36,17 @@
 
 
 				<div class="form">
-					<form action="">
+					<form action="php/webBack_admin_signIn.php" method="post">
 						<div class="input">
 							<label for="adm_id">帳號</label>
-							<input type="text" id="adm_id" value='root'>
+							<input type="text" id="adm_id" name="admin_id">
 						</div>
 						<div class="input">
 							<label for="adm_psw">密碼</label>
-							<input type="password" id="adm_psw" value='bd102g1'>
+							<input type="password" id="adm_psw" name="admin_psw">
 						</div>
 						<div>
-							<a class="btn" id="signIn" href="webBack_pro.php">登入</a>
+							<input type="submit" class="btn" id="signIn" value="登入">
 						</div>
 					</form>
 				</div>
@@ -54,5 +59,20 @@
 			</div>
 		</div>
 	</section>
+
+<script>
+	window.addEventListener('load', function(){
+
+		var signInInfo = " <?php echo $_SESSION['signInInfo']; ?>";
+
+		if (signInInfo.length > 1){
+			alert(signInInfo);
+			<?php  $_SESSION['signInInfo'] = '';?>
+		}
+		
+
+	}, false);
+</script>
+
 </body>
 </html>

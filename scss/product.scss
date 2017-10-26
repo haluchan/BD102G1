@@ -258,6 +258,11 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 	background-image: url("../src/image/product/pro-bg1.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
+	// .pro_tent{
+	// 	h2{
+	// 		top: 22%;
+	// 	}
+	// }
 
 	/* 商品區(種子)*/
 	.pro_s_cabinet{
@@ -522,7 +527,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 	.pro_t_wheel{
 		margin: auto;
 		position: relative;
-		margin-top: 18%;
+		margin-top: 10%;
 		@include pro_breakPoint(pc){
 			width: $pc;
 		}
@@ -542,6 +547,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 				list-style:none;
 				margin: auto;
 				width: 300%;
+				overflow: hidden;
 				>div{
 					display: none;
 				}	
@@ -587,10 +593,11 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 							border-radius: 10%;
 							overflow: hidden;
 							border: $imgBorder;
-							img{ width: 100%}
+							img{ width: 100%;}
 						}
 						&:nth-child(2){
-							margin: 5% auto;
+							margin: auto;
+							padding: 5% 0;
 							.pro_t_name{
 								@include pro_thirdTitle(#999);
 							}

@@ -80,14 +80,17 @@
 			<td><?php echo $resultset->mem_mail ;?></td>
 		<!-- 	<td><?php echo $resultset->mem_pho ;?></td> -->
 			<td><?php echo $resultset->mem_birth ;?></td>
-			<td><?php echo $resultset->mem_gender ;?></td>
+			<td><?php 
+			if( $resultset->mem_gender == 1){echo "男";}else{
+				echo "女";}  ;?></td>
 		<!-- 	<td><?php echo $resultset->mem_add ;?></td>
 			<td><?php echo $resultset->mem_seed ;?></td>
 			<td><?php echo $resultset->mem_bonus ;?></td> -->
-			<td><?php echo $resultset->mem_equity ;?></td>
+			<td><?php if( $resultset->mem_equity == N){echo "正常";}else{
+				echo "停權";}   ;?></td>
 			<td style="padding-left: 20px;">
 				<form class="myForm" action="php/memequ.php">
-					<input type="hidden" name="mem_no" value="<?php echo $mem_no;?>">
+				<input type="hidden" name="mem_no" value="<?php echo $mem_no;?>">
 				<select name="mem_equity">
 					<option value="S">停權</option>
 					<option value="N">復權</option>

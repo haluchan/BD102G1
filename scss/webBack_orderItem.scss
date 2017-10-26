@@ -12,7 +12,7 @@ botton{border:none;}
 .myForm{
 	width: 94%;
 	margin:auto;
-    table{width:100%};
+    table{width:100%}
 
 	th, td{  /*每個格子統一固定padding*/    
 		padding:$cellPadding;
@@ -56,11 +56,10 @@ botton{border:none;}
 
 	table{  /*每一欄的寬度設定。以百分比。剩的寬自動為最後一欄*/
 		/*不能動！！第一欄固定為5%*/
+	
 		tr th:nth-child(1){
 			width: 5%;
 		}
-
-
 
 		/*自行更改、增加 區域=================================*/
 		tr th:nth-child(2){
@@ -81,6 +80,8 @@ botton{border:none;}
 		tr th:nth-child(7){
 			width: 10%;
 		}
+
+		
 	}
 
 //===========================================
@@ -88,6 +89,7 @@ botton{border:none;}
 
 	//按鈕
 	.btn{
+		width: 100%;
 		background-color: LemonChiffon ;
 		padding:4px 6px;
 		border:none

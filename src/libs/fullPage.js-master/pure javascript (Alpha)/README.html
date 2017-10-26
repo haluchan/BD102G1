@@ -1,0 +1,112 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="fullpage-js-pure-javascript-version">fullPage.js pure Javascript version</h1>
+<p><img src="https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/intro.png" alt="preview">
+<img src="https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/compatible.gif" alt="compatibility"></p>
+<p><img src="http://img.shields.io/badge/fullPage.js-v0.0.5-brightgreen.svg" alt="javascript.fullPage.js version">
+<a href="http://opensource.org/licenses/MIT"><img src="http://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
+6Kb gziped!</p>
+<ul>
+<li><a href="http://alvarotrigo.com/fullPage/pure-javascript/">Live demo</a></li>
+</ul>
+<p>Invite me to a coffee
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=BEK5JQCQMED4J&amp;lc=GB&amp;item_name=fullPage%2ejs&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" alt="Donate"></a></p>
+<h2 id="introduction">Introduction</h2>
+<p>This is in Alpha version and support for it won&#39;t be provided yet.
+This light version of fullpage.js won&#39;t provide some options available in the jQuery version such as:</p>
+<ul>
+<li><code>responsiveWidth</code> and <code>responsiveHeight</code> </li>
+<li><code>lockAnchors</code></li>
+<li><code>scrollOverflow</code></li>
+<li><code>verticalCentered</code></li>
+<li><code>continuousVertical</code></li>
+<li><code>loopBottom</code></li>
+<li><code>loopTop</code></li>
+<li><code>normalScrollElements</code></li>
+<li><code>normalScrollElementTouchThreshold</code></li>
+<li><code>controlArrowColor</code></li>
+<li><code>sectionsColor</code></li>
+<li><code>paddingTop</code></li>
+<li><code>paddingBottom</code></li>
+<li><code>fixedElements</code></li>
+</ul>
+<p>And other features such as:</p>
+<ul>
+<li>Any extension</li>
+<li><code>setAllowScrolling</code></li>
+</ul>
+<h2 id="compatibility">Compatibility</h2>
+<p>fullPage.js is fully functional on all modern browsers, as well as some old ones such as Internet Explorer 8, 9, Opera 12, etc.
+It works with browsers with CSS3 support and with the ones which don&#39;t have it, making it ideal for old browsers compatibility.
+It also provides touch support for mobile phones, tablets and touch screen computers.</p>
+<h2 id="usage">Usage</h2>
+<p>As you can see in the <a href="https://github.com/alvarotrigo/fullPage.js/blob/master/pure%20javascript%20(Alpha">demo file</a>/demo.html), you will need to include:</p>
+<ul>
+<li>javascript.fullPage.js (or its minified version)</li>
+<li>javascript.fullPage.css</li>
+</ul>
+<p>Example of initialization:</p>
+<pre><code class="lang-javascript">fullpage.initialize(&#39;#fullpage&#39;, {
+    anchors: [&#39;firstPage&#39;, &#39;secondPage&#39;, &#39;3rdPage&#39;, &#39;4thpage&#39;, &#39;lastPage&#39;],
+    menu: &#39;#menu&#39;,
+    css3:false
+});
+</code></pre>
+<p>A more complex initialization with all options set could look like this:</p>
+<pre><code class="lang-javascript">fullpage.initialize(&#39;#fullpage&#39;, {
+    //navigation
+    &#39;menu&#39;: false,
+    &#39;anchors&#39;:[],
+    &#39;navigation&#39;: false,
+    &#39;navigationPosition&#39;: &#39;right&#39;,
+    &#39;navigationColor&#39;: &#39;#000&#39;,
+    &#39;navigationTooltips&#39;: [],
+    &#39;slidesNavigation&#39;: false,
+    &#39;slidesNavPosition&#39;: &#39;bottom&#39;,
+    &#39;scrollBar&#39;: false,
+
+    //scrolling
+    &#39;css3&#39;: true,
+    &#39;scrollingSpeed&#39;: 700,
+    &#39;autoScrolling&#39;: true,
+    &#39;easingcss3&#39;: &#39;ease&#39;,
+    &#39;loopHorizontal&#39;: true,
+    &#39;touchSensitivity&#39;: 5,
+
+    //Accessibility
+    &#39;keyboardScrolling&#39;: true,
+    &#39;recordHistory&#39;: true,
+
+    //design
+    &#39;controlArrows&#39;: true,
+
+    //Custom selectors
+    &#39;sectionSelector&#39;: &#39;.section&#39;,
+    &#39;slideSelector&#39;: &#39;.slide&#39;,
+
+
+    //events
+    &#39;afterLoad&#39;: null,
+    &#39;onLeave&#39;: null,
+    &#39;afterRender&#39;: null,
+    &#39;afterResize&#39;: null,
+    &#39;afterReBuild&#39;: null,
+    &#39;afterSlideLoad&#39;: null,
+    &#39;onSlideLeave&#39;: null
+});
+</code></pre>
+<p>Functions has the same syntax and functionality than in the jQuery version, but they should be called like so:</p>
+<pre><code class="lang-javascript">//calling a function from the pure Javascript version of fullPage.js
+fullpage.moveSectionDown();
+</code></pre>
+<p>In contrast with the calls from the the jQuery version of fullPage.js:</p>
+<pre><code class="lang-javascript">//calling a function from the jQuery version of fullPage.js
+$.fn.fullpage.moveSectionDown();
+</code></pre>
+
+      </body>
+    </html>

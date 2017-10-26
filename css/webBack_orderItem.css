@@ -56,6 +56,7 @@ botton {
     .myForm table tr th:nth-child(7) {
       width: 10%; }
   .myForm .btn {
+    width: 100%;
     background-color: LemonChiffon;
     padding: 4px 6px;
     border: none; }

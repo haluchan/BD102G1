@@ -23,5 +23,13 @@ $('.t1').click(function(){
 		$('.c3').addClass('active01');
 	})
 
+	$('.t4').click(function(){
+		$('hopefarmrwd-select li').removeClass('active01');
+		$('.t4').addClass('active01');
+
+		$('.mark_container ').removeClass('active01');
+		$('.c4').addClass('active01');
+	})
+
 });
 

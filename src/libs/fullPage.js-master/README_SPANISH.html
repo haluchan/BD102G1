@@ -1,0 +1,844 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README_SPANISH.md</title>
+      </head>
+      <body>
+        <h1 id="fullpage-js">fullPage.js</h1>
+<p><img src="https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/intro.png" alt="preview">
+<img src="https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/compatible.gif?v=2" alt="compatibility"></p>
+<p align="center">
+  <a href="https://github.com/alvarotrigo/fullPage.js"><img src="https://raw.githubusercontent.com/alvarotrigo/fullPage.js/dev/examples/imgs/en-language-inactive.png" /></a><a href="https://github.com/alvarotrigo/fullPage.js/blob/dev/README_SPANISH.md#fullpagejs"><img src="https://raw.githubusercontent.com/alvarotrigo/fullPage.js/dev/examples/imgs/es-language.png?v=2" /></a>
+</p>
+
+<hr>
+<p><img src="http://img.shields.io/badge/fullPage.js-v2.9.4-brightgreen.svg" alt="fullPage.js version">
+<a href="http://opensource.org/licenses/MIT"><img src="http://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
+<a href="https://www.paypal.me/alvarotrigo/9.95"><img src="https://img.shields.io/badge/donate-PayPal.me-ff69b4.svg" alt="PayPal Donate"></a>
+&nbsp;&nbsp; <strong>|</strong>&nbsp;&nbsp; <em>7Kb gziped</em> &nbsp;&nbsp;<strong>|</strong>&nbsp;&nbsp; <em>Creado por <a href="https://twitter.com/imac2">@imac2</a></em></p>
+<ul>
+<li><a href="http://alvarotrigo.com/fullPage/">Vista previa - demostración</a></li>
+<li><a href="http://alvarotrigo.com/fullPage/utils/wordpress.html">Template de Wordpress</a></li>
+<li><a href="http://alvarotrigo.com/fullPage/extensions/">Extensiones de fullpage.js</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/wiki/FAQ---Frequently-Answered-Questions">Preguntas frecuentes</a></li>
+</ul>
+<hr>
+<p>Una sencilla librería Javascript para la creación de páginas web con scroll a pantalla completa. (también conocido popularmente como &quot;single page websites&quot; o &quot;onepage sites&quot;)
+Permite crear un desplazamiento a pantalla completa asi como añadir diapositivas horizontales en las secciones. </p>
+<p>Invítame a un café:
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=BEK5JQCQMED4J&amp;lc=GB&amp;item_name=fullPage%2ejs&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donateCC_LG.gif" alt="Donate"></a></p>
+<p>Personalizaciones de la librería y solicitudes urgentes a pedido por un precio razonable. <a href="http://alvarotrigo.com/#contact-page">Contacta conmigo</a>.</p>
+<ul>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#introduction">Introducción</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#compatibility">Compabitilidad</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js#uso">Uso</a><ul>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#crear-links-a-secciones-y-diapositivas">Crear links a secciones y diapositivas</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#crear-seciones-más-pequenas-o-más-grandes">Crear secciones más pequenas o más grandes</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#classes-de-estado-añadidas-por-fullpagejs">Classes de estado añadidas por fullpage.js</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#carga-pasiva-de-elementos-multimedia">Carga pasiva de elementos multimedia</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#autoreproducir-elementos-multimedia">Autoplay de elementos multimedia</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#uso-de-extensiones">Uso de extensiones</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#opciones">Opciones</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#métodos">Metodos</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#callbacks">Callbacks</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#reportando-problemas">Reportar problemas</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#contribuir-con-fullpagejs">Contribuir a fullpage.js</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#changelog">Changelog</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#build-tasks">Build tasks</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#recursos">Recursos</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#quién-usa-fullpagejs">Quien usa fullpage.js</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#donaciones">Donaciones</a></li>
+<li><a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#licencia">Licencia</a></li>
+</ul>
+<h2 id="introducci-n">Introducción</h2>
+<p>Las sugerencias serán más que bienvenidas, no solamente de pedidos de nuevas funcionalidades sino también de mejoras de código.
+Hagamos de fullPage.js una gran librería para facilitar la vida de las personas!</p>
+<h2 id="compatibilidad">Compatibilidad</h2>
+<p>fullPage.js es totalmente compatible y funcional en cualquier navegador moderno asi como en algunos de los antiguos como Internet Explorer 8 y 9 u Opera 12.
+Funciona con navegadores que soportan CSS3 y con los que no lo soportan, haciendolo ideal incluso para con navegadores antiguos.
+También provee soporte táctil para dispositivos móbiles, tabletas y ordenadores con pantalla táctil.</p>
+<p><a href="http://www.browserstack.com/"><img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/browserstack2.png" alt="Browserstack"></a></p>
+<p>Gracias a <a href="http://www.browserstack.com/">Browserstack</a> por dar soporte a fullPage.js.</p>
+<h2 id="uso">Uso</h2>
+<p>Como podéis ver en los ejemplos disponibles, es necesario incluir:</p>
+<ul>
+<li><a href="http://jquery.com/">La librería de jQuery</a>. (1.6.0 minimum)</li>
+<li>El archivo de JavaScript <code>jquery.fullPage.js</code> (o su versión minificada <code>jquery.fullPage.min.js</code>)</li>
+<li>El archivio CSS <code>jquery.fullPage.css</code> (o su versión minificada <code>jquery.fullpage.min.css</code>)</li>
+</ul>
+<p><strong>Opcionalmente</strong>, cuando se usa la opcion <code>css3:false</code>, puedes anadir la libreríóa de <a href="http://jqueryui.com/">jQuery UI</a> en caso de que quiera susar otro efecto &quot;easing&quot; en lugar de los que están incluidos en la libreria de jQuery por defecto (<code>linear</code> y <code>swing</code>) o el includo en fullPage.js por defecto (<code>easeInOutCubic</code>).</p>
+<h3 id="instarlar-usando-bower-o-npm">Instarlar usando bower o npm</h3>
+<p><strong>Opcionalmente</strong>, puedes instalar fullPage.js haciendo uso de bower o npm si lo prefieres:</p>
+<p>Terminal:</p>
+<pre><code class="lang-shell">// Con bower
+bower install fullpage.js
+
+// Con npm
+npm install fullpage.js
+</code></pre>
+<h3 id="incluyendo-los-archivos-">Incluyendo los archivos:</h3>
+<pre><code class="lang-html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;jquery.fullPage.css&quot; /&gt;
+
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Esta linea es opcional. Sólamente es necesaria si se hace uso de la opcion `css3:false` y se quiere usar otro efecto `easing` en lugar de &quot;linear&quot;, &quot;swing&quot; o &quot;easeInOutCubic&quot;. --&gt;
+&lt;script src=&quot;vendors/jquery.easings.min.js&quot;&gt;&lt;/script&gt;
+
+
+&lt;!-- Esta linea es opcional y sólamente es necesaria en caso de usar la opcion `scrollOverflow:true`. --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;vendors/scrolloverflow.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.fullPage.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3 id="uso-opcional-de-un-cdn">Uso opcional de un CDN</h3>
+<p>Si lo prefieres puedes hacer uso de un CDN (Content Delivery Network o Red de distrubución de contenido) para cargar los archivos de fullPage.js. FullPage.js está disponible en CDNJS: 
+<a href="https://cdnjs.com/libraries/fullPage.js">https://cdnjs.com/libraries/fullPage.js</a></p>
+<h3 id="estructura-html-requerida">Estructura HTML requerida</h3>
+<p>El documento HTML requerirá comenzar la el <a href="http://www.corelangs.com/html/introduction/doctype.html">HTML DOCTYPE obligatorio</a> en la primera linea de tu archivo HTML. De lo contrario puedes tener problemas con el tamaño de las secciones y diapositivas. Todos los ejemplos disponibles aqui usan la etiqueta HTML 5 <code>&lt;!DOCTYPE html&gt;</code>.</p>
+<p>Cada sección se ha de definir usando la clase <code>section</code>
+La sección activa por defecto será la primera, que será tratada com la página de inicio.</p>
+<p>Las seciones tienes que estar contenidas en otro elemento (<code>&lt;div id=&quot;fullpage&quot;&gt;</code> en este caso). El elemento contenedor no puede ser el elemento <code>body</code> de la página.</p>
+<pre><code class="lang-html">&lt;div id=&quot;fullpage&quot;&gt;
+    &lt;div class=&quot;section&quot;&gt;Sección 1&lt;/div&gt;
+    &lt;div class=&quot;section&quot;&gt;Sección 2&lt;/div&gt;
+    &lt;div class=&quot;section&quot;&gt;Sección 3&lt;/div&gt;
+    &lt;div class=&quot;section&quot;&gt;Sección 4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Si quieres definir una sección de inicio diferente de la primera sección o la primera diapositiva de la sección, simplemente añade la clase <code>active</code> en la sección o diapositiva que quieras que sea visible inicialmente. </p>
+<pre><code class="lang-html">&lt;div class=&quot;section active&quot;&gt;Mi sección de inicio&lt;/div&gt;
+</code></pre>
+<p>Puedes usar la clase <code>slide</code> para crear diapositivas horizontales dentro de una sección:</p>
+<pre><code class="lang-html">&lt;div class=&quot;section&quot;&gt;
+    &lt;div class=&quot;slide&quot;&gt; Diapositiva 1 &lt;/div&gt;
+    &lt;div class=&quot;slide&quot;&gt; Diapositiva 2 &lt;/div&gt;
+    &lt;div class=&quot;slide&quot;&gt; Diapositiva 3 &lt;/div&gt;
+    &lt;div class=&quot;slide&quot;&gt; Diapositiva 4 &lt;/div&gt;
+&lt;/div&gt;
+`
+</code></pre>
+<p>Puedes ver un ejemplo totalmetne funciona de la estructura HTML en el ejemplo <a href="https://github.com/alvarotrigo/fullPage.js/blob/master/examples/demostraciónPage.html"><code>demostraciónPage.html</code></a>.</p>
+<h3 id="inicializaci-n">Inicialización</h3>
+<p>Todo lo que neceistas hacer es llamar a fullPage.js dentro de la función <code>$(document).ready</code>.</p>
+<pre><code class="lang-javascript">$(document).ready(function() {
+    $(&#39;#fullpage&#39;).fullpage();
+});
+</code></pre>
+<p>Una inizialización más compleja con todas las opciones definidas sería asi:</p>
+<pre><code class="lang-javascript">$(document).ready(function() {
+    $(&#39;#fullpage&#39;).fullpage({
+        //Navegación
+        menu: &#39;#menu&#39;,
+        lockAnchors: false,
+        anchors:[&#39;firstPage&#39;, &#39;secondPage&#39;],
+        navigation: false,
+        navigationPosition: &#39;right&#39;,
+        navigationTooltips: [&#39;firstSlide&#39;, &#39;secondSlide&#39;],
+        showActiveTooltip: false,
+        slidesNavigation: true,
+        slidesNavPosition: &#39;bottom&#39;,
+
+        //Desplazamiento
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
+        scrollBar: false,
+        easing: &#39;easeInOutCubic&#39;,
+        easingcss3: &#39;ease&#39;,
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        continuousHorizontal: false,
+        scrollHorizontally: false,
+        interlockedSlides: false,
+        dragAndMove: false,
+        offsetSections: false,
+        resetSliders: false,
+        fadingEffect: false,
+        normalScrollElements: &#39;#element1, .element2&#39;,
+        scrollOverflow: false,
+        scrollOverflowReset: false,
+        scrollOverflowOptions: null,
+        touchSensitivity: 15,
+        normalScrollElementTouchThreshold: 5,
+        bigSectionsDestination: null,
+
+        //Accesibilidad
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
+
+        //Diseno
+        controlArrows: true,
+        verticalCentered: true,
+        sectionsColor : [&#39;#ccc&#39;, &#39;#fff&#39;],
+        paddingTop: &#39;3em&#39;,
+        paddingBottom: &#39;10px&#39;,
+        fixedElements: &#39;#header, .footer&#39;,
+        responsiveWidth: 0,
+        responsiveHeight: 0,
+        responsiveSlides: false,
+        parallax: false,
+        parallaxOptions: {type: &#39;reveal&#39;, percentage: 62, property: &#39;translate&#39;},
+
+        //Selectores personalizados
+        sectionSelector: &#39;.section&#39;,
+        slideSelector: &#39;.slide&#39;,
+
+        //Eventos
+        onLeave: function(index, nextIndex, direction){},
+        afterLoad: function(anchorLink, index){},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterResponsive: function(isResponsive){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    });
+});
+</code></pre>
+<h3 id="crear-links-a-secciones-y-diapositivas">Crear links a secciones y diapositivas</h3>
+<p>Si usas fullPage.js con links de anclaje para las secciones (haciendo uso de la opcion <code>anchors</code> o del atributo <code>data-anchor</code> en cada sección), entonces también podrás usar los links de anclaje para navegar a una sección o diapositiva en particular.</p>
+<p>Esto sería un ejemplo de un link con un link de anclaje: <a href="http://alvarotrigo.com/fullPage/#secondPage/2">http://alvarotrigo.com/fullPage/#secondPage/2</a> (que es la URL que verás en la URL si accedes a esa sección/diapositiva manualmente)
+Fíjate que la última parte de la URL termina en: <code>#secondPage/2</code></p>
+<p>Teniendo la siguiente inicialización:</p>
+<pre><code class="lang-javascript">$(document).ready(function() {
+    $(&#39;#fullpage&#39;).fullpage({
+        anchors:[&#39;firstPage&#39;, &#39;secondPage&#39;, &#39;thirdPage&#39;]
+    });
+});
+</code></pre>
+<p>El link de anclaje al final de la URL <code>#secondPage/2</code> define la sección y diapostiiva de destino respectivamente. In la URL anterior, la sección de destino será la que está definida con el link de anclaje <code>secondPage</code> y la diapositiva será la segunda de dicha sección porque estamos usando el índice <code>2</code> para ella. (la primera diapositiva de una sección tendrá índice 0, porque técnicamente será tratada como una sección)index 0, as technically it is a section).</p>
+<p>Podríamos haber usado un link de anclaje personalizado para la diapositiva en lugar de su índice si hubiesemos usado el atributo <code>data-anchor</code> en la estructura HTML:</p>
+<pre><code class="lang-html">&lt;div class=&quot;section&quot;&gt;
+    &lt;div class=&quot;slide&quot; data-anchor=&quot;slide1&quot;&gt; Slide 1 &lt;/div&gt;
+    &lt;div class=&quot;slide&quot; data-anchor=&quot;slide2&quot;&gt; Slide 2 &lt;/div&gt;
+    &lt;div class=&quot;slide&quot; data-anchor=&quot;slide3&quot;&gt; Slide 3 &lt;/div&gt;
+    &lt;div class=&quot;slide&quot; data-anchor=&quot;slide4&quot;&gt; Slide 4 &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>En este último caso, la URL que usaríamos sería <code>#secondPage/slide3</code>, que es le equivalente a nuestra URL anterior <code>#secondPage/2</code>.</p>
+<p>Nota que los links de anclaje en la sección también pueden definirse del mismo modo, es decir, usando el atributo <code>data-anchor</code> siempre y cuando no hayamos definido la opcion <code>anchors</code> al iniciar fullPage.js.</p>
+<p><strong>Ten cuidado!</strong> las etiquetas <code>data-anchor</code> no pueden tener el mismo valor que ninguna otra etiqueta ID en la página. (o <code>name</code> para Internet Explorer)</p>
+<h3 id="crear-seciones-m-s-pequenas-o-m-s-grandes">Crear seciones más pequenas o más grandes</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/BKjRYm">demostración</a> fullPage.js provee un modo de eliminar la restricción de pantalla completa para secciones y diapositivas. Es posible crear secciones con una altura menor o mayor que el tamano de la ventana del navegador. Esto es especialmente útil para pies de página.</p>
+<p>Para crear este tipo de secciones simplemente usa la clase <code>fp-auto-height</code> en la sección donde quieres aplicarlo. De este modo fullPage.js ajustará el tamaño al dado por el contenido de dicha sección o diapositiva.</p>
+<pre><code class="lang-html">&lt;div class=&quot;section&quot;&gt;Ventana completa&lt;/div&gt;
+&lt;div class=&quot;section fp-auto-height&quot;&gt;Alto automático&lt;/div&gt;
+</code></pre>
+<h4 id="secciones-de-tamano-autom-tico-y-responsive">Secciones de tamano automático y responsive</h4>
+<p>fullPage.js puede eliminar la restricción de pantalla completa únicamente bajo el modo <code>responsive</code> si asi lo deseas.
+De este modo la seccion pasará a ser una sección de tamaño automático cuando fullPage.js entre en modo responsive. (Usando la opcion <code>responsiveWidth</code> o <code>responsiveHeight</code>)</p>
+<h3 id="classes-de-estado-a-adidas-por-fullpage-js">Classes de estado añadidas por fullpage.js</h3>
+<p>Fullpage.js añade multiples clases en diferentes elementos para reflejar el estado en el que se encuentra la página web:</p>
+<ul>
+<li><code>active</code> es añadido en la sección o diapositiva actual.</li>
+<li><code>active</code> es añadido en el elemento actual del menu (si se usa la opcion <code>menu</code>)</li>
+<li>Una clase con la forma <code>fp-viewing-SECCION-DIAPOSITIVA</code> es añadida al elemento <code>body</code> de la página. (ej: <a href="http://alvarotrigo.com/fullPage/#secondPage"><code>fp-viewing-secondPage-0</code></a>) Las partes de <code>SECCION</code> Y <code>DIAPOSITVA</code> serán los links de anclaje (o los índices) de la sección o diapositiva actual.</li>
+<li><code>fp-responsive</code> es añadido al element <code>body</code> cuando se entra en modo &quot;responsive&quot;.</li>
+<li><code>fp-enabled</code> es añadido al elemento <code>html</code> cuando fullPage.js está activo. (y se elimina cuando se destruye)</li>
+<li><code>fp-destroyed</code> es añadido al contenedor usado para iniciar fullPage.js cuando se destruye fullPage.js.</li>
+<li><code>fp-enabled</code> es añadido al elemento <code>html</code> una vez se ha inicializado fullPage.js.</li>
+</ul>
+<h3 id="carga-pasiva-de-elementos-multimedia">Carga pasiva de elementos multimedia</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/eNLBXo">demostración</a> fullPage.js provee un modo e cargar pasivamente imágenes, vídeos y audio de manera que dichos elementos no ralentizen la carga de la página web y gasten recursos de transferencia innecesarios.
+Cuando se usa la carga pasiva de elementos, éstos solamente se cargarán cuando entren dentro de la parte visible de la ventana.
+Para activar esta funcionalidad bastará con cambiar el atributo <code>src</code> por <code>data-src</code> tal y como se muestra a continuación:</p>
+<pre><code>&lt;img data-src=&quot;image.png&quot;&gt;
+&lt;video&gt;
+    &lt;source data-src=&quot;video.webm&quot; type=&quot;video/webm&quot; /&gt;
+    &lt;source data-src=&quot;video.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+&lt;/video&gt;
+</code></pre><p>Si ya estabas usando otra librería de carga pasiva (lazy loading) que usa el atributo <code>data-src</code> también, puedes desactivar la carga pasiva de fullpage.js que está activa por defecto usando la opcion <code>lazyLoading: false</code>.</p>
+<h3 id="autoreproducir-elementos-multimedia">Autoreproducir elementos multimedia</h3>
+<p><strong>Note</strong>: esta funcionalidad puede que no funcione en dispositivos móviles. Ésto dependerá del sistema operativo y del navegador usado.</p>
+<h4 id="reproducir-al-cargar-la-secci-n-o-diapositiva-">Reproducir al cargar la sección o diapositiva:</h4>
+<p>Usando el atributo <code>autoplay</code> para videos y audios, o el parámetro <code>autoplay=1</code> para iframes de youtube causará que el elemento empiece a reproducirse al cargar la página web. 
+Usa el atributo <code>data-autplay</code> para comenzar a reproducirlo cuando la sección o diapositiva a la que pertenece sea visible en la ventana. Por ejemplo:</p>
+<pre><code class="lang-html">&lt;audio data-autoplay&gt;
+    &lt;source src=&quot;http://metakoncept.hr/horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+&lt;/audio&gt;
+</code></pre>
+<h4 id="pausar-al-abandonar-la-secci-n-o-diapositiva">Pausar al abandonar la sección o diapositiva</h4>
+<p>Los elementos multimedia HTML 5 incrustados <code>&lt;video&gt;</code> / <code>&lt;audio&gt;</code> y los iframes de Youtube serán automaticamente pausados al abandonar la sección o diapositiva a la que pertenecen. Esto puede desabilitarse usando el atributo <code>data-keepplaying</code>. Por ejemplo:</p>
+<pre><code class="lang-html">&lt;audio data-keepplaying&gt;
+    &lt;source src=&quot;http://metakoncept.hr/horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+&lt;/audio&gt;
+</code></pre>
+<h3 id="uso-de-extensiones">Uso de extensiones</h3>
+<p>fullPage.js <a href="http://alvarotrigo.com/fullPage/extensions/">provee varias extensiones</a> que puedes usar para mejorar sus ya increibles efectos. Todas las extensiones están la lista de <a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#opciones">las opciones de fullPage.js</a></p>
+<p>Las extensiones requiren el uso del archivo comprimido <a href="https://github.com/alvarotrigo/fullPage.js/blob/master/dist/jquery.fullpage.extensions.min.js"><code>jquery.fullpage.extensions.min.js</code></a> disponible <a href="https://github.com/alvarotrigo/fullPage.js/tree/master/dist">en la carpeta <code>dist</code></a> en lugar del archivo habitual de fullPage (<code>jquery.fullpage.js</code> o <code>jquery.fullpage.min.js</code>).
+Una vez adquiras el archivo correspondiente a la extensión que quieras usar, tendrás que añadirlo antes del archivo de fullPage. Por ejemplo, si quiero usar la extension Continuous Horizontal tendré que añadir el fichero de la extension y después el fichero de fullPage version extensiones.</p>
+<pre><code class="lang-html">&lt;script type=&quot;text/javascript&quot; src=&quot;fullpage.continuousHorizontal.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;fullpage/jquery.fullpage.extensions.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>Cada extensión requiere de una licencia y de una clave de activación. <a href="https://github.com/alvarotrigo/fullPage.js/wiki/How-to-activate-a-fullPage.js-extension">Ver más detalles sobe el uso de licencias aquí</a>.</p>
+<p>Luego podrás usar la extension y configurarla tal y como se explica en las <a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#opciones">opciones</a>.</p>
+<h2 id="opciones">Opciones</h2>
+<ul>
+<li><p><code>controlArrows</code>: (por defecto  <code>true</code>) Determina si usar flechas de contrl en las diapostiivas para deslizar hacia la derecha o izquierda.</p>
+</li>
+<li><p><code>verticalCentered</code>: (por defecto  <code>true</code>) centrado vertical de las secciones y diapositivas. Cuando se usa <code>true</code>, el contenido de cada sección y diapositiva será embuelto dentro de un contenedor por la libreríá. Considera usar delegacion en eventos Javascript o usar los eventos dentro del callback <code>afterRender</code>.</p>
+</li>
+<li><p><code>scrollingSpeed</code>: (por defecto  <code>700</code>) Velocidad de deslizamiento en milisegundos.</p>
+</li>
+<li><p><code>sectionsColor</code>: (por defecto  <code>none</code>) Define la propiedad CSS <code>background-color</code> property para cada sección.
+Ejemplo:</p>
+<pre><code class="lang-javascript">$(&#39;#fullpage&#39;).fullpage({
+  sectionsColor: [&#39;#f2f2f2&#39;, &#39;#4BBFC3&#39;, &#39;#7BAABE&#39;, &#39;whitesmoke&#39;, &#39;#000&#39;],
+});
+</code></pre>
+</li>
+<li><p><code>anchors</code>: (por defecto  <code>[]</code>) Define los links de anclaje (#ejemplo) que serán mostrados en la URL para cada sección. Los links de anclaje deben de ser únicos. La posición de los links en el array definirá a qué sección serán aplicados. (la segunda posición será la segunda sección y así). Usar la navegación del navegador para moverse al a página anterior y siguiente será posible cuando se usen links de anclaje. Éstos también ofrecen la posibilidad de guardar una sección o diapositiva específica a favoritos. <strong>Ten cuidado!</strong> las etiquetas <code>data-anchor</code> no pueden tener el mismo valor que ninguna otra etiqueta ID en la página. (o <code>name</code> para Internet Explorer)
+Ahora los links de anclaje también se pueden definir directamente en la estructura HTML usando el atributo <code>data-anchor</code>.</p>
+</li>
+<li><p><code>lockAnchors</code>: (por defecto  <code>false</code>) Determina si los links de anclaje en la URL tendrán efecto en fullPage.js. Puedes usar los anchor de manera interna para tus propias funciones o dento de los callbacks, pero no tendrán ningún efecto en el desplazamiento de la página web. Útiles cuando quieres combinar fullPage.js con otros plugins que usan links de anclaje en la URL.</p>
+</li>
+<li><p><code>easing</code>: (por defecto  <code>easeInOutCubic</code>) Define el tipo de transición que usará fullPage.js para el desplazamiento vertical y horizontal de la página cuando se usa <code>css3:false</code> o el navegador no soporta animaciones CSS 3.
+Requiere el archivo <code>vendors/jquery.easings.min.js</code> o <a href="http://jqueryui.com/">jQuery UI</a> para usar algunas de <a href="http://api.jqueryui.com/easings/">sus transiciones</a>
+Otras librerías puede ser usadas si se desea.</p>
+</li>
+<li><p><code>easingcss3</code>: (por defecto  <code>ease</code>) Define el efecto de transición que usará fullPage.js cuando se usa <code>css3:true</code>. Puedes usar los <a href="http://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp">efectos predefinidos</a> (como <code>linear</code>, <code>ease-out</code>...) o puedes crear tus propios efectos usando la función <code>cubic-bezier</code>. Puede que quieras ojear <a href="http://matthewlein.com/ceaser/">Matthew Lein CSS Easing Animation Tool</a> para ello.</p>
+</li>
+<li><p><code>loopTop</code>: (por defecto  <code>false</code>) Determina si hacer scroll hacia arriba estando en la primera sección te desplazará a la última o no.</p>
+</li>
+<li><p><code>loopBottom</code>: (por defecto  <code>false</code>) Determina si hacer scroll hacia abajo estando en la última sección te desplazá al a primera o no.</p>
+</li>
+<li><p><code>loopHorizontal</code>: (por defecto  <code>true</code>) Determina si las diapositivas horizontales volverán a la primera o última diaposivia al al llegar al a última o primera respectivamente. </p>
+</li>
+<li><p><code>css3</code>: (por defecto  <code>true</code>). Determina si fullPage.js usará JavasScript o animaciones CSS3 para realizar los desplazamientos entre secciones y diapositivas. Útil para mejorar el rendimiento en tabletas y dispositivos móbiles asi como en navegadores con soporte CSS 3. Si esta opción se pone a <code>true</code> y el navegador no soporta animaciones CSS 3, fullPage.js automáticamente lo volverá a poner a <code>false</code> para usar animaciones JavaScript.</p>
+</li>
+<li><p><code>autoScrolling</code>: (por defecto  <code>true</code>) Determina si usar desplazamiento &quot;automático&quot; o &quot;a saltos&quot; o usar el desplazamiento tradicional de cualquier página. También afecta al modo en el que las secciones se ajustan a la ventana en tabletas y dispositivos móbiles.</p>
+</li>
+<li><p><code>fitToSection</code>: (por defecto  <code>true</code>) Determina si &quot;encajar&quot; las secciones en el navegador o no. Esto tiene sentido cuando se usa <code>autoScrolling:false</code> o <code>scrollBar:false</code> o el modo responsive. Cuando se usa <code>true</code> la sección actual se desplazará en la pantalla hasta llegar el contenido den la ventana. De lo contrario el usuario podrá desplazarse libremente y parar en mitad de 2 secciones.</p>
+</li>
+<li><p><code>fitToSectionDelay</code>: (por defecto  1000). Si <code>fitToSection</code> está activo, esta opción define el tiempo en milisegundos que esperará fullpage.js desde que el usuario dejó de desplazarse hasta que la sección se encaja en la ventana. </p>
+</li>
+<li><p><code>scrollBar</code>: (por defecto  <code>false</code>) Determina si usar la barra de desplazamiento del navegador o no. En caso de usarla, la funcionalidad de <code>autoScrolling</code> (de desplazamiento automático o &quot;a saltos&quot;) funcionará como se espera. El usuario será también libre de desplazarse por la página usando la barra de navegación y fullpage.js encajará la sección cuando el desplazamiento cese siempre y cuando se use <code>fitToSection</code>.</p>
+</li>
+<li><p><code>paddingTop</code>: (por defecto  <code>0</code>) Determina el &quot;padding&quot; superior para cada sección con un valor numerico y su unidad de medida (paddingTop: &#39;10px&#39;, paddingTop: &#39;10em&#39;...). Útil cuando se usan cabezeras fijas (fixed).</p>
+</li>
+<li><p><code>paddingBottom</code>: (por defecto  <code>0</code>) Determina el &quot;padding&quot; inferior para cada sección con un valor numero y su unidad de medida (paddingBottom: &#39;10px&#39;, paddingBottom: &#39;10em&#39;...) Útil cuando se usa un pie de página fijo (fixed).</p>
+</li>
+<li><p><code>fixedElements</code>: (por defecto  <code>null</code>) Determina qué elementos serán extraidos de la estructura de fullPage.js. Cosa que es necesria cuando se usa la opción <code>css3</code> para mantenerlos fijos (fixed). Require una cadena de texto con el selector de jQuery para dichos elementos. (Por ejemplo: <code>fixedElements: &#39;#element1, .element2&#39;</code>)</p>
+</li>
+<li><p><code>normalScrollElements</code>: (por defecto  <code>null</code>) Si quieres evitar el auto desplazamiento (o desplazamiento a saltos) cuando se haga scroll encima de ciertos elementos, ésta es la opción a usar. (Útil para mapas, divs con scroll etc.). Require una cadena de texto con el selector de jQuery para dichos elementos.(Por ejemplo: <code>normalScrollElements: &#39;#element1, .element2&#39;</code>). Esta opción no debe ser aplicada directamente en las mismas secciones o disapositas en si. Sino a elementos dentro de ellas.</p>
+</li>
+<li><p><code>normalScrollElementTouchThreshold</code> : (por defecto  <code>5</code>) Determina el límite para el número de saltos hacia arriba en el árbol de nodos que Fullpage.js mirará para ver si cuadra con <code>normalScrollElements</code>. (For example: <code>normalScrollElementTouchThreshold: 3</code>)</p>
+</li>
+<li><p><code>bigSectionsDestination</code>: (por defecto  <code>null</code>) Determina cómo desplazarse hacia una sección mayor que la ventana del navegador. Por defecto fullPage.js se desplazará hacia la parte superior de la sección  si llegas desde una sección situada por encima y hacia la parte inferior si llegas desde una sección situada por debajo. Los posibles valores para esta opción son:  <code>top</code>, <code>bottom</code>, <code>null</code>.</p>
+</li>
+<li><p><code>keyboardScrolling</code>: (por defecto  <code>true</code>) Determina si el contenido puede ser navegado usando el teclado.</p>
+</li>
+<li><p><code>touchSensitivity</code>: (por defecto  <code>5</code>) Determina cierto porcentage de la ventana del navegador a partir del cual fullpage.js registra un desplazamiento vertical.</p>
+</li>
+<li><p><code>continuousVertical</code>: (por defecto  <code>false</code>) Determina si hacer scroll hacia abajo en la última sección producirá un desplazamiento hacia abajo hacia la primera sección o no, y si hacer scroll hacia arriba en la primera sección producirá un desplazamiento hacia arriba hacia la última sección. No es compatible con <code>loopTop</code>, <code>loopBottom</code> y ninguna barra de desplazamiento (usando <code>scrollBar:true</code> o <code>autoScrolling:false</code>).</p>
+</li>
+<li><p><code>continuousHorizontal</code>: (por defecto  <code>false</code>) <a href="http://alvarotrigo.com/fullPage/extensions/">Extensión de fullpage.js</a>. Determina si desplazarse hacia la derecha en la última diapositiva causará un desplazamiento hacia la derecha hacia la primera diapositiva, y si un desplazarse hacia la izquierda en la primera diapositiva causará un desplazamiento hacia la izquierda hacia la última diapositiva. No es compatible con <code>loopHorizontal</code>. </p>
+</li>
+<li><p><code>scrollHorizontally</code>: (por defecto  <code>false</code>) <a href="http://alvarotrigo.com/fullPage/extensions/">Extensión de fullpage.js</a>. Determina si moverse horizontalmente entre las diapositivas de la sección cuando se usa la ruleta del ratón o el trackpad. Ideal para contar historias. </p>
+</li>
+<li><p><code>interlockedSlides</code>: (por defecto  <code>false</code>) <a href="http://alvarotrigo.com/fullPage/extensions/">Extensión de fullpage.js</a>. Determina si al mover horizontalmente una sección con diapositivas ésto forzará el movimiento de otras diapositivas en otras secciones en la misma dirección. Los posibles valores son <code>true</code>, <code>false</code> o un array con las secciones que estarán interconectadas. Por ejemplo <code>[1,3,5]</code> empeznado por 1. </p>
+</li>
+<li><p><code>dragAndMove</code>: (por defecto  <code>false</code>) <a href="http://alvarotrigo.com/fullPage/extensions/">Extensión de fullpage.js</a>. Habilita o deshabilita el desplazamiento de secciones y diapositivas usando el ratón o los dedos en dispositivos táctiles. Los posibles valores para esta opción son <code>false</code>, <code>true</code>, <code>fingersonly</code>. La opción <code>fingersonly</code> habilita esta funcionalidad sólo para el desplazamienton con los dedos en dispositivos táctiles.</p>
+</li>
+<li><p><code>offsetSections</code>: (por defecto  <code>false</code>)<a href="http://alvarotrigo.com/fullPage/extensions/">Extensión de fullpage.js</a>. Provee una manera de usar secciones que no toman la pantalla completa sino un porcentage determinado de la misma. Ideal para mostrar a los visitantes que hay más contenido en la página mostrando parte de sección siguiente o anterior.
+Para definir el porcentage de la sección hay que hacer uso del atributo <code>data-percentage</code>. El centrado de la sección en la ventana puede definirse usando un valor booleano (true o false) en el atributo <code>data-centered</code>. (Por defecto será <code>true</code> si no se especifica) Por ejemplo:</p>
+<pre><code class="lang-html">  &lt;div class=&quot;section&quot; data-percentage=&quot;80&quot; data-centered=&quot;true&quot;&gt;
+</code></pre>
+</li>
+<li><p><code>resetSliders</code>: (por defecto  <code>false</code>). <a href="http://alvarotrigo.com/fullPage/extensions/">Extensión de fullpage.js</a>. Determina cuando reiniciar el carousel de diapositivas de la sección al salir de ella de modo que muestre la primera diapositiva cuando se vuelva a dicha sección.</p>
+</li>
+<li><p><code>fadingEffect</code>: (por defecto  <code>false</code>). <a href="http://alvarotrigo.com/fullPage/extensions/">Extensión de fullpage.js</a>. Determina cuando usar el efecto de desvanecimiento (fading) en lugar del efecto de desplazamiento habitual de fullPage.js. Los posibiles valores son <code>true</code>, <code>false</code> <code>sections</code>, <code>slides</code>. Puede por lo tanto aplicarse únicamente vertical u horizontalmente o ambos al tiempo.</p>
+</li>
+<li><p><code>animateAnchor</code>: (por defecto  <code>true</code>) Determina si al cargar la página usando un link the anclaje (#) ésta se desplazará a la sección de destino o si por el contrario cargará la página directamente en dicha sección.</p>
+</li>
+<li><p><code>recordHistory</code>: (por defecto  <code>true</code>) Determina si el estado de la página se guardará en la historia del navegador. Cuando se define la opción a <code>true</code> cada sección/diapositiva de la página actuará como una nueva página y el botón de &quot;página anterior&quot; o &quot;página siguiente&quot; del navegador desplazará las secciones/diapositivas del página hasta alcanzar el estado de la página anterior o siguiente respectivamente. Cuando se define la opción a <code>false</code>, la URL seguirá cambiando con los links de anclaje correspondientes pero no tendrán ningún efecto en la historia del navegador. Esta opción está automáticamente definida como <code>false</code> cuanso se usa la opcion <code>autoScrolling:false</code>.</p>
+</li>
+<li><p><code>menu</code>: (por defecto  <code>false</code>) Se puede usear un selector para especificar el menú de la página al que las secciones hacen referencia. De este modo el desplazamiento vertical entre las secciones activará el elemento correspondiente del menú usando la clase <code>active</code>.
+Esta opción no generará ningún menú sino que simplemente añade la clase <code>active</code> al elemento del menu con el link de anclaje correspondiente a la sección.
+Para relacionar los elementos del menú con las secciones se requiere del uso del atributo <code>data-menuanchor</code> que tendrá que tener el mismo valor que el link de anclaje que la sección a la que haga referencia. Por ejemplo:</p>
+<pre><code class="lang-html">&lt;ul id=&quot;myMenu&quot;&gt;
+  &lt;li data-menuanchor=&quot;firstPage&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#firstPage&quot;&gt;First section&lt;/a&gt;&lt;/li&gt;
+  &lt;li data-menuanchor=&quot;secondPage&quot;&gt;&lt;a href=&quot;#secondPage&quot;&gt;Second section&lt;/a&gt;&lt;/li&gt;
+  &lt;li data-menuanchor=&quot;thirdPage&quot;&gt;&lt;a href=&quot;#thirdPage&quot;&gt;Third section&lt;/a&gt;&lt;/li&gt;
+  &lt;li data-menuanchor=&quot;fourthPage&quot;&gt;&lt;a href=&quot;#fourthPage&quot;&gt;Fourth section&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<pre><code class="lang-javascript">$(&#39;#fullpage&#39;).fullpage({
+  anchors: [&#39;firstPage&#39;, &#39;secondPage&#39;, &#39;thirdPage&#39;, &#39;fourthPage&#39;, &#39;lastPage&#39;],
+  menu: &#39;#myMenu&#39;
+});
+</code></pre>
+</li>
+</ul>
+<p><strong>Nota:</strong> el menú tiene que estar situado fuera del contenedor de fullpage para evitar problemas cuando se use <code>css3:true</code>. De lo contrario el menú será automáticamente movido fuera de la estructura de fullPage.js y anadido en el <code>body</code>.</p>
+<ul>
+<li><p><code>navigation</code>: (por defecto  <code>false</code>) Si se define a <code>true</code>, se mostrará una navegación lateral de círculos haciendo referencia a las secciones de la página.</p>
+</li>
+<li><p><code>navigationPosition</code>: (por defecto  <code>none</code>) Puede ser definido a <code>left</code> o <code>right</code> y determina la posición que tomará la navegación (si es que se usa).</p>
+</li>
+<li><p><code>navigationTooltips</code>: (por defecto  []) Determina el texto para usar en cada circulo de la navegación. Por ejemplo:  <code>navigationTooltips: [&#39;firstSlide&#39;, &#39;secondSlide&#39;]</code>. También puedes definir dichos textos usando el atributo <code>data-tooltip</code> en cada sección si así lo prefieres.</p>
+</li>
+<li><p><code>showActiveTooltip</code>: (por defecto  <code>false</code>) Determina si mostrar siempre visibile el texto para el circulo de la navegación que se encuentre activo en ese momento.</p>
+</li>
+<li><p><code>slidesNavigation</code>: (por defecto  <code>false</code>) Si se define a <code>true</code> mostrará la navegación para las diapositivas horizontales de la página.</p>
+</li>
+<li><p><code>slidesNavPosition</code>: (por defecto  <code>bottom</code>) Determina la posición que tomará la navegación para las diapositivas horizontales de la página. Admite los valores <code>top</code> y <code>bottom</code>. Tal vez quieras modificar la distancia inferior o superior usando estilos CSS así como el color de los mismos.</p>
+</li>
+<li><p><code>scrollOverflow</code>: (por defecto  <code>false</code>) (no compatible con IE 8) Determina si crear o no una barra de desplazamiento para las secciones/diapositivas donde el contenido de las mismas sea mayor que la altura de la ventana del navegador. Cuando se define a <code>true</code>, el contenido de la sección/diapositiva será embuelto por fullPage.js en un contenedor. En estos casos, considera usar delegación o usar los eventos Javascript en el callback <code>afterRender</code>.
+Cuando se usa <code>true</code> esta opción requiere del uso de la librería externa <a href="https://github.com/alvarotrigo/fullPage.js/blob/master/vendors/scrolloverflow.min.js"><code>scrolloverflow.min.js</code></a> y debe de ser añadida antes que fullPage.js. Por ejemplo</p>
+</li>
+</ul>
+<pre><code class="lang-html">&lt;script type=&quot;text/javascript&quot; src=&quot;vendors/scrolloverflow.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.fullPage.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>Para evitar que fullPage.js crea la barra de desplazamiento en ciertas secciones o diapositivas, haz uso de la clase <code>fp-noscroll</code>. Por ejemplo: <code>&lt;div class=&quot;section fp-noscroll&quot;&gt;</code></p>
+<ul>
+<li><p><code>scrollOverflowReset</code>: (por defecto  <code>false</code>) <a href="http://alvarotrigo.com/fullPage/extensions/">Extensión de fullpage.js</a>. Cuando se define a <code>true</code> fullPage.js moverá el contenido de la seccion o diapositiva hacia arriba cuando se abandone la seccion o diapositiva hacia otra sección vertical. De este modo, cuando se llega a una sección que usa barra de desplazamiento, se mostrará siempre el principio de su contenido.</p>
+</li>
+<li><p><code>scrollOverflowOptions</code>: cuando se usa la opcion de scrollOverflow:true fullPage.js hará uso de una versión modificada de la <a href="https://github.com/cubiq/iscroll/">libería iScroll.js</a>. Puedes personalizar el comportamiento de dicho componente aportando a fullPage.js las opciones de iScroll que quieras usar haciendo uso de esta opción. Mira <a href="http://iscrolljs.com/">la documentacion de iScroll</a> para más información.</p>
+</li>
+<li><p><code>sectionSelector</code>: (por defecto  <code>.section</code>) Determina el selector de jQuery que fullPage.js usará para determinar lo que es una sección. Puede que necesites cambiarlo para evitar problemas con otras librerías que usen el mismo selector que usa fullPage.js por defecto.</p>
+</li>
+<li><p><code>slideSelector</code>: (por defecto  <code>.slide</code>)  Determina el selector de jQuery que fullPage.js usará para determinar lo que es una diapositiva. Puede que necesites cambiarlo para evitar problemas con otras liberías que usen el mismo selector que usa fulPage.js por defecto.</p>
+</li>
+<li><p><code>responsiveWidth</code>: (por defecto  <code>0</code>)  Usará el desplazamiento por defecto de cualquier otra página cuando la ventana tenga un valor de anchor menor que el definido en esta opción. La clase <code>fp-resposive</code> será añadida al elemento <code>body</code> de página en caso de que quieras usar dicho selector en tu hoja de estilos CSS para determinar cuando fullpage.js ha entrado en modo responsive. Por ejemplo, si se define como 900, cuando la ventana del navegador sea menor que 900 pixels el desplazamiento de fullpage.js actuará como en una página normal.</p>
+</li>
+<li><p><code>responsiveHeight</code>: (por defecto  <code>0</code>)  Usará el desplazamiento por defecto de cualquier otra página cuando la ventana tenga un valor de altura menor que el definido en esta opción. La clase <code>fp-resposive</code> será añadida al elemento <code>body</code> de página en caso de que quieras usar dicho selector en tu hoja de estilos CSS para determinar cuando fullpage.js ha entrado en modo responsive. Por ejemplo, si se define como 900, cuando la ventana del navegador sea menor que 900 pixels el desplazamiento de fullpage.js actuará como en una página normal.</p>
+</li>
+<li><p><code>responsiveSlides</code>: (por defecto  <code>false</code>) <a href="http://alvarotrigo.com/fullPage/extensions/">Extensión de fullpage.js</a>. Cuando se define a <code>true</code> las diapositivas horizontales se convertirán en secciones verticales cuando el modo responsive se active (haciendo uso de las opciones <code>responsiveWith</code> o <code>responsiveHeight</code> detalladas arriba).</p>
+</li>
+<li><p><code>parallax</code>: (por defecto  <code>false</code>) <a href="http://alvarotrigo.com/fullPage/extensions/">Extensión de fullpage.js</a>. Determina si usar fondos de seccion y diapositiva con efecto parallax o no. <a href="https://github.com/alvarotrigo/fullPage.js/wiki/Extension---Parallax">Lee más acerca de la opción parallax aquí</a>.</p>
+</li>
+<li><p><code>parallaxOptions</code>: (por defecto : <code>{ type: &#39;reveal&#39;, percentage: 62, property: &#39;translate&#39;}</code>). Permite configurar los parámetros para el efecto de parallax cuando se usa la opción <code>parallax:true</code>. <a href="https://github.com/alvarotrigo/fullPage.js/wiki/Extension---Parallax">Lee más acerca de la opción parallax aquí</a>.</p>
+</li>
+<li><p><code>lazyLoading</code>: (por defecto  <code>true</code>) La carga pasiva está activa por defecto, lo que significa que cargará pasivamente cualquier elemento multimedia que contenga el atributo <code>data-src</code> como se detalla en la <a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#carga-pasiva-de-elementos-multimedia">carga pasiva de elementos multimedia</a>. Si quieres usar otra librería de carga pasiva puedes desabilitar esta funcionalidad usando <code>false</code>.</p>
+</li>
+</ul>
+<h2 id="m-todos">Métodos</h2>
+<p>Puedes verlos en acción <a href="http://alvarotrigo.com/fullPage/examples/methods.html">aquí</a></p>
+<h3 id="movesectionup-">moveSectionUp()</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/GJXNMN">demostración</a> Desplaza la página hacia arriba una sección:</p>
+<pre><code class="lang-javascript">$.fn.fullpage.moveSectionUp();
+</code></pre>
+<hr>
+<h3 id="movesectiondown-">moveSectionDown()</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/jPvVZx">demostración</a> Desplaza la página hacia abajo una sección:</p>
+<pre><code class="lang-javascript">$.fn.fullpage.moveSectionDown();
+</code></pre>
+<hr>
+<h3 id="moveto-section-slide-">moveTo(section, slide)</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/doqOmY">demostración</a> Desplaza la página hacia la sección o diapositiva que se le indique. La primera diapositiva en una sección, que es la visible por defecto, tendrá índice 0.</p>
+<pre><code class="lang-javascript">/* Desplzando la página a la sección con el link the anclaje `firstSlide` y a la diapositiva numero 2*/
+$.fn.fullpage.moveTo(&#39;firstSlide&#39;, 2);
+</code></pre>
+<pre><code class="lang-javascript">//Desplazándo a la tercera sección de la página
+$.fn.fullpage.moveTo(3, 0);
+
+//Que sería lo mismo que hacer esto
+$.fn.fullpage.moveTo(3);
+</code></pre>
+<hr>
+<h3 id="silentmoveto-section-slide-">silentMoveTo(section, slide)</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/doqOeY">demostración</a>
+Exáctamente lo mismo que <a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#movetosection-slide"><code>moveTo</code></a> pero en este caso el desplazamiento se hará sin animación. Un salto directo al destino sin transición.</p>
+<pre><code class="lang-javascript">/* Desplzando la página a la sección con el link the anclaje `firstSlide` y a la diapositiva numero 2*/
+$.fn.fullpage.silentMoveTo(&#39;firstSlide&#39;, 2);
+</code></pre>
+<hr>
+<h3 id="moveslideright-">moveSlideRight()</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/Wvgoyz">demostración</a>
+Desplaza el carousle de diapostivas de la sección actual hacia la siguiente diapositiva. </p>
+<pre><code class="lang-javascript">$.fn.fullpage.moveSlideRight();
+</code></pre>
+<hr>
+<h3 id="moveslideleft-">moveSlideLeft()</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/gpdLjW">demostración</a>
+Desplaza el carousle de diapostivas de la sección actual hacia la diapositiva anterior. </p>
+<pre><code class="lang-javascript">$.fn.fullpage.moveSlideLeft();
+</code></pre>
+<hr>
+<h3 id="setautoscrolling-boolean-">setAutoScrolling(boolean)</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/rVZWrR">demostración</a> Permite definir la configuración de la opción <code>autoScrolling</code> después de la inicialización.
+Determina si usar desplazamiento &quot;automático&quot; o &quot;a saltos&quot; o usar el desplazamiento tradicional de cualquier página.</p>
+<pre><code class="lang-javascript">$.fn.fullpage.setAutoScrolling(false);
+</code></pre>
+<hr>
+<h3 id="setfittosection-boolean-">setFitToSection(boolean)</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/GJXNYm">demostración</a>
+Determina el valor para la opción <code>fitToSection</code> definiendo si ajustar la sección más cercana a la pantalla o no.</p>
+<pre><code class="lang-javascript">$.fn.fullpage.setFitToSection(false);
+</code></pre>
+<hr>
+<h3 id="fittosection-">fitToSection()</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/JWWagj">demostración</a>
+Desplaza la página hacia la sección activa más cercana encajándola en la pantalla.</p>
+<pre><code class="lang-javascript">$.fn.fullpage.fitToSection();
+</code></pre>
+<hr>
+<h3 id="setlockanchors-boolean-">setLockAnchors(boolean)</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/yNxVRQ">demostración</a>
+Define el valor para la opción <code>lockAnchors</code> determinando si los links de anclaje tendrán algún efecto en la URL o no.</p>
+<pre><code class="lang-javascript">$.fn.fullpage.setLockAnchors(false);
+</code></pre>
+<hr>
+<h3 id="setallowscrolling-boolean-directions-">setAllowScrolling(boolean, [directions])</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/EjeNdq">demostración</a> 
+Añade o elemina la posibilidad de desplazarse a través de las secciones o diapositivas usando la ruleta del ratón, el trackpad del portátil o con los dedos en dispositivos tátctiles. Ten en cuenta que ésto no desabilitará el desplazamiento usando el teclado. Para ello necesitarás hacer uso de <code>setKeyboardScrolling</code>.</p>
+<ul>
+<li><code>directions</code>: (parámetro opcional) Los posibles valores son <code>all</code>, <code>up</code>, <code>down</code>, <code>left</code>, <code>right</code> o una combinación de lo mismos usando comas, por ejemplo: <code>down, right</code>. Determina la dirección para la que el desplazamiento estará habilitado o desabilitado. </li>
+</ul>
+<pre><code class="lang-javascript">
+//desabilitando cualquier tipo de desplazamiento
+$.fn.fullpage.setAllowScrolling(false);
+
+//desabilitando desplazamiento hacia abajo
+$.fn.fullpage.setAllowScrolling(false, &#39;down&#39;);
+
+//desabilitando desplazamiento hacia abajo y hacia la derecha
+$.fn.fullpage.setAllowScrolling(false, &#39;down, right&#39;);
+</code></pre>
+<hr>
+<h3 id="setkeyboardscrolling-boolean-directions-">setKeyboardScrolling(boolean, [directions])</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/GJXNwm">demostración</a> Añade o elimina la posibilidad de desplazarse a través de las secciones usando las teclas del teclado (activo por defecto).</p>
+<ul>
+<li><code>directions</code>: (parámetro opcional) Los posibles valores son <code>all</code>, <code>up</code>, <code>down</code>, <code>left</code>, <code>right</code> o una combinación de lo mismos usando comas, por ejemplo: <code>down, right</code>. Determina la dirección para la que el desplazamiento estará habilitado o desabilitado. </li>
+</ul>
+<pre><code class="lang-javascript">//desabilitando todo tipo de desplazamiento con el teclado
+$.fn.fullpage.setKeyboardScrolling(false);
+
+//desabilitando el desplazamiento hacia abajo con el teclado 
+$.fn.fullpage.setKeyboardScrolling(false, &#39;down&#39;);
+
+//desabilitando el desplazamiento hacia abajo y hacia la derecha con el teclado
+$.fn.fullpage.setKeyboardScrolling(false, &#39;down, right&#39;);
+</code></pre>
+<hr>
+<h3 id="setrecordhistory-boolean-">setRecordHistory(boolean)</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/rVZWQb">demostración</a> Determina si fullPage.js modificará la historia del navegador con cada cambio de link the anclaje (#) en la URL.</p>
+<pre><code class="lang-javascript">$.fn.fullpage.setRecordHistory(false);
+</code></pre>
+<hr>
+<h3 id="setscrollingspeed-milliseconds-">setScrollingSpeed(milliseconds)</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/NqLbeY">demostración</a> Define la velocidad de desplazamiento en milisegundos. </p>
+<pre><code class="lang-javascript">$.fn.fullpage.setScrollingSpeed(700);
+</code></pre>
+<hr>
+<h3 id="destroy-type-">destroy(type)</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/bdxBzv">demostración</a> Destruye los eventos de fullPage.js y opcionalmente la estructura HTML creada por el mismo asi como cualquier estilo que haya aplicado.
+Ideal para usar cuando se usa en páginas AJAX.</p>
+<ul>
+<li><code>type</code>: (parámetro opcional) Si se define como <code>all</code> la estructura HTML creada por fullPage.js asi como cualquier estilo que haya aplicado serán eliminados. De este modo se mantendrá el HTMl original, es decir, el usado antes de que fullPage.js se iniciase. </li>
+</ul>
+<pre><code class="lang-javascript">//destrozando los eventos Javascript de fullPage.js (scrolls, hashchange in the URL...)
+$.fn.fullpage.destroy();
+
+//destrozando los eventos Javascript asi como cualquier modificación en el HTML echa tras iniciar fullPage.js
+$.fn.fullpage.destroy(&#39;all&#39;);
+</code></pre>
+<hr>
+<h3 id="rebuild-">reBuild()</h3>
+<p>Ajusta el tamano de las secciones y diapositivas así como su posición y su posible barra de desplazamiento si se usa <code>scrollOverflow:true</code>.
+Ideal para usar en combinación con llamadas AJAX o cambios externos en la estructura DOM de la página, especialmente cuando se usa <code>scrollOverflow:true</code>.</p>
+<pre><code class="lang-javascript">$.fn.fullpage.reBuild();
+</code></pre>
+<hr>
+<h3 id="setresponsive-boolean-">setResponsive(boolean)</h3>
+<p><a href="http://codepen.io/alvarotrigo/pen/WxOyLA">demostración</a> Define el modo &quot;responsive&quot;. Cuando se define a <code>true</code> la funcionalidad de autoScrolling será desactivada tal y como sucedería si se disparasen las opciones <code>responsiveWidth</code> o <code>responsiveHeight</code>.</p>
+<pre><code class="lang-javascript">$.fn.fullpage.setResponsive(true);
+</code></pre>
+<hr>
+<h3 id="responsiveslides-tosections-">responsiveSlides.toSections()</h3>
+<p><a href="http://alvarotrigo.com/fullPage/extensions/">Extension of fullpage.js</a>.
+Convierte diapositivas horizontales en secciones verticales.</p>
+<pre><code class="lang-javascript">$.fn.fullpage.responsiveSlides.toSections();
+</code></pre>
+<hr>
+<h3 id="responsiveslides-toslides-">responsiveSlides.toSlides()</h3>
+<p><a href="http://alvarotrigo.com/fullPage/extensions/">Extension of fullpage.js</a>. 
+Desace el cambio de las diapositivas horizontales que han sido convertidas a secciones verticales. Dejándolas de nuevo como diapositivas horizontales dentro de una sección.</p>
+<pre><code class="lang-javascript">$.fn.fullpage.responsiveSlides.toSlides();
+</code></pre>
+<h2 id="callbacks">Callbacks</h2>
+<p><a href="http://codepen.io/alvarotrigo/pen/XbPNQv">demostración</a> Puedes verlas en acción <a href="http://alvarotrigo.com/fullPage/examples/callbacks.html">aquí</a>..</p>
+<h3 id="afterload-anchorlink-index-">afterLoad (<code>anchorLink</code>, <code>index</code>)</h3>
+<p>Se dispara cuando una sección ha sido cargada completamente en la ventana, una vez el desplazamiento ha terminado.
+Parámetros:</p>
+<ul>
+<li><code>anchorLink</code>: link de anclaje correspondiente a la sección.</li>
+<li><code>index</code>: índice de la sección. Empezando por 1.</li>
+</ul>
+<p>En caso de no terner links de anclaje definidos, el parámetro <code>index</code> será el que podrás usar.</p>
+<p>Por ejemplo:</p>
+<pre><code class="lang-javascript">$(&#39;#fullpage&#39;).fullpage({
+    anchors: [&#39;firstPage&#39;, &#39;secondPage&#39;, &#39;thirdPage&#39;, &#39;fourthPage&#39;, &#39;lastPage&#39;],
+
+    afterLoad: function(anchorLink, index){
+        var loadedSection = $(this);
+
+        //usando su índice
+        if(index == 3){
+            alert(&quot;Section 3 ended loading&quot;);
+        }
+
+        //usando su link de anclaje
+        if(anchorLink == &#39;secondSlide&#39;){
+            alert(&quot;Section 2 ended loading&quot;);
+        }
+    }
+});
+</code></pre>
+<hr>
+<h3 id="onleave-index-nextindex-direction-">onLeave (<code>index</code>, <code>nextIndex</code>, <code>direction</code>)</h3>
+<p>Se dispara una vez que el usuario abandone la sección, durante la transición a la nueva sección.
+Si devuelves <code>false</code> el movimiento se cancelará antes de que tenga lugar.</p>
+<p>Parámetros:</p>
+<ul>
+<li><code>index</code>: índice de la sección que se deja atrás. Empezando por 1.</li>
+<li><code>nextIndex</code>: índice de la sección de destino. Empezando por 1.</li>
+<li><code>direction</code>: podrá tomar los valores <code>up</code> o <code>down</code> dependiendo de la dirección del desplazamiento.</li>
+</ul>
+<p>Por ejemplo:</p>
+<pre><code class="lang-javascript">$(&#39;#fullpage&#39;).fullpage({
+    onLeave: function(index, nextIndex, direction){
+        var leavingSection = $(this);
+
+        //después de abandonar la sección 2
+        if(index == 2 &amp;&amp; direction ==&#39;down&#39;){
+            alert(&quot;Me estoy moviendo a la sección 3!&quot;);
+        }
+
+        else if(index == 2 &amp;&amp; direction == &#39;up&#39;){
+            alert(&quot;Me estoy moviendo a la sección 1!&quot;);
+        }
+    }
+});
+</code></pre>
+<h4 id="cancelando-un-desplazamiento-antes-de-que-tenga-lugar">Cancelando un desplazamiento antes de que tenga lugar</h4>
+<p>Puedes cancelar un desplazamiento si devuelves <code>false</code> en el callback <code>onLeave</code>:</p>
+<pre><code class="lang-javascript">$(&#39;#fullpage&#39;).fullpage({
+    onLeave: function(index, nextIndex, direction){
+        //prevenimos el desplazamiento si la sección de destino es la tercera de la página
+        if(nextIndex == 3){
+            return false;
+        }
+    }
+});
+</code></pre>
+<hr>
+<h3 id="afterrender-">afterRender()</h3>
+<p>Será disparado justo después de que la estructura de la página sea generada por fullPage.js. Este callback es útil si quieres iniciar otros plugins o ejectuar cualquier otro código que requiera que la estructura de la página esté lista (ready). fullPage.js modifica la estructura DOM  de la página y por lo tanto puede que los elementos en la página se consideren dinámicos. Mira <a href="https://github.com/alvarotrigo/fullPage.js/wiki/FAQ---Frequently-Answered-Questions">las FAQs</a> para mas información.</p>
+<p>Ejemplo:</p>
+<pre><code class="lang-javascript">$(&#39;#fullpage&#39;).fullpage({
+    afterRender: function(){
+        var pluginContainer = $(this);
+        alert(&quot;La estructura resultante ya está lista para su uso&quot;);
+    }
+});
+</code></pre>
+<hr>
+<h3 id="afterresize-">afterResize()</h3>
+<p>Será disparado después de que la ventana del navegador sea reajustada en tamaño. Justo después de que las secciones se hayan reajustado.</p>
+<p>Ejemplo:</p>
+<pre><code class="lang-javascript">$(&#39;#fullpage&#39;).fullpage({
+    afterResize: function(){
+        var pluginContainer = $(this);
+        alert(&quot;Las secciones han terminado de reajustarse&quot;);
+    }
+});
+</code></pre>
+<hr>
+<h3 id="afterresponsive-isresponsive-">afterResponsive(<code>isResponsive</code>)</h3>
+<p>Será disparado después de que fullPage.js cambie de su estado normal a &quot;responsive&quot; o biceversa. </p>
+<p>Parámetros:</p>
+<ul>
+<li><code>isResponsive</code>: boolean que determina si entra (<code>true</code>) o sale (<code>false</code>) del modo &quot;responsive&quot; hacia su modo normal. </li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code class="lang-javascript">$(&#39;#fullpage&#39;).fullpage({
+    afterResponsive: function(isResponsive){
+        alert(&quot;Es responsive: &quot; + isResponsive);
+    }
+});
+</code></pre>
+<hr>
+<h3 id="afterslideload-anchorlink-index-slideanchor-slideindex-">afterSlideLoad (<code>anchorLink</code>, <code>index</code>, <code>slideAnchor</code>, <code>slideIndex</code>)</h3>
+<p>Será disparado una vez cargue la diapositiva de una sección, después de que el desplazamiento haya terminado.</p>
+<p>Parámetros:</p>
+<ul>
+<li><code>anchorLink</code>: link de anclaje de la sección correspondiente.</li>
+<li><code>index</code>: índice de la sección. Empezando por 1.</li>
+<li><code>slideAnchor</code>: link de anclaje correspondiente a la diapositiva que se acaba de cargar (en caso de que se use un link de anclaje)</li>
+<li><code>slideIndex</code>: índice de la diapositiva cargada. Empezando por 1. (la diapositiva inicial no contará como diapositiva sino como una sección).</li>
+</ul>
+<p>En caso de que no haya links de anclaje definidos para las diapositivas podrás hacer uso del parámetro <code>slideIndex</code>.
+Ejemplo:</p>
+<pre><code class="lang-javascript">$(&#39;#fullpage&#39;).fullpage({
+    anchors: [&#39;firstPage&#39;, &#39;secondPage&#39;, &#39;thirdPage&#39;, &#39;fourthPage&#39;, &#39;lastPage&#39;],
+
+    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+        var loadedSlide = $(this);
+
+        //primera diapositiva de la segunda sección
+        if(anchorLink == &#39;secondPage&#39; &amp;&amp; slideIndex == 1){
+            alert(&quot;Primera diapositiva cargada&quot;);
+        }
+
+        //segunda diapositiva de la segunda sección (suponiendo que #secondSlide es 
+        //el link de anclaje d ela segunda diapositiva
+        if(index == 2 &amp;&amp; slideIndex == &#39;secondSlide&#39;){
+            alert(&quot;Segunda diapositiva cargada&quot;);
+        }
+    }
+});
+</code></pre>
+<hr>
+<h3 id="onslideleave-anchorlink-index-slideindex-direction-nextslideindex-">onSlideLeave (<code>anchorLink</code>, <code>index</code>, <code>slideIndex</code>, <code>direction</code>, <code>nextSlideIndex</code>)</h3>
+<p>Será disparado una vez el usuario abandone la diapositiva acutal para ir a otra, durante la transición hacia la nueva diapositiva. 
+Devolver <code>false</code> 
+Si devuelves <code>false</code> el movimiento se cancelará antes de que tenga lugar.</p>
+<p>Parámetros:</p>
+<ul>
+<li><code>anchorLink</code>: link de anclaje correspondiente a la sección.</li>
+<li><code>index</code>: índice de la sección. Empezando por 1.</li>
+<li><code>slideIndex</code>: índice de la diapositiva. <strong>Empezando por 0.</strong></li>
+<li><code>direction</code>: toma los valores <code>right</code> or <code>left</code> dependiendo de la dirección de desplazamiento.</li>
+<li><code>nextSlideIndex</code>: índice de la diapositiva de destino. <strong>Empezando por from 0.</strong></li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code class="lang-javascript">$(&#39;#fullpage&#39;).fullpage({
+    onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
+        var leavingSlide = $(this);
+
+        //abandonando la primera diapositiva de la segunda sección y moviendo hacia la derecha
+        if(index == 2 &amp;&amp; slideIndex == 0 &amp;&amp; direction == &#39;right&#39;){
+            alert(&quot;Abandonando la diapositiva 1!!&quot;);
+        }
+
+        //abandonando la tercera diapositiva de la segunda sección y moviendo hacia la izquierda 
+        if(index == 2 &amp;&amp; slideIndex == 2 &amp;&amp; direction == &#39;left&#39;){
+            alert(&quot;Yendo a la diapositiva 2! &quot;);
+        }
+    }
+});
+</code></pre>
+<h4 id="cancelando-un-desplazamiento-antes-de-que-tenga-lugar">Cancelando un desplazamiento antes de que tenga lugar</h4>
+<p>Puedes cancelar el desplazamiento devolviendo <code>false</code> en el callback <code>onSlideLeave</code>. Exáctametne igual que cuando se usa <a href="https://github.com/alvarotrigo/fullPage.js/blob/master/README_SPANISH.md#cancelando-un-desplazamiento-antes-de-que-tenga-lugar"><code>onLeave</code></a>.</p>
+<h1 id="reportando-problemas">Reportando problemas</h1>
+<ol>
+<li>Por favor, usa el buscador en github issues para buscar tu duda o problema antes de pregunar.</li>
+<li>Asegurate de que estás usando la última versión de fullPage.js. No se provee soporte para versiones anteriores.</li>
+<li>Usa el <a href="https://github.com/alvarotrigo/fullPage.js/issues">foro de Github</a> para crear la pregunta o tema y <strong>házlo en ingles</strong> a ser posible.</li>
+<li><strong>Se requerirá la reproducción aislada del problema.</strong> Usa <a href="http://jsfiddle.net/97tbk/418/">jsfiddle</a> o <a href="http://codepen.io/alvarotrigo/pen/NxyPPp">codepen</a> si es posible.</li>
+</ol>
+<h1 id="contribuir-con-fullpage-js">Contribuir con fullPage.js</h1>
+<p>Por favor mira <a href="https://github.com/alvarotrigo/fullPage.js/wiki/Contributing-to-fullpage.js">Contributing to fullpage.js</a></p>
+<h1 id="changelog">Changelog</h1>
+<p>Para ver la lista de cambios recientes, mira <a href="https://github.com/alvarotrigo/fullPage.js/releases">la sección de releases</a>.
+Solo disponible en ingles :)</p>
+<h1 id="build-tasks">Build tasks</h1>
+<p>Want to build fullpage.js distribution files? Please see <a href="https://github.com/alvarotrigo/fullPage.js/wiki/Build-tasks">Build Tasks</a></p>
+<h1 id="recursos">Recursos</h1>
+<ul>
+<li><a href="http://alvarotrigo.com/fullPage/utils/wordpress.html">Template de Wordpress</a></li>
+<li><a href="http://matthewlein.com/ceaser/">Herramienta de animacion de CSS Easing - Matthew Lein</a> (útil para definir la opción <code>easingcss3</code>)</li>
+<li><a href="http://www.jsdelivr.com/#!jquery.fullpage">fullPage.js jsDelivr CDN</a></li>
+<li><a href="http://octobercms.com/plugin/freestream-parallax">fullPage.js plugin para October CMS</a></li>
+<li><a href="https://wordpress.org/plugins/wp-fullpage/">fullPage.js wordpress plugin</a></li>
+<li><a href="https://github.com/subtirelumihail/react-fullpage">fullPage.js React implementación</a></li>
+<li><a href="https://github.com/meiblorn/ng2-fullpage">fullPage.js Angular2 directive</a></li>
+<li><a href="https://github.com/hellsan631/angular-fullpage.js">fullPage.js angular directive</a></li>
+<li><a href="https://www.npmjs.com/package/ember-cli-fullpagejs">fullPage.js ember-cli addon</a></li>
+<li><a href="https://rubygems.org/gems/fullpagejs-rails">fullPage.js Rails Ruby Gem</a></li>
+<li><a href="https://github.com/mmautomatizacion/angular-fullpage.js">Angular fullPage.js - Adaptation for Angular.js v1.x</a></li>
+<li><a href="http://premium.wpmudev.org/blog/build-apple-inspired-full-page-scrolling-pages-for-your-wordpress-site/">Integrating fullPage.js con Wordpress (Tutorial)</a></li>
+</ul>
+<h2 id="qui-n-usa-fullpage-js">Quién usa fullPage.js</h2>
+<p><a href="http://www.yourprimer.com/"><img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/google.png" alt="Google"></a>
+<a href="http://www.sony-asia.com/microsite/mdr-10/"><img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/sony.gif" alt="Sony"></a>
+<img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/vodafone.png" alt="Vodafone">
+<a href="http://www.britishairways.com/en-gb/information/travel-classes/experience-our-cabins"><img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/british-airways-fullpage.gif" alt="British Airways"></a>
+<a href="https://mcdonalds.com.au/create-your-taste"><img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/mcdonalds.png" alt="McDonalds"></a>
+<a href="http://www.battlefield.com/"><img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/ea.png" alt="EA"></a>
+<a href="http://www.mi.com/shouhuan"><img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/mi.png" alt="Mi"></a>
+<a href="http://usescribe.com/"><img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/scribe.png" alt="scribe"></a>
+<a href="http://www.sanyang.com.tw/service/Conception/"><img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/sym.png" alt="redd"></a>
+<a href="http://www.bugatti.com/veyron/veyron-164/"><img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/bugatti.gif" alt="Bugatti"></a>
+<a href="https://www.edarling.de/"><img src="http://wallpapers-for-ipad.com/fullpage/imgs3/logos/edarling.png" alt="Bugatti"></a></p>
+<ul>
+<li><a href="http://www.britishairways.com/en-gb/information/travel-classes/experience-our-cabins">http://www.britishairways.com/en-gb/information/travel-classes/experience-our-cabins</a></li>
+<li><a href="http://www.sony-asia.com/microsite/mdr-10/">http://www.sony-asia.com/microsite/mdr-10/</a></li>
+<li><a href="http://www.yourprimer.com/">http://www.yourprimer.com/</a></li>
+<li><a href="http://mcdonalds.com.au/create-your-taste">http://mcdonalds.com.au/create-your-taste</a></li>
+<li><a href="http://burntmovie.com/">http://burntmovie.com/</a></li>
+<li><a href="http://essenso.com/">http://essenso.com/</a></li>
+<li><a href="http://www.bugatti.com/veyron/veyron-164/">http://www.bugatti.com/veyron/veyron-164/</a></li>
+<li><a href="http://www.kibey.com/">http://www.kibey.com/</a></li>
+<li><a href="http://www.newjumoconcept.com/">http://www.newjumoconcept.com/</a></li>
+<li><a href="http://www.shootinggalleryasia.com/">http://www.shootinggalleryasia.com/</a></li>
+<li><a href="http://medoff.ua/en/">http://medoff.ua/en/</a></li>
+<li><a href="http://promo.prestigio.com/grace1/">http://promo.prestigio.com/grace1/</a></li>
+<li><a href="http://www.mi.com/shouhuan">http://www.mi.com/shouhuan</a></li>
+<li><a href="http://www.commoditiesdemystified.info/en/">http://www.commoditiesdemystified.info/en/</a></li>
+<li><a href="http://torchbrowser.com/">http://torchbrowser.com/</a></li>
+<li><a href="http://thekorner.fr/">http://thekorner.fr/</a></li>
+<li><a href="http://www.restaurantwoods.nl/">http://www.restaurantwoods.nl/</a></li>
+<li><a href="https://www.edarling.de/">https://www.edarling.de/</a></li>
+<li><a href="http://urban-walks.com/">http://urban-walks.com/</a></li>
+<li><a href="http://lingualeo.com/">http://lingualeo.com/</a></li>
+<li><a href="http://charlotteaimes.com/">http://charlotteaimes.com/</a></li>
+<li><a href="http://collection.madeofsundays.com">http://collection.madeofsundays.com</a></li>
+<li><a href="http://thiswasmybest.com/">http://thiswasmybest.com/</a></li>
+<li><a href="http://www.boxreload.com/">http://www.boxreload.com/</a></li>
+<li><a href="http://lawinenstift.com/">http://lawinenstift.com/</a></li>
+<li><a href="http://educationaboveall.org/">http://educationaboveall.org/</a></li>
+<li><a href="http://camfindapp.com/">http://camfindapp.com/</a></li>
+<li><a href="http://rockercreative.com/">http://rockercreative.com/</a></li>
+<li><a href="http://wantnova.com/">http://wantnova.com/</a></li>
+<li><a href="http://usescribe.com/">http://usescribe.com/</a></li>
+<li><a href="http://lucilecazanave.com/">http://lucilecazanave.com/</a></li>
+<li><a href="http://boxx.hk/">http://boxx.hk/</a></li>
+<li><a href="http://bearonunicycle.com/">http://bearonunicycle.com/</a></li>
+<li><a href="http://rawmilk.dk/en/">http://rawmilk.dk/en/</a></li>
+<li><a href="http://www.famavolat.com/">http://www.famavolat.com/</a></li>
+<li><a href="http://www.carpetloverclub.com/">http://www.carpetloverclub.com/</a></li>
+<li><a href="http://www.sanyang.com.tw/service/Conception/">http://www.sanyang.com.tw/service/Conception/</a></li>
+<li><a href="http://www.batzaya.net/">http://www.batzaya.net/</a></li>
+<li><a href="http://www.graphicid.dk/">http://www.graphicid.dk/</a></li>
+<li><a href="http://www.carlphot.com/">http://www.carlphot.com/</a></li>
+<li><a href="http://medissix.com/">http://medissix.com/</a></li>
+<li><a href="http://trasmissione-energia.terna.it/">http://trasmissione-energia.terna.it/</a></li>
+<li><a href="http://www.thefoodmovie.com/">http://www.thefoodmovie.com/</a></li>
+<li><a href="http://www.villareginateodolinda.it">http://www.villareginateodolinda.it</a></li>
+<li><a href="http://www.kesstrio.com">http://www.kesstrio.com</a></li>
+<li><a href="http://fossdistillery.is">http://fossdistillery.is</a></li>
+<li><a href="http://www.conversionculture.com/">http://www.conversionculture.com/</a></li>
+<li><a href="http://ded-morozz.kiev.ua/">http://ded-morozz.kiev.ua/</a></li>
+<li><a href="http://unabridgedsoftware.com/">http://unabridgedsoftware.com/</a></li>
+<li><a href="http://atlanticcorp.us/">http://atlanticcorp.us/</a></li>
+<li><a href="http://moysport.ru/">http://moysport.ru/</a></li>
+<li><a href="http://themify.me/demo/#theme=fullpane">http://themify.me/demo/#theme=fullpane</a></li>
+<li><a href="http://dancingroad.com">http://dancingroad.com</a></li>
+<li><a href="http://www.camanihome.com/">http://www.camanihome.com/</a></li>
+<li><a href="http://www.exapoint.ch/">http://www.exapoint.ch/</a></li>
+<li><a href="https://life2film.com/en/">https://life2film.com/en/</a></li>
+</ul>
+<p>Puedes encontrar otra lista más larga <a href="http://libscore.com/#$.fn.fullpage">aquí</a>.</p>
+<h2 id="donaciones">Donaciones</h2>
+<p>Agradeceré cualquier donación!</p>
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=BEK5JQCQMED4J&amp;lc=GB&amp;item_name=fullPage%2ejs&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" alt="Donate"></a></p>
+<h2 id="licencia">Licencia</h2>
+<p><strong>Los creditos en los comentarios en los archivo sde Javascript y CSS han de mantenerse intactos.</strong> (incluso despues de minificar y combinar archivos)</p>
+<p>(The MIT License)</p>
+<p>Copyright (c) 2013 Alvaro Trigo &lt;alvaro@alvarotrigo.com&gt;</p>
+<p>Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados (el &quot;Software&quot;), para utilizar el Software sin restricción, incluyendo sin limitación los derechos a usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar, y/o vender copias del Software, y a permitir a las personas a las que se les proporcione el Software a hacer lo mismo, sujeto a las siguientes condiciones:</p>
+<p>El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.</p>
+<p>EL SOFTWARE SE PROPORCIONA &quot;TAL CUAL&quot;, SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, QUE SURJA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE</p>
+
+      </body>
+    </html>
