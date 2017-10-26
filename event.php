@@ -85,7 +85,7 @@
 <?php try {
 			require_once("php/connectBeck.php");
 	
-    $sql = "select * from activity";
+    $sql = "select * from activity where act_date > '2017-10-25'";
     
     $activity = $pdo->query($sql);	
 	
@@ -126,83 +126,13 @@
 <!-- 
 			<li class="show col-xs-12">
 			<a href="#">
-				<div class="img">
-					
-					
-						
-					<img src="src/image/event/07.jpg" alt="">
-				
-		
-				</div>
-			</a>
-				<div class="balloon">
-					<p>農家講解，了解小農</p> 		
-				</div>
-		
-		</li>
-		<li class="show col-xs-12">
-			<a href="#">
-				<div class="img">
-					
+				<div class="img">	
 					<img src="src/image/event/07.jpg" alt="">
 				</div>
 			</a>
 				<div class="balloon">
 					<p>農家講解，了解小農</p> 		
 				</div>
-		
-		</li>
-		<li class="show col-xs-12">
-			<a href="#">
-				<div class="img">
-					<img src="src/image/event/08.jpg" alt="">
-				</div>	
-			</a>
-				<div class="balloon">
-					<p>香香甜甜哈密瓜</p> 		
-					
-				</div>
-	
-		</li>
-
-		<li class="show col-xs-12">
-			<a href="#">
-			<div class="img">
-				<img src="src/image/event/09.jpg" alt="">
-				
-			</div>
-			</a>
-
-				<div class="balloon">
-					<p>來採葡萄，自釀葡酒</p> 		
-				</div>	
-		
-		</li>
-		<li class="show col-xs-12">
-			<a href="#">
-			<div class="img">
-				<img src="src/image/event/egg.png" alt="">
-				
-			</div>
-			</a>
-
-				<div class="balloon">
-					<p>在地好農，無毒雞蛋</p> 		
-				</div>	
-	
-		</li>
-		<li class="show col-xs-12">
-			<a href="#">
-			<div class="img">
-				<img src="src/image/event/mikann.png" alt="">
-				
-			</div>
-			</a>
-
-				<div class="balloon">
-					<p>花媽：橘子啊！~</p> 		
-				</div>	
-		
 		</li>
 		 -->
 		<div class="clear"></div>
@@ -227,26 +157,50 @@
 	
 	<div class="thirdblockin">
 		<div id="trigger2"></div>
-		<?php 
-			for($j=1;$j<=10;$j++){echo"
+	
+
+
+		<?php try {
+			require_once("php/connectBeck.php");
+	
+    $sql = "select act_name,act_no,date(act_date) as act_date,act_loc from activity
+    where act_date < '2017-10-25'";
+    
+    $activity = $pdo->query($sql);	
+	
+	while($resultset = $activity ->fetchObject()){
+		
+		$act_name = $resultset->act_name;
+		$act_no = $resultset->act_no;
+		$act_date = $resultset->act_date;
+		$act_loc = $resultset->act_loc;
+
+		echo"
 		<div class='eventreco'>
 			<a href='#'>
 				<div class='img'>
-					<img src='src/image/event/photo4.jpg' alt=''>
+					<img src='src/image/event/".$act_no.'.jpg'."' alt=''>
 				</div>	
 				<div class='infobar1'>
-					<h5>桃園</h5>
+					<h5>".$act_loc."</h5>
 					<div class='inforbar2'>
-						舉辦日期：2016-11-24
+						舉辦日期：".$act_date."
 					</div>
 				</div>
 				
 			</a>
 				</div>
-				";}?>
+				";
+
+
+		}
+	}
+	catch (PDOException $e) {
+	echo "錯誤原因 : " , $e->getMessage(),"<br>";
+	echo "行號 : " , $e->getLine(),"<br>";	
+}
+?>	  
 	<!-- 	<div class="eventreco" >
-			
-		
 			<a href="#">
 				<div class="img">
 					<img src="src/image/event/event09.jpg" alt="">
@@ -259,103 +213,6 @@
 				</div>
 			</a>
 </div>
-				
-		
-			
-		<div class="eventreco" >
-			
-	
-			<a href="#">
-				<div class="img">
-					<img src="src/image/event/08.jpg" alt="">
-				</div>	
-				<div class="infobar1">
-					<h5>台南</h5>
-					<div class="inforbar2">
-						舉辦日期：2016-09-09
-					</div>
-				</div>
-			</a>
-				</div>	
-			
-	<div class="eventreco" >
-		
-	
-			<a href="#">
-				<div class="img">
-					<img src="src/image/event/img100.png" alt="">
-				</div>
-				<div class="infobar1">
-					<h5>台東</h5>
-					<div class="inforbar2">
-						舉辦日期：2016-08-22
-					</div>
-				</div>
-			</a>
-		</div>		
-
-	
-	<div class="eventreco" >
-		
-	
-			<a href="#">
-				<div class="img">
-					<img src="src/image/event/img101.png" alt="">
-				</div>
-				<div class="infobar1">
-				<h5>苗栗</h5>
-					<div class="inforbar2">
-						舉辦日期：2016-07-24
-					</div>
-				</div>
-			</a>
-		</div>	
-	
-	<div class="eventreco" >
-		
-	
-			<a href="#">
-				<div class="img">
-					<img src="src/image/event/c03_img04.jpg" alt="">
-				</div>
-				<div class="infobar1">
-					<h5>台東</h5>
-					<div class="inforbar2">
-						舉辦日期：2016-06-24
-					</div>
-				</div>
-			</a>
-				
-			</div>
-			<div class="eventreco" >
-			<a href="#">
-				<div class="img">
-					<img src="src/image/event/010.png" alt="">
-				</div>
-				<div class="infobar1">
-					<h5>苗栗</h5>
-					<div class="inforbar2">
-						舉辦日期：2016-05-24
-					</div>
-				</div>
-			</a>
-				</div>
-		<div class="eventreco" >
-			
-		
-			<a href="#">
-				<div class="img">
-					<img src="src/image/event/011.png" alt="">
-				</div>
-				<div class="infobar1">
-					<h5>台東</h5>
-					<div class="inforbar2">
-					舉辦日期：2016-04-24
-					</div>
-					
-				</div>
-			</a>
-	</div>
 	 -->
 	
 <div class="clear"></div>
