@@ -541,7 +541,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 			ul{ 
 				list-style:none;
 				margin: auto;
-				width: 150%;
+				width: 300%;
 				>div{
 					display: none;
 				}	
@@ -589,15 +589,13 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 							border: $imgBorder;
 							img{ width: 100%}
 						}
-						&:last-child{
+						&:nth-child(2){
 							margin: 5% auto;
-							.pro_s_name{
+							.pro_t_name{
 								@include pro_thirdTitle(#999);
 							}
-							div{
-								&:last-child{
-									@include pro_fourthTitle();
-								}
+							.pro_t_price{
+								@include pro_fourthTitle();
 							}
 						}
 					}
@@ -750,10 +748,6 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 					.pro_t_TBuy{
 						text-align: center;
 						margin-top: 15%;
-						span{
-							display: inline-block;
-							padding: 20px;
-						}
 						.btn_green{
 							display: inline-block;
 						}

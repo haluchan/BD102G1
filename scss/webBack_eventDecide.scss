@@ -60,12 +60,16 @@ nav{
 		
 	}
 	tr:nth-child(2n+3){
-		background-color: #FFDDAA;
+		background-color:#DDDDDD;
 		td{
 			text-align:left;
 		}
 		p{
 			font-weight:bold;
+			margin-top:3%;
+		}
+		img{
+			width:100px;
 		}
 	}
 

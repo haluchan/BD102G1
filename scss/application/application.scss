@@ -30,7 +30,11 @@ body{
 
 
 .container{
-	
+	width:50%;
+	margin:auto;
+	@include rwd (moblie) {						
+		width:90%;			    					
+	}
 	h2{
 		font-size:44px;
 		color:#659e34;	
@@ -52,11 +56,6 @@ body{
 	img{
 		width:100%;
 	}
-	width:60%;
-	margin:auto;
-	@include rwd (moblie) {						
-		width:90%;			    					
-	}
 	a{
 		text-decoration:none;
 	}
@@ -64,9 +63,7 @@ body{
 		width:100%;
 		margin:auto;
 		text-align:center;
-		@include rwd (moblie) {						
-		    // width:100%;
-		    // text-align:center;			    					
+		@include rwd (moblie) {									    					
 		}
 		.item{//icon及文字
 			width:40%;
@@ -108,10 +105,19 @@ body{
 
 
 	form{	
+		span{
+			color:#FF8888;
+			font-weight:bold;
+			i{
+				color:#666666;
+				cursor:pointer;
+			}
+
+		}
 		.stepContent{
 			background-color: #ece7d4;
 			margin: 50px auto;
-			padding: 50px 0;
+			padding: 50px 5%;
 			text-align:center;
 			position:relative;
 			box-shadow:1px 0 10px #ccc;
@@ -119,10 +125,10 @@ body{
 			@include rwd (moblie) {						
 		    	padding: 10% 0;			    					
 			}
-			h2{
-				text-align:center;
-				margin-bottom:30px;
-			}
+			// h3{
+			// 	text-align:center;
+			// 	margin-bottom:30px;
+			// }
 			.stepContentNumber{
 				position: absolute;
 				left:-50px;
@@ -132,71 +138,89 @@ body{
 		    		left:-5%;
 		    		top:-35px;			    					
 				}
-			}
-			.btn_brown{
-				font-weight:normal;
-			}
-			
+			}	
 			.table{
-				width:80%;
-				margin:auto;
+				width:60%;
+				margin:5% auto;
 				@include rwd (moblie) {						
-					margin:auto;	    					
-				}
+						width:80%;	 
+					}
 				.tr{
 					display:table-row;
 					margin:auto;
 					text-align:center;
+					margin-top:5%;
+					height:60px;
+					// vertical-align:middle;
 					@include rwd (moblie) {						
 						display:block;
-						overflow:hidden;	 
+						// overflow:hidden;
+						height:100%;	 
 					}
-				.td{
-					width:30%;
-					display:table-cell;
-					vertical-align:middle;
-					&:first-child{
-						text-align:left;
-					}
-					label{
-						font-size:18px;
-					}	
-					input{
-						border: 1px solid #759944;
-					    color: #759944;
-					    background-color: #FFF;
-					    height: auto;
-					    padding-left: 3.5%;
-					    font-size: 18px;
-					    // font-family:'微軟正黑體';
-					    font-weight: bold;
-					    line-height: 2;
-					    vertical-align: middle;
-					    display: inline-block;
-					    box-sizing: border-box;
-					    border-radius: 5px;
-					}
-					textarea{
-						background-color: rgba(255, 255, 255, .9);
-						outline: none;
-						border: none;
-						border-radius: 6px;
-					}
-					#photo{
-						width:80%;
-					}
-					@include rwd (moblie) {						
-					    display:block;	
-					    margin:auto;
-					    text-align:center;
-					    width:100%;
-					    &:first-child{
-							text-align:center;
+					.td{
+						width:30%;
+						display:table-cell;
+						vertical-align:middle;
+						&:first-child{
+							text-align:left;
+						}
+						&.radioAll{	
+						}
+						&.plant{
+							text-align:left;
+						}
+						label{
+							font-size:18px;
+						}	
+						input{
+							width:100%;
+							border: 1px solid #759944;
+						    color: #759944;
+						    background-color: #FFF;
+						    // height: auto;
+						    padding-left: 3.5%;
+						    font-size: 18px;
+						    font-family:'微軟正黑體';
+						    font-weight: bold;
+						    line-height: 2;
+						    vertical-align: middle;
+						    display: inline-block;
+						    box-sizing: border-box;
+						    border-radius: 5px;
+						    // margin-top:5%;
+						    &.radio{
+						    	width:30%;
+						    	background-color:#FFF;
+						    }
+						    &.plant{
+						    	width:20%;
+						    }   	
+						}
+						textarea{
+							background-color: rgba(255, 255, 255, .9);
+							outline: none;
+							border: none;
+							border-radius: 6px;
+							resize: none;
+							font-size: 16px;
+							color: #759944;
+							width:100%;
+						}
+						#photo{
+							width:80%;
+						}
+						@include rwd (moblie) {						
+						    display:block;	
+						    margin:auto;
+						    text-align:center;
+						    width:80%;
+						    &:first-child{
+								text-align:center;
+							}
 						}
 					}
 				}
 			}
-		}
 		}
 
 		.formSubmit{
@@ -207,12 +231,12 @@ body{
 			margin: auto;
 			text-align:center;
 		}
-	}
+	}//form結束
 }
 
 
 .two, .three{
-	width:60%;
+	width:50%;
 	margin:auto;
 	@include rwd (moblie) {						
 		width:90%;	
@@ -248,10 +272,10 @@ body{
 		}
 	}
 	.form{	
-		// margin: 50px auto;
+		box-shadow:1px 0 10px #ccc;
 		padding: 50px 0;;
 		background-color: #ece7d4;
-		border:1px solid #ccc;
+		// border:1px solid #ccc;
 		// font-weight:bold;
 		font-size:20px;
 		.table{
@@ -262,7 +286,7 @@ body{
 			}
 			.tr{
 				display:table-row;
-				height:100px;
+				height:80px;
 				margin:auto;
 				text-align:center;
 				@include rwd (moblie) {						
@@ -280,17 +304,11 @@ body{
 						font-size:18px;
 					}	
 					input{
-						// border-radius: 6px;
-						// outline: none;
-						// border: none;
-						// padding: 5px;
-						// background-color: rgba(255, 255, 255, .9);
-						// height: 30px;
+						width:100%;
 						border: 1px solid #759944;
 					    color: #759944;
 					    background-color: #FFF;
-					    height: auto;
-					    // margin: 0 15px 0 0;
+					    // height: auto;
 					    padding-left: 3.5%;
 					    font-size: 18px;
 					    font-family:'微軟正黑體';
@@ -300,12 +318,19 @@ body{
 					    display: inline-block;
 					    box-sizing: border-box;
 					    border-radius: 5px;
+					    @include rwd (moblie) {
+					    	width:80%;
+					    }
 					}
 					textarea{
 						background-color: rgba(255, 255, 255, .9);
 						outline: none;
 						border: none;
 						border-radius: 6px;
+						resize: none;
+						font-size: 16px;
+						color: #759944;
+						width:100%;
 					}
 					#photo{
 						width:80%;
@@ -322,8 +347,7 @@ body{
 				}
 			}
 		}
-	}
-	.formSubmit{
+		.formSubmit{
 		width: 200px;
 		height: 50px;
 		left:0;
@@ -332,13 +356,14 @@ body{
 		text-align:center;
 		margin:10% auto ;
 	}
+	}
+	
 }
 
 
 #feedbackTable{
-	display:none;
 	width:100%;
-	background-color:#ece7d4;
+	background-color:#fff;
 	color:#51504d;
 	text-align:center;
 	span{
@@ -398,3 +423,8 @@ body{
 	
 }
 
+.barActive{
+	background-color:#699c33;
+	color: #fff;
+	
+}

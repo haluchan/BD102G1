@@ -4,18 +4,25 @@
             document.getElementById("search").style.display="none";
             document.getElementById("report").style.display="none";
             document.getElementById("apply").style.display="";
+            $('.navbarli').removeClass('barActive');
+            $('#bara').addClass('barActive');
+
         }
         document.getElementById("barc").onclick=report;
         function report(){
             document.getElementById("report").style.display="";
             document.getElementById("apply").style.display="none";
             document.getElementById("search").style.display="none";
+            $('.navbarli').removeClass('barActive');
+            $('#barc').addClass('barActive');
         }
         document.getElementById("barb").onclick=search;
         function search(){
             document.getElementById("apply").style.display="none";
             document.getElementById("report").style.display="none";
             document.getElementById("search").style.display="";
+            $('.navbarli').removeClass('barActive');
+            $('#barb').addClass('barActive');
         }
       window.onload=apply;
 

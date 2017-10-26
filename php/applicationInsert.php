@@ -97,9 +97,11 @@
 				$sql="select LAST_INSERT_ID()";
 				$result=$pdo->query($sql);
 				$no=$result->fetchColumn();	
+				$title="您已成功送出申請";
+				$item="申請人";
 				// echo"新增案件成功";
 				// echo "<script>alert('成功送出申請 你的案件編號為123'); location.href='../application.php';</script>";
-				header("Location: ../applicationAfter.php?name=$name&no=$no");
+				header("Location: ../applicationAfter.php?name=$name&no=$no&title=$title&item=$item");
 				
 
 			}catch (PDOException $e) {
@@ -133,52 +135,78 @@
 				}
 
 		}else if($form=="report"){
+				$no=$_REQUEST["event_noRe"];//輸入之案件編號
 				try {
 					require_once("connectPon.php");//之後要換成connectGrowing_hope.php
-					$sql="select * from  growing_hope.return join growing_hope.event where growing_hope.event.event_no= ?";
+					$sql="select * from  growing_hope.return join growing_hope.event where growing_hope.event.event_no= ? AND growing_hope.event.event_dept=? ";
 
 					$event=$pdo->prepare($sql);
 					$event->bindValue(1,$_REQUEST["event_noRe"]);
+					$event->bindValue(2,$_REQUEST["event_dept"]);
 					$event->execute();
 					if($event->rowCount()===0){
-						echo "<script>
-								alert('案件編號不正確');  location.href='../application.php';
+						// echo "<script>alert('案件編號不正確');  location.href='../application.php';</script>";
+						$title="案件資料有誤 以下為您輸入的資料";//訊息頁標題
+						$no=$_REQUEST["event_noRe"];//輸入之案件編號
+						$item="代表人/單位";//顯示項目標題
+						$name2=$_REQUEST["event_dept"];//輸入之代表人/單位
+						// $url="history.go(-2)";
+						// echo "<script>alert('回報成功'); location.href='../application.php';report();</script>";
+						header("Location: ../applicationAfter.php?no=$no&name=$name2&title=$title&item=$item");
+					}else{//如果有吻合資料
+						// $fileCount=count($_FILES['return_remark']['name']);
+						 // for($i=0; $i<$fileCount; $i++)
+							$file=array();
+							// 根據($_FILES["file"]["error"]來判斷case	, 0代表成功
+							foreach( $_FILES["return_remark"]["error"] as $i=>$data ){
+							switch ($_FILES["return_remark"]["error"][$i]) {
+							case 0:
+								if(file_exists("files")===false){// 如果不存在files 創建一資料夾 files
+									mkdir("files");
+								}
+
+								//寫法1
+								$filename=$_FILES["return_remark"]["name"][$i];
+
+								$filetype= strrchr($filename, ".");
+								$from=$_FILES["return_remark"]["tmp_name"][$i];// 從暫存檔路徑移至剛剛建立的files資料夾中
 								
-							</script>";
-					}else{
-						$filename =$_FILES["return_remark"]["name"];
-						$filetype= strrchr($filename, ".");
-						// 根據($_FILES["file"]["error"]來判斷case	
-						// 0代表成功
+								$to="files//" ."R-".$no."-".date("Ymd")."-".$i .$filetype;//年月日時分秒當作檔名
+								$name="R-"."-".$no.date("Ymd")."-".$i.$filetype;
+								
+								array_push($file,$name);
+								copy($from,$to);
 
-						switch ($_FILES["return_remark"]["error"]) {
-						case 0:
-							if(file_exists("files")===false){// 如果不存在files 創建一資料夾 files
-								mkdir("files");
+								//寫法2
+								// $file=$_FILES['return_remark']['name'][$i];
+								// $dest='files/' .$_FILES['return_remark']['name'][$i];
+
+								// move_uploaded_file($file, $dest);
+
+
+
+								
+							break;
+							case 1:
+								echo "失敗", ini_get("upload_max_filesize");
+							break;
+							case 2:
+								echo "失敗",  $_REQUEST["MAX_FILE_SIZE"];
+							break;
+							case 3:
+								echo "檔案不完整";
+							break;
+							case 4:
+								echo "檔案未選";
+							break;
+							default:
+								echo "error";
 							}
-							$from=$_FILES["return_remark"]["tmp_name"];// 從暫存檔路徑移至剛剛建立的files資料夾中
-							$to="files//" ."R-".date("YmdHis") .$filetype;//年月日時分秒當作檔名
-							$name="R-".date("YmdHis") .$filetype;
-							copy($from,$to);
-							echo"成功";
-						break;
-						
-						case 1:
-							echo "失敗", ini_get("upload_max_filesize");
-						break;
-						case 2:
-							echo "失敗",  $_REQUEST["MAX_FILE_SIZE"];
-						break;
-						case 3:
-							echo "檔案不完整";
-						break;
-						case 4:
-							echo "檔案未選";
-						break;
-						default:
-							echo "error";
-						}
 
+						}
+						
+						
+						$name=implode(",",$file);
 
 		    			$sql = "insert into growing_hope.return (return_no, event_no, return_date, return_info, return_remark) values(:return_no,:event_no, current_date(),:return_info,:return_remark) ";
 						$return=$pdo->prepare($sql);
@@ -188,7 +216,12 @@
 						$return->bindValue(":return_remark",$name);
 
 						$return->execute();
-						echo "<script>alert('回報成功'); location.href='../application.php';report();</script>";
+						$title="您已成功回報進度";
+						$no=$_REQUEST["event_noRe"];
+						$item="代表人/單位";
+						$name2=$_REQUEST["event_dept"];
+						// echo "<script>alert('回報成功'); location.href='../application.php';report();</script>";
+						header("Location: ../applicationAfter.php?no=$no&name=$name2&title=$title&item=$item");
 					}	
 	    		
 				}catch (PDOException $e) {

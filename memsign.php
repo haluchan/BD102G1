@@ -2,10 +2,15 @@
 
 
 	
-	<div class="lightbox-bg" id="sign-lightbox">
+	<div class="lightbox-bg" id="memsign-lightbox">
 		<div class="lightbox-target" >
-			<div class="cancel" id="cancel-sign">
-				<a  id="login-cancel"><img src="src/image/login/pop_close.png"></a>
+			<div class="wrapper cancel">
+				<div class="button-block">
+			    	<button type="button" class="button-x" id="membutton_x">
+			    	<i class="mark x"></i>
+			    	<i class="mark xx"></i>
+			    	</button>
+				</div>
 			</div>
 		  <div class="login-content">
 			  	<h2>會員註冊</h2>

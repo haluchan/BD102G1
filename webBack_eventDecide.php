@@ -72,8 +72,16 @@ try {
 					<!-- <input type="button" class="btn" id="fail" value="退回"> -->
 				</td>		
 			</tr>
-			<tr style="display: none"><td colspan="9"><p>案件摘要</p><?php echo $eventRow->event_txt;?></td> </tr> 
-
+			
+			<!-- <div class="test"> -->
+				<tr hidden>
+					<td colspan="9">
+						<p>案件標題</p><?php echo $eventRow->event_title;?>
+						<p>案件摘要</p><?php echo $eventRow->event_txt;?>
+						<p>內容照片</p><img src="src/image/funded//<?php echo $eventRow->event_pho;?>">
+					</td>
+				</tr> 
+			<!-- </div> -->
 	<?php
 		$i++;	
 		}
@@ -109,6 +117,13 @@ try {
 		
 
 		if(button=="通過"){
+			var checkallow=$(this).parent().siblings().find('input[name="allow"]').val();
+			var checkdate=$(this).parent().siblings().find('input[name="enddate"]').val();
+			
+			if(checkallow==""||checkdate==""){
+
+				alert('未輸入核准金額及募資結束日期');
+			}
 			status="P"
 			var allow= $(this).parent().siblings("td:nth-child(6)").find('input[name="allow"]').val();
 		}else if(button=="退回"){
@@ -138,7 +153,7 @@ try {
 $(".tdRow").find("td:nth-child(2)").click(function(){
 	// $(this).css({color:"red"});
 		// alert("顯示案件內容");
-		$(this).parents("tr").next("tr").toggle()
+		$(this).parents("tr").next("tr").toggle();
 });
 
 

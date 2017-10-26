@@ -5,9 +5,6 @@
 .content_form {
   width: 84%; }
 
-botton {
-  border: none; }
-
 nav .nav_item:nth-child(2) {
   visibility: hidden; }
 
@@ -24,7 +21,6 @@ nav .nav_item:nth-child(2) {
     padding: 6px 10px;
     text-align: left;
     word-break: break-all;
-    -o-text-overflow: ellipsis;
     text-overflow: ellipsis; }
   .myForm tr > td:first-child {
     /*每row第一個格子(編號)固定置中，灰色*/
@@ -52,20 +48,22 @@ nav .nav_item:nth-child(2) {
     .myForm table tr th:nth-child(7) {
       width: 10%; }
   .myForm .btn {
+    display: inline-block;
+    text-align: center;
     background-color: LemonChiffon;
     padding: 4px 6px;
     border: none;
     width: 60%;
     margin: auto;
-    -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    outline: pointer; }
+    outline: none;
+    cursor: pointer;
+    color: #000; }
     .myForm .btn:active {
       -webkit-transform: translate(2px, 2px);
       -ms-transform: translate(2px, 2px);
       transform: translate(2px, 2px);
-      -webkit-box-shadow: none;
       box-shadow: none; }
 
 /* table結束 */
@@ -74,7 +72,6 @@ nav .nav_item:nth-child(2) {
   width: 97%; }
   .proSave .submit {
     border-radius: 6px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: right;
     display: block;

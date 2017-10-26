@@ -22,8 +22,11 @@ body {
         border-bottom: 5px solid #58483e; }
 
 .container {
-  width: 60%;
+  width: 50%;
   margin: auto; }
+  @media screen and (max-width: 767px) {
+    .container {
+      width: 90%; } }
   .container h2 {
     font-size: 44px;
     color: #659e34; }
@@ -41,9 +44,6 @@ body {
         font-size: 14px; } }
   .container img {
     width: 100%; }
-  @media screen and (max-width: 767px) {
-    .container {
-      width: 90%; } }
   .container a {
     text-decoration: none; }
   .container .applicationTitle {
@@ -79,10 +79,16 @@ body {
         margin: auto; }
         .container .SubTitle p {
           line-height: 20px; } }
+  .container form span {
+    color: #FF8888;
+    font-weight: bold; }
+    .container form span i {
+      color: #666666;
+      cursor: pointer; }
   .container form .stepContent {
     background-color: #ece7d4;
     margin: 50px auto;
-    padding: 50px 0;
+    padding: 50px 5%;
     text-align: center;
     position: relative;
     -webkit-box-shadow: 1px 0 10px #ccc;
@@ -90,9 +96,6 @@ body {
     @media screen and (max-width: 767px) {
       .container form .stepContent {
         padding: 10% 0; } }
-    .container form .stepContent h2 {
-      text-align: center;
-      margin-bottom: 30px; }
     .container form .stepContent .stepContentNumber {
       position: absolute;
       left: -50px;
@@ -102,37 +105,40 @@ body {
           width: 20%;
           left: -5%;
           top: -35px; } }
-    .container form .stepContent .btn_brown {
-      font-weight: normal; }
     .container form .stepContent .table {
-      width: 80%;
-      margin: auto; }
+      width: 60%;
+      margin: 5% auto; }
       @media screen and (max-width: 767px) {
         .container form .stepContent .table {
-          margin: auto; } }
+          width: 80%; } }
       .container form .stepContent .table .tr {
         display: table-row;
         margin: auto;
-        text-align: center; }
+        text-align: center;
+        margin-top: 5%;
+        height: 60px; }
         @media screen and (max-width: 767px) {
           .container form .stepContent .table .tr {
             display: block;
-            overflow: hidden; } }
+            height: 100%; } }
         .container form .stepContent .table .tr .td {
           width: 30%;
           display: table-cell;
           vertical-align: middle; }
           .container form .stepContent .table .tr .td:first-child {
             text-align: left; }
+          .container form .stepContent .table .tr .td.plant {
+            text-align: left; }
           .container form .stepContent .table .tr .td label {
             font-size: 18px; }
           .container form .stepContent .table .tr .td input {
+            width: 100%;
             border: 1px solid #759944;
             color: #759944;
             background-color: #FFF;
-            height: auto;
             padding-left: 3.5%;
             font-size: 18px;
+            font-family: '微軟正黑體';
             font-weight: bold;
             line-height: 2;
             vertical-align: middle;
@@ -140,11 +146,20 @@ body {
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             border-radius: 5px; }
+            .container form .stepContent .table .tr .td input.radio {
+              width: 30%;
+              background-color: #FFF; }
+            .container form .stepContent .table .tr .td input.plant {
+              width: 20%; }
           .container form .stepContent .table .tr .td textarea {
             background-color: rgba(255, 255, 255, 0.9);
             outline: none;
             border: none;
-            border-radius: 6px; }
+            border-radius: 6px;
+            resize: none;
+            font-size: 16px;
+            color: #759944;
+            width: 100%; }
           .container form .stepContent .table .tr .td #photo {
             width: 80%; }
           @media screen and (max-width: 767px) {
@@ -152,7 +167,7 @@ body {
               display: block;
               margin: auto;
               text-align: center;
-              width: 100%; }
+              width: 80%; }
               .container form .stepContent .table .tr .td:first-child {
                 text-align: center; } }
   .container form .formSubmit {
@@ -164,7 +179,7 @@ body {
     text-align: center; }
 
 .two, .three {
-  width: 60%;
+  width: 50%;
   margin: auto; }
   @media screen and (max-width: 767px) {
     .two, .three {
@@ -196,9 +211,10 @@ body {
       .two .applicationTitle .item h1, .three .applicationTitle .item h1 {
         text-align: left; }
   .two .form, .three .form {
+    -webkit-box-shadow: 1px 0 10px #ccc;
+    box-shadow: 1px 0 10px #ccc;
     padding: 50px 0;
     background-color: #ece7d4;
-    border: 1px solid #ccc;
     font-size: 20px; }
     .two .form .table, .three .form .table {
       width: 80%;
@@ -208,7 +224,7 @@ body {
           margin: auto; } }
       .two .form .table .tr, .three .form .table .tr {
         display: table-row;
-        height: 100px;
+        height: 80px;
         margin: auto;
         text-align: center; }
         @media screen and (max-width: 767px) {
@@ -224,10 +240,10 @@ body {
           .two .form .table .tr .td label, .three .form .table .tr .td label {
             font-size: 18px; }
           .two .form .table .tr .td input, .three .form .table .tr .td input {
+            width: 100%;
             border: 1px solid #759944;
             color: #759944;
             background-color: #FFF;
-            height: auto;
             padding-left: 3.5%;
             font-size: 18px;
             font-family: '微軟正黑體';
@@ -238,11 +254,18 @@ body {
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             border-radius: 5px; }
+            @media screen and (max-width: 767px) {
+              .two .form .table .tr .td input, .three .form .table .tr .td input {
+                width: 80%; } }
           .two .form .table .tr .td textarea, .three .form .table .tr .td textarea {
             background-color: rgba(255, 255, 255, 0.9);
             outline: none;
             border: none;
-            border-radius: 6px; }
+            border-radius: 6px;
+            resize: none;
+            font-size: 16px;
+            color: #759944;
+            width: 100%; }
           .two .form .table .tr .td #photo, .three .form .table .tr .td #photo {
             width: 80%; }
           @media screen and (max-width: 767px) {
@@ -253,19 +276,18 @@ body {
               width: 100%; }
               .two .form .table .tr .td:first-child, .three .form .table .tr .td:first-child {
                 text-align: center; } }
-  .two .formSubmit, .three .formSubmit {
-    width: 200px;
-    height: 50px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-    margin: 10% auto; }
+    .two .form .formSubmit, .three .form .formSubmit {
+      width: 200px;
+      height: 50px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      margin: 10% auto; }
 
 #feedbackTable {
-  display: none;
   width: 100%;
-  background-color: #ece7d4;
+  background-color: #fff;
   color: #51504d;
   text-align: center; }
   #feedbackTable span {
@@ -316,3 +338,7 @@ body {
       box-sizing: border-box; }
       .navbar .navbarli {
         font-size: 18px; } }
+
+.barActive {
+  background-color: #699c33;
+  color: #fff; }

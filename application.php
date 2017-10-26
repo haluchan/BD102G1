@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<!-- <link rel="stylesheet"  href="css/font.css"> -->
 		<link rel="stylesheet"  href="css/application/application.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<script src="src/libs/jquery/dist/jquery.min.js"></script>
 		<title>資助相關表單</title>
 	</head>
@@ -40,7 +41,6 @@
 		    		<p>填寫你的資助計劃，讓更多人看見你的理念!!</p>
 		    	</div>
 				<form action="php/applicationInsert.php" method="post" enctype="multipart/form-data">
-			    	<div class="formStep">
 			    		<div class="stepContent">
 			    			<div class="stepContentNumber">
 			    				<img src="src/image/application/one.png">
@@ -49,25 +49,36 @@
 			    			<h4><span>*</span>項目為必填</h4>
 			    			<div  class="formContent table">		    		
 					    		<div class="tr">
-					    			<div class="td"><label for="nameApply">姓名</label></div>
-					    			<div class="td"><input type="text" name="name" id="nameApply"></div>
-					    			<div class="td"><label for="gender">性別</label></div>
-					    			<div class="td">
-					    				<input type="radio" name="gender" value="1">男
-					    				<input type="radio" name="gender" value="2">女
+					    			<div class="td"><label for="nameApply">姓名</label><span>*</span></div>
+					    			<div class="td"><input type="text" name="name" id="nameApply" required></div>
+					    			
+					    		</div>
+					    		<div class="tr">
+					    			
+					    			<div class="td"><label for="gender">性別</label><span>*</span></div>
+					    			<div class="td radioAll">
+					    				<input class="radio" type="radio" name="gender" value="1" required>男<input class="radio" type="radio" name="gender" value="2" required>女
 					    			</div>
 					    		</div>
 					    		<div class="tr">
-					    			<div class="td"><label for="idApply">身分證字號</label></div>
-					    			<div class="td"><input type="text" name="id" id="idApply"></div>
-					    			<div class="td"><label for="birth">出生年月日</label></div>
-					    			<div class="td"><input type="date" name="birth" id="birth"></div>
+					    			<div class="td"><label for="idApply">身分證字號</label><span>*</span></div>
+					    			<div class="td"><input type="text" name="id" id="idApply" required></div>
+					    			
+					    		</div>
+					    		<div class="tr">
+					    			
+					    			<div class="td"><label for="birth">出生年月日</label><span>*</span></div>
+					    			<div class="td"><input type="date" name="birth" id="birth" required></div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label for="tel">電話</label></div>
 					    			<div class="td"><input type="text" name="tel" id="tel"></div>
-					    			<div class="td"><label for="mail">電子信箱</label></div>
-					    			<div class="td"><input type="mail" name="mail" id="mail"></div>
+					    		
+					    		</div>
+					    		<div class="tr">
+					    			
+					    			<div class="td"><label for="mail">電子信箱</label><span>*</span></div>
+					    			<div class="td"><input type="email" name="mail" id="mail" required></div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label for="add">地址</label></div>
@@ -83,44 +94,40 @@
 			    			<h3>資助案內容</h3>
 		    				<div  class="formContent table">		    		
 					    		<div class="tr">
-					    			<div class="td"><label for="title">專案主標題</label></div>
-					    			<div class="td"><input type="text" name="title"></div>
+					    			<div class="td"><label for="title">專案主標題</label><span>*</span></div>
+					    			<div class="td"><input type="text" name="title" required></div>
 					    		</div>
 					    		<div class="tr">
-					    			<div class="td"><label for="title_2">副標題</label></div>
-					    			<div class="td"><input type="text" name="title_2"></div>
+					    			<div class="td"><label for="title_2">副標題</label><span>*</span></div>
+					    			<div class="td"><input type="text" name="title_2" required></div>
 					    		</div>
 					    		<div class="tr">
-					    			<div class="td"><label for="cover">封面影像</label></div>
-					    			<div class="td"><input type="file" name="cover"></div>
+					    			<div class="td"><label for="cover">封面影像</label><span>*</span></div>
+					    			<div class="td"><input type="file" name="cover" required></div>
 					    		</div>
 					    		<div class="tr">
-					    			<div class="td"><label for="txtTitle">內容標題</label></div>
-									<div class="td"><input type="text" name="txtTitle"></div>
+					    			<div class="td"><label for="txtTitle">內容標題</label><span>*</span></div>
+									<div class="td"><input type="text" name="txtTitle" required></div>
 					    		</div>
 					    		<div class="tr">
-					    			<div class="td"><label>內容說明</label></div>
-									<div class="td"><textarea  rows="10" cols="25" name="txt"></textarea></div>
+					    			<div class="td"><label>內容說明</label><span>*</span></div>
+									<div class="td"><textarea  rows="10" cols="25" name="txt" required></textarea></div>
 					    		</div>
 					    		<div class="tr">
-					    			<div class="td"><label>內容照片</label></div>
-									<div class="td"><input type="file" name="pho"></div>
+					    			<div class="td"><label>內容照片</label><span>*</span></div>
+									<div class="td"><input type="file" name="pho" required></div>
 					    		</div>
 					    		<div class="tr">
-					    			<div class="td"><label>主要生產作物</label></div>
-									<div class="td"><input type="checkbox" name="plant" value="banana">香蕉
-													<input type="checkbox" name="plant" value="apple">蘋果
-													<input type="checkbox" name="plant" value="tomato">番茄
-													<input type="checkbox" name="plant" value="orange">橘子
-									</div>
+					    			<div class="td"><label>主要生產作物</label><span>*</span></div>
+									<div class="td plant"><input type="checkbox" name="plant" value="banana" class="plant">香蕉<input type="checkbox" name="plant" value="apple" class="plant" >蘋果<input type="checkbox" name="plant" value="tomato" class="plant" >番茄<input type="checkbox" name="plant" value="orange" class="plant" >橘子</div>
 					    		</div>
 					    		<div class="tr">
-					    			<div class="td"><label>代表人/單位</label></div>
-									<div class="td"><input type="text" name="dept"></div>
+					    			<div class="td"><label>代表人/單位</label><span>*</span></div>
+									<div class="td"><input type="text" name="dept" required></div>
 					    		</div>
 					    		<div class="tr">
-					    			<div class="td"><label>申請金額</label></div>
-									<div class="td"><input type="text" name="need"></div>
+					    			<div class="td"><label>申請金額</label><span>*</span></div>
+									<div class="td"><input type="text" name="need" required></div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label>帳戶</label></div>
@@ -129,7 +136,7 @@
 					    	</div>		
 
 			    		</div>
-			    	</div>
+			    	
 		    	
 			    	<div class="formSubmit">
 			    		<input type="hidden" name="form" value="new">
@@ -151,19 +158,23 @@
 	    		</div>
 	    	</div>  
 
-			<form   action="php/applicationInsert.php" method="post" enctype="multipart/form-data">
+			<form class="form"  action="php/applicationInsert.php" method="post" enctype="multipart/form-data">
 		    	<div  class="formContent table">		    		
 		    		<div class="tr">
-		    			<div class="td"><label for="numberRe">案件編號</label></div>
-		    			<div class="td"><input type="text" name="event_noRe"  placeholder="" id="numberRe"></div>
-		    		</div>		    		
-		    		<div class="tr">
-		    			<div class="td"><label for="photo">上傳照片</label></div>
-						<div class="td"><input type="file" name="return_remark"></div>
+		    			<div class="td"><label for="numberRe">案件編號</label><span>*</span></div>
+		    			<div class="td"><input type="text" name="event_noRe"  placeholder="" id="numberRe" required></div>
 		    		</div>
 		    		<div class="tr">
-		    			<div class="td"><label for="remark">進度說明</label></div>
-						<div class="td"><textarea  rows="10" cols="25" name="return_info" id="remark"></textarea></div>
+		    			<div class="td"><label for="event_dept">代表人/單位</label><span>*</span></div>
+		    			<div class="td"><input type="text" name="event_dept"  placeholder="" id="event_dept" required></div>
+		    		</div>			    		
+		    		<div class="tr photo">
+		    			<div class="td"><label for="photo">上傳照片</label><span>*</span><span id="morePhoto"><i class="material-icons" style="font-size:22px">add_circle_outline</i> </span></div>
+						<div class="td"><input type="file" name="return_remark[]" required></div>
+		    		</div>
+		    		<div class="tr">
+		    			<div class="td"><label for="info">進度說明</label><span>*</span></div>
+						<div class="td"><textarea  rows="10" cols="25" name="return_info" id="info" required></textarea></div>
 		    		</div>
 		    	</div>   			
 				<div class="formSubmit">
@@ -200,12 +211,12 @@
 		    			<div class="td"><input type="text" name="event_idno" id="id"></div>
 		    		</div>	
 		    	</div>
-	    	
-				<div class="formSubmit">
+	    		<div class="formSubmit">
 			    	<button class="btn_green" name="submit" value="search">確定送出</button>
 			    </div>
+			    <div id="showPanel"></div>
 		    </div>
-		    <div id="showPanel"></div>
+		    
 		</div>
 
 
@@ -278,7 +289,7 @@
 		 		condition="結案";
 		 		break;
 		 	}
-		 	
+		 	str += "<tr><th colspan='2'>查詢結果如下</th></tr>";
 		 	str += "<tr><th>案件編號</th><td>" + eventRow.event_no + "</td></tr>";
 		 	str += "<tr><th>案件標題</th><td>" + eventRow.event_title + "</td></tr>";
 		 	str += "<tr><th>申請日期</th><td>" + eventRow.event_enddate + "</td></tr>";
@@ -312,6 +323,14 @@
 		  xhr.open("Get", url, true);
 		  xhr.send( null );
 		}
+
+		$('#morePhoto').click(function(){
+			$(this).parents('.photo').after("<div class='tr'><div class='td'></div><div class='td'><input type='file' name='return_remark[]'></div></div>");
+			// $(this).parents('.photo').after("<input type='file' name='return_remark[]'>");
+		});
+	
+
+
 	</script>
 	</body>
 
