@@ -29,7 +29,7 @@ try {
 		$admin_name = $admin->admin_name;
 		$_SESSION['signInInfo'] = $admin_name;
 		// echo '';
-		header("Location:../webBack_pro.php");
+		header("Location:../webBack_welcome.php");
 	}else{
 
 		// 登入失敗，把失敗訊息傳回登入頁
