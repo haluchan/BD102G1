@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
-ob_start();
-?>
+ob_start();?>
+
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -21,7 +21,7 @@ ob_start();
 <?php require_once('web_back_frame_top.php') ?>
 
 	<nav>
-		<div class="nav_item">
+		<div class="nav_item pageTitle">
 			<h2>案件審核</h2>
 		</div>
 	</nav>
