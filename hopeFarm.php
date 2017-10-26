@@ -11,6 +11,14 @@
 	<!-- 輪播 -->
 	<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css"/>
   	<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
+  	<!-- 字數限定 -->
+  	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- ScrollMagic -->
+  	<script src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
+  	<script src="src/libs/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+	<script src="src/libs/ScrollMagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+	<script src="src/libs/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+
   	<link rel="stylesheet" href="css/hopeFarm.css">
 	<?php require_once("Header.php"); ?>
 </head>
@@ -40,12 +48,20 @@
 		
 	</section>
 	<div class="cleare"></div>
-	<div class="hopefarmrwd-select col-xs-12">
+	<div class="hopefarmrwd-select  col-xs-12">
 				<ul>
-					<li><h2>最新</h2></li>
-					<li><h2>募資中</h2></li>
-					<li><h2>已結案</h2></li>
-					<li><h2>成功案件</h2></li>
+					<li class="t4">
+						<h2>最新</h2>
+					</li>
+					<li class="t1 ">
+						<h2>募資中</h2>
+					</li>
+					<li class="t2">
+						<h2>已結案</h2>
+					</li>
+					<li class="t3">
+						<h2>成功案件</h2>
+					</li>
 				</ul>
 				
 	</div>
@@ -60,91 +76,48 @@
 			<img src="src/image/hopeFarm/cloud.png" alt="">
 			<div class="cleare"></div>
 		</div>
-		<div class="carousel">
-			<div class="carousel_container kk">
-					<div class="carouselson">
-						<div class="carousel_shadow">
-							<div class="c_left">
-								<img src="src/image/hopeFarm/peiapple.jpg">
-							</div>
-							<div class="c_right">
-								<h2>葡萄園</h2>
-								<p>清境農場</p>
-								<h4>滾滾長江東逝水，浪花淘盡英雄是非成敗轉頭空，青山依舊在付笑談中。青山依舊在，
-								</h4>
-								<div class="bar">
-									<div class="inside-bar"></div>
-								</div>
-								<h3>累積金額 67,000</h3>
-								<h3>倒數28天</h3>
-							</div>
-							<div class="cleare"></div>
-							<div class="c_btn">
-								<a href="#">
-									<h2>我要資助</h2>
-								</a>
-							</div>
-							<div class="cleare"></div>
-						</div>
-					</div>
-					<div class="carouselson">
-						<div class="carousel_shadow">
-							<div class="c_left">
-								<img src="src/image/hopeFarm/peiapple.jpg">
-							</div>
-							<div class="c_right">
-								<h2>葡萄園</h2>
-								<p>清境農場</p>
-								<h4>滾滾長江東逝水，浪花淘盡英雄是非成敗轉頭空，青山依舊在付笑談中。青山依舊在，
-								</h4>
-								<div class="bar">
-									<div class="inside-bar"></div>
-								</div>
-								<h3>累積金額 67,000</h3>
-								<h3>倒數28天</h3>
-							</div>
-							<div class="cleare"></div>
-							<div class="c_btn">
-								<a href="#">
-									<h2>我要資助</h2>
-								</a>
-							</div>
-							<div class="cleare"></div>
-						</div>
-					</div>
-					<div class="carouselson">
-						<div class="carousel_shadow">
-							<div class="c_left">
-								<img src="src/image/hopeFarm/peiapple.jpg">
-							</div>
-							<div class="c_right">
-								<h2>葡萄園</h2>
-								<p>清境農場</p>
-								<h4>滾滾長江東逝水，浪花淘盡英雄是非成敗轉頭空，青山依舊在付笑談中。青山依舊在，
-								</h4>
-								<div class="bar">
-									<div class="inside-bar"></div>
-								</div>
-								<h3>累積金額 67,000</h3>
-								<h3>倒數28天</h3>
-							</div>
-							<div class="cleare"></div>
-							<div class="c_btn">
-								<a href="#">
-									<h2>我要資助</h2>
-								</a>
-							</div>
-							<div class="cleare"></div>
-						</div>
-					</div>
-			</div>
-			
-			
-		</div>
-		<!--  -->
 
-		
+		<!-- ========輪播============= -->
+		<div class="carousel ">
+			<div class="carousel_container kk ">
+<?php
+require_once("php/connectGrowing_hope.php");
+$sql = "select * from count_donate_total where new='Y'";
+$event = $pdo->query( $sql);
+while( $eventRow = $event->fetchObject()){
+?>
+					<div class="carouselson">
+						<div class="carousel_shadow">
+							<div class="c_left">
+								<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
+							</div>
+							<div class="c_right">
+								<h2><?php echo $eventRow->event_title; ?></h2>
+								<p>清境農場</p>
+								<h4><?php echo $eventRow->event_txt; ?></h4>
+								<div class="bar">
+									<div class="inside-bar" style="width:<?php echo $eventRow->reach; ?> "></div>
+								</div>
+								<h3>累積金額 <?php echo $eventRow->price; ?>元</h3>
+								<h3>倒數 <?php echo $eventRow->dday; ?>天</h3>
+							</div>
+							<div class="cleare"></div>
+							<div class="c_btn">
+								<a href="#">
+									<h2>我要資助</h2>
+								</a>
+							</div>
+							<div class="cleare"></div>
+						</div>
+					</div>
+<?php	
+}
+?>
+			</div>
+		</div>
+
 	</section>
+
 	<!-- =============///latest=========== -->
 	<section class="purpose  col-xs-12">
 		<div class="purpose_img">
@@ -152,9 +125,9 @@
 		</div>
 		<div class="purpose_txt">
 			<h2>核心價值</h2>
-			<h3> 安全蔬果 : 合作社成員皆為友善農業之農夫。</h3>
-			<h3> 公平交易 : 由農民所組成的合作社，讓消費者買的合理，降低農民利潤剝削。</h3>
-			<h3> 減碳運送 : 農產品產地直送集貨場後，出貨消費者，運送路程降低、產品更保鮮。</h3>
+			<h3>安全蔬果 :</h3><h3>合作社成員皆為友善農業之農夫。</h3> 
+			<h3>公平交易 :</h3><h3>由農民所組成的合作社，讓消費者買的合理，降低農民利潤剝削。</h3>
+			<h3>減碳運送 :</h3><h3>農產品產地直送集貨場後，出貨消費者，運送路程降低、產品更保鮮。</h3> 
 		</div>
 	</section>
 	<!-- =============///section03=========== -->
@@ -183,183 +156,191 @@
 					<div class="cleare"></li>
 				</ul>
 		</div>
-		
+<!--================輪播最新RWD===============  -->
+<div class="mark_container c4">
+			<div class="mark_item">
+<!-- 抓資料 -->
+<?php
+require_once("php/connectGrowing_hope.php");
+$sql = "select * from count_donate_total where new='Y'";
+$event = $pdo->query( $sql);
+while( $eventRow = $event->fetchObject()){
+?>
+				<a href="#">
+					<div class="item-box col-xs-12 col-sm-4">
+						<div class="item-box-shadow">
+							<div class="box-img">
+								<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
+								<div class="square">
+									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
+								</div>
+							</div>
+							<div class="box-fontt">
+								<p class="txt_name">by <?php echo $eventRow->event_name; ?></p>
+								<h3 class="txt_title"><?php echo $eventRow->event_title; ?></h3>
+								<p class="JQellipsis" ><?php echo $eventRow->event_txt; ?></p>
+								<div class="bar">
+									<div class="inside-bar" style="width:<?php echo $eventRow->reach; ?>% "></div>
+								</div>
+								<h4>累積金額 <?php echo $eventRow->price; ?>元</h4>
+								<h4>倒數50天</h4>
+							</div>
+								<div class="cleare"></div>
+						</div>
+					</div>
+				</a>
+<?php	
+}
+?>					
+				<div class="mark_deco">
+					<img src="src/image/hopeFarm/poor.png" alt="">
+				</div>
+				<div class="mark_more">
+					<img src="src/image/hopeFarm/frog.png" alt="">
+					<a href="#">
+						<h3>查看更多</h3>
+					</a>
+				</div>
+			</div>
+		</div>
+<!-- // -->
 		<div class="mark_container active01 c1">
 			<div class="mark_item">
+<!-- 抓資料 -->
+<?php
+require_once("php/connectGrowing_hope.php");
+$sql = " select * from count_donate_total where new = 'N'";
+$event = $pdo->query( $sql);
+while( $eventRow = $event->fetchObject()){
+?>
 				<a href="#">
 					<div class="item-box col-xs-12 col-sm-4">
 						<div class="item-box-shadow">
 							<div class="box-img">
-								<img src="src/image/hopeFarm/d01.jpg" alt="">
+								<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
 								<div class="square">
 									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
 								</div>
 							</div>
 							<div class="box-fontt">
-								<p>by 大直花園</p>
-								<h2>大湖草莓</h2>
-								<h4>青山依舊在，幾青山依舊在，幾青山依舊在，幾青山依舊在，幾</h4>
+								<p class="txt_name">by <?php echo $eventRow->event_name; ?></p>
+								<h3 class="txt_title"><?php echo $eventRow->event_title; ?></h3>
+								<p class="JQellipsis" ><?php echo $eventRow->event_txt; ?></p>
 								<div class="bar">
-									<div class="inside-bar"></div>
+									<div class="inside-bar" style="width:<?php echo $eventRow->reach; ?>%"></div>
 								</div>
-								<h3>累積金額 37,000元</h3>
-								<h3>倒數50天</h3>
+								<h4>累積金額 <?php echo $eventRow->price; ?>元</h4>
+								<h4>倒數<?php echo $eventRow->dday; ?>天</h4>
 							</div>
 								<div class="cleare"></div>
 						</div>
 					</div>
 				</a>
-				<a href="#">
-					<div class="item-box col-xs-12 col-sm-4">
-						<div class="item-box-shadow">
-							<div class="box-img">
-								<img src="src/image/hopeFarm/d01.jpg" alt="">
-								<div class="square">
-									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
-								</div>
-							</div>
-							<div class="box-fontt">
-								<p>by 大直花園</p>
-								<h2>大湖草莓</h2>
-								<h4>青山依舊在，幾青山依舊在，幾青山依舊在，幾青山依舊在，幾</h4>
-								<div class="bar">
-									<div class="inside-bar"></div>
-								</div>
-								<h3>累積金額 37,000元</h3>
-								<h3>倒數50天</h3>
-							</div>
-								<div class="cleare"></div>
-						</div>
-					</div>
-				</a>
-				<a href="#">
-					<div class="item-box col-xs-12 col-sm-4">
-						<div class="item-box-shadow">
-							<div class="box-img">
-								<img src="src/image/hopeFarm/d01.jpg" alt="">
-								<div class="square">
-									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
-								</div>
-							</div>
-							<div class="box-fontt">
-								<p>by 大直花園</p>
-								<h2>大湖草莓</h2>
-								<h4>青山依舊在，幾青山依舊在，幾青山依舊在，幾青山依舊在，幾</h4>
-								<div class="bar">
-									<div class="inside-bar"></div>
-								</div>
-								<h3>累積金額 37,000元</h3>
-								<h3>倒數50天</h3>
-							</div>
-								<div class="cleare"></div>
-						</div>
-					</div>
-				</a>
-				<a href="#">
-					<div class="item-box col-xs-12 col-sm-4">
-						<div class="item-box-shadow">
-							<div class="box-img">
-								<img src="src/image/hopeFarm/d01.jpg" alt="">
-								<div class="square">
-									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
-								</div>
-							</div>
-							<div class="box-fontt">
-								<p>by 大直花園</p>
-								<h2>大湖草莓</h2>
-								<h4>青山依舊在，幾青山依舊在，幾青山依舊在，幾青山依舊在，幾</h4>
-								<div class="bar">
-									<div class="inside-bar"></div>
-								</div>
-								<h3>累積金額 37,000元</h3>
-								<h3>倒數50天</h3>
-							</div>
-								<div class="cleare"></div>
-						</div>
-					</div>
-				</a>
-				<a href="#">
-					<div class="item-box col-xs-12 col-sm-4">
-						<div class="item-box-shadow">
-							<div class="box-img">
-								<img src="src/image/hopeFarm/d01.jpg" alt="">
-								<div class="square">
-									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
-								</div>
-							</div>
-							<div class="box-fontt">
-								<p>by 大直花園</p>
-								<h2>大湖草莓</h2>
-								<h4>青山依舊在，幾青山依舊在，幾青山依舊在，幾青山依舊在，幾</h4>
-								<div class="bar">
-									<div class="inside-bar"></div>
-								</div>
-								<h3>累積金額 37,000元</h3>
-								<h3>倒數50天</h3>
-							</div>
-								<div class="cleare"></div>
-						</div>
-					</div>
-				</a>
-				<a href="#">
-					<div class="item-box col-xs-12 col-sm-4">
-						<div class="item-box-shadow">
-							<div class="box-img">
-								<img src="src/image/hopeFarm/d01.jpg" alt="">
-								<div class="square">
-									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
-								</div>
-							</div>
-							<div class="box-fontt">
-								<p>by 大直花園</p>
-								<h2>大湖草莓</h2>
-								<h4>青山依舊在，幾青山依舊在，幾青山依舊在，幾青山依舊在，幾</h4>
-								<div class="bar">
-									<div class="inside-bar"></div>
-								</div>
-								<h3>累積金額 37,000元</h3>
-								<h3>倒數50天</h3>
-							</div>
-								<div class="cleare"></div>
-						</div>
-					</div>
-				</a>
-				
-				<div class="cleare"></div>
-			</div>
-			<div class="cleare"></div>
-			<div class="mark_deco">
-				<img src="src/image/hopeFarm/poor.png" alt="">
-			</div>
-			<div class="mark_more">
-				<img src="src/image/hopeFarm/frog.png" alt="">
-				<a href="#">
-					<h3>查看更多</h3>
-				</a>
+<?php	
+}
+?>					
+				<div class="mark_deco">
+					<img src="src/image/hopeFarm/poor.png" alt="">
+				</div>
+				<div class="mark_more">
+					<img src="src/image/hopeFarm/frog.png" alt="">
+					<a href="#">
+						<h3>查看更多</h3>
+					</a>
+				</div>
 			</div>
 		</div>
 		<!-- //c1 -->
 		<div class="mark_container c2">
-			<div class="mark_deco">
-				<img src="src/image/hopeFarm/poor.png" alt="">
-			</div>
-			<div class="mark_more">
-				<img src="src/image/hopeFarm/frog.png" alt="">
+			<div class="mark_item">
+<!-- 抓資料 -->
+<?php
+require_once("php/connectGrowing_hope.php");
+$sql = "select * from count_donate_total where event_status='DE'";
+$event = $pdo->query( $sql);
+while( $eventRow = $event->fetchObject()){
+?>
 				<a href="#">
-					<h3>查看更多2</h3>
+					<div class="item-box col-xs-12 col-sm-4">
+						<div class="item-box-shadow">
+							<div class="box-img">
+								<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
+								<div class="square">
+									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
+								</div>
+							</div>
+							<div class="box-fontt">
+								<p class="txt_name">by <?php echo $eventRow->event_name; ?></p>
+								<h3 class="txt_title"><?php echo $eventRow->event_title; ?></h3>
+								<p class="JQellipsis" ><?php echo $eventRow->event_txt; ?></p>
+								<div class="bar">
+									<div class="inside-bar" style="width:<?php echo $eventRow->reach; ?> "></div>
+								</div>
+								<h4>累積金額 <?php echo $eventRow->price; ?>元</h4>
+								<h4>倒數50天</h4>
+							</div>
+								<div class="cleare"></div>
+						</div>
+					</div>
 				</a>
+<?php	
+}
+?>					
+				<div class="mark_deco">
+					<img src="src/image/hopeFarm/poor.png" alt="">
+				</div>
+				<div class="mark_more">
+					<img src="src/image/hopeFarm/frog.png" alt="">
+					<a href="#">
+						<h3>查看更多</h3>
+					</a>
+				</div>
 			</div>
 		</div>
 		<!-- //c2 -->
 		<div class="mark_container c3">
-			<div class="mark_deco">
-				<img src="src/image/hopeFarm/poor.png" alt="">
-			</div>
-			<div class="mark_more">
-				<img src="src/image/hopeFarm/frog.png" alt="">
+			<div class="mark_item">
+<!-- 抓資料 -->
+<?php
+require_once("php/connectGrowing_hope.php");
+$sql = "select * from count_donate_total where event_best = 'Y'";
+$event = $pdo->query( $sql);
+while( $eventRow = $event->fetchObject()){
+?>
 				<a href="#">
-					<h3>查看更多3</h3>
+					<div class="item-box col-xs-12 col-sm-4">
+						<div class="item-box-shadow">
+							<div class="box-img">
+								<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
+								<div class="square">
+									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
+								</div>
+							</div>
+							<div class="box-fontt">
+								<p class="txt_name">by <?php echo $eventRow->event_name; ?></p>
+								<h3 class="txt_title"><?php echo $eventRow->event_title; ?></h3>
+								<p class="JQellipsis" ><?php echo $eventRow->event_txt; ?></p>
+								<div class="bar">
+									<div class="inside-bar" style="width:<?php echo $eventRow->reach; ?> "></div>
+								</div>
+								<h4>募資總金額 37,000元</h4>
+							</div>
+								<div class="cleare"></div>
+						</div>
+					</div>
 				</a>
+<?php	
+}
+?>					
+				<div class="mark_deco">
+					<img src="src/image/hopeFarm/poor.png" alt="">
+				</div>
+				<div class="mark_more">
+					<img src="src/image/hopeFarm/frog.png" alt="">
+					<a href="#">
+						<h3>查看更多</h3>
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="cleare"></div>
@@ -375,12 +356,11 @@
 	<section class="risk_container col-xs-12">
 		<div class="risk_range">
 			<div class="risk_txt">
-				<p>1.贊助者訂購時務必確認資料正確，出貨前一週會與贊助者聯繫。</p>
-				<p>2.蔬菜箱內容物分量、種類依產季變化，皆以當季蔬菜為主。</p>
-				<p>(種類分為 : 葉菜類4~6份、根莖類2~3份、瓜果類2~3份、菇類1~2份、蛋類1盒)。</p>
-				<p>3.農產品具有時效性，宅配途中若有撞傷、壓傷等情形，收到商品後請先確認外箱是否完整，盡速拆開檢視商品是否完好</p>
+				<p>贊助者訂購時務必確認資料正確，出貨前一週會與贊助者聯繫。</p>
+				<p>蔬菜箱內容物分量、種類依產季變化，皆以當季蔬菜為主。(種類分為 : 葉菜類4~6份、根莖類2~3份、瓜果類2~3份、菇類1~2份、蛋類1盒)。</p>
+				<p>農產品具有時效性，宅配途中若有撞傷、壓傷等情形，收到商品後請先確認外箱是否完整，盡速拆開檢視商品是否完好</p>
 				<p>若發現有嚴重損毀，請消費者於貨到當日拍照存檔，並e-mail(附照片檔案)及來電告知，我們將有專人與您聯繫。</p>
-				<p>4.如有任何問題歡迎您隨時來信與我們聯繫，e-mail：ctfactw@gmail.com</p>
+				<p>如有任何問題歡迎您隨時來信與我們聯繫~</p><p>e-mail：ctfactw@gmail.com</p>
 			</div>
 			<div class="risk_img">
 				<img src="src/image/hopeFarm/duck.png" alt="">
@@ -397,10 +377,42 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/font_Range.js"></script>
+<!-- book_mark -->
 <script>
+
+// function  dofirst(){
+
+	var inside_bar = document.getElementsByClassName('inside-bar');
+
+
+
+	for (i=0 ; i<inside_bar.length ; i++){
+
+			 
+			//var width=inside_bar[i].width;
+			console.log(inside_bar[i])
+			var bar_run =new TimelineMax();
+			bar_run.staggerFromTo(inside_bar[i],5,{
+				width:0,
+			},{
+				width:inside_bar[i].width,
+				ease:Expo.easeOut
+			});
+		}
+
+// }
+
+// document.addEventListener('load', dofirst, false );
+
     $(document).ready(function(){
 
         $('.kk').slick();
+
+
+
+
+		
     });
 </script>
 

@@ -129,7 +129,7 @@ function $qsa(qsa){
 //點小圖換大圖
 	//1.每個li建立事件聆聽功能
 	function proClickSmall(){
-		var lists = document.querySelectorAll('#pro_t_shelf>li');
+		var lists = document.querySelectorAll('.pro_t_imgGroup>li');
 		for (var i=0; i<lists.length; i++){
 			lists[i].addEventListener('click',proShowLarge,true);
 		}
@@ -138,7 +138,7 @@ function $qsa(qsa){
 	function proShowLarge(e){
 		//為什麼點什麼都會換圖??泡泡現象?
 		// e ? e.stopPropagation() : window.event.cancelBubble = true;
-		var small = $(this);
+		var small = e.target;
 		var large = $id('tank_Large');
 		// alert(large.src);
 		// alert(small.className);
@@ -200,7 +200,7 @@ function $qsa(qsa){
 
 //==========================================================================================
 
-//點到魚缸有click效果
+//點到魚缸有click效果pro_t_each
 	function proClickHighLight(){
 		$qs('.pro_t_each div').className = 'pro_click';
 		//每個li建立事件聆聽功能
@@ -261,12 +261,13 @@ function $qsa(qsa){
 
 
 //==============================================================================
-//點魚缸換於資料
+//點魚缸換於資料pro_t_each
 	//1.每個li建立事件聆聽功能
 	function proEveryTank(){
 		var lists = document.querySelectorAll('.pro_t_each');
 		for (var i=0; i<lists.length; i++){
 			lists[i].addEventListener('click',proTankInfoChange,false);
+		// e ? e.stopPropagation() : window.event.cancelBubble = true;
 		}
 	}
 	//2.
@@ -274,7 +275,7 @@ function $qsa(qsa){
 		var pro_realno = $('.pro_click').parent().attr('id');
 		var pro_name = $('.pro_click').parent().find('.pro_t_name').text();
 		var pro_price = $('.pro_click').parent().find('.pro_t_price').text();
-		var pro_std = $('.pro_click').parent().find('.pro_t_std').attr('value');
+		var pro_std = $('.pro_click').parent().find('.pro_t_std').text().replace(/\n/g,"<br>");
 		var pro_info = $('.pro_click img').attr('alt');
 
 		var oldProId = $('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span:nth-child(2)').attr('id');
@@ -329,7 +330,7 @@ function $qsa(qsa){
 		$('.pro_t_infoTop .pro_t_infoTR .pro_t_TBuy span:nth-child(2) input').attr('value', pro_info);
 
 		//規格更新
-		$('.pro_t_infoBottom p').first().text(pro_std);
+		$('.pro_t_infoBottom p').first().html(pro_std);
 
 
 	}
@@ -341,6 +342,10 @@ function $qsa(qsa){
 		// $('#pro_s_cabinet .pro_s_each:first-child .pro_s_vegetable .pro_s_brand .pro_s_new').addClass('hidden');
 		// $('pro_s_new')[1].removeClass('hidden');
 	// }
+
+//==========================================================
+//點到商品，卷軸自動下移
+
 
 
 //抓螢幕寬度去觸發特定裝置的事件

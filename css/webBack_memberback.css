@@ -1,158 +1,75 @@
 @charset "UTF-8";
-.manage {
-  width: 16%;
-}
-
-.content_form {
-  width: 84%;
-}
-
-botton {
-  border: none;
-}
-
 /* table起始 */
-.myForm {
-  width: 94%;
-<<<<<<< HEAD
-  margin: auto;
-}
-
 .myForm table {
-  width: 100%;
-}
-
-.myForm th, .myForm td {
-  /*每個格子統一固定padding*/
-  padding: 6px 4px;
-  text-align: left;
-  word-break: break-all;
-  text-overflow: ellipsis;
-}
+  width: 100%; }
 
 .myForm tr > td:first-child {
   /*每row第一個格子(編號)固定置中，灰色*/
   color: #888;
-  text-align: center;
-}
+  text-align: center; }
 
 .myForm th {
   /*th的樣式:上下有橘色線*/
   border-bottom: 2px solid #ddd;
-  background-color: #F29600;
-}
+  background-color: #F29600; }
 
 .myForm td {
-  font-weight: lighter;
-}
+  font-weight: lighter; }
 
 .myForm .tdRow:nth-child(odd) {
   /*基數白底，偶數灰底(第一row包th不算)*/
-  background-color: #ddd;
-}
+  background-color: #ddd; }
 
 .myForm .tdRow:nth-child(even) {
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 .myForm table {
-  table-layout: fixed;
-}
+  table-layout: fixed; }
 
 .myForm table {
   /*每一欄的寬度設定。以百分比。剩的寬自動為最後一欄*/
   /*不能動！！第一欄固定為5%*/
-  /*自行更改、增加 區域=================================*/
-}
-
-.myForm table tr th:nth-child(1) {
-  width: 5%;
-}
-
-.myForm table tr th:nth-child(2) {
-  width: 10%;
-}
-
-.myForm table tr th:nth-child(3) {
-  width: 10%;
-}
-
-.myForm table tr th:nth-child(4) {
-  width: 10%;
-}
-
-.myForm table tr th:nth-child(5) {
-  width: 10%;
-}
-
-.myForm table tr th:nth-child(6) {
-  width: 15%;
-}
-
-.myForm table tr th:nth-child(7) {
-  width: 10%;
-}
+  /*自行更改、增加 區域=================================*/ }
+  .myForm table tr th:nth-child(1) {
+    width: 3%; }
+  .myForm table tr th:nth-child(2) {
+    width: 5%; }
+  .myForm table tr th:nth-child(3) {
+    width: 3%; }
+  .myForm table tr th:nth-child(4) {
+    width: 3%; }
+  .myForm table tr th:nth-child(5) {
+    width: 8%; }
+  .myForm table tr th:nth-child(6) {
+    width: 5%; }
+  .myForm table tr th:nth-child(7) {
+    width: 3%; }
+  .myForm table tr th:nth-child(8) {
+    width: 2%; }
+  .myForm table tr th:nth-child(9) {
+    width: 5%; }
+  .myForm table tr th:nth-child(10) {
+    width: 5%; }
 
 .myForm .btn {
+  display: inline-block;
+  text-align: center;
   background-color: LemonChiffon;
   padding: 4px 6px;
   border: none;
-}
-=======
-  margin: auto; }
-  .myForm table {
-    width: 100%; }
-  .myForm th, .myForm td {
-    /*每個格子統一固定padding*/
-    padding: 6px 4px;
-    text-align: left;
-    word-break: break-all;
-    text-overflow: ellipsis; }
-  .myForm tr > td:first-child {
-    /*每row第一個格子(編號)固定置中，灰色*/
-    color: #888;
-    text-align: center; }
-  .myForm th {
-    /*th的樣式:上下有橘色線*/
-    border-bottom: 2px solid #ddd;
-    background-color: #F29600; }
-  .myForm td {
-    font-weight: lighter; }
-  .myForm .tdRow:nth-child(odd) {
-    /*基數白底，偶數灰底(第一row包th不算)*/
-    background-color: #ddd; }
-  .myForm .tdRow:nth-child(even) {
-    background-color: #fff; }
-  .myForm table {
-    table-layout: fixed; }
-  .myForm table {
-    /*每一欄的寬度設定。以百分比。剩的寬自動為最後一欄*/
-    /*不能動！！第一欄固定為5%*/
-    /*自行更改、增加 區域=================================*/ }
-    .myForm table tr th:nth-child(1) {
-      width: 3%; }
-    .myForm table tr th:nth-child(2) {
-      width: 5%; }
-    .myForm table tr th:nth-child(3) {
-      width: 3%; }
-    .myForm table tr th:nth-child(4) {
-      width: 3%; }
-    .myForm table tr th:nth-child(5) {
-      width: 8%; }
-    .myForm table tr th:nth-child(6) {
-      width: 5%; }
-    .myForm table tr th:nth-child(7) {
-      width: 3%; }
-    .myForm table tr th:nth-child(8) {
-      width: 2%; }
-    .myForm table tr th:nth-child(9) {
-      width: 5%; }
-    .myForm table tr th:nth-child(10) {
-      width: 5%; }
-  .myForm .btn {
-    background-color: LemonChiffon;
-    padding: 4px 6px;
-    border: none; }
->>>>>>> 552e415daa43ec6dcd4188a3ad64e13377ae4903
+  width: 60%;
+  margin: auto;
+  -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  color: #000; }
+  .myForm .btn:active {
+    -webkit-transform: translate(2px, 2px);
+    -ms-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
 /* table結束 */

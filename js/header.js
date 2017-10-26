@@ -1,8 +1,8 @@
  
 			$(document).ready(function(){
-			$('#ham_button').click(function(){
-				$('#hamicon').toggleClass("hamicon_slide");
-				$('#ham_menu').toggleClass("ham_slide");
+				$('#ham_button').click(function(){
+					$('#hamicon').toggleClass("hamicon_slide");
+					$('#ham_menu').toggleClass("ham_slide");
 				});
 			});		
 			// //登入lightbox

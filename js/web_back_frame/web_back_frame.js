@@ -15,9 +15,9 @@ $(document).ready(function(){
 
 // clicked = true;
     $(document).ready(function(){
-      $(".itemClick").click(function(){
-        $(".itemClick").css('background-color','inherit');
-        $(this).css('background-color','#a7938b');
+      $(".item li").click(function(){
+        // $(".item li").css('background-color','inherit');
+        $(this).css('background-color','rgba(236,254,218,1)');
       });
       // $(".itemClick").click(function(){
       //   $(this).css('background-color','#a7938b');
