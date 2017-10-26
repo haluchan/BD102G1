@@ -8,6 +8,7 @@
 //手機以上
 @include rwd_vivi(min-width,768,sm,12);
 
+
 *{
 	margin: 0;
 	padding: 0;
@@ -58,6 +59,9 @@ textarea{
 }
 body{
 	background-image: url("../src/image/cart/cart-bg.png");
+}
+.display{
+	display: none;
 }
 
 // ======================================================================
@@ -273,16 +277,25 @@ $max-width :960px;
 					float: right;
 					padding: 0;
 					background-color: #FFF;
-					a{
+					position: relative;
+					.want_donate{
 						width: 100%;
+						font-size: 18px;
 						text-align: center;
 						color: #fff;
 						background-color: #59493f;
-						padding: 20px 0 23px;
+						border: 0px;
+						position: absolute;
+						bottom: -70px;
+						top: 0;
+						right: 0;
+						left: 0;
+						@media screen and (max-width: 767px) {
+							bottom: -60px;
+						}
 						&:hover{
 							background-color: #f1ece4;
 							color: #59493f;
-							padding: 20px 0 18px;
 						}
 
 					}
@@ -345,12 +358,37 @@ $max-width :960px;
 				display: table;
 			}
 			.food_img2{
-				width: 80%;
-				margin: 5% 10% 20%;
-				border-radius: 50%;
+				width: 85%;
+				margin: 5% auto 20%;
+				@media screen and (max-width: 767px) {
+					width: 60%;
+					margin: 5% auto 20%;
+				}
+				
+
+				p{
+					display: block;
+					max-height: 130px;
+					background-color: #1e8600;
+					padding: 30px 10px 50px;
+					text-align: center;
+					border-radius: 50%;
+					line-height: 1.5;
+					color: #fff;
+					font-size: 14px;
+					
+					span{
+						width: 100%;
+						padding: 0 35%;
+						border-bottom:1px solid #ccc;
+						
+					}
+				}
+
 			}
 		}
 	}
+
 }
 
 .food_hr{
@@ -515,6 +553,7 @@ $max-width :960px;
 		margin: auto;
 		margin-bottom: 5%;
 		position: relative;
+
 	.message_box{
 		width: 100%;
 		padding: 3% 4% 2% 2%;
@@ -524,11 +563,14 @@ $max-width :960px;
 		.mem_photo{
 			text-align: right;
 			box-sizing:border-box;
-			padding: 0 2% 2%;
+			padding:  2% 2%;
+			overflow: hidden;
+			
 			img{
 				width: 100%;
+				transform: scale(1.2);
 				border-radius: 50%;
-				display: block;
+				// display: block;
 			}
 			
 		}
@@ -600,7 +642,7 @@ $max-width :960px;
 			.mem_photo{
 				text-align: right;
 				box-sizing:border-box;
-				padding: 0 2% 2%;
+				padding: 2% 2%;
 				img{
 					width: 100%;
 					border-radius: 50%;

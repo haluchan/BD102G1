@@ -281,6 +281,8 @@ body {
     .containerhope .latest .carousel .slick-prev:before {
       color: green;
       font-size: 37px; }
+    .containerhope .latest .c4 {
+      display: none; }
   .containerhope .purpose {
     max-width: 1440px;
     margin: auto;
@@ -321,21 +323,21 @@ body {
           display: inline-block;
           margin: auto;
           border-right: 9px solid #fff;
-          border: 2px solid #6cbecc;
+          border: 2px solid #699c33;
           font-family: Arial , '微軟正黑體';
           font-size: 22px;
-          color: #ffffff;
-          background: #6cbecc;
+          color: #699c33;
+          background: #ffffff;
           padding: 10px 20px 10px 20px;
           margin: 0 0.5%;
           cursor: pointer;
           transition: .4s;
           text-align: center; }
         .containerhope .bookmark .mark_title ul li:hover {
-          background: #ffffff;
+          background: #699c33;
           border-right: 9px solid #fff;
-          border: 2px solid #6cbecc;
-          color: #6cbecc;
+          border: 2px solid #699c33;
+          color: #ffffff;
           cursor: pointer;
           transition: .4s; }
       .containerhope .bookmark .mark_title img {
@@ -390,11 +392,12 @@ body {
               float: left;
               padding-bottom: 6%;
               margin-top: -5%; }
-              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt p {
+              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_name {
                 margin-left: 18%; }
-              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h2 {
+              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_title {
+                width: 100%;
                 margin-top: 5%; }
-              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4 {
+              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
                 padding-top: 1%; }
               .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .bar {
                 width: 99%;
@@ -408,16 +411,21 @@ body {
                   height: 10px;
                   background-color: #699c33;
                   border-radius: 28px; }
-              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h3 {
+              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4 {
                 width: 48%;
                 float: left;
                 padding-right: 28%; }
-              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h3:last-child {
+              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4:last-child {
                 width: 24%;
                 padding-right: 0; }
-      .containerhope .bookmark .mark_container .mark_item:last-child {
-        margin: 10% auto;
-        margin-bottom: 0; }
+        .containerhope .bookmark .mark_container .mark_item a:nth-child(4) .item-box {
+          margin-top: 10%; }
+        .containerhope .bookmark .mark_container .mark_item a:nth-child(5) .item-box {
+          margin-top: 10%; }
+        .containerhope .bookmark .mark_container .mark_item a:nth-child(6) .item-box {
+          margin-top: 10%; }
+    .containerhope .bookmark .c4 {
+      display: none; }
     .containerhope .bookmark .active01 {
       display: block; }
     .containerhope .bookmark .mark_deco {
@@ -620,7 +628,7 @@ body {
     padding: 0 10px; }
   .containerhope {
     font-family: '微軟正黑體';
-    margin: 39% 0 0 0; }
+    margin: 34% 0 0 0; }
     .containerhope h2 {
       font-size: 34px;
       letter-spacing: 2px;
@@ -646,12 +654,11 @@ body {
       z-index: 98;
       margin: auto; }
       .containerhope .hopefarmrwd-select ul {
-        padding: 11% 0 5% 0;
+        padding: 6% 0 1% 0;
         background-color: #ffffff;
-        padding-bottom: 2px;
         text-align: center; }
         .containerhope .hopefarmrwd-select ul li {
-          width: 23.75%;
+          width: 22.75%;
           display: inline-block;
           background-color: #699c33; }
           .containerhope .hopefarmrwd-select ul li h2 {
@@ -666,19 +673,77 @@ body {
             cursor: pointer;
             letter-spacing: 1px;
             transition: .4s; }
-    .containerhope .latest {
+    .containerhope .latest .latest_title {
+      display: none; }
+    .containerhope .latest .latest_cloud {
+      display: none; }
+    .containerhope .latest .carousel {
       display: none; }
     .containerhope .purpose .purpose_txt {
-      width: 100%;
-      text-align: center; }
+      width: 100%; }
+      .containerhope .purpose .purpose_txt h3 {
+        text-overflow: ellipsis; }
+        .containerhope .purpose .purpose_txt h3:nth-child(2):before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-color: #699c33;
+          border-radius: 50px;
+          vertical-align: middle;
+          margin-top: -5px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(2) {
+          padding-bottom: 2px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(3) {
+          padding-bottom: 8px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(4):before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-color: #699c33;
+          border-radius: 50px;
+          vertical-align: middle;
+          margin-top: -5px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(4) {
+          padding-bottom: 2px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(5) {
+          padding-bottom: 8px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(6):before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-color: #699c33;
+          border-radius: 50px;
+          vertical-align: middle;
+          margin-top: -5px; }
     .containerhope .bookmark .mark_title {
       display: none; }
     .containerhope .bookmark .mark_container .mark_item a .item-box {
       margin-bottom: 5%; }
       .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow {
         box-shadow: 0 0 8px 0 #ccc; }
-        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-fontt p {
-          margin-left: 0; }
+        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_name {
+          margin-left: 12%;
+          margin-top: -4%;
+          font-weight: bold; }
+        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_title {
+          font-size: 26px; }
+        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
+          letter-spacing: 2px;
+          line-height: 160%; }
+        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .bar {
+          margin-top: 5px; }
+        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4 {
+          font-size: 18px;
+          padding-right: 0;
+          width: 100%;
+          text-align: center;
+          padding-top: 5px; }
+          .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4:last-child {
+            width: 100%;
+            padding-top: 2px; }
     .containerhope .bookmark .mark_container .mark_deco img {
       display: none; }
     .containerhope .bookmark .mark_container .mark_more {
@@ -686,6 +751,29 @@ body {
       .containerhope .bookmark .mark_container .mark_more img {
         width: 20%; }
     .containerhope .risk {
-      margin-top: 15%; }
+      margin-top: 20%; }
+    .containerhope .risk_container .risk_range .risk_txt {
+      width: 100%;
+      margin-top: 10px; }
+      .containerhope .risk_container .risk_range .risk_txt p {
+        letter-spacing: 2px;
+        line-height: 160%; }
+        .containerhope .risk_container .risk_range .risk_txt p:before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-color: #699c33;
+          border-radius: 50px;
+          vertical-align: middle;
+          margin-top: -5px; }
+        .containerhope .risk_container .risk_range .risk_txt p:nth-child(2) {
+          margin-top: 10px; }
+        .containerhope .risk_container .risk_range .risk_txt p:nth-child(3) {
+          margin-top: 10px; }
+        .containerhope .risk_container .risk_range .risk_txt p:nth-child(4) {
+          margin-top: 10px; }
+        .containerhope .risk_container .risk_range .risk_txt p:nth-child(5) {
+          margin-top: 10px; }
     .containerhope .risk_container .risk_range .risk_img img {
       display: none; } }

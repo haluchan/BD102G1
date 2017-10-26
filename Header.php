@@ -1,4 +1,7 @@
 
+
+
+
    	
    	<div>
    		<?php require_once('login.php'); ?> 
@@ -74,6 +77,7 @@
     				</li>
     			</ul>
     		</div>
+
 
 
     		<div class="menu_logo"><a href="index.php"><img src="src/image/header/logo_v2.png" id="logo"></a></div>

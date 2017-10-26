@@ -14,25 +14,9 @@
 
 <?php require_once('web_back_frame_top.php') ?>
 <nav>
-			<div class="nav_item">
+			<div class="nav_item pageTitle">
 
 				<h2>會員名單</h2>
-			</div>
-			<div class="nav_item">
-				<!-- <span>狀態：</span>
-				<select>
-					<option value="">不限</option>
-					<option value="">不限</option>
-					<option value="">不限</option>
-				</select> -->
-			</div>
-			<div class="nav_item">
-				<span>分類：</span>
-				<select>
-					<option value="">會員編號</option>
-				<!-- 	<option value=""></option> -->
-					
-				</select>
 			</div>
 			<div class="nav_item">
 				<div class="search">
@@ -41,6 +25,22 @@
 					<button><img src="src/image/web_back_frame/seaech.png"></button>
 					<!-- <button><img src="src/image/web_back_frame/erase.png"></button> -->
 				</div>
+			</div>
+			<div class="nav_item select">
+				<!-- <span>狀態：</span>
+				<select>
+					<option value="">不限</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select> -->
+			</div>
+			<div class="nav_item select">
+				<span>分類：</span>
+				<select>
+					<option value="">會員編號</option>
+				<!-- 	<option value=""></option> -->
+					
+				</select>
 			</div>
 			<div class="clearfix"></div>
 		</nav>
