@@ -2,7 +2,6 @@ body {
   background-image: url("../../src/image/cart/cart-bg.png"); }
 
 .container {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 5% 10%;
   width: 50%;

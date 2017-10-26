@@ -176,6 +176,9 @@ textarea {
 body {
   background-image: url("../src/image/cart/cart-bg.png"); }
 
+.display {
+  display: none; }
+
 .donate_info {
   max-width: 960px;
   margin: auto;
@@ -334,17 +337,26 @@ body {
         width: 30%;
         float: right;
         padding: 0;
-        background-color: #FFF; }
-        .main-nav .full-wrapper .inner-nav ul .donate_nav a {
+        background-color: #FFF;
+        position: relative; }
+        .main-nav .full-wrapper .inner-nav ul .donate_nav .want_donate {
           width: 100%;
+          font-size: 18px;
           text-align: center;
           color: #fff;
           background-color: #59493f;
-          padding: 20px 0 23px; }
-          .main-nav .full-wrapper .inner-nav ul .donate_nav a:hover {
+          border: 0px;
+          position: absolute;
+          bottom: -70px;
+          top: 0;
+          right: 0;
+          left: 0; }
+          @media screen and (max-width: 767px) {
+            .main-nav .full-wrapper .inner-nav ul .donate_nav .want_donate {
+              bottom: -60px; } }
+          .main-nav .full-wrapper .inner-nav ul .donate_nav .want_donate:hover {
             background-color: #f1ece4;
-            color: #59493f;
-            padding: 20px 0 18px; }
+            color: #59493f; }
 
 .case_content {
   width: 100%; }
@@ -377,9 +389,26 @@ body {
       margin: auto;
       display: table; }
     .case_content .food .food_item .food_img2 {
-      width: 80%;
-      margin: 5% 10% 20%;
-      border-radius: 50%; }
+      width: 85%;
+      margin: 5% auto 20%; }
+      @media screen and (max-width: 767px) {
+        .case_content .food .food_item .food_img2 {
+          width: 60%;
+          margin: 5% auto 20%; } }
+      .case_content .food .food_item .food_img2 p {
+        display: block;
+        max-height: 130px;
+        background-color: #1e8600;
+        padding: 30px 10px 50px;
+        text-align: center;
+        border-radius: 50%;
+        line-height: 1.5;
+        color: #fff;
+        font-size: 14px; }
+        .case_content .food .food_item .food_img2 p span {
+          width: 100%;
+          padding: 0 35%;
+          border-bottom: 1px solid #ccc; }
 
 .food_hr {
   width: 100%; }
@@ -494,13 +523,19 @@ body {
       border: 1px solid #ddd0bb; }
       .message .message_form .message_box .mem_photo {
         text-align: right;
+<<<<<<< HEAD
         -webkit-box-sizing: border-box;
+=======
+>>>>>>> a50ce56408cd2fe9c7df9e996e9570e85e089848
         box-sizing: border-box;
-        padding: 0 2% 2%; }
+        padding: 2% 2%;
+        overflow: hidden; }
         .message .message_form .message_box .mem_photo img {
           width: 100%;
-          border-radius: 50%;
-          display: block; }
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2);
+          border-radius: 50%; }
       .message .message_form .message_box .mem_txt .content {
         font-size: 16px;
         line-height: 1.5;
@@ -551,9 +586,12 @@ body {
       border-radius: 15px; }
       .message .message_form .msg_box .mem_photo {
         text-align: right;
+<<<<<<< HEAD
         -webkit-box-sizing: border-box;
+=======
+>>>>>>> a50ce56408cd2fe9c7df9e996e9570e85e089848
         box-sizing: border-box;
-        padding: 0 2% 2%; }
+        padding: 2% 2%; }
         .message .message_form .msg_box .mem_photo img {
           width: 100%;
           border-radius: 50%;
@@ -579,7 +617,10 @@ body {
       .message .message_form button:hover {
         background-color: #FFF;
         color: #a6937c;
+<<<<<<< HEAD
         -webkit-box-shadow: 0px 2px 8px #aaa;
+=======
+>>>>>>> a50ce56408cd2fe9c7df9e996e9570e85e089848
         box-shadow: 0px 2px 8px #aaa; }
     .message .message_form .report_box {
       width: 50%;
@@ -591,7 +632,10 @@ body {
       left: 0;
       margin-left: 25%;
       margin-top: 25%;
+<<<<<<< HEAD
       -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+=======
+>>>>>>> a50ce56408cd2fe9c7df9e996e9570e85e089848
       box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
       display: none; }
       @media screen and (max-width: 767px) {

@@ -59,7 +59,6 @@
   border: none;
   width: 60%;
   margin: auto;
-  -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   outline: none;
@@ -69,7 +68,6 @@
     -webkit-transform: translate(2px, 2px);
     -ms-transform: translate(2px, 2px);
     transform: translate(2px, 2px);
-    -webkit-box-shadow: none;
     box-shadow: none; }
 
 /* table結束 */
