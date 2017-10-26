@@ -1,9 +1,8 @@
 <?php
 session_start();
 ob_start();
-$admin_name = $_SESSION['signInInfo'];
+$_SESSION['adminName'] = $_SESSION['signInInfo'];
 $_SESSION['signInInfo'] = '';
-$_SESSION['adminName'] = $admin_name;
 $_SESSION['signInDate'] =  date ("Y-m-d H:i:s" , mktime(date('H')+8, date('i'), date('s'), date('m'), date('d'), date('Y')));
 ?>
 <!DOCTYPE html>

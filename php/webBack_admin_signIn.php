@@ -1,8 +1,7 @@
 <?php
 session_start();
 ob_start();
-
-$_SESSION['signInInfo'] = '';
+// $_SESSION['signInInfo'] = '';
 
 try { 	
 

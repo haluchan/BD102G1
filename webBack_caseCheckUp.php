@@ -1,3 +1,6 @@
+<?php
+session_start();
+ob_start();?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -17,7 +20,7 @@
 <?php require_once('web_back_frame_top.php') ?>
 <nav>
 			
-			<div class="nav_item">
+			<div class="nav_item pageTitle">
 
 				<h2>上架確認</h2>
 			</div>
