@@ -6,6 +6,9 @@
 .myForm label + label {
   margin-left: 14px; }
 
+.myForm a {
+  text-decoration: none; }
+
 .myForm tr > td:first-child {
   /*每row第一個格子(編號)固定置中，灰色*/
   color: #888;
@@ -45,7 +48,6 @@
   border: none;
   width: 60%;
   margin: auto;
-  -webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   outline: none;
@@ -55,7 +57,6 @@
     -webkit-transform: translate(2px, 2px);
     -ms-transform: translate(2px, 2px);
     transform: translate(2px, 2px);
-    -webkit-box-shadow: none;
     box-shadow: none; }
 
 /* table結束 */
@@ -64,7 +65,6 @@
   width: 97%; }
   .proSave .submit {
     border-radius: 6px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: right;
     display: block;
