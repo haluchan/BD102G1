@@ -1,7 +1,9 @@
 $(document).ready(function(){
+
+  //選單展開收合
 	$('.slideButton').click(function(){
      
- 
+
       $(this).parent().children('.item').slideToggle(200, function(){
           
     if($('.item').is(':visible')){
