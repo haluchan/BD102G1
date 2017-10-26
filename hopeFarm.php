@@ -85,6 +85,15 @@ require_once("php/connectGrowing_hope.php");
 $sql = "select * from count_donate_total where new='Y'";
 $event = $pdo->query( $sql);
 while( $eventRow = $event->fetchObject()){
+// count bar
+	$sql2 = "select sum(dona_price) from donate where event_no = {$eventRow->event_no}";
+	$donateResult = $pdo->query($sql2);
+	$donateResult->bindColumn(1,$totalPrice);
+	$donateResult->fetch();
+	$price_allow = $eventRow->event_allow;
+	$totalPrice=$totalPrice?$totalPrice:0;
+	$width = floor ($totalPrice/$price_allow * 99) . "%";
+// 
 ?>
 					<div class="carouselson">
 						<div class="carousel_shadow">
@@ -96,7 +105,7 @@ while( $eventRow = $event->fetchObject()){
 								<p>清境農場</p>
 								<h4><?php echo $eventRow->event_txt; ?></h4>
 								<div class="bar">
-									<div class="inside-bar" style="width:<?php echo $eventRow->reach; ?> "></div>
+									<div class="inside-bar" style="width:<?php echo $width; ?> "></div>
 								</div>
 								<h3>累積金額 <?php echo $eventRow->price; ?>元</h3>
 								<h3>倒數 <?php echo $eventRow->dday; ?>天</h3>
@@ -148,7 +157,7 @@ while( $eventRow = $event->fetchObject()){
 						募資中
 					</li>
 					<li class="t2">
-						已結案
+						案件進行中
 					</li>
 					<li class="t3">
 						成功案件
@@ -165,6 +174,15 @@ require_once("php/connectGrowing_hope.php");
 $sql = "select * from count_donate_total where new='Y'";
 $event = $pdo->query( $sql);
 while( $eventRow = $event->fetchObject()){
+	// count bar
+	$sql2 = "select sum(dona_price) from donate where event_no = {$eventRow->event_no}";
+	$donateResult = $pdo->query($sql2);
+	$donateResult->bindColumn(1,$totalPrice);
+	$donateResult->fetch();
+	$price_allow = $eventRow->event_allow;
+	$totalPrice=$totalPrice?$totalPrice:0;
+	$width = floor ($totalPrice/$price_allow * 99) . "%";
+// 
 ?>
 				<a href="#">
 					<div class="item-box col-xs-12 col-sm-4">
@@ -180,7 +198,7 @@ while( $eventRow = $event->fetchObject()){
 								<h3 class="txt_title"><?php echo $eventRow->event_title; ?></h3>
 								<p class="JQellipsis" ><?php echo $eventRow->event_txt; ?></p>
 								<div class="bar">
-									<div class="inside-bar" style="width:<?php echo $eventRow->reach; ?>% "></div>
+									<div class="inside-bar" style="width:<?php echo $width; ?> "></div>
 								</div>
 								<h4>累積金額 <?php echo $eventRow->price; ?>元</h4>
 								<h4>倒數50天</h4>
@@ -212,6 +230,15 @@ require_once("php/connectGrowing_hope.php");
 $sql = " select * from count_donate_total where new = 'N'";
 $event = $pdo->query( $sql);
 while( $eventRow = $event->fetchObject()){
+	// count bar
+	$sql2 = "select sum(dona_price) from donate where event_no = {$eventRow->event_no}";
+	$donateResult = $pdo->query($sql2);
+	$donateResult->bindColumn(1,$totalPrice);
+	$donateResult->fetch();
+	$price_allow = $eventRow->event_allow;
+	$totalPrice=$totalPrice?$totalPrice:0;
+	$width = floor ($totalPrice/$price_allow * 99) . "%";
+// 
 ?>
 				<a href="#">
 					<div class="item-box col-xs-12 col-sm-4">
@@ -227,7 +254,7 @@ while( $eventRow = $event->fetchObject()){
 								<h3 class="txt_title"><?php echo $eventRow->event_title; ?></h3>
 								<p class="JQellipsis" ><?php echo $eventRow->event_txt; ?></p>
 								<div class="bar">
-									<div class="inside-bar" style="width:<?php echo $eventRow->reach; ?>%"></div>
+									<div class="inside-bar" style="width:<?php echo $width; ?>"></div>
 								</div>
 								<h4>累積金額 <?php echo $eventRow->price; ?>元</h4>
 								<h4>倒數<?php echo $eventRow->dday; ?>天</h4>
@@ -259,6 +286,22 @@ require_once("php/connectGrowing_hope.php");
 $sql = "select * from count_donate_total where event_status='DE'";
 $event = $pdo->query( $sql);
 while( $eventRow = $event->fetchObject()){
+	
+	$event_enddate = $eventRow->event_enddate;
+	$event_deadline = $eventRow->event_deadline;
+	$today = date ("Y-m-d");
+	$green = floor(  (strtotime($event_deadline) - strtotime($today))/(60*60*24)  ."<br>");
+	$white = floor(  (strtotime($event_deadline) - strtotime($event_enddate))/(60*60*24)  );
+	$width = (($green / $white)*99)."%";
+
+	//$time1 = "2013-12-02 10:00:00";
+	//$time2 = "2013-11-02 10:00:00";
+	//echo (  (strtotime($time1) - strtotime($time2))/(60*60*24)."<br>"  );
+	
+
+
+	//echo $event_enddate."<br>".$event_deadline;
+// 
 ?>
 				<a href="#">
 					<div class="item-box col-xs-12 col-sm-4">
@@ -274,10 +317,9 @@ while( $eventRow = $event->fetchObject()){
 								<h3 class="txt_title"><?php echo $eventRow->event_title; ?></h3>
 								<p class="JQellipsis" ><?php echo $eventRow->event_txt; ?></p>
 								<div class="bar">
-									<div class="inside-bar" style="width:<?php echo $eventRow->reach; ?> "></div>
+									<div class="inside-bar" style="width:<?php echo $width; ?> "></div>
 								</div>
-								<h4>累積金額 <?php echo $eventRow->price; ?>元</h4>
-								<h4>倒數50天</h4>
+								<h4>案件進度回報 </h4>
 							</div>
 								<div class="cleare"></div>
 						</div>
@@ -304,8 +346,31 @@ while( $eventRow = $event->fetchObject()){
 <?php
 require_once("php/connectGrowing_hope.php");
 $sql = "select * from count_donate_total where event_best = 'Y'";
+// $type = isset($_REQUEST["type"]) ? $_REQUEST["type"] : 1;
+// switch($type){
+// 	case 1:
+// 	$sql = "select * from count_donate_total where event_status = 'DI'";
+// 	case 2:
+// 	$sql = "select * from count_donate_total where event_status = 'CI'";
+// 	case 3:
+// 	$sql = "select * from count_donate_total where event_best = 'Y'";
+// 	break;
+// 	case 4:
+// 	$sql = "select * from count_donate_total where new = 'Y'";
+// }
 $event = $pdo->query( $sql);
 while( $eventRow = $event->fetchObject()){
+//
+ //$totalPrice = 0;
+// count bar
+	$sql2 = "select sum(dona_price) from donate where event_no = {$eventRow->event_no}";
+	$donateResult = $pdo->query($sql2);
+	$donateResult->bindColumn(1,$totalPrice);
+	$donateResult->fetch();
+	$price_allow = $eventRow->event_allow;
+	$totalPrice=$totalPrice?$totalPrice:0;
+	$width = floor ($totalPrice/$price_allow * 99) . "%";
+// 
 ?>
 				<a href="#">
 					<div class="item-box col-xs-12 col-sm-4">
@@ -321,9 +386,9 @@ while( $eventRow = $event->fetchObject()){
 								<h3 class="txt_title"><?php echo $eventRow->event_title; ?></h3>
 								<p class="JQellipsis" ><?php echo $eventRow->event_txt; ?></p>
 								<div class="bar">
-									<div class="inside-bar" style="width:<?php echo $eventRow->reach; ?> "></div>
+									<div class="inside-bar" style="width:<?php echo $width; ?> "></div>
 								</div>
-								<h4>募資總金額 37,000元</h4>
+								<h4>募資總金額 <?php echo $totalPrice;?>元</h4>
 							</div>
 								<div class="cleare"></div>
 						</div>
@@ -382,7 +447,7 @@ while( $eventRow = $event->fetchObject()){
 <script>
 
 // function  dofirst(){
-
+/**/
 	var inside_bar = document.getElementsByClassName('inside-bar');
 
 

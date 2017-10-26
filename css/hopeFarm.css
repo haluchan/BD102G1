@@ -325,6 +325,7 @@ body {
       .containerhope .bookmark .mark_title ul {
         text-align: center; }
         .containerhope .bookmark .mark_title ul li {
+          width: 10%;
           display: inline-block;
           margin: auto;
           border-right: 9px solid #fff;
@@ -340,7 +341,16 @@ body {
           -o-transition: .4s;
           transition: .4s;
           text-align: center; }
-        .containerhope .bookmark .mark_title ul li:hover {
+          .containerhope .bookmark .mark_title ul li:hover {
+            background: #699c33;
+            border-right: 9px solid #fff;
+            border: 2px solid #699c33;
+            color: #ffffff;
+            cursor: pointer;
+            -webkit-transition: .4s;
+            -o-transition: .4s;
+            transition: .4s; }
+        .containerhope .bookmark .mark_title ul .active01 {
           background: #699c33;
           border-right: 9px solid #fff;
           border: 2px solid #699c33;
@@ -422,12 +432,8 @@ body {
                   height: 10px;
                   background-color: #699c33;
                   border-radius: 28px; }
-              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4 {
-                width: 48%;
-                float: left;
-                padding-right: 28%; }
               .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4:last-child {
-                width: 24%;
+                width: 50%;
                 padding-right: 0; }
         .containerhope .bookmark .mark_container .mark_item a:nth-child(4) .item-box {
           margin-top: 10%; }
@@ -435,6 +441,13 @@ body {
           margin-top: 10%; }
         .containerhope .bookmark .mark_container .mark_item a:nth-child(6) .item-box {
           margin-top: 10%; }
+    .containerhope .bookmark .c1 .mark_item a .item-box .item-box-shadow .box-fontt h4 {
+      width: 48%;
+      float: left;
+      padding-right: 28%; }
+    .containerhope .bookmark .c1 .mark_item a .item-box .item-box-shadow .box-fontt h4:last-child {
+      width: 24%;
+      padding-right: 0; }
     .containerhope .bookmark .c4 {
       display: none; }
     .containerhope .bookmark .active01 {
