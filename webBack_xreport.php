@@ -1,8 +1,11 @@
+<?php
+session_start();
+ob_start();?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
-	<title>後台::商品</title>
+	<title>後台::留言檢舉</title>
 	<!-- 自己的css擺這裡 -->
 	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
 	<!-- 不准動的部分，以下三行 -->
@@ -14,34 +17,35 @@
 <?php require_once('web_back_frame_top.php') ?>
 <nav>
 			
-			<div class="nav_item">
+		<div class="nav_item pageTitle">
 
-				<h2>檢舉</h2>
-			</div>
-			<div class="nav_item">
-				<span>狀態：</span>
-				<select>
-					<option value="">不限</option>
-					<option value="">不限</option>
-					<option value="">不限</option>
-				</select>
-			</div>
-			<div class="nav_item">
-				<span>類別：</span>
-				<select>
-					<option value="">不限</option>
-					<option value="">不限</option>
-					<option value="">不限</option>
-				</select>
-			</div>
-			<div class="nav_item">
-				<div class="search">
-					<input type="text" name="" placeholder="搜尋">
+			<h2>留言檢舉</h2>
+		</div>
+		<div class="nav_item ">
+			<div class="search">
+				<input type="text" name="" placeholder="搜尋">
 
-					<button><img src="src/image/web_back_frame/seaech.png"></button>
-					<button><img src="src/image/web_back_frame/erase.png"></button>
-				</div>
+				<button><img src="src/image/web_back_frame/seaech.png"></button>
+				<button><img src="src/image/web_back_frame/erase.png"></button>
 			</div>
+		</div>
+		
+		<div class="nav_item select">
+			<span>類別：</span>
+			<select>
+				<option value="">不限</option>
+				<option value="">不限</option>
+				<option value="">不限</option>
+			</select>
+		</div>
+		<div class="nav_item select">
+			<span>類別：</span>
+			<select>
+				<option value="">全部</option>
+				<option value="">種子</option>
+				<option value="">魚缸</option>
+			</select>
+		</div>
 			<div class="clearfix"></div>
 		</nav>
 <div class="myForm">
