@@ -35,7 +35,7 @@ try {
 			<th></th>
 			<th>案件編號</th>
 			<th>申請人</th>
-			<th>申請日期</th>
+			<th>申請時間</th>
 			<th>申請金額</th>
 			<th>核准金額</th>
 			<th>募資截止日</th>
@@ -52,10 +52,10 @@ try {
 			<tr class="tdRow">
 				<td> <?php echo $i;?></td>
 				<!-- $value = str_pad($value,3,'0',STR_PAD_LEFT); 補0用法-->
-				<td class="pointer"> <?php echo str_pad($eventRow->event_no,5,'0',STR_PAD_LEFT) ;?></td>
+				<td class="pointer"><?php echo str_pad($eventRow->event_no,5,'0',STR_PAD_LEFT) ;?></td>
 				<td> <?php echo $eventRow->event_name;?></td>
 				<td> <?php echo $eventRow->event_date;?></td>
-				<td> <?php echo $eventRow->event_need;?></td>
+				<td> <?php echo number_format($eventRow->event_need);?></td>
 				<td>
 					<input type="text" name="allow">
 				</td>
@@ -122,7 +122,7 @@ try {
 			
 			if(checkallow==""||checkdate==""){
 
-				alert('未輸入核准金額及募資結束日期');
+				alert('未輸入核准金額或募資結束日期');
 			}
 			status="P"
 			var allow= $(this).parent().siblings("td:nth-child(6)").find('input[name="allow"]').val();
