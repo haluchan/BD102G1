@@ -7,11 +7,11 @@ ob_start();?>
 	<meta charset="UTF-8">
 	<title>後台::留言檢舉</title>
 	<!-- 自己的css擺這裡 -->
+	<link rel="stylesheet" href="css/webBack_xreport.css">
 	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
 	<!-- 不准動的部分，以下三行 -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
-	<link rel="stylesheet" href="css/webBack_xreport.css">
 </head>
 <body>
 <?php require_once('web_back_frame_top.php') ?>
@@ -87,7 +87,7 @@ ob_start();?>
 				<input type="radio" name="status" value="1"><label>駁回</label>
 			</td>
 			<td >
-				<input type="submit" value="確認">
+				<input type="submit" class="btn" value="確認">
 			</td>
 		</tr>
 	</form>
