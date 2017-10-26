@@ -1,7 +1,6 @@
 <?php
 session_start();
 ob_start();
-$_SESSION['signInInfo']='';
 ?>
 <!DOCTYPE html>
 <html>
