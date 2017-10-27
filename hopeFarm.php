@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<?php require_once('Header_head.php') ?>
+
 	<meta charset="UTF-8">
 	<title>hopeFarm</title>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
 	<script type="text/javascript" src="js/hopeFarm.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	
-	<link rel="stylesheet" href="css/headerFooter.css">
+	<!-- <link rel="stylesheet" href="css/headerFooter.css"> -->
 	<!-- 輪播 -->
 	<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css"/>
   	<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
@@ -20,10 +22,11 @@
 	<script src="src/libs/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
 
   	<link rel="stylesheet" href="css/hopeFarm.css">
-	<?php require_once("Header.php"); ?>
+	
 </head>
 <body>
-<?php require_once("Header_head.php"); ?>
+<?php require_once('Header.php') ?>
+
 <section class="containerhope">
 	<section class="view col-sm-12 col-xs-12">
 		<div class="view_container">
@@ -468,7 +471,8 @@ while( $eventRow = $event->fetchObject()){
 		<img src="src/image/hopeFarm/stone.png" alt="">
 	</section>
 </section>
-<?php require_once("Footer.php"); ?>
+<?php require_once('Footer.php') ?> 
+<script src="js/header.js"></script>
 <!-- -============= -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
