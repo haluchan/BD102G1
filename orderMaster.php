@@ -84,8 +84,20 @@ ob_start();
 			<td><?php echo $resultset->order_bonus ;?></td>
 			<td><?php echo $resultset->order_cut ;?></td>
 			<td><?php echo $resultset->order_total ;?></td>
-			<td><?php if( $resultset->order_status == 1){echo "已處理";}else{
-				echo "未處理";} ;?></td>
+			<td>
+
+				<form action="php/changesta.php" method="get" accept-charset="utf-8">
+					<input type="hidden" name="order_no" value="<?php echo $resultset->order_no ;?>">
+					<input type="hidden" name="order_status" value="1">
+					
+					<input type="hidden" name="order_shipdate" value="<?php 
+					date_default_timezone_set("Asia/Taipei");
+					echo DATE("Y.m.d h.i.sa") ;?>">
+					<?php if( $resultset->order_status == 1){echo "已處理";}else{
+						echo "<button type='submit' class='btn' >出貨</button>";} 
+				;?>	
+				</form>
+			</td>
 			<td><?php echo $resultset->order_date ;?></td>
 			<td><?php echo $resultset->order_remark ;?></td>
 			<td><?php if( $resultset->order_send == 1){echo "宅配";}else{
@@ -94,6 +106,7 @@ ob_start();
 			<td><?php echo $resultset->order_tel ;?></td>
 			<td><?php echo $resultset->order_name ;?></td>
 			<td><?php echo $resultset->order_shipdate ;?></td>
+			
 			
 		</tr>
 		
