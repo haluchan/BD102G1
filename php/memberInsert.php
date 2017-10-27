@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>memberInsert.php</title>
-</head>
-<body>
-	<?php 
+<?php 
 try {
 	require_once("connectBeck.php");
 	$sql = "insert into member(mem_name,mem_Id,Mem_Psw,mem_mail,mem_gender,mem_birth,mem_add)value(:mem_name,:mem_Id,:mem_Psw,:mem_mail,:mem_gender,:mem_birth,:mem_add)";	
@@ -19,14 +12,10 @@ try {
 	$product->bindValue( ":mem_add" , $_REQUEST["mem_add"]);
 	$product->execute();
 	// echo "異動成功~<br>";
-	
-	
-	
-	// header("location:../index.php");
+	header("location:../index.php");
 } catch (PDOException $e) {
   echo "錯誤行號 : ", $e->getLine(), "<br>";
   echo "錯誤訊息 : ", $e->getMessage(), "<br>";		
 }
 ?>    
-</body>
-</html>
+

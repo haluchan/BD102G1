@@ -1,16 +1,19 @@
+<?php
+session_start();
+ob_start();?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
 	<title>後台::案件回報</title>
 	
-	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
+	<!-- 自己的css擺這裡 -->
+	<link rel="stylesheet" href="css/webBack_caseReturn.css">
 	<!-- 不准動的部分，以下三行 -->
+	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
-	<!-- 自己的css擺這裡 -->
-	<link rel="stylesheet" href="css/webBack_caseReturn.css">
 
 </head>
 <body>
@@ -21,15 +24,16 @@
 
 				<h2>案件回報</h2>
 			</div>
-			<div class="nav_item">
-				<span>狀態：</span>
-				<select>
-					<option value="">不限</option>
-					<option value="">不限</option>
-					<option value="">不限</option>
-				</select>
+			<div class="nav_item ">
+				<div class="search">
+					<input type="text" name="" placeholder="搜尋">
+
+					<button><img src="src/image/web_back_frame/seaech.png"></button>
+					<button><img src="src/image/web_back_frame/erase.png"></button>
+				</div>
 			</div>
-			<div class="nav_item">
+			
+			<div class="nav_item select">
 				<span>類別：</span>
 				<select>
 					<option value="">不限</option>
@@ -37,13 +41,13 @@
 					<option value="">不限</option>
 				</select>
 			</div>
-			<div class="nav_item">
-				<div class="search">
-					<input type="text" name="" placeholder="搜尋">
-
-					<button><img src="src/image/web_back_frame/seaech.png"></button>
-					<button><img src="src/image/web_back_frame/erase.png"></button>
-				</div>
+			<div class="nav_item select">
+				<span>類別：</span>
+				<select>
+					<option value="">全部</option>
+					<option value="">種子</option>
+					<option value="">魚缸</option>
+				</select>
 			</div>
 			<div class="clearfix"></div>
 </nav>
