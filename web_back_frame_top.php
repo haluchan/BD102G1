@@ -53,8 +53,8 @@
 			 	</ol>
 				
 
-				<p class="signInInfo"></p>
-			 	<button class="logout" type="button">登出</button>
+				<p class="signInInfo"><?php echo '管理員：<br>' .$_SESSION['adminName']. '<br>登入時間：<br>' .$_SESSION['signInDate']; ?></p>
+			 	<a class="logout" href="php/admin_signOut.php">登出</a>
 
 			 </div>
 		<!-- 內容 -->

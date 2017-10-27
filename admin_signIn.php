@@ -1,7 +1,6 @@
 <?php
 session_start();
 ob_start();
-$_SESSION['signInInfo']='';
 ?>
 <!DOCTYPE html>
 <html>
@@ -63,7 +62,14 @@ $_SESSION['signInInfo']='';
 <script>
 	window.addEventListener('load', function(){
 
-		var signInInfo = " <?php echo $_SESSION['signInInfo']; ?>";
+		var signInInfo = " <?php 
+			if( isset($_SESSION['signInInfo']) ){
+				echo $_SESSION['signInInfo'];
+			}else{
+				echo $_SESSION['signInInfo'] = '';
+			} ?>";
+
+		
 
 		if (signInInfo.length > 1){
 			alert(signInInfo);
