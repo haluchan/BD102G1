@@ -128,7 +128,7 @@ input{
 input:focus{
 	outline-color: #F29600;
 }
-a{
+.btn{
 	width: 80%;
 	margin: auto;
 	background-color: #F29600;
@@ -140,7 +140,7 @@ a{
 	text-decoration:none;
 	border-radius: 4px;
 }
-a:hover{
+.btn:hover{
 	border: 2px solid #F29600;
 	background-color: #fff;
 	color: #F29600;
