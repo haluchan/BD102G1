@@ -382,8 +382,6 @@ body {
             border: 2px solid #699c33;
             color: #ffffff;
             cursor: pointer;
-            -webkit-transition: .4s;
-            -o-transition: .4s;
             transition: .4s; }
         .containerhope .bookmark .mark_title ul .active01 {
           background: #699c33;
