@@ -591,3 +591,6 @@
           .pro_tank .pro_t_info .pro_t_infoBottom p {
             width: 92%;
             margin-left: 5%; } }
+
+.pro_container a {
+  cursor: pointer; }
