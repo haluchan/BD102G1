@@ -1,0 +1,291 @@
+@charset "UTF-8";
+@import "mixins/setting";
+
+
+//手機
+@include rwd_vivi(max-width,767,xs,12);
+//手機以上
+@include rwd_vivi(min-width,768,sm,12);
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.clear{
+	clear: both;
+}
+button, input{
+	outline:none;
+	border:0px;
+	font-size: 16px;
+	background-color: #fee;
+}
+textarea{
+	resize: none;
+}
+
+$max-width:960px;
+
+.data_info{
+	width: $max-width;
+	background-color: #eef;
+	// height: 610px;
+	// overflow: scroll;
+	margin-left: 30%;
+	margin-bottom: 10%;
+	// margin: auto;
+	.case_title{
+		text-align: center;
+		line-height: 1.8;
+		margin: 2.5% 0;
+		color: #59493f;
+		h2{
+			input{
+				font-size: 24px;
+				width: 100%;
+				text-align: center;
+				line-height: 1;
+				color: #362e2b;
+			}
+			
+		}
+		h3{
+			text-align: center;
+			input{
+				font-size: 18px;
+				width: 80%;
+				text-align: center;
+				color: #362e2b;
+			}
+		}
+		h4{
+			span{
+				input{
+					color:#a40000;  
+					font-size: 16px;
+					text-align: center;
+				}
+				
+			}
+		}
+	}
+	.play-video{
+		.video_item{
+			width: 95%;
+			margin: 0 2.5%;
+			padding-bottom: 56.8125%;
+			position: relative;
+			.video{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+		}
+		input{
+			width: 95%;
+			margin: 5px 2.5%;
+			padding: 5px ;
+			box-sizing:border-box;
+		}
+	}
+	.case_data{
+		background-image: url("../src/image/funded/sports_ouen.png");
+		background-size: 100%;
+		background-position: 0 -50px; //左右-上下
+		background-repeat: no-repeat;
+		.case_tiem{
+			width: 90%;
+			margin: 0 5%;
+			p{
+				font-size: 42px;
+				line-height: 1.5;
+				color: #00561f;
+				span{
+					font-size: 16px;
+					color: #007130;
+				}
+			}
+			form{
+				margin-top: 25%;
+				select{
+					outline:none;
+				}
+				select{
+					width: 100%;
+					height: 25px;
+					color:#59493f;
+				}
+				button{
+					margin: 5% 0px;
+					width: 100%;
+					padding: 5px 0;
+					border-radius: 25px;
+					background-color: #59493f;
+					color:#fff;
+					border:0px;
+					&:hover{
+						background-color: #f1ece4;
+						color:#59493f;
+					}
+				}
+			}
+			.case_ing{
+				margin-top: 6%;
+				font-size: 14px;
+				border-left: 5px solid #59493f;
+				color: #59493f;
+				padding-left: 10px;
+				input{
+					width: 50%;
+					font-size: 14px;
+				}
+
+			}
+		}	
+	}
+	.progress{
+		padding: 0 2%;
+		background-image: url("../src/image/funded/deco-wood-01.gif");
+		background-repeat: no-repeat;
+		background-position: 20px 3px;
+		.progress_bar{
+			width: 100%;
+			height: 20px;
+			background-color: #ddd;
+			border-radius: 25px;
+			position: relative;
+			margin-top: 7.5%;
+			.bar{
+				position: absolute;
+				height: 20px;
+				border-radius: 25px;
+				background-color: #9BC044;
+				.running_man{
+					width: 70px;
+					vertical-align: middle;
+					position: absolute;
+					bottom: 20px;
+					right: 0;
+					@media screen and (max-width: 767px) {
+						width: 30px;
+					}
+				}
+
+			}
+		}
+		.amt{
+			line-height: 3;
+			font-size: 16px;
+			text-align: center;
+			color: #00561f;
+			
+			;
+
+		}
+	}
+	nav{
+		width: 100%;
+		ul{
+			background-color: #f1ece4;
+			li{
+				display: inline-block;
+				float: left;
+				padding: 1% 4.5%;
+				color: #59493f;
+				&.donate_nav{
+					float: right;
+					padding: 1% 12%;
+					background-color: #59493f;
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.case_content{
+		width: 100%;
+		margin-bottom: 5%;
+		// background-color: steelblue;
+		.content_title{
+			width: 95%;
+			margin: 0 2.5% ;
+			.title{
+				input{
+					width: 50%;
+					font-size: 20px;
+					line-height: 2;
+				}
+				border-bottom: 2px solid #59493f;
+				margin-top: 2.5%;
+				margin-bottom: 3%;
+			}
+		}
+
+		.content_txt{
+
+			.content_item{
+				padding: 0 1.5%;
+				.txt{
+					textarea{
+						width: 100%;
+						height: 300px;
+						font-size: 14px;
+						text-indent: 2.2em;
+						line-height: 2.1;
+					}
+				}
+			}
+			.content_img{
+				img{
+					width: 100%;
+					}&:last-child{
+						margin-top: 8%;
+				}
+			}
+		}
+	
+	}
+	.btns{
+		padding: 5%;
+		text-align: center;
+		background-color: #FFF;
+
+		.edit{
+			background-color: #ccc;
+			width: 100px;
+			padding: 1%;
+			margin: 0 10px;
+			color: #fff;
+			box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+
+		}
+		.btn{
+			width: 100px;
+			padding: 1%;
+			margin: 0 10px;
+			background-color: #59493f;
+			color: #fff;
+			box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+			&:hover{
+				background-color: #f1ece4;
+				color: #59493f;
+			}
+		}
+		.up{
+			background-color: #ccc;
+			width: 100px;
+			padding: 1%;
+			margin: 0 10px;
+			color: #fff;
+			box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+
+
+		}
+		
+	}
+
+
+}
+

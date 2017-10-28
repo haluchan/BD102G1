@@ -122,6 +122,8 @@
   background-image: url("../src/image/product/pro-bg1.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: #bcE2F7;
   /* 商品區(種子)*/ }
   .pro_seed .pro_s_cabinet {
     margin: auto;
@@ -347,7 +349,7 @@
   .pro_tank .pro_t_wheel {
     margin: auto;
     position: relative;
-    margin-top: 18%; }
+    margin-top: 10%; }
     @media only screen and (min-width: 1440px) {
       .pro_tank .pro_t_wheel {
         width: 1440px; } }
@@ -363,7 +365,8 @@
       .pro_tank .pro_t_wheel .pro_t_lightbox ul {
         list-style: none;
         margin: auto;
-        width: 150%; }
+        width: 300%;
+        overflow: hidden; }
         .pro_tank .pro_t_wheel .pro_t_lightbox ul > div {
           display: none; }
         @media only screen and (max-width: 766px) {
@@ -407,30 +410,31 @@
                   width: 80%; } }
               .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:first-child img {
                 width: 100%; }
-            .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child {
-              margin: 5% auto; }
+            .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) {
+              margin: auto;
+              padding: 5% 0; }
               @media only screen and (min-width: 1440px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child .pro_s_name {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_name {
                   font-size: 30px;
                   color: #999; } }
               @media only screen and (min-width: 767px) and (max-width: 1440px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child .pro_s_name {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_name {
                   font-size: 1.1em;
                   color: #999; } }
               @media only screen and (max-width: 766px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child .pro_s_name {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_name {
                   font-size: 18px;
                   color: #999; } }
               @media only screen and (min-width: 1440px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child div:last-child {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_price {
                   font-size: 24px;
                   color: #F7931E; } }
               @media only screen and (min-width: 767px) and (max-width: 1440px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child div:last-child {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_price {
                   font-size: 1.05em;
                   color: #F7931E; } }
               @media only screen and (max-width: 766px) {
-                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:last-child div:last-child {
+                .pro_tank .pro_t_wheel .pro_t_lightbox ul li > div:nth-child(2) .pro_t_price {
                   font-size: 18px;
                   color: #F7931E; } }
     .pro_tank .pro_t_wheel .pro_t_toRL {

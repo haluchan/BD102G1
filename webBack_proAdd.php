@@ -1,19 +1,22 @@
+<?php
+session_start();
+ob_start();?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
 	<title>後台::新增商品</title>
+	<!-- 自己的css擺這裡 -->
+	<link rel="stylesheet" href="css/webBack_proAdd.css">
 	<!-- 不准動的部分，以下三行 -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
-	<!-- 自己的css擺這裡 -->
-	<link rel="stylesheet" href="css/webBack_proAdd.css">
 </head>
 <body>
 <?php require_once('web_back_frame_top.php') ?>
 	<nav>				
-		<div class="nav_item">
+		<div class="nav_item pageTitle">
 			<h2>新增商品</h2>
 		</div>
 		<div class="clearfix"></div>

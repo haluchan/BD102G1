@@ -1,6 +1,13 @@
 <?php
 session_start();
 ob_start();
+//得到登入者的名字，然後清掉; 寫入登入時間
+// $admin_name = $_SESSION['signInInfo'];
+// $_SESSION['signInInfo'] = '';
+// $_SESSION['adminName'] = $admin_name;
+// $_SESSION['signInDate'] =  date ("Y-m-d H:i:s" , mktime(date('H')+8, date('i'), date('s'), date('m'), date('d'), date('Y')));
+
+// echo '預計會加在後台公版裡$admin_name='.$admin_name .'  '.$_SESSION['signInDate'] ;
 ?>
 <!DOCTYPE html>
 <html lang="UTF-8">
@@ -19,10 +26,20 @@ ob_start();
 
 	<nav>
 				
-		<div class="nav_item">
+		<div class="nav_item pageTitle">
 			<h2>商品全覽</h2>
 		</div>
-		<div class="nav_item">
+
+		<div class="nav_item ">
+			<div class="search">
+				<input type="text" name="" placeholder="搜尋">
+
+				<button><img src="src/image/web_back_frame/seaech.png"></button>
+				<button><img src="src/image/web_back_frame/erase.png"></button>
+			</div>
+		</div>
+		
+		<div class="nav_item select">
 			<span>類別：</span>
 			<select>
 				<option value="">不限</option>
@@ -30,7 +47,7 @@ ob_start();
 				<option value="">不限</option>
 			</select>
 		</div>
-		<div class="nav_item">
+		<div class="nav_item select">
 			<span>類別：</span>
 			<select>
 				<option value="">全部</option>
@@ -39,14 +56,6 @@ ob_start();
 			</select>
 		</div>
 		
-		<div class="nav_item">
-			<div class="search">
-				<input type="text" name="" placeholder="搜尋">
-
-				<button><img src="src/image/web_back_frame/seaech.png"></button>
-				<button><img src="src/image/web_back_frame/erase.png"></button>
-			</div>
-		</div>
 		<div class="clearfix"></div>
 	</nav>
 
@@ -66,21 +75,21 @@ ob_start();
 
 
 
-<?php 
-	try {
+			<?php 
+				try {
 
-		require_once("php/connectGrowing_hope.php");
+					require_once("php/connectGrowing_hope.php");
 
-	    //加一個把編號和類別組合在一起並補齊三個位數的指令作為商品編號
-	    $sql = "select *, lpad(pro_no, 3, 0) pro_realNo 
-	    		from product";
+				    //加一個把編號和類別組合在一起並補齊三個位數的指令作為商品編號
+				    $sql = "select *, lpad(pro_no, 3, 0) pro_realNo 
+				    		from product";
 
-		$products = $pdo->query($sql);
+					$products = $pdo->query($sql);
 
-		$x = 0;
-		while( $prodRow = $products->fetchObject() ){
-			
-?>
+					$x = 0;
+					while( $prodRow = $products->fetchObject() ){
+						
+			?>
 
 
 			<tr class="tdRow">
@@ -146,7 +155,12 @@ ob_start();
 				<!-- 狀態 -->
 				<td>
 					<?php $status = $prodRow->pro_status; ?>
-					<label><input type="radio" name="status<?php echo $prodRow->pro_no ?>" value="1" class="on" <?php if ( $status == 1){echo 'checked';}?> >上架</label>
+					<label>
+						<input type="radio" name="status<?php echo $prodRow->pro_no ?>" value="1" class="on" 
+						<?php if ( $status == 1){echo 'checked';}?> >上架
+					</label>
+
+					
 					<label><input type="radio" name="status<?php echo $prodRow->pro_no ?>" value="0" class="off"<?php if ( $status == 0){echo 'checked';}?> >下架</label>
 
 					<!-- 商品號碼最大到幾號 -->
@@ -159,14 +173,14 @@ ob_start();
 			
 
 
-<?php	
-		}
+			<?php	
+					}
 
-	} catch (PDOException $e) {
-		echo "錯誤原因 : " , $e->getMessage(),"<br>";
-		echo "行號 : " , $e->getLine(),"<br>";
-	}
-?>
+				} catch (PDOException $e) {
+					echo "錯誤原因 : " , $e->getMessage(),"<br>";
+					echo "行號 : " , $e->getLine(),"<br>";
+				}
+			?>
 
 
 
@@ -194,7 +208,9 @@ ob_start();
 
 				if ( isset($_SESSION['proAddErrorInfo']) == 1){
 					echo $_SESSION['proAddErrorInfo']; 
-					session_unset($_SESSION['proAddErrorInfo']); 
+					// session_unset($_SESSION['proAddErrorInfo']);
+					$_SESSION['proAddErrorInfo'] = ''; 
+
 				}	
 
 			?>";
@@ -210,7 +226,7 @@ ob_start();
 
 				if ( isset($_SESSION['proStatusResetInfo']) == 1){
 					echo $_SESSION['proStatusResetInfo']; 
-					session_unset($_SESSION['proStatusResetInfo']); 
+					$_SESSION['proStatusResetInfo'] =''; 
 				}	
 
 			?>";

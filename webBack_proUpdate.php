@@ -1,14 +1,18 @@
+<?php
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
 	<title>後台::修改商品</title>
+	<!-- 自己的css擺這裡 -->
+	<link rel="stylesheet" href="css/webBack_proAdd.css">
 	<!-- 不准動的部分，以下三行 -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
-	<!-- 自己的css擺這裡 -->
-	<link rel="stylesheet" href="css/webBack_proAdd.css">
 </head>
 <body>
 <?php require_once('web_back_frame_top.php') ?>
@@ -46,7 +50,6 @@
 					 where pro_no =" . $pro_no . ";";
 			$count = $pdo->query($sql2);
 			$howMany = $count->fetchColumn(0);
-			echo $howMany;
 
 			$sql3 = "select pro_pho 
 					 from prophoto 
@@ -86,7 +89,7 @@
 				<td><input type="text" name="pro_name" value="<?php echo $pro_name ?>" required></td>
 				<th>上傳圖檔</th>
 				<td>
-					<input type="file" name="image" disabled>
+					<input type="file" name="image[]" multiple="multiple" draggable="true">
 				</td>
 			</tr>
 			<tr>
@@ -116,9 +119,7 @@
 			<tr>
 				<th>商品規格</th>
 				<td>
-					<textarea name="pro_std" cols="30" rows="10" required>
-						<?php echo $pro_std ?>
-					</textarea>
+					<textarea name="pro_std" cols="30" rows="10" required><?php echo $pro_std ?></textarea>
 				</td>
 			</tr>
 		</table>

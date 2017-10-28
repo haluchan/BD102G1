@@ -18,6 +18,8 @@ ul li a {
 
 header {
   width: 100%;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease; }
   header .topmenu {
     width: 100%;
@@ -33,6 +35,7 @@ header {
       line-height: 30px; }
       header .topmenu ul li {
         display: inline-block;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         padding: 0 2%; }
         header .topmenu ul li a {
@@ -55,6 +58,7 @@ header {
     width: 100%;
     text-align: center;
     position: relative;
+    -webkit-box-shadow: 1px 1px 10px #ccc;
     box-shadow: 1px 1px 10px #ccc;
     z-index: 100;
     top: 0; }
@@ -95,6 +99,8 @@ header {
         -webkit-transform: translateX(-800PX);
         -ms-transform: translateX(-800PX);
         transform: translateX(-800PX);
+        -webkit-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
         transition: .5s ease-in-out;
         z-index: 0; }
         header .mainmenu .ham .ham_menu a {
@@ -112,6 +118,8 @@ header {
         -webkit-transform: translateX(0PX);
         -ms-transform: translateX(0PX);
         transform: translateX(0PX);
+        -webkit-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
         transition: .5s ease-in-out; }
     header .mainmenu .menu_list {
       width: 35%;
@@ -128,6 +136,7 @@ header {
         width: 35%;
         display: inline-block;
         text-align: center;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         padding: 2% 2% 1%; }
         header .mainmenu .menu_list ul li a {

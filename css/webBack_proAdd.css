@@ -19,8 +19,6 @@ nav .nav_item:nth-child(5) {
 
 /* table起始 */
 .myForm {
-  width: 94%;
-  margin: auto;
   position: relative; }
   .myForm .pro_line {
     position: absolute;
