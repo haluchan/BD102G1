@@ -90,7 +90,7 @@ session_start();
 <?php try {
 			require_once("php/connectBeck.php");
 	
-    $sql = "select * from activity where act_date > '2017-10-25'";
+    $sql = "select * from activity a , growing_hope.activityPhoto_vu ap where a.act_no=ap.act_no and ap.act_no and act_date > '2017-10-25'";
     
     $activity = $pdo->query($sql);	
 	
@@ -99,21 +99,21 @@ session_start();
 		$act_name = $resultset->act_name;
 		$act_no = $resultset->act_no;
 		$act_txt = $resultset->act_txt;
-		// $act_pho = $resultset->act_pho;
+		$pho_nos = $resultset->pho_nos;
+		// echo $act_no ,"<br>";
 		
 ?>
 
 <!-- <input type="submit" style="display:none";>			 -->
 		<li class="show col-xs-12">
-			<input type="hidden" name="act_no" value="<?php echo $act_no;?>" >	
 				<div class="img">
 				<figure class="imghvr-blur" style="background-color:#64b464;">
-					<img src="src/image/event/<?php echo $act_no; ?>.jpg" alt="">
+					<img src="src/image/event/<?php echo $act_no,1; ?>.jpg" alt="">
 			
 				<figcaption style="background-color:#64b464";>
 			   	<h4><?php echo $act_txt;?></h4>
 			    </figcaption>
-				    <a href="event-inside.php?act_no="<?php echo $act_no; ?>">
+				    <a href="event-inside.php?act_no=<?php echo $act_no; ?>">
 				    </a>
 				</figure>
 				</div>	
