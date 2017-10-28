@@ -1,7 +1,6 @@
 <?php
 ob_start();
 session_start();
-
 try {
 	require_once("connectBeck.php");
 	$sql = 
