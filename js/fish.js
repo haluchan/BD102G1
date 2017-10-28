@@ -43,6 +43,28 @@ var scene = new ScrollMagic.Scene({
 .addTo(controller);
 
 
+//必備元素-內容文字浮現
+var role = TweenMax.staggerFromTo(['.role #role1','.role #role2','.role #role3'],1,{
+  y:-1000,
+  opacity:0
+  },{
+  y:0,
+  opacity:1
+},0.5);
+
+var scene = new ScrollMagic.Scene({    
+      triggerElement: "#trigger3",
+      duration: 300,
+      offset: 150,
+      reverse: false     
+    })
+    .setTween(role)
+    // .addIndicators({
+    //         name: 'scene role'
+    //     })
+.addTo(controller);
+
+
 
 
 
