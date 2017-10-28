@@ -258,11 +258,9 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 	background-image: url("../src/image/product/pro-bg1.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
-	// .pro_tent{
-	// 	h2{
-	// 		top: 22%;
-	// 	}
-	// }
+	background-position: center bottom;
+	background-color: #bcE2F7;
+	
 
 	/* 商品區(種子)*/
 	.pro_s_cabinet{
