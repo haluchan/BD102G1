@@ -4,9 +4,6 @@
 					$('#hamicon').toggleClass("hamicon_slide");
 					$('#ham_menu').toggleClass("ham_slide");
 				});
-
-				//購物車數字增加
-				proCartNumber();
 			});		
 			// //登入lightbox
 			// $("#spanLogin").click(function(){
@@ -63,73 +60,3 @@
 		 	}
 		});
 	});
-
-
-
-
-
-//js-雁
-function $id(id){
-	return document.getElementById(id);
-}
-function $qs(qs){
-	return document.querySelector(qs);
-}
-function $qsa(qsa){
-	return document.querySelectorAll(qsa);
-}
-
-//購物車清單、數字-雁
-	function proCartNumber(){
-		//1.建立空storage 放購買順序
-		if (storage['addItemList'] == null){
-			storage['addItemList'] = '';
-		}else{ //已存在則計算數量	
-			var itemString = storage.getItem('addItemList');
-			var items = itemString.substr(0 , itemString.length-2).split(', ');
-			var eachCart = $qsa('.cartNo');
-			for (var j = 0; j<eachCart.length; j++){
-				if(items ==""){
-					eachCart[j].innerText = 0;			    
-				}else{
-					eachCart[j].innerText =  items.length;
-				}	
-			}
-					
-		}
-
-
-		//每個按鈕建立事件聆聽功能
-		var list = document.querySelectorAll('.addButton');
-		for (var i = 0; i<list.length; i++){
-			list[i].addEventListener('click', function(){
-				var proInfo = document.querySelector('#' + this.id + ' input').value;
-				
-				// 執行另一個函數，資料帶過去
-				proAddItem( this.id , proInfo);
-			},false);
-		}
-	}
-
-
-
-	// 2.按下去後，把資料存進storage+更改購物車數字
-	function proAddItem( proId , proInfo , e){		
-		//1.將購買訊息存入storage中
-		if (storage[proId]){
-			alert('購物車裡已經有了喔！');
-		}else{
-			storage['addItemList'] += proId + ', ';
-			storage[proId] = proInfo;
-		}
-
-		//2.更改購物車數字
-		var itemString = storage.getItem('addItemList');
-		var items = itemString.substr(0 , itemString.length-2).split(', ');
-		var eachCart = $qsa('.cartNo');
-		for (var j = 0; j<eachCart.length; j++){
-			eachCart[j].innerText = items.length;
-		}
-
-		// document.getElementById('cart').innerText =  items.length;
-	}

@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+*{
+	padding: 0;
+	margin: 0; 
+}
+section{
+	height: 100vh;
+	background-color: #BCE2F7;
+	background-image: url(../src/image/guide/guide_bg.svg);
+	background-size:  cover;
+	background-position: center center; 
+	overflow: hidden; 
+	img{vertical-align: top; }
+	
+	.logo{
+		height: 30vh; 
+		position: relative;
+		// position: ;
+		margin: auto; 
+		top: -82px;
+		right: 0;
+		left: 0;
+		text-align: center; 
+	}
+
+
+
+	@keyframes hoverMe{
+		0%{ 
+			transform: scale(1.5 , 1.5);
+			transform: rotateZ(0deg);			
+		}
+		50%{ 
+			transform: scale(1.5 , 1.5);
+			// transform: scale(1 , 1);
+			transform: rotateZ(-5deg);
+			
+		}
+		100%{ 
+			transform: scale(1.5 , 1.5);
+			// transform: scale(1.2 , 1.2);
+			transform: rotateZ(5deg);
+		}
+	}
+
+
+
+	.goWhere{
+		height: 70vh;  
+		.goFront,.goBack{
+			width: 50%;
+			float: left;
+		}
+		.sayFront img{
+			border-radius:  30% 90% 90% 5%/30% 40% 10% 60%;
+		}
+		.sayBack img{
+			border-radius:  80% 20% 40% 90%/ 50% 60% 25% 10%;	
+		}
+		.sayFront img, .sayBack img{
+			z-index: 99;
+			&:hover{
+				animation: hoverMe 0.3s linear infinite Alternate-reverse ;
+			}			
+		}
+
+		//揮手
+		@keyframes shakeHand{
+			  0%{ transform: rotateZ(-20deg);}
+			100%{ transform: rotateZ(14deg);}
+		}
+		//搖頭
+		@keyframes shakeHead{
+			  0%{ transform: rotateZ(4deg);}
+			100%{ transform: rotateZ(-18deg);}
+		}
+
+		@keyframes trakGo{
+			  // 0%{ margin-left: 400px;}
+			 5%{ margin-left: 400px;}
+			100%{ margin-left:-600px;}			
+		}
+		@keyframes sayFrontGo{
+			  // 0%{ margin-left: 400px;}
+			 5%{ margin-right: 0px;}
+			100%{ margin-right:600px;}			
+		}
+		.trakGo{			
+			animation: trakGo 2.2s cubic-bezier(.01,-0.03,.67,.07) ;
+		}
+		.sayFrontGo{			
+			animation: sayFrontGo 2.2s cubic-bezier(.01,-0.03,.67,.07) ;
+		}
+		.goFront{
+
+			.sayFront{
+				text-align: right ;
+				margin-bottom: 26px; 
+				margin-right: 0px;
+				cursor: pointer;
+			}
+
+			.farmer{
+				position: relative;
+				float: left;
+				margin-left: 400px; 
+				.trak{
+					
+				}
+				.head{
+					position: absolute ;
+					margin: auto ;
+					top: -36px;
+					left: -130px;
+					right: 0;
+					width: 20%; 
+					img{width: 100%;}
+					
+					transform-origin: 35% 100%;
+					animation: 	shakeHead 2s ease-in-out infinite Alternate-reverse;					
+				}
+
+				.hand{
+					position: absolute ;
+					margin: auto ;
+					top: -38px;
+					left: -24px;
+					right: 0;
+					width: 19%; 
+					
+					img{width: 100%;}			
+
+					transform-origin: left 90%;
+					animation: 	shakeHand 1s ease-in-out infinite Alternate-reverse;
+				}
+			}
+			
+		}
+
+
+
+
+
+		.goBack{
+			.sayBack{
+				margin: 150px 0px 0px 0px;
+				margin-left: 30px; 
+				cursor: pointer;
+			}
+
+			.green{
+				position: relative ;
+				.carrot{
+					img{width: 100%;}
+					width: 24%;	
+					position: absolute ;
+					margin: auto ;
+					top: -190px;
+					left: 317px;
+				}
+				.vegetable{
+					position: absolute ;
+					margin: auto ;
+					top: 0px;
+					right: 317px;
+				}
+			}
+		}
+
+
+
+
+
+	}
+
+
+	.fence{
+		position: fixed;
+		margin: auto ;
+		bottom: 122px;
+		left: 25%; 
+	}
+
+	
+}
+
+
+

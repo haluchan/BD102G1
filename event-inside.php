@@ -1,3 +1,10 @@
+<?php 
+ob_start();
+session_start();
+ ?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +60,43 @@
 		</div>
 
 		
+<?php 
 
+$act_no=$_REQUEST["act_no"];
+
+
+try {
+
+	require_once("php/connectGrowing_hope.php");
+
+	$eventInfo = "select * from activity a , growing_hope.activityPhoto_vu ap where a.act_no=ap.act_no and ap.act_no = $act_no ";
+
+	$eventInsideInfo = $pdo->query( $eventInfo );
+	
+	$eventRow        = $eventInsideInfo->fetchObject();
+	
+	$photos          = $eventRow->pho_nos;
+	
+	$photosArry      = explode(",",$photos);
+	
+	$photosLength    = count($photosArry);
+
+	// foreach ($photosArry as $key => $value) {
+	// 	 echo $value, "<br>";
+	// }
+
+	// echo $photosLength;
+ // echo $eventRow->act_title ;
+ // echo $eventRow->act_host ;
+ // echo $eventRow->act_detail ;
+ // echo $eventRow->act_add ;
+ // echo $eventRow->act_phone ;
+ // echo $eventRow->act_price ;
+ // echo $eventRow->act_date ;
+	
+	// $detail =  $eventRow->act_detail
+
+?>
 
 
 
@@ -68,8 +111,8 @@
 						<img src="src/image/event-inside-page/event-title.png" alt="">
 					</div>
 					<div class="main-title">
-						<h2>農場活動體驗</h2>
-						<p>農場主人：阿嬌姨</p>	
+						<h2><?php echo $eventRow->act_title ?></h2>
+						<p>農場主人：<?php echo $eventRow->act_host ?></p>	
 					</div>
 					<div class="main-img">
 							<img src="src/image/event-inside-page/main-img.png" alt="">
@@ -97,8 +140,7 @@
 			
 			<div class="main-container">
 				<br>
-				<p>花蓮壽豐，一個連下雨都令人心曠神怡的地方，藏著一對米食魔術師--慶豪＆慧芸，用神奇的秀明自然農法種下各品種稻米，並把它們變成米苔目、 米粉 、 蘿蔔糕 、芋粿巧、米糕、 湯圓 、布丁、 麥芽糖 …當這些食物回歸純米製作，那種與混合其他澱粉完全不同的柔Ｑ口感，唯有現場品嚐、方知美味。
-				在仰頭就見中央山脈的縱谷田間，你會忙得很踏實，下田、料理、專心勞動、好好休息，找回身為米食民族、不輸義大利人對麥的品味能力，學習做一個找回生活本質、跟著自然運行的人類。稻米會開花嗎? 白蘿蔔在田裡是什麼模樣？答案就在這片連下雨都心曠神怡的地方。
+				<p><?php echo nl2br($eventRow->act_detail) ?>
 				</p>
 				<br>
 			</div>
@@ -112,17 +154,20 @@
 
 
 		<div id="trigger3"></div>
+		<form action="sign-up.php" method="get" accept-charset="utf-8">
+		<input type="hidden" name="act_no" value="<?php $act_no?>" placeholder="">
 		<section class="event-map event-ins-item3">
 			<div class="event-row">
 				<div class="event-map-content">
 					<div class="event-info">
 						<h1>活動資訊</h1>
-						<ul>日期：<li>2017.11.20</li></ul>
-						<ul>電話：<li>03-345678</li></ul>
-						<ul>費用：<li>NT 1000 元</li></ul>
-						<ul>地址：<li>桃園市藍埔里11鄰52號</li></ul>
+						<ul>日期：<li><?php echo $eventRow->act_date ?></li></ul>
+						<ul>電話：<li><?php echo $eventRow->act_phone ?></li></ul>
+						<ul>費用：<li>NT<?php echo $eventRow->act_price ?>元</li></ul>
+						<ul>地址：<li><?php echo $eventRow->act_add ?></li></ul>
 						<a href="sign-up.php">
-							<div class="btn_green">我要報名</div>
+							<button type="submit" class="btn_green">我要報名</button>
+							<input type="hidden" name="act_no" value="<?php echo $eventRow->act_no?>">
 						</a>
 					</div>
 				<div class="event-map-img" >
@@ -135,7 +180,9 @@
 			</div>
 			<div class="clear"></div>
 		</section>
-		
+		</form>
+
+
 
 		<!-- 活動回報 -->
 
@@ -151,29 +198,54 @@
 				/event-report-title.png" alt="">
 			</div>
 
+
 			<div class="event-report-main">
+
+<?php
+
+
+	
+	for ($i=0 ; $i<$photosLength ; $i++) { 
+		// echo $eventRow->act_no, $photosArry[$i];
+
+
+?>
+
+
+		
 				<div class="event-report-photo">
-					<img src="src/image/event-inside-page/event-report-photo1.jpeg" alt="">
+					<img src="src/image/event-inside-page/<?php echo $eventRow->act_no,$photosArry[$i];?>.jpg" alt="">
 				</div>
-				<div class="event-report-photo">
-					<img src="src/image/event-inside-page/event-report-photo2.jpg" alt="">
-				</div>
-				<div class="event-report-photo">
-					<img src="src/image/event-inside-page/event-report-photo3.jpg" alt="">
-				</div>			
-				<div class="event-report-photo">
-					<img src="src/image/event-inside-page/event-report-photo4.jpg" alt="">
-				</div>
-				<div class="event-report-photo">
-					<img src="src/image/event-inside-page/event-report-photo5.jpg" alt="">
-				</div>
-				<div class="event-report-photo">
-					<img src="src/image/event-inside-page/event-report-photo6.jpg" alt="">
-				</div>
+		
+
+<?php
+
+
+		}
+	
+} catch (Exception $e) {
+
+		echo "錯誤行號 : ", $e->getLine(), "<br>";
+		echo "錯誤訊息 : ", $e->getMessage(), "<br>";
+	
+}
+
+
+
+
+
+
+
+ ?>
+
+
 			</div>
 		
 		</section>
 		<div class="event-deck">
+
+
+
 		
 		<!-- footer -->
 		<?php require_once('Footer.php'); ?>

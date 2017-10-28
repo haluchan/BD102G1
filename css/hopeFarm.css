@@ -9,9 +9,9 @@ body {
 .containerhope {
   font-family: '微軟正黑體'; }
   .containerhope h2 {
-    font-size: 28px;
+    font-size: 30px;
     letter-spacing: 1px;
-    font-weight: normal; }
+    font-weight: bold; }
   .containerhope h3 {
     font-size: 22px;
     letter-spacing: 1px;
@@ -206,7 +206,6 @@ body {
         background-color: #fff;
         width: 88%;
         float: left;
-        box-shadow: 0px 0px 5px 0px #ccc;
         border-radius: 38px;
         position: relative; }
         .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow {
@@ -225,7 +224,7 @@ body {
             width: 49%;
             float: left;
             margin-left: 1%; }
-            .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right h4 {
+            .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right p {
               margin-top: 20%; }
             .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .bar {
               width: 46%;
@@ -250,7 +249,7 @@ body {
               position: absolute;
               right: 0%; }
           .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_btn {
-            width: 160px;
+            width: 26%;
             margin: auto;
             margin-top: 4%;
             text-align: center; }
@@ -258,7 +257,7 @@ body {
               font-family: Arial , '微軟正黑體';
               color: #ffffff;
               background: #6cbecc;
-              padding: 10px 20px 10px 20px;
+              padding: 5% 7% 5% 7%;
               border: solid #6cbecc 2px;
               text-decoration: none;
               cursor: pointer;
@@ -297,6 +296,43 @@ body {
       .containerhope .purpose .purpose_txt h2 {
         text-align: center;
         padding-bottom: 20px; }
+      .containerhope .purpose .purpose_txt h3 {
+        font-size: 28px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(2):before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-color: #699c33;
+          border-radius: 50px;
+          vertical-align: middle;
+          margin-top: -5px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(2) {
+          padding-bottom: 2px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(3) {
+          padding-bottom: 15px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(4):before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-color: #699c33;
+          border-radius: 50px;
+          vertical-align: middle;
+          margin-top: -5px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(4) {
+          padding-bottom: 2px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(5) {
+          padding-bottom: 15px; }
+        .containerhope .purpose .purpose_txt h3:nth-child(6):before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          background-color: #699c33;
+          border-radius: 50px;
+          vertical-align: middle;
+          margin-top: -5px; }
   .containerhope .section04 {
     max-width: 1440px;
     margin-top: 4%;
@@ -326,7 +362,7 @@ body {
           border-right: 9px solid #fff;
           border: 2px solid #699c33;
           font-family: Arial , '微軟正黑體';
-          font-size: 22px;
+          font-size: 24px;
           color: #699c33;
           background: #ffffff;
           padding: 10px 20px 10px 20px;
@@ -362,12 +398,23 @@ body {
           .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow {
             background-color: #fff;
             box-shadow: 0px 0px 5px 0px #ccc;
-            border-radius: 38px; }
+            border-radius: 38px;
+            border: 1px solid transparent; }
+            .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow:hover {
+              border: 1px solid #699c33; }
             .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img {
               padding: 4%;
               position: relative; }
-              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img img {
-                border-radius: 28px; }
+              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover {
+                overflow: hidden;
+                border-radius: 37px; }
+                .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover .imgToHover {
+                  transition: all 1.5s;
+                  overflow: hidden; }
+                  .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover .imgToHover:hover {
+                    -webkit-transform: scale(1.5);
+                    -ms-transform: scale(1.5);
+                    transform: scale(1.5); }
               .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .square {
                 width: 18%;
                 height: 18%;
@@ -573,8 +620,8 @@ body {
     width: 100%;
     box-sizing: border-box;
     padding: 0 10px; }
-  h4 {
-    padding-right: 10%; } }
+  .containerhope .risk_container .risk_range .risk_img img {
+    display: none; } }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .col-xs-1 {
@@ -639,7 +686,7 @@ body {
     padding: 0 10px; }
   .containerhope {
     font-family: '微軟正黑體';
-    margin: 34% 0 0 0; }
+    margin: 18% 0 0 0; }
     .containerhope h2 {
       font-size: 34px;
       letter-spacing: 2px;
@@ -651,7 +698,7 @@ body {
       font-weight: bold;
       color: #555555; }
     .containerhope .view {
-      height: 150px; }
+      display: none; }
       .containerhope .view .view_container .cloulds {
         display: none; }
       .containerhope .view .view_container .for_h2 h2 {
@@ -659,76 +706,91 @@ body {
     .containerhope .hopefarmrwd-select {
       display: block;
       width: 100%;
-      top: 8%;
+      top: -1%;
       position: fixed;
-      background-color: #ffffff;
+      background-color: #ece7d4;
       z-index: 98;
       margin: auto; }
       .containerhope .hopefarmrwd-select ul {
-        padding: 6% 0 1% 0;
-        background-color: #ffffff;
+        padding: 67px 0 1px 0;
+        background-color: #ece7d4;
         text-align: center; }
-        .containerhope .hopefarmrwd-select ul li {
-          width: 22.75%;
+        .containerhope .hopefarmrwd-select ul a li {
           display: inline-block;
-          background-color: #699c33; }
-          .containerhope .hopefarmrwd-select ul li h2 {
-            font-size: 15px;
-            text-align: center;
+          display: inline-block;
+          border: 1px solid #699c33;
+          background-color: #ffffff;
+          cursor: pointer;
+          transition: .4s;
+          text-align: center;
+          padding: 0 0; }
+          .containerhope .hopefarmrwd-select ul a li h2 {
+            font-size: 5vw;
             font-family: Arial , '微軟正黑體';
-            color: #ffffff;
-            background: #6cbecc;
+            color: #699c33;
             padding: 10px 0 10px 0;
-            border: solid #6cbecc 2px;
             text-decoration: none;
-            cursor: pointer;
-            letter-spacing: 1px;
-            transition: .4s; }
+            letter-spacing: 2px; }
+        .containerhope .hopefarmrwd-select ul .active01 {
+          background-color: #699c33;
+          border: 1px solid #699c33;
+          color: #ffffff;
+          cursor: pointer;
+          transition: .4s; }
+          .containerhope .hopefarmrwd-select ul .active01 h2 {
+            color: #ffffff; }
     .containerhope .latest .latest_title {
       display: none; }
     .containerhope .latest .latest_cloud {
       display: none; }
     .containerhope .latest .carousel {
       display: none; }
-    .containerhope .purpose .purpose_txt {
-      width: 100%; }
-      .containerhope .purpose .purpose_txt h3 {
-        text-overflow: ellipsis; }
-        .containerhope .purpose .purpose_txt h3:nth-child(2):before {
-          content: '';
-          width: 10px;
-          height: 10px;
-          display: inline-block;
-          background-color: #699c33;
-          border-radius: 50px;
-          vertical-align: middle;
-          margin-top: -5px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(2) {
-          padding-bottom: 2px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(3) {
-          padding-bottom: 8px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(4):before {
-          content: '';
-          width: 10px;
-          height: 10px;
-          display: inline-block;
-          background-color: #699c33;
-          border-radius: 50px;
-          vertical-align: middle;
-          margin-top: -5px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(4) {
-          padding-bottom: 2px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(5) {
-          padding-bottom: 8px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(6):before {
-          content: '';
-          width: 10px;
-          height: 10px;
-          display: inline-block;
-          background-color: #699c33;
-          border-radius: 50px;
-          vertical-align: middle;
-          margin-top: -5px; }
+    .containerhope .purpose {
+      margin-top: 58px; }
+      .containerhope .purpose .purpose_img {
+        width: 100%; }
+      .containerhope .purpose .purpose_txt {
+        width: 90%; }
+        .containerhope .purpose .purpose_txt h2 {
+          font-size: 38px; }
+        .containerhope .purpose .purpose_txt h3 {
+          text-overflow: ellipsis;
+          font-size: 25px; }
+          .containerhope .purpose .purpose_txt h3:nth-child(2):before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background-color: #699c33;
+            border-radius: 50px;
+            vertical-align: middle;
+            margin-top: -5px; }
+          .containerhope .purpose .purpose_txt h3:nth-child(2) {
+            padding-bottom: 2px; }
+          .containerhope .purpose .purpose_txt h3:nth-child(3) {
+            padding-bottom: 15px; }
+          .containerhope .purpose .purpose_txt h3:nth-child(4):before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background-color: #699c33;
+            border-radius: 50px;
+            vertical-align: middle;
+            margin-top: -5px; }
+          .containerhope .purpose .purpose_txt h3:nth-child(4) {
+            padding-bottom: 2px; }
+          .containerhope .purpose .purpose_txt h3:nth-child(5) {
+            padding-bottom: 15px; }
+          .containerhope .purpose .purpose_txt h3:nth-child(6):before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background-color: #699c33;
+            border-radius: 50px;
+            vertical-align: middle;
+            margin-top: -5px; }
     .containerhope .bookmark .mark_title {
       display: none; }
     .containerhope .bookmark .mark_container .mark_item a .item-box {
@@ -736,25 +798,27 @@ body {
       .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow {
         box-shadow: 0 0 8px 0 #ccc; }
         .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_name {
-          margin-left: 12%;
-          margin-top: -4%;
-          font-weight: bold; }
+          margin-left: 13%;
+          margin-top: -9px;
+          font-size: 4vw; }
         .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_title {
-          font-size: 26px; }
+          font-size: 8vw;
+          margin-bottom: 2px; }
         .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
+          font-size: 5vw;
           letter-spacing: 2px;
           line-height: 160%; }
         .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .bar {
-          margin-top: 5px; }
+          margin-top: 10px; }
         .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4 {
-          font-size: 18px;
+          font-size: 23px;
           padding-right: 0;
           width: 100%;
           text-align: center;
-          padding-top: 5px; }
+          margin-top: 10px; }
           .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4:last-child {
             width: 100%;
-            padding-top: 2px; }
+            margin-top: 2px; }
     .containerhope .bookmark .mark_container .mark_deco img {
       display: none; }
     .containerhope .bookmark .mark_container .mark_more {
@@ -763,28 +827,32 @@ body {
         width: 20%; }
     .containerhope .risk {
       margin-top: 20%; }
-    .containerhope .risk_container .risk_range .risk_txt {
-      width: 100%;
-      margin-top: 10px; }
-      .containerhope .risk_container .risk_range .risk_txt p {
-        letter-spacing: 2px;
-        line-height: 160%; }
-        .containerhope .risk_container .risk_range .risk_txt p:before {
-          content: '';
-          width: 10px;
-          height: 10px;
-          display: inline-block;
-          background-color: #699c33;
-          border-radius: 50px;
-          vertical-align: middle;
-          margin-top: -5px; }
-        .containerhope .risk_container .risk_range .risk_txt p:nth-child(2) {
-          margin-top: 10px; }
-        .containerhope .risk_container .risk_range .risk_txt p:nth-child(3) {
-          margin-top: 10px; }
-        .containerhope .risk_container .risk_range .risk_txt p:nth-child(4) {
-          margin-top: 10px; }
-        .containerhope .risk_container .risk_range .risk_txt p:nth-child(5) {
-          margin-top: 10px; }
-    .containerhope .risk_container .risk_range .risk_img img {
-      display: none; } }
+      .containerhope .risk .risk_title h2 {
+        font-size: 28px; }
+    .containerhope .risk_container .risk_range {
+      padding: 0 3%; }
+      .containerhope .risk_container .risk_range .risk_txt {
+        width: 100%;
+        margin-top: 10px; }
+        .containerhope .risk_container .risk_range .risk_txt p {
+          letter-spacing: 2px;
+          line-height: 160%; }
+          .containerhope .risk_container .risk_range .risk_txt p:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background-color: #699c33;
+            border-radius: 50px;
+            vertical-align: middle;
+            margin-top: -5px; }
+          .containerhope .risk_container .risk_range .risk_txt p:nth-child(2) {
+            margin-top: 10px; }
+          .containerhope .risk_container .risk_range .risk_txt p:nth-child(3) {
+            margin-top: 10px; }
+          .containerhope .risk_container .risk_range .risk_txt p:nth-child(4) {
+            margin-top: 10px; }
+          .containerhope .risk_container .risk_range .risk_txt p:nth-child(5) {
+            margin-top: 10px; }
+      .containerhope .risk_container .risk_range .risk_img img {
+        display: none; } }
