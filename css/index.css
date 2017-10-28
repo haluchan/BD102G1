@@ -604,6 +604,7 @@ a {
       left: 12%;
       bottom: 40%; }
       .fish .fish_info .fish_icon:nth-child(4) {
+<<<<<<< HEAD
         left: 21%;
         bottom: 33%;
         -webkit-animation: fish_icon 3s -0.11s linear infinite;
@@ -638,6 +639,42 @@ a {
         bottom: 38%;
         -webkit-animation: fish_icon 3s -0.11s linear infinite;
         animation: fish_icon 3s -0.11s linear infinite; }
+=======
+        left: 25%;
+        bottom: 24%;
+        -webkit-animation: fish_icon 3s -0.43s linear infinite;
+        animation: fish_icon 3s -0.43s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(5) {
+        left: 21%;
+        bottom: 44%;
+        -webkit-animation: fish_icon 3s -0.45s linear infinite;
+        animation: fish_icon 3s -0.45s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(6) {
+        left: 26%;
+        bottom: 45%;
+        -webkit-animation: fish_icon 3s -0.09s linear infinite;
+        animation: fish_icon 3s -0.09s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(7) {
+        left: 18%;
+        bottom: 42%;
+        -webkit-animation: fish_icon 3s -0.17s linear infinite;
+        animation: fish_icon 3s -0.17s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(8) {
+        left: 28%;
+        bottom: 21%;
+        -webkit-animation: fish_icon 3s -0.23s linear infinite;
+        animation: fish_icon 3s -0.23s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(9) {
+        left: 24%;
+        bottom: 23%;
+        -webkit-animation: fish_icon 3s -0.09s linear infinite;
+        animation: fish_icon 3s -0.09s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(10) {
+        left: 26%;
+        bottom: 36%;
+        -webkit-animation: fish_icon 3s -0.41s linear infinite;
+        animation: fish_icon 3s -0.41s linear infinite; }
+>>>>>>> b94ec453c58d79c721aafc57113bf1bf0d25c6b9
     .fish .fish_info .phone {
       position: absolute;
       bottom: 0;
