@@ -43,7 +43,7 @@ function carrot(){
 		//必須同時停掉計時器
 		clearInterval( timeId);
 		// 轉址
-		location.href = '../admin_signIn.php';
+		location.href = 'admin_signIn.php';
 
 		
 	}else{
@@ -95,7 +95,7 @@ function driveTrak(){
 
 function goFront(){
 
-	location.href = '../index.php';
+	location.href = 'index.php';
 }
 
 
