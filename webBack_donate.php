@@ -55,7 +55,7 @@
 		$i=0;
 		try{
 			require_once("php/connectGrowing_hope.php");
-			$sql = "select * from count_donate where event_status = 'di' ";
+			$sql = "select * from donate_count where event_status = 'di' ";
 			$donate = $pdo ->query($sql);
 	?>		
 			

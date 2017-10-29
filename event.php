@@ -5,6 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+<?php require_once('Header_head.php') ?>
 <meta charset="utf-8">
 <title>體驗活動</title>
 <link rel="stylesheet" href="css/imagehover.css-master/css/imagehover.min.css">
@@ -16,15 +17,11 @@ session_start();
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-<?php require_once('Header_head.php'); ?>
+
 </head>
 <body>
-	<?php require_once('Header.php'); ?>
-<div class="container">
-	<div class="nav">
-		
-	</div>
-
+	<?php require_once('Header.php') ?>
+	<div class="container">
 <header class="header">
 	<img src="src/image/event/headimg.png" alt="" style="width:100%;">
 	<div class="headertext">
@@ -44,7 +41,6 @@ session_start();
 					
 				<div class="firstblockp">
 					
-				
 					<p>
 					做自己的食物、過自然的生活，小農體驗活動讓你融入當地小農的生活，了解農作的生長、收成，親自採收無農藥的新鮮蔬果，最適合親子同遊、家族出遊，品嚐現採作物的美味，本農場飼養的奶牛從加拿大進口，飼喂苜蓿草，生產出的牛奶香濃可口，品質絕佳。農場內設有露天茶座、露營烤肉區和森林浴場，和森林步道區。</p>
 				</div>
@@ -54,15 +50,10 @@ session_start();
 				</div>
 		</div>
 		
-		<!-- <img src="src/image/event/child2.png" alt=""> -->
 	</div>
 
-			
-		
-	
-	
 <div class="section-border">
-	<!-- <img src="src/image/event/section-border.png" alt=""> -->
+
 </div>
 
 <div class="clear"></div>
@@ -100,8 +91,6 @@ session_start();
 		$act_no = $resultset->act_no;
 		$act_txt = $resultset->act_txt;
 		$pho_nos = $resultset->pho_nos;
-		// echo $act_no ,"<br>";
-		
 ?>
 
 <!-- <input type="submit" style="display:none";>			 -->
@@ -123,19 +112,10 @@ session_start();
 			</div>
 			
 		</li>
-	
-
-	
-
 <?php			
 		}
-	}
-	catch (PDOException $e) {
-	echo "錯誤原因 : " , $e->getMessage(),"<br>";
-	echo "行號 : " , $e->getLine(),"<br>";	
-}
+	
 ?>	  
-
 
 <!-- 
 			<li class="show col-xs-12">
@@ -174,41 +154,38 @@ session_start();
 	<div class="thirdblockin">
 		<div id="trigger2"></div>
 	
+<!-- select act_name,act_no,date(act_date) as act_date,act_loc from activity
+    where act_date -->
 
+<?php 
 
-		<?php try {
-			require_once("php/connectBeck.php");
-	
-    $sql = "select act_name,act_no,date(act_date) as act_date,act_loc from activity
-    where act_date < '2017-10-25'";
-    
-    $activity = $pdo->query($sql);	
-	
-	while($resultset = $activity ->fetchObject()){
+	$overdate = "select * from activity a , growing_hope.activityPhoto_vu ap where a.act_no=ap.act_no and act_date < '2017-06-20 00:00:00'";
+   
+    $over_act = $pdo->query($overdate);	
+
+	while( $resultOverDate = $over_act->fetchObject()){
+				
+		$overact_no = $resultOverDate->act_no;
+		$overact_date = $resultOverDate->act_date;
+		$overact_loc = $resultOverDate->act_loc;
+		// echo $overact_no;
+?>
 		
-		$act_name = $resultset->act_name;
-		$act_no = $resultset->act_no;
-		$act_date = $resultset->act_date;
-		$act_loc = $resultset->act_loc;
-
-		echo"
-		<div class='eventreco'>
-			<a href='#'>
-				<div class='img'>
-					<img src='src/image/event/".$act_no.'.jpg'."' alt=''>
+		<div class="eventreco">
+			<a href="event-inside.php?act_no=<?php echo $overact_no; ?>">
+				<div class="img">
+					<img src="src/image/event/<?php echo $overact_no,1; ?>.jpg" alt="">
 				</div>	
-				<div class='infobar1'>
-					<h5>".$act_loc."</h5>
-					<div class='inforbar2'>
-						舉辦日期：".$act_date."
+				<div class="infobar1">
+					<h5><?php echo $overact_loc; ?></h5>
+					<div class="inforbar2">
+						舉辦日期：<?php echo $overact_date; ?>
 					</div>
 				</div>
-				
 			</a>
 				</div>
-				";
 
-
+<?php
 		}
 	}
 	catch (PDOException $e) {
@@ -246,18 +223,13 @@ session_start();
 <!-- ======================== -->
 
 <!-- ====================================== -->
-<div class="footer ">
-	<div class="footerblock ">
-		
-	
-	</div>
-</div>
 
 
 </div>
+
+<?php require_once('Footer.php') ?> 
 <script type="text/javascript" src="js/header.js"></script>
 <script type="text/javascript" src="js/event.js"></script>
 <script type="text/javascript" src="js/login-ajax.js"></script>
-<?php require_once('Footer.php');?>
 </body>
 </html>

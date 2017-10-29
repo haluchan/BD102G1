@@ -19,7 +19,6 @@ session_start();
 <body>
 	<?php require_once('Header.php'); ?>
 		<?php 
-		
 		$eve=$_SESSION["mem_no"];
 		if( isset($_SESSION["mem_no"]) === false){
   		$_SESSION["where"] = $_SERVER["PHP_SELF"];
@@ -85,7 +84,7 @@ session_start();
 				<table>					
 					<thead>
 						<tr>
-							<img src="src/image/member/<?php echo $_SESSION['mem_pho'];?>" alt="">
+							<img src="src/image/member/<?php echo $_SESSION['mem_pho'];?>.png" alt="">
 						</tr>
 					</thead>
 					<tbody>
@@ -126,7 +125,9 @@ session_start();
 						</tr>
 						<tr>
 							<td>性別:</td>
-							<td><p><?php echo $_SESSION["mem_gender"] ;?></p></td>
+							<td><p><?php 
+							if( $_SESSION["mem_gender"] == 1){echo "男";}else{
+							echo "女";}  ;?></p></td>
 						
 						</tr>
 					</tbody>

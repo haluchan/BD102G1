@@ -29,9 +29,8 @@ session_start();
 	<form action="php/memupdata.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 		<div class="table">
 			<div class="photo">
-				<!-- <img src="src/image/member/
-					<?php// echo $_SESSION['mem_pho'];?>" alt=""> -->
-				<img src="src/image/member/mem_11.png" alt="">
+			<img src="src/image/member/
+					<?php echo $_SESSION['mem_pho'];?>.png" alt=""> 
 			</div>
 			<div class="imguplod">
 				<span >選擇照片</span>
