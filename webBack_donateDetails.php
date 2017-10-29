@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 <?php 
 ob_start();
 session_start();
  ?>
+=======
+<?php
+session_start();
+ob_start();?>
+>>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>

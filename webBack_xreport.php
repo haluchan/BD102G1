@@ -58,9 +58,8 @@ ob_start();?>
 			<th>檢舉內容</th>
 			<th>檢舉原因</th>
 			<th>檢舉時間</th>
-
 			<th>審核</th>
-			<th></th>
+			<th>確認</th>
 		</tr>
 	<?php 
 		$i=0;

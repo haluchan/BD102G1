@@ -13,8 +13,8 @@
 			 			<ol class="item">
 			 				<li><a href="webBack_eventDecide.php" class="itemClick"><img src="src/image/web_back_frame/line.png">案件審核</a></li>
 			 				<li><a href="webBack_caseStatus.php" class="itemClick"><img src="src/image/web_back_frame/line.png">案件狀態</a></li>
-			 				<li><a href="webBack_donateDetails.php" class="itemClick"><img src="src/image/web_back_frame/line.png">資助進度</a></li>
-			 				<li><a href="webBack_caseCheckUp.php" class="itemClick"><img src="src/image/web_back_frame/line.png">上架確認</a></li>
+			 				<li><a href="webBack_donate.php" class="itemClick"><img src="src/image/web_back_frame/line.png">資助進度</a></li>
+			 				
 			 				<li><a href="webBack_caseReturn.php" class="itemClick"><img src="src/image/web_back_frame/line.png">案件回報</a></li>
 			 			</ol>
 			 		</li>
@@ -53,8 +53,8 @@
 			 	</ol>
 				
 
-				<p class="signInInfo"></p>
-			 	<button class="logout" type="button">登出</button>
+				<p class="signInInfo"><?php echo '管理員：<br>' .$_SESSION['adminName']. '<br>登入時間：<br>' .$_SESSION['signInDate']; ?></p>
+			 	<a class="logout" type="button" href="php/admin_signOut.php">登出</a>
 
 			 </div>
 		<!-- 內容 -->

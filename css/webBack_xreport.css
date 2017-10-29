@@ -40,6 +40,7 @@
 .myForm table {
   /*每一欄的寬度設定。以百分比。剩的寬自動為最後一欄*/
   /*不能動！！第一欄固定為5%*/
+<<<<<<< HEAD
   /*自行更改、增加 區域=================================*/
 }
 
@@ -74,6 +75,25 @@
 .myForm table tr th:nth-child(8) {
   width: 8%;
 }
+=======
+  /*自行更改、增加 區域=================================*/ }
+  .myForm table tr th:nth-child(1) {
+    width: 5%; }
+  .myForm table tr th:nth-child(2) {
+    width: 8%; }
+  .myForm table tr th:nth-child(3) {
+    width: 8%; }
+  .myForm table tr th:nth-child(4) {
+    width: 8%; }
+  .myForm table tr th:nth-child(5) {
+    width: 40%; }
+  .myForm table tr th:nth-child(6) {
+    width: 8%; }
+  .myForm table tr th:nth-child(7) {
+    width: 8%; }
+  .myForm table tr th:nth-child(8) {
+    width: 8%; }
+>>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 
 .myForm .btn {
   width: 100%;

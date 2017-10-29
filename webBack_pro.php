@@ -2,10 +2,10 @@
 session_start();
 ob_start();
 //得到登入者的名字，然後清掉; 寫入登入時間
-$admin_name = $_SESSION['signInInfo'];
-$_SESSION['signInInfo'] = '';
-$_SESSION['adminName'] = $admin_name;
-$_SESSION['signInDate'] =  date ("Y-m-d H:i:s" , mktime(date('H')+8, date('i'), date('s'), date('m'), date('d'), date('Y')));
+// $admin_name = $_SESSION['signInInfo'];
+// $_SESSION['signInInfo'] = '';
+// $_SESSION['adminName'] = $admin_name;
+// $_SESSION['signInDate'] =  date ("Y-m-d H:i:s" , mktime(date('H')+8, date('i'), date('s'), date('m'), date('d'), date('Y')));
 
 // echo '預計會加在後台公版裡$admin_name='.$admin_name .'  '.$_SESSION['signInDate'] ;
 ?>
