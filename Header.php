@@ -25,7 +25,7 @@
 						<li><a href="hopeFarm.php">希望農場</a></li>
 						<li><a href="event.php">體驗活動</a></li>
 						<li><a href="fish.php">都市小農</a></li>
-						<li><a href="pointFarm.php">紅利菜園</a></li>
+						<li><a href="bonusFarm.php">紅利菜園</a></li>
 					</ul>
 					<ul class="ham_sub">
 						<li><a href="application.php">申請資助</a></li>
@@ -66,7 +66,7 @@
     				</li>
     				
     				<li>
-    					<a href="pointFarm.php">
+    					<a href="bonusFarm.php">
     						<div class="circle">
     							<img src="src/image/header/farm.svg" class="icon">
     						</div>紅利菜園
