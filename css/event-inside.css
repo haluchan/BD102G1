@@ -83,9 +83,10 @@ body {
   box-sizing: border-boxs; }
   .event-cotent .main-container {
     line-height: 60px;
-    text-align: justify; }
+    text-align: justify;
+    text-align: center; }
     .event-cotent .main-container p {
-      font-size: 20px;
+      font-size: 22px;
       line-height: 40px; }
 
 .event-map {

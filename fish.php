@@ -134,8 +134,6 @@
 
 
 
-
-
 	</div><!-- container說明內容結束 -->
 
 	<?php require_once('Footer.php') ?> 
