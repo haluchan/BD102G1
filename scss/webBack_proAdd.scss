@@ -1,4 +1,4 @@
-﻿//每個格子統一固定padding
+//每個格子統一固定padding
 $cellPadding: 16px 4px;
 //按鈕圓角
 $btnRadius: 6px;
@@ -10,8 +10,8 @@ select{outline:inherit;}
 
 //遮掉篩選條件
 nav{
-	.nav_item{
-		&:nth-child(3){
+			.nav_item{
+&:nth-child(3){
 			display:hidden;
 		}
 		&:nth-child(4){
@@ -25,8 +25,8 @@ nav{
 
 /* table起始 */
 .myForm{
-	width: 94%;
-	margin:auto;		
+	// width: 94%;
+	// margin:auto;	
 	//固定線
 	position: relative;
 	.pro_line{

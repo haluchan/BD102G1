@@ -1,14 +1,18 @@
+<?php
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
 	<title>後台::修改商品</title>
+	<!-- 自己的css擺這裡 -->
+	<link rel="stylesheet" href="css/webBack_proAdd.css">
 	<!-- 不准動的部分，以下三行 -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
-	<!-- 自己的css擺這裡 -->
-	<link rel="stylesheet" href="css/webBack_proAdd.css">
 </head>
 <body>
 <?php require_once('web_back_frame_top.php') ?>
@@ -85,7 +89,7 @@
 				<td><input type="text" name="pro_name" value="<?php echo $pro_name ?>" required></td>
 				<th>上傳圖檔</th>
 				<td>
-					<input type="file" name="image" disabled>
+					<input type="file" name="image[]" multiple="multiple" draggable="true">
 				</td>
 			</tr>
 			<tr>

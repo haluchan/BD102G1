@@ -6,15 +6,44 @@
 body {
   background-image: url("../../src/image/cart/cart-bg.png"); }
 
+@media screen and (max-width: 767px) {
+  header .mainmenu {
+    position: fixed; } }
+
 section.fish_first {
   width: 100%;
   position: relative; }
+  @media screen and (max-width: 767px) {
+    section.fish_first {
+      margin-top: 50px; } }
   section.fish_first img {
-    width: 80%; }
+    width: 100%; }
   @media screen and (max-width: 767px) {
     section.fish_first #fish_banner {
       opacity: 0.7;
       position: relative; } }
+  section.fish_first .field {
+    position: absolute;
+    bottom: 0; }
+  section.fish_first .fishitem {
+    position: absolute;
+    top: 0%; }
+    section.fish_first .fishitem.swing {
+      width: 30%;
+      top: 35%;
+      left: 60%; }
+    section.fish_first .fishitem:nth-child(4) {
+      width: 80%;
+      top: 0%;
+      right: 5%;
+      -webkit-animation: bird 2s ease-in-out infinite;
+      animation: bird 2s ease-in-out infinite; }
+    section.fish_first .fishitem:nth-child(5) {
+      width: 70%;
+      top: 10%;
+      right: 10%;
+      -webkit-animation: bird 1.5s 1s ease-in-out infinite;
+      animation: bird 1.5s 1s ease-in-out infinite; }
   section.fish_first .fishbase {
     width: 45%;
     position: absolute;
@@ -30,22 +59,17 @@ section.fish_first {
       font-size: 1.5em; }
     @media screen and (max-width: 767px) {
       section.fish_first .fishbase {
-        width: 80%; }
+        width: 50%; }
         section.fish_first .fishbase h2 {
           font-size: 16px; }
         section.fish_first .fishbase h3 {
-          font-size: 14px; } }
+          font-size: 12px; } }
 
 .container {
   width: 100%;
   max-width: 1440px;
   margin: auto;
   padding: 0; }
-  .container .baserotate {
-    position: absolute;
-    z-index: -100;
-    top: 10%;
-    right: 0%; }
   .container img {
     width: 100%; }
   .container h2 {
@@ -59,7 +83,7 @@ section.fish_first {
       .container h3 {
         font-size: 20px; } }
   .container p {
-    font-size: 16px;
+    font-size: 18px;
     color: #59493f;
     line-height: 2;
     margin-bottom: 2%; }
@@ -104,14 +128,14 @@ section.fish_first {
             width: 85%; } }
         .container .step .stepFlow .stepFlowRight .arrow {
           position: absolute;
-          z-index: -1; }
+          z-index: 1; }
     .container .step .swim {
       width: 15%;
       position: absolute; }
     .container .step .stepContent {
       width: 100%;
       margin: auto;
-      padding: 5% 10%;
+      padding: 5% 10% 0;
       box-sizing: border-box; }
       .container .step .stepContent p {
         text-indent: 2.2em;
@@ -132,21 +156,38 @@ section.fish_first {
         text-decoration: none; }
   .container .theory {
     width: 90%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    background-image: url("../../src/image/fish/movie2.png");
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: right bottom; }
     @media screen and (max-width: 767px) {
       .container .theory {
         width: 90%; } }
     .container .theory .theory_word {
-      padding: 5% 10%; }
+      padding: 10% 10% 0; }
       .container .theory .theory_word .theoryTitle {
-        text-align: left;
-        border-bottom: 2px solid  #83827e;
-        margin: 5% 0%; }
+        text-align: center;
+        padding: 5% 0%;
+        background-image: url("../../src/image/fish/title-side.png");
+        background-size: 20%;
+        background-repeat: no-repeat;
+        background-position: 90% center; }
+        .container .theory .theory_word .theoryTitle img {
+          width: 20%; }
+      .container .theory .theory_word .theoryTxt {
+        position: relative; }
+        .container .theory .theory_word .theoryTxt img {
+          width: 10%;
+          position: absolute;
+          z-index: 100;
+          left: 40%;
+          bottom: 10%; }
     .container .theory .theoryVideo {
       width: 60%;
       height: 0;
       padding-bottom: 45%;
-      margin: auto;
+      padding-left: 10%;
       position: relative; }
       .container .theory .theoryVideo iframe {
         width: 100%;
@@ -160,17 +201,24 @@ section.fish_first {
       .container .role {
         width: 100%; } }
     .container .role .role_word {
-      padding: 5% 10%; }
+      padding: 10% 10% 0; }
       .container .role .role_word .roleTitle {
-        text-align: left;
-        border-bottom: 2px solid  #83827e; }
+        text-align: center;
+        padding: 5% 0%;
+        background-image: url("../../src/image/fish/deco-denim-01.png");
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position: left center; }
     .container .role .roleItem {
       width: 30%;
       display: inline-block;
+      background-color: #f1ece4;
+      border: 2px solid  #ddd0bb;
+      border-radius: 10px;
       margin: auto; }
       @media screen and (max-width: 767px) {
         .container .role .roleItem {
-          width: 100%;
+          width: 70%;
           margin: 5% auto; } }
       @media screen and (max-width: 767px) {
         .container .role .roleItem .center {
@@ -181,13 +229,20 @@ section.fish_first {
           -webkit-align-items: center;
           -ms-flex-align: center;
           align-items: center; } }
+      .container .role .roleItem .center:hover .roleItemPic {
+        opacity: 1;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 0.5s; }
       .container .role .roleItem .roleItemTitle {
         text-align: center; }
         @media screen and (max-width: 767px) {
           .container .role .roleItem .roleItemTitle {
             width: 100%; } }
       .container .role .roleItem .roleItemPic {
-        margin: auto; }
+        margin: auto;
+        opacity: 0.4; }
         @media screen and (max-width: 767px) {
           .container .role .roleItem .roleItemPic {
             width: 50%;
@@ -203,26 +258,64 @@ section.fish_first {
           padding: 0 10px;
           text-align: justify; }
 
+@-webkit-keyframes bird {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes bird {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@-webkit-keyframes field {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes field {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
 @-webkit-keyframes swim {
   from {
-    left: 5%; }
+    left: 0%; }
   20% {
-    left: 30%;
-    bottom: 20%; }
+    left: 40%;
+    bottom: 15%; }
   50% {
     left: 80%;
-    bottom: 15%;
+    bottom: 20%;
     -webkit-transform: scaleX(1);
     transform: scaleX(1); }
   50.5% {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1); }
   70% {
-    left: 50%;
-    bottom: 20%; }
+    left: 40%;
+    bottom: 10%; }
   90% {
-    left: 5%;
-    bottom: 15%;
+    left: 20%;
+    bottom: 20%;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1); }
   to {
@@ -233,24 +326,24 @@ section.fish_first {
 
 @keyframes swim {
   from {
-    left: 5%; }
+    left: 0%; }
   20% {
-    left: 30%;
-    bottom: 20%; }
+    left: 40%;
+    bottom: 15%; }
   50% {
     left: 80%;
-    bottom: 15%;
+    bottom: 20%;
     -webkit-transform: scaleX(1);
     transform: scaleX(1); }
   50.5% {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1); }
   70% {
-    left: 50%;
-    bottom: 20%; }
+    left: 40%;
+    bottom: 10%; }
   90% {
-    left: 5%;
-    bottom: 15%;
+    left: 20%;
+    bottom: 20%;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1); }
   to {

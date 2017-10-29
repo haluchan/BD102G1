@@ -1,3 +1,7 @@
+<?php 
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +15,7 @@
 	</head>
 	<body>
 	<?php require_once('Header.php'); ?>
+	
 	<div class="titlebg">
 		<img src="src/image/member/mv01.png" alt="">
 	</div>
@@ -19,71 +24,62 @@
 </div>
 
 <div class="mem">
-	<!-- <section class="parallax">	
-<div id="scenes" data-hover-only="false">
-            <div class="parallax_area" data-depth="0.5">
-            	<img src="src/image/member/concept_index.png" alt="">
-            </div> -->
-            <!-- <div class="parallax_area_01" data-depth="0.4">
-            	<img src="src/image/event/hatsuka_daikon.png" alt="">
-            </div> -->
-       <!--      <div class="parallax_area_02" data-depth="0.8"><img src="src/image/event/ninjin_carrot2.png" alt=""></div> -->
-</div>
+
 </section>
-	<form action="" method="get" accept-charset="utf-8">
-	
-	
+	<form action="php/memupdata.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 		<div class="table">
-			<h2></h2>
-			<img src="src/image/member/child.png" alt="">
-			<div class="imguplod btnbox">
-				<input type="file" name="upFile">
+			<div class="photo">
+			<img src="src/image/member/
+					<?php echo $_SESSION['mem_pho'];?>.png" alt=""> 
+			</div>
+			<div class="imguplod">
+				<span >選擇照片</span>
+				<input type="file" class="memimguplod" name="mem_pho">
 			</div>
 				<table>
-					<thead>
-						<tr>
-														
-						</tr>
-					</thead>
 					<tbody>
 						<tr>
 							<td>會員帳號:</td>
-							<td><p>becky</p></td>
-							
+							<td><p><?php echo $_SESSION["mem_id"] ;?></p></td>
+							<input type="hidden" name="mem_id" value="<?php echo $_SESSION["mem_id"] ;?>">
 						</tr>
 						<tr>
 							<td>會員暱稱:</td>
-							<td><input type="text" name="mem_name" placeholder="becky"></td>
+							<td><input type="text" name="mem_name" value="<?php echo $_SESSION['mem_name'] ;?>"></td>
+						</tr>
+						<tr>
+							<td>會員密碼:</td>
+							<td><input type="text" name="mem_psw" value="<?php echo $_SESSION['mem_psw'] ;?>"></td>
 						</tr>
 						<tr>
 							<td>e-mail:</td>
-							<td><input type="email" name="mem_mail"></td>
+							<td><input type="email" name="mem_mail" value="<?php echo $_SESSION['mem_mail'] ;?>"></td>
 						
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td>會員生日:</td>
-							<td><p>10/06/1998</p></td>
+							<td><p><?php echo $_SESSION["mem_birth"] ;?></p></td>
 						
-						</tr>
+						</tr> -->
 						<tr>
 							<td>居住地:</td>
-							<td><input type="text" name="memadd" ></td>
+							<td><input type="text" name="mem_add" value="<?php echo $_SESSION['mem_add'];?>" ></td>
 						
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td>性別:</td>
-							<td><p>女</p></td>
+							<td><p><?php echo $_SESSION["mem_gender"] ;?></p></td>
 						
-						</tr>
+						</tr> -->
 					</tbody>
 				</table>
-			
-		</form>
 			<div class="btnbox">
-				<a href="">確定修改</a>
-				<a href="">取消修改</a>
-			</div>	
-				
+				<input class="but" type="submit">
+				<input class="but" type="button" onClick="location.href='member.php'" value='取消修改'>
+			</div>		
+		</form>
+	</div>
+		<div class="clear"></div>
 	</div>
 	
 	

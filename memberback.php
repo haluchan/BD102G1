@@ -1,3 +1,7 @@
+<?php 
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -14,25 +18,9 @@
 
 <?php require_once('web_back_frame_top.php') ?>
 <nav>
-			<div class="nav_item">
+			<div class="nav_item pageTitle">
 
 				<h2>會員名單</h2>
-			</div>
-			<div class="nav_item">
-				<!-- <span>狀態：</span>
-				<select>
-					<option value="">不限</option>
-					<option value="">不限</option>
-					<option value="">不限</option>
-				</select> -->
-			</div>
-			<div class="nav_item">
-				<span>分類：</span>
-				<select>
-					<option value="">會員編號</option>
-				<!-- 	<option value=""></option> -->
-					
-				</select>
 			</div>
 			<div class="nav_item">
 				<div class="search">
@@ -41,6 +29,22 @@
 					<button><img src="src/image/web_back_frame/seaech.png"></button>
 					<!-- <button><img src="src/image/web_back_frame/erase.png"></button> -->
 				</div>
+			</div>
+			<div class="nav_item select">
+				<!-- <span>狀態：</span>
+				<select>
+					<option value="">不限</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select> -->
+			</div>
+			<div class="nav_item select">
+				<span>分類：</span>
+				<select>
+					<option value="">會員編號</option>
+				<!-- 	<option value=""></option> -->
+					
+				</select>
 			</div>
 			<div class="clearfix"></div>
 		</nav>
@@ -80,19 +84,22 @@
 			<td><?php echo $resultset->mem_mail ;?></td>
 		<!-- 	<td><?php echo $resultset->mem_pho ;?></td> -->
 			<td><?php echo $resultset->mem_birth ;?></td>
-			<td><?php echo $resultset->mem_gender ;?></td>
+			<td><?php 
+			if( $resultset->mem_gender == 1){echo "男";}else{
+				echo "女";}  ;?></td>
 		<!-- 	<td><?php echo $resultset->mem_add ;?></td>
 			<td><?php echo $resultset->mem_seed ;?></td>
 			<td><?php echo $resultset->mem_bonus ;?></td> -->
-			<td><?php echo $resultset->mem_equity ;?></td>
+			<td><?php if( $resultset->mem_equity == "N"){echo "正常";}else{
+				echo "停權";}   ;?></td>
 			<td style="padding-left: 20px;">
-				<form class="myForm" action="php/memequ.php">
-					<input type="hidden" name="mem_no" value="<?php echo $mem_no;?>">
+				<form class="myFormSend" action="php/memequ.php">
+				<input type="hidden" name="mem_no" value="<?php echo $mem_no;?>">
 				<select name="mem_equity">
 					<option value="S">停權</option>
 					<option value="N">復權</option>
 				</select>
-				<button type="submit" style="width:50px;height:20px;background-color: #e6ac00;outline-style: none;border-radius: 20px;" 
+				<button type="submit" class="btn" 
 					id="chanmember">更改
 				</button>
 				</form>

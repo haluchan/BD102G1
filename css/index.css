@@ -1,62 +1,50 @@
 @media screen and (max-width: 767px) {
   .col-xs-1 {
     width: 8.33333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-2 {
     width: 16.66667%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-3 {
     width: 25%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-4 {
     width: 33.33333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-5 {
     width: 41.66667%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-6 {
     width: 50%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-7 {
     width: 58.33333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-8 {
     width: 66.66667%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-9 {
     width: 75%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-10 {
     width: 83.33333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-11 {
     width: 91.66667%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-xs-12 {
     width: 100%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .hidden-xs {
@@ -65,62 +53,50 @@
 @media screen and (min-width: 768px) {
   .col-sm-1 {
     width: 8.33333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-2 {
     width: 16.66667%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-3 {
     width: 25%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-4 {
     width: 33.33333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-5 {
     width: 41.66667%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-6 {
     width: 50%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-7 {
     width: 58.33333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-8 {
     width: 66.66667%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-9 {
     width: 75%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-10 {
     width: 83.33333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-11 {
     width: 91.66667%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .col-sm-12 {
     width: 100%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left; }
   .hidden-sm {
@@ -191,8 +167,6 @@ a {
     margin-left: 30%;
     -webkit-animation: swinging 4.5s ease-in-out forwards infinite;
     animation: swinging 4.5s ease-in-out forwards infinite;
-    -webkit-transition: all 0.35s ease-in-out 0s;
-    -o-transition: all 0.35s ease-in-out 0s;
     transition: all 0.35s ease-in-out 0s;
     -webkit-transform-origin: 20% 0%;
     -ms-transform-origin: 20% 0%;
@@ -383,7 +357,6 @@ a {
         width: 95%;
         background-color: #fff;
         margin: auto;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         padding: 15px;
         margin: 2.5%;
@@ -619,7 +592,6 @@ a {
     .fish .fish_info p {
       text-align: center; }
       .fish .fish_info p .btn {
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         display: inline-block; }
         @media screen and (max-width: 767px) {
@@ -632,40 +604,40 @@ a {
       left: 12%;
       bottom: 40%; }
       .fish .fish_info .fish_icon:nth-child(4) {
-        left: 21%;
-        bottom: 33%;
-        -webkit-animation: fish_icon 3s -0.34s linear infinite;
-        animation: fish_icon 3s -0.34s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(5) {
-        left: 13%;
-        bottom: 39%;
-        -webkit-animation: fish_icon 3s -0.26s linear infinite;
-        animation: fish_icon 3s -0.26s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(6) {
-        left: 28%;
-        bottom: 25%;
-        -webkit-animation: fish_icon 3s -0.31s linear infinite;
-        animation: fish_icon 3s -0.31s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(7) {
-        left: 17%;
-        bottom: 37%;
-        -webkit-animation: fish_icon 3s -0.47s linear infinite;
-        animation: fish_icon 3s -0.47s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(8) {
-        left: 32%;
-        bottom: 27%;
-        -webkit-animation: fish_icon 3s -0.45s linear infinite;
-        animation: fish_icon 3s -0.45s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(9) {
         left: 14%;
-        bottom: 45%;
+        bottom: 22%;
         -webkit-animation: fish_icon 3s -0.4s linear infinite;
         animation: fish_icon 3s -0.4s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(10) {
-        left: 24%;
-        bottom: 44%;
+      .fish .fish_info .fish_icon:nth-child(5) {
+        left: 14%;
+        bottom: 23%;
+        -webkit-animation: fish_icon 3s -0.34s linear infinite;
+        animation: fish_icon 3s -0.34s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(6) {
+        left: 26%;
+        bottom: 46%;
+        -webkit-animation: fish_icon 3s -0.03s linear infinite;
+        animation: fish_icon 3s -0.03s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(7) {
+        left: 16%;
+        bottom: 31%;
+        -webkit-animation: fish_icon 3s -0.09s linear infinite;
+        animation: fish_icon 3s -0.09s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(8) {
+        left: 13%;
+        bottom: 28%;
+        -webkit-animation: fish_icon 3s -0.39s linear infinite;
+        animation: fish_icon 3s -0.39s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(9) {
+        left: 30%;
+        bottom: 29%;
         -webkit-animation: fish_icon 3s -0.17s linear infinite;
         animation: fish_icon 3s -0.17s linear infinite; }
+      .fish .fish_info .fish_icon:nth-child(10) {
+        left: 24%;
+        bottom: 34%;
+        -webkit-animation: fish_icon 3s -0.32s linear infinite;
+        animation: fish_icon 3s -0.32s linear infinite; }
     .fish .fish_info .phone {
       position: absolute;
       bottom: 0;

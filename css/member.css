@@ -64,13 +64,13 @@
 	.table{
 		text-align: center;
 		margin: 0 auto;
-		background-color: rgba(255, 255, 255, .9);
+		background: url('../src/image/member/033.png') no-repeat ;
 		margin-top: 4%;
 		width: 80%;
 		max-width: 600px;
 		padding: 2%;
-		border-radius: 4%;
-		min-height: 600px;
+		border-radius: 2%;
+		min-height: 400px;
 		/* border: 1px blue solid; */
 
 	}
@@ -82,9 +82,9 @@
 		text-align: right;
 		padding: 3px 2vw;
 		font-size: 18px;
-		letter-spacing: 1px;
+		letter-spacing: 2px;
 		line-height: 26px;
-		color: rgba(0, 0, 0, 0.6);
+		color: rgba(0, 0, 0, .9);
 		/* font-max-size: 10px; */
 		/* 	padding-bottom: 2px; */
 		/* background-color: blue; */
@@ -115,8 +115,6 @@
 		/* width: 100%; */
 	}
 	.mem{
-	/* background-image:url('../src/image/member/greenbg2.png');
-	background-size: 90%; */
 	position: relative;
 	width: 100%;
 	}
@@ -163,59 +161,29 @@
 	padding: 5px;
 	background-color: rgba(105, 156, 51, .2);
     }
-	/* .parallax{
-		width: 100%;
-		z-index: -1;
-		margin: 0 auto;
-		top: 250px;
-		text-align: center;
-	} */
+
 	.parallax_area img{
-		width:60vw;
-		animation: 150s linear rot infinite;
+		width:30vw;
+		/* animation: 150s linear rot infinite; */
 	}
 
 	#scenes{
 		position: absolute;
-		margin: auto;
+		/* margin: auto; */
 		z-index: -2;
-		top: -30px;
-		
+		top:200px;
 		width: 100%;
+		/* left: 50%; */
 	}
 	@media screen and (max-width: 767px) {
 		#scenes{
 		visibility: hidden;
 	}
 	}
-	.parallax_area{
-		/* position: absolute; */
-		top: 500px;
-	/* 	left: 50%; */
-		height: 100%;
-		text-align: center;
-		width: 100%;
+	.parallax_area{	
 	}
 
-		/* width: 100%;
-		text-align: center;
-		margin: auto;
-	}
-	/* .parallax_area_01{
-		position:relative;
-		z-index: -1;
-		right: 50%;
-		bottom:0;
-	} */
-	/* .parallax_area_02{
-		position: absolute;
 		
-		z-index: -1;
-		right: 20%;
-		top:30%;
-	}
-
- */
 
 
 	
