@@ -1,32 +1,7 @@
 @charset "UTF-8";
-.manage {
-  width: 16%;
-}
-
-.content_form {
-  width: 84%;
-}
-
-botton {
-  border: none;
-}
-
 /* table起始 */
-.myForm {
-  width: 94%;
-  margin: auto;
-}
-
 .myForm table {
   width: 100%;
-}
-
-.myForm th, .myForm td {
-  /*每個格子統一固定padding*/
-  padding: 6px 4px;
-  text-align: left;
-  word-break: break-all;
-  text-overflow: ellipsis;
 }
 
 .myForm tr > td:first-child {

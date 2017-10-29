@@ -42,6 +42,8 @@ body {
     @media screen and (max-width: 767px) {
       .container p {
         font-size: 14px; } }
+  .container h4 {
+    font-size: 16px; }
   .container img {
     width: 100%; }
   .container a {
@@ -91,7 +93,6 @@ body {
     padding: 50px 5%;
     text-align: center;
     position: relative;
-    -webkit-box-shadow: 1px 0 10px #ccc;
     box-shadow: 1px 0 10px #ccc; }
     @media screen and (max-width: 767px) {
       .container form .stepContent {
@@ -143,7 +144,6 @@ body {
             line-height: 2;
             vertical-align: middle;
             display: inline-block;
-            -webkit-box-sizing: border-box;
             box-sizing: border-box;
             border-radius: 5px; }
             .container form .stepContent .table .tr .td input.radio {
@@ -211,11 +211,14 @@ body {
       .two .applicationTitle .item h1, .three .applicationTitle .item h1 {
         text-align: left; }
   .two .form, .three .form {
-    -webkit-box-shadow: 1px 0 10px #ccc;
     box-shadow: 1px 0 10px #ccc;
     padding: 50px 0;
     background-color: #ece7d4;
     font-size: 20px; }
+    .two .form h4, .three .form h4 {
+      text-align: center; }
+      .two .form h4 span, .three .form h4 span {
+        color: #FF8888; }
     .two .form .table, .three .form .table {
       width: 80%;
       margin: auto; }
@@ -251,7 +254,6 @@ body {
             line-height: 2;
             vertical-align: middle;
             display: inline-block;
-            -webkit-box-sizing: border-box;
             box-sizing: border-box;
             border-radius: 5px; }
             @media screen and (max-width: 767px) {
@@ -285,30 +287,40 @@ body {
       text-align: center;
       margin: 10% auto; }
 
-#feedbackTable {
-  width: 100%;
-  background-color: #fff;
-  color: #51504d;
-  text-align: center; }
-  #feedbackTable span {
-    display: inline-block;
-    padding-left: 5%;
-    color: #000;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center; }
+#showPanel {
+  position: relative; }
+  #showPanel #feedbackTable {
+    width: 100%;
+    background-color: #ddd0bb;
+    color: #51504d;
+    text-align: center;
+    border-radius: 10px; }
+    #showPanel #feedbackTable:before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-bottom-color: #ddd0bb;
+      position: absolute;
+      left: 46%;
+      top: -25%; }
+      @media screen and (max-width: 767px) {
+        #showPanel #feedbackTable:before {
+          top: -32%; } }
     @media screen and (max-width: 767px) {
-      #feedbackTable span {
-        display: block; } }
-  #feedbackTable .feedbackCotent {
-    width: 50%;
-    text-align: left;
-    margin: auto; }
-    #feedbackTable .feedbackCotent > div {
-      margin: 5% 0; }
-    @media screen and (max-width: 767px) {
-      #feedbackTable .feedbackCotent {
-        text-align: center; } }
+      #showPanel #feedbackTable {
+        font-size: 16px; } }
+    #showPanel #feedbackTable span {
+      display: inline-block;
+      padding-left: 5%;
+      color: #000;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center; }
+      @media screen and (max-width: 767px) {
+        #showPanel #feedbackTable span {
+          display: block; } }
 
 .navbar {
   text-align: center;
@@ -317,24 +329,22 @@ body {
   .navbar .navbarli {
     display: inline-block;
     font-size: 24px;
-    background-color: #fff;
-    color: #699c33;
     padding: 2px 2vw;
     border: 2px solid #699c33;
     cursor: pointer;
     /* border-radius: 10%; */
     /* margin: 0 2%; */
     /* width: 100%; */ }
+    .navbar .navbarli.normal {
+      background-color: #fff;
+      color: #699c33; }
     .navbar .navbarli:hover {
       background-color: #699c33;
       color: #fff;
-      -webkit-transition: .5s;
-      -o-transition: .5s;
       transition: .5s; }
   @media screen and (max-width: 767px) {
     .navbar {
       padding-top: 15%;
-      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       .navbar .navbarli {
         font-size: 18px; } }

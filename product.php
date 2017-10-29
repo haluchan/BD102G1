@@ -7,7 +7,14 @@
 
 
 <?php require_once('Header_head.php') ?>
+<!-- scrollmagic -->
+<script src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
+ <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+ <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+<script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+
 <script src="js/product.js"></script>
+
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css">
 <link rel="stylesheet" type="text/css" href="src/libs/font-awesome/css/font-awesome.min.css">
@@ -15,8 +22,11 @@
 
 </head>
 <body>
-    <a href="cart.php"><div class="cart cartNo cartBtn" id="cartCircle">0</div></a>
     <?php require_once('Header.php') ?> 
+
+    <!-- ScrollMagic -->
+    <div id="trigger1"></div>
+    <a><div class="cart cartNo cartBtn" id="cartCircle">0</div></a>
 
     <div class="pro_container">
         <!-- 種子頁 -->

@@ -9,11 +9,29 @@
 
 // test 
 
-    var storage = sessionStorage;
-    function getFirst(){
-        document.getElementById("")
+var storage = sessionStorage;
+function getFirst(){
+ var cartBtn =  document.querySelectorAll(".cartBtn");
 
-    }
+ for (var i=0; i<cartBtn.length; i++){
+ 	cartBtn[i].addEventListener('click',getStorage,false);
+ 	}
+	 function getStorage(){
+		var storagekey = storage.key(0);
+		var storageVal = sessionStorage.getItem(storagekey);
+		// alert(storageVal);
+		document.getElementById("cartCount").value = storageVal;
+		document.getElementById("formCart").submit();
+		// document.location.href="cart.php"; 不能轉跳
+
+		// alert(storageVal);
+	}
+
+}
+
+
+
+
 
 window.addEventListener('load',getFirst,false);
 
@@ -59,13 +77,15 @@ function sendReset(){
 		if(xhr.readyState == 4){
 			if(xhr.status == 200){
 				console.log(xhr.responseText);
+
+
 				if(xhr.responseText == "error"){
 					alert("帳號電子信箱輸入錯誤");
 				}else{
 					alert("密碼已發送至信箱");
 					document.location.href="index.php";
 				}
-
+				browser.reload();
 			}else{
 				alert(xhr.status);
 			}

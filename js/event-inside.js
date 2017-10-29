@@ -155,3 +155,15 @@ var scene_2 = new ScrollMagic.Scene({
    .addTo(controller);
 
  });
+
+
+
+
+
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    });
+
+
+

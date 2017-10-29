@@ -2,7 +2,6 @@
 @import "../mixins/media";
 
 
-
 .clear:after{
 	clear:both;
 	content:"";
@@ -15,19 +14,23 @@ body{
 	background-image:url('../../src/image/cart/cart-bg.png');
 }
 
+header .mainmenu {
+	@include rwd (moblie){
+		position:fixed;
+	}	
+}
 
 //section
 section.fish_first{ 
 	width:100%;
 	position:relative;
-	
-	// background-image:url('../../src/image/fish/fish_baner.svg');
-	// background-repeat:no-repeat;
-	// background-size:cover;
-	// background-position:center bottom;
-	// overflow:hidden;
+	@include rwd (moblie){
+		margin-top:50px;
+	}
+
 	img{
-		width:80%;
+		
+		width:100%;
 	}
 	#fish_banner{
 		@include rwd (moblie){
@@ -35,33 +38,64 @@ section.fish_first{
 			position:relative;
 		}
 	}
+
+	.field{
+		position:absolute;
+		bottom:0;
+		// animation: field 30s infinite linear;
+	}
+
+	.fishitem{
+		
+		position:absolute;
+		top:0%;
+		&.swing{
+			width:30%;
+			top:35%;
+			left:60%;	
+		}
+		&:nth-child(4){
+			width:80%;
+			top:0%;
+			right:5%;
+			animation:bird 2s ease-in-out infinite;
+		}
+		&:nth-child(5){
+			width:70%;
+			top:10%;
+			right:10%;
+			animation:bird 1.5s 1s ease-in-out infinite;
+		}
+
+	}
 	.fishbase{
-			width:45%;
-			position:absolute;
-			top:8%;
-			box-sizing:border-box;
-			text-align:center;	
-			h2,h3{
-			color:#6a3906;
-			line-height:2;
-			}
+		
+		width:45%;
+		position:absolute;
+		top:8%;
+		box-sizing:border-box;
+		text-align:center;	
+		h2,h3{
+		color:#6a3906;
+		line-height:2;
+		}
+		h2{
+			font-size:38px;
+		}
+		h3{
+			font-size:1.5em;
+		}
+		@include rwd (moblie) {	
+			// padding-top:12%;
+			width:50%;
 			h2{
-				font-size:38px;
+				font-size:16px;
 			}
 			h3{
-				font-size:1.5em;
+				font-size:12px;
 			}
-			@include rwd (moblie) {	
-				// padding-top:12%;
-				width:80%;
-				h2{
-					font-size:16px;
-				}
-				h3{
-					font-size:14px;
-				}
 
-			}
+		}
 	}
 }
 
@@ -72,12 +106,7 @@ section.fish_first{
 	max-width:1440px;
 	margin:auto;
 	padding:0;
-	.baserotate{
-		position:absolute;
-		z-index:-100;
-		top:10%;
-		right:0%;
-	}
+	
 	img{
 		width:100%;
 	}
@@ -94,7 +123,7 @@ section.fish_first{
 		}
 	}
 	p{
-		font-size: 16px;
+		font-size: 18px;
 		color: #59493f;
 		line-height: 2;
 		
@@ -150,7 +179,7 @@ section.fish_first{
 
 				.arrow{
 					position:absolute;
-					z-index:-1;
+					z-index:1;
 				}
 
 			}
@@ -167,7 +196,7 @@ section.fish_first{
 		.stepContent{
 			width:100%;
 			margin:auto;
-			padding:5% 10%;
+			padding:5% 10% 0;
 			box-sizing:border-box;
 			p{
     			text-indent:2.2em;
@@ -210,30 +239,52 @@ section.fish_first{
 // 運作原理
 	.theory{
 		width:90%;
-		margin: 0 auto  ;
+		margin: 0 auto;
+		background-image:url('../../src/image/fish/movie2.png');
+		background-size:25%;
+		background-repeat:no-repeat;
+		background-position:right bottom;
 
 		@include rwd (moblie) {	
 		    width:90%;
 		}
 
 		.theory_word{
-			padding:5% 10%;
+			padding:10% 10% 0;
 			.theoryTitle{
-				text-align:left;
-				border-bottom:2px solid  #83827e;
-				margin:5% 0%;
+				text-align:center;
+				// border-bottom:2px solid  #83827e;
+				padding:5% 0%;
+				background-image:url('../../src/image/fish/title-side.png');
+				background-size:20%;
+				background-repeat:no-repeat;
+				background-position:90% center;
+
+				img{
+					width:20%;
+				}
+			}
+			.theoryTxt{ 
+				position: relative;
+				img{
+					width:10%;
+					position:absolute;
+					z-index:100;
+					left:40%;
+					bottom:10%;
+					// animation:swim 20s infinite linear;
+				}
 			}
 
-			// @include rwd (moblie) {	
-		 // 		p{font-size:14px;}   
-			// }
+	
 		}
 
 		.theoryVideo{
 			width: 60%;			
 			height: 0;
 			padding-bottom: 45%;
-			margin: auto;
+			padding-left:10%;
+			
 			position: relative;
 			
 			iframe{
@@ -256,31 +307,45 @@ section.fish_first{
 		}
 		
 		.role_word{
-			padding:5% 10%;
+			padding:10% 10% 0;
 
 			.roleTitle{
-				text-align:left;
-				border-bottom:2px solid  #83827e;	
+				text-align:center;
+				// border-bottom:2px solid  #83827e;
+				padding:5% 0%;
+				background-image:url('../../src/image/fish/deco-denim-01.png');
+				background-size:30%;
+				background-repeat:no-repeat;
+				background-position:left center;	
 			}
 		}
 
 		.roleItem{
 			width:30%;
 			display:inline-block;
-			// vertical-align:top;
+			background-color:#f1ece4;
+			border:2px solid  #ddd0bb;
+			border-radius:10px;
 			margin:auto;
 				@include rwd (moblie) {	
-			    width:100%;
-			    margin:5% auto; 
-			     				
+			    width:70%;
+			    margin:5% auto;   				
 				}
+
 				.center{
 					@include rwd (moblie) {	
-			    width:100%;
-			    // margin:5% auto; 
-			    display:flex;
-				align-items:center;  				
-				}
+			    		width:100%;
+			    		display:flex;
+						align-items:center;  				
+					}
+					&:hover{
+
+						.roleItemPic{
+							opacity:1;
+							transform:scale(1.1);
+							transition:0.5s;
+						}
+					}
 				}
 			.roleItemTitle{
 				text-align:center;
@@ -291,6 +356,8 @@ section.fish_first{
 
 			.roleItemPic{
 				margin:auto;
+				opacity:0.4;
+
 				@include rwd (moblie) {	
 		    		width:50%;
 		    		display:inline-block;
@@ -317,21 +384,74 @@ section.fish_first{
 }
 
 
+// 側邊裝飾
+// #frame_left{
+// 	position:absolute;
+// 	height:3000px;
+// 	width:110px;
+// 	position:absolute;
+// 	top:0%;
+// 	background:url('../../src/image/fish/frame_left.png');
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes bird{
+	0%{
+		transform:scale(1);
+	}
+
+	50%{
+		transform:scale(0.9);
+	}
+
+	100%{
+		transform:scale(1);	
+	}
+}
+
+
+@keyframes field{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(359deg);
+	}	
+}
 
 
 @keyframes swim{
 	from{
-		left:5%;
+		left:0%;
 	}
 
 	20%{
-		left:30%;
-		bottom:20%;
+		left:40%;
+		bottom:15%;
 	}
 
 	50%{
 		left:80%;
-		bottom:15%;
+		bottom:20%;
 		transform:scaleX(1);	
 	}
 
@@ -340,13 +460,13 @@ section.fish_first{
 	}
 
 	70%{
-		left:50%;
-		bottom:20%;
+		left:40%;
+		bottom:10%;
 	}
 
 	90%{
-		left:5%;
-		bottom:15%;
+		left:20%;
+		bottom:20%;
 		transform:scaleX(-1);
 	}
 

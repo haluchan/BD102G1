@@ -23,7 +23,6 @@ body {
 .cart-container .cart-list .cart-item {
   float: left;
   padding-bottom: 14px;
-  border-bottom: solid 1px #444;
 }
 
 @media all and (min-width: 1200px) {
@@ -38,8 +37,14 @@ body {
   display: inline-block;
 }
 
+.cart-container .cart-list .cart-item .item-left-group .cart-item-left {
+  padding: 2% 0;
+  overflow: hidden;
+  border-bottom: solid 1px #666;
+}
+
 .cart-container .cart-list .cart-item .item-left-group .cart-item-left .cart-prod-img {
-  width: 30%;
+  width: 20%;
   display: inline-block;
   float: left;
 }
@@ -57,7 +62,22 @@ body {
   line-height: 280%;
 }
 
-.cart-container .cart-list .cart-item .item-left-group .cart-item-left .item-group input {
+.cart-container .cart-list .cart-item .item-left-group .cart-item-left .item-group .prodName {
+  width: 100px;
+  border: none;
+  color: #666;
+  background-color: #FFF;
+  margin: 0 15px 0 0;
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align: middle;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+}
+
+.cart-container .cart-list .cart-item .item-left-group .cart-item-left .item-group .prodNum {
   border: 1px solid #759944;
   color: #759944;
   background-color: #FFF;
@@ -77,6 +97,16 @@ body {
   float: left;
   box-sizing: border-box;
   line-height: 280%;
+}
+
+.cart-container .cart-list .cart-item .item-left-group .cart-item-left .item-price a span {
+  cursor: pointer;
+}
+
+.cart-container .cart-list .cart-item .item-left-group .cart-item-left .item-price .prodPrice {
+  border: none;
+  width: 50px;
+  font-size: 16px;
 }
 
 .cart-container .cart-list .cart-item .item-left-group .cart-item-left .item-price a {
@@ -105,6 +135,20 @@ body {
   float: left;
 }
 
+.cart-container .cart-total-panel .cart-total-money #bonus {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  max-width: 30px;
+}
+
+.cart-container .cart-total-panel .cart-total-money #transCost {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  max-width: 30px;
+}
+
 .cart-container .cart-total-panel .cart-total {
   border-top: solid 1px #bbb;
   clear: both;
@@ -113,7 +157,16 @@ body {
 .cart-container .cart-total-panel .cart-total span {
   color: #f00;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 600;
+}
+
+.cart-container .cart-total-panel .cart-total span input {
+  color: #f00;
+  font-size: 20px;
+  font-weight: 600;
+  width: 50px;
+  border: none;
+  background-color: transparent;
 }
 
 @media all and (min-width: 1200px) {
@@ -136,6 +189,7 @@ body {
   width: 200px;
   display: block;
   margin: auto;
+  text-align: center;
   text-decoration: none;
   vertical-align: middle;
   margin-top: 3%;
@@ -176,6 +230,7 @@ body {
 }
 
 .cart-container .cart-address .cart-shipping-info .form-group .form-control {
+  font-weight: 500;
   width: 100%;
   margin: 4px 0;
   height: 20px;
@@ -187,7 +242,6 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 16px;
-  font-weight: bold;
   line-height: 2;
   vertical-align: middle;
   display: inline-block;
@@ -203,6 +257,13 @@ body {
   padding: 10px 0;
   background: #FAF6F0;
   border-radius: 25px;
+}
+
+.cart-container .cart-pay #transWay {
+  text-align: center;
+  display: none;
+  color: #759944;
+  padding: 10px 0;
 }
 
 .cart-container .cart-pay h2 {
@@ -268,8 +329,8 @@ body {
   padding-left: 3.5%;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 2;
   vertical-align: middle;
   display: inline-block;
@@ -380,8 +441,5 @@ body {
   }
   .cart-total-panel .cart-total {
     text-align: right;
-  }
-  .cart-total-panel form {
-    width: 200px;
   }
 }

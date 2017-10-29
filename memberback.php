@@ -1,3 +1,7 @@
+<?php 
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -86,16 +90,16 @@
 		<!-- 	<td><?php echo $resultset->mem_add ;?></td>
 			<td><?php echo $resultset->mem_seed ;?></td>
 			<td><?php echo $resultset->mem_bonus ;?></td> -->
-			<td><?php if( $resultset->mem_equity == N){echo "正常";}else{
+			<td><?php if( $resultset->mem_equity == "N"){echo "正常";}else{
 				echo "停權";}   ;?></td>
 			<td style="padding-left: 20px;">
-				<form class="myForm" action="php/memequ.php">
+				<form class="myFormSend" action="php/memequ.php">
 				<input type="hidden" name="mem_no" value="<?php echo $mem_no;?>">
 				<select name="mem_equity">
 					<option value="S">停權</option>
 					<option value="N">復權</option>
 				</select>
-				<button type="submit" style="width:50px;height:20px;background-color: #e6ac00;outline-style: none;border-radius: 20px;" 
+				<button type="submit" class="btn" 
 					id="chanmember">更改
 				</button>
 				</form>

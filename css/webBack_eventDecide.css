@@ -1,34 +1,7 @@
 @charset "UTF-8";
-.manage {
-  width: 16%;
-}
-
-.content_form {
-  width: 84%;
-}
-
-botton {
-  border: none;
-}
-
-nav .nav_item:nth-child(2) {
-  visibility: hidden;
-}
-
 /* table起始 */
-.myForm {
-  width: 94%;
-  margin: auto;
-}
-
 .myForm table {
   width: 100%;
-}
-
-.myForm th, .myForm td {
-  /*每個格子統一固定padding*/
-  padding: 6px 10px;
-  text-align: left;
 }
 
 .myForm tr > td:first-child {
@@ -115,21 +88,8 @@ nav .nav_item:nth-child(2) {
   padding: 5% 3%;
 }
 
-.myForm .btn {
-  background-color: LemonChiffon;
-  padding: 4px 6px;
-  border: none;
+.myForm table .btn {
   width: 40%;
-  margin: auto;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
-  border-radius: 6px;
-  outline: pointer;
-}
-
-.myForm .btn:active {
-  -webkit-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  box-shadow: none;
 }
 
 /* table結束 */
