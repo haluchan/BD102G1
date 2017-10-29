@@ -10,7 +10,7 @@
   .lightbox-bg .lightbox-target {
     background-color: #F6F7ED;
     max-width: 400px;
-    height: 500px;
+    height: 1000px;
     border-radius: 5% 30%;
     position: fixed;
     top: 0;
@@ -55,6 +55,12 @@
           border-width: 0px;
           border-bottom-width: 2px;
           border-bottom-color: #61ABD4; }
+      .lightbox-bg .lightbox-target .login-content .photo {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto; }
       .lightbox-bg .lightbox-target .login-content .sign-pws {
         width: 300px;
         height: 20px;

@@ -18,7 +18,7 @@ body{
 	.lightbox-target{
 		background-color: #F6F7ED;
 		max-width: 400px;
-		height: 500px;
+		height:1000px;
 		border-radius:5% 30%;
 		position: fixed;
 			top:0;
@@ -76,6 +76,15 @@ body{
 					}
 					
 				}
+				.photo{
+					border-radius: 50%;
+					overflow: hidden;
+					width:100px;
+					height: 100px;
+					margin: 0 auto;
+					}
+					
+				
 				.sign-pws{
 
 					width:300px;

@@ -24,11 +24,11 @@
 	    -ms-transform: translate(-50%, -50%) rotate(360deg);
 	    -webkit-transform: translate(-50%, -50%) rotate(360deg);
 	    transform: translate(-50%, -50%) rotate(360deg); } }
-	.table img{
+	/* .table img{
 		border-radius: 50%;
 		overflow: hidden;
 		margin:6px 0;
-	}
+	} */
 	.clear{
 		clear: both;
 	}
@@ -122,6 +122,14 @@
 		margin-bottom: 10px;
 
 	}
+	.pho{
+		border-radius: 50%;
+		overflow: hidden;
+		width:135px;
+		height: 135px;
+		margin: 0 auto;
+	}
+
 	.bigtitle{
 		text-align: center;
 		padding: 2% 0;
