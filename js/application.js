@@ -4,8 +4,6 @@
             document.getElementById("search").style.display="none";
             document.getElementById("report").style.display="none";
             document.getElementById("apply").style.display="";
-            $('.navbarli').removeClass('barActive');
-            $('#bara').addClass('barActive');
 
         }
         document.getElementById("barc").onclick=report;
@@ -13,21 +11,34 @@
             document.getElementById("report").style.display="";
             document.getElementById("apply").style.display="none";
             document.getElementById("search").style.display="none";
-            $('.navbarli').removeClass('barActive');
-            $('#barc').addClass('barActive');
+           
         }
         document.getElementById("barb").onclick=search;
         function search(){
             document.getElementById("apply").style.display="none";
             document.getElementById("report").style.display="none";
             document.getElementById("search").style.display="";
-            $('.navbarli').removeClass('barActive');
-            $('#barb').addClass('barActive');
+           
         }
       window.onload=apply;
 
 
+      //JQuery切換baractive
+      $('#bara').click(function (){
+        $('.navbarli').removeClass('barActive').addClass('normal');
+        $(this).removeClass('normal').addClass('barActive');
+      });
 
+      $('#barb').click(function (){
+        $('.navbarli').removeClass('barActive').addClass('normal');
+        $(this).removeClass('normal').addClass('barActive');
+      });
+
+      $('#barc').click(function (){
+        $('.navbarli').removeClass('barActive').addClass('normal');
+        $(this).removeClass('normal').addClass('barActive');
+      });
+    
 
 
  		// 驗證申請資助表單value格式
@@ -51,9 +62,6 @@
  		
 
 
-        //查詢案件
-        //將案件編號 申請人姓名 申請人身分證字號存入session
-        //連資料庫 若有吻合資料 就撈出顯示在畫面上
          		
 
  		
