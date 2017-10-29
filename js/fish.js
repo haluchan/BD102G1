@@ -45,7 +45,7 @@ var scene = new ScrollMagic.Scene({
 
 //必備元素-內容文字浮現
 var role = TweenMax.staggerFromTo(['.role #role1','.role #role2','.role #role3'],1,{
-  y:-1000,
+  y:-2000,
   opacity:0
   },{
   y:0,
