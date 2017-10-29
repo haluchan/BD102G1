@@ -1,6 +1,31 @@
 <?php
 ob_start();
 session_start();
+
+	switch ($_FILES["mem_pho"]["error"]) {
+					case 0:
+					$from=$_FILES["mem_pho"]["tmp_name"];// 從暫存檔路徑移至images/member資料夾中
+					$to = "../src/image/member/" . $_FILES["mem_pho"]["name"];
+					
+					copy($from,$to);
+					echo"成功";
+					break;
+							
+					case 1:
+					echo "失敗", ini_get("upload_max_filesize");
+					break;
+					case 2:
+					echo "失敗",  $_REQUEST["MAX_FILE_SIZE"];
+					break;
+					case 3:
+					echo "檔案不完整";
+					break;
+					case 4:
+					echo "檔案未選";
+					break;
+					default:
+					echo "error";
+				}
 try {
 	require_once("connectBeck.php");
 	$sql = 

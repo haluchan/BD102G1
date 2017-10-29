@@ -1,6 +1,7 @@
 <?php 
 ob_start();
 session_start();
+
 try {
 	require_once("connectBeck.php");
 	// echo  $_REQUEST["mem_equity"];

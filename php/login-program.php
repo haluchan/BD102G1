@@ -53,6 +53,7 @@ try {
 		$_SESSION["mem_seed"] = $memRow->mem_seed;
 		$_SESSION["mem_psw"] = $memRow->mem_psw;
 		$_SESSION["mem_birth"] = $memRow->mem_birth;
+		$_SESSION["mem_pho"] = $memRow->mem_pho;
 		echo $memRow->mem_name;
    
 
