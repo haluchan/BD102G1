@@ -26,14 +26,15 @@ textarea{
 	resize: none;
 }
 
-$max-width:960px;
+$max-width:960px; 
 
 .data_info{
 	width: $max-width;
-	background-color: #eef;
+	background-image: url("../src/image/cart/cart-bg.png");
+	// background-color: #eef;
 	// height: 610px;
 	// overflow: scroll;
-	margin-left: 30%;
+	margin-left: 10%;
 	margin-bottom: 10%;
 	// margin: auto;
 	.case_title{
@@ -48,6 +49,7 @@ $max-width:960px;
 				text-align: center;
 				line-height: 1;
 				color: #362e2b;
+				box-sizing: border-box;
 			}
 			
 		}
@@ -185,10 +187,11 @@ $max-width:960px;
 
 		}
 	}
-	nav{
+	.navv{
 		width: 100%;
+		background-color: #f1ece4;
 		ul{
-			background-color: #f1ece4;
+			
 			li{
 				display: inline-block;
 				float: left;

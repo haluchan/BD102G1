@@ -69,9 +69,11 @@ botton {
     border: none;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
   .myForm .btn {
+    width: 15%;
+    margin-top: 20px;
     color: #000;
     background-color: LemonChiffon;
-    padding: 4px 6px;
+    padding: 10px 6px;
     border: none;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
 

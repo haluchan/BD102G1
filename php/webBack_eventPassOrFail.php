@@ -8,7 +8,7 @@
 // }
 
 try{
-	require_once("connectPon.php");
+	require_once("connectBeck.php");
 	$sql="update event set event_status=?,event_allow=?,event_allowdate=now(),event_remark=?, event_enddate=? where event_no=?";
 
 	$event=$pdo->prepare($sql);
