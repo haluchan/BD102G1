@@ -86,13 +86,13 @@ try {
 	// }
 
 	// echo $photosLength;
- // echo $eventRow->act_title ;
- // echo $eventRow->act_host ;
- // echo $eventRow->act_detail ;
- // echo $eventRow->act_add ;
- // echo $eventRow->act_phone ;
- // echo $eventRow->act_price ;
- // echo $eventRow->act_date ;
+    // echo $eventRow->act_title ;
+    // echo $eventRow->act_host ;
+    // echo $eventRow->act_detail ;
+    // echo $eventRow->act_add ;
+    // echo $eventRow->act_phone ;
+    // echo $eventRow->act_price ;
+    // echo $eventRow->act_date ;
 	
 	// $detail =  $eventRow->act_detail
 
@@ -194,8 +194,7 @@ try {
 		<div id="trigger4"></div>
 		<section class="event-report event-ins-item4">
 			<div class="event-report-title ">
-				<img src="src/image/event-inside-page
-				/event-report-title.png" alt="">
+				<img src="src/image/event-inside-page/event-report-title.png" alt="">
 			</div>
 
 

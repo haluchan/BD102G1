@@ -6,7 +6,7 @@ body {
   background: url("../src/image/cart/cart-bg.png") repeat left top; }
 
 .event-banner {
-  width: 100%;
+  max-width: 1200px;
   margin: auto;
   margin-top: 0px; }
   .event-banner .slick-slide img {
