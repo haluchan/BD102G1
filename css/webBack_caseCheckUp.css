@@ -120,6 +120,273 @@ textarea {
 
 .data_info {
   width: 960px;
+<<<<<<< HEAD
+  background-image: url("../src/image/cart/cart-bg.png");
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+.data_info .case_title {
+  text-align: center;
+  line-height: 1.8;
+  margin: 2.5% 0;
+  color: #59493f;
+}
+
+.data_info .case_title h2 input {
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  color: #362e2b;
+  box-sizing: border-box;
+}
+
+.data_info .case_title h3 {
+  text-align: center;
+}
+
+.data_info .case_title h3 input {
+  font-size: 18px;
+  width: 80%;
+  text-align: center;
+  color: #362e2b;
+}
+
+.data_info .case_title h4 span input {
+  color: #a40000;
+  font-size: 16px;
+  text-align: center;
+}
+
+.data_info .play-video .video_item {
+  width: 95%;
+  margin: 0 2.5%;
+  padding-bottom: 56.8125%;
+  position: relative;
+}
+
+.data_info .play-video .video_item .video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.data_info .play-video input {
+  width: 95%;
+  margin: 5px 2.5%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.data_info .case_data {
+  background-image: url("../src/image/funded/sports_ouen.png");
+  background-size: 100%;
+  background-position: 0 -50px;
+  background-repeat: no-repeat;
+}
+
+.data_info .case_data .case_tiem {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.data_info .case_data .case_tiem p {
+  font-size: 42px;
+  line-height: 1.5;
+  color: #00561f;
+}
+
+.data_info .case_data .case_tiem p span {
+  font-size: 16px;
+  color: #007130;
+}
+
+.data_info .case_data .case_tiem form {
+  margin-top: 25%;
+}
+
+.data_info .case_data .case_tiem form select {
+  outline: none;
+}
+
+.data_info .case_data .case_tiem form select {
+  width: 100%;
+  height: 25px;
+  color: #59493f;
+}
+
+.data_info .case_data .case_tiem form button {
+  margin: 5% 0px;
+  width: 100%;
+  padding: 5px 0;
+  border-radius: 25px;
+  background-color: #59493f;
+  color: #fff;
+  border: 0px;
+}
+
+.data_info .case_data .case_tiem form button:hover {
+  background-color: #f1ece4;
+  color: #59493f;
+}
+
+.data_info .case_data .case_tiem .case_ing {
+  margin-top: 6%;
+  font-size: 14px;
+  border-left: 5px solid #59493f;
+  color: #59493f;
+  padding-left: 10px;
+}
+
+.data_info .case_data .case_tiem .case_ing input {
+  width: 50%;
+  font-size: 14px;
+}
+
+.data_info .progress {
+  padding: 0 2%;
+  background-image: url("../src/image/funded/deco-wood-01.gif");
+  background-repeat: no-repeat;
+  background-position: 20px 3px;
+}
+
+.data_info .progress .progress_bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 25px;
+  position: relative;
+  margin-top: 7.5%;
+}
+
+.data_info .progress .progress_bar .bar {
+  position: absolute;
+  height: 20px;
+  border-radius: 25px;
+  background-color: #9BC044;
+}
+
+.data_info .progress .progress_bar .bar .running_man {
+  width: 70px;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .data_info .progress .progress_bar .bar .running_man {
+    width: 30px;
+  }
+}
+
+.data_info .progress .amt {
+  line-height: 3;
+  font-size: 16px;
+  text-align: center;
+  color: #00561f;
+}
+
+.data_info .navv {
+  width: 100%;
+  background-color: #f1ece4;
+}
+
+.data_info .navv ul li {
+  display: inline-block;
+  float: left;
+  padding: 1% 4.5%;
+  color: #59493f;
+}
+
+.data_info .navv ul li.donate_nav {
+  float: right;
+  padding: 1% 12%;
+  background-color: #59493f;
+  color: #fff;
+}
+
+.data_info .case_content {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.data_info .case_content .content_title {
+  width: 95%;
+  margin: 0 2.5%;
+}
+
+.data_info .case_content .content_title .title {
+  border-bottom: 2px solid #59493f;
+  margin-top: 2.5%;
+  margin-bottom: 3%;
+}
+
+.data_info .case_content .content_title .title input {
+  width: 50%;
+  font-size: 20px;
+  line-height: 2;
+}
+
+.data_info .case_content .content_txt .content_item {
+  padding: 0 1.5%;
+}
+
+.data_info .case_content .content_txt .content_item .txt textarea {
+  width: 100%;
+  height: 300px;
+  font-size: 14px;
+  text-indent: 2.2em;
+  line-height: 2.1;
+}
+
+.data_info .case_content .content_txt .content_img img {
+  width: 100%;
+}
+
+.data_info .case_content .content_txt .content_img:last-child {
+  margin-top: 8%;
+}
+
+.data_info .btns {
+  padding: 5%;
+  text-align: center;
+  background-color: #FFF;
+}
+
+.data_info .btns .edit {
+  background-color: #ccc;
+  width: 100px;
+  padding: 1%;
+  margin: 0 10px;
+  color: #fff;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+}
+
+.data_info .btns .btn {
+  width: 100px;
+  padding: 1%;
+  margin: 0 10px;
+  background-color: #59493f;
+  color: #fff;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+}
+
+.data_info .btns .btn:hover {
+  background-color: #f1ece4;
+  color: #59493f;
+}
+
+.data_info .btns .up {
+  background-color: #ccc;
+  width: 100px;
+  padding: 1%;
+  margin: 0 10px;
+  color: #fff;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+}
+=======
   background-color: #eef;
   margin-left: 30%;
   margin-bottom: 10%; }
@@ -301,3 +568,4 @@ textarea {
       margin: 0 10px;
       color: #fff;
       box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); }
+>>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d

@@ -5,6 +5,280 @@
   position: fixed;
   top: 0;
   left: 0;
+<<<<<<< HEAD
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 101;
+}
+
+.lightbox-bg .lightbox-target {
+  background-color: #F6F7ED;
+  max-width: 400px;
+  height: 500px;
+  border-radius: 5% 30%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: right;
+}
+
+.lightbox-bg .lightbox-target .cancel {
+  margin: auto;
+  height: 10px;
+  margin-top: 6px;
+}
+
+.lightbox-bg .lightbox-target h2 {
+  font-size: 32px;
+  padding-top: 6%;
+  color: #699c33;
+}
+
+.lightbox-bg .lightbox-target .login-content {
+  margin: auto;
+  max-width: 300px;
+  text-align: center;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-account {
+  width: 300px;
+  display: inline-block;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-account p {
+  width: 80px;
+  padding-top: 14px;
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+  color: #61ABD4;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-account input {
+  width: 150px;
+  height: 20px;
+  background-color: #F6F7ED;
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  letter-spacing: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-account input:focus {
+  outline: none;
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-bottom-color: #61ABD4;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-pws {
+  width: 300px;
+  height: 20px;
+  display: inline-block;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-pws p {
+  width: 80px;
+  padding-top: 14px;
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 20px;
+  color: #61ABD4;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-pws input {
+  width: 150px;
+  height: 20px;
+  background-color: #F6F7ED;
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  letter-spacing: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-pws input:focus {
+  outline: none;
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-bottom-color: #61ABD4;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-repws {
+  width: 300px;
+  display: inline-block;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-repws p {
+  width: 80px;
+  padding-top: 14px;
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 20px;
+  color: #61ABD4;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-repws input {
+  width: 150px;
+  height: 20px;
+  background-color: #F6F7ED;
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  letter-spacing: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-repws input:focus {
+  outline: none;
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-bottom-color: #61ABD4;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-mail {
+  width: 300px;
+  display: inline-block;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-mail p {
+  width: 80px;
+  padding-top: 14px;
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 20px;
+  color: #61ABD4;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-mail input {
+  width: 150px;
+  height: 20px;
+  background-color: #F6F7ED;
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-bottom-color: #ccc;
+  letter-spacing: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-mail input:focus {
+  outline: none;
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-bottom-color: #61ABD4;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-add {
+  width: 300px;
+  display: inline-block;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-add p {
+  width: 80px;
+  margin-bottom: 12px;
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 20px;
+  color: #61ABD4;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-add textarea {
+  display: inline-block;
+  width: 150px;
+  margin-top: 20px;
+  resize: none;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-birth {
+  width: 300px;
+  display: inline-block;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-birth p {
+  width: 80px;
+  padding-top: 14px;
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 20px;
+  color: #61ABD4;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-birth input {
+  width: 150px;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-gender {
+  width: 100%;
+  display: inline-block;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-gender p {
+  width: 80px;
+  padding-top: 14px;
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 20px;
+  color: #61ABD4;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-gender .genderinput {
+  padding: 0 0;
+  display: inline-block;
+  width: 150px;
+  text-align: left;
+}
+
+.lightbox-bg .lightbox-target .login-content .sign-gender label + label {
+  margin-left: 20px;
+}
+
+.lightbox-bg .lightbox-target .login-content .btn_green {
+  width: 200px;
+  display: inline-block;
+  margin: auto;
+  background-color: #699c33;
+  padding: 6px 10px;
+  color: #fff;
+  font-size: 14px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-top: 3%;
+  border: none;
+  box-sizing: border-box;
+  border: 1px solid #699c33;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.lightbox-bg .lightbox-target .login-content .btn_green:hover {
+  -webkit-transform: 0 0 2px;
+  transform: 0 0 2px;
+  background-color: #F6F7ED;
+  border: 1px solid #699c33;
+  color: #699c33;
+  cursor: pointer;
+}
+
+.lightbox-bg .lightbox-target .login-bee {
+  position: relative;
+  bottom: -20px;
+  width: 50%;
+}
+=======
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 101; }
   .lightbox-bg .lightbox-target {
@@ -212,6 +486,7 @@
       position: relative;
       bottom: -20px;
       width: 50%; }
+>>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 
 .login-clear {
   clear: both; }

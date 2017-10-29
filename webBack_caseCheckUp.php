@@ -1,19 +1,26 @@
+<<<<<<< HEAD
+<?php 
+ob_start();
+session_start();
+ ?>
+=======
 <?php
 session_start();
 ob_start();?>
+>>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
 	<title>後台::訂單明細</title>
-	
+	<link rel="stylesheet" href="css/webBack_caseCheckUp.css">
 	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
 	<!-- 不准動的部分，以下三行 -->
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
 	<!-- 自己的css擺這裡 -->
-	<link rel="stylesheet" href="css/webBack_caseCheckUp.css">
+	
 
 </head>
 <body>
@@ -86,7 +93,7 @@ ob_start();?>
 			<p class="amt">$<span class="now_money">0</span> / $<span class="target_money"><?php echo $eventsRow -> event_allow;?></span></p>
 		</div>	
 		<div class="clear"></div>
-		<nav>
+		<div class="navv">
 			<ul>
 				<li>專案內容</li>
 				<li>專案進度</li>
@@ -94,7 +101,7 @@ ob_start();?>
 				<li class="donate_nav">我 要 資 助</li>
 			</ul>
 			<div class="clear"></div>
-		</nav>
+		</div>
 
 		<section class="case_content col-sm-12 ">
 		<div class="content_title col-sm-12">

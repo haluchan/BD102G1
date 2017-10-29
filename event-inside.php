@@ -17,7 +17,7 @@ session_start();
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
  <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css"/>
 
-
+<link rel="stylesheet" type="text/css" href="src/libs/lightbox2-master/src/css/lightbox.css">
 
 <script type="text/javascript" src="src/libs/gsap/src/minified/TweenMax.min.js"></script>
 
@@ -213,7 +213,10 @@ try {
 
 		
 				<div class="event-report-photo">
-					<img src="src/image/event-inside-page/<?php echo $eventRow->act_no,$photosArry[$i];?>.jpg" alt="">
+					<a href="src/image/event-inside-page/<?php echo $eventRow->act_no,$photosArry[$i];?>.jpg"  data-lightbox="roadtrip">
+
+					<img src="src/image/event-inside-page/<?php echo $eventRow->act_no,$photosArry[$i];?>.jpg" alt="活動照片" >
+					</a>
 				</div>
 		
 
@@ -253,13 +256,16 @@ try {
 	</div>
 	
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
+<script type ="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type ="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
+
+<script type="text/javascript" src="src/libs/lightbox2-master/src/js/lightbox.js" ></script>
+
 
 <script type="text/javascript" src="js/header.js"></script>
 
-  <script type="text/javascript" src="js/event-inside.js"></script>
-  <script type="text/javascript" src="js/login-ajax.js"></script>
+<script type="text/javascript" src="js/event-inside.js"></script>
+<script type="text/javascript" src="js/login-ajax.js"></script>
 
 </body>
 </html>
