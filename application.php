@@ -103,8 +103,12 @@
 					    			<div class="td"><input type="text" name="title_2" placeholder="限20個字" required></div>
 					    		</div>
 					    		<div class="tr">
-					    			<div class="td"><label for="cover">封面影像</label><span>*</span></div>
+					    			<div class="td"><label for="cover">農家大頭照</label><span>*</span></div>
 					    			<div class="td"><input type="file" name="cover" required></div>
+					    		</div>
+					    		<div class="tr">
+					    			<div class="td"><label for="cover">封面影像</label><span>*</span></div>
+					    			<div class="td"><input type="file" name="covernouse" required></div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label for="txtTitle">內容標題</label><span>*</span></div>
