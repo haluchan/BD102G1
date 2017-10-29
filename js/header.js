@@ -65,13 +65,14 @@
 
 //購物清單
 	function proCartNumber(){
+		var storage = sessionStorage;
 		//1.建立空storage 放購買順序
 		if (storage['addItemList'] == null){
 			storage['addItemList'] = '';
 		}else{ //已存在則計算數量	
 			var itemString = storage.getItem('addItemList');
 			var items = itemString.substr(0 , itemString.length-2).split(', ');
-			var eachCart = $qsa('.cartNo');
+			var eachCart = document.querySelectorAll('.cartNo');
 			for (var j = 0; j<eachCart.length; j++){
 				if(items ==""){
 					eachCart[j].innerText = 0;			    
@@ -99,6 +100,8 @@
 
 	// 2.按下去後，把資料存進storage+更改購物車數字
 	function proAddItem( proId , proInfo , e){		
+
+		var storage = sessionStorage;
 		//1.將購買訊息存入storage中
 		if (storage[proId]){
 			alert('購物車裡已經有了喔！');
@@ -110,7 +113,7 @@
 		//2.更改購物車數字
 		var itemString = storage.getItem('addItemList');
 		var items = itemString.substr(0 , itemString.length-2).split(', ');
-		var eachCart = $qsa('.cartNo');
+		var eachCart = document.querySelectorAll('.cartNo');
 		for (var j = 0; j<eachCart.length; j++){
 			eachCart[j].innerText = items.length;
 		}
