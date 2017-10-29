@@ -84,7 +84,8 @@ session_start();
 				<table>					
 					<thead>
 						<tr>
-							<img src="src/image/member/<?php echo $_SESSION['mem_pho'];?>.png" alt="">
+							<div class="pho">
+							<img src="src/image/member/<?php echo $_SESSION['mem_pho'];?>" alt="">	</div>
 						</tr>
 					</thead>
 					<tbody>
