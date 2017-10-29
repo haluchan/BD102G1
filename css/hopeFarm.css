@@ -169,7 +169,8 @@ body {
       margin: 0 auto;
       margin-bottom: 3vh; }
       .containerhope .latest .latest_title h2 {
-        text-align: center; }
+        text-align: center;
+        color: #c9541f; }
     .containerhope .latest .latest_cloud img {
       float: right;
       width: 12%;
