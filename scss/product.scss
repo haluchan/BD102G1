@@ -258,11 +258,9 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 	background-image: url("../src/image/product/pro-bg1.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
-	// .pro_tent{
-	// 	h2{
-	// 		top: 22%;
-	// 	}
-	// }
+	background-position: center bottom;
+	background-color: #bcE2F7;
+	
 
 	/* 商品區(種子)*/
 	.pro_s_cabinet{
@@ -786,7 +784,7 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 				line-height: 26px;
 				letter-spacing: 1px;
 				color: #555;
-				@include pro_breakPoint(mobile){
+				@include pro_breakPoint(mobile) {
 					width: 92%;
 					margin-left: 5%; 
 				}
@@ -794,3 +792,11 @@ $imgBorder: 1px solid rgba(0,0,0,.1);
 		}
 	} //--魚缸資料區
 }
+
+.pro_container{
+	a{
+		cursor:pointer;
+	}
+}
+
+

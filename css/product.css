@@ -122,6 +122,8 @@
   background-image: url("../src/image/product/pro-bg1.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: #bcE2F7;
   /* 商品區(種子)*/ }
   .pro_seed .pro_s_cabinet {
     margin: auto;
@@ -593,3 +595,6 @@
           .pro_tank .pro_t_info .pro_t_infoBottom p {
             width: 92%;
             margin-left: 5%; } }
+
+.pro_container a {
+  cursor: pointer; }

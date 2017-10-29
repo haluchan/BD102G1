@@ -1,8 +1,13 @@
+<?php 
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>體驗活動</title>
+<link rel="stylesheet" href="css/imagehover.css-master/css/imagehover.min.css">
 <link rel="stylesheet" type="text/css" href="css/event.css">
 <link rel="stylesheet" type="text/css" href="css/font.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -85,7 +90,7 @@
 <?php try {
 			require_once("php/connectBeck.php");
 	
-    $sql = "select * from activity where act_date > '2017-10-25'";
+    $sql = "select * from activity a , growing_hope.activityPhoto_vu ap where a.act_no=ap.act_no and ap.act_no and act_date > '2017-10-25'";
     
     $activity = $pdo->query($sql);	
 	
@@ -93,24 +98,36 @@
 		
 		$act_name = $resultset->act_name;
 		$act_no = $resultset->act_no;
-	
+		$act_txt = $resultset->act_txt;
+		$pho_nos = $resultset->pho_nos;
+		// echo $act_no ,"<br>";
 		
-		// for($i=1;$i<=7;$i++){
-		echo"
-			<li class='show col-xs-12'>
-			<a href='#''>
-				<div class='img'>
-					<img src='src/image/event/".$act_no.'.jpg'."' alt=''>
+?>
+
+<!-- <input type="submit" style="display:none";>			 -->
+		<li class="show col-xs-12">
+				<div class="img">
+				<figure class="imghvr-blur" style="background-color:#64b464;">
+					<img src="src/image/event/<?php echo $act_no,1; ?>.jpg" alt="">
+			
+				<figcaption style="background-color:#64b464";>
+			   	<h4><?php echo $act_txt;?></h4>
+			    </figcaption>
+				    <a href="event-inside.php?act_no=<?php echo $act_no; ?>">
+				    </a>
+				</figure>
 				</div>	
-			</a>	
-			<div class='balloon'>
-					<p>".$act_name."</p> 		
 				
+			<div class="balloon">
+					<p><?php echo $act_name;?></p> 		
 			</div>
 			
-		</li>";
-		
-			
+		</li>
+	
+
+	
+
+<?php			
 		}
 	}
 	catch (PDOException $e) {
@@ -118,9 +135,6 @@
 	echo "行號 : " , $e->getLine(),"<br>";	
 }
 ?>	  
-
-
-
 
 
 <!-- 
@@ -135,6 +149,8 @@
 				</div>
 		</li>
 		 -->
+
+
 		<div class="clear"></div>
 	</ul>
 	<div class="clear"></div>

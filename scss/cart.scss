@@ -31,7 +31,7 @@ body{
 			
 			float:left;
 			padding-bottom: 14px;
-			border-bottom:solid 1px #444; 
+			// border-bottom:solid 1px #444; 
 			
 		
 			.item-left-group{
@@ -41,8 +41,13 @@ body{
 				
 				.cart-item-left{
 
+					padding:2% 0;
+					overflow:hidden;
+
+					border-bottom:solid 1px #666; 
+
 					.cart-prod-img{
-						width: 30%;
+						width: 20%;
 						display:inline-block;
 						float:left;
 						img{
@@ -58,7 +63,26 @@ body{
 						padding-left: 10px;
 						float: left;
 						line-height: 280%;
-						input{
+						
+						.prodName{
+						width:100px;
+						border: none;
+						color: #666;
+						background-color: #FFF;
+						margin: 0 15px 0 0;
+						
+						font-size: 16px;
+						font-weight: bold;
+						// line-height: 2;
+						vertical-align: middle;
+						display: inline-block;
+						box-sizing: border-box;
+						border-radius: 5px;
+						outline:none;
+						
+							}
+						.prodNum{
+						// width:100px;
 						border: 1px solid #759944;
 						color: #759944;
 						background-color: #FFF;
@@ -72,14 +96,26 @@ body{
 						box-sizing: border-box;
 						border-radius: 5px;
 						outline:none;
-
+						
 							}
+						
 					}
 					.item-price{
 						width:18%;
 						float:left;
 						box-sizing:border-box;
 						line-height:280%;
+						a{
+							span{
+								cursor: pointer;
+							}
+						}
+						.prodPrice{
+							border:none;
+							width:50px;
+							font-size :16px;
+							// color:#888;
+						}
 						a{
 						text-decoration: none;
 						color:#4a4;
@@ -107,6 +143,18 @@ body{
 				width: 50%;
 				box-sizing:border-box;
 				float:left;
+				#bonus{
+					border:none;
+					background:transparent;
+					font-size:16px;
+					max-width:30px;
+				}
+				#transCost{
+					border:none;
+					background:transparent;
+					font-size:16px;
+					max-width:30px;
+				}
 			}
 
 			line-height:300%;
@@ -116,7 +164,15 @@ body{
 					span{
 					color:#f00;
 					font-size:20px;
-					font-weight:800;
+					font-weight:600;
+					input{
+						color:#f00;
+					font-size:20px;
+					font-weight:600;
+					width: 50px;
+					border:none;
+					background-color:transparent;
+					}
 				}
 				@include rwd("desktop") {
 			text-align: right;
@@ -136,6 +192,7 @@ body{
 			width:200px;
 			display:block;
 			margin:auto;
+			text-align:center;
 		   text-decoration: none;
 		   vertical-align: middle;
 		   margin-top:3%;
@@ -173,6 +230,7 @@ body{
 					margin-bottom:10px;
 				}
 				 .form-control{
+				 	font-weight:500;
 				 	width:100%;
 				 	margin:4px 0;
 				 	height: 20px;
@@ -184,7 +242,7 @@ body{
 					padding-top:15px;
 					padding-bottom:15px;
 					font-size: 16px;
-					font-weight: bold;
+					
 					line-height: 2;
 					vertical-align: middle;
 					display: inline-block;
@@ -204,11 +262,21 @@ body{
 		padding: 10px 0 ;
 		background:#FAF6F0;
 		border-radius:25px;
+
+		#transWay{
+			text-align:center;
+			display:none;
+			color: #759944;
+			padding:10px 0;
+
+		}
+		
 		h2{
 			width: 112px;
 			margin:auto;
 			padding-bottom:5%;
 		}
+
 		@include rwd("mobile") {}
 		.form-group{
 			padding:20px 10px 0;
@@ -261,8 +329,8 @@ body{
 					padding-left: 3.5%;
 					padding-top:15px;
 					padding-bottom:15px;
-					font-size: 26px;
-					font-weight: bold;
+					font-size: 16px;
+					font-weight: 500;
 					line-height: 2;
 					vertical-align: middle;
 					display: inline-block;
@@ -412,10 +480,10 @@ body{
 		.cart-total{
 			text-align:right;
 		}
-		form{
-			width: 200px;
+		// form{
+		// 	width: 200px;
 			
-		}
+		// }
 	}
 
 }

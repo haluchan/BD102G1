@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<?php require_once('Header_head.php') ?>
+
 	<meta charset="UTF-8">
 	<title>hopeFarm</title>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
 	<script type="text/javascript" src="js/hopeFarm.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	
-	<link rel="stylesheet" href="css/headerFooter.css">
+	<!-- <link rel="stylesheet" href="css/headerFooter.css"> -->
 	<!-- 輪播 -->
 	<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css"/>
   	<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
@@ -20,10 +22,11 @@
 	<script src="src/libs/ScrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
 
   	<link rel="stylesheet" href="css/hopeFarm.css">
-	<?php require_once("Header.php"); ?>
+	
 </head>
 <body>
-<?php require_once("Header_head.php"); ?>
+<?php require_once('Header.php') ?>
+
 <section class="containerhope">
 	<section class="view col-sm-12 col-xs-12">
 		<div class="view_container">
@@ -50,18 +53,28 @@
 	<div class="cleare"></div>
 	<div class="hopefarmrwd-select  col-xs-12">
 				<ul>
-					<li class="t4">
-						<h2>最新</h2>
-					</li>
-					<li class="t1 ">
-						<h2>募資中</h2>
-					</li>
-					<li class="t2">
-						<h2>已結案</h2>
-					</li>
-					<li class="t3">
-						<h2>成功案件</h2>
-					</li>
+					<a href="#now">
+						<li class="active01 t4 col-xs-3">
+							<h2>最新</h2>
+						</li>
+					</a>
+					<a href="#doing">
+						<li class="t1 col-xs-3">
+							<h2>募資中</h2>
+						</li>
+					</a>
+					<a href="#end">
+						<li class="t2 col-xs-3">
+							<h2>已結案</h2>
+						</li>
+					</a>
+					<a href="#sucess ">
+						<li class="t3 col-xs-3">
+							<h2>成功案件</h2>
+						</li>
+					</a>
+					
+					<div class="cleare"></li>
 				</ul>
 				
 	</div>
@@ -102,8 +115,8 @@ while( $eventRow = $event->fetchObject()){
 							</div>
 							<div class="c_right">
 								<h2><?php echo $eventRow->event_title; ?></h2>
-								<p>清境農場</p>
-								<h4><?php echo $eventRow->event_txt; ?></h4>
+								<p><?php echo $eventRow->event_name; ?></p>
+								<p><?php echo $eventRow->event_txt; ?></p>
 								<div class="bar">
 									<div class="inside-bar" style="width:<?php echo $width; ?> "></div>
 								</div>
@@ -150,7 +163,7 @@ while( $eventRow = $event->fetchObject()){
 		<div class="cleare"></div>
 	</section>
 	<!-- =============///section04=========== -->
-	<section class="bookmark  col-xs-12">
+<section class="bookmark  col-xs-12">
 		<div class="mark_title">
 				<ul>
 					<li class="t1 active01">
@@ -165,63 +178,7 @@ while( $eventRow = $event->fetchObject()){
 					<div class="cleare"></li>
 				</ul>
 		</div>
-<!--================輪播最新RWD===============  -->
-<div class="mark_container c4">
-			<div class="mark_item">
-<!-- 抓資料 -->
-<?php
-require_once("php/connectGrowing_hope.php");
-$sql = "select * from count_donate_total where new='Y'";
-$event = $pdo->query( $sql);
-while( $eventRow = $event->fetchObject()){
-	// count bar
-	$sql2 = "select sum(dona_price) from donate where event_no = {$eventRow->event_no}";
-	$donateResult = $pdo->query($sql2);
-	$donateResult->bindColumn(1,$totalPrice);
-	$donateResult->fetch();
-	$price_allow = $eventRow->event_allow;
-	$totalPrice=$totalPrice?$totalPrice:0;
-	$width = floor ($totalPrice/$price_allow * 99) . "%";
-// 
-?>
-				<a href="#">
-					<div class="item-box col-xs-12 col-sm-4">
-						<div class="item-box-shadow">
-							<div class="box-img">
-								<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
-								<div class="square">
-									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
-								</div>
-							</div>
-							<div class="box-fontt">
-								<p class="txt_name">by <?php echo $eventRow->event_name; ?></p>
-								<h3 class="txt_title"><?php echo $eventRow->event_title; ?></h3>
-								<p class="JQellipsis" ><?php echo $eventRow->event_txt; ?></p>
-								<div class="bar">
-									<div class="inside-bar" style="width:<?php echo $width; ?> "></div>
-								</div>
-								<h4>累積金額 <?php echo $eventRow->price; ?>元</h4>
-								<h4>倒數50天</h4>
-							</div>
-								<div class="cleare"></div>
-						</div>
-					</div>
-				</a>
-<?php	
-}
-?>					
-				<div class="mark_deco">
-					<img src="src/image/hopeFarm/poor.png" alt="">
-				</div>
-				<div class="mark_more">
-					<img src="src/image/hopeFarm/frog.png" alt="">
-					<a href="#">
-						<h3>查看更多</h3>
-					</a>
-				</div>
-			</div>
-		</div>
-<!-- // -->
+
 		<div class="mark_container active01 c1">
 			<div class="mark_item">
 <!-- 抓資料 -->
@@ -241,10 +198,16 @@ while( $eventRow = $event->fetchObject()){
 // 
 ?>
 				<a href="#">
-					<div class="item-box col-xs-12 col-sm-4">
+					<div class="item-box col-xs-12 col-sm-4"  id="doing">
 						<div class="item-box-shadow">
 							<div class="box-img">
-								<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
+								<div class="box-imgToHover">
+									<div class="imgToHover">
+										<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
+									</div>
+									
+								</div>
+								
 								<div class="square">
 									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
 								</div>
@@ -304,10 +267,15 @@ while( $eventRow = $event->fetchObject()){
 // 
 ?>
 				<a href="#">
-					<div class="item-box col-xs-12 col-sm-4">
+					<div class="item-box col-xs-12 col-sm-4 " id="end">
 						<div class="item-box-shadow">
 							<div class="box-img">
-								<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
+								<div class="box-imgToHover">
+									<div class="imgToHover">
+										<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
+									</div>
+									
+								</div>
 								<div class="square">
 									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
 								</div>
@@ -373,10 +341,15 @@ while( $eventRow = $event->fetchObject()){
 // 
 ?>
 				<a href="#">
-					<div class="item-box col-xs-12 col-sm-4">
+					<div class="item-box col-xs-12 col-sm-4" id="sucess">
 						<div class="item-box-shadow">
 							<div class="box-img">
-								<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
+								<div class="box-imgToHover">
+									<div class="imgToHover">
+										<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
+									</div>
+									
+								</div>
 								<div class="square">
 									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
 								</div>
@@ -408,6 +381,67 @@ while( $eventRow = $event->fetchObject()){
 				</div>
 			</div>
 		</div>
+<!--================輪播最新RWD===============  -->
+<div class="mark_container c4">
+	<div class="mark_item">
+<!-- 抓資料 -->
+<?php
+require_once("php/connectGrowing_hope.php");
+$sql = "select * from count_donate_total where new='Y'";
+$event = $pdo->query( $sql);
+while( $eventRow = $event->fetchObject()){
+	// count bar
+	$sql2 = "select sum(dona_price) from donate where event_no = {$eventRow->event_no}";
+	$donateResult = $pdo->query($sql2);
+	$donateResult->bindColumn(1,$totalPrice);
+	$donateResult->fetch();
+	$price_allow = $eventRow->event_allow;
+	$totalPrice=$totalPrice?$totalPrice:0;
+	$width = floor ($totalPrice/$price_allow * 99) . "%";
+// 
+?>
+				<a href="#">
+					<div class="item-box col-xs-12 col-sm-4" id="now">
+						<div class="item-box-shadow">
+							<div class="box-img">
+								<div class="box-imgToHover">
+									<div class="imgToHover">
+										<img src="src/image/funded/<?php echo $eventRow->event_pho; ?>" alt="">
+									</div>
+								</div>
+								<div class="square">
+									<img src="src/image/hopeFarm/peo_01.jpeg" alt="">
+								</div>
+							</div>
+							<div class="box-fontt">
+								<p class="txt_name">by <?php echo $eventRow->event_name; ?></p>
+								<h3 class="txt_title"><?php echo $eventRow->event_title; ?></h3>
+								<p class="JQellipsis" ><?php echo $eventRow->event_txt; ?></p>
+								<div class="bar">
+									<div class="inside-bar" style="width:<?php echo $width; ?> "></div>
+								</div>
+								<h4>累積金額 <?php echo $eventRow->price; ?>元</h4>
+								<h4>倒數50天</h4>
+							</div>
+							<div class="cleare"></div>
+						</div>
+					</div>
+				</a>
+<?php	
+}
+?>					
+				<div class="mark_deco">
+					<img src="src/image/hopeFarm/poor.png" alt="">
+				</div>
+				<div class="mark_more">
+					<img src="src/image/hopeFarm/frog.png" alt="">
+					<a href="#">
+						<h3>查看更多</h3>
+					</a>
+				</div>
+	</div>
+</div>
+<!-- // -->
 		<div class="cleare"></div>
 	</section>
 	<!-- =============///bookmark=========== -->
@@ -437,7 +471,8 @@ while( $eventRow = $event->fetchObject()){
 		<img src="src/image/hopeFarm/stone.png" alt="">
 	</section>
 </section>
-<?php require_once("Footer.php"); ?>
+<?php require_once('Footer.php') ?> 
+<script src="js/header.js"></script>
 <!-- -============= -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
