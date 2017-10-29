@@ -6,7 +6,7 @@ body {
   background: url("../src/image/cart/cart-bg.png") repeat left top; }
 
 .event-banner {
-  width: 100%;
+  max-width: 1200px;
   margin: auto;
   margin-top: 0px; }
   .event-banner .slick-slide img {
@@ -83,9 +83,10 @@ body {
   box-sizing: border-boxs; }
   .event-cotent .main-container {
     line-height: 60px;
-    text-align: justify; }
+    text-align: justify;
+    text-align: center; }
     .event-cotent .main-container p {
-      font-size: 20px;
+      font-size: 22px;
       line-height: 40px; }
 
 .event-map {

@@ -6,6 +6,7 @@ function proSreenWidth(){
 	//偵測螢幕寬度
 	proScreenWidth = document.body.clientWidth;
 
+
 	//固定前兩個種子有new
 	seedNewBrandShow();	
 
@@ -20,11 +21,15 @@ function proSreenWidth(){
 	autoScorll();
 	
 	if( proScreenWidth >= 767){   //(only桌機&pad)
+		//購物車圓圓動畫(桌機)
+		proScrollCartPc();
 		//魚缸的輪播
 		proTankWheel();
 		//點小圖換大圖
 		proClickSmall();
 	}else{      //手機版
+		//購物車圓圓動畫(手機)
+		proScrollCartMobile();
 		//點到跳出燈箱顯示種子資訊
 		proMobileClickSeed();
 		//魚缸資訊滑動--外掛--在php檔裡面
@@ -171,48 +176,117 @@ function $qsa(qsa){
 
 //==========================================================================================
 
-//購物車圖示，scroll時的觸發效果--jQ
-  $(document).ready(function(){
-  	var fixed = false; //false:從上往下；true:從下往上
-	$(window).scroll(function(){
-		var scrollValue = $(this).scrollTop();
+//XXX購物車圖示，scroll時的觸發效果--jQ
+ //  $(document).ready(function(){
+ //  	var fixed = false; //false:從上往下；true:從下往上
+	// $(window).scroll(function(){
+	// 	var scrollValue = $(this).scrollTop();
 	
-		var anchor = 24;
-		// console.log(scrollValue);
-		if (window.innerWidth > 767) {  //PC的效果
+	// 	var anchor = 24;
+	// 	// console.log(scrollValue);
+	// 	if (window.innerWidth > 767) {  //PC的效果
 
-			$('#cartCircle').addClass('cartAnimatPc');
-			if (scrollValue > anchor) {  
-				if(!fixed){ //尚未被fix就加
-					$('.cartAnimatPc').css({
-						'display'  : 'block',
-						'animation': 'cartPc 1s -.1s cubic-bezier(.14,.87,.25,.7) reverse;'
-					});
-					fixed = true;
-				}
-			}else{  //由下往上
-				$('.cartAnimatPc').css({
-					'animation': 'cartPc 1s cubic-bezier(.14,.87,.25,.7)',
-				});
-				//兩秒後購物車圓圈圈消失
-				timeId = setInterval( noSee ,2000);
-				fixed = false;
-			}
+	// 		$('#cartCircle').addClass('cartAnimatPc');
+	// 		if (scrollValue > anchor) {  
+	// 			if(!fixed){ //尚未被fix就加
+	// 				$('.cartAnimatPc').css({
+	// 					'display'  : 'block',
+	// 					'animation': 'cartPc 1s -.1s cubic-bezier(.14,.87,.25,.7) reverse;'
+	// 				});
+	// 				fixed = true;
+	// 			}
+	// 		}else{  //由下往上
+	// 			$('.cartAnimatPc').css({
+	// 				'animation': 'cartPc 1s cubic-bezier(.14,.87,.25,.7)',
+	// 			});
+	// 			//兩秒後購物車圓圈圈消失
+	// 			timeId = setInterval( noSee ,2000);
+	// 			fixed = false;
+	// 		}
 
-		}else{ //mobile效果
-			$('#cartCircle').addClass('cartAnimatMobile');
+	// 	}else{ //mobile效果
+	// 		$('#cartCircle').addClass('cartAnimatMobile');
 
-		}
-	});
+	// 	}
+	// });
 
 
-  });
+ //  });
 
-  function noSee(){
-  	$('.cart').css('display','none');
-  	clearInterval( timeId);
-  }
+ //  function noSee(){
+ //  	$('.cart').css('display','none');
+ //  	clearInterval( timeId);
+ //  }
 
+
+
+//==========================================================================================
+
+//購物車圖示，ScrollMagic
+	// 1.先在HTML把連結設定好(三個)
+	// 2.new scrollmagic 物件
+	// 3.設定動畫
+	function proScrollCartPc(){
+		var controllerPc = new ScrollMagic.Controller();
+		//tween
+		var cartTweenPc = TweenMax.staggerFromTo('#cartCircle', .8, {
+		        //做事情
+		        opacity: 0,
+		        x: -100,
+		        y: -949
+		    }, {
+		        opacity: 1,
+		        x: 0,
+		        y: 0
+		    }, .3);
+
+		//scrollmagic
+
+	    var scene_Pc = new ScrollMagic.Scene({
+	      //做事情
+	      triggerElement: "#trigger1",
+	      offset: 500,
+	      duration: 150
+	      // reverse: true
+	      // reverse: 預設值true，會倒帶顯示; false動畫只跑一次 
+	    })
+	    .setTween(cartTweenPc)
+	    .addIndicators({
+	            name: 'cart'
+	        })
+	   .addTo(controllerPc);
+	}
+
+	function proScrollCartMobile(){
+		var controllerMobile = new ScrollMagic.Controller();
+		//tween
+		var cartTweenMobile = TweenMax.staggerFromTo('#cartCircle', .8, {
+		        //做事情
+		        opacity: 0,
+		        x: -730,
+		        y: -1349
+		    }, {
+		        opacity: 1,
+		        x: 0,
+		        y: 0
+		    }, .3);
+
+		//scrollmagic
+
+	    var scene_Mobile = new ScrollMagic.Scene({
+	      //做事情
+	      triggerElement: "#trigger1",
+	      offset: 340,
+	      duration: 100
+	      // reverse: true
+	      // reverse: 預設值true，會倒帶顯示; false動畫只跑一次 
+	    })
+	    .setTween(cartTweenMobile)
+	    .addIndicators({
+	            name: 'cart'
+	        })
+	   .addTo(controllerMobile);
+	}
 
 //==============================================================================
 //點魚缸換於資料pro_t_each

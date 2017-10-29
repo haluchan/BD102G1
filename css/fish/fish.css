@@ -8,11 +8,14 @@ body {
 
 @media screen and (max-width: 767px) {
   header .mainmenu {
-    position: relative; } }
+    position: fixed; } }
 
 section.fish_first {
   width: 100%;
   position: relative; }
+  @media screen and (max-width: 767px) {
+    section.fish_first {
+      margin-top: 50px; } }
   section.fish_first img {
     width: 100%; }
   @media screen and (max-width: 767px) {
@@ -26,9 +29,9 @@ section.fish_first {
     position: absolute;
     top: 0%; }
     section.fish_first .fishitem.swing {
-      width: 35%;
-      top: 23%;
-      left: 57%; }
+      width: 30%;
+      top: 35%;
+      left: 60%; }
     section.fish_first .fishitem:nth-child(4) {
       width: 80%;
       top: 0%;
@@ -215,7 +218,7 @@ section.fish_first {
       margin: auto; }
       @media screen and (max-width: 767px) {
         .container .role .roleItem {
-          width: 100%;
+          width: 70%;
           margin: 5% auto; } }
       @media screen and (max-width: 767px) {
         .container .role .roleItem .center {

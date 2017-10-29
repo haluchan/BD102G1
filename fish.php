@@ -134,12 +134,13 @@
 
 
 
-
-
 	</div><!-- container說明內容結束 -->
 
-  <?php require_once('Footer.php') ?> 
-  <script src="js/header.js"></script>
+	<?php require_once('Footer.php') ?> 
+	<!-- <div id="frame_left"></div>
+	<div id="frame_right"></div> -->
+	
+	<script src="js/header.js"></script>
 	<script src="js/fish.js"></script> 
 	<script type="text/javascript" src="js/login-ajax.js"></script>
 </body>

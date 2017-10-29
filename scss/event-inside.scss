@@ -42,7 +42,7 @@ body{
 	background: url("../src/image/cart/cart-bg.png") repeat left top;
 }
 .event-banner{
-	width:100%;
+	max-width:1200px;
 	margin:auto;
 	margin-top:0px;
 		.slick-slide{
@@ -82,9 +82,8 @@ body{
 					// width: 1440px;
 					// height: 100%;
 					// margin:auto;
-
 					
-
+					
 				.title-frame{
 					max-width:400px;
 					max-height: 400px;
@@ -165,8 +164,9 @@ body{
 	.main-container{
 		line-height:60px;
 		text-align:justify;
+		text-align:center;
 		p{
-			font-size:20px;
+			font-size:22px;
 			line-height:40px;
 		}
 	}
