@@ -152,8 +152,8 @@ textarea {
 
 .data_info {
   width: 960px;
-  background-color: #eef;
-  margin-left: 30%;
+  background-image: url("../src/image/cart/cart-bg.png");
+  margin-left: 10%;
   margin-bottom: 10%;
 }
 
@@ -170,6 +170,7 @@ textarea {
   text-align: center;
   line-height: 1;
   color: #362e2b;
+  box-sizing: border-box;
 }
 
 .data_info .case_title h3 {
@@ -318,22 +319,19 @@ textarea {
   color: #00561f;
 }
 
-.data_info nav {
+.data_info .navv {
   width: 100%;
-}
-
-.data_info nav ul {
   background-color: #f1ece4;
 }
 
-.data_info nav ul li {
+.data_info .navv ul li {
   display: inline-block;
   float: left;
   padding: 1% 4.5%;
   color: #59493f;
 }
 
-.data_info nav ul li.donate_nav {
+.data_info .navv ul li.donate_nav {
   float: right;
   padding: 1% 12%;
   background-color: #59493f;

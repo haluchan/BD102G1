@@ -7,8 +7,18 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-<<<<<<< HEAD
+  padding-bottom: 12%;
   z-index: 101;
+}
+
+.sign-up .sign-up-bg {
+  text-align: center;
+  max-width: 100%;
+  padding-bottom: 6%;
+}
+
+.sign-up .sign-up-bg img {
+  max-width: 100%;
 }
 
 .sign-up .lightbox-target {
@@ -94,6 +104,8 @@ body {
   letter-spacing: 1px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  border-radius: none;
+  outline: none;
 }
 
 .sign-up .lightbox-target .sign-content .sign-info ul input:focus {
@@ -111,96 +123,12 @@ body {
 .sign-clear {
   clear: both;
 }
-=======
-  padding-bottom: 12%;
-  z-index: 101; }
-  .sign-up .sign-up-bg {
-    text-align: center;
-    max-width: 100%;
-    padding-bottom: 6%; }
-    .sign-up .sign-up-bg img {
-      max-width: 100%; }
-  .sign-up .lightbox-target {
-    background-color: #FFF;
-    max-width: 400px;
-    height: 500px;
-    border-radius: 20px;
-    border: 2px solid #699c33;
-    position: relative;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto; }
-    .sign-up .lightbox-target .cancel {
-      margin: auto;
-      height: 10px;
-      margin-top: 6px; }
-    .sign-up .lightbox-target h2 {
-      text-align: center;
-      font-size: 32px;
-      padding-top: 6%;
-      color: #699c33; }
-    .sign-up .lightbox-target .sign-content {
-      margin: auto;
-      max-width: 400px;
-      text-align: center; }
-      .sign-up .lightbox-target .sign-content .sign-title {
-        width: 49%;
-        display: inline-block;
-        box-sizing: border-box; }
-        .sign-up .lightbox-target .sign-content .sign-title ul li {
-          width: 100%;
-          height: 20px;
-          padding-top: 14px;
-          vertical-align: top;
-          display: block;
-          color: #61ABD4;
-          border-bottom-width: 2px;
-          border-bottom-color: transparent; }
-      .sign-up .lightbox-target .sign-content .sign-info {
-        width: 49%;
-        display: inline-block;
-        box-sizing: border-box; }
-        .sign-up .lightbox-target .sign-content .sign-info ul {
-          text-align: left; }
-          .sign-up .lightbox-target .sign-content .sign-info ul li {
-            width: 100%;
-            height: 20px;
-            padding-top: 14px;
-            font-weight: 800;
-            vertical-align: top;
-            display: block;
-            color: #5a3819;
-            border-bottom-width: 2px;
-            border-bottom-color: transparent; }
-          .sign-up .lightbox-target .sign-content .sign-info ul input {
-            width: 130px;
-            height: 20px;
-            background-color: #fff;
-            border-width: 0px;
-            border-bottom-width: 2px;
-            border-bottom-color: #ccc;
-            letter-spacing: 1px;
-            transition: 0.4s;
-            border-radius: none;
-            outline: none; }
-          .sign-up .lightbox-target .sign-content .sign-info ul input:focus {
-            outline: none;
-            border-width: 0px;
-            border-bottom-width: 2px;
-            border-bottom-color: #61ABD4; }
-      .sign-up .lightbox-target .sign-content .btn-item button {
-        margin-top: 20px;
-        width: 120px; }
-
-.sign-clear {
-  clear: both; }
 
 @media all and (max-width: 767px) {
   .sign-up {
-    padding-top: 50px; }
-    .sign-up .lightbox-target {
-      width: 90%; } }
->>>>>>> 552e415daa43ec6dcd4188a3ad64e13377ae4903
+    padding-top: 50px;
+  }
+  .sign-up .lightbox-target {
+    width: 90%;
+  }
+}

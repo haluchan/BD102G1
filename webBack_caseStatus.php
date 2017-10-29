@@ -1,17 +1,21 @@
+<?php 
+ob_start();
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
 	<title>後台::案件狀態</title>
-	
+	<link rel="stylesheet" href="css/webBack_caseStatus.css">
+
 	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
 	<!-- 不准動的部分，以下三行 -->
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
 	<!-- 自己的css擺這裡 -->
-	<link rel="stylesheet" href="css/webBack_caseStatus.css">
-
+	
 </head>
 <body>
 <?php require_once('web_back_frame_top.php') ?>
@@ -54,7 +58,7 @@
 	<?php 
 		try{
 			require_once("php/connectGrowing_hope.php");
-			$sql = "select * from growing_hope.event";
+			$sql = "select * from growing_hope.event order by event_status desc";
 			$events = $pdo ->query($sql);
 	?>		
 			
@@ -80,7 +84,7 @@
 				<td><?php echo $eventsRow -> event_title; ?></td>
 				<td><?php echo $eventsRow -> event_need; ?></td>
 				<td><?php echo $eventsRow -> event_allow; ?></td>
-				<td><?php echo $eventsRow -> event_period; ?></td>
+				<td><?php echo $eventsRow -> event_period; ?>個月</td>
 				<td><?php echo $eventsRow -> event_allowdate; ?></td>
 				<td class="status"><select name="status">
 						<?php  $status = $eventsRow -> event_status;  ?>
@@ -94,7 +98,7 @@
 					</select>
 				</td>
 				<td><input type="button" value="確定" class="btn yes"></td>
-				<td><input type="button" value="編輯內容" class="btn edit" <?php if ($status != "P") echo "disabled"; ?> onclick="self.location.href='webBack_caseCheckUp.php?event_no='+ <?php echo $eventsRow -> event_no; ?>"></td>
+				<td><input type="button" value="編輯內容" class="btn edit"  onclick="self.location.href='webBack_caseCheckUp.php?event_no=<?php echo $eventsRow -> event_no; ?>'"></td>
 				<!-- <?php //if($status <>"P" echo "disabled";) ?> -->
 			
 			</tr>
@@ -138,6 +142,7 @@
 			var event_no = $(this).parent().parent().children('.event_no').text();
 			var status = $(this).parent().parent().children('.status').children().val();
 			var url = "webBack_caseStatus_update.php?event_no=" + event_no +"&status=" + status+"&old_status=<?php echo $status; ?>";
+			alert(url);
 			xhr.open("Get", url , true);
 			xhr.send(null);
 		});
