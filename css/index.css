@@ -260,7 +260,6 @@ a {
 
 @media screen and (max-width: 767px) {
   .fill_screen .logo {
-<<<<<<< HEAD
     width: 150%;
   }
 }
@@ -272,20 +271,6 @@ a {
 }
 
 @media screen and (max-width: 767px) {
-=======
-    top: -2%;
-    left: -1%;
-    margin-left: 30%;
-    -webkit-animation: swinging 4.5s ease-in-out forwards infinite;
-    animation: swinging 4.5s ease-in-out forwards infinite;
-    transition: all 0.35s ease-in-out 0s;
-    -webkit-transform-origin: 20% 0%;
-    -ms-transform-origin: 20% 0%;
-    transform-origin: 20% 0%; }
-    @media screen and (max-width: 767px) {
-      .fill_screen .logo {
-        width: 150%; } }
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
   .fill_screen .farm {
     width: 70%;
   }
@@ -513,7 +498,6 @@ a {
 
 @media screen and (max-width: 767px) {
   .donate_ing .donate_top {
-<<<<<<< HEAD
     margin-top: -25px;
   }
 }
@@ -619,36 +603,6 @@ a {
   font-size: 12px;
   text-align: center;
 }
-=======
-    margin-top: 5%; }
-    @media screen and (max-width: 767px) {
-      .donate_ing .donate_top {
-        margin-top: -25px; } }
-    .donate_ing .donate_top .donate_txt a {
-      color: #000; }
-    .donate_ing .donate_top .donate_txt .donate_info {
-      float: left; }
-      .donate_ing .donate_top .donate_txt .donate_info .info {
-        width: 95%;
-        background-color: #fff;
-        margin: auto;
-        box-sizing: border-box;
-        padding: 15px;
-        margin: 2.5%;
-        border-radius: 15px; }
-        .donate_ing .donate_top .donate_txt .donate_info .info img {
-          width: 100%; }
-        .donate_ing .donate_top .donate_txt .donate_info .info h4 {
-          line-height: 2; }
-        .donate_ing .donate_top .donate_txt .donate_info .info p {
-          font-size: 14px;
-          line-height: 1.5; }
-        .donate_ing .donate_top .donate_txt .donate_info .info .amt {
-          line-height: 1;
-          margin-top: 5px;
-          font-size: 12px;
-          text-align: center; }
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 
 .activity {
   height: 100vh;
@@ -878,45 +832,45 @@ a {
 }
 
 .fish .fish_info .fish_icon:nth-child(4) {
-  left: 18%;
-  bottom: 43%;
-  animation: fish_icon 3s -0.49s linear infinite;
+  left: 20%;
+  bottom: 22%;
+  animation: fish_icon 3s -0.42s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(5) {
-  left: 19%;
-  bottom: 50%;
-  animation: fish_icon 3s -0.21s linear infinite;
+  left: 26%;
+  bottom: 21%;
+  animation: fish_icon 3s -0.45s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(6) {
-  left: 18%;
-  bottom: 33%;
-  animation: fish_icon 3s -0.14s linear infinite;
+  left: 30%;
+  bottom: 43%;
+  animation: fish_icon 3s -0.27s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(7) {
-  left: 13%;
-  bottom: 24%;
-  animation: fish_icon 3s -0.15s linear infinite;
+  left: 21%;
+  bottom: 44%;
+  animation: fish_icon 3s -0.08s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(8) {
-  left: 22%;
-  bottom: 36%;
-  animation: fish_icon 3s -0.28s linear infinite;
+  left: 17%;
+  bottom: 43%;
+  animation: fish_icon 3s -0.14s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(9) {
-  left: 21%;
-  bottom: 36%;
-  animation: fish_icon 3s -0.16s linear infinite;
+  left: 17%;
+  bottom: 39%;
+  animation: fish_icon 3s -0.02s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(10) {
-  left: 29%;
-  bottom: 46%;
-  animation: fish_icon 3s -0.42s linear infinite;
+  left: 20%;
+  bottom: 28%;
+  animation: fish_icon 3s -0.48s linear infinite;
 }
 
 .fish .fish_info .phone {
@@ -927,7 +881,6 @@ a {
 
 @media screen and (max-width: 767px) {
   .fish .fish_info {
-<<<<<<< HEAD
     margin-top: 45%;
   }
   .fish .fish_info .p_2 {
@@ -939,90 +892,6 @@ a {
     left: -5%;
   }
 }
-=======
-    margin-top: 20%; }
-    .fish .fish_info h3 {
-      text-align: center;
-      margin: auto;
-      font-size: 24px; }
-    .fish .fish_info .p_2 {
-      font-size: 42px;
-      text-align: center;
-      margin: 10px 0 30px;
-      line-height: 1.3; }
-    .fish .fish_info p {
-      text-align: center; }
-      .fish .fish_info p .btn {
-        box-sizing: border-box;
-        display: inline-block; }
-        @media screen and (max-width: 767px) {
-          .fish .fish_info p .btn {
-            width: 40%;
-            font-size: 16px; } }
-    .fish .fish_info .fish_icon {
-      width: 5%;
-      position: absolute;
-      left: 12%;
-      bottom: 40%; }
-      .fish .fish_info .fish_icon:nth-child(4) {
-        left: 29%;
-        bottom: 29%;
-        -webkit-animation: fish_icon 3s -0.12s linear infinite;
-        animation: fish_icon 3s -0.12s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(5) {
-        left: 25%;
-        bottom: 47%;
-        -webkit-animation: fish_icon 3s -0.2s linear infinite;
-        animation: fish_icon 3s -0.2s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(6) {
-        left: 23%;
-        bottom: 46%;
-        -webkit-animation: fish_icon 3s -0.08s linear infinite;
-        animation: fish_icon 3s -0.08s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(7) {
-        left: 18%;
-        bottom: 50%;
-        -webkit-animation: fish_icon 3s -0.39s linear infinite;
-        animation: fish_icon 3s -0.39s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(8) {
-        left: 27%;
-        bottom: 47%;
-        -webkit-animation: fish_icon 3s -0.14s linear infinite;
-        animation: fish_icon 3s -0.14s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(9) {
-        left: 17%;
-        bottom: 39%;
-        -webkit-animation: fish_icon 3s -0.39s linear infinite;
-        animation: fish_icon 3s -0.39s linear infinite; }
-      .fish .fish_info .fish_icon:nth-child(10) {
-        left: 15%;
-        bottom: 30%;
-        -webkit-animation: fish_icon 3s -0.09s linear infinite;
-        animation: fish_icon 3s -0.09s linear infinite; }
-    .fish .fish_info .phone {
-      position: absolute;
-      bottom: 0;
-      z-index: -1; }
-    @media screen and (max-width: 767px) {
-      .fish .fish_info {
-        margin-top: 45%; }
-        .fish .fish_info .p_2 {
-          font-size: 32px;
-          line-height: 1.7; }
-        .fish .fish_info .phone {
-          width: 180%;
-          left: -5%; } }
-
-@-webkit-keyframes fish_icon {
-  0% {
-    -webkit-transform: translate(5px, -15px) scale(0.3) rotate(0deg);
-    transform: translate(5px, -15px) scale(0.3) rotate(0deg);
-    opacity: 1; }
-  100% {
-    -webkit-transform: translate(100px, -150px) scale(1.3) rotate(180deg);
-    transform: translate(100px, -150px) scale(1.3) rotate(180deg);
-    opacity: 0; } }
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 
 @keyframes fish_icon {
   0% {
