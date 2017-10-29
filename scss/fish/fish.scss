@@ -2,7 +2,6 @@
 @import "../mixins/media";
 
 
-
 .clear:after{
 	clear:both;
 	content:"";
@@ -17,7 +16,7 @@ body{
 
 header .mainmenu {
 	@include rwd (moblie){
-		position:relative;
+		position:fixed;
 	}	
 }
 
@@ -26,7 +25,7 @@ section.fish_first{
 	width:100%;
 	position:relative;
 	@include rwd (moblie){
-		
+		margin-top:50px;
 	}
 
 	img{
@@ -51,9 +50,9 @@ section.fish_first{
 		position:absolute;
 		top:0%;
 		&.swing{
-			width:35%;
-			top:23%;
-			left:57%;	
+			width:30%;
+			top:35%;
+			left:60%;	
 		}
 		&:nth-child(4){
 			width:80%;
@@ -329,7 +328,7 @@ section.fish_first{
 			border-radius:10px;
 			margin:auto;
 				@include rwd (moblie) {	
-			    width:100%;
+			    width:70%;
 			    margin:5% auto;   				
 				}
 
@@ -383,6 +382,34 @@ section.fish_first{
 		}//roleitem結束
 	}//role結束
 }
+
+
+// 側邊裝飾
+// #frame_left{
+// 	position:absolute;
+// 	height:3000px;
+// 	width:110px;
+// 	position:absolute;
+// 	top:0%;
+// 	background:url('../../src/image/fish/frame_left.png');
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

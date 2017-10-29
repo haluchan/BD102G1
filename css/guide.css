@@ -1,68 +1,192 @@
-*{
-	padding: 0;
-	margin: 0;
-}
-img{
-	width: 100%;
-	vertical-align: top;
-}
-body{
-	background-color: #BCE2F7;
-}
+* {
+  padding: 0;
+  margin: 0; }
 
+section {
+  height: 100vh;
+  background-color: #BCE2F7;
+  background-image: url(../src/image/guide/guide_bg.svg);
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden; }
+  section img {
+    vertical-align: top; }
+  section .logo {
+    height: 30vh;
+    position: relative;
+    margin: auto;
+    top: -82px;
+    right: 0;
+    left: 0;
+    text-align: center; }
 
-/*真身*/
-/*section{
-	position: relative;
-	width: 100%;
-	height: 100%;
-}*/
-/*section>div{
-	position: absolute;
-	margin: auto;
-}*/
+@-webkit-keyframes hoverMe {
+  0% {
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg); }
+  50% {
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+    -webkit-transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg); }
+  100% {
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+    -webkit-transform: rotateZ(5deg);
+    transform: rotateZ(5deg); } }
 
-/*.background{
-	width: 100%;
-}*/
+@keyframes hoverMe {
+  0% {
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg); }
+  50% {
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+    -webkit-transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg); }
+  100% {
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+    -webkit-transform: rotateZ(5deg);
+    transform: rotateZ(5deg); } }
+  section .goWhere {
+    height: 70vh; }
+    section .goWhere .goFront, section .goWhere .goBack {
+      width: 50%;
+      float: left; }
+    section .goWhere .sayFront img {
+      border-radius: 30% 90% 90% 5%/30% 40% 10% 60%; }
+    section .goWhere .sayBack img {
+      border-radius: 80% 20% 40% 90%/ 50% 60% 25% 10%; }
+    section .goWhere .sayFront img, section .goWhere .sayBack img {
+      z-index: 99; }
+      section .goWhere .sayFront img:hover, section .goWhere .sayBack img:hover {
+        -webkit-animation: hoverMe 0.3s linear infinite Alternate-reverse;
+        animation: hoverMe 0.3s linear infinite Alternate-reverse; }
 
+@-webkit-keyframes shakeHand {
+  0% {
+    -webkit-transform: rotateZ(-20deg);
+    transform: rotateZ(-20deg); }
+  100% {
+    -webkit-transform: rotateZ(14deg);
+    transform: rotateZ(14deg); } }
 
-/*代打*/
-section{
-	width: 100%;
-	height: 100vh;
-	background-image: url(../src/image/guide/guide_fake-01.png);
-	background-size: cover;
-}
-.conterImg{
-	position: relative;
-	width: 70%;
-	/*border: 2px solid red;*/
-	margin: auto;
-	left: 0;
-	right: 0;
-	top: -70px;
-}
+@keyframes shakeHand {
+  0% {
+    -webkit-transform: rotateZ(-20deg);
+    transform: rotateZ(-20deg); }
+  100% {
+    -webkit-transform: rotateZ(14deg);
+    transform: rotateZ(14deg); } }
 
-.goTo{
-	position: absolute;
-	margin: auto;
-	left: 0;
-	right: 0;
-	bottom: 100px;
-	width: 55%;
-	/*border: 2px solid orange;*/
-	font-size: 0;
+@-webkit-keyframes shakeHead {
+  0% {
+    -webkit-transform: rotateZ(4deg);
+    transform: rotateZ(4deg); }
+  100% {
+    -webkit-transform: rotateZ(-18deg);
+    transform: rotateZ(-18deg); } }
 
-}
-.goTo>a{
-	display: inline-block;
-	width: 50%;
-	height: 30vh;
-	/*background-color: pink;*/
-	border-radius: 600px;
-}
-.goTo>a:last-child{
-	/*height: 330px;*/
-	margin-bottom: 50px; 
-}
+@keyframes shakeHead {
+  0% {
+    -webkit-transform: rotateZ(4deg);
+    transform: rotateZ(4deg); }
+  100% {
+    -webkit-transform: rotateZ(-18deg);
+    transform: rotateZ(-18deg); } }
+
+@-webkit-keyframes trakGo {
+  5% {
+    margin-left: 400px; }
+  100% {
+    margin-left: -600px; } }
+
+@keyframes trakGo {
+  5% {
+    margin-left: 400px; }
+  100% {
+    margin-left: -600px; } }
+
+@-webkit-keyframes sayFrontGo {
+  5% {
+    margin-right: 0px; }
+  100% {
+    margin-right: 600px; } }
+
+@keyframes sayFrontGo {
+  5% {
+    margin-right: 0px; }
+  100% {
+    margin-right: 600px; } }
+    section .goWhere .trakGo {
+      -webkit-animation: trakGo 2.2s cubic-bezier(0.01, -0.03, 0.67, 0.07);
+      animation: trakGo 2.2s cubic-bezier(0.01, -0.03, 0.67, 0.07); }
+    section .goWhere .sayFrontGo {
+      -webkit-animation: sayFrontGo 2.2s cubic-bezier(0.01, -0.03, 0.67, 0.07);
+      animation: sayFrontGo 2.2s cubic-bezier(0.01, -0.03, 0.67, 0.07); }
+    section .goWhere .goFront .sayFront {
+      text-align: right;
+      margin-bottom: 26px;
+      margin-right: 0px;
+      cursor: pointer; }
+    section .goWhere .goFront .farmer {
+      position: relative;
+      float: left;
+      margin-left: 400px; }
+      section .goWhere .goFront .farmer .head {
+        position: absolute;
+        margin: auto;
+        top: -36px;
+        left: -130px;
+        right: 0;
+        width: 20%;
+        -webkit-transform-origin: 35% 100%;
+        -ms-transform-origin: 35% 100%;
+        transform-origin: 35% 100%;
+        -webkit-animation: shakeHead 2s ease-in-out infinite Alternate-reverse;
+        animation: shakeHead 2s ease-in-out infinite Alternate-reverse; }
+        section .goWhere .goFront .farmer .head img {
+          width: 100%; }
+      section .goWhere .goFront .farmer .hand {
+        position: absolute;
+        margin: auto;
+        top: -38px;
+        left: -24px;
+        right: 0;
+        width: 19%;
+        -webkit-transform-origin: left 90%;
+        -ms-transform-origin: left 90%;
+        transform-origin: left 90%;
+        -webkit-animation: shakeHand 1s ease-in-out infinite Alternate-reverse;
+        animation: shakeHand 1s ease-in-out infinite Alternate-reverse; }
+        section .goWhere .goFront .farmer .hand img {
+          width: 100%; }
+    section .goWhere .goBack .sayBack {
+      margin: 150px 0px 0px 0px;
+      margin-left: 30px;
+      cursor: pointer; }
+    section .goWhere .goBack .green {
+      position: relative; }
+      section .goWhere .goBack .green .carrot {
+        width: 24%;
+        position: absolute;
+        margin: auto;
+        top: -190px;
+        left: 317px; }
+        section .goWhere .goBack .green .carrot img {
+          width: 100%; }
+      section .goWhere .goBack .green .vegetable {
+        position: absolute;
+        margin: auto;
+        top: 0px;
+        right: 317px; }
+  section .fence {
+    position: fixed;
+    margin: auto;
+    bottom: 122px;
+    left: 25%; }

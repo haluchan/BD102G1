@@ -98,7 +98,10 @@
 			width:90%;
 			margin: 0 auto;
 		}
-		
+ 		.header{
+		position: relative;
+		margin-top: 50px;
+		}
 	
 		
 		
@@ -109,11 +112,10 @@
 	}
 	
 	
-	
 			
 	/*==============*/
 	.header{
-	position: relative;
+		position: relative;
 	}
 
 	.headertext{
@@ -168,14 +170,8 @@
 		background-size: cover;
 		background-position: center bottom;
 		position: relative;
-		border-radius: 20% 20% 0 0;
+		border-radius: 10% 10% 0 0;
 		
-		/* background-image: url('../src/image/event/03333.jpg');
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center bottom;
-		margin: 0 auto; */
 	}
 	.titletextli{
 		padding-top: 10px;
@@ -260,19 +256,6 @@
 		left: 30px;
 
 	}
-	/* .balloon:after{
-		content: '';
-		width: 20px;
-		height: 20px;
-		position: absolute;
-		top: 40px;
-		left: 140px;
-		background-color: #2aab95;
-		
-		border-bottom-left-radius: 50px;
-
-
-	} */
 	
 	.balloon p {
 		padding: 2%;
@@ -311,12 +294,14 @@
 	
 	/* ================== */
 	.show{
-		margin:5% 6% ;
+		margin:5% 0 ;
 		/* display: inline-block; */
 		position: relative;
 		float: left;
 		display: block;
-
+	/* 	-webkit-border-radius:50%;
+		overflow: hidden; 
+ */
 	}
 	.imgtext{
 		width: 100px;
@@ -329,26 +314,14 @@
 		
 	}
 	
-	/* 	.show:after{
-		content: 'link';
-		display: block;
-		visibility: hidden;
-		border: 2px solid green;
-
-	}
-	.show:hover:after{
-		content: 'link';
-		display: block;
-		visibility: visible;
-	} */
-	.show .img:hover{
-		transform: scale(1.1, 1.1);
-		transition: 2s;
-		opacity: .8;
-	}
-	.show img{
+	.show .imghvr-blur{
 		-webkit-border-radius:50%;
 		overflow: hidden; 
+	}
+
+	.show img{
+		/* -webkit-border-radius:50%;
+		overflow: hidden;  */
 		width: 26vmin;
 		min-width: 200px;
 		position: relative;
@@ -371,14 +344,16 @@
 		animation:slide-in-fwd-center 4s cubic-bezier(.25,.46,.45,.94);
 		
 	}
+
+	.imghvr-blur h4{
+		padding-top: 20%;
+		letter-spacing: 4px;
+	}
 	.secondblockin{
 		margin: 0 auto;
 		width: 80%;
-
-
 	}
-	@media screen and (max-width: 1024px) {
-	
+	@media screen and (min-width: 767px) {
 		.show{
 		margin:5% 8% ;
 		/* display: inline-block; */
@@ -387,9 +362,16 @@
 		display: block;
 
 	}
-	
-		
-		
+	}
+	@media screen and (min-width: 1439px) {
+		.show{
+		margin:5% 6% ;
+		display: inline-block;
+		position: relative;
+		float: left;
+		display: block;
+
+	}	
 	}
  	.secondblock ul li .img{
  		position: relative;
@@ -423,11 +405,7 @@
 	}
 	
     /* ====third===== */ 
-    /* .bgyama{
-    	position: relative;
-    	width: 100%;
-
-    } */
+    
     .thirdblock img {
 		width: 90%;
 		/* min-width: 300px; */

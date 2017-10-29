@@ -1,3 +1,7 @@
+<?php 
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +15,7 @@
 	</head>
 	<body>
 	<?php require_once('Header.php'); ?>
-	<?php 
-	ob_start();
-	session_start();
-	?>
+	
 	<div class="titlebg">
 		<img src="src/image/member/mv01.png" alt="">
 	</div>
@@ -23,21 +24,19 @@
 </div>
 
 <div class="mem">
-</div>
+
 </section>
-	<form action="php/memupdata.php" method="get" accept-charset="utf-8">
+	<form action="php/memupdata.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 		<div class="table">
-			<h2></h2>
-			<img src="src/image/member/<?php echo $_SESSION['mem_pho'];?>" alt="">
-			<div class="imguplod btnbox">
-				<input type="file" name="mem_pho">
+			<div class="photo">
+			<img src="src/image/member/
+					<?php echo $_SESSION['mem_pho'];?>.png" alt=""> 
+			</div>
+			<div class="imguplod">
+				<span >選擇照片</span>
+				<input type="file" class="memimguplod" name="mem_pho">
 			</div>
 				<table>
-					<thead>
-						<tr>
-														
-						</tr>
-					</thead>
 					<tbody>
 						<tr>
 							<td>會員帳號:</td>
@@ -57,29 +56,30 @@
 							<td><input type="email" name="mem_mail" value="<?php echo $_SESSION['mem_mail'] ;?>"></td>
 						
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td>會員生日:</td>
 							<td><p><?php echo $_SESSION["mem_birth"] ;?></p></td>
 						
-						</tr>
+						</tr> -->
 						<tr>
 							<td>居住地:</td>
 							<td><input type="text" name="mem_add" value="<?php echo $_SESSION['mem_add'];?>" ></td>
 						
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td>性別:</td>
 							<td><p><?php echo $_SESSION["mem_gender"] ;?></p></td>
 						
-						</tr>
+						</tr> -->
 					</tbody>
 				</table>
 			<div class="btnbox">
-				<button class="but" type="submit">確定修改</button>
-				<input class="but" type=button onClick="location.href='member.php'" value='取消修改'>
-				
+				<input class="but" type="submit">
+				<input class="but" type="button" onClick="location.href='member.php'" value='取消修改'>
 			</div>		
 		</form>
+	</div>
+		<div class="clear"></div>
 	</div>
 	
 	

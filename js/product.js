@@ -1,26 +1,35 @@
 var storage = sessionStorage;
 
 
-
 //特定螢幕尺寸觸動特定效果(無限制的效果在最尾端)
 function proSreenWidth(){
 	//偵測螢幕寬度
 	proScreenWidth = document.body.clientWidth;
 
+
+	//固定前兩個種子有new
+	seedNewBrandShow();	
+
+
 	//點到魚缸有效果
 	proClickHighLight();
 	//點魚缸換下方資料
-	// proEveryTank();
+	proEveryTank();
 	//第一次的魚缸撈資料
 	proTankInfoChange();
-	
+	//點到商品，卷軸自動下移
+	autoScorll();
 	
 	if( proScreenWidth >= 767){   //(only桌機&pad)
+		//購物車圓圓動畫(桌機)
+		proScrollCartPc();
 		//魚缸的輪播
 		proTankWheel();
 		//點小圖換大圖
 		proClickSmall();
 	}else{      //手機版
+		//購物車圓圓動畫(手機)
+		proScrollCartMobile();
 		//點到跳出燈箱顯示種子資訊
 		proMobileClickSeed();
 		//魚缸資訊滑動--外掛--在php檔裡面
@@ -167,15 +176,16 @@ function $qsa(qsa){
 
 //==========================================================================================
 
-//購物車圖示，scroll時的觸發效果--jQ
-//有空再改成tweenmax
-  // $(document).ready(function(){
+//XXX購物車圖示，scroll時的觸發效果--jQ
+ //  $(document).ready(function(){
  //  	var fixed = false; //false:從上往下；true:從下往上
 	// $(window).scroll(function(){
 	// 	var scrollValue = $(this).scrollTop();
+	
 	// 	var anchor = 24;
 	// 	// console.log(scrollValue);
 	// 	if (window.innerWidth > 767) {  //PC的效果
+
 	// 		$('#cartCircle').addClass('cartAnimatPc');
 	// 		if (scrollValue > anchor) {  
 	// 			if(!fixed){ //尚未被fix就加
@@ -188,8 +198,9 @@ function $qsa(qsa){
 	// 		}else{  //由下往上
 	// 			$('.cartAnimatPc').css({
 	// 				'animation': 'cartPc 1s cubic-bezier(.14,.87,.25,.7)',
-	// 				// 'display'  : 'none'
 	// 			});
+	// 			//兩秒後購物車圓圈圈消失
+	// 			timeId = setInterval( noSee ,2000);
 	// 			fixed = false;
 	// 		}
 
@@ -200,8 +211,82 @@ function $qsa(qsa){
 	// });
 
 
-  // });
+ //  });
 
+ //  function noSee(){
+ //  	$('.cart').css('display','none');
+ //  	clearInterval( timeId);
+ //  }
+
+
+
+//==========================================================================================
+
+//購物車圖示，ScrollMagic
+	// 1.先在HTML把連結設定好(三個)
+	// 2.new scrollmagic 物件
+	// 3.設定動畫
+	function proScrollCartPc(){
+		var controllerPc = new ScrollMagic.Controller();
+		//tween
+		var cartTweenPc = TweenMax.staggerFromTo('#cartCircle', .8, {
+		        //做事情
+		        opacity: 0,
+		        x: -100,
+		        y: -949
+		    }, {
+		        opacity: 1,
+		        x: 0,
+		        y: 0
+		    }, .3);
+
+		//scrollmagic
+
+	    var scene_Pc = new ScrollMagic.Scene({
+	      //做事情
+	      triggerElement: "#trigger1",
+	      offset: 500,
+	      duration: 150
+	      // reverse: true
+	      // reverse: 預設值true，會倒帶顯示; false動畫只跑一次 
+	    })
+	    .setTween(cartTweenPc)
+	    .addIndicators({
+	            name: 'cart'
+	        })
+	   .addTo(controllerPc);
+	}
+
+	function proScrollCartMobile(){
+		var controllerMobile = new ScrollMagic.Controller();
+		//tween
+		var cartTweenMobile = TweenMax.staggerFromTo('#cartCircle', .8, {
+		        //做事情
+		        opacity: 0,
+		        x: -730,
+		        y: -1349
+		    }, {
+		        opacity: 1,
+		        x: 0,
+		        y: 0
+		    }, .3);
+
+		//scrollmagic
+
+	    var scene_Mobile = new ScrollMagic.Scene({
+	      //做事情
+	      triggerElement: "#trigger1",
+	      offset: 340,
+	      duration: 100
+	      // reverse: true
+	      // reverse: 預設值true，會倒帶顯示; false動畫只跑一次 
+	    })
+	    .setTween(cartTweenMobile)
+	    .addIndicators({
+	            name: 'cart'
+	        })
+	   .addTo(controllerMobile);
+	}
 
 //==============================================================================
 //點魚缸換於資料pro_t_each
@@ -247,17 +332,11 @@ function $qsa(qsa){
 		while( i <= $('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup li').size()-proBecauseSlick ){
 			console.log('i='+i);
 			// var targetImg = $('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup li:nth-child('+ i +') img');
-			//捉雞OK
-			// var targetImg = $('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup li:nth-child('+ i +') img');
 			var targetImg = $('.pro_t_infoTop .pro_t_infoTR .pro_t_imgGroup ').find('li:nth-child('+ i +') img');
 
-
-			console.log('原'+targetImg.attr('src'));
 			// var newSrc = "src/image/product/pro-"+pro_realno+i+".jpg";
 			var newSrc = targetImg.attr('src').replace(oldProId,pro_realno);
-			console.log('新的'+ newSrc);
 			targetImg.attr('src',newSrc);
-			console.log('結果'+ targetImg.attr('src'));
 			i++;
 		};
 		//重新呼叫點小圖換大圖，去建立事件聆聽功能
@@ -281,13 +360,43 @@ function $qsa(qsa){
 
 //========================================================================
 //前兩個菜菜的牌子才有new
-	// function seedNewBrandShow(){
-		// $('#pro_s_cabinet .pro_s_each:first-child .pro_s_vegetable .pro_s_brand .pro_s_new').addClass('hidden');
-		// $('pro_s_new')[1].removeClass('hidden');
-	// }
+	function seedNewBrandShow(){
+		$('#pro_s_cabinet li:first-child .pro_s_vegetable .pro_s_brand .pro_s_new').removeAttr('hidden');
+		$('#pro_s_cabinet li:nth-child(2) .pro_s_vegetable .pro_s_brand .pro_s_new').removeAttr('hidden');
+	}
 
 //==========================================================
 //點到商品，卷軸自動下移
+
+	function autoScorll(){
+		$('.pro_t_each').click(function(){
+
+			//種子部分高pro_seed+遮雨棚pro_tent+pro_t_wheel+pro_t_shelfImg = 指定高
+			var downTo = $('.pro_seed').height()+ $('.pro_tent').height()+ $('.pro_t_wheel').height()+ $('.pro_t_shelfImg').height();
+			// $(window).scrollTop(downTo);
+			console.log(downTo);
+
+			//參考w3c
+			if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: downTo
+		      }, 400 ,function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = downTo;
+		      });
+		    } // End if
+
+		});
+	}
 
 
 

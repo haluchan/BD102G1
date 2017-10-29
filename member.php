@@ -1,3 +1,7 @@
+<?php 
+ob_start();
+session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +19,14 @@
 <body>
 	<?php require_once('Header.php'); ?>
 		<?php 
-		ob_start();
-		session_start();
 		$eve=$_SESSION["mem_no"];
-
+		if( isset($_SESSION["mem_no"]) === false){
+  		$_SESSION["where"] = $_SERVER["PHP_SELF"];
+  		//echo "尚未登入，請<a href='cart_Login.html'>登入</a>";
+  		echo "<script>alert('還沒登入喔');window.history.go(-1);</script>";
+}else{
 		try {
+
 			require_once("php/connectBeck.php");
 	
 	 		$sql = "select dona_price,date(dona_date) as dona_date,event_title
@@ -65,23 +72,19 @@
 		</div>
 	</div>
 
-		
-	<div class="mem">
-	
 		<div id="scenes" data-hover-only="false" >
-            <div class="parallax_area" data-depth="0.1">
+            <div class="parallax_area" data-depth="0.2">
             	<img src="src/image/member/concept_index.png" alt="">
-            </div>
-		  
-		</div>
-
+            </div>	
+        </div>
+	<div class="mem">
 		<!-- 我的資料 -->
 		<div class="table" id="memdetail">
 			<h2>我的資料</h2>
 				<table>					
 					<thead>
 						<tr>
-							<img src="src/image/member/<?php echo $_SESSION['mem_pho'];?>" alt="">
+							<img src="src/image/member/<?php echo $_SESSION['mem_pho'];?>.png" alt="">
 						</tr>
 					</thead>
 					<tbody>
@@ -122,7 +125,9 @@
 						</tr>
 						<tr>
 							<td>性別:</td>
-							<td><p><?php echo $_SESSION["mem_gender"] ;?></p></td>
+							<td><p><?php 
+							if( $_SESSION["mem_gender"] == 1){echo "男";}else{
+							echo "女";}  ;?></p></td>
 						
 						</tr>
 					</tbody>
@@ -185,6 +190,7 @@
 catch (PDOException $e) {
   echo "錯誤行號 : ", $e->getLine(), "<br>";
   echo "錯誤訊息 : ", $e->getMessage(), "<br>";		
+}
 }
 ?>
 <?php require_once('Footer.php');?>

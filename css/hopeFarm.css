@@ -274,8 +274,6 @@ body {
               text-decoration: none;
               cursor: pointer;
               letter-spacing: 1px;
-              -webkit-transition: .4s;
-              -o-transition: .4s;
               transition: .4s; }
             .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_btn h2:hover {
               background: #ffffff;
@@ -283,8 +281,6 @@ body {
               color: #6cbecc;
               cursor: pointer;
               letter-spacing: 1px;
-              -webkit-transition: .4s;
-              -o-transition: .4s;
               transition: .4s; }
     .containerhope .latest .carousel .slick-prev {
       left: -54px; }
@@ -393,8 +389,6 @@ body {
           padding: 10px 20px 10px 20px;
           margin: 0 0.5%;
           cursor: pointer;
-          -webkit-transition: .4s;
-          -o-transition: .4s;
           transition: .4s;
           text-align: center;
           letter-spacing: 4px; }
@@ -413,8 +407,6 @@ body {
           border: 2px solid #699c33;
           color: #ffffff;
           cursor: pointer;
-          -webkit-transition: .4s;
-          -o-transition: .4s;
           transition: .4s; }
       .containerhope .bookmark .mark_title img {
         left: 0;
@@ -429,7 +421,6 @@ body {
           position: relative; }
           .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow {
             background-color: #fff;
-            -webkit-box-shadow: 0px 0px 5px 0px #ccc;
             box-shadow: 0px 0px 5px 0px #ccc;
             border-radius: 38px;
             border: 1px solid transparent; }
@@ -442,8 +433,6 @@ body {
                 overflow: hidden;
                 border-radius: 37px; }
                 .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover .imgToHover {
-                  -webkit-transition: all 1.5s;
-                  -o-transition: all 1.5s;
                   transition: all 1.5s;
                   overflow: hidden; }
                   .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover .imgToHover:hover {
@@ -479,7 +468,6 @@ body {
             .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt {
               width: 100%;
               padding: 4%;
-              -webkit-box-sizing: border-box;
               box-sizing: border-box;
               float: left;
               padding-bottom: 6%;
@@ -700,73 +688,61 @@ body {
   .col-sm-1 {
     float: left;
     width: 8.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-2 {
     float: left;
     width: 16.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-3 {
     float: left;
     width: 25%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-4 {
     float: left;
     width: 33.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-5 {
     float: left;
     width: 41.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-6 {
     float: left;
     width: 50%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-7 {
     float: left;
     width: 58.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-8 {
     float: left;
     width: 66.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-9 {
     float: left;
     width: 75%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-10 {
     float: left;
     width: 83.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-11 {
     float: left;
     width: 91.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-12 {
     float: left;
     width: 100%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .coName {
@@ -808,73 +784,61 @@ body {
   .col-xs-1 {
     float: left;
     width: 8.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-2 {
     float: left;
     width: 16.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-3 {
     float: left;
     width: 25%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-4 {
     float: left;
     width: 33.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-5 {
     float: left;
     width: 41.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-6 {
     float: left;
     width: 50%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-7 {
     float: left;
     width: 58.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-8 {
     float: left;
     width: 66.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-9 {
     float: left;
     width: 75%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-10 {
     float: left;
     width: 83.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-11 {
     float: left;
     width: 91.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-12 {
     float: left;
     width: 100%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .containerhope {
@@ -914,8 +878,6 @@ body {
           border: 1px solid #699c33;
           background-color: #ffffff;
           cursor: pointer;
-          -webkit-transition: .4s;
-          -o-transition: .4s;
           transition: .4s;
           text-align: center;
           padding: 0 0; }
@@ -931,8 +893,6 @@ body {
           border: 1px solid #699c33;
           color: #ffffff;
           cursor: pointer;
-          -webkit-transition: .4s;
-          -o-transition: .4s;
           transition: .4s; }
           .containerhope .hopefarmrwd-select ul .active01 h2 {
             color: #ffffff; }
@@ -949,11 +909,16 @@ body {
       .containerhope .purpose .purpose_txt {
         width: 90%; }
         .containerhope .purpose .purpose_txt h2 {
+<<<<<<< HEAD
           font-size: 24px;
           font-weight: 500;
           margin-bottom: 0; }
         .containerhope .purpose .purpose_txt .purp {
           -o-text-overflow: ellipsis;
+=======
+          font-size: 38px; }
+        .containerhope .purpose .purpose_txt h3 {
+>>>>>>> d3e7a779d7467a3f2c924083dc3a0549983b759e
           text-overflow: ellipsis;
           font-size: 19px; }
           .containerhope .purpose .purpose_txt .purp:nth-child(2):before {
@@ -1004,6 +969,7 @@ body {
             line-height: 23px; }
     .containerhope .bookmark .mark_title {
       display: none; }
+<<<<<<< HEAD
     .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow {
       -webkit-box-shadow: 0 0 8px 0 #ccc;
       box-shadow: 0 0 8px 0 #ccc; }
@@ -1030,6 +996,28 @@ body {
         text-align: center;
         margin-top: 10px; }
         .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .countP:last-child {
+=======
+    .containerhope .bookmark .mark_container .mark_item a .item-box {
+      margin-bottom: 5%; }
+      .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow {
+        box-shadow: 0 0 8px 0 #ccc; }
+        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_name {
+          margin-left: 13%;
+          margin-top: -9px;
+          font-size: 4vw; }
+        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_title {
+          font-size: 8vw;
+          margin-bottom: 2px; }
+        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
+          font-size: 5vw;
+          letter-spacing: 2px;
+          line-height: 160%; }
+        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .bar {
+          margin-top: 10px; }
+        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4 {
+          font-size: 23px;
+          padding-right: 0;
+>>>>>>> d3e7a779d7467a3f2c924083dc3a0549983b759e
           width: 100%;
           margin-top: 2px; }
     .containerhope .bookmark .mark_container .mark_item a:nth-child(2) .item-box {

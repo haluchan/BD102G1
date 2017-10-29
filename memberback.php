@@ -1,3 +1,7 @@
+<?php 
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -86,7 +90,7 @@
 		<!-- 	<td><?php echo $resultset->mem_add ;?></td>
 			<td><?php echo $resultset->mem_seed ;?></td>
 			<td><?php echo $resultset->mem_bonus ;?></td> -->
-			<td><?php if( $resultset->mem_equity == N){echo "正常";}else{
+			<td><?php if( $resultset->mem_equity == "N"){echo "正常";}else{
 				echo "停權";}   ;?></td>
 			<td style="padding-left: 20px;">
 				<form class="myFormSend" action="php/memequ.php">
