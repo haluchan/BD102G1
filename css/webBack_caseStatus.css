@@ -43,7 +43,9 @@ botton {
     .myForm table tr th {
       width: 4%; }
       .myForm table tr th:nth-child(2) {
-        width: 16.5%; }
+        width: 15%; }
+      .myForm table tr th:nth-child(6) {
+        width: 6%; }
   .myForm .btn {
     width: 100%;
     background-color: LemonChiffon;

@@ -1,3 +1,6 @@
+<?php 
+ob_start();
+session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +9,7 @@
 
 <title>即刻菜援</title>
 <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+
 <link rel="stylesheet" href="css/font.css">
 <link href="css/index.css" rel="stylesheet">
 <link rel="stylesheet" href="css/font.css">
@@ -14,8 +18,7 @@
 
 
 <link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" type="text/css" href="css/login.css" >
-
+<link href="css/index.css" rel="stylesheet">
 
 <!-- plugin -->
  <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
@@ -33,7 +36,7 @@
 <script src="src/libs/gsap/src/minified/TimelineLite.min.js"></script>
 <script src="js/parallax.mins.js"></script>
 <script src="js/change_SVG_color.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
 
 
 <!-- scrollmagic -->
@@ -48,16 +51,34 @@
 
 </head>
 <body>
+	<div id="header">
+	<?php require_once('header.php');  ?>
+		
+	</div>
 
 
-<?php require_once('header.php');  ?>
+
 
 <div id="fullpage">
 
 		<!-- 發揚農民心血的募資平台 src/image/index/ -->
 		<div class="section">
 			<section class="col-xs-12 col-sm-12 index_1">
+
 				<div class="h_100vh fill_screen" id="background">
+					<div id="hidden-xs">
+						<ul>	
+			    			<li><a href="cart.php" class="cartBtn">購物車<span class="cartNo">0</span></a></li>
+			    			<li><span id="memName"></span><a  id="spanLogin" >註冊/登入</a></li>
+			    			<li><a href="application.php">申請資助</a></li>
+			    			<li class="clear"></li>
+			    		</ul>
+			    		<div class="clear"></div>
+		    		</div>
+
+
+
+
 					<img src="src/image/index/1_background.svg" class="w_100p">
 					<img src="src/image/index/2_background_cloud.svg" data-depth="1" class="w_120p">
 					<img src="src/image/index/5_grass.svg" data-depth=".6" class="w_120p">
@@ -104,7 +125,6 @@
 
 
 
-
 		<!-- 募資倒數 -->
 		<div class="section">
 			<section class="col-xs-12 col-sm-12 donate_banner">
@@ -131,49 +151,52 @@
 				<div class="donate_title">
 					<p>資助進行中</p>
 				</div>
+				<div id="donate_ing"></div>
 			
 				<div class="donate_top">
-					<div class="donate_txt ">
-					
-						<div class="donate_info col-xs-12 col-sm-4">
-							<a href="donate_info.php">
-								<div class="info">
-									<img src="src/image/index/index_div3_1.jpg">
-									<h4>1愛土地．愛吃飯．我們要作最新鮮的米</h4>
-									<p>濁水溪南的沃土平原上，農夫阿碩與農婦小綠，帶著３歲的耘禾與１歲的牧洋。頂著烈日，吹著微風，淋點小雨，依循節氣，用心耕種當令的鮮果米糧，與世界分享！</p>
-									<img src="src/image/index/run.svg">
-									<p class="amt">$192,400/ $200,000   	剩 14 天</p>
-								</div>
-							</a>
-						</div>
-					
-					
-					
-						<div class="donate_info col-xs-12 col-sm-4 hidden-xs">
+					<div class="donate_txt">
+
+					<?php 
+						try {
+							require_once("php/connectGrowing_hope.php");
+							$sql = "select * from count_donate_total where new = 'Y'";
+							$event_new = $pdo ->query($sql);
+							$i =0;
+							while ( $newRow = $event_new->fetchObject()) { 
+								$i++;
 							
-							<a href="donate_info.php">
+					?>
+
+						<div class="donate_info col-xs-12 col-sm-4 don<?php echo $i;?>">
+							<a href="donate_info.php?event_no=<?php echo $newRow -> event_no; ?> ">
 								<div class="info">
-									<img src="src/image/index/index_div3_1.jpg">
-									<h4>2愛土地．愛吃飯．我們要作最新鮮的米</h4>
-									<p>濁水溪南的沃土平原上，農夫阿碩與農婦小綠，帶著３歲的耘禾與１歲的牧洋。頂著烈日，吹著微風，淋點小雨，依循節氣，用心耕種當令的鮮果米糧，與世界分享！</p>
-									<img src="src/image/index/run.svg">
-									<p class="amt">$192,400/ $200,000   	剩 14 天</p>
+									<div class="info_img">
+										<img src="src/image/funded/<?php echo $newRow -> event_pho; ?>">
+									</div>
+									<h4><?php echo $newRow -> event_title; ?></h4>
+									<p><?php echo $newRow -> event_txt; ?>...</p>
+									<!-- <img src="src/image/index/run.svg"> -->
+									<div class="progress_bar">
+										<div class="bar">
+											<img src="src/image/funded/run.gif" class="running_man">
+										</div>
+									</div>
+									<p class="amt">$<?php echo $newRow -> price; ?>/ $<?php echo $newRow -> event_allow; ?>   	剩 <?php echo $newRow -> dday; ?> 天</p>
 								</div>
 							</a>
 						</div>
+
+
+					<?php 
+							}
+						} catch (PDOException $e) {
+							echo "錯誤行號 : ", $e->getLine(), "<br>";
+			  				echo "錯誤訊息 : ", $e->getMessage(), "<br>";	
+								
+						}
+
+					?>
 					
-					
-						<div class="donate_info col-xs-12 col-sm-4 hidden-xs">
-							<a href="donate_info.php">
-								<div class="info">
-									<img src="src/image/index/index_div3_1.jpg">
-									<h4>3愛土地．愛吃飯．我們要作最新鮮的米</h4>
-									<p>濁水溪南的沃土平原上，農夫阿碩與農婦小綠，帶著３歲的耘禾與１歲的牧洋。頂著烈日，吹著微風，淋點小雨，依循節氣，用心耕種當令的鮮果米糧，與世界分享！</p>
-									<img src="src/image/index/run.svg">
-									<p class="amt">$192,400/ $200,000   	剩 14 天</p>
-								</div>
-							</a>
-						</div>
 					
 						
 					</div>
