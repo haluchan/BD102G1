@@ -15,13 +15,13 @@
 	<body>  
 		 <?php require_once('Header.php') ?> 
 		<div class="navbar">
-			<div class="navbarli" id="bara">
+			<div class="navbarli normal" id="bara">
 				<p>申請資助</p>
 			</div>
-			<div class="navbarli" id="barb">
+			<div class="navbarli normal" id="barb">
 				<p>查詢案件</p>
 			</div>
-			<div class="navbarli" id="barc">
+			<div class="navbarli normal" id="barc">
 				<p>回報進度</p>
 			</div>
 		</div>
@@ -50,7 +50,7 @@
 			    			<div  class="formContent table">		    		
 					    		<div class="tr">
 					    			<div class="td"><label for="nameApply">姓名</label><span>*</span></div>
-					    			<div class="td"><input type="text" name="name" id="nameApply" required></div>
+					    			<div class="td"><input type="text" name="name" id="nameApply" placeholder="限10個字內" required></div>
 					    			
 					    		</div>
 					    		<div class="tr">
@@ -78,7 +78,7 @@
 					    		<div class="tr">
 					    			
 					    			<div class="td"><label for="mail">電子信箱</label><span>*</span></div>
-					    			<div class="td"><input type="email" name="mail" id="mail" required></div>
+					    			<div class="td"><input type="email" name="mail" id="mail" placeholder="EX:yoyo@growing.com" required></div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label for="add">地址</label></div>
@@ -92,14 +92,15 @@
 			    				<img src="src/image/application/two.png">
 			    			</div>
 			    			<h3>資助案內容</h3>
+			    			
 		    				<div  class="formContent table">		    		
 					    		<div class="tr">
 					    			<div class="td"><label for="title">專案主標題</label><span>*</span></div>
-					    			<div class="td"><input type="text" name="title" required></div>
+					    			<div class="td"><input type="text" name="title" placeholder="限20個字" required></div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label for="title_2">副標題</label><span>*</span></div>
-					    			<div class="td"><input type="text" name="title_2" required></div>
+					    			<div class="td"><input type="text" name="title_2" placeholder="限20個字" required></div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label for="cover">封面影像</label><span>*</span></div>
@@ -111,7 +112,7 @@
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label>內容說明</label><span>*</span></div>
-									<div class="td"><textarea  rows="10" cols="25" name="txt" required></textarea></div>
+									<div class="td"><textarea  rows="10" cols="25" name="txt" placeholder="限250個字" required></textarea></div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label>內容照片</label><span>*</span></div>
@@ -123,11 +124,11 @@
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label>代表人/單位</label><span>*</span></div>
-									<div class="td"><input type="text" name="dept" required></div>
+									<div class="td"><input type="text" name="dept" placeholder="限20個字" required></div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label>申請金額</label><span>*</span></div>
-									<div class="td"><input type="text" name="need" required></div>
+									<div class="td"><input type="text" name="need" placeholder="必須為大於0之數字" required></div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label>帳戶</label></div>
@@ -159,6 +160,7 @@
 	    	</div>  
 
 			<form class="form"  action="php/applicationInsert.php" method="post" enctype="multipart/form-data">
+		    	<h4><span>*</span>項目為必填</h4>
 		    	<div  class="formContent table">		    		
 		    		<div class="tr">
 		    			<div class="td"><label for="numberRe">案件編號</label><span>*</span></div>
@@ -174,7 +176,7 @@
 		    		</div>
 		    		<div class="tr">
 		    			<div class="td"><label for="info">進度說明</label><span>*</span></div>
-						<div class="td"><textarea  rows="10" cols="25" name="return_info" id="info" required></textarea></div>
+						<div class="td"><textarea  rows="10" cols="25" name="return_info" id="info" placeholder="限100個字" required></textarea></div>
 		    		</div>
 		    	</div>   			
 				<div class="formSubmit">
@@ -197,6 +199,7 @@
 	    		</div>
 	    	</div>   	
 			<div class="form">
+		    	<h4><span>*</span>項目為必填</h4>
 		    	<div  class="formContent table">		    		
 		    		<div class="tr">
 		    			<div class="td"><label for="number">案件編號</label></div>
@@ -292,8 +295,8 @@
 		 	str += "<tr><th colspan='2'>查詢結果如下</th></tr>";
 		 	str += "<tr><th>案件編號</th><td>" + eventRow.event_no + "</td></tr>";
 		 	str += "<tr><th>案件標題</th><td>" + eventRow.event_title + "</td></tr>";
-		 	str += "<tr><th>申請日期</th><td>" + eventRow.event_enddate + "</td></tr>";
-		 	str += "<tr><th>狀態</th><td>" + condition + "</td></tr>";
+		 	str += "<tr><th>申請日期</th><td>" + eventRow.event_date + "</td></tr>";
+		 	str += "<tr><th>目前狀態</th><td>" + condition + "</td></tr>";
 		 	str += "</table>";
 		 	document.getElementById("showPanel").innerHTML = str;
 		}
