@@ -8,18 +8,9 @@ body {
 .event-banner {
   max-width: 1200px;
   margin: auto;
-<<<<<<< HEAD
-  margin-top: 0px;
-}
-
-.event-banner .slick-slide img {
-  width: 100%;
-}
-=======
   margin-top: 0px; }
   .event-banner .slick-slide img {
     width: 100%; }
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 
 .clear {
   clear: both; }
@@ -27,12 +18,7 @@ body {
 .event {
   max-width: 100%;
   margin: auto;
-<<<<<<< HEAD
-  margin-top: 0px;
-}
-=======
   margin-top: 0px; }
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 
 .main-bg {
   background-image: url("../src/image/event-inside-page/tree-head-L.png"), url("../src/image/event-inside-page/tree-head-R.png");
@@ -41,63 +27,6 @@ body {
   background-position: left top 0px,right top 0px;
   padding: 8% 0 0;
   box-sizing: border-box;
-<<<<<<< HEAD
-  z-index: 3;
-}
-
-.main-bg .event-row {
-  max-width: 1300px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.main-bg .event-row .main-container .title-frame {
-  max-width: 400px;
-  max-height: 400px;
-  position: absolute;
-  left: 880px;
-  top: -60px;
-}
-
-.main-bg .event-row .main-container .title-frame img {
-  width: 320px;
-}
-
-.main-bg .event-row .main-container .main-img {
-  max-width: 1000px;
-  margin-left: 300px;
-  z-index: -1;
-}
-
-.main-bg .event-row .main-container .main-img img {
-  width: 100%;
-  display: block;
-  border-radius: 1090px 1020px 1060px 1150px/580px 550px 640px 640px;
-}
-
-.main-bg .event-row .main-container .main-title {
-  background-color: #fff;
-  width: 420px;
-  padding: 100px 0 90px;
-  border-radius: 250px 250px 235px 235px / 260px 220px 235px 180px;
-  text-align: center;
-  position: absolute;
-  top: 80px;
-  left: 20px;
-  z-index: 50;
-}
-
-.main-bg .event-row .main-container .main-title h2:nth-child(1) {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.main-bg .event-row .main-container .main-title p:nth-child(2) {
-  padding-top: 80px;
-  font-size: 28px;
-}
-=======
   z-index: 3; }
   .main-bg .event-row {
     max-width: 1300px;
@@ -136,7 +65,6 @@ body {
       .main-bg .event-row .main-container .main-title p:nth-child(2) {
         padding-top: 80px;
         font-size: 28px; }
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 
 .tree-left {
   margin-left: 100px;
@@ -152,21 +80,6 @@ body {
   max-width: 1300px;
   margin: auto;
   padding: 8%;
-<<<<<<< HEAD
-  box-sizing: border-boxs;
-}
-
-.event-cotent .main-container {
-  line-height: 60px;
-  text-align: justify;
-  text-align: center;
-}
-
-.event-cotent .main-container p {
-  font-size: 22px;
-  line-height: 40px;
-}
-=======
   box-sizing: border-boxs; }
   .event-cotent .main-container {
     line-height: 60px;
@@ -175,85 +88,11 @@ body {
     .event-cotent .main-container p {
       font-size: 22px;
       line-height: 40px; }
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 
 .event-map {
   max-width: 1300px;
   padding: 8% 0;
   margin: auto;
-<<<<<<< HEAD
-  box-sizing: border-box;
-}
-
-.event-map .event-row {
-  max-width: 1440px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.event-map .event-row .event-map-content {
-  width: 100%;
-  margin: auto;
-}
-
-.event-map .event-row .event-map-content .event-info {
-  width: 500px;
-  background-color: #fff;
-  border-radius: 46% 48% 53% 51%/50% 48% 51% 49%;
-  line-height: 24px;
-  box-sizing: border-box;
-  padding: 50px 0px 80px;
-  text-align: center;
-  position: absolute;
-  left: 0px;
-  z-index: 50;
-}
-
-.event-map .event-row .event-map-content .event-info a {
-  text-decoration: none;
-}
-
-.event-map .event-row .event-map-content .event-info .btn_green {
-  max-width: 150px;
-  margin: auto;
-  margin-top: 30px;
-}
-
-.event-map .event-row .event-map-content .event-info h1 {
-  font-size: 36px;
-  padding-bottom: 20px;
-}
-
-.event-map .event-row .event-map-content .event-info ul li {
-  padding-top: 20px;
-  font-size: 20px;
-  list-style-type: none;
-  display: inline-block;
-}
-
-.event-map .event-row .event-map-content .event-map-img {
-  position: absolute;
-  width: 500px;
-  z-index: 50;
-  left: 0px;
-  bottom: -120px;
-}
-
-.event-map .event-row .event-map-content .event-map-img img {
-  width: 80%;
-}
-
-.event-map .event-row .event-map-content .event-map-right {
-  max-width: 800px;
-  height: 500px;
-  margin-left: 500px;
-}
-
-.event-map .event-row .event-map-content .event-map-right img {
-  width: 100%;
-}
-=======
   box-sizing: border-box; }
   .event-map .event-row {
     max-width: 1440px;
@@ -302,60 +141,11 @@ body {
         margin-left: 500px; }
         .event-map .event-row .event-map-content .event-map-right img {
           width: 100%; }
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 
 .event-report {
   padding: 8% 0;
   width: 100%;
   margin: auto;
-<<<<<<< HEAD
-  margin-top: 20px;
-}
-
-.event-report .event-report-title {
-  background-image: url("../src/image/event-inside-page/event-bird.png"), url("../src/image/event-inside-page/deco-img-03.gif");
-  background-repeat: no-repeat,no-repeat;
-  background-size: 150px auto,180px auto;
-  background-position: left 70px top, right  30px center;
-  text-align: center;
-  padding-bottom: 8%;
-}
-
-.event-report .event-report-title img {
-  max-width: 468px;
-}
-
-.event-report .event-report-main {
-  max-width: 1440px;
-  margin: auto;
-  text-align: center;
-}
-
-.event-report .event-report-main .event-report-photo {
-  border-radius: 50%;
-  display: inline-block;
-  width: 30%;
-  margin: 20px;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.event-report .event-report-main .event-report-photo img {
-  width: 100%;
-  border-radius: 50%;
-  box-sizing: border-box;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.event-report .event-report-main .event-report-photo img:hover {
-  -webkit-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  cursor: pointer;
-}
-=======
   margin-top: 20px; }
   .event-report .event-report-title {
     background-image: url("../src/image/event-inside-page/event-bird.png"), url("../src/image/event-inside-page/deco-img-03.gif");
@@ -388,7 +178,6 @@ body {
           transform: scale(1.1, 1.1);
           transition: all 0.3s ease-out;
           cursor: pointer; }
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 
 @media all and (min-width: 1201px) and (max-width: 1300px) {
   .main-bg .event-row .main-container .title-frame {
@@ -468,8 +257,7 @@ body {
 
 @media all and (max-width: 767px) {
   .event-banner {
-    margin-top: 50px;
-  }
+    margin-top: 50px; }
   .main-bg {
     background-size: 54px auto,70px auto; }
     .main-bg .event-row .main-container .title-frame {
