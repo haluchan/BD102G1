@@ -43,9 +43,9 @@ $(function() {
 		offset:-100
 	})
 	.setTween(tween_1)
-	.addIndicators({
-		name:'scene 01'
-	})
+	// .addIndicators({
+	// 	name:'scene 01'
+	// })
 	.addTo(controller);
 
 
@@ -66,9 +66,9 @@ $(function() {
 		offset:-100
 	})
 	.setTween(tween_2)
-	.addIndicators({
-		name:'scene 02'
-	})
+	// .addIndicators({
+	// 	name:'scene 02'
+	// })
 	.addTo(controller);
 
 
@@ -87,9 +87,9 @@ $(function() {
 		offset:-100
 	})
 	.setTween(tween_3)
-	.addIndicators({
-		name:'scene 03'
-	})
+	// .addIndicators({
+	// 	name:'scene 03'
+	// })
 	.addTo(controller);
 
 
@@ -107,9 +107,9 @@ $(function() {
 		,offset:300
 	})
 	.setTween(tween_nav)
-	.addIndicators({
-		name:'nav'
-	})
+	// .addIndicators({
+	// 	name:'nav'
+	// })
 	.addTo(controller);
 	
 	$(window).bind('scroll', function () {

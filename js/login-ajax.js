@@ -78,7 +78,6 @@ function sendReset(){
 			if(xhr.status == 200){
 				console.log(xhr.responseText);
 
-
 				if(xhr.responseText == "error"){
 					// swal({
 					// 		  icon: "error",
@@ -90,6 +89,7 @@ function sendReset(){
 					alert("密碼已發送至信箱");
 					document.location.href="index.php";
 				}
+
 				window.location.reload();
 			}else{
 				alert(xhr.status);
@@ -159,10 +159,11 @@ function sendForm(){
 		if(xhr.readyState == 4){
 			if (xhr.status == 200){
 				// console.log(xhr.responseText);
+				location.reload();
 
-				window.location.reload();
 
-				
+				//window.location.reload();
+
 				if(xhr.responseText=="error"){
 					// $.sweetModal({
 					// 	content: '帳號密碼錯誤',
