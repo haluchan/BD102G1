@@ -157,10 +157,13 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center bottom;
+			}
+	/* @media screen and (max-width: 321px) {
+		.titleblock{
+		background-image: url('../src/image/event/0333.png');
 		
-		/* border-radius: 80% 20% 10% 90%/20% 20% 80% 90%;
-		overflow: hidden; */
 	}
+	} */
 	.titleblocks{
 		margin : 8% auto;
 		width: 100%;
