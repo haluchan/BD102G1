@@ -2,22 +2,21 @@
 $( function() {
     $('.seedFirst').click(function(){
        points = $(this).attr('alt')
-       alert(points);
+       // alert(points);
        $('.seedBag').click(function(){
        $(this).attr('src','../src/image/bonusFarm/seed_darkgreen.png');
     });
-
     });
     $('.seedSecond').click(function(){
        points = $(this).attr('alt')
-       alert(points);
+       // alert(points);
        $('.seedBag').click(function(){
        $(this).attr('src','../src/image/bonusFarm/seed_red.png');
     });
     });
     $('.seedThird').click(function(){
        points = $(this).attr('alt')
-       alert(points);
+       // alert(points);
        $('.seedBag').click(function(){
        $(this).attr('src','../src/image/bonusFarm/seed_yellow.png');
     });
