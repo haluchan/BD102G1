@@ -83,7 +83,7 @@
 	<section class="latest  col-xs-12">
 		<div class="latest_title">
 			<h2>最新</h2>
-			<img src="src/image/hopeFarm/short.png" alt="">
+			<!-- <img src="src/image/hopeFarm/short.png" alt=""> -->
 		</div>
 		<div class="latest_cloud">
 			<img src="src/image/hopeFarm/cloud.png" alt="">

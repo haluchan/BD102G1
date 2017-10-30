@@ -71,7 +71,7 @@ ob_start();?>
 			while ($xreportRow = $xreport->fetchObject()) {
 				$i++;
 	 ?>
-	 <form action="webBack_xreportUpdate.php" method="get">
+	 <form action="webBack_xreportUpdate.php" method="get" class='tForm'>
 		<tr class="tdRow">
 		<input type="hidden" name="msg_no" value="<?php  echo $xreportRow->msg_no; ?>">
 			<td><?php echo $i; ?></td>
