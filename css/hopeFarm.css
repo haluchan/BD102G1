@@ -433,7 +433,12 @@ body {
                 .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover .imgToHover {
                   -webkit-transition: all 1.5s;
                   -o-transition: all 1.5s;
+<<<<<<< HEAD
                   transition: all 1.5s; }
+=======
+                  transition: all 1.5s;
+                  overflow: hidden; }
+>>>>>>> 78f69280afda35d42b5619c69f7260ddf8401abc
                   .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover .imgToHover:hover {
                     -webkit-transform: scale(1.5);
                     -ms-transform: scale(1.5);

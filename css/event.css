@@ -298,7 +298,6 @@
 	/* ================== */
 	.show{
 		margin:5% 0 ;
-		/* display: inline-block; */
 		position: relative;
 		float: left;
 		display: block;
@@ -330,7 +329,7 @@
 		position: relative;
 	}
 	
-	.secondblock ul{
+	.secondblock ul {
 		position: relative;
 		width: 100%;
 		text-align: center;
@@ -354,22 +353,21 @@
 	}
 	.secondblockin{
 		margin: 0 auto;
-		width: 80%;
+		width: 88%;
+		text-align: center;
 	}
-	@media screen and (min-width: 767px) {
+	@media screen and (max-width: 767px) {
 		.show{
-		margin:5% 8% ;
-		/* display: inline-block; */
+		margin:5% 14%;
 		position: relative;
 		float: left;
 		display: block;
 
 	}
 	}
-	@media screen and (min-width: 1439px) {
+	@media screen and (min-width: 768px) {
 		.show{
-		margin:5% 6% ;
-		display: inline-block;
+		margin:5% 7% ;
 		position: relative;
 		float: left;
 		display: block;
@@ -486,7 +484,7 @@
 		position: absolute;
 		top: -10px;
 		left: -20px;
-		width: 20%;
+		width: 10%;
 	}
 	
 	.eventreco:nth-child(3n-1)::after{
@@ -512,7 +510,7 @@
 		position: absolute;
 		top: -20px;
 		left: 0px;
-		width: 20%;
+		width: 10%;
 	} 
 	/* .eventreco:nth-child(5n)::after{
 		content:url('../src/image/event/tree_simple4.png');

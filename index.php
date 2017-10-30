@@ -17,16 +17,17 @@ session_start(); ?>
 
 
 
-<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/header_index.css">
 <link href="css/index.css" rel="stylesheet">
 
 <!-- plugin -->
  <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
  <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css"/>
  <link rel="stylesheet" type="text/css" href="src/libs/fullPage.js-master/jquery.fullPage.css">
+ <!-- <link rel="stylesheet" type="text/css" href="src/libs/pagePiling.js-master/jquery.pagepiling.css"> -->
 
 
-<!-- <script src="src/libs/jquery/dist/jquery.min.js"></script> -->
+
 <script type="text/javascript" src="//code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 
@@ -51,15 +52,16 @@ session_start(); ?>
 
 </head>
 <body>
-	<div id="header">
-	<?php require_once('header.php');  ?>
+	
+<div id="header">
+		<?php require_once('header.php');  ?>
 		
 	</div>
 
 
 
+<div id="fullPage">
 
-<div id="fullpage">
 
 		<!-- 發揚農民心血的募資平台 src/image/index/ -->
 		<div class="section">
@@ -134,7 +136,7 @@ session_start(); ?>
 				</div>
 				<div class="col-sm-4 col-xs-12 donate_title">
 					<p class="title">友善稻田．夢想榖倉 募資計畫 <br><span>想要無毒有機有的蔬菜 | 就來魚菜農場看一下</span></p>
-					<a href="event-inside.php"><p class="buttom">立即贊助</p></a>
+					<a href="donate_info.php?event_no=1"><p class="buttom">立即贊助</p></a>
 				</div>
 				<div class="col-xs-7 final_txt hidden-sm">
 					<img src="src/image/index/final.svg" class="final_img">
@@ -149,7 +151,7 @@ session_start(); ?>
 		<div class="section">
 			<section class="col-xs-12 col-sm-12 donate_ing">
 				<div class="donate_title">
-					<p>資助進行中</p>
+					<!-- <p>資助進行中</p> -->
 				</div>
 				<div id="donate_ing"></div>
 			
@@ -173,7 +175,7 @@ session_start(); ?>
 									<div class="info_img">
 										<img src="src/image/funded/<?php echo $newRow -> event_pho; ?>">
 									</div>
-									<h4><?php echo $newRow -> event_title; ?></h4>
+									<h3><?php echo $newRow -> event_title; ?></h3>
 									<p><?php echo $newRow -> event_txt; ?>...</p>
 									<!-- <img src="src/image/index/run.svg"> -->
 									<div class="progress_bar">
@@ -201,7 +203,7 @@ session_start(); ?>
 						
 					</div>
 				</div>
-			
+			<div class="clear"></div>
 				
 			</section>
 		</div>
@@ -215,9 +217,7 @@ session_start(); ?>
 		<!-- 米的故鄉 -->
 		<div class="section">
 			<section class="col-xs-12 col-sm-12 activity">
-				<dir id="trigger4"></dir>
-				<!-- <img src="src/image/index/rice_cloud.svg" class="rice_img"> -->
-			
+				<div id="trigger4"></div>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 237.33" class="rice_img">
 						<defs>
 							<style>.rice_cloud-1{fill:#fff100;opacity:0;}.rice_cloud-2{fill:#fff;}</style>
@@ -233,7 +233,6 @@ session_start(); ?>
 							</g>
 						</g>
 					</svg>
-			
 			
 				<img src="src/image/index/rice_bird.svg" class="rice_img">
 				<img src="src/image/index/inekari_man.png" class="bottom-0 rice-man">
@@ -251,14 +250,10 @@ session_start(); ?>
 					<p>$900NT/人</p>
 					<a href="event.php" class="btn_brown">我要報名</a>
 				</div>
-				</div>
+				
 				
 			</section>
 		</div>
-
-
-
-
 
 
 
@@ -282,8 +277,9 @@ session_start(); ?>
 					<img src="src/image/index/fish_icon_7.svg" class="fish_icon">
 					<img src="src/image/index/phone-02-02.svg" class="phone">
 				</div>
-				
+				<div class="clear"></div>
 			</section>
+			<div class="clear"></div>
 		</div>
 
 
@@ -292,7 +288,6 @@ session_start(); ?>
 
 
 
-		
 
 
 
@@ -300,7 +295,8 @@ session_start(); ?>
 
 
 
- 	<?php require_once('Footer.php');  ?> 
+
+ 	<?php //require_once('Footer.php');  ?> 
 		
 
 
@@ -310,18 +306,51 @@ session_start(); ?>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
 	<script src="src/libs/fullPage.js-master/jquery.fullPage.js"></script>
-	<!-- <script type="text/javascript" src="js/fullpage-change.js"></script> -->
+	<!-- <script type="text/javascript" src="src/libs/pagePiling.js-master/jquery.pagepiling.js"></script> -->
 	
 
 	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript" src="js/header_index.js"></script>
 	<script type="text/javascript" src="js/login-ajax.js"></script>
 
 	<script type="text/javascript">
+		 $('header').addClass('db');
 		$(document).ready(function(){
-			// $('#fullpage').fullpage({
-			//     navigation: true,
-			// });
+			$('#fullPage').fullpage({
+			    navigation: true,
+			    fixedElements: '#header',
+			    continuousVertical: true,
+			afterLoad: function(anchorLink, index){
+            	var loadedSection = $(this);
+            },
+            onLeave: function(index, nextIndex, direction){
+	            var leavingSection = $(this);
+	             if( nextIndex == 2 )
+	            {
+	              $('header').removeClass('db');
+	            }else{
+	            	$('header').addClass('db');
+	            }
+	            if( nextIndex == 3 )
+	            {
+	              $('header').removeClass('db');
+	            }
+	            if( nextIndex == 4 )
+	            {
+	              $('header').removeClass('db');
+	            }
+	            if( nextIndex == 5 )
+	            {
+	              $('header').removeClass('db');
+	            }
+        }
+
+
+
+
+
+
+			});
 
 			
 			$('.donate_txt').slick({

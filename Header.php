@@ -24,13 +24,12 @@
     	<div class="topmenu">
     		<ul>	
     			<li><a class="cartBtn">購物車<span class="cartNo">0</span></a></li>
-    			<li><span id="memName"></span><a  id="spanLogin" ><?php     
+    			<li><span id="memName"></span><a  id='spanLogin'<?php
 
                 if (isset($_SESSION["mem_id"]) === true){
-                    echo "登出";
+                    echo " href='php/clearSession.php'> 登出 </a>";
                 }else{
-
-                     echo "註冊/登入";
+                     echo "<a>註冊/登入</a>";
                 }
 
 

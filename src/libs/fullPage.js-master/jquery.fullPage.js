@@ -1054,7 +1054,8 @@
             var bottom = top + $window.height();
 
             if(movement == 'up'){
-                return bottom >= ($window.scrollTop() + $window.height());
+                // return bottom >= ($window.scrollTop() + $window.height());
+                return bottom <= $window.scrollTop();
             }
             return top <= $window.scrollTop();
         }

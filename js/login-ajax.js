@@ -78,7 +78,6 @@ function sendReset(){
 			if(xhr.status == 200){
 				console.log(xhr.responseText);
 
-
 				if(xhr.responseText == "error"){
 					// swal({
 					// 		  icon: "error",
@@ -90,6 +89,7 @@ function sendReset(){
 					alert("密碼已發送至信箱");
 					document.location.href="index.php";
 				}
+
 				window.location.reload();
 			}else{
 				alert(xhr.status);
@@ -159,10 +159,11 @@ function sendForm(){
 		if(xhr.readyState == 4){
 			if (xhr.status == 200){
 				// console.log(xhr.responseText);
+				// location.reload();
 
-				window.location.reload();
 
-				
+				//window.location.reload();
+
 				if(xhr.responseText=="error"){
 					// $.sweetModal({
 					// 	content: '帳號密碼錯誤',
@@ -177,8 +178,10 @@ function sendForm(){
 					// });
                     // alert("歡迎回來");
 					alert(xhr.responseText);
-					$id("spanLogin").innerHTML = "<a href='php/clearSession'>登出</a>";
+					$id("spanLogin").innerHTML = "登出";
+                    $id("spanLogin").setAttribute("href","php/clearSession.php");
 					$id("lightbox-bg").style.display="none";
+                    //document.location.reload();
 					// alert(xhr.responseText);
 					
 				}

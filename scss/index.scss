@@ -47,10 +47,16 @@ a{
 
 
 
-
+header{
+	transition:0.2s;
+	transition-delay:0.5s;
+}
 .db{
 	display: none;
+	// opacity: 0;
+	transition:0.2s;
 }
+
 
 
 
@@ -58,8 +64,7 @@ a{
 //發揚農民心血的募資平台 ===================================================
 .index_1{
 	position: relative;
-	z-index: 900;
-	
+	// z-index: 990;	
 }
 		
 
@@ -302,41 +307,53 @@ a{
 	background-size:100%;
 	background-position: bottom center;
 	background-repeat: no-repeat;
+	background-color: #FFF;
 	@media screen and(max-width: 767px){
 		background-size: 250%;
 	}
 	.donate_title{
 		width: 80%;
 		margin: auto;
-		background-image: url("../src/image/index/donate_title.svg");
+		background-image: url('../src/image/index/donate_title.svg');
 		background-repeat: no-repeat;
-		background-attachment:fixed;
-		background-position: center 18%;
+		// background-color: pink;
+		// background-attachment:fixed;
+		background-position: center bottom;
+		background-size:80%;
+		height: 30vh;
 
-		background-size:60%;
-		// border: 1px solid pink;
+		
 		@media screen and(max-width: 767px){
-				width: 95%;
-			}
-		p{
-			text-align: center;
-			padding: 5% 0 10%;
-			font-size: 36px;
-			color: rgba(255,255,255,0);
-			@media screen and(max-width: 767px){
-				margin-top: 20%;
-				margin-bottom: 5%;
-			}
+			width: 95%;
+			background-position: center 15vh;
+			background-size:200%;
 		}
+		@media screen and(max-width: 320px){
+			height: 25vh;
+		}
+		// p{
+		// 	text-align: center;
+		// 	padding: 5% 0 13%;
+		// 	font-size: 36px;
+		// 	color: rgba(255,255,255,0);
+		// 	@media screen and(max-width: 767px){
+		// 		margin-top: 20%;
+		// 		margin-bottom: 5%;
+		// 	}
+		// }
 
 	}
 	.donate_top{
 		margin-top: 5%;
+		@media screen and(max-width: 1440px){
+				margin-top: 2%;
+			}
 		@media screen and(max-width: 767px){
 			margin-top: -25px;
 		}
 
 		.donate_txt{
+			overflow: hidden;
 			a{
 				color:#000;
 			}
@@ -381,12 +398,16 @@ a{
 						}
 					}
 					
-					h4{
+					h3{
 						line-height: 2;
 					}
 					p{
-						font-size: 14px;
+						font-size: 16px;
 						line-height: 1.5;
+						@media screen and (max-width: 767px) {
+							font-size: 14px;
+						}
+
 
 					}
 					.progress_bar{
@@ -395,7 +416,7 @@ a{
 						background-color: #ddd;
 						border-radius: 25px;
 						position: relative;
-						margin-top: 13%;
+						margin-top: 10%;
 						@media screen and (max-width: 767px) {
 						margin-top: 13%;
 						}
@@ -446,7 +467,7 @@ a{
 
 	.rice_img{
 		position: absolute;
-		top: 5%;
+		top: 13%;
 	}
 	.cloud_1{
 		animation: cloud_1 5s linear infinite alternate-reverse;
@@ -472,7 +493,8 @@ a{
 	.activity_title{
 		color:#fff;
 		writing-mode: vertical-lr;
-		margin: 8% auto 3%;
+		margin:15% auto 3%;
+		text-shadow: 1px 1px 1px rgba(0,0,0,.5);
 		h1{
 			line-height: 2;
 			margin-top: 10%;
@@ -620,6 +642,11 @@ a{
 				@media screen and(max-width: 767px){
 					width: 40%;
 					font-size: 16px;
+
+				}
+				@media screen and(max-width: 321px){
+					padding: 10px;
+					
 				}
 				
 			}
