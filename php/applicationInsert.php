@@ -1,5 +1,3 @@
-
-
 	<?php
 		$form=$_REQUEST["form"];
 		if($form=="new"){
@@ -8,6 +6,11 @@
 				$phoname =$_FILES["pho"]["name"];
 				$videotype= strrchr($videoname, ".");
 				$photype= strrchr($phoname, ".");
+
+
+				$select_item=$_POST["plant"];
+				$output=implode(",",$select_item);
+				
 				// 根據($_FILES["file"]["error"]來判斷case	
 				// 0代表成功
 
@@ -17,7 +20,7 @@
 							mkdir("files");
 					}
 					$from=$_FILES["cover"]["tmp_name"];// 從暫存檔路徑移至剛剛建立的files資料夾中
-					$to="files//" ."Cover-".date("YmdHis") .$videotype;//年月日時分秒當作檔名
+					$to="../src/image/funded//" ."Cover-".date("YmdHis") .$videotype;//年月日時分秒當作檔名
 					$vname="Cover-".date("YmdHis") .$videotype;
 					copy($from,$to);
 					echo"成功";
@@ -44,7 +47,7 @@
 							mkdir("files");
 					}
 					$from=$_FILES["pho"]["tmp_name"];// 從暫存檔路徑移至剛剛建立的files資料夾中
-					$to="files//" ."P-".date("md") .$photype;//年月日時分秒當作檔名
+					$to="../src/image/funded//" ."E-".date("md") .$photype;//年月日時分秒當作檔名
 					$pname="P-".date("md") .$photype;
 					copy($from,$to);
 					echo"成功";
@@ -86,7 +89,8 @@
 				$event->bindValue(":txtTitle",$_REQUEST["txtTitle"]);
 				$event->bindValue(":txt",$_REQUEST["txt"]);
 				$event->bindValue(":pho",$pname);
-				$event->bindValue(":plant",$_REQUEST["plant"]);
+				// $event->bindValue(":plant",$_REQUEST["plant"]);
+				$event->bindValue(":plant",$output);
 				$event->bindValue(":dept",$_REQUEST["dept"]);
 				$event->bindValue(":need",$_REQUEST["need"]);
 				$event->bindValue(":account",$_REQUEST["account"]);
@@ -172,7 +176,7 @@
 								$filetype= strrchr($filename, ".");
 								$from=$_FILES["return_remark"]["tmp_name"][$i];// 從暫存檔路徑移至剛剛建立的files資料夾中
 								
-								$to="files//" ."R-".$no."-".date("Ymd")."-".$i .$filetype;//年月日時分秒當作檔名
+								$to="../src/image/funded//" ."R-".$no."-".date("Ymd")."-".$i .$filetype;//年月日時分秒當作檔名
 								$name="R-"."-".$no.date("Ymd")."-".$i.$filetype;
 								
 								array_push($file,$name);

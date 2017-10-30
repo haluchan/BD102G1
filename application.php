@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<!-- <!DOCTYPE html> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<?php require_once('Header_head.php') ?>
@@ -125,7 +125,24 @@
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label>主要生產作物</label><span>*</span></div>
-									<div class="td plant"><input type="checkbox" name="plant" value="banana" class="plant">香蕉<input type="checkbox" name="plant" value="apple" class="plant" >蘋果<input type="checkbox" name="plant" value="tomato" class="plant" >番茄<input type="checkbox" name="plant" value="orange" class="plant" >橘子</div>
+									<div class="td plant">		
+											<div>
+												<label><input type="checkbox" name="plant[]" value="1" class="plant">西瓜</label>
+												<label><input type="checkbox" name="plant[]" value="5" class="plant">馬鈴薯</label>
+											</div>
+											<div>
+												<label><input type="checkbox" name="plant[]" value="3" class="plant">番茄</label>
+												<label><input type="checkbox" name="plant[]" value="4" class="plant">紅蘿蔔</label>
+											</div>
+											<div>
+												<label><input type="checkbox" name="plant[]" value="2" class="plant">茄子</label>
+												<label><input type="checkbox" name="plant[]" value="6" class="plant">青江菜</label>
+											</div>
+											<div>
+												<label><input type="checkbox" name="plant[]" value="7" class="plant">南瓜</label>
+												<label><input type="checkbox" name="plant[]" value="8" class="plant">高麗菜</label>
+											</div>	
+									</div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label>代表人/單位</label><span>*</span></div>
