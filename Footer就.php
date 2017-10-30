@@ -18,8 +18,7 @@
 					</ul>
 					<ul>
 						<li><a class="header-a" href="product.php"><h3 class="header-h3">商品專區</h3></a></li>
-						<!-- <li><a class="header-a" href="member.php"><h3 class="header-h3">會員專區</h3></a></li> -->
-						<li><h3 id="memH3" class="header-h3">會員專區</h3></li>
+						<li><a class="header-a" href="member.php"><h3 class="header-h3">會員專區</h3></a></li>
 						<li><a class="header-a" href="application.php"><h3 class="header-h3">申請資助</h3></a></li>
 						
 					</ul>
@@ -40,28 +39,3 @@
 	</footer>
 
 <script type="text/javascript" src="js/NAV-HEAD.js"></script>
-<script >
-document.addEventListener("load" , function(){
-  //===memH3.click
-   
-  document.getElementById("memH3").onclick(){
-  	alert("test");
-  	var xhr = new XMLHttpRequest();
-  	xhr.onload = function(){
-  		if( xhr.status == 200){
-  			if( xhr.responseText == "error"){
-  				alert("not yet")
-  			}else{
-  				location.href = "member.php";
-  			}
-  		}else{
-  			alert( xhr.status );
-  		}
-  	}
-  	var url = "memCheckLoginStatus.php";
-    xhr.open( "Get" , url , true);
-    xhr.send( null );
-
-  }	//===memH3.click
-} ,true);
-</script>
