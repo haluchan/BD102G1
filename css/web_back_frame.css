@@ -14,8 +14,9 @@ body{
 左側 .manage        綠色13% fixed(不佔位)
 
 右側 .content_form  全區100%
-  上方<nav>    寬87% position: sticky(佔位)
-  下方.myForm  寬87% float:right
+  上方<nav>       寬87% position: sticky(佔位)
+  下方.myForm     寬87% float:right
+  下方分頁 .pages 寬87% float:right
   	PS.myForm  為個人的頁面，統一設定在最下方*/
   	
 
@@ -180,6 +181,7 @@ nav .select span{
 	.manage >ol >li{
 		margin-top: 10px;
 		list-style: none;
+		overflow: hidden;
 	}
 	/*母選單標題*/
 	.motherTitle{
@@ -194,6 +196,9 @@ nav .select span{
 		padding: 4px 0 6px 30px;
 		width: 60%;
 		cursor: pointer;
+	}
+	.manage >ol >li >ol >li >a{
+		width: 100%;
 	}
 	.motherTitle:hover,.manage >ol >li >ol >li:hover{
 		background-color: rgba(236,254,218,.6);
@@ -278,8 +283,41 @@ nav .select span{
 
 
 
+/* 分頁區塊 */
 
+	.pages{
+		width: 87%;
+		float: right;
+		text-align: center;
+	}
+	.pages a{			
+		text-decoration: none;
+		padding:0px 2px 1px 2px;
+		color: #008000;
+	}
+	.pages a:hover{
+		color: #F29600;
+		font-weight: bold;
+	}
+	.pages a+a{
+		margin-left: 4px;
+	}
 
+/* 分頁code
+<div style="" class="pages">
+	<?php
+	//印可連結的頁數資料
+	echo "<a href='?pageNo=1'>第一頁</a>&nbsp";
+	for($i=1; $i <= $totalPage;$i++){
+	  if($i==$pageNo)
+	    echo "<a href='?pageNo=$i' style='color:#F29600;border-bottom:1px solid #F29600;'>",$i,"</a>&nbsp&nbsp";
+	  else
+	    echo "<a href='?pageNo=$i'>",$i,"</a>&nbsp&nbsp";
+	}
+	echo "<a href='?pageNo=$totalPage'>最末頁</a>&nbsp";
+	?>
+</div>
+*/
 
 
 

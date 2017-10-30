@@ -62,9 +62,9 @@ ob_start();?>
 			</tr>
 			<tr>
 				<th>商品名稱</th>
-				<td><input type="text" name="pro_name" required></td>
+				<td><input type="text" name="pro_name" maxlength="10" required></td>
 				<th>上傳圖檔</th>
-				<td><input type="file" name="image[]" multiple="multiple" draggable="true"></td>
+				<td><input type="file" name="image[]" multiple="multiple" draggable="true" id="pro_changeImage"></td>
 			</tr>
 			<tr>
 				<th>商品類別</th>
@@ -77,16 +77,19 @@ ob_start();?>
 					</select>
 
 				</td>
-				<th colspan="2" rowspan="3"></th>
+				<th id="pro_putImage" colspan="2" rowspan="3">
+					
+				</th>
 			</tr>
 			<tr>
 				<th>商品價格</th>
-				<td><input type="text" name="pro_price" required></td>
+				<td><input type="text" name="pro_price" maxlength="5" required></td>
 			</tr>
 			<tr>
 				<th>商品規格</th>
 				<td>
-					<textarea name="pro_std" cols="30" rows="10" required></textarea>
+					<textarea name="pro_std" cols="30" rows="10" maxlength="1000" class="pro_std" required></textarea>
+					<p id="feedback" class="feedback">456</p>
 				</td>
 			</tr>
 		</table>
@@ -124,6 +127,20 @@ ob_start();?>
 			return 'z';
 		}
 	}
+
+
+	$(document).ready(function(){
+		var textMax =1000;
+		$('#feedback').html('尚可輸入 <span style="color:red;">' +textMax+ '</span> 個字');
+
+		$('.pro_std').keyup(function(){
+			var textLength = $(this).val().length;
+			// .length 是JS的，所以不用+()喔
+			var textRemaining = textMax - textLength;
+
+			$('#feedback').html('尚可輸入 <span style="color:red">' +textRemaining+ '</span> 個字'); 
+		});
+	});	
 </script>
 
 </body>

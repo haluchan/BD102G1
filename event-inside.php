@@ -15,7 +15,7 @@ session_start();
 
  <!-- plugin -->
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
- <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css"/>
 
 <link rel="stylesheet" type="text/css" href="src/libs/lightbox2-master/src/css/lightbox.css">
 
@@ -25,10 +25,10 @@ session_start();
 
 
 
- <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
-    <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-    <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> 
-    <!-- //scrollmagic 要拿掉滾動的名字 要跟ＪＳ另一個function 一起隱藏  -->
+<script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+<script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+<!-- //scrollmagic 要拿掉滾動的名字 要跟ＪＳ另一個function 一起隱藏  -->
     <link href="css/event-inside.css" rel="stylesheet">
 
 <?php require_once("Header_head.php"); ?>
@@ -124,12 +124,10 @@ try {
 			<div class="clear"></div>
 		<section class="tree">
 			<div class="tree-left">
-					<img src="src/image/event-inside-page
-				/deco-wood-01.gif" alt="">
+					<img src="src/image/event-inside-page/deco-wood-01.gif" alt="">
 			</div>
 			<div class="tree-right">
-				<img src="src/image/event-inside-page
-				/deco-wood-01.gif" alt="">
+				<img src="src/image/event-inside-page/deco-wood-01.gif" alt="">
 			</div>
 			<div class="clear"></div>
 		</section>
@@ -254,6 +252,7 @@ try {
 
 		</div>
 	</div>
+
 	
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type ="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -261,6 +260,7 @@ try {
 
 <script type="text/javascript" src="src/libs/lightbox2-master/src/js/lightbox.js" ></script>
 
+<script type="text/javascript" src="src/libs/jquery.sweet-modal-1.3.3/min/jquery.sweet-modal.min.js"></script>
 
 <script type="text/javascript" src="js/header.js"></script>
 

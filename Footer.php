@@ -18,7 +18,8 @@
 					</ul>
 					<ul>
 						<li><a class="header-a" href="product.php"><h3 class="header-h3">商品專區</h3></a></li>
-						<li><a class="header-a" href="member.php"><h3 class="header-h3">會員專區</h3></a></li>
+						<!-- <li><a class="header-a" href="member.php"><h3 class="header-h3">會員專區</h3></a></li> -->
+						<li><h3 id="memH3" class="header-h3">會員專區</h3></li>
 						<li><a class="header-a" href="application.php"><h3 class="header-h3">申請資助</h3></a></li>
 						
 					</ul>
@@ -39,3 +40,35 @@
 	</footer>
 
 <script type="text/javascript" src="js/NAV-HEAD.js"></script>
+<script type="text/javascript">
+// document.addEventListener("load" , function(){
+//===memH3.click
+var member4=document.getElementById("memH3");
+member4.addEventListener("click" ,memberarea,false);
+// document.getElementById("memH3").click(){
+// alert("test");
+  	
+function memberarea(){
+  	var xhr = new XMLHttpRequest();
+  	xhr.onreadystatechange = function(){
+  		if(xhr.readyState==4){
+			if( xhr.status == 200){
+  				if( (xhr.responseText).indexOf('error') !== -1){
+  					alert("還沒登入喔，請先登入");
+  				}else{
+  				// alert("123");
+  				location.href = "member.php";
+  				}
+  			}else{
+  				alert( xhr.status );
+  			}
+  		}
+  	}
+  	var url = "memCheckLoginStatus.php";
+    xhr.open( "Get" , url , true);
+    xhr.send( null );
+}
+
+
+
+</script>

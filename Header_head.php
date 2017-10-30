@@ -8,10 +8,12 @@
 	<script src="js/change_SVG_color.js"></script>
 	<!-- <script src="js/header.js"></script> -->
 	<!-- alert plunin -->
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="src/libs/jquery.sweet-modal-1.3.3/min/jquery.sweet-modal.min.css" />
+	
 
+	
 	<link rel="stylesheet" type="text/css" href="css/sign.css" >
 	<link rel="stylesheet" type="text/css" href="css/login.css" >
-	<link rel="stylesheet" type="text/css" href="CSS/headerFooter.css">
+	<link rel="stylesheet" type="text/css" href="CSS/headerFooter.css" >
 
 	

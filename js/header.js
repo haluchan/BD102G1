@@ -4,6 +4,8 @@
 					$('#hamicon').toggleClass("hamicon_slide");
 					$('#ham_menu').toggleClass("ham_slide");
 				});
+				// $('.circle').css({'backgroundColor':'#699c33'});
+				// $('svg').find('path').css({'fill':'#fff'});
 			});		
 			// //登入lightbox
 			$("#spanLogin").click(function(){

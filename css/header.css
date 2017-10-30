@@ -142,7 +142,7 @@ header .mainmenu .ham .ham_menu a {
 }
 
 header .mainmenu .ham .ham_menu .ham_main {
-  margin: 50px 0;
+  margin: 40px 0 30px;
 }
 
 header .mainmenu .ham .ham_menu .ham_main li {
@@ -184,7 +184,7 @@ header .mainmenu .menu_list ul.right {
 }
 
 header .mainmenu .menu_list ul li {
-  width: 35%;
+  width: 40%;
   display: inline-block;
   text-align: center;
   box-sizing: border-box;
@@ -193,7 +193,7 @@ header .mainmenu .menu_list ul li {
 
 header .mainmenu .menu_list ul li a {
   color: #43612f;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   display: block;
 }
@@ -201,7 +201,7 @@ header .mainmenu .menu_list ul li a {
 header .mainmenu .menu_list ul li a .circle {
   border: 3px solid transparent;
   border-radius: 50%;
-  width: 40%;
+  width: 45%;
   margin: auto;
 }
 

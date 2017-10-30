@@ -20,11 +20,10 @@ session_start();
 	<?php require_once('Header.php'); ?>
 		<?php 
 		$eve=$_SESSION["mem_no"];
-		if( isset($_SESSION["mem_no"]) === false){
-  		$_SESSION["where"] = $_SERVER["PHP_SELF"];
-  		//echo "尚未登入，請<a href='cart_Login.html'>登入</a>";
-  		echo "<script>alert('還沒登入喔');window.history.go(-1);</script>";
-}else{
+		// if( isset($_SESSION["mem_no"]) === false){
+		  // 		$_SESSION["where"] = $_SERVER["PHP_SELF"];
+		//   		echo "<script>alert('還沒登入喔');location=history.back(-1);</script>";
+	// }else{
 		try {
 
 			require_once("php/connectBeck.php");
@@ -192,7 +191,7 @@ catch (PDOException $e) {
   echo "錯誤行號 : ", $e->getLine(), "<br>";
   echo "錯誤訊息 : ", $e->getMessage(), "<br>";		
 }
-}
+// }
 ?>
 <?php require_once('Footer.php');?>
 

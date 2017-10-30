@@ -1,6 +1,7 @@
 <?php
 session_start();
-ob_start();?>
+ob_start();
+?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -71,9 +72,11 @@ ob_start();?>
 			while ($xreportRow = $xreport->fetchObject()) {
 				$i++;
 	 ?>
-	 <form action="webBack_xreportUpdate.php" method="get">
+	 <form action="webBack_xreportUpdate.php" method="get" class='tForm'>
+
+
 		<tr class="tdRow">
-		<input type="hidden" name="msg_no" value="<?php  echo $xreportRow->msg_no; ?>">
+			<input type="hidden" name="msg_no" value="<?php  echo $xreportRow->msg_no; ?>">
 			<td><?php echo $i; ?></td>
 			<td><?php  echo $xreportRow->mem_no; ?></td>
 			<td><?php  echo $xreportRow->x_memno;   ?></td>
@@ -82,16 +85,20 @@ ob_start();?>
 			<td><?php  echo $xreportRow->x_txt;   ?></td>
 			<td><?php  echo $xreportRow->x_date;   ?></td>
 			<td>
-				<input type="radio" name="status" value="0"><label>通過</label>
+				<input type="radio" name="status" value="0" required><label>通過</label>
 				<input type="radio" name="status" value="1"><label>駁回</label>
 			</td>
 			<td >
 				<input type="submit" class="btn" value="確認">
 			</td>
 		</tr>
+
+
 	</form>
 <?php 
-	}
+	
+}
+
 	echo '</table>
 </div>
 ';

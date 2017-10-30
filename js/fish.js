@@ -43,26 +43,52 @@ var scene = new ScrollMagic.Scene({
 .addTo(controller);
 
 
+
+
+
+
+
 //必備元素-內容文字浮現
-var role = TweenMax.staggerFromTo(['.role #role1','.role #role2','.role #role3'],1,{
-  y:-2000,
+var role = TweenMax.staggerFromTo(['.role #role1','.role #role2','.role #role3'],0.8,{
+  x:-2000,
   opacity:0
   },{
-  y:0,
+  x:0,
   opacity:1
-},0.5);
+},0.2);
 
-var scene = new ScrollMagic.Scene({    
+
+ var width=window.innerWidth;
+//不同size 設定offset
+if(width>=768){
+  var scene = new ScrollMagic.Scene({    
       triggerElement: "#trigger3",
-      duration: 300,
-      offset: 150,
-      reverse: false     
-    })
+      // duration: 300,
+      offset:-800
+      // reverse: false     
+  })  
+  .setTween(role)
+  // .addIndicators({
+  //   name: 'scene role'
+  // })
+  .addTo(controller);
+}else if(width<768){
+     var scene = new ScrollMagic.Scene({    
+      triggerElement: "#trigger3",
+      // duration: 500,
+      offset:-1200,
+      reverse: true 
+       })
     .setTween(role)
     // .addIndicators({
-    //         name: 'scene role'
-    //     })
-.addTo(controller);
+    //   name: 'scene role'
+    // })
+    .addTo(controller);
+  }
+
+
+    
+
 
 
 

@@ -1,5 +1,3 @@
-
-
 	<?php
 		$form=$_REQUEST["form"];
 		if($form=="new"){
@@ -8,6 +6,11 @@
 				$phoname =$_FILES["pho"]["name"];
 				$videotype= strrchr($videoname, ".");
 				$photype= strrchr($phoname, ".");
+
+
+				$select_item=$_POST["plant"];
+				$output=implode(",",$select_item);
+				
 				// 根據($_FILES["file"]["error"]來判斷case	
 				// 0代表成功
 
@@ -17,7 +20,7 @@
 							mkdir("files");
 					}
 					$from=$_FILES["cover"]["tmp_name"];// 從暫存檔路徑移至剛剛建立的files資料夾中
-					$to="files//" ."Cover-".date("YmdHis") .$videotype;//年月日時分秒當作檔名
+					$to="../src/image/funded//" ."Cover-".date("YmdHis") .$videotype;//年月日時分秒當作檔名
 					$vname="Cover-".date("YmdHis") .$videotype;
 					copy($from,$to);
 					echo"成功";
@@ -44,7 +47,7 @@
 							mkdir("files");
 					}
 					$from=$_FILES["pho"]["tmp_name"];// 從暫存檔路徑移至剛剛建立的files資料夾中
-					$to="files//" ."P-".date("md") .$photype;//年月日時分秒當作檔名
+					$to="../src/image/funded//" ."E-".date("md") .$photype;//年月日時分秒當作檔名
 					$pname="P-".date("md") .$photype;
 					copy($from,$to);
 					echo"成功";
@@ -67,8 +70,8 @@
 				}
 				require_once("connectPon.php");//之後要換成connectGrowing_hope.php
 
-	    		$sql = "insert into event(event_no,event_name,event_idno,event_account,event_birth,event_gender,event_add,event_tel,event_mail,event_need,event_date,event_title,event_title_2,event_dept,event_video,event_txe_title,event_txt,event_pho,event_plant )
-	    		values(:event_no, :name, :id,:account,:birth,:gender, :add, :tel, :mail, :need,current_date(),:title, :title_2, :dept, :cover,:txtTitle, :txt,:pho, :plant)";
+	    		$sql = "insert into event(event_no,event_name,event_idno,event_account,event_birth,event_gender,event_add,event_tel,event_mail,event_need,event_date,event_title,event_title_2,event_dept,event_video,event_txe_title,event_txt,event_pho,event_plant,event_status)
+	    		values(:event_no, :name, :id,:account,:birth,:gender, :add, :tel, :mail, :need,current_date(),:title, :title_2, :dept, :cover,:txtTitle, :txt,:pho, :plant, :status)";
 				$event=$pdo->prepare($sql);
 				
 				$event->bindValue(":event_no",null);
@@ -86,10 +89,12 @@
 				$event->bindValue(":txtTitle",$_REQUEST["txtTitle"]);
 				$event->bindValue(":txt",$_REQUEST["txt"]);
 				$event->bindValue(":pho",$pname);
-				$event->bindValue(":plant",$_REQUEST["plant"]);
+				// $event->bindValue(":plant",$_REQUEST["plant"]);
+				$event->bindValue(":plant",$output);
 				$event->bindValue(":dept",$_REQUEST["dept"]);
 				$event->bindValue(":need",$_REQUEST["need"]);
 				$event->bindValue(":account",$_REQUEST["account"]);
+				$event->bindValue(":status","F");
 				$event->execute();
 
 				$name=$_REQUEST["name"];
@@ -171,7 +176,7 @@
 								$filetype= strrchr($filename, ".");
 								$from=$_FILES["return_remark"]["tmp_name"][$i];// 從暫存檔路徑移至剛剛建立的files資料夾中
 								
-								$to="files//" ."R-".$no."-".date("Ymd")."-".$i .$filetype;//年月日時分秒當作檔名
+								$to="../src/image/funded//" ."R-".$no."-".date("Ymd")."-".$i .$filetype;//年月日時分秒當作檔名
 								$name="R-"."-".$no.date("Ymd")."-".$i.$filetype;
 								
 								array_push($file,$name);
@@ -208,16 +213,23 @@
 						
 						$name=implode(",",$file);
 
-		    			$sql = "insert into growing_hope.return (return_no, event_no, return_date, return_info, return_remark) values(:return_no,:event_no, current_date(),:return_info,:return_remark) ";
+		    			$sql = "insert into growing_hope.return (return_no, event_no, return_date, return_info, return_pho) values(:return_no,:event_no, current_date(),:return_info,:return_pho) ";
 						$return=$pdo->prepare($sql);
 						$return->bindValue(":return_no",null);
 						$return->bindValue(":event_no",$_REQUEST["event_noRe"]);
 						$return->bindValue(":return_info",$_REQUEST["return_info"]);	
-						$return->bindValue(":return_remark",$name);
+						$return->bindValue(":return_pho",$name);
 
 						$return->execute();
-						$title="您已成功回報進度";
-						$no=$_REQUEST["event_noRe"];
+
+						$no=$_REQUEST["event_noRe"];	
+						$sql="select COUNT(event_no) from growing_hope.return where event_no=$no";
+
+						$result=$pdo->query($sql);
+						$times=$result->fetchColumn();	
+
+						$title="您已成功回報進度"."<br><p style='font-size:16px';>此次為第".$times."次回報</p>";
+						// $no=$_REQUEST["event_noRe"];
 						$item="代表人/單位";
 						$name2=$_REQUEST["event_dept"];
 						// echo "<script>alert('回報成功'); location.href='../application.php';report();</script>";

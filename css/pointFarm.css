@@ -9,11 +9,11 @@
 	width: 100%;
 	margin: auto;
 }
-.boxxx{
-	height: 95vh;
+.box{
+	height: 680px;
 }
-.boxxx .sky{
-	background-image: url('../src/image/img/sky2.png');
+.box .sky{
+	background-image: url('img/sky2.png');
 	width: 100%;
 	height: 570px;
 	background-size: cover;
@@ -80,25 +80,25 @@
 .info{
 	float: left;
 	position: relative;
-	top: 13px;
+	top: -5px;
 	left: 370px;
 	font-size: 25px;
 	font-family: arial;
 }
 .farm{
-	background-image: url('../src/image/img/farm.png');
+	background-image: url('img/farm.png');
 	width: 100%;
 	height: 900px;
 	top: -380px;
-	background-size: cover;
+	background-size: 100% 100%;
 	position: relative;
 	bottom: 280px;
 }
 .farmer{
 	display: inline-block;
 	position: relative;
-	left: 250px;
-	top: 230px;
+	left: 140px;
+	top: 159px;
 }
 .dirt{
 	display: block;
@@ -107,7 +107,7 @@
 	display: inline-block;
 	float: right;
 	position: relative;
-	top: 280px;
+	top: 220px;
 	right: 20px;
 }
 .wallet1 img{
@@ -143,8 +143,8 @@
 	width: 780px;
 	height: 280px;
 	position: relative;
-	left: 250px;
-	top: 500px;
+	left: 120px;
+	top: 490px;
 }
 .land img:nth-of-type(3){
 	height: 120px;
@@ -183,7 +183,7 @@
 		display: none;
 	}
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1440px){
 	.container2{
 		display: none;
 	}

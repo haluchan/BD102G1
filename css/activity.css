@@ -1,0 +1,49 @@
+.activity {
+	/*width: 400px;*/
+	/*height: 450px;*/
+	margin: auto;
+
+}
+.activity td:first-child{
+	text-align: center;
+	background-color: #F29600;
+}
+.activity td:nth-child(2){
+	background-color: #FFF;
+}
+.activity last-of-type
+.activity input{
+/* 	text-align: center; */
+}
+.activity tr{
+	border: 1px solid black;
+}
+.activity .btn1{
+	display: block;
+	margin: auto;
+	width: 100%;
+	/*height: 40px;*/
+	background-color: #f29600;
+		outline:none;
+		padding:10px 0px;
+		border-radius: 6px;
+		color: #fff;
+		border: 2px solid #F29600;
+}
+.activity .btn1:hover{
+	color: #F29600;
+	background-color: #fff;
+
+}
+.activity .btn1:active{
+	transform: scale(.98 ,.98);
+}
+
+
+.activity input{
+	width: 130px;
+	margin: auto;
+}
+.activity input:hover{
+	background-color: #ddd;
+}

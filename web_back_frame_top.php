@@ -5,7 +5,7 @@
 			 	
 			 	<ol>
 			 		<!-- logo -->
-			 		<li><img src="src/image/web_back_frame/logo.png"></li>
+			 		<li><a href="webBack_welcome.php"><img src="src/image/web_back_frame/logo.png"></a></li>
 
 
 			 		<li>
@@ -20,22 +20,22 @@
 			 		</li>
 
 
-			 		<li><a class="motherTitle" href="webBack_xreport.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">檢舉管理</a></li>
+			 		<li><a class="motherTitle" href="webBack_xreport.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">留言檢舉</a></li>
 
 
 			 		<li>
 			 			<span class="slideButton motherTitle"><img src="src/image/web_back_frame/circleWithPlus.png">活動管理</span>
 			 			<ol class="item">
-			 				<li><a href="#" class="itemClick"><img src="src/image/web_back_frame/line.png">活動全覽</a></li>
-			 				<li><a href="#" class="itemClick"><img src="src/image/web_back_frame/line.png">新增活動</a></li>
+			 				<li><a href="actSign.php" class="itemClick"><img src="src/image/web_back_frame/line.png">查看報名</a></li>
+			 				<li><a href="activity.php" class="itemClick"><img src="src/image/web_back_frame/line.png">新增活動</a></li>
 			 			</ol>
 			 		</li>
 
 
-			 		<li><a class="motherTitle" href="memberback.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">會員管理</a></li>
+			 		<li><a class="motherTitle" href="memberback.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">會員名單</a></li>
 
 
-			 		<li><a class="motherTitle" href="orderMaster.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">訂單管理</a></li>
+			 		<li><a class="motherTitle" href="orderMaster.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">訂單總覽</a></li>
 
 
 			 		<li>

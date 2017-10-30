@@ -79,13 +79,22 @@ function sendReset(){
 				console.log(xhr.responseText);
 
 				if(xhr.responseText == "error"){
-					alert("帳號電子信箱輸入錯誤");
+					// swal({
+					// 		  icon: "error",
+					// 		  title:"信箱密碼輸入錯誤"
+					// 		});
+
+					alert("信箱密碼輸入錯誤");
 				}else{
 					alert("密碼已發送至信箱");
 					document.location.href="index.php";
 				}
+<<<<<<< HEAD
 				// window.reload();
 
+=======
+				window.location.reload();
+>>>>>>> 4994c391f930b59efba9efa06f60ba22fcab1c8c
 			}else{
 				alert(xhr.status);
 			}
@@ -154,13 +163,29 @@ function sendForm(){
 		if(xhr.readyState == 4){
 			if (xhr.status == 200){
 				// console.log(xhr.responseText);
+<<<<<<< HEAD
 				location.reload();
+=======
+
+				window.location.reload();
+
+				
+>>>>>>> 4994c391f930b59efba9efa06f60ba22fcab1c8c
 				if(xhr.responseText=="error"){
+					// $.sweetModal({
+					// 	content: '帳號密碼錯誤',
+					// 	icon: $.sweetModal.ICON_ERROR
+					// });
 					alert("帳號密碼錯誤");
 				}else{
 					// $id("memName").innerHTML = xhr.responseText;
-					alert(xhr.responseText,+"歡迎回來");
-					$id("spanLogin").innerHTML = "登出";
+					// $.sweetModal({
+					// 	content:'歡迎回來',
+					// 	icon: $.sweetModal.ICON_SUCCESS
+					// });
+                    // alert("歡迎回來");
+					alert(xhr.responseText);
+					$id("spanLogin").innerHTML = "<a href='php/clearSession'>登出</a>";
 					$id("lightbox-bg").style.display="none";
 					// alert(xhr.responseText);
 					
@@ -194,6 +219,8 @@ function cancelPanel(){
 function init(){
 
 	$id("spanLogin").onclick = showPanel;
+
+	$id("login-btn2").onclick = showPanel;
 
 	$id("login_btn").onclick = sendForm;
 	
