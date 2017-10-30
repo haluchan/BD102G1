@@ -40,11 +40,12 @@
 	</footer>
 
 <script type="text/javascript" src="js/NAV-HEAD.js"></script>
-<script type="text/javascript">
+<script >
 document.addEventListener("load" , function(){
   //===memH3.click
    
-  document.getElementById("memH3").onclcik(){
+  document.getElementById("memH3").onclick(){
+  	alert("test");
   	var xhr = new XMLHttpRequest();
   	xhr.onload = function(){
   		if( xhr.status == 200){

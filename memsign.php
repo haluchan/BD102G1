@@ -41,11 +41,11 @@
 			  		<input type="password" name="mem_psw" value="" placeholder="請輸入密碼">
 			  		<span class="focus-border"></span>
 			  	</div>
-			  	<div class="sign-repws">
+			  	<!-- <div class="sign-repws">
 			  		<p>確認密碼</p>
 			  		<input type="password" name="mem_psw" value="" placeholder="請輸入密碼">
 			  		<span class="focus-border"></span>
-			  	</div>
+			  	</div> -->
 			  		<div class="sign-birth">
 			  		<p>生日</p>
 			  		<input type="date" name="mem_birth" value="" placeholder="">
@@ -56,10 +56,10 @@
 			  		<p>性別</p>
 			  		
 			  		<div class="genderinput">
-			  			<label for="male">
-			  		<input type="radio" name="mem_gender" value="male" id="male">&nbsp;&nbsp;男</label>
-			  		<label for="female">
-			  		<input type="radio" name="mem_gender" value="female" id="female">&nbsp;&nbsp;女</label>
+			  		<label for="male">
+			  			<input type="radio" name="mem_gender" value="1" id="male">&nbsp;&nbsp;男</label>
+			  			<label for="female">
+			  			<input type="radio" name="mem_gender" value="2" id="female">&nbsp;&nbsp;女</label>
 			  		</div>
 			  		
 			  	</div>
