@@ -282,9 +282,9 @@ function $qsa(qsa){
 	      // reverse: 預設值true，會倒帶顯示; false動畫只跑一次 
 	    })
 	    .setTween(cartTweenMobile)
-	    .addIndicators({
-	            name: 'cart'
-	        })
+	    // .addIndicators({
+	            // name: 'cart'
+	        // })
 	   .addTo(controllerMobile);
 	}
 
