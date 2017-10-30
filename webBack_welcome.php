@@ -1,12 +1,11 @@
 <?php
-session_start();
 ob_start();
+session_start();
 if($_SESSION['adminName'] == ''){
 	$_SESSION['adminName'] = $_SESSION['signInInfo'];
 	$_SESSION['signInInfo'] = '';
 	$_SESSION['signInDate'] =  date ("Y-m-d H:i:s" , mktime(date('H')+8, date('i'), date('s'), date('m'), date('d'), date('Y')));
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="UTF-8">
