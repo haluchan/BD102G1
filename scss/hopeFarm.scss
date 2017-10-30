@@ -138,7 +138,7 @@ body{
 	.latest{
 		max-width: 1440px;
 		margin: 0 auto;
-		margin-top: 10vh;
+		margin-top: 100px;
 
 		position: relative;
 		.latest_title{
@@ -146,10 +146,10 @@ body{
 			left: 0;
 			right: 0;
 			margin: 0 auto;
-			margin-bottom: 3vh;
+			margin-bottom: 40px;
 			h2{
 				text-align: center;
-				color: #c9541f;
+				color: #6a3906;
 			}
 		}
 		.latest_cloud img{
@@ -319,6 +319,7 @@ body{
 				text-align: center;
 				padding-bottom: 20px;
 				margin-bottom: 30px;
+				color: #6a3906;
 			}
 			.purp{
 				font-size: 26px;
@@ -463,7 +464,7 @@ body{
 							.item-box-shadow{
 								background-color: #fff;
 								box-shadow: 0px 0px 5px 0px #ccc;
-								border-radius: 38px;
+								border-radius: 30px;
 								border:1px solid transparent;
 								&:hover{
 									border:1px solid #699c33;
@@ -474,7 +475,7 @@ body{
 									
 									 .box-imgToHover{
 									 	overflow: hidden;
-									 	border-radius: 37px;
+									 	
 									 	.imgToHover{
 									 		transition:all 1.5s;
 									 		overflow: hidden;
@@ -482,6 +483,7 @@ body{
 									 			transform: scale(1.5);
 									 		}
 									 		img{
+									 			border-radius: 5%;
 											}
 									 	}
 									 	
@@ -504,7 +506,7 @@ body{
 												margin: auto;
 												margin-top:9%; 
 												margin-left: 9%;
-												border-radius: 0 18px 18px 0;
+												border-radius: 0 10px 10px 0;
 											}
 
 									}
@@ -662,6 +664,7 @@ body{
 			//width: 100%;
 			text-align: center;
 			display: inline-block;
+			color: #6a3906;
 
 		}
 	}
@@ -1204,7 +1207,7 @@ body{
 					}
 					.purp{
 						text-overflow : ellipsis; 
-						font-size: 19px;
+						font-size: 16px;
 						//margin-bottom: 3px;
 						&:nth-child(2):before{
 							content: '';
@@ -1287,6 +1290,7 @@ body{
 					.mark_item{
 						a{
 							.item-box{
+								padding: 0 7%;
 								.item-box-shadow{
 									box-shadow: 0 0 8px 0 #ccc;
 									&:hover{}
@@ -1310,13 +1314,14 @@ body{
 											text-align: center;
 										}
 										.txt_title{
-											font-size: 24px;
+											font-size: 22px;
 											margin-bottom: 2px;
 											font-weight: 500;
 											color: #000;
+											margin-top: 3px;
 										}
 										.JQellipsis{
-											font-size: 20px;
+											font-size: 16px;
 											letter-spacing: 2px;
 											line-height: 23px;
 										}
