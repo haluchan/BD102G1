@@ -62,125 +62,128 @@ ob_start();
 
 	<form class="myForm" method="post" action="php/webBack_pro_resetStatus.php" enctype="multipart/form-data">
 		<table cellspacing="1">
-			<tr>
-				<th></th>
-				<th>商品編號</th>
-				<th>類別</th>
-				<th>名稱</th>
-				<th>價格</th>
-				<!-- <th>規格</th> -->
-				<th>修改</th>
-				<th>狀態</th>
-			</tr>
+			<thead>
+				<tr>
+					<th></th>
+					<th>商品編號</th>
+					<th>類別</th>
+					<th>名稱</th>
+					<th>價格</th>
+					<!-- <th>規格</th> -->
+					<th>修改</th>
+					<th>狀態</th>
+				</tr>
+			</thead>
 
 
+			<tbody>
+				<?php 
+					try {
 
-			<?php 
-				try {
+						require_once("php/connectGrowing_hope.php");
 
-					require_once("php/connectGrowing_hope.php");
+					    //加一個把編號和類別組合在一起並補齊三個位數的指令作為商品編號
+					    $sql = "select *, lpad(pro_no, 3, 0) pro_realNo 
+					    		from product";
 
-				    //加一個把編號和類別組合在一起並補齊三個位數的指令作為商品編號
-				    $sql = "select *, lpad(pro_no, 3, 0) pro_realNo 
-				    		from product";
+						$products = $pdo->query($sql);
 
-					$products = $pdo->query($sql);
-
-					$x = 0;
-					while( $prodRow = $products->fetchObject() ){
-						
-			?>
-
-
-			<tr class="tdRow">
-				<!-- 行號 -->
-				<td><?php echo $x += 1 ; ?></td>
-
-				<!-- 組合過類別的商品編號 -->
-				<td>
-					<?php 
-						$typ ='';
-						//辨認類別給編號開頭
-						switch ($prodRow->pro_type) {
-							case 1:
-								$typ = 's';
-								break;
-
-							case 2:
-								$typ = 't';
-								break;
+						$x = 0;
+						while( $prodRow = $products->fetchObject() ){
 							
-							default:
-								$typ = 'z';
-								break;
-						}
-						
-						$proNo = $typ. $prodRow->pro_realNo; 
-						echo $proNo; 
+				?>
 
-					?>
-						
-				</td>
-				<!-- 類別 辨認給中文 -->
-				<td>
-					<?php 						
-						switch ($prodRow->pro_type) {
-							case 1:
-								$typ = '種子';
-								break;
 
-							case 2:
-								$typ = '魚缸';
-								break;
+				<tr class="tdRow">
+					<!-- 行號 -->
+					<td><?php echo $x += 1 ; ?></td>
+
+					<!-- 組合過類別的商品編號 -->
+					<td>
+						<?php 
+							$typ ='';
+							//辨認類別給編號開頭
+							switch ($prodRow->pro_type) {
+								case 1:
+									$typ = 's';
+									break;
+
+								case 2:
+									$typ = 't';
+									break;
+								
+								default:
+									$typ = 'z';
+									break;
+							}
 							
-							default:
-								$typ = '其他/未定義';
-								break;
-						}
-						echo $typ; 
-					?>					
-				</td> 
+							$proNo = $typ. $prodRow->pro_realNo; 
+							echo $proNo; 
 
-				<!-- 商品名稱 -->
-				<td><?php echo $prodRow->pro_name; ?></td>
+						?>
+							
+					</td>
+					<!-- 類別 辨認給中文 -->
+					<td>
+						<?php 						
+							switch ($prodRow->pro_type) {
+								case 1:
+									$typ = '種子';
+									break;
 
-				<!-- 價格 -->
-				<td><?php echo $prodRow->pro_price; ?></td>
-				
-				<!-- 修改按鈕 -->
-				<td>
-					<a href="webBack_proUpdate.php?pro_no=<?php echo $prodRow->pro_no;?>" class="btn">修改資料</a>
-				</td>
+								case 2:
+									$typ = '魚缸';
+									break;
+								
+								default:
+									$typ = '其他/未定義';
+									break;
+							}
+							echo $typ; 
+						?>					
+					</td> 
 
-				<!-- 狀態 -->
-				<td>
-					<?php $status = $prodRow->pro_status; ?>
-					<label>
-						<input type="radio" name="status<?php echo $prodRow->pro_no ?>" value="1" class="on" 
-						<?php if ( $status == 1){echo 'checked';}?> >上架
-					</label>
+					<!-- 商品名稱 -->
+					<td><?php echo $prodRow->pro_name; ?></td>
 
+					<!-- 價格 -->
+					<td><?php echo $prodRow->pro_price; ?></td>
 					
-					<label><input type="radio" name="status<?php echo $prodRow->pro_no ?>" value="0" class="off"<?php if ( $status == 0){echo 'checked';}?> >下架</label>
+					<!-- 修改按鈕 -->
+					<td>
+						<a href="webBack_proUpdate.php?pro_no=<?php echo $prodRow->pro_no;?>" class="btn">修改資料</a>
+					</td>
 
-					<!-- 商品號碼最大到幾號 -->
-					<input type="hidden" name="pro_no<?php echo $x ?>" value="<?php echo $prodRow->pro_no;?>">
-					<!-- 本頁row數量 -->
-					<input type="hidden" name="howManyRow" value="<?php echo $x ;?>">
-				</td>
-			</tr>
-			
-			
+					<!-- 狀態 -->
+					<td>
+						<?php $status = $prodRow->pro_status; ?>
+						<label>
+							<input type="radio" name="status<?php echo $prodRow->pro_no ?>" value="1" class="on" 
+							<?php if ( $status == 1){echo 'checked';}?> >上架
+						</label>
+
+						
+						<label><input type="radio" name="status<?php echo $prodRow->pro_no ?>" value="0" class="off"<?php if ( $status == 0){echo 'checked';}?> >下架</label>
+
+						<!-- 商品號碼最大到幾號 -->
+						<input type="hidden" name="pro_no<?php echo $x ?>" value="<?php echo $prodRow->pro_no;?>">
+						<!-- 本頁row數量 -->
+						<input type="hidden" name="howManyRow" value="<?php echo $x ;?>">
+					</td>
+				</tr>
+				
+				
 
 
-			<?php	
+				<?php	
+						}
+
+					} catch (PDOException $e) {
+						echo "錯誤原因 : " , $e->getMessage(),"<br>";
+						echo "行號 : " , $e->getLine(),"<br>";
 					}
-
-				} catch (PDOException $e) {
-					echo "錯誤原因 : " , $e->getMessage(),"<br>";
-					echo "行號 : " , $e->getLine(),"<br>";
-				}
-			?>
+				?>
+			</tbody>
 
 
 

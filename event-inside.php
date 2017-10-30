@@ -15,7 +15,7 @@ session_start();
 
  <!-- plugin -->
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
- <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css"/>
 
 <link rel="stylesheet" type="text/css" href="src/libs/lightbox2-master/src/css/lightbox.css">
 
@@ -254,6 +254,7 @@ try {
 
 		</div>
 	</div>
+
 	
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type ="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -261,6 +262,7 @@ try {
 
 <script type="text/javascript" src="src/libs/lightbox2-master/src/js/lightbox.js" ></script>
 
+<script type="text/javascript" src="src/libs/jquery.sweet-modal-1.3.3/min/jquery.sweet-modal.min.js"></script>
 
 <script type="text/javascript" src="js/header.js"></script>
 

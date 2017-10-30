@@ -27,7 +27,7 @@ ob_start();?>
 	</nav>
 <?php 
 try {
-	require_once("php/connectPon.php");//之後要換成connectGrowing_hope.php
+	require_once("php/connectBeck.php");//之後要換成connectGrowing_hope.php
     $sql = "select * from event where event_status='F'";//撈出案件狀態為審核中(F)的案件
 	$event = $pdo->query($sql);	
 	$count= $event->rowCount();//返回記錄數

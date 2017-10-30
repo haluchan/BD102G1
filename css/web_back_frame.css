@@ -180,6 +180,7 @@ nav .select span{
 	.manage >ol >li{
 		margin-top: 10px;
 		list-style: none;
+		overflow: hidden;
 	}
 	/*母選單標題*/
 	.motherTitle{
@@ -194,6 +195,9 @@ nav .select span{
 		padding: 4px 0 6px 30px;
 		width: 60%;
 		cursor: pointer;
+	}
+	.manage >ol >li >ol >li >a{
+		width: 100%;
 	}
 	.motherTitle:hover,.manage >ol >li >ol >li:hover{
 		background-color: rgba(236,254,218,.6);

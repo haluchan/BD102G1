@@ -1,13 +1,8 @@
-<<<<<<< HEAD
+
 <?php 
 ob_start();
 session_start();
  ?>
-=======
-<?php
-session_start();
-ob_start();?>
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -65,7 +60,7 @@ ob_start();?>
 		$i=0;
 		try{
 			require_once("php/connectGrowing_hope.php");
-			$sql = "select * from count_donate where event_no = '$event_no'";
+			$sql = "select * from donate_count where event_no = '$event_no'";
 			$donate = $pdo ->query($sql);
 			$donateRow = $donate->fetchObject();
 	?>	
