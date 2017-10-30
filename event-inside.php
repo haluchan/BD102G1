@@ -115,7 +115,7 @@ try {
 						<p>農場主人：<?php echo $eventRow->act_host ?></p>	
 					</div>
 					<div class="main-img">
-							<img src="src/image/event-inside-page/main-img.png" alt="">
+							<img src="src/image/event-inside-page/<?php echo $eventRow->act_no,2;?>.jpg" alt="">
 					</div>
 				</div>
 			</div>
