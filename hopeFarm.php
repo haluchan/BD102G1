@@ -491,7 +491,7 @@ while( $eventRow = $event->fetchObject()){
 
 			 
 			//var width=inside_bar[i].width;
-			console.log(inside_bar[i])
+			//console.log(inside_bar[i])
 			var bar_run =new TimelineMax();
 			bar_run.staggerFromTo(inside_bar[i],5,{
 				width:0,
