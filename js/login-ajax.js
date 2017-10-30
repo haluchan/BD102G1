@@ -80,7 +80,12 @@ function sendReset(){
 
 
 				if(xhr.responseText == "error"){
-					alert("帳號電子信箱輸入錯誤");
+					// swal({
+					// 		  icon: "error",
+					// 		  title:"信箱密碼輸入錯誤"
+					// 		});
+
+					alert("信箱密碼輸入錯誤");
 				}else{
 					alert("密碼已發送至信箱");
 					document.location.href="index.php";
@@ -155,10 +160,18 @@ function sendForm(){
 			if (xhr.status == 200){
 				// console.log(xhr.responseText);
 				if(xhr.responseText=="error"){
-					alert("帳號密碼錯誤");
+					$.sweetModal({
+						content: '帳號密碼錯誤',
+						icon: $.sweetModal.ICON_ERROR
+					});
+					// alert("帳號密碼錯誤");
 				}else{
 					// $id("memName").innerHTML = xhr.responseText;
-					alert(xhr.responseText,+"歡迎回來");
+					$.sweetModal({
+						content:'歡迎回來',
+						icon: $.sweetModal.ICON_SUCCESS
+					});
+					// alert(xhr.responseText,+"歡迎回來");
 					$id("spanLogin").innerHTML = "登出";
 					$id("lightbox-bg").style.display="none";
 					// alert(xhr.responseText);
@@ -193,6 +206,8 @@ function cancelPanel(){
 function init(){
 
 	$id("spanLogin").onclick = showPanel;
+
+	$id("login-btn2").onclick = showPanel;
 
 	$id("login_btn").onclick = sendForm;
 	

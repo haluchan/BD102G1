@@ -9,9 +9,7 @@ botton{border:none;}
 	color: #000;
 	text-decoration: underline;
 }
-.myForm a:hover{
-	color:#fff;
-}
+
 
 
 /* table起始 */
@@ -30,10 +28,12 @@ botton{border:none;}
 
 	
 	tr>td:first-child{  /*每row第一個格子(編號)固定置中，灰色*/
-		background-color:#F29600;
-		font-weight: bold;
+		background-color:#ac7339;
+		font-weight:900;
 		text-align: center;
-
+	}
+	tr>td:first-child:hover{
+	background-color:#d2a679;
 	}
 	
 	th{  /*th的樣式:上下有橘色線*/
@@ -62,6 +62,9 @@ botton{border:none;}
 
 	table{  /*每一欄的寬度設定。以百分比。剩的寬自動為最後一欄*/
 		/*不能動！！第一欄固定為5%*/
+		tr th:nth-child(1){
+			width: 5%;
+		}
 		tr th:nth-child(1){
 			width: 5%;
 		}

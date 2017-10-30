@@ -1,24 +1,182 @@
 @charset "UTF-8";
 .manage {
-  width: 16%; }
+  width: 16%;
+}
 
 .content_form {
-  width: 84%; }
+  width: 84%;
+}
 
 select {
-  outline: inherit; }
+  outline: inherit;
+}
 
 nav .nav_item:nth-child(3) {
-  display: hidden; }
+  display: hidden;
+}
 
 nav .nav_item:nth-child(4) {
-  display: hidden; }
+  display: hidden;
+}
 
 nav .nav_item:nth-child(5) {
-  display: hidden; }
+  display: hidden;
+}
 
 /* table起始 */
 .myForm {
+<<<<<<< HEAD
+  position: relative;
+}
+
+.myForm .pro_line {
+  position: absolute;
+  width: 1px;
+  height: 344px;
+  margin: auto;
+  left: 63.4%;
+  top: 84px;
+  background-color: #aaa;
+}
+
+.myForm .pro_photos img {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.myForm .pro_photos div {
+  width: 30%;
+  float: left;
+  margin: 1% 0.5%;
+  padding: 1% 1%;
+}
+
+.myForm table {
+  width: 100%;
+  table-layout: fixed;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0px 6px;
+}
+
+.myForm tr:not(.hide) > td {
+  /*每個格子統一固定padding*/
+  padding: 16px 4px;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+
+.myForm tr:not(.hide) > th {
+  font-weight: normal;
+  text-align: center;
+}
+
+.myForm select, .myForm option {
+  width: 91%;
+  padding: 6px 10px;
+  background-color: LemonChiffon;
+  border: none;
+}
+
+.myForm select:focus, .myForm option:focus {
+  outline-color: #F29600;
+}
+
+.myForm input {
+  width: 88%;
+  padding: 6px 10px;
+  background-color: LemonChiffon;
+  border: none;
+}
+
+.myForm input:focus {
+  outline-color: #F29600;
+}
+
+.myForm textarea {
+  padding: 6px 10px;
+  width: 88%;
+  background-color: LemonChiffon;
+  border: none;
+  resize: none;
+}
+
+.myForm textarea:focus {
+  outline-color: #F29600;
+}
+
+.myForm .pro_numDisable {
+  color: #fff;
+}
+
+.myForm .pro_numDisable div {
+  width: 100%;
+  padding: 2px 2px;
+  background-color: SaddleBrown;
+}
+
+.myForm .pro_numDisable .input {
+  width: 98%;
+  padding: 2px 10px;
+  font-size: 0;
+}
+
+.myForm .pro_numDisable .input span {
+  font-size: 16px;
+}
+
+.myForm table {
+  /*每一欄的寬度設定。以百分比。剩的寬自動為最後一欄*/
+  /*不能動！！第一欄固定為5%*/
+}
+
+.myForm table tr th:nth-child(1) {
+  width: 10%;
+}
+
+.myForm table tr td:nth-child(2) {
+  width: 55%;
+}
+
+.myForm table tr th:nth-child(3) {
+  width: 10%;
+}
+
+.myForm .btn {
+  background-color: LemonChiffon;
+  padding: 4px 6px;
+  border: none;
+}
+
+.proSave {
+  margin: auto;
+  margin-top: 20px;
+}
+
+.proSave .submit {
+  box-sizing: border-box;
+  margin: auto;
+  display: block;
+  background-color: #F29600;
+  padding: 10px 0px;
+  width: 50%;
+  border: 2px solid #F29600;
+  color: #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.proSave .submit:hover {
+  color: #F29600;
+  background-color: #fff;
+}
+
+.proSave .submit:active {
+  -webkit-transform: scale(0.98, 0.98);
+  transform: scale(0.98, 0.98);
+}
+=======
   position: relative; }
   .myForm .pro_line {
     position: absolute;
@@ -120,5 +278,6 @@ nav .nav_item:nth-child(5) {
       -webkit-transform: scale(0.98, 0.98);
       -ms-transform: scale(0.98, 0.98);
       transform: scale(0.98, 0.98); }
+>>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
 
 /* table結束 */
