@@ -307,7 +307,7 @@
 	100%{left:335px;}
 }
 .tutorial{
-	width: 203px;
+	width: 220px;
 	height: 210px;
 	float: left;
 	display: inline-block;
@@ -317,9 +317,9 @@
 	display: inline-block;
 	z-index: -1;
 }
-.tutorial p{
+.tutorial .content p{
 	box-sizing: border-box;
-	padding-top: 40px;
+	padding-top: 20px;
 	padding-bottom: 10px;
 	text-align: center;
 	font-weight: 800;

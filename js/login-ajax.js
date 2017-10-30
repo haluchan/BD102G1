@@ -89,12 +89,8 @@ function sendReset(){
 					alert("密碼已發送至信箱");
 					document.location.href="index.php";
 				}
-<<<<<<< HEAD
-				// window.reload();
 
-=======
 				window.location.reload();
->>>>>>> 4994c391f930b59efba9efa06f60ba22fcab1c8c
 			}else{
 				alert(xhr.status);
 			}
@@ -163,14 +159,11 @@ function sendForm(){
 		if(xhr.readyState == 4){
 			if (xhr.status == 200){
 				// console.log(xhr.responseText);
-<<<<<<< HEAD
 				location.reload();
-=======
 
-				window.location.reload();
 
-				
->>>>>>> 4994c391f930b59efba9efa06f60ba22fcab1c8c
+				//window.location.reload();
+
 				if(xhr.responseText=="error"){
 					// $.sweetModal({
 					// 	content: '帳號密碼錯誤',
