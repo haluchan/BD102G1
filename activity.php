@@ -1,41 +1,29 @@
+<?php
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
-	<title>後台::訂單明細</title>
+	<title>後台::新增活動</title>
 	
-	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
 	<!-- 不准動的部分，以下三行 -->
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
 	<!-- 自己的css擺這裡 -->
 	<link rel="stylesheet" type="text/css" href="css/activity.css">
-	<link rel="stylesheet" href="css/webBack_orderItem.css">
+	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
+	<!-- <link rel="stylesheet" href="css/webBack_orderItem.css"> -->
 </head>
 <body>
 <?php require_once('web_back_frame_top.php') ?>
 <nav>
 			
-			<div class="nav_item">
+			<div class="nav_item pageTitle">
 
 				<h2>新增活動</h2>
-			</div>
-			<div class="nav_item">
-				<!-- <span>狀態：</span>
-				<select>
-					<option value="">不限</option>
-					<option value="">不限</option>
-					<option value="">不限</option>
-				</select> -->
-			</div>
-			<div class="nav_item">
-				<span>分類：</span>
-				<select>
-					<option value="">訂單編號</option>
-					<option value="">不限</option>
-					<option value="">不限</option>
-				</select>
 			</div>
 			<div class="nav_item">
 				<div class="search">
@@ -45,10 +33,26 @@
 				<!-- 	<button><img src="src/image/web_back_frame/erase.png"></button> -->
 				</div>
 			</div>
+			<div class="nav_item select">
+				<!-- <span>狀態：</span>
+				<select>
+					<option value="">不限</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select> -->
+			</div>
+			<div class="nav_item select">
+				<span>分類：</span>
+				<select>
+					<option value="">訂單編號</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select>
+			</div>
 			<div class="clearfix"></div>
 		</nav>
 
- <form action="activitySend.php">
+ <form action="activitySend.php" class="myForm">
 	 	<table class="activity" cellpadding="1">
 		<tr>
 			<td>活動名稱</td>
@@ -94,7 +98,7 @@
 
 	</table>
 	 </form>
-<!-- 	 <?php echo "新增成功";
+<!-- 	 <?php //echo "新增成功";
 	 ?> -->	  
 </table>
 </form>
