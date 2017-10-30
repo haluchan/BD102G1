@@ -77,15 +77,16 @@ try {
 				</td>		
 			</tr>
 			
-			<!-- <div class="test"> -->
+			
 				<tr hidden>
 					<td colspan="9">
 						<p>案件標題</p><?php echo $eventRow->event_title;?>
 						<p>案件摘要</p><?php echo $eventRow->event_txt;?>
-						<p>內容照片</p><img src="src/image/funded//<?php echo $eventRow->event_pho;?>">
+						<!-- <p>內容照片</p><img src="src/image/funded//<?php echo $eventRow->event_pho;?>"> -->
+						<p>內容照片</p><img src="php/files//<?php echo $eventRow->event_pho;?>">
 					</td>
 				</tr> 
-			<!-- </div> -->
+		
 	<?php
 		$i++;	
 		}
