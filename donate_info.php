@@ -40,18 +40,14 @@ session_start();
 <?php 
 
 	$event_no = $_REQUEST['event_no'];
-	
-	if (($_SESSION['mem_no'] == null) || ($_SESSION['mem_no'] == '') ) {
+
+	if (isset($_SESSION['mem_no'])==false) {
 		$mem_no = 99;
 		$mem_pho= 'mem_9999.png';
-	}else{
-		$mem_no = $_SESSION['mem_no'];
-		$mem_pho= $_SESSION['mem_pho'];
 	}
+	
 
-//	$event_no = $_REQUEST['event_no'];
-    $event_no = 1;
-	// $mem_no = $_SESSION['mem_no'];
+
 	try {
 
 		require_once("php/connectGrowing_hope.php");
@@ -106,7 +102,7 @@ session_start();
 					　<option value="B">B. 2,000元夏祭限定蔬果禮盒</option>
 					　<option value="C">C. 3,000元夏祭限定蔬果禮盒(大)</option>
 					</select><br>
-					<button>我 要 資 助</button>
+					<button class="want">我 要 資 助</button>
 				</form>
 				<p class="case_ing">
 					專案正在募資中！<br>
@@ -272,7 +268,7 @@ session_start();
 
 
 		<?php 
-				$sql = "select * from growing_hope.return where event_no =:event_no" ;
+				$sql = "select * from growing_hope.return where event_no =:event_no and return_status = 'Y'" ;
 				$return = $pdo ->prepare($sql);
 				$return->bindValue(":event_no", $event_no);
 				$return->execute();
@@ -416,10 +412,47 @@ session_start();
 <script type="text/javascript">
 
 	$(function(){
+		$('.want').click(function(){
+			if (<?php echo $mem_no; ?> == 99) {
+				alert('請登入!');
+				var spanLogin = $id("spanLogin");
+				var lightboxbg= $id("lightbox-bg");
+				if(spanLogin.innerHTML == "註冊/登入"){
+					lightboxbg.style.display = "block";
+					lightboxbg.style.opacity = '1';
+					// lightboxbg.style.transition = "all , 1s";
+
+
+				}else{
+					spanLogin.innerHTML = "註冊/登入";
+					$id("memMail").value="";
+					$id("memPsw").value="";
+				}
+			}
+
+		});
 
 
 		$('.want_donate').click(function(){
-			$('.donate_form').submit();
+			if (<?php echo $mem_no; ?> == 99) {
+				alert('請登入!');
+				var spanLogin = $id("spanLogin");
+				var lightboxbg= $id("lightbox-bg");
+				if(spanLogin.innerHTML == "註冊/登入"){
+					lightboxbg.style.display = "block";
+					lightboxbg.style.opacity = '1';
+					// lightboxbg.style.transition = "all , 1s";
+
+
+				}else{
+					spanLogin.innerHTML = "註冊/登入";
+					$id("memMail").value="";
+					$id("memPsw").value="";
+				}
+			}else{
+				$('.donate_form').submit();
+			}
+			
 		});
 
 		$('.msg').click(function(){

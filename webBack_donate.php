@@ -97,7 +97,7 @@ session_start(); ?>
 				<td><?php echo $price; ?></td>
 				<td><?php echo $event_deadline; ?></td>
 				<td><?php echo $dday; ?></td>
-				<td><?php echo $reach+""; ?>%</td>
+				<td><?php echo $reach; ?>%</td>
 				<td><input type="button" value="查看" class="btn" onclick="self.location.href='webBack_donateDetails.php?event_no='+ <?php echo $event_no; ?>"></td>
 			</tr>
 		<!-- </from> -->
