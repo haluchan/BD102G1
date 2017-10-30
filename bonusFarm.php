@@ -69,7 +69,7 @@
 				<div class="tutorial">
 					<img src="src/image/bonusFarm/dialog2.png">
 					<div class="content">
-						<p>選擇蔬果，賺取紅利點數</p>
+						<p>選擇蔬果，將種子拖曳到田中，賺取點數</p>
 						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="btn1">我知道了</button>
 					</div>			
 				</div>
