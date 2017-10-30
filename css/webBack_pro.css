@@ -63,7 +63,6 @@
   border: none;
   width: 60%;
   margin: auto;
-<<<<<<< HEAD
   box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
   border-radius: 6px;
   outline: none;
@@ -76,23 +75,11 @@
   transform: translate(2px, 2px);
   box-shadow: none;
 }
-=======
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  outline: none;
-  cursor: pointer;
-  color: #000; }
-  .myForm .btn:active {
-    -webkit-transform: translate(2px, 2px);
-    -ms-transform: translate(2px, 2px);
-    transform: translate(2px, 2px);
-    box-shadow: none; }
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
+
 
 /* table結束 */
 .proSave {
   margin-top: 20px;
-<<<<<<< HEAD
   width: 97%;
 }
 
@@ -119,25 +106,3 @@
   -webkit-transform: scale(0.98, 0.98);
   transform: scale(0.98, 0.98);
 }
-=======
-  width: 97%; }
-  .proSave .submit {
-    border-radius: 6px;
-    box-sizing: border-box;
-    float: right;
-    display: block;
-    background-color: #F29600;
-    padding: 10px 0px;
-    width: 20%;
-    border: 2px solid #F29600;
-    color: #fff;
-    outline: none;
-    cursor: pointer; }
-    .proSave .submit:hover {
-      color: #F29600;
-      background-color: #fff; }
-    .proSave .submit:active {
-      -webkit-transform: scale(0.98, 0.98);
-      -ms-transform: scale(0.98, 0.98);
-      transform: scale(0.98, 0.98); }
->>>>>>> a46be0a2d4532b4f4871473d4e53a97d42cd9a1d
