@@ -11,7 +11,8 @@ body {
   .containerhope h2 {
     font-size: 38px;
     letter-spacing: 4px;
-    font-weight: bold; }
+    font-weight: bold;
+    color: #6a3906; }
   .containerhope h3 {
     font-size: 22px;
     letter-spacing: 1px;
@@ -169,8 +170,7 @@ body {
       margin: 0 auto;
       margin-bottom: 40px; }
       .containerhope .latest .latest_title h2 {
-        text-align: center;
-        color: #6a3906; }
+        text-align: center; }
     .containerhope .latest .latest_cloud img {
       float: right;
       width: 12%;
@@ -309,8 +309,7 @@ body {
       .containerhope .purpose .purpose_txt h2 {
         text-align: center;
         padding-bottom: 20px;
-        margin-bottom: 30px;
-        color: #6a3906; }
+        margin-bottom: 30px; }
       .containerhope .purpose .purpose_txt .purp {
         font-size: 26px;
         margin-bottom: 8px; }
@@ -528,7 +527,7 @@ body {
       .containerhope .bookmark .mark_more img {
         width: 17%;
         vertical-align: middle; }
-      .containerhope .bookmark .mark_more h3 {
+      .containerhope .bookmark .mark_more p {
         display: inline-block;
         vertical-align: middle; }
     .containerhope .bookmark .mark_more:before {
@@ -750,24 +749,31 @@ body {
       font-size: 2.5vw; }
   .containerhope .bookmark .mark_title ul li {
     width: 20%; }
-  .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_name {
-    font-size: 2vw;
-    margin: auto;
-    text-align: center;
-    margin-top: -7px; }
-  .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_title {
-    overflow: hidden;
-    height: 30px; }
-  .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
-    height: 105px;
-    overflow: hidden; }
-  .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .countP {
-    margin-top: 2px;
-    text-align: center;
-    width: 100%; }
-  .containerhope .bookmark .mark_container .mark_item a .c1 .mark_item a .item-box .item-box-shadow .box-fontt .coP {
+  .containerhope .bookmark .mark_container {
+    padding: 0 1%; }
+    .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_name {
+      font-size: 2vw;
+      margin: auto;
+      text-align: center;
+      margin-top: -7px; }
+    .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_title {
+      overflow: hidden;
+      height: 30px; }
+    .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
+      height: 105px;
+      overflow: hidden; }
+    .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .countP {
+      margin-top: 2px;
+      text-align: center;
+      width: 100%; }
+  .containerhope .bookmark .c1 .mark_item a .item-box .item-box-shadow .box-fontt .coP {
     width: 100%;
-    text-align: center; } }
+    text-align: center; }
+    .containerhope .bookmark .c1 .mark_item a .item-box .item-box-shadow .box-fontt .coP:last-child {
+      width: 100%;
+      text-align: center; }
+  .containerhope .risk_container .risk_range .risk_img img {
+    display: none; } }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .col-xs-1 {
@@ -837,7 +843,7 @@ body {
       font-size: 34px;
       letter-spacing: 2px;
       font-weight: bold;
-      color: #161616; }
+      color: #6a3906; }
     .containerhope h3 {
       font-size: 20px;
       letter-spacing: 2px;
@@ -892,7 +898,7 @@ body {
     .containerhope .latest .carousel {
       display: none; }
     .containerhope .purpose {
-      margin-top: 58px; }
+      margin-top: 0; }
       .containerhope .purpose .purpose_img {
         width: 100%; }
       .containerhope .purpose .purpose_txt {
@@ -966,22 +972,13 @@ body {
           margin-bottom: 2px;
           font-weight: 500;
           color: #000;
-          margin-top: 3px; }
+          margin-top: 0.5vh; }
         .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
           font-size: 16px;
           letter-spacing: 2px;
           line-height: 23px; }
         .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .bar {
           margin-top: 10px; }
-        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .countP {
-          font-size: 19px;
-          padding-right: 0;
-          width: 100%;
-          text-align: center;
-          margin-top: 10px; }
-          .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .countP:last-child {
-            width: 100%;
-            margin-top: 2px; }
     .containerhope .bookmark .mark_container .mark_item a:nth-child(2) .item-box {
       margin-top: 6%; }
     .containerhope .bookmark .mark_container .mark_item a:nth-child(3) .item-box {
@@ -997,7 +994,9 @@ body {
     .containerhope .bookmark .mark_container .mark_more {
       width: 50%; }
       .containerhope .bookmark .mark_container .mark_more img {
-        width: 20%; }
+        width: 15%; }
+      .containerhope .bookmark .mark_container .mark_more a p {
+        font-size: 16px; }
     .containerhope .risk {
       margin-top: 20%;
       margin-bottom: 10px; }

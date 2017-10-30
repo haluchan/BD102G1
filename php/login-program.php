@@ -48,7 +48,6 @@ try {
 		$_SESSION["mem_mail"] = $memRow->mem_mail;
 		$_SESSION["mem_gender"] = $memRow->mem_gender;
 		$_SESSION["mem_add"] = $memRow->mem_add;
-		$_SESSION["mem_phone"] = $memRow->mem_phone;
 		$_SESSION["mem_bonus"] = $memRow->mem_bonus; 
 		$_SESSION["mem_seed"] = $memRow->mem_seed;
 		$_SESSION["mem_psw"] = $memRow->mem_psw;

@@ -124,12 +124,10 @@ try {
 			<div class="clear"></div>
 		<section class="tree">
 			<div class="tree-left">
-					<img src="src/image/event-inside-page
-				/deco-wood-01.gif" alt="">
+					<img src="src/image/event-inside-page/deco-wood-01.gif" alt="">
 			</div>
 			<div class="tree-right">
-				<img src="src/image/event-inside-page
-				/deco-wood-01.gif" alt="">
+				<img src="src/image/event-inside-page/deco-wood-01.gif" alt="">
 			</div>
 			<div class="clear"></div>
 		</section>
