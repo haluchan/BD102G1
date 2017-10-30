@@ -159,7 +159,7 @@ function sendForm(){
 		if(xhr.readyState == 4){
 			if (xhr.status == 200){
 				// console.log(xhr.responseText);
-				location.reload();
+				// location.reload();
 
 
 				//window.location.reload();
@@ -178,8 +178,10 @@ function sendForm(){
 					// });
                     // alert("歡迎回來");
 					alert(xhr.responseText);
-					$id("spanLogin").innerHTML = "<a href='php/clearSession'>登出</a>";
+					$id("spanLogin").innerHTML = "登出";
+                    $id("spanLogin").setAttribute("href","php/clearSession.php");
 					$id("lightbox-bg").style.display="none";
+                    //document.location.reload();
 					// alert(xhr.responseText);
 					
 				}

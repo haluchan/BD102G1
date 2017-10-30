@@ -53,7 +53,7 @@ ob_start();
 		</nav>
 
 
- <form action="activitySend.php" method="post" enctype="multipart/form-data">
+ <form action="activitySend.php" method="post" enctype="multipart/form-data" class="myForm">
 
 	 	<table class="activity" cellpadding="1">
 		<tr>

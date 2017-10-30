@@ -26,6 +26,7 @@ body {
   background-size: 74px auto,104px auto;
   background-position: left top 0px,right top 0px;
   padding: 8% 0 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 3; }
   .main-bg .event-row {
@@ -80,6 +81,10 @@ body {
   max-width: 1300px;
   margin: auto;
   padding: 8%;
+<<<<<<< HEAD
+=======
+  -webkit-box-sizing: border-boxs;
+>>>>>>> 2e7609631413f680eda6baa514eee752415ee940
   box-sizing: border-boxs; }
   .event-cotent .main-container {
     line-height: 60px;
@@ -93,6 +98,10 @@ body {
   max-width: 1300px;
   padding: 8% 0;
   margin: auto;
+<<<<<<< HEAD
+=======
+  -webkit-box-sizing: border-box;
+>>>>>>> 2e7609631413f680eda6baa514eee752415ee940
   box-sizing: border-box; }
   .event-map .event-row {
     max-width: 1440px;
@@ -107,6 +116,7 @@ body {
         background-color: #fff;
         border-radius: 46% 48% 53% 51%/50% 48% 51% 49%;
         line-height: 24px;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         padding: 50px 0px 80px;
         text-align: center;
@@ -166,16 +176,22 @@ body {
       width: 30%;
       margin: 20px;
       overflow: hidden;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       .event-report .event-report-main .event-report-photo img {
         width: 100%;
         border-radius: 50%;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
+        -webkit-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
         transition: all 0.3s ease-out; }
         .event-report .event-report-main .event-report-photo img:hover {
           -webkit-transform: scale(1.1, 1.1);
           -ms-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
+          -webkit-transition: all 0.3s ease-out;
+          -o-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out;
           cursor: pointer; }
 
@@ -298,6 +314,7 @@ body {
     max-width: 90%;
     margin: 10px auto;
     border-radius: 300px 273px 250px 310px / 300px 280px 250px 230px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; }
     .event-cotent .main-container {
       line-height: 32px;
@@ -322,4 +339,5 @@ body {
     width: 100%; }
     .event-report .event-report-main .event-report-photo {
       width: 36%;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box; } }
