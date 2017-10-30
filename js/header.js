@@ -34,7 +34,11 @@
 			$(function(){
 				var fixed = false;//設定fix變數 false未fixed, true已fixed
 					$(window).scroll(function () {
+<<<<<<< HEAD
+				// var scrollVal = $(this).scrollTop();
+=======
 				var scrollVal = $(this).scrollTop();
+>>>>>>> b8dd9937fd9bf4190c9cd3eb1e54a574f1e7c931
 				var adscrtop=$(".topmenu").offset().bottom;
 				var adscrtop=24;
 				if(window.innerWidth>767){ //RWD 767以下寬不動作
