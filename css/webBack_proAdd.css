@@ -94,6 +94,9 @@ nav .nav_item:nth-child(5) {
       width: 55%; }
     .myForm table tr th:nth-child(3) {
       width: 10%; }
+  .myForm .feedback {
+    font-size: 14px;
+    opacity: .7; }
   .myForm .btn {
     background-color: LemonChiffon;
     padding: 4px 6px;
