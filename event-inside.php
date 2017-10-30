@@ -11,7 +11,7 @@ session_start();
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
+<!--    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
 
  <!-- plugin -->
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
@@ -253,14 +253,14 @@ try {
 		</div>
 	</div>
 
-	
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
 <script type ="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type ="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
 
 <script type="text/javascript" src="src/libs/lightbox2-master/src/js/lightbox.js" ></script>
 
-<script type="text/javascript" src="src/libs/jquery.sweet-modal-1.3.3/min/jquery.sweet-modal.min.js"></script>
+<!--<script type="text/javascript" src="src/libs/jquery.sweet-modal-1.3.3/min/jquery.sweet-modal.min.js"></script>-->
 
 <script type="text/javascript" src="js/header.js"></script>
 
