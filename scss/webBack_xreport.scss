@@ -38,10 +38,10 @@ $cellPadding: 6px 4px;
 	}
 
     
-	.tdRow:nth-child(odd){/*基數白底，偶數灰底(第一row包th不算)*/
+	.tdRow:nth-of-type(odd){/*基數白底，偶數灰底(第一row包th不算)*/
 		background-color: #ddd;
 	}
-	.tdRow:nth-child(even){
+	.tdRow:nth-of-type(even){
 		background-color: #fff;
 	}
 	//.tdRow:nth-child(odd){/*基數白底，偶數灰底(第一row包th不算)*/

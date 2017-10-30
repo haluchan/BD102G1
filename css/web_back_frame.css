@@ -293,10 +293,11 @@ nav .select span{
 	.pages a{			
 		text-decoration: none;
 		padding:0px 2px 1px 2px;
-		color: #999;
+		color: #008000;
 	}
 	.pages a:hover{
 		color: #F29600;
+		font-weight: bold;
 	}
 	.pages a+a{
 		margin-left: 4px;
