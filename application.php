@@ -109,7 +109,7 @@
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label for="cover">封面影像</label><span>*</span></div>
-					    			<div class="td"><input type="file" name="covernouse" required></div>
+					    			<div class="td"><input type="text" name="covernouse" required></div>
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label for="txtTitle">內容標題</label><span>*</span></div>
