@@ -5,12 +5,13 @@
 	<title>BonusFarm</title>
 	<?php require_once('Header_head.php'); ?>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<link rel="stylesheet" type="text/css" href="css/bonusFarm.css">
 	<!-- js -->
 	 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	 <script type="text/javascript" src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script>
 	 <script src="js/bonusFarm.js"></script>
+	 <!-- css -->
+	 <link rel="stylesheet" type="text/css" href="css/bonusFarm.css">
 </head>
 <body>
 	<!-- 撥雲見氣球 -->
@@ -37,26 +38,25 @@
 
 
 	<div class="container">
-	<?php require_once('Header.php'); ?>
-
-
+		<!-- choose bar -->
 		<div id="id01" class="modal animate">
 			<div class="imgcontainer">
 				<div class="title"><p>種子</p> <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="item one">
-				<img src="src/image/bonusFarm/seedOne@4x.png" alt="20" class="seedFirst">
+				<img src="src/image/bonusFarm/seedOne@4x.png" alt="50" class="seedFirst">
 			</div>
 			<div class="item two">
-				<img src="src/image/bonusFarm/seedTwo@4x.png" alt="30" class="seedSecond">
+				<img src="src/image/bonusFarm/seedTwo@4x.png" alt="50" class="seedSecond">
 			</div>
 			<div class="item three">
-				<img src="src/image/bonusFarm/seedThree@4x.png" alt="40" class="seedThird">
+				<img src="src/image/bonusFarm/seedThree@4x.png" alt="50" class="seedThird">
 			</div>
 			<div class="sure"><button id="btn2">確定</button></div>
 				<div class="clearfix"></div>
 		</div>	
-		
+
+<?php require_once('Header.php'); ?>		
 	<!-- </div> -->
 		<div class="farm">
 			<div class="cloud">
@@ -75,8 +75,10 @@
 					</div>			
 				</div>
 			</div>
-				<img class="windmill_top" src="src/image/bonusFarm/windmill.png">
-				<img class="windmill_bot" src="src/image/bonusFarm/windmill2@4x.png">
+				<div class="wind">
+					<img class="windmill_top" src="src/image/bonusFarm/windmill.png">
+					<img class="windmill_bot" src="src/image/bonusFarm/windmill2@4x.png">
+				</div>
 			<div class="wallet1">
           		<img src="src/image/bonusFarm/coin_bag.png" id="wallet2" class="wallet2">
           		<div id="circle"></div>
@@ -99,17 +101,20 @@
 				<img class="tomato6" src="src/image/bonusFarm/tomato3@4x.png" alt="">
 			</div>
 			<div class="clearfix"></div>
+		<?php require_once('Footer.php'); ?>			
 		</div>
-		<?php require_once('Footer.php'); ?>	
+		
+	<div class="container2">
+	    <img src="src/image/bonusFarm/background2.png">
+	    <h2 id="sign">此菜園不支援手機版本，請移駕到桌機版本</h2>
 	</div>
-</div>
+	</div>
+
+
 		
 	<script type="text/javascript" src="js/header.js"></script>
 	<script type="text/javascript" src="js/login-ajax.js"></script>
 
-	<div class="container2">
-    <img src="src/image/bonusFarm/background2.png">
-    <h2 id="sign">此菜園不支援手機版本，請移駕到桌機版本</h2>
-	</div>
+	
 </body>
 </html>

@@ -1,5 +1,13 @@
  
 $( function() {
+    $('.seedFirst').click(function(){
+       points = $(this).attr('alt')
+       alert(points);
+    });
+    $('.seedSecond').click(function(){
+       points = $(this).attr('alt')
+       alert(points);
+    });
     $('.seedThird').click(function(){
        points = $(this).attr('alt')
        alert(points);
@@ -33,7 +41,7 @@ $( function() {
 $(document).ready(function(){
   var angle = 0;
     setInterval(function(){
-      angle+=3;
+      angle-=3;
      $(".windmill_top").rotate(angle);
 },40);
 });
