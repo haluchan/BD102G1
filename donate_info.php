@@ -38,7 +38,7 @@ session_start();
 
 
 <?php 
-<<<<<<< HEAD
+
 	$event_no = $_REQUEST['event_no'];
 	
 	if (($_SESSION['mem_no'] == null) || ($_SESSION['mem_no'] == '') ) {
@@ -48,11 +48,10 @@ session_start();
 		$mem_no = $_SESSION['mem_no'];
 		$mem_pho= $_SESSION['mem_pho'];
 	}
-=======
+
 //	$event_no = $_REQUEST['event_no'];
     $event_no = 1;
 	// $mem_no = $_SESSION['mem_no'];
->>>>>>> 4994c391f930b59efba9efa06f60ba22fcab1c8c
 	try {
 
 		require_once("php/connectGrowing_hope.php");
@@ -195,11 +194,11 @@ session_start();
 
 		<div class="content_txt col-sm-12 col-xs-12">
 			<div class=" content_img col-sm-2 col-xs-2">
-<<<<<<< HEAD
+
 				<img src="src/image/funded/<?php echo $eventRow -> event_pho ?>">
-=======
+
 				<img src="src/image/funded/<?php echo $eventRow -> event_pho;?>">
->>>>>>> 4994c391f930b59efba9efa06f60ba22fcab1c8c
+
 			</div>
 			<div class="content_item col-sm-7 col-xs-10">
 				<p class="txt"><?php echo $eventRow -> event_txt;?></p>
