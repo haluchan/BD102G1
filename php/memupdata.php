@@ -8,8 +8,8 @@ try {
 					case 0:
 					
 					$from=$_FILES["mem_pho"]["tmp_name"];// 從暫存檔路徑移至images/member資料夾中
-					$to = "../src/image/member/" ."mem_".date("md").$photoname;
-					$photonum="mem_".date("md").$photoname;
+					$to = "../src/image/member/" ."mem_".date("mdhis").$photoname;
+					$photonum="mem_".date("mdhis").$photoname;
 					
 					copy($from,$to);
 					// echo"成功";
