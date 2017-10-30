@@ -336,7 +336,7 @@ session_start();
 	<!-- 留言內容================-->
 
 	<?php 
-		$sql = "select * from growing_hope.message_event where event_no =:event_no ORDER BY `msg_date` desc" ;
+		$sql = "select * from growing_hope.message_event where event_no =:event_no and xreport_ny not in('Y') ORDER BY `msg_date` desc" ;
 		$msg = $pdo ->prepare($sql);
 		$msg->bindValue(":event_no", $event_no);
 		$msg->execute();
