@@ -56,7 +56,7 @@
 			  		<p>性別</p>
 			  		
 			  		<div class="genderinput">
-			  		<label for="male">
+			  			<label for="male">
 			  			<input type="radio" name="mem_gender" value="1" id="male">&nbsp;&nbsp;男</label>
 			  			<label for="female">
 			  			<input type="radio" name="mem_gender" value="2" id="female">&nbsp;&nbsp;女</label>
