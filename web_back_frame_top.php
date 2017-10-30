@@ -20,7 +20,7 @@
 			 		</li>
 
 
-			 		<li><a class="motherTitle" href="webBack_xreport.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">檢舉管理</a></li>
+			 		<li><a class="motherTitle" href="webBack_xreport.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">留言檢舉</a></li>
 
 
 			 		<li>
@@ -32,10 +32,10 @@
 			 		</li>
 
 
-			 		<li><a class="motherTitle" href="memberback.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">會員管理</a></li>
+			 		<li><a class="motherTitle" href="memberback.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">會員名單</a></li>
 
 
-			 		<li><a class="motherTitle" href="orderMaster.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">訂單管理</a></li>
+			 		<li><a class="motherTitle" href="orderMaster.php" class="itemClick"><img src="src/image/web_back_frame/circleWithPlus.png" id="slideButton">訂單總覽</a></li>
 
 
 			 		<li>

@@ -42,6 +42,68 @@ $(function(){
 		name:'scene 01'
 	})
 	.addTo(controller);
+//donateing=========================================
+
+	    if ($(window).width() > 768) {
+	        $('.donate_txt').addClass('don');
+	    }
+	    else{
+	    	$('.donate_txt').removeClass('don');
+	    }
+
+	
+
+	var don1 = TweenMax.staggerFromTo( '.don .don1' , 1 , {
+	    opacity : 0,
+	    x:1500
+	 }, {
+	    opacity : 1,
+	    x:0,
+	    ease: Strong.easeInOut
+	});
+	var don3 = TweenMax.staggerFromTo( '.don .don3' , 1 , {
+	    opacity : 0,
+	    x:-1500
+	 }, {
+	    opacity : 1,
+	    x:0,
+	    ease: Strong.easeInOut
+	});
+	var don2 = TweenMax.staggerFromTo( '.don .don2' , 1.5 , {
+	    opacity : 0,
+	    y:500
+	 }, {
+	    opacity : 1,
+	    y:0,
+	    ease: Strong.easeInOut
+	});
+
+
+	var scene_t = new ScrollMagic.Scene({
+		triggerElement:'#donate_ing'
+	})
+	.setTween(don1)
+	.addIndicators({
+		name:'donate_ing'
+	})
+	.addTo(controller);
+	var scene_t = new ScrollMagic.Scene({
+		triggerElement:'#donate_ing'
+	})
+	.setTween(don3)
+	.addIndicators({
+		name:'donate_ing'
+	})
+	.addTo(controller);
+
+	var scene_t = new ScrollMagic.Scene({
+		triggerElement:'#donate_ing'
+	})
+	.setTween(don2)
+	.addIndicators({
+		name:'donate_ing'
+	})
+	.addTo(controller);
 
 
 
@@ -128,6 +190,7 @@ $(function(){
 		name:'scene 01'
 	})
 	.addTo(controller);
+
 	var scene_t = new ScrollMagic.Scene({
 		triggerElement:'#trigger4',
 		duration:0,

@@ -12,9 +12,9 @@
  <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
  <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
 <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-
+<!-- 自己的js -->
 <script src="js/product.js"></script>
-
+<!-- css們 -->
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css">
 <link rel="stylesheet" type="text/css" href="src/libs/font-awesome/css/font-awesome.min.css">
@@ -54,8 +54,11 @@
                                 limit     0,8;";
 
                         $product = $pdo->query($sql);
-                        
+                        //$isEight用來計算跑了幾個資料，不滿八個要自動用完售補滿
+                        $isEight =0;
                         while ( $proRow = $product->fetchObject() ) {
+                            $isEight++;
+
                             $pro_no     = $proRow ->pro_no;
                             $pro_type   = $proRow ->pro_type;
                             $pro_realno = $proRow ->pro_realno;
@@ -65,6 +68,7 @@
                             $pro_status = $proRow ->pro_status;
                             $pro_pho    = $proRow ->pro_pho;
                             $pro_info   = $proRow ->pro_info;
+                            // echo $isEight;
 
                             // echo $pro_no.$pro_type.$pro_realno.$pro_name .$pro_price.$pro_status.$pro_pho.$pro_info."<br>";
 
@@ -103,7 +107,17 @@
         
                 </li>
 				<?php
-                        }                       
+                        }
+                        if ( $isEight<8 ) {
+                            for( $e = 0; $e<(8-$isEight) ; $e++){
+                ?>
+
+                                <li class="pro_s_each">
+                                    <div class="pro_s_img"><img src="src/image/product/pro-soldOut.png" alt=""></div>
+                                </li>
+                <?php
+                            }
+                        }               
                 ?>
 
                 <!-- 手機版的種子資訊，蓋全版，透過js抽換資料 -->

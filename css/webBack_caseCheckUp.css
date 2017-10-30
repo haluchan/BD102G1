@@ -120,8 +120,8 @@ textarea {
 
 .data_info {
   width: 960px;
-  background-color: #eef;
-  margin-left: 30%;
+  background-image: url("../src/image/cart/cart-bg.png");
+  margin-left: 10%;
   margin-bottom: 10%; }
   .data_info .case_title {
     text-align: center;
@@ -133,7 +133,8 @@ textarea {
       width: 100%;
       text-align: center;
       line-height: 1;
-      color: #362e2b; }
+      color: #362e2b;
+      box-sizing: border-box; }
     .data_info .case_title h3 {
       text-align: center; }
       .data_info .case_title h3 input {
@@ -233,20 +234,19 @@ textarea {
       font-size: 16px;
       text-align: center;
       color: #00561f; }
-  .data_info nav {
-    width: 100%; }
-    .data_info nav ul {
-      background-color: #f1ece4; }
-      .data_info nav ul li {
-        display: inline-block;
-        float: left;
-        padding: 1% 4.5%;
-        color: #59493f; }
-        .data_info nav ul li.donate_nav {
-          float: right;
-          padding: 1% 12%;
-          background-color: #59493f;
-          color: #fff; }
+  .data_info .navv {
+    width: 100%;
+    background-color: #f1ece4; }
+    .data_info .navv ul li {
+      display: inline-block;
+      float: left;
+      padding: 1% 4.5%;
+      color: #59493f; }
+      .data_info .navv ul li.donate_nav {
+        float: right;
+        padding: 1% 12%;
+        background-color: #59493f;
+        color: #fff; }
   .data_info .case_content {
     width: 100%;
     margin-bottom: 5%; }

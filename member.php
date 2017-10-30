@@ -22,8 +22,7 @@ session_start();
 		$eve=$_SESSION["mem_no"];
 		if( isset($_SESSION["mem_no"]) === false){
   		$_SESSION["where"] = $_SERVER["PHP_SELF"];
-  		//echo "尚未登入，請<a href='cart_Login.html'>登入</a>";
-  		echo "<script>alert('還沒登入喔');window.history.go(-1);</script>";
+  		echo "<script>alert('還沒登入喔');location=history.back(-1);</script>";
 }else{
 		try {
 
@@ -84,7 +83,8 @@ session_start();
 				<table>					
 					<thead>
 						<tr>
-							<img src="src/image/member/<?php echo $_SESSION['mem_pho'];?>.png" alt="">
+							<div class="pho">
+							<img src="src/image/member/<?php echo $_SESSION['mem_pho'];?>" alt="">	</div>
 						</tr>
 					</thead>
 					<tbody>
