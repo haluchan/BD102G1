@@ -246,15 +246,15 @@ function $qsa(qsa){
 	      //做事情
 	      triggerElement: "#trigger1",
 	      offset: 500,
-	      duration: 150
+	      duration: 180
 	      // reverse: true
 	      // reverse: 預設值true，會倒帶顯示; false動畫只跑一次 
 	    })
 	    .setTween(cartTweenPc)
-	    .addIndicators({
-	            name: 'cart'
-	        })
-	   .addTo(controllerPc);
+	   //  .addIndicators({
+	   //          name: 'cart'
+	   //      })
+	    .addTo(controllerPc);
 	}
 
 	function proScrollCartMobile(){
