@@ -412,52 +412,16 @@ session_start();
 <script type="text/javascript">
 
 	$(function(){
-		$('.want').click(function(){
-			if (<?php echo $mem_no; ?> == 99) {
-				alert('請登入!');
-				var spanLogin = $id("spanLogin");
-				var lightboxbg= $id("lightbox-bg");
-				if(spanLogin.innerHTML == "註冊/登入"){
-					lightboxbg.style.display = "block";
-					lightboxbg.style.opacity = '1';
-					// lightboxbg.style.transition = "all , 1s";
-
-
-				}else{
-					spanLogin.innerHTML = "註冊/登入";
-					$id("memMail").value="";
-					$id("memPsw").value="";
-				}
-			}
-
-		});
+		
 
 
 		$('.want_donate').click(function(){
-			if (<?php echo $mem_no; ?> == 99) {
-				alert('請登入!');
-				var spanLogin = $id("spanLogin");
-				var lightboxbg= $id("lightbox-bg");
-				if(spanLogin.innerHTML == "註冊/登入"){
-					lightboxbg.style.display = "block";
-					lightboxbg.style.opacity = '1';
-					// lightboxbg.style.transition = "all , 1s";
-
-
-				}else{
-					spanLogin.innerHTML = "註冊/登入";
-					$id("memMail").value="";
-					$id("memPsw").value="";
-				}
-			}else{
-				$('.donate_form').submit();
-			}
-			
+			$('.donate_form').submit();
 		});
 
 		$('.msg').click(function(){
 
-			if (<?php echo $mem_no; ?> == 99) {
+			if (<?php if (isset($_SESSION['mem_no'])==false){ echo 99;}else{echo $_SESSION['mem_no']; } ?> == 99) {
 				alert('請登入!');
 				var spanLogin = $id("spanLogin");
 				var lightboxbg= $id("lightbox-bg");
@@ -559,7 +523,7 @@ session_start();
 
 
 		$(".date").click(function(){
-			if (<?php echo $mem_no; ?> == 99) {
+			if (<?php if (isset($_SESSION['mem_no'])==false){ echo 99;}else{echo $_SESSION['mem_no']; } ?> == 99) {
 				alert('請登入!');
 				var spanLogin = $id("spanLogin");
 				var lightboxbg= $id("lightbox-bg");
@@ -591,7 +555,7 @@ session_start();
 		$('.rexport_check').click(function(){
 			var rexportObj = {};
 			rexportObj.msg_no = msg_no;
-			rexportObj.xmem_no = <?php echo $mem_no; ?>;
+			rexportObj.xmem_no = <?php if (isset($_SESSION['mem_no'])==false){ echo 99;}else{echo $_SESSION['mem_no']; } ?>;
 			rexportObj.x_txt = $("input[name='report_ans']").val();
 
 
