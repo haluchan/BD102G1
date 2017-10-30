@@ -33,9 +33,9 @@ session_start();
 <?php 
 
 	$mem_no =$_SESSION['mem_no'];
-	$mem_name = $_SESSION['mem_name'];	
-	$mem_tel = $_SESSION['mem_tel'];
-	$mem_add = $_SESSION['mem_add'];	
+	// $mem_name = $_SESSION['mem_name'];	
+	// $mem_tel = $_SESSION['mem_tel'];
+	// $mem_add = $_SESSION['mem_add'];	
 	$event_no = $_REQUEST['event_no'];
 	$dona_price = $_REQUEST['dona_price'];
 	try{
@@ -208,12 +208,15 @@ require_once('Footer.php');  ?>
 
 <script type="text/javascript">
 
+	
+
+
 	$('#pay_now').click(function(){
 		
 
 		var donateObj = {};
 			donateObj.event_no = <?php echo $event_no; ?> ;
-			donateObj.mem_no = <?php echo $mem_no; ?>;
+			donateObj.mem_no = <?php if (isset($_SESSION['mem_no'])==false){ echo 99;}else{echo $_SESSION['mem_no']; } ?>;
 			donateObj.dona_price = $('.order_sum').val();
 			donateObj.payway = $("input[name='dona_payway']:checked").val();
 			donateObj.dona_name = $("input[name='dona_name']").val();
@@ -243,6 +246,31 @@ require_once('Footer.php');  ?>
 
 
 	});
+	$('#button_x').click(function(){
+		history.back();
+
+	});
+
+	$( document ).ready(function() {
+		if (<?php if (isset($_SESSION['mem_no'])==false){ echo 99;}else{echo $_SESSION['mem_no'];}?> == 99) {
+				var spanLogin = $id("spanLogin");
+				var lightboxbg= $id("lightbox-bg");
+				if(spanLogin.innerHTML == "註冊/登入"){
+					lightboxbg.style.display = "block";
+					lightboxbg.style.opacity = '1';
+					// lightboxbg.style.transition = "all , 1s";
+
+
+				}else{
+					spanLogin.innerHTML = "註冊/登入";
+					$id("memMail").value="";
+					$id("memPsw").value="";
+				}
+		}
+	   
+	});
+
+
 	
 
 

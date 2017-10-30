@@ -125,9 +125,12 @@
 	.pho{
 		border-radius: 50%;
 		overflow: hidden;
-		width:135px;
-		height: 135px;
+		width:10vw;
+		/* height: 135px; */
 		margin: 0 auto;
+	}
+	.pho img{
+		width: 10vw;
 	}
 
 	.bigtitle{

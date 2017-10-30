@@ -16,9 +16,12 @@
 	.photo{
 		border-radius: 50%;
 		overflow: hidden;
-		width:135px;
-		height: 135px;
+		width:10vw;
+	
 		margin: 0 auto;
+	}
+	.photo img{
+		width: 10vw;
 	}
 	.titlebg img{
 		width: 100%;
