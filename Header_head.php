@@ -14,6 +14,6 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/sign.css" >
 	<link rel="stylesheet" type="text/css" href="css/login.css" >
-	<link rel="stylesheet" type="text/css" href="CSS/headerFooter.css">
+	<link rel="stylesheet" type="text/css" href="CSS/headerFooter.css" >
 
 	

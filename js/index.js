@@ -24,9 +24,10 @@ $(function(){
 	// new一個scrollmagic物件
 	var controller = new ScrollMagic.Controller();
 	//tweenmax.fromto(目標物件,時間)用法
-	var tween_1 = TweenMax.staggerFromTo( '.donate_title .title' , 1 , {
+//--
+	var tween_1 = TweenMax.staggerFromTo( '.donate_title .title' , .8 , {
 	    opacity : 0,
-	    y:-150
+	    y:-650
 	 }, {
 	    opacity : 1,
 	    y:0,
@@ -38,10 +39,12 @@ $(function(){
 		offset:100
 	})
 	.setTween(tween_1)
-	.addIndicators({
-		name:'scene 01'
-	})
+	// .addIndicators({
+	// 	name:'scene 01'
+	// })
 	.addTo(controller);
+//--
+
 //donateing=========================================
 
 	    if ($(window).width() > 768) {
@@ -52,7 +55,7 @@ $(function(){
 	    }
 
 	
-
+//--
 	var don1 = TweenMax.staggerFromTo( '.don .don1' , 1 , {
 	    opacity : 0,
 	    x:1500
@@ -83,32 +86,32 @@ $(function(){
 		triggerElement:'#donate_ing'
 	})
 	.setTween(don1)
-	.addIndicators({
-		name:'donate_ing'
-	})
+	// .addIndicators({
+	// 	name:'donate_ing'
+	// })
 	.addTo(controller);
 	var scene_t = new ScrollMagic.Scene({
 		triggerElement:'#donate_ing'
 	})
 	.setTween(don3)
-	.addIndicators({
-		name:'donate_ing'
-	})
+	// .addIndicators({
+	// 	name:'donate_ing'
+	// })
 	.addTo(controller);
 
 	var scene_t = new ScrollMagic.Scene({
 		triggerElement:'#donate_ing'
 	})
 	.setTween(don2)
-	.addIndicators({
-		name:'donate_ing'
-	})
+	// .addIndicators({
+	// 	name:'donate_ing'
+	// })
 	.addTo(controller);
 
-
+//--
 
 // activity_title==========================================================================
-
+//--
 	var tween_2 = TweenMax.staggerFromTo( '.activity_title h1' ,1,{
 	    opacity : 0,
 	    y:-150
@@ -156,9 +159,9 @@ $(function(){
 		offset:100
 	})
 	.setTween(tween_2)
-	.addIndicators({
-		name:'scene 01'
-	})
+	// .addIndicators({
+	// 	name:'scene 01'
+	// })
 	.addTo(controller);
 	var scene_t = new ScrollMagic.Scene({
 		triggerElement:'#trigger4',
@@ -166,9 +169,9 @@ $(function(){
 		offset:100
 	})
 	.setTween(tween_3)
-	.addIndicators({
-		name:'scene 01'
-	})
+	// .addIndicators({
+	// 	name:'scene 01'
+	// })
 	.addTo(controller);
 	var scene_t = new ScrollMagic.Scene({
 		triggerElement:'#trigger4',
@@ -176,9 +179,9 @@ $(function(){
 		offset:100
 	})
 	.setTween(tween_4)
-	.addIndicators({
-		name:'scene 01'
-	})
+	// .addIndicators({
+	// 	name:'scene 01'
+	// })
 	.addTo(controller);
 	var scene_t = new ScrollMagic.Scene({
 		triggerElement:'#trigger4',
@@ -186,9 +189,9 @@ $(function(){
 		offset:100
 	})
 	.setTween(tween_5)
-	.addIndicators({
-		name:'scene 01'
-	})
+	// .addIndicators({
+	// 	name:'scene 01'
+	// })
 	.addTo(controller);
 
 	var scene_t = new ScrollMagic.Scene({
@@ -197,21 +200,30 @@ $(function(){
 		offset:100
 	})
 	.setTween(tween_6)
-	.addIndicators({
-		name:'scene 01'
-	})
+	// .addIndicators({
+	// 	name:'scene 01'
+	// })
 	.addTo(controller);
+//--
+
 
 	$('header').addClass('db');
 
-	$(window).bind('scroll', function () {
-	    if ($(window).scrollTop() < 667) {
-	        $('header').addClass('db');
+	$(window).scroll(function () {
+	    if ($(window).scrollTop() > 24) {
+	        // $('header').addClass('db');
+	        $('header').removeClass('db');
+	       
+	       
 	    }
 	    else{
-	    	$('header').removeClass('db');
+
+	    	// $('header').removeClass('db');
+	    	$('header').addClass('db');
 	    }
 	});
+
+
 
 //=========================================
 
