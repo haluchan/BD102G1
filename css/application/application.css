@@ -131,6 +131,8 @@ body {
             text-align: left; }
           .container form .stepContent .table .tr .td.plant {
             text-align: left; }
+            .container form .stepContent .table .tr .td.plant label {
+              font-size: 14px; }
           .container form .stepContent .table .tr .td label {
             font-size: 18px; }
           .container form .stepContent .table .tr .td input {

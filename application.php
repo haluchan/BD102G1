@@ -125,15 +125,23 @@
 					    		</div>
 					    		<div class="tr">
 					    			<div class="td"><label>主要生產作物</label><span>*</span></div>
-									<div class="td plant">
-										<input type="checkbox" name="plant[]" value="1" class="plant">西瓜
-										<input type="checkbox" name="plant[]" value="2" class="plant">茄子
-										<input type="checkbox" name="plant[]" value="3" class="plant">番茄
-										<input type="checkbox" name="plant[]" value="4" class="plant">紅蘿蔔
-										<input type="checkbox" name="plant[]" value="5" class="plant">馬鈴薯
-										<input type="checkbox" name="plant[]" value="6" class="plant">青江菜
-										<input type="checkbox" name="plant[]" value="7" class="plant">南瓜
-										<input type="checkbox" name="plant[]" value="8" class="plant">高麗菜
+									<div class="td plant">		
+											<div>
+												<label><input type="checkbox" name="plant[]" value="1" class="plant">西瓜</label>
+												<label><input type="checkbox" name="plant[]" value="5" class="plant">馬鈴薯</label>
+											</div>
+											<div>
+												<label><input type="checkbox" name="plant[]" value="3" class="plant">番茄</label>
+												<label><input type="checkbox" name="plant[]" value="4" class="plant">紅蘿蔔</label>
+											</div>
+											<div>
+												<label><input type="checkbox" name="plant[]" value="2" class="plant">茄子</label>
+												<label><input type="checkbox" name="plant[]" value="6" class="plant">青江菜</label>
+											</div>
+											<div>
+												<label><input type="checkbox" name="plant[]" value="7" class="plant">南瓜</label>
+												<label><input type="checkbox" name="plant[]" value="8" class="plant">高麗菜</label>
+											</div>	
 									</div>
 					    		</div>
 					    		<div class="tr">
