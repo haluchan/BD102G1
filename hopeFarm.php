@@ -197,7 +197,7 @@ while( $eventRow = $event->fetchObject()){
 	$width = floor ($totalPrice/$price_allow * 99) . "%";
 // 
 ?>
-				<a href="#">
+				<a href="donate_info.php?event_no=<?php  echo $eventRow->event_no;?>">
 					<div class="item-box col-sm-4 col-xs-12  col-lg-4"  id="doing">
 						<div class="item-box-shadow">
 							<div class="box-img">
@@ -266,7 +266,7 @@ while( $eventRow = $event->fetchObject()){
 	//echo $event_enddate."<br>".$event_deadline;
 // 
 ?>
-				<a href="#">
+				<a href="donate_info.php?event_no=<?php  echo $eventRow->event_no;?>">
 					<div class="item-box  col-sm-4 col-xs-12 col-lg-4" id="end">
 						<div class="item-box-shadow">
 							<div class="box-img">
@@ -340,7 +340,7 @@ while( $eventRow = $event->fetchObject()){
 	$width = floor ($totalPrice/$price_allow * 99) . "%";
 // 
 ?>
-				<a href="#">
+				<a href="donate_info.php?event_no=<?php  echo $eventRow->event_no;?>">
 					<div class="item-box  col-sm-4 col-xs-12 col-lg-4" id="sucess">
 						<div class="item-box-shadow">
 							<div class="box-img">
@@ -400,7 +400,7 @@ while( $eventRow = $event->fetchObject()){
 	$width = floor ($totalPrice/$price_allow * 99) . "%";
 // 
 ?>
-				<a href="#">
+				<a href="donate_info.php?event_no=<?php  echo $eventRow->event_no;?>">
 					<div class="item-box  col-sm-4 col-xs-12 col-lg-4" id="now">
 						<div class="item-box-shadow">
 							<div class="box-img">
