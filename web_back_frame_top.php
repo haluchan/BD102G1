@@ -5,7 +5,7 @@
 			 	
 			 	<ol>
 			 		<!-- logo -->
-			 		<li><img src="src/image/web_back_frame/logo.png"></li>
+			 		<li><a href="webBack_welcome.php"><img src="src/image/web_back_frame/logo.png"></a></li>
 
 
 			 		<li>
