@@ -93,7 +93,7 @@
 
 
 		<div class="role"> <!-- role開始 -->
-			<div id="trigger3"></div>
+			
 			<div class="role_word">
 				<div class="roleTitle"><h2>必備元素</h2></div>
 			</div>	
@@ -128,7 +128,8 @@
 					<p>微生物對魚排泄物進行分解，為植物提供養分。即硝化菌，在有氧的環境下將氨轉化成硝酸鹽，是在魚菜共生系統中最重要的功能之一。</p>
 				</div></div>
 				
-			</div>	
+			</div>
+			<div id="trigger3"></div>	
 		</div> <!-- role結束 -->
 
 

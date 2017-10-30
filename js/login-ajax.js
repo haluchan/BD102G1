@@ -78,7 +78,6 @@ function sendReset(){
 			if(xhr.status == 200){
 				console.log(xhr.responseText);
 
-
 				if(xhr.responseText == "error"){
 					// swal({
 					// 		  icon: "error",
@@ -90,7 +89,8 @@ function sendReset(){
 					alert("密碼已發送至信箱");
 					document.location.href="index.php";
 				}
-				browser.reload();
+
+				window.location.reload();
 			}else{
 				alert(xhr.status);
 			}
@@ -159,20 +159,26 @@ function sendForm(){
 		if(xhr.readyState == 4){
 			if (xhr.status == 200){
 				// console.log(xhr.responseText);
+				location.reload();
+
+
+				//window.location.reload();
+
 				if(xhr.responseText=="error"){
-					$.sweetModal({
-						content: '帳號密碼錯誤',
-						icon: $.sweetModal.ICON_ERROR
-					});
-					// alert("帳號密碼錯誤");
+					// $.sweetModal({
+					// 	content: '帳號密碼錯誤',
+					// 	icon: $.sweetModal.ICON_ERROR
+					// });
+					alert("帳號密碼錯誤");
 				}else{
 					// $id("memName").innerHTML = xhr.responseText;
-					$.sweetModal({
-						content:'歡迎回來',
-						icon: $.sweetModal.ICON_SUCCESS
-					});
-					// alert(xhr.responseText,+"歡迎回來");
-					$id("spanLogin").innerHTML = "登出";
+					// $.sweetModal({
+					// 	content:'歡迎回來',
+					// 	icon: $.sweetModal.ICON_SUCCESS
+					// });
+                    // alert("歡迎回來");
+					alert(xhr.responseText);
+					$id("spanLogin").innerHTML = "<a href='php/clearSession'>登出</a>";
 					$id("lightbox-bg").style.display="none";
 					// alert(xhr.responseText);
 					

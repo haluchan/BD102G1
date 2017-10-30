@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>BonusFarm</title>
+	 <link rel="stylesheet" type="text/css" href="css/bonusFarm.css">
 	<?php require_once('Header_head.php'); ?>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<!-- js -->
@@ -10,8 +11,6 @@
 	 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	 <script type="text/javascript" src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script>
 	 <script src="js/bonusFarm.js"></script>
-	 <!-- css -->
-	 <link rel="stylesheet" type="text/css" href="css/bonusFarm.css">
 </head>
 <body>
 	<!-- 撥雲見氣球 -->
@@ -70,7 +69,7 @@
 				<div class="tutorial">
 					<img src="src/image/bonusFarm/dialog2.png">
 					<div class="content">
-						<p>選擇蔬果，賺取紅利點數</p>
+						<p>選擇蔬果，將種子拖曳到田中，賺取點數</p>
 						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="btn1">我知道了</button>
 					</div>			
 				</div>

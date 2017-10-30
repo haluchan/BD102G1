@@ -44,12 +44,14 @@
  		// 驗證申請資助表單value格式
 
  		//身分證字號須為正確格式(引進函式)
- 		$('#idno').blur(function(){
- 			var id=$(this).val().length;
- 			if(id==0  || id <10){
- 				$(this).css("border-color","rgba(253,13,77,0.7)");
- 				alert("是不是漏填");
- 			}	
+ 		$('#nameApply').blur(function(){
+ 			var name=$(this).val().length;
+ 			if( name >10){
+ 				// $(this).css("border-color","rgba(253,13,77,0.7)");
+ 				alert("限10個字唷");
+ 				// $(this).focus();
+        // return;
+      }
  		});
 
  		//申請金額需全為數字

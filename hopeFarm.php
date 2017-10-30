@@ -197,7 +197,7 @@ while( $eventRow = $event->fetchObject()){
 	$width = floor ($totalPrice/$price_allow * 99) . "%";
 // 
 ?>
-				<a href="#">
+				<a href="donate_info.php?event_no=<?php  echo $eventRow->event_no;?>">
 					<div class="item-box col-sm-4 col-xs-12  col-lg-4"  id="doing">
 						<div class="item-box-shadow">
 							<div class="box-img">
@@ -235,7 +235,7 @@ while( $eventRow = $event->fetchObject()){
 				<div class="mark_more">
 					<img src="src/image/hopeFarm/frog.png" alt="">
 					<a href="#">
-						<h3>查看更多</h3>
+						<p>查看更多</p>
 					</a>
 				</div>
 			</div>
@@ -266,7 +266,7 @@ while( $eventRow = $event->fetchObject()){
 	//echo $event_enddate."<br>".$event_deadline;
 // 
 ?>
-				<a href="#">
+				<a href="donate_info.php?event_no=<?php  echo $eventRow->event_no;?>">
 					<div class="item-box  col-sm-4 col-xs-12 col-lg-4" id="end">
 						<div class="item-box-shadow">
 							<div class="box-img">
@@ -302,7 +302,7 @@ while( $eventRow = $event->fetchObject()){
 				<div class="mark_more">
 					<img src="src/image/hopeFarm/frog.png" alt="">
 					<a href="#">
-						<h3>查看更多</h3>
+						<p>查看更多</p>
 					</a>
 				</div>
 			</div>
@@ -340,7 +340,7 @@ while( $eventRow = $event->fetchObject()){
 	$width = floor ($totalPrice/$price_allow * 99) . "%";
 // 
 ?>
-				<a href="#">
+				<a href="donate_info.php?event_no=<?php  echo $eventRow->event_no;?>">
 					<div class="item-box  col-sm-4 col-xs-12 col-lg-4" id="sucess">
 						<div class="item-box-shadow">
 							<div class="box-img">
@@ -376,7 +376,7 @@ while( $eventRow = $event->fetchObject()){
 				<div class="mark_more">
 					<img src="src/image/hopeFarm/frog.png" alt="">
 					<a href="#">
-						<h3>查看更多</h3>
+						<p>查看更多</p>
 					</a>
 				</div>
 			</div>
@@ -400,7 +400,7 @@ while( $eventRow = $event->fetchObject()){
 	$width = floor ($totalPrice/$price_allow * 99) . "%";
 // 
 ?>
-				<a href="#">
+				<a href="donate_info.php?event_no=<?php  echo $eventRow->event_no;?>">
 					<div class="item-box  col-sm-4 col-xs-12 col-lg-4" id="now">
 						<div class="item-box-shadow">
 							<div class="box-img">
@@ -436,7 +436,7 @@ while( $eventRow = $event->fetchObject()){
 				<div class="mark_more">
 					<img src="src/image/hopeFarm/frog.png" alt="">
 					<a href="#">
-						<h3>查看更多</h3>
+						<p>查看更多</p>
 					</a>
 				</div>
 	</div>
@@ -491,7 +491,7 @@ while( $eventRow = $event->fetchObject()){
 
 			 
 			//var width=inside_bar[i].width;
-			console.log(inside_bar[i])
+			//console.log(inside_bar[i])
 			var bar_run =new TimelineMax();
 			bar_run.staggerFromTo(inside_bar[i],5,{
 				width:0,

@@ -34,6 +34,10 @@ ul{
 header{
 	width:100%;
 	transition:all 1s ease;
+	// position:fixed;
+	// 	top:0;
+	// 	z-index: 999;
+
 	.topmenu{
 		width:100%;
 		background-color:#699c33;
@@ -135,7 +139,7 @@ header{
 				}
 				
 				.ham_main{
-					margin: 50px 0 ;
+					margin: 40px 0 30px ;
 					li{
 						font-size:20px;
 						font-weight:bold;
@@ -174,21 +178,21 @@ header{
 				}
 				
 				li{
-					width:35%;
+					width:40%;
 					display:inline-block;
 					text-align:center;
 					box-sizing:border-box;
 					padding:2% 2% 1%;
 					a{
 						color:#43612f;
-						font-size:14px;
+						font-size:18px;
 						font-weight:bold;
 						display:block;
 						.circle{
 							// background-color:transparent;
 							border:3px solid transparent;
 							border-radius:50%;
-							width:40%;
+							width:45%;
 							margin:auto;
 							
 							path {

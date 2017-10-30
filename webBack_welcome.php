@@ -33,12 +33,12 @@ if($_SESSION['adminName'] == ''){
 
 	<div>
 		<?php
-			try {
-				require_once("php/connectGrowing_hope.php");
-				$sql = "select *,lpad(pro_no, 3, 0) pro_realNo 
-						from product 
-						where pro_no = " . $pro_no . ";";
-				$product = $pdo->query($sql);
+			// try {
+			// 	require_once("php/connectGrowing_hope.php");
+			// 	$sql = "select *,lpad(pro_no, 3, 0) pro_realNo 
+			// 			from product 
+			// 			where pro_no = " . $pro_no . ";";
+			// 	$product = $pdo->query($sql);
 			//新進案件event_status
 			//新進回報
 
