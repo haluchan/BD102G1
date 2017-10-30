@@ -172,6 +172,7 @@ body{
 						}
 						&.plant{
 							text-align:left;
+							label{font-size:14px;}
 						}
 						label{
 							font-size:18px;
@@ -198,12 +199,14 @@ body{
 						    }
 						    &.plant{
 						    	width:20%;
+						    	
 						    }   	
 						}
 						textarea{
 							background-color: rgba(255, 255, 255, .9);
 							outline: none;
-							border: none;
+							// border: none;
+							border: 1px solid #759944;
 							border-radius: 6px;
 							resize: none;
 							font-size: 16px;

@@ -25,10 +25,10 @@ session_start();
 
 
 
- <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
-    <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-    <script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> 
-    <!-- //scrollmagic 要拿掉滾動的名字 要跟ＪＳ另一個function 一起隱藏  -->
+<script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+<script type="text/javascript" src="src/libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+<!-- //scrollmagic 要拿掉滾動的名字 要跟ＪＳ另一個function 一起隱藏  -->
     <link href="css/event-inside.css" rel="stylesheet">
 
 <?php require_once("Header_head.php"); ?>
@@ -124,12 +124,10 @@ try {
 			<div class="clear"></div>
 		<section class="tree">
 			<div class="tree-left">
-					<img src="src/image/event-inside-page
-				/deco-wood-01.gif" alt="">
+					<img src="src/image/event-inside-page/deco-wood-01.gif" alt="">
 			</div>
 			<div class="tree-right">
-				<img src="src/image/event-inside-page
-				/deco-wood-01.gif" alt="">
+				<img src="src/image/event-inside-page/deco-wood-01.gif" alt="">
 			</div>
 			<div class="clear"></div>
 		</section>

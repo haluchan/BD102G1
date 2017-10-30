@@ -1,8 +1,12 @@
+<?php
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
-	<title>後台::訂單明細</title>
+	<title>後台::查看報名</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
 	<!-- 不准動的部分，以下三行 -->
@@ -16,25 +20,9 @@
 <?php require_once('web_back_frame_top.php') ?>
 <nav>
 			
-			<div class="nav_item">
+			<div class="nav_item pageTitle">
 
 				<h2>查看報名</h2>
-			</div>
-			<div class="nav_item">
-				<!-- <span>狀態：</span>
-				<select>
-					<option value="">不限</option>
-					<option value="">不限</option>
-					<option value="">不限</option>
-				</select> -->
-			</div>
-			<div class="nav_item">
-				<span>分類：</span>
-				<select>
-					<option value="">訂單編號</option>
-					<option value="">不限</option>
-					<option value="">不限</option>
-				</select>
 			</div>
 			<div class="nav_item">
 				<div class="search">
@@ -43,6 +31,22 @@
 					<button><img src="src/image/web_back_frame/seaech.png"></button>
 				<!-- 	<button><img src="src/image/web_back_frame/erase.png"></button> -->
 				</div>
+			</div>
+			<div class="nav_item select">
+				<!-- <span>狀態：</span>
+				<select>
+					<option value="">不限</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select> -->
+			</div>
+			<div class="nav_item select">
+				<span>分類：</span>
+				<select>
+					<option value="">訂單編號</option>
+					<option value="">不限</option>
+					<option value="">不限</option>
+				</select>
 			</div>
 			<div class="clearfix"></div>
 		</nav>
@@ -109,17 +113,17 @@
 ?>	  
 </table>
 </form>
-<div style="display:compact;text-align:center">
+<div style="display:compact;text-align:center" class="pages">
 <?php
 //印可連結的頁數資料
 echo "<a href='?pageNo=1'>第一頁</a>&nbsp";
 for($i=1; $i <= $totalPage;$i++){
   if($i==$pageNo)
-    echo "<a href='?pageNo=$i' style='color:deepPink'>",$i,"</a>&nbsp&nbsp";
+    echo "<a href='?pageNo=$i' style='color:#F29600;border-bottom:1px solid #F29600;'>",$i,"</a>&nbsp&nbsp";
   else
     echo "<a href='?pageNo=$i'>",$i,"</a>&nbsp&nbsp";
 }
-echo "<a href='?pageNo=$totalPage'>最後一頁</a>&nbsp";
+echo "<a href='?pageNo=$totalPage'>最末頁</a>&nbsp";
 ?>
 </div>
 <?php require_once('web_back_frame_bottom.php') ?>

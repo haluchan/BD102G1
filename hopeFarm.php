@@ -235,7 +235,7 @@ while( $eventRow = $event->fetchObject()){
 				<div class="mark_more">
 					<img src="src/image/hopeFarm/frog.png" alt="">
 					<a href="#">
-						<h3>查看更多</h3>
+						<p>查看更多</p>
 					</a>
 				</div>
 			</div>
@@ -302,7 +302,7 @@ while( $eventRow = $event->fetchObject()){
 				<div class="mark_more">
 					<img src="src/image/hopeFarm/frog.png" alt="">
 					<a href="#">
-						<h3>查看更多</h3>
+						<p>查看更多</p>
 					</a>
 				</div>
 			</div>
@@ -376,7 +376,7 @@ while( $eventRow = $event->fetchObject()){
 				<div class="mark_more">
 					<img src="src/image/hopeFarm/frog.png" alt="">
 					<a href="#">
-						<h3>查看更多</h3>
+						<p>查看更多</p>
 					</a>
 				</div>
 			</div>
@@ -436,7 +436,7 @@ while( $eventRow = $event->fetchObject()){
 				<div class="mark_more">
 					<img src="src/image/hopeFarm/frog.png" alt="">
 					<a href="#">
-						<h3>查看更多</h3>
+						<p>查看更多</p>
 					</a>
 				</div>
 	</div>
@@ -491,7 +491,7 @@ while( $eventRow = $event->fetchObject()){
 
 			 
 			//var width=inside_bar[i].width;
-			console.log(inside_bar[i])
+			//console.log(inside_bar[i])
 			var bar_run =new TimelineMax();
 			bar_run.staggerFromTo(inside_bar[i],5,{
 				width:0,
