@@ -1,9 +1,12 @@
 <?php
 session_start();
 ob_start();
-$_SESSION['adminName'] = $_SESSION['signInInfo'];
-$_SESSION['signInInfo'] = '';
-$_SESSION['signInDate'] =  date ("Y-m-d H:i:s" , mktime(date('H')+8, date('i'), date('s'), date('m'), date('d'), date('Y')));
+if($_SESSION['adminName'] == ''){
+	$_SESSION['adminName'] = $_SESSION['signInInfo'];
+	$_SESSION['signInInfo'] = '';
+	$_SESSION['signInDate'] =  date ("Y-m-d H:i:s" , mktime(date('H')+8, date('i'), date('s'), date('m'), date('d'), date('Y')));
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="UTF-8">
@@ -23,38 +26,36 @@ $_SESSION['signInDate'] =  date ("Y-m-d H:i:s" , mktime(date('H')+8, date('i'), 
 	<nav>
 				
 		<div class="nav_item pageTitle">
-			<h2>即刻菜園::後台很硬</h2>
-		</div>
-
-		<!-- <div class="nav_item ">
-			<div class="search">
-				<input type="text" name="" placeholder="搜尋">
-
-				<button><img src="src/image/web_back_frame/seaech.png"></button>
-				<button><img src="src/image/web_back_frame/erase.png"></button>
-			</div>
-		</div>
-		
-		<div class="nav_item select">
-			<span>類別：</span>
-			<select>
-				<option value="">不限</option>
-				<option value="">不限</option>
-				<option value="">不限</option>
-			</select>
-		</div>
-		<div class="nav_item select">
-			<span>類別：</span>
-			<select>
-				<option value="">全部</option>
-				<option value="">種子</option>
-				<option value="">魚缸</option>
-			</select>
-		</div> -->
-		
+			<h2>即刻菜園::新進資料</h2>
+		</div>		
 		<div class="clearfix"></div>
 	</nav>
 
+	<div>
+		<?php
+			try {
+				require_once("php/connectGrowing_hope.php");
+				$sql = "select *,lpad(pro_no, 3, 0) pro_realNo 
+						from product 
+						where pro_no = " . $pro_no . ";";
+				$product = $pdo->query($sql);
+			//新進案件event_status
+			//新進回報
+
+
+			//昨日(今日)募資截止
+			//昨日(今日)結案
+
+
+		//昨日活動截止(今日活動截止)
+
+		//未出貨訂單order_status
+
+		//未審核檢舉
+
+
+		?>
+	</div>
 
 
 
