@@ -78,14 +78,14 @@ function sendReset(){
 			if(xhr.status == 200){
 				console.log(xhr.responseText);
 
-
 				if(xhr.responseText == "error"){
 					alert("帳號電子信箱輸入錯誤");
 				}else{
 					alert("密碼已發送至信箱");
 					document.location.href="index.php";
 				}
-				browser.reload();
+				// window.reload();
+
 			}else{
 				alert(xhr.status);
 			}
@@ -154,6 +154,7 @@ function sendForm(){
 		if(xhr.readyState == 4){
 			if (xhr.status == 200){
 				// console.log(xhr.responseText);
+				location.reload();
 				if(xhr.responseText=="error"){
 					alert("帳號密碼錯誤");
 				}else{

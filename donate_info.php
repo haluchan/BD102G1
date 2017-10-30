@@ -39,7 +39,14 @@ session_start();
 
 <?php 
 	$event_no = $_REQUEST['event_no'];
-	$mem_no = $_SESSION['mem_no'];
+	
+	if (($_SESSION['mem_no'] == null) || ($_SESSION['mem_no'] == '') ) {
+		$mem_no = 99;
+		$mem_pho= 'mem_9999.png';
+	}else{
+		$mem_no = $_SESSION['mem_no'];
+		$mem_pho= $_SESSION['mem_pho'];
+	}
 	try {
 
 		require_once("php/connectGrowing_hope.php");
@@ -182,7 +189,7 @@ session_start();
 
 		<div class="content_txt col-sm-12 col-xs-12">
 			<div class=" content_img col-sm-2 col-xs-2">
-				<img src="src/image/funded/<?php echo $eventsRow -> event_pho ?>">
+				<img src="src/image/funded/<?php echo $eventRow -> event_pho ?>">
 			</div>
 			<div class="content_item col-sm-7 col-xs-10">
 				<p class="txt"><?php echo $eventRow -> event_txt;?></p>
@@ -305,9 +312,9 @@ session_start();
 	<div class="message_form" >
 		<!-- <form action="php/messageInsert.php" method="GET"> -->
 		<input type="hidden" name="event_no" value="<?php echo $_REQUEST['event_no']; ?>">
-		<div class="message_box msg_box col-xs-12 col-sm-12 <?php echo $mem_no =='' ? 'display':''; ?>">
+		<div class="message_box msg_box col-xs-12 col-sm-12">
 			<div class="mem_photo col-sm-2 col-xs-2">
-				<img src="src/image/member/mem_<?php echo $mem_no; ?>.png">
+				<img src="src/image/member/<?php echo $mem_pho; ?>">
 			</div>
 			<div class="mem_txt col-sm-10 col-xs-10">
 				<textarea cols="50" rows="3" wrap="off" class="content" id="msg_txt" placeholder="留言支持這個計畫!"></textarea>
@@ -333,7 +340,7 @@ session_start();
 
 		<div class="message_box col-xs-12 col-sm-12">
 			<div class="mem_photo col-sm-2 col-xs-2">
-				<img src="src/image/member/<?php echo $msgRow -> mem_pho;?>.png">
+				<img src="src/image/member/<?php echo $msgRow -> mem_pho;?>">
 			</div>
 			<div class="mem_txt col-sm-10 col-xs-10">
 				
@@ -409,96 +416,132 @@ session_start();
 		});
 
 		$('.msg').click(function(){
-			var msgObj = {};
-			msgObj.event_no = "<?php echo $_REQUEST['event_no']; ?>";
-			msgObj.mem_no = "<?php echo $_SESSION['mem_no']; ?>";
-			msgObj.msg_txt = document.getElementById('msg_txt').value;
+
+			if (<?php echo $mem_no; ?> == 99) {
+				alert('請登入!');
+				var spanLogin = $id("spanLogin");
+				var lightboxbg= $id("lightbox-bg");
+				if(spanLogin.innerHTML == "註冊/登入"){
+					lightboxbg.style.display = "block";
+					lightboxbg.style.opacity = '1';
+					// lightboxbg.style.transition = "all , 1s";
+
+
+				}else{
+					spanLogin.innerHTML = "註冊/登入";
+					$id("memMail").value="";
+					$id("memPsw").value="";
+				}
+			}else{
+
+				var msgObj = {};
+				msgObj.event_no = "<?php echo $_REQUEST['event_no']; ?>";
+				msgObj.mem_no = "<?php echo $mem_no; ?>";
+				msgObj.msg_txt = document.getElementById('msg_txt').value;
 
 
 
-			var xhr = new XMLHttpRequest();
-			xhr.onreadystatechange=function (){
-			 	if( xhr.readyState == 4){
-			    	if( xhr.status == 200 ){
-			
-				    	message_box = document.createElement('div');
-				    	message_box.className = 'message_box col-xs-12 col-sm-12';
-				    	
+				var xhr = new XMLHttpRequest();
+				xhr.onreadystatechange=function (){
+				 	if( xhr.readyState == 4){
+				    	if( xhr.status == 200 ){
+				
+					    	message_box = document.createElement('div');
+					    	message_box.className = 'message_box col-xs-12 col-sm-12';
+					    	
 
 
-				    	// ====第一個div
-				    	mem_photo = document.createElement('div');
-				    	mem_photo.className = "mem_photo col-xs-2 col-sm-2";
+					    	// ====第一個div
+					    	mem_photo = document.createElement('div');
+					    	mem_photo.className = "mem_photo col-xs-2 col-sm-2";
 
-				    	mem_img = document.createElement('img');
-				    	mem_img.src='src/image/member/mem_<?php echo $mem_no;?>.png'
+					    	mem_img = document.createElement('img');
+					    	mem_img.src='src/image/member/mem_<?php echo $mem_no;?>.png'
 
-				    	// append
-				    	// mem_photo;
-						message_box.appendChild(mem_photo).appendChild(mem_img);
-
-
-				    	// ====第二個div
-				    	mem_txt = document.createElement('div');
-				    	mem_txt.className = 'mem_txt col-sm-10 col-xs-10';
-
-				    	message_box.appendChild(mem_txt);
-
-				    	content = document.createElement('p');
-				    	content.className = 'content';
-				    	content.innerText = document.getElementById('msg_txt').value;
-
-				    	date = document.createElement('span');
-				    	date.className = 'date';
-				    	today = new Date();
-						datetime = today.getFullYear()+"/"+ (today.getMonth()+1)+ "/" + today.getDate() +" "+ today.getHours() +":"+ today.getMinutes()+" ";
-				    	date.innerText = datetime;
-
-				    	report = document.createElement('img');
-				    	report.className = 'report';
-				    	report.src='src/image/funded/report.svg';
-
-				    	// append
-				    	// date.;
-				    	// content;
-				    	// mem_txt;
-				    	message_box.appendChild(mem_txt).appendChild(content).appendChild(date).appendChild(report);
-
-				    	clear = document.createElement('div');
-				    	clear.className = 'clear';
-				    	mem_txt.appendChild(clear);
-
-				    	message_box.appendChild(clear);
-
-				    	$('.msg_box').after(message_box);
-
-				    	// append_over=======
-				    	document.getElementById('msg_txt').value = "";
+					    	// append
+					    	// mem_photo;
+							message_box.appendChild(mem_photo).appendChild(mem_img);
 
 
-				    	
-			       }else{
-			       		alert( xhr.status );
-			       		alert($id("event_no").value)
-			       }
-			   }
+					    	// ====第二個div
+					    	mem_txt = document.createElement('div');
+					    	mem_txt.className = 'mem_txt col-sm-10 col-xs-10';
+
+					    	message_box.appendChild(mem_txt);
+
+					    	content = document.createElement('p');
+					    	content.className = 'content';
+					    	content.innerText = document.getElementById('msg_txt').value;
+
+					    	date = document.createElement('span');
+					    	date.className = 'date';
+					    	today = new Date();
+							datetime = today.getFullYear()+"/"+ (today.getMonth()+1)+ "/" + today.getDate() +" "+ today.getHours() +":"+ today.getMinutes()+" ";
+					    	date.innerText = datetime;
+
+					    	report = document.createElement('img');
+					    	report.className = 'report';
+					    	report.src='src/image/funded/report.svg';
+
+					    	// append
+					    	// date.;
+					    	// content;
+					    	// mem_txt;
+					    	message_box.appendChild(mem_txt).appendChild(content).appendChild(date).appendChild(report);
+
+					    	clear = document.createElement('div');
+					    	clear.className = 'clear';
+					    	mem_txt.appendChild(clear);
+
+					    	message_box.appendChild(clear);
+
+					    	$('.msg_box').after(message_box);
+
+					    	// append_over=======
+					    	document.getElementById('msg_txt').value = "";
+
+
+					    	
+				       }else{
+				       		alert( xhr.status );
+				       		alert($id("event_no").value)
+				       }
+				   }
+				}
+				var data_info = "jsonStr=" + JSON.stringify(msgObj);
+				console.log( data_info);
+				var url = "messageInsert.php?" + data_info;
+				xhr.open("Get", url, true);
+				xhr.send(null);
 			}
-			var data_info = "jsonStr=" + JSON.stringify(msgObj);
-			console.log( data_info);
-			var url = "messageInsert.php?" + data_info;
-			xhr.open("Get", url, true);
-			xhr.send(null);
 		});
 		
 
 
 		$(".date").click(function(){
-		   $(".report_box").css({
-				'display':'block'
-			});
-		   msg_no = $(this).parent().children('.msg_no').val();
+			if (<?php echo $mem_no; ?> == 99) {
+				alert('請登入!');
+				var spanLogin = $id("spanLogin");
+				var lightboxbg= $id("lightbox-bg");
+				if(spanLogin.innerHTML == "註冊/登入"){
+					lightboxbg.style.display = "block";
+					lightboxbg.style.opacity = '1';
+				}else{
+					spanLogin.innerHTML = "註冊/登入";
+					$id("memMail").value="";
+					$id("memPsw").value="";
+
+				}
+			}else{
+				$(".report_box").css({'display':'block'});
+				msg_no = $(this).parent().children('.msg_no').val();
+
+			}
+
+		  
 
 		 });
+
 		$(".close").click(function(){
 		   $(".report_box").css({
 				'display':'none'

@@ -172,13 +172,18 @@ a {
   float: right;
 }
 
+header {
+  transition: 0.2s;
+  transition-delay: 0.5s;
+}
+
 .db {
-  display: none;
+  opacity: 0;
+  transition: 0.2s;
 }
 
 .index_1 {
   position: relative;
-  z-index: 900;
 }
 
 .fill_screen {
@@ -454,6 +459,7 @@ a {
   background-size: 100%;
   background-position: bottom center;
   background-repeat: no-repeat;
+  background-color: #FFF;
 }
 
 @media screen and (max-width: 767px) {
@@ -467,28 +473,22 @@ a {
   margin: auto;
   background-image: url("../src/image/index/donate_title.svg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center 18%;
-  background-size: 60%;
+  background-position: center bottom;
+  background-size: 80%;
+  height: 30vh;
 }
 
 @media screen and (max-width: 767px) {
   .donate_ing .donate_title {
     width: 95%;
+    background-position: center 15vh;
+    background-size: 200%;
   }
 }
 
-.donate_ing .donate_title p {
-  text-align: center;
-  padding: 5% 0 10%;
-  font-size: 36px;
-  color: rgba(255, 255, 255, 0);
-}
-
-@media screen and (max-width: 767px) {
-  .donate_ing .donate_title p {
-    margin-top: 20%;
-    margin-bottom: 5%;
+@media screen and (max-width: 320px) {
+  .donate_ing .donate_title {
+    height: 25vh;
   }
 }
 
@@ -496,10 +496,20 @@ a {
   margin-top: 5%;
 }
 
+@media screen and (max-width: 1440px) {
+  .donate_ing .donate_top {
+    margin-top: 2%;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .donate_ing .donate_top {
     margin-top: -25px;
   }
+}
+
+.donate_ing .donate_top .donate_txt {
+  overflow: hidden;
 }
 
 .donate_ing .donate_top .donate_txt a {
@@ -552,13 +562,19 @@ a {
   transition: 1s;
 }
 
-.donate_ing .donate_top .donate_txt .donate_info .info h4 {
+.donate_ing .donate_top .donate_txt .donate_info .info h3 {
   line-height: 2;
 }
 
 .donate_ing .donate_top .donate_txt .donate_info .info p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 767px) {
+  .donate_ing .donate_top .donate_txt .donate_info .info p {
+    font-size: 14px;
+  }
 }
 
 .donate_ing .donate_top .donate_txt .donate_info .info .progress_bar {
@@ -567,7 +583,7 @@ a {
   background-color: #ddd;
   border-radius: 25px;
   position: relative;
-  margin-top: 13%;
+  margin-top: 10%;
 }
 
 @media screen and (max-width: 767px) {
@@ -615,7 +631,7 @@ a {
 
 .activity .rice_img {
   position: absolute;
-  top: 5%;
+  top: 13%;
 }
 
 .activity .cloud_1 {
@@ -647,7 +663,8 @@ a {
 .activity .activity_title {
   color: #fff;
   writing-mode: vertical-lr;
-  margin: 8% auto 3%;
+  margin: 15% auto 3%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .activity .activity_title h1 {
@@ -824,6 +841,12 @@ a {
   }
 }
 
+@media screen and (max-width: 321px) {
+  .fish .fish_info p .btn {
+    padding: 10px;
+  }
+}
+
 .fish .fish_info .fish_icon {
   width: 5%;
   position: absolute;
@@ -832,45 +855,45 @@ a {
 }
 
 .fish .fish_info .fish_icon:nth-child(4) {
-  left: 21%;
-  bottom: 26%;
-  animation: fish_icon 3s -0.22s linear infinite;
+  left: 31%;
+  bottom: 31%;
+  animation: fish_icon 3s -0.03s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(5) {
-  left: 29%;
+  left: 25%;
   bottom: 34%;
-  animation: fish_icon 3s -0.1s linear infinite;
-}
-
-.fish .fish_info .fish_icon:nth-child(6) {
-  left: 27%;
-  bottom: 48%;
-  animation: fish_icon 3s -0.34s linear infinite;
-}
-
-.fish .fish_info .fish_icon:nth-child(7) {
-  left: 31%;
-  bottom: 37%;
-  animation: fish_icon 3s -0.24s linear infinite;
-}
-
-.fish .fish_info .fish_icon:nth-child(8) {
-  left: 27%;
-  bottom: 35%;
   animation: fish_icon 3s -0.29s linear infinite;
 }
 
+.fish .fish_info .fish_icon:nth-child(6) {
+  left: 15%;
+  bottom: 33%;
+  animation: fish_icon 3s -0.06s linear infinite;
+}
+
+.fish .fish_info .fish_icon:nth-child(7) {
+  left: 18%;
+  bottom: 45%;
+  animation: fish_icon 3s -0.29s linear infinite;
+}
+
+.fish .fish_info .fish_icon:nth-child(8) {
+  left: 24%;
+  bottom: 49%;
+  animation: fish_icon 3s -0.41s linear infinite;
+}
+
 .fish .fish_info .fish_icon:nth-child(9) {
-  left: 26%;
-  bottom: 39%;
-  animation: fish_icon 3s -0.23s linear infinite;
+  left: 21%;
+  bottom: 46%;
+  animation: fish_icon 3s -0.5s linear infinite;
 }
 
 .fish .fish_info .fish_icon:nth-child(10) {
-  left: 17%;
-  bottom: 27%;
-  animation: fish_icon 3s -0.12s linear infinite;
+  left: 23%;
+  bottom: 49%;
+  animation: fish_icon 3s -0.38s linear infinite;
 }
 
 .fish .fish_info .phone {
