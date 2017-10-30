@@ -6,6 +6,9 @@
    	<div>
    		<?php require_once('login.php'); ?> 
         <?php require_once('memsign.php'); ?> 
+    
+
+
    	</div>
 
 <!-- 購物車session 夾帶 -->
@@ -21,7 +24,17 @@
     	<div class="topmenu">
     		<ul>	
     			<li><a class="cartBtn">購物車<span class="cartNo">0</span></a></li>
-    			<li><span id="memName"></span><a  id="spanLogin" >註冊/登入</a></li>
+    			<li><span id="memName"></span><a  id="spanLogin" ><?php     
+
+                if (isset($_SESSION["mem_id"]) === true){
+                    echo "登出";
+                }else{
+
+                     echo "註冊/登入";
+                }
+
+
+                ?></a></li>
     			<li><a href="application.php">申請資助</a></li>
     		</ul>
     	</div>

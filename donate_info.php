@@ -38,8 +38,9 @@ session_start();
 
 
 <?php 
-	$event_no = $_REQUEST['event_no'];
-	$mem_no = $_SESSION['mem_no'];
+//	$event_no = $_REQUEST['event_no'];
+    $event_no = 1;
+	// $mem_no = $_SESSION['mem_no'];
 	try {
 
 		require_once("php/connectGrowing_hope.php");
@@ -182,7 +183,7 @@ session_start();
 
 		<div class="content_txt col-sm-12 col-xs-12">
 			<div class=" content_img col-sm-2 col-xs-2">
-				<img src="src/image/funded/<?php echo $eventsRow -> event_pho ?>">
+				<img src="src/image/funded/<?php echo $eventRow -> event_pho;?>">
 			</div>
 			<div class="content_item col-sm-7 col-xs-10">
 				<p class="txt"><?php echo $eventRow -> event_txt;?></p>

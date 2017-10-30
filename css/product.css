@@ -158,6 +158,11 @@
           width: 50%;
           height: 54vw;
           cursor: pointer; } }
+      @media only screen and (max-width: 766px) {
+        .pro_seed .pro_s_cabinet > li:hover .pro_s_brand {
+          -webkit-transform: scale(1.2, 1.2);
+          -ms-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2); } }
       .pro_seed .pro_s_cabinet > li .pro_s_vegetable .pro_s_brand {
         width: 33.33%;
         margin: auto;
