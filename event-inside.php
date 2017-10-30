@@ -202,7 +202,7 @@ try {
 
 
 	
-	for ($i=0 ; $i<$photosLength ; $i++) { 
+	for ($i=3 ; $i<$photosLength ; $i++) {
 		// echo $eventRow->act_no, $photosArry[$i];
 
 
