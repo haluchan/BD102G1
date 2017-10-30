@@ -231,8 +231,9 @@
   	<?php require_once('Footer.php') ?> 
   	
   	<script src="js/header.js"></script>
+  	<script type="text/javascript" src="js/login-ajax.js"></script>
 	<script src="js/application.js"></script>
-	<script type="text/javascript" src="js/login-ajax.js"></script>
+	
 	
 	<script>
 		$('.btn_green').click(function(){
