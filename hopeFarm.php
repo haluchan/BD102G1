@@ -28,7 +28,7 @@
 <?php require_once('Header.php') ?>
 
 <section class="containerhope">
-	<section class="view col-sm-12 col-xs-12">
+	<section class="view col-sm-12 col-xs-12 col-lg-12">
 		<div class="view_container">
 			<div class="cloulds">
 				<div class="cloulds-1">
@@ -41,11 +41,11 @@
 					<img  src="src/image/hopeFarm/cloud-noface.png" alt="">
 				</div>
 			</div>
-			<div class="for_h2">
+			<!-- <div class="for_h2">
 				<h2>友善栽培農法</h2>
 				<h2>珍惜我們的土地</h2>
 				<h2>愛護環境永續發展</h2>
-			</div>
+			</div> -->
 			<div class="cleare"></div>
 		</div>
 		
