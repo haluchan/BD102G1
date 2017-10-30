@@ -81,7 +81,10 @@ body {
   max-width: 1300px;
   margin: auto;
   padding: 8%;
+<<<<<<< HEAD
+=======
   -webkit-box-sizing: border-boxs;
+>>>>>>> 2e7609631413f680eda6baa514eee752415ee940
   box-sizing: border-boxs; }
   .event-cotent .main-container {
     line-height: 60px;
@@ -95,7 +98,10 @@ body {
   max-width: 1300px;
   padding: 8% 0;
   margin: auto;
+<<<<<<< HEAD
+=======
   -webkit-box-sizing: border-box;
+>>>>>>> 2e7609631413f680eda6baa514eee752415ee940
   box-sizing: border-box; }
   .event-map .event-row {
     max-width: 1440px;
