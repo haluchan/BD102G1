@@ -138,7 +138,7 @@ body{
 	.latest{
 		max-width: 1440px;
 		margin: 0 auto;
-		margin-top: 10vh;
+		margin-top: 100px;
 
 		position: relative;
 		.latest_title{
@@ -146,10 +146,10 @@ body{
 			left: 0;
 			right: 0;
 			margin: 0 auto;
-			margin-bottom: 3vh;
+			margin-bottom: 40px;
 			h2{
 				text-align: center;
-				color: #c9541f;
+				color: #6a3906;
 			}
 		}
 		.latest_cloud img{
@@ -319,6 +319,7 @@ body{
 				text-align: center;
 				padding-bottom: 20px;
 				margin-bottom: 30px;
+				color: #6a3906;
 			}
 			.purp{
 				font-size: 26px;
@@ -662,6 +663,7 @@ body{
 			//width: 100%;
 			text-align: center;
 			display: inline-block;
+			color: #6a3906;
 
 		}
 	}

@@ -12,7 +12,7 @@
 			    	</button>
 				</div>
 			</div>
-			<form action="php/memberInsert.php" method="post" accept-charset="utf-8">
+			<form action="php/memberInsert.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 				
 			
 	

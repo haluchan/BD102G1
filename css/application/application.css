@@ -93,6 +93,7 @@ body {
     padding: 50px 5%;
     text-align: center;
     position: relative;
+    -webkit-box-shadow: 1px 0 10px #ccc;
     box-shadow: 1px 0 10px #ccc; }
     @media screen and (max-width: 767px) {
       .container form .stepContent {
@@ -144,6 +145,7 @@ body {
             line-height: 2;
             vertical-align: middle;
             display: inline-block;
+            -webkit-box-sizing: border-box;
             box-sizing: border-box;
             border-radius: 5px; }
             .container form .stepContent .table .tr .td input.radio {
@@ -211,6 +213,7 @@ body {
       .two .applicationTitle .item h1, .three .applicationTitle .item h1 {
         text-align: left; }
   .two .form, .three .form {
+    -webkit-box-shadow: 1px 0 10px #ccc;
     box-shadow: 1px 0 10px #ccc;
     padding: 50px 0;
     background-color: #ece7d4;
@@ -254,6 +257,7 @@ body {
             line-height: 2;
             vertical-align: middle;
             display: inline-block;
+            -webkit-box-sizing: border-box;
             box-sizing: border-box;
             border-radius: 5px; }
             @media screen and (max-width: 767px) {
@@ -341,10 +345,13 @@ body {
     .navbar .navbarli:hover {
       background-color: #699c33;
       color: #fff;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
       transition: .5s; }
   @media screen and (max-width: 767px) {
     .navbar {
       padding-top: 15%;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       .navbar .navbarli {
         font-size: 18px; } }

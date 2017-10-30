@@ -160,17 +160,17 @@ body {
   .containerhope .latest {
     max-width: 1440px;
     margin: 0 auto;
-    margin-top: 10vh;
+    margin-top: 100px;
     position: relative; }
     .containerhope .latest .latest_title {
       width: 30%;
       left: 0;
       right: 0;
       margin: 0 auto;
-      margin-bottom: 3vh; }
+      margin-bottom: 40px; }
       .containerhope .latest .latest_title h2 {
         text-align: center;
-        color: #c9541f; }
+        color: #6a3906; }
     .containerhope .latest .latest_cloud img {
       float: right;
       width: 12%;
@@ -309,7 +309,8 @@ body {
       .containerhope .purpose .purpose_txt h2 {
         text-align: center;
         padding-bottom: 20px;
-        margin-bottom: 30px; }
+        margin-bottom: 30px;
+        color: #6a3906; }
       .containerhope .purpose .purpose_txt .purp {
         font-size: 26px;
         margin-bottom: 8px; }
@@ -540,7 +541,8 @@ body {
     margin-bottom: 30px; }
     .containerhope .risk .risk_title {
       text-align: center;
-      display: inline-block; }
+      display: inline-block;
+      color: #6a3906; }
   .containerhope .risk_container {
     margin: auto;
     position: relative; }
