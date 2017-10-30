@@ -1,0 +1,36 @@
+.activity {
+	width: 400px;
+	height: 450px;
+	margin: auto;
+
+}
+.activity td:first-child{
+	text-align: center;
+	background-color: #F29600;
+}
+.activity last-of-type
+.activity input{
+/* 	text-align: center; */
+}
+.activity tr{
+	border: 1px solid black;
+}
+.activity .btn1{
+	display: block;
+	margin: auto;
+	width: 60px;
+	height: 40px;
+	background-color: #f29600;
+}
+.activity .btn1:hover{
+	color: white;
+	background-color: #9c9;
+
+}
+.activity input{
+	width: 130px;
+	margin: auto;
+}
+.activity input:hover{
+	background-color: #ddd;
+}
