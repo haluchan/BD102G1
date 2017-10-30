@@ -41,7 +41,8 @@ body {
     clear: both; }
   .containerhope .view {
     width: 100%;
-    background-image: url("../src/image/hopeFarm/firstBg.jpg");
+    height: 40vw;
+    background-image: url("../src/image/hopeFarm/fBG.png");
     background-repeat: no-repeat;
     background-position: center;
     background-position: top;
@@ -58,12 +59,11 @@ body {
         .containerhope .view .view_container .cloulds .cloulds-1 img {
           float: right;
           width: 20%;
-          bottom: 18%;
           position: absolute;
           -webkit-animation: clou 20s -1s linear infinite alternate;
           animation: clou 20s -1s linear infinite alternate; }
         .containerhope .view .view_container .cloulds .cloulds-2 img {
-          width: 18%;
+          width: 6%;
           left: 28%;
           position: absolute;
           bottom: 38%;
@@ -144,18 +144,6 @@ body {
     bottom: 35%; }
   100% {
     bottom: 33%; } }
-      .containerhope .view .view_container .for_h2 {
-        width: 43%;
-        margin-top: 19%;
-        margin-right: 16%;
-        float: right;
-        margin-bottom: 20%; }
-        .containerhope .view .view_container .for_h2 h2 {
-          width: 100%;
-          float: right;
-          margin: 1%;
-          color: #fff;
-          font-weight: normal; }
   .containerhope .hopefarmrwd-select {
     display: none; }
   .containerhope .latest {
@@ -440,12 +428,17 @@ body {
               padding: 4%;
               position: relative; }
               .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover {
-                overflow: hidden; }
+                overflow: hidden;
+                border-radius: 5%; }
                 .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover .imgToHover {
                   -webkit-transition: all 1.5s;
                   -o-transition: all 1.5s;
+<<<<<<< HEAD
+                  transition: all 1.5s; }
+=======
                   transition: all 1.5s;
                   overflow: hidden; }
+>>>>>>> 78f69280afda35d42b5619c69f7260ddf8401abc
                   .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover .imgToHover:hover {
                     -webkit-transform: scale(1.5);
                     -ms-transform: scale(1.5);
