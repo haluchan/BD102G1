@@ -1,3 +1,6 @@
+<?php 
+session_start();
+ob_start();?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -48,7 +51,7 @@
 			<div class="clearfix"></div>
 		</nav>
 
- <form action="activitySend.php">
+ <form action="activitySend.php" method="post" enctype="multipart/form-data">
 	 	<table class="activity" cellpadding="1">
 		<tr>
 			<td>活動名稱</td>
@@ -84,7 +87,7 @@
 		</tr>
 		<tr>
 			<td>上傳照片</td>
-			<td><input type="file" name=""></td>
+			<td><input type="file" name="picture"></td>
 		</tr>
 		<tr>
 			<th colspan="2"><button class="btn1" type="submit">確定新增</button></th>
@@ -93,9 +96,7 @@
 		
 
 	</table>
-	 </form>
-<!-- 	 <?php echo "新增成功";
-	 ?> -->	  
+	 </form>  
 </table>
 </form>
 <?php require_once('web_back_frame_bottom.php') ?>

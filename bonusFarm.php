@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>BonusFarm</title>
+	 <link rel="stylesheet" type="text/css" href="css/bonusFarm.css">
 	<?php require_once('Header_head.php'); ?>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<!-- js -->
@@ -10,8 +11,6 @@
 	 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	 <script type="text/javascript" src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script>
 	 <script src="js/bonusFarm.js"></script>
-	 <!-- css -->
-	 <link rel="stylesheet" type="text/css" href="css/bonusFarm.css">
 </head>
 <body>
 	<!-- 撥雲見氣球 -->
