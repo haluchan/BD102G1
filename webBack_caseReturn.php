@@ -1,4 +1,3 @@
-
 <?php 
 ob_start();
 session_start();
@@ -130,7 +129,7 @@ session_start();
 					<div class="return">
 						<div class="type">
 							<div class="type_img">
-								<img src="src/image/funded/p0001_1.jpg">
+								<img src="src/image/funded/<?php echo $returnRow -> return_pho; ?>">
 							</div>
 							<div class="type_txt">
 								<p class="title">

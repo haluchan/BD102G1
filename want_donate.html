@@ -127,6 +127,26 @@
 
 
 <script type="text/javascript" src="js/want_donate.js"></script>
+<script type="text/javascript">
+	$(function(){
+		if (<?php if (isset($_SESSION['mem_no'])==false){ echo 99;}else{echo $_SESSION['mem_no']; } ?> == 99) {
+				var spanLogin = $id("spanLogin");
+				var lightboxbg= $id("lightbox-bg");
+				if(spanLogin.innerHTML == "註冊/登入"){
+					lightboxbg.style.display = "block";
+					lightboxbg.style.opacity = '1';
+					// lightboxbg.style.transition = "all , 1s";
+
+
+				}else{
+					spanLogin.innerHTML = "註冊/登入";
+					$id("memMail").value="";
+					$id("memPsw").value="";
+				}
+		}
+
+	})
+</script>
 
 
 	

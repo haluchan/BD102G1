@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 <?php 
 session_start();
-ob_start();?>
-=======
-<?php
 ob_start();
-session_start();
 ?>
->>>>>>> 54a1bcea6c2144673d9fed2c3a20a31ba3cda50a
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -58,11 +52,9 @@ session_start();
 			<div class="clearfix"></div>
 		</nav>
 
-<<<<<<< HEAD
+
  <form action="activitySend.php" method="post" enctype="multipart/form-data">
-=======
- <form action="activitySend.php" class="myForm">
->>>>>>> 54a1bcea6c2144673d9fed2c3a20a31ba3cda50a
+
 	 	<table class="activity" cellpadding="1">
 		<tr>
 			<td>活動名稱</td>
@@ -107,15 +99,10 @@ session_start();
 		
 
 	</table>
-<<<<<<< HEAD
+
 	 </form>  
-=======
-	 </form>
-<!-- 	 <?php //echo "新增成功";
-	 ?> -->	  
->>>>>>> 54a1bcea6c2144673d9fed2c3a20a31ba3cda50a
-</table>
-</form>
+
+
 <?php require_once('web_back_frame_bottom.php') ?>
 
 </body>
