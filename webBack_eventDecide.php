@@ -27,7 +27,7 @@ ob_start();?>
 	</nav>
 <?php 
 try {
-	require_once("php/connectPon.php");//之後要換成connectGrowing_hope.php
+	require_once("php/connectBeck.php");//之後要換成connectGrowing_hope.php
     $sql = "select * from event where event_status='F'";//撈出案件狀態為審核中(F)的案件
 	$event = $pdo->query($sql);	
 	$count= $event->rowCount();//返回記錄數
@@ -77,15 +77,16 @@ try {
 				</td>		
 			</tr>
 			
-			<!-- <div class="test"> -->
+			
 				<tr hidden>
 					<td colspan="9">
 						<p>案件標題</p><?php echo $eventRow->event_title;?>
 						<p>案件摘要</p><?php echo $eventRow->event_txt;?>
-						<p>內容照片</p><img src="src/image/funded//<?php echo $eventRow->event_pho;?>">
+						<!-- <p>內容照片</p><img src="src/image/funded//<?php echo $eventRow->event_pho;?>"> -->
+						<p>內容照片</p><img src="php/files//<?php echo $eventRow->event_pho;?>">
 					</td>
 				</tr> 
-			<!-- </div> -->
+		
 	<?php
 		$i++;	
 		}

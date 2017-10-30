@@ -9,8 +9,8 @@ body {
 .containerhope {
   font-family: '微軟正黑體'; }
   .containerhope h2 {
-    font-size: 30px;
-    letter-spacing: 1px;
+    font-size: 38px;
+    letter-spacing: 4px;
     font-weight: bold; }
   .containerhope h3 {
     font-size: 22px;
@@ -26,7 +26,8 @@ body {
     letter-spacing: 1px;
     line-height: 26px;
     color: #595959;
-    font-weight: normal; }
+    font-weight: normal;
+    line-height: 28px; }
   .containerhope a {
     text-decoration: none;
     color: #2b2b2b; }
@@ -159,14 +160,17 @@ body {
   .containerhope .latest {
     max-width: 1440px;
     margin: 0 auto;
+    margin-top: 100px;
     position: relative; }
     .containerhope .latest .latest_title {
       width: 30%;
       left: 0;
       right: 0;
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-bottom: 40px; }
       .containerhope .latest .latest_title h2 {
-        text-align: center; }
+        text-align: center;
+        color: #6a3906; }
     .containerhope .latest .latest_cloud img {
       float: right;
       width: 12%;
@@ -200,11 +204,11 @@ body {
   100% {
     top: -30%; } }
     .containerhope .latest .carousel .carousel_container {
-      width: 80%;
+      width: 60%;
       margin: auto; }
       .containerhope .latest .carousel .carousel_container .carouselson {
         background-color: #fff;
-        width: 88%;
+        width: 60%;
         float: left;
         border-radius: 38px;
         position: relative; }
@@ -213,47 +217,56 @@ body {
           float: left;
           left: 0;
           right: 0;
-          margin: 2% 2%; }
+          margin: 2% 2%;
+          position: relative; }
           .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_left {
             float: left;
-            width: 50%; }
+            width: 48%; }
             .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_left img {
               width: 100%;
               border-radius: 21px; }
           .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right {
-            width: 49%;
+            width: 50%;
             float: left;
-            margin-left: 1%; }
-            .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right p {
-              margin-top: 20%; }
+            margin-left: 1%;
+            padding-left: 1vw; }
+            .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right h3 {
+              font-size: 28px;
+              letter-spacing: 3px; }
+            .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .coName {
+              font-size: 16px; }
+            .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .coTxt {
+              margin-top: 38px;
+              overflow: hidden;
+              height: 110px; }
             .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .bar {
-              width: 46%;
+              width: 45%;
               border: 1px solid #699c33;
               background-color: #fff;
               padding: 0.4%;
               border-radius: 28px;
               position: absolute;
-              bottom: 27%; }
+              bottom: 24%; }
               .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .bar .inside-bar {
                 width: 60%;
                 height: 10px;
                 background-color: #699c33;
                 border-radius: 28px; }
-            .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right h3 {
+            .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .coCount {
+              font-size: 1vw;
               display: inline-block;
-              margin-top: 1%;
+              margin-top: 6px;
               position: absolute;
-              bottom: 21%; }
-            .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right h3:last-child {
-              padding-right: 2%;
-              position: absolute;
-              right: 0%; }
+              bottom: 19%; }
+              .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .coCount:last-child {
+                right: 2%; }
           .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_btn {
-            width: 26%;
+            width: 10vw;
             margin: auto;
             margin-top: 4%;
             text-align: center; }
             .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_btn h2 {
+              font-size: 1.6vw;
               font-family: Arial , '微軟正黑體';
               color: #ffffff;
               background: #6cbecc;
@@ -285,20 +298,23 @@ body {
   .containerhope .purpose {
     max-width: 1440px;
     margin: auto;
-    margin-top: 10%; }
+    margin-top: 10vh; }
     .containerhope .purpose .purpose_img {
       width: 80%;
       margin: auto; }
     .containerhope .purpose .purpose_txt {
-      width: 60%;
+      width: 63%;
       margin: auto;
       margin-top: -7%; }
       .containerhope .purpose .purpose_txt h2 {
         text-align: center;
-        padding-bottom: 20px; }
-      .containerhope .purpose .purpose_txt h3 {
-        font-size: 28px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(2):before {
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        color: #6a3906; }
+      .containerhope .purpose .purpose_txt .purp {
+        font-size: 26px;
+        margin-bottom: 8px; }
+        .containerhope .purpose .purpose_txt .purp:nth-child(2):before {
           content: '';
           width: 10px;
           height: 10px;
@@ -306,12 +322,14 @@ body {
           background-color: #699c33;
           border-radius: 50px;
           vertical-align: middle;
-          margin-top: -5px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(2) {
+          margin-top: -5px;
+          margin-right: 6px; }
+        .containerhope .purpose .purpose_txt .purp:nth-child(2) {
           padding-bottom: 2px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(3) {
-          padding-bottom: 15px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(4):before {
+        .containerhope .purpose .purpose_txt .purp:nth-child(3) {
+          padding-bottom: 26px;
+          line-height: 35px; }
+        .containerhope .purpose .purpose_txt .purp:nth-child(4):before {
           content: '';
           width: 10px;
           height: 10px;
@@ -319,12 +337,14 @@ body {
           background-color: #699c33;
           border-radius: 50px;
           vertical-align: middle;
-          margin-top: -5px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(4) {
+          margin-top: -5px;
+          margin-right: 6px; }
+        .containerhope .purpose .purpose_txt .purp:nth-child(4) {
           padding-bottom: 2px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(5) {
-          padding-bottom: 15px; }
-        .containerhope .purpose .purpose_txt h3:nth-child(6):before {
+        .containerhope .purpose .purpose_txt .purp:nth-child(5) {
+          padding-bottom: 26px;
+          line-height: 35px; }
+        .containerhope .purpose .purpose_txt .purp:nth-child(6):before {
           content: '';
           width: 10px;
           height: 10px;
@@ -332,7 +352,10 @@ body {
           background-color: #699c33;
           border-radius: 50px;
           vertical-align: middle;
-          margin-top: -5px; }
+          margin-top: -5px;
+          margin-right: 6px; }
+        .containerhope .purpose .purpose_txt .purp:nth-child(7) {
+          line-height: 35px; }
   .containerhope .section04 {
     max-width: 1440px;
     margin-top: 4%;
@@ -356,7 +379,7 @@ body {
       .containerhope .bookmark .mark_title ul {
         text-align: center; }
         .containerhope .bookmark .mark_title ul li {
-          width: 10%;
+          width: 14%;
           display: inline-block;
           margin: auto;
           border-right: 9px solid #fff;
@@ -369,7 +392,8 @@ body {
           margin: 0 0.5%;
           cursor: pointer;
           transition: .4s;
-          text-align: center; }
+          text-align: center;
+          letter-spacing: 4px; }
           .containerhope .bookmark .mark_title ul li:hover {
             background: #699c33;
             border-right: 9px solid #fff;
@@ -442,18 +466,26 @@ body {
                 top: -11px;
                 left: -1px; }
             .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt {
+              width: 100%;
               padding: 4%;
               box-sizing: border-box;
               float: left;
               padding-bottom: 6%;
               margin-top: -5%; }
               .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_name {
-                margin-left: 18%; }
+                font-size: 16px;
+                margin: auto;
+                text-align: center; }
               .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_title {
                 width: 100%;
-                margin-top: 5%; }
+                margin-top: 5%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap; }
               .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
-                padding-top: 1%; }
+                padding-top: 1%;
+                margin-top: 1%;
+                margin-bottom: 5%; }
               .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .bar {
                 width: 99%;
                 border: 1px solid #699c33;
@@ -466,22 +498,19 @@ body {
                   height: 10px;
                   background-color: #699c33;
                   border-radius: 28px; }
-              .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4:last-child {
-                width: 50%;
-                padding-right: 0; }
         .containerhope .bookmark .mark_container .mark_item a:nth-child(4) .item-box {
           margin-top: 10%; }
         .containerhope .bookmark .mark_container .mark_item a:nth-child(5) .item-box {
           margin-top: 10%; }
         .containerhope .bookmark .mark_container .mark_item a:nth-child(6) .item-box {
           margin-top: 10%; }
-    .containerhope .bookmark .c1 .mark_item a .item-box .item-box-shadow .box-fontt h4 {
-      width: 48%;
-      float: left;
-      padding-right: 28%; }
-    .containerhope .bookmark .c1 .mark_item a .item-box .item-box-shadow .box-fontt h4:last-child {
-      width: 24%;
-      padding-right: 0; }
+    .containerhope .bookmark .c1 .mark_item a .item-box .item-box-shadow .box-fontt .coP {
+      width: 60%;
+      float: left; }
+      .containerhope .bookmark .c1 .mark_item a .item-box .item-box-shadow .box-fontt .coP:last-of-type {
+        width: 40%;
+        float: right;
+        text-align: right; }
     .containerhope .bookmark .c4 {
       display: none; }
     .containerhope .bookmark .active01 {
@@ -491,9 +520,10 @@ body {
       float: left; }
     .containerhope .bookmark .mark_more {
       width: 30%;
-      padding-top: 2%;
+      padding-top: 5%;
       margin: auto;
-      text-align: center; }
+      text-align: center;
+      letter-spacing: 2px; }
       .containerhope .bookmark .mark_more img {
         width: 17%;
         vertical-align: middle; }
@@ -506,13 +536,13 @@ body {
       height: 100%;
       vertical-align: middle; }
   .containerhope .risk {
-    max-width: 1440px;
     margin: auto;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 30px; }
     .containerhope .risk .risk_title {
-      width: 100%;
       text-align: center;
-      display: inline-block; }
+      display: inline-block;
+      color: #6a3906; }
   .containerhope .risk_container {
     margin: auto;
     position: relative; }
@@ -523,6 +553,27 @@ body {
         width: 71%;
         margin: auto;
         padding-top: 1%; }
+        .containerhope .risk_container .risk_range .risk_txt .risk_p {
+          letter-spacing: 2px;
+          line-height: 160%; }
+          .containerhope .risk_container .risk_range .risk_txt .risk_p:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background-color: #699c33;
+            border-radius: 50px;
+            vertical-align: middle;
+            margin-top: -5px;
+            margin-right: 6px; }
+          .containerhope .risk_container .risk_range .risk_txt .risk_p:nth-child(2) {
+            margin-top: 15px; }
+          .containerhope .risk_container .risk_range .risk_txt .risk_p:nth-child(3) {
+            margin-top: 15px; }
+          .containerhope .risk_container .risk_range .risk_txt .risk_p:nth-child(4) {
+            margin-top: 15px; }
+          .containerhope .risk_container .risk_range .risk_txt .risk_p:nth-child(5) {
+            margin-top: 15px; }
       .containerhope .risk_container .risk_range .risk_img {
         width: 4%;
         right: 28%;
@@ -559,7 +610,69 @@ body {
     padding-top: 2%;
     padding-left: 34%; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1001px) {
+  .col-lg-1 {
+    float: left;
+    width: 8.333333%;
+    box-sizing: border-box;
+    padding: 0 10px; }
+  .col-lg-2 {
+    float: left;
+    width: 16.666666%;
+    box-sizing: border-box;
+    padding: 0 10px; }
+  .col-lg-3 {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 10px; }
+  .col-lg-4 {
+    float: left;
+    width: 33.333333%;
+    box-sizing: border-box;
+    padding: 0 10px; }
+  .col-lg-5 {
+    float: left;
+    width: 41.666666%;
+    box-sizing: border-box;
+    padding: 0 10px; }
+  .col-lg-6 {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 10px; }
+  .col-lg-7 {
+    float: left;
+    width: 58.333333%;
+    box-sizing: border-box;
+    padding: 0 10px; }
+  .col-lg-8 {
+    float: left;
+    width: 66.666666%;
+    box-sizing: border-box;
+    padding: 0 10px; }
+  .col-lg-9 {
+    float: left;
+    width: 75%;
+    box-sizing: border-box;
+    padding: 0 10px; }
+  .col-lg-10 {
+    float: left;
+    width: 83.333333%;
+    box-sizing: border-box;
+    padding: 0 10px; }
+  .col-lg-11 {
+    float: left;
+    width: 91.666666%;
+    box-sizing: border-box;
+    padding: 0 10px; }
+  .col-lg-12 {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
   .col-sm-1 {
     float: left;
     width: 8.333333%;
@@ -620,8 +733,40 @@ body {
     width: 100%;
     box-sizing: border-box;
     padding: 0 10px; }
-  .containerhope .risk_container .risk_range .risk_img img {
-    display: none; } }
+  .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .coName {
+    font-size: 1.7vw;
+    overflow: hidden; }
+  .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .coTxt {
+    margin-top: 6px; }
+  .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .bar {
+    width: 47%;
+    bottom: 28%; }
+  .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .coCount {
+    bottom: 20%; }
+  .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_btn {
+    width: 13vw; }
+    .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_btn a h2 {
+      font-size: 2.5vw; }
+  .containerhope .bookmark .mark_title ul li {
+    width: 20%; }
+  .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_name {
+    font-size: 2vw;
+    margin: auto;
+    text-align: center;
+    margin-top: -7px; }
+  .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_title {
+    overflow: hidden;
+    height: 30px; }
+  .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
+    height: 105px;
+    overflow: hidden; }
+  .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .countP {
+    margin-top: 2px;
+    text-align: center;
+    width: 100%; }
+  .containerhope .bookmark .mark_container .mark_item a .c1 .mark_item a .item-box .item-box-shadow .box-fontt .coP {
+    width: 100%;
+    text-align: center; } }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .col-xs-1 {
@@ -686,7 +831,7 @@ body {
     padding: 0 10px; }
   .containerhope {
     font-family: '微軟正黑體';
-    margin: 18% 0 0 0; }
+    margin: 0; }
     .containerhope h2 {
       font-size: 34px;
       letter-spacing: 2px;
@@ -712,7 +857,7 @@ body {
       z-index: 98;
       margin: auto; }
       .containerhope .hopefarmrwd-select ul {
-        padding: 67px 0 1px 0;
+        padding: 78px 0 1px 0;
         background-color: #ece7d4;
         text-align: center; }
         .containerhope .hopefarmrwd-select ul a li {
@@ -752,11 +897,13 @@ body {
       .containerhope .purpose .purpose_txt {
         width: 90%; }
         .containerhope .purpose .purpose_txt h2 {
-          font-size: 38px; }
-        .containerhope .purpose .purpose_txt h3 {
+          font-size: 24px;
+          font-weight: 500;
+          margin-bottom: 0; }
+        .containerhope .purpose .purpose_txt .purp {
           text-overflow: ellipsis;
-          font-size: 25px; }
-          .containerhope .purpose .purpose_txt h3:nth-child(2):before {
+          font-size: 19px; }
+          .containerhope .purpose .purpose_txt .purp:nth-child(2):before {
             content: '';
             width: 10px;
             height: 10px;
@@ -765,11 +912,14 @@ body {
             border-radius: 50px;
             vertical-align: middle;
             margin-top: -5px; }
-          .containerhope .purpose .purpose_txt h3:nth-child(2) {
-            padding-bottom: 2px; }
-          .containerhope .purpose .purpose_txt h3:nth-child(3) {
-            padding-bottom: 15px; }
-          .containerhope .purpose .purpose_txt h3:nth-child(4):before {
+          .containerhope .purpose .purpose_txt .purp:nth-child(2) {
+            padding-bottom: 0;
+            margin: 0; }
+          .containerhope .purpose .purpose_txt .purp:nth-child(3) {
+            padding-bottom: 0;
+            line-height: 23px;
+            margin-bottom: 15px; }
+          .containerhope .purpose .purpose_txt .purp:nth-child(4):before {
             content: '';
             width: 10px;
             height: 10px;
@@ -778,11 +928,14 @@ body {
             border-radius: 50px;
             vertical-align: middle;
             margin-top: -5px; }
-          .containerhope .purpose .purpose_txt h3:nth-child(4) {
-            padding-bottom: 2px; }
-          .containerhope .purpose .purpose_txt h3:nth-child(5) {
-            padding-bottom: 15px; }
-          .containerhope .purpose .purpose_txt h3:nth-child(6):before {
+          .containerhope .purpose .purpose_txt .purp:nth-child(4) {
+            padding-bottom: 0;
+            margin: 0; }
+          .containerhope .purpose .purpose_txt .purp:nth-child(5) {
+            padding-bottom: 0;
+            line-height: 23px;
+            margin-bottom: 15px; }
+          .containerhope .purpose .purpose_txt .purp:nth-child(6):before {
             content: '';
             width: 10px;
             height: 10px;
@@ -791,34 +944,50 @@ body {
             border-radius: 50px;
             vertical-align: middle;
             margin-top: -5px; }
+          .containerhope .purpose .purpose_txt .purp:nth-child(6) {
+            margin: 0;
+            padding-bottom: 0; }
+          .containerhope .purpose .purpose_txt .purp:nth-child(7) {
+            line-height: 23px; }
     .containerhope .bookmark .mark_title {
       display: none; }
-    .containerhope .bookmark .mark_container .mark_item a .item-box {
-      margin-bottom: 5%; }
-      .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow {
-        box-shadow: 0 0 8px 0 #ccc; }
-        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_name {
-          margin-left: 13%;
-          margin-top: -9px;
-          font-size: 4vw; }
-        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_title {
-          font-size: 8vw;
-          margin-bottom: 2px; }
-        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
-          font-size: 5vw;
-          letter-spacing: 2px;
-          line-height: 160%; }
-        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .bar {
-          margin-top: 10px; }
-        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4 {
-          font-size: 23px;
-          padding-right: 0;
+    .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow {
+      box-shadow: 0 0 8px 0 #ccc; }
+      .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_name {
+        margin-top: -9px;
+        font-size: 16px;
+        margin-left: 0;
+        text-align: center; }
+      .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_title {
+        font-size: 24px;
+        margin-bottom: 2px;
+        font-weight: 500;
+        color: #000; }
+      .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
+        font-size: 20px;
+        letter-spacing: 2px;
+        line-height: 23px; }
+      .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .bar {
+        margin-top: 10px; }
+      .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .countP {
+        font-size: 19px;
+        padding-right: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px; }
+        .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .countP:last-child {
           width: 100%;
-          text-align: center;
-          margin-top: 10px; }
-          .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt h4:last-child {
-            width: 100%;
-            margin-top: 2px; }
+          margin-top: 2px; }
+    .containerhope .bookmark .mark_container .mark_item a:nth-child(2) .item-box {
+      margin-top: 6%; }
+    .containerhope .bookmark .mark_container .mark_item a:nth-child(3) .item-box {
+      margin-top: 6%; }
+    .containerhope .bookmark .mark_container .mark_item a:nth-child(4) .item-box {
+      margin-top: 6%; }
+    .containerhope .bookmark .mark_container .mark_item a:nth-child(5) .item-box {
+      margin-top: 6%; }
+    .containerhope .bookmark .mark_container .mark_item a:nth-child(6) .item-box {
+      margin-top: 6%; }
     .containerhope .bookmark .mark_container .mark_deco img {
       display: none; }
     .containerhope .bookmark .mark_container .mark_more {
@@ -826,18 +995,20 @@ body {
       .containerhope .bookmark .mark_container .mark_more img {
         width: 20%; }
     .containerhope .risk {
-      margin-top: 20%; }
+      margin-top: 20%;
+      margin-bottom: 10px; }
       .containerhope .risk .risk_title h2 {
-        font-size: 28px; }
+        font-size: 28px;
+        font-weight: 500; }
     .containerhope .risk_container .risk_range {
       padding: 0 3%; }
       .containerhope .risk_container .risk_range .risk_txt {
         width: 100%;
         margin-top: 10px; }
-        .containerhope .risk_container .risk_range .risk_txt p {
+        .containerhope .risk_container .risk_range .risk_txt .risk_p {
           letter-spacing: 2px;
           line-height: 160%; }
-          .containerhope .risk_container .risk_range .risk_txt p:before {
+          .containerhope .risk_container .risk_range .risk_txt .risk_p:before {
             content: '';
             width: 10px;
             height: 10px;
@@ -845,14 +1016,15 @@ body {
             background-color: #699c33;
             border-radius: 50px;
             vertical-align: middle;
-            margin-top: -5px; }
-          .containerhope .risk_container .risk_range .risk_txt p:nth-child(2) {
-            margin-top: 10px; }
-          .containerhope .risk_container .risk_range .risk_txt p:nth-child(3) {
-            margin-top: 10px; }
-          .containerhope .risk_container .risk_range .risk_txt p:nth-child(4) {
-            margin-top: 10px; }
-          .containerhope .risk_container .risk_range .risk_txt p:nth-child(5) {
-            margin-top: 10px; }
+            margin-top: -5px;
+            margin-right: 6px; }
+          .containerhope .risk_container .risk_range .risk_txt .risk_p:nth-child(2) {
+            margin-top: 15px; }
+          .containerhope .risk_container .risk_range .risk_txt .risk_p:nth-child(3) {
+            margin-top: 15px; }
+          .containerhope .risk_container .risk_range .risk_txt .risk_p:nth-child(4) {
+            margin-top: 15px; }
+          .containerhope .risk_container .risk_range .risk_txt .risk_p:nth-child(5) {
+            margin-top: 15px; }
       .containerhope .risk_container .risk_range .risk_img img {
         display: none; } }

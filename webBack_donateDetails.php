@@ -1,19 +1,21 @@
-<?php
+
+<?php 
+ob_start();
 session_start();
-ob_start();?>
+ ?>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
 	<meta charset="UTF-8">
 	<title>後台::資助進度</title>
-	
+	<link rel="stylesheet" href="css/webBack_donateDetails.css">
 	<link rel="stylesheet" type="text/css" href="css/web_back_frame.css">
 	<!-- 不准動的部分，以下三行 -->
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/web_back_frame/web_back_frame.js"></script>
 	<!-- 自己的css擺這裡 -->
-	<link rel="stylesheet" href="css/webBack_donateDetails.css">
+	
 
 </head>
 <body>
@@ -58,7 +60,7 @@ ob_start();?>
 		$i=0;
 		try{
 			require_once("php/connectGrowing_hope.php");
-			$sql = "select * from count_donate where event_no = '$event_no'";
+			$sql = "select * from donate_count where event_no = '$event_no'";
 			$donate = $pdo ->query($sql);
 			$donateRow = $donate->fetchObject();
 	?>	

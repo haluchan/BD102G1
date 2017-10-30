@@ -79,7 +79,7 @@ ob_start();
 		while(  $resultset = $ordermaster ->fetchObject() ){
 		?>
 		<tr class="tdRow">
-			<td><a href="orderItem.php?order_no=<?php echo $resultset->order_no; ?>"><?php echo $resultset->order_no ;?></a></td>
+		<td><a href="orderItem.php?order_no=<?php echo $resultset->order_no; ?>">	<?php echo $resultset->order_no ;?></a></td>
 			<td><?php echo $resultset->mem_no ;?></td>
 			<td><?php echo $resultset->order_bonus ;?></td>
 			<td><?php echo $resultset->order_cut ;?></td>

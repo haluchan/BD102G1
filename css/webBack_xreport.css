@@ -19,11 +19,11 @@
 .myForm td {
   font-weight: lighter; }
 
-.myForm .tdRow:nth-child(3n+2) {
+.myForm .tdRow:nth-child(odd) {
   /*基數白底，偶數灰底(第一row包th不算)*/
   background-color: #ddd; }
 
-.myForm .tdRow:nth-child(3n+3) {
+.myForm .tdRow:nth-child(even) {
   background-color: #fff; }
 
 .myForm table {
@@ -36,17 +36,19 @@
   .myForm table tr th:nth-child(1) {
     width: 5%; }
   .myForm table tr th:nth-child(2) {
-    width: 10%; }
+    width: 8%; }
   .myForm table tr th:nth-child(3) {
-    width: 10%; }
+    width: 8%; }
   .myForm table tr th:nth-child(4) {
-    width: 20%; }
+    width: 8%; }
   .myForm table tr th:nth-child(5) {
-    width: 10%; }
+    width: 40%; }
   .myForm table tr th:nth-child(6) {
-    width: 25%; }
+    width: 8%; }
   .myForm table tr th:nth-child(7) {
-    width: 10%; }
+    width: 8%; }
+  .myForm table tr th:nth-child(8) {
+    width: 8%; }
 
 .myForm .btn {
   width: 100%; }

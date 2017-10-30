@@ -21,6 +21,7 @@
 		    	<div class="feedbackCotent">
 		    		<div>案件編號<span><?php echo str_pad($_GET['no'],5,'0',STR_PAD_LEFT)?></span></div>
 					<div><?php echo $_GET['item']?><span><?php echo $_GET['name']?></span></div>
+					
 		    	</div>
 				<a href="application.php"><button class="btn_green"> 確定</button></a>	
 			</div>

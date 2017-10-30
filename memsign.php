@@ -12,12 +12,20 @@
 			    	</button>
 				</div>
 			</div>
-			<form action="php/memberInsert.php" method="get" accept-charset="utf-8">
+			<form action="php/memberInsert.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 				
 			
 	
 		  <div class="login-content">
 			  	<h2>會員註冊</h2>
+			<!-- <div class="photo ">
+				<img src="src/image/member/
+					<?php //echo $_SESSION['mem_pho'];?>" alt=""> 
+			</div> -->
+			<div class="imguplod">
+				<span >選擇照片</span>
+				<input type="file" class="memimguplod" name="mem_pho">
+			</div>
 			   <div class="sign-account">
 				   	<p>帳號</p>
 			   		<input type="text" name="mem_Id" value="" placeholder="請輸入帳號">

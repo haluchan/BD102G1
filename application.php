@@ -1,4 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<?php require_once('Header_head.php') ?>
@@ -230,7 +231,9 @@
   	<?php require_once('Footer.php') ?> 
   	
   	<script src="js/header.js"></script>
+  	<script type="text/javascript" src="js/login-ajax.js"></script>
 	<script src="js/application.js"></script>
+	
 	
 	<script>
 		$('.btn_green').click(function(){
