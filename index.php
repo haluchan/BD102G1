@@ -319,6 +319,7 @@ session_start(); ?>
 			$('#fullPage').fullpage({
 			    navigation: true,
 			    fixedElements: '#header',
+			    continuousVertical: true,
 			afterLoad: function(anchorLink, index){
             	var loadedSection = $(this);
             },

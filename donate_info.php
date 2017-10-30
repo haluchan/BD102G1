@@ -197,8 +197,6 @@ session_start();
 
 				<img src="src/image/funded/<?php echo $eventRow -> event_pho ?>">
 
-				<img src="src/image/funded/<?php echo $eventRow -> event_pho;?>">
-
 			</div>
 			<div class="content_item col-sm-7 col-xs-10">
 				<p class="txt"><?php echo $eventRow -> event_txt;?></p>
