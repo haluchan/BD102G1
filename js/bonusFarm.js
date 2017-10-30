@@ -2,18 +2,24 @@
 $( function() {
     $('.seedFirst').click(function(){
        points = $(this).attr('alt')
-       alert(points);
+       // alert(points);
+       $('.seedBag').click(function(){
+       $(this).attr('src','../src/image/bonusFarm/seed_darkgreen.png');
+    });
     });
     $('.seedSecond').click(function(){
        points = $(this).attr('alt')
-       alert(points);
+       // alert(points);
+       $('.seedBag').click(function(){
+       $(this).attr('src','../src/image/bonusFarm/seed_red.png');
+    });
     });
     $('.seedThird').click(function(){
        points = $(this).attr('alt')
-       alert(points);
+       // alert(points);
+       $('.seedBag').click(function(){
+       $(this).attr('src','../src/image/bonusFarm/seed_yellow.png');
     });
-    $('.seedBag').click(function(){
-        $(this).attr('src','../src/image/bonusFarm/seed.png');
     });
     $( ".seedBag" ).draggable({ revert:"invalid"});
     $( ".land" ).droppable({
@@ -41,7 +47,7 @@ $( function() {
 $(document).ready(function(){
   var angle = 0;
     setInterval(function(){
-      angle-=3;
+      angle+=3;
      $(".windmill_top").rotate(angle);
 },40);
 });
@@ -59,6 +65,7 @@ window.onclick = function(event) {
 $(document).ready(function(){
   $('#btn1').click(function(){
     $('.seedBag').css('display','none');
+    $('.land').css('display','none');
   });
   $('.close').click(function(){
       $('.seedBag').css('display','block');
@@ -70,6 +77,7 @@ $(document).ready(function(){
   $('#btn2').click(function(){
     $('#id01').hide(function(){
       $('.seedBag').css('display','block');
+      $('.land').css('display','block');
     });
   });
 });
