@@ -1,11 +1,11 @@
 //每個格子統一固定padding
 $cellPadding: 6px 4px;
-//note web_back_form.css修正
 
 
 
 /* table起始 */
 .myForm{
+
     table{width:100%};
     label+label{
     	margin-left: 14px;
@@ -38,18 +38,22 @@ $cellPadding: 6px 4px;
 	}
 
     
-	// .tdRow:nth-child(odd){/*基數白底，偶數灰底(第一row包th不算)*/
-	// 	background-color: #ddd;
-	// }
-	// .tdRow:nth-child(even){
-	// 	background-color: #fff;
-	// }
-	.tdRow:nth-child(3n+2){/*基數白底，偶數灰底(第一row包th不算)*/
+	.tdRow:nth-child(odd){/*基數白底，偶數灰底(第一row包th不算)*/
 		background-color: #ddd;
 	}
-	.tdRow:nth-child(3n+3){
+	.tdRow:nth-child(even){
 		background-color: #fff;
 	}
+	//.tdRow:nth-child(odd){/*基數白底，偶數灰底(第一row包th不算)*/
+		// background-color: #ddd;
+	//}
+	// .tForm:nth-child(odd) .tdRow{
+	// 	background-color: #0dd;
+	// }
+	// .tForm:nth-child(even) .tdRow{
+	// 	background-color: #ddd;
+	// 	// background-color: red;
+	// }
 	
 	//限制表格寬度固定
 	table{  		
