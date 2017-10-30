@@ -21,9 +21,9 @@ session_start();
 		<?php 
 		$eve=$_SESSION["mem_no"];
 		// if( isset($_SESSION["mem_no"]) === false){
-  // 		$_SESSION["where"] = $_SERVER["PHP_SELF"];
-//   		echo "<script>alert('還沒登入喔');location=history.back(-1);</script>";
-// }else{
+		  // 		$_SESSION["where"] = $_SERVER["PHP_SELF"];
+		//   		echo "<script>alert('還沒登入喔');location=history.back(-1);</script>";
+	// }else{
 		try {
 
 			require_once("php/connectBeck.php");

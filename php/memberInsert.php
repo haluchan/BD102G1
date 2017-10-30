@@ -37,7 +37,7 @@ try {
 	$member->bindValue( ":mem_pho" , $photonum);
 	$member->bindValue( ":mem_name" , $_REQUEST["mem_name"]);
 	$member->bindValue( ":mem_Id" , $_REQUEST["mem_Id"]);
-	$member->bindValue( ":mem_Psw" , $_REQUEST["mem_Psw"]);
+	$member->bindValue( ":mem_psw" , $_REQUEST["mem_psw"]);
 	$member->bindValue( ":mem_mail" , $_REQUEST["mem_mail"]);
 	$member->bindValue( ":mem_gender" , $_REQUEST["mem_gender"]);
 	$member->bindValue( ":mem_birth" , $_REQUEST["mem_birth"]);
