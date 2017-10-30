@@ -54,7 +54,7 @@ function memberarea(){
   		if(xhr.readyState==4){
 			if( xhr.status == 200){
   				if( (xhr.responseText).indexOf('error') !== -1){
-  					alert("not yet");
+  					alert("還沒登入喔，請先登入");
   				}else{
   				// alert("123");
   				location.href = "member.php";
