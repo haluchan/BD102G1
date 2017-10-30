@@ -32,7 +32,7 @@ if($_SESSION['adminName'] == ''){
 	</nav>
 
 	<div>
-		<?php
+	<!-- 	<?php
 			// try {
 			// 	require_once("php/connectGrowing_hope.php");
 			// 	$sql = "select *,lpad(pro_no, 3, 0) pro_realNo 
@@ -54,7 +54,7 @@ if($_SESSION['adminName'] == ''){
 		//未審核檢舉
 
 
-		?>
+		?> -->
 	</div>
 
 
