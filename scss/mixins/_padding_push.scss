@@ -1,0 +1,7 @@
+@mixin padding_push($dis,$num){
+	@for $i from 1 through $num{
+		.padding-#{$dis}-#{$i}{
+			padding-#{$dis}: $i+px;
+		}
+	}
+}

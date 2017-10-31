@@ -1,0 +1,153 @@
+	*{
+		margin:0px;
+		padding:0px;
+		
+	}
+	body{
+  		
+		margin:0;
+		background-image:url('../src/image/event/23167-nupqqc-02.png');
+	  	background-repeat: repeat;
+	}
+	.clear{
+		clear: both;
+	}
+	
+	.photo{
+		border-radius: 50%;
+		overflow: hidden;
+		width:10vw;
+	
+		margin: 0 auto;
+	}
+	.photo img{
+		width: 10vw;
+	}
+	.titlebg img{
+		width: 100%;
+		height: 50%;
+	}
+	
+	.btnbox{
+		margin: 6% 0;
+		text-align: center;
+	}
+	.btnbox .but {
+		font-family: Arial;
+		color: #ffffff;
+		font-size: 18px;
+		/* border-radius: 6px; */
+		background: #699c33;
+		padding: 10px 20px 10px 20px;
+		border: solid #699c33 2px;
+	  	text-decoration: none;
+	  	transition: 1s;
+	}
+
+	.btnbox .but:hover {
+		background: #ffffff;
+		text-decoration: none;
+		color: #699c33;
+	}
+	
+	
+	.table{
+		text-align: center;
+		margin: 0 auto;
+		/* background-color: rgba(255, 255, 255, .9); */
+		background: url('../src/image/member/033.png') no-repeat ;
+		padding: 2%;
+		border-radius: 4%;
+		width: 60%;
+		height: 600px;
+
+	}
+
+	table{
+		margin: 0 auto;
+	}
+	td{
+		color: rgba(0, 0, 0, .9);
+		text-align: right;
+		font-size:22px;
+		letter-spacing: 2px;
+		line-height: 36px;
+		padding: 3px 2vw;
+		margin-left: 30px;
+	
+	}
+	td p {
+		text-align: center;
+		
+	}
+	@media screen and (max-width: 767px) {
+		td{
+			font-size: 12px;
+		}
+		.table{
+		
+		width: 80%;
+
+	}
+	}
+	th{
+		text-align: right;
+		border-bottom: 1px solid #699c33;
+	}
+	table tr{
+		margin: 30px auto;
+	}
+ 	.bigtitle h2{
+		font-size: 28px;
+		color: #699c33;
+	}
+	
+	.bigtitle{
+		text-align: center;
+		font-size: 30px;
+		padding: 4% 0;
+		letter-spacing: 6px;
+	}
+	.navbar{
+		text-align: center;
+	}
+	.imguplod{
+		margin: 6% 0 ;
+		position: relative;
+	}
+	.imguplod span{
+		margin: 6% auto;
+		position: relative;
+		background-color: rgb(105, 156, 51);
+		color: #fff;
+		width: 100px;
+		display: block;
+		padding: 4px;
+		font-size: 1em;
+	}
+	.memimguplod{
+		width: 100px;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 40%;
+
+	}
+	.table select{
+		width: 150px;
+		color: #699c33;
+		border: 1px solid #699c33;
+	}
+	.mem{
+	position: relative;
+	width: 100%;
+	}
+
+	input{
+	outline: none;
+	border: none;
+	padding: 5px;
+	background-color: rgba(105, 156, 51, .2);
+	}
+
+	

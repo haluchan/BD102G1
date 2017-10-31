@@ -1,0 +1,323 @@
+﻿//每個格子統一固定padding
+$cellPadding: 6px 4px;
+//note web_back_form.css修正
+.manage{width:16%}
+.content_form{width:84%;}
+botton{border:none;}
+//hover效果
+
+
+
+/* table起始 */
+.myForm{
+	width: 94%;
+	margin:auto;
+    table{width:100%}
+
+	th, td{  /*每個格子統一固定padding*/    
+		padding:$cellPadding;
+		text-align: left;
+
+		//自動斷行
+		word-break:break-all;
+		text-overflow : ellipsis;
+	}
+
+	
+	tr>td:first-child{  /*每row第一個格子(編號)固定置中，灰色*/
+		color:#888;
+		text-align: center;
+	}
+
+	
+	th{  /*th的樣式:上下有橘色線*/
+		// border-top: 2px solid #F29600;
+		border-bottom: 2px solid #ddd;
+		background-color: #F29600;
+
+
+	}
+	td{
+		font-weight: lighter;
+	}
+
+    
+	.tdRow:nth-child(odd){/*基數白底，偶數灰底(第一row包th不算)*/
+		background-color: #ddd;
+	}
+	.tdRow:nth-child(even){
+		background-color: #fff;
+	}
+	.clear{
+		clear: both;
+	}
+	
+
+	
+	//限制表格寬度固定
+	table{  		
+		table-layout:fixed
+	}
+
+	table{  /*每一欄的寬度設定。以百分比。剩的寬自動為最後一欄*/
+		/*不能動！！第一欄固定為5%*/
+		tr{
+
+			th{
+				width: 3%;
+				&:nth-child(7){
+					width: 6%;
+				}
+
+			}
+			
+		}
+		.tddisplay{
+			td{
+				background-color: #eee;
+			}		
+	}
+		
+		
+	}
+
+//===========================================
+
+
+	//按鈕
+	.edit{
+			background-color: #ccc;
+			color:#fff;
+			width: 100%;
+			padding:4px 6px;
+			border:none;
+			box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+	}
+	.btn{
+		color:#000;
+		width: 100%;
+		background-color: LemonChiffon ;
+		padding:4px 6px;
+		border:none;
+		box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+	}
+	.date{
+		width: 90%;
+		margin: 0 5%;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 200;
+	}
+}
+.tddisplay{
+	display: none;
+}
+
+/* table結束 */
+
+//=========================================
+.return{
+	background-image: url("../src/image/cart/cart-bg.png");
+	width: 700px;
+	margin: auto;
+	.type{
+		width: 80%;
+		padding: 20px 10% 10%;
+		.type_img{
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+		.type_txt{
+			width: 100%;
+			.title{
+				text-align: left;
+				margin: 3% 0;
+				input{
+					width: 150px;
+					font-size: 14px;
+					line-height: 1.5;
+					color: #362e2b;
+					border:0px;
+					background-color: rgba(255,255,255,0);
+				}
+
+			}
+			.content{
+				width: 100%;
+				textarea{
+					width: 100%;
+					height: 150px;
+					font-size: 16px;
+					color: #59493f;
+					line-height: 2;
+					border:0px;
+					background-color: rgba(255,255,255,0);
+				}
+			}
+
+		}
+
+	}
+	.type_1{
+		width: 80%;
+		padding: 20px 10% 10%;
+		background-image: url("../src/image/funded/bg_foot01.png"), url("../src/image/funded/img_1400_sub.png");
+		background-repeat: no-repeat;
+		background-position: left bottom, right bottom;
+		.type_img{
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+		.type_txt{
+			width: 100%;
+			.title{
+				text-align: left;
+				margin: 3% 0;
+				input{
+					width: 150px;
+					font-size: 14px;
+					line-height: 1.5;
+					color: #362e2b;
+					border:0px;
+					background-color: rgba(255,255,255,0);
+				}
+				.date{
+					width: 30%;
+					display: inline-block;
+					float: right;
+					text-align: right;
+					font-size: 14px;
+				}
+
+			}
+			.content{
+				width: 100%;
+				textarea{
+					width: 100%;
+					height: 150px;
+					font-size: 16px;
+					color: #59493f;
+					line-height: 2;
+					text-align: left;
+					border:0px;
+					background-color: rgba(255,255,255,0);
+				}
+			}
+
+		}
+
+	}
+	.type_2{
+			width: 80%;
+			padding: 20px 10% 10%;
+			background-image: url("../src/image/funded/bg_foot02.png"), url("../src/image/funded/img_830_sub.png");
+			background-repeat: no-repeat;
+			background-position: center bottom , right bottom;
+
+			.type_img{
+				width: 50%;
+				img{
+					width: 95%;
+				}
+			}
+			.type_txt{
+				width: 50%;
+				float: right;
+				.title{
+					text-align: left;
+					margin: 5% 0;
+					input{
+						width: 150px;
+						font-size: 14px;
+						line-height: 1.5;
+						color: #362e2b;
+						border:0px;
+						background-color: rgba(255,255,255,0);
+					}
+					.date{
+						display: inline-block;
+						float: right;
+						// text-align: right;
+						font-size: 14px;
+						color: #7e6b5a;
+					}
+				}
+				.content{
+					textarea{
+						float: left;
+						width: 28%;
+						height: 150px;
+						font-size: 16px;
+						color: #59493f;
+						line-height: 2;
+						text-align: left;
+						border:0px;
+						background-color: rgba(255,255,255,0);
+					}
+				}
+
+			}
+
+		}
+	.type_3{
+			width: 80%;
+			padding: 20px 10% 10%;
+			background-image: url("../src/image/funded/bg_foot08.png"),url("../src/image/funded/img_500_sub.png");
+			background-repeat: no-repeat;
+			background-position: center bottom , left 300px;
+			position: relative;
+			.type_img{
+				width: 50%;
+				float: right;
+				overflow: hidden;
+				img{
+					margin-top: 80px;
+					width: 100%;
+					border-radius: 50%;
+				}
+			}
+			.type_txt{
+				width: 50%;
+				.title{
+					text-align: left;
+					margin: 5% 0;
+					input{
+						width: 150px;
+						font-size: 14px;
+						line-height: 1.5;
+						color: #362e2b;
+						border:0px;
+						background-color: rgba(255,255,255,0);
+					}
+					.date{
+						display: inline-block;
+						float: right;
+						// text-align: right;
+						font-size: 14px;
+						color: #7e6b5a;
+					}
+				}
+				.content{
+					textarea{
+						float: left;
+						width: 28%;
+						height: 350px;
+						font-size: 16px;
+						color: #59493f;
+						line-height: 2;
+						text-align: left;
+						border:0px;
+						background-color: rgba(255,255,255,0);
+				}
+
+				}
+
+			}
+
+		}
+
+}

@@ -1,0 +1,453 @@
+@charset "UTF-8";
+@import "../mixins/media";
+
+body{
+	background-image:url('../../src/image/cart/cart-bg.png');
+}
+.tabmenu{
+		width:100%;
+		background-color:#e9dcb0;
+		ul{
+			list-style:none;
+			width:60%;
+			margin-left:20%;
+			li{
+				display:inline-block;
+				padding:2%;
+				font-size:16px;
+				border-bottom:5px solid transparent;
+				a{
+					text-decoration:none;
+					display:block;
+					color:#58483e;
+				}
+				&:hover{
+					border-bottom:5px solid #58483e;
+				}
+			}
+		}
+	}
+
+
+.container{
+	width:50%;
+	margin:auto;
+	@include rwd (moblie) {						
+		width:90%;			    					
+	}
+	h2{
+		font-size:44px;
+		color:#659e34;	
+	}
+	h3{
+		font-size:28px;
+		color:rgba(0,0,0,0.6);
+		@include rwd (moblie) {	
+			font-size:20px;		
+		}
+	}
+	p{
+		color:#43612f;
+		font-size:18px;
+		@include rwd (moblie) {						
+		    font-size:14px;			    					
+		}
+	}
+	h4{
+		font-size:16px;
+	}
+	img{
+		width:100%;
+	}
+	a{
+		text-decoration:none;
+	}
+	.applicationTitle{
+		width:100%;
+		margin:auto;
+		text-align:center;
+		@include rwd (moblie) {									    					
+		}
+		.item{//icon及文字
+			width:40%;
+			text-align:right;		
+			display:inline-block;
+			vertical-align: middle;
+			@include rwd (moblie) {						
+		    	width:35%;
+		    	h2{
+		    		font-size:24px;
+		    	}			    					
+			}
+			img{
+				width:200px;
+				@include rwd (moblie) {						
+		    		width:100%;		    					
+				}
+			}
+			h2{
+				text-align:left;
+			}
+		}
+	}
+	.SubTitle{
+		text-align:center;
+		line-height:25px;
+		p{
+			line-height:25px;	
+		}
+		@include rwd (moblie) {						
+		    width:100%;
+		    text-align:center;	
+		    margin:auto;
+		    p{
+				line-height:20px;	
+			}		    					
+		}
+	}
+
+
+	form{	
+		span{
+			color:#FF8888;
+			font-weight:bold;
+			i{
+				color:#666666;
+				cursor:pointer;
+			}
+
+
+		}
+		.stepContent{
+			background-color: #ece7d4;
+			margin: 50px auto;
+			padding: 50px 5%;
+			text-align:center;
+			position:relative;
+			box-shadow:1px 0 10px #ccc;
+			
+			@include rwd (moblie) {						
+		    	padding: 10% 0;			    					
+			}
+			// h3{
+			// 	text-align:center;
+			// 	margin-bottom:30px;
+			// }
+			.stepContentNumber{
+				position: absolute;
+				left:-50px;
+				top: -50px;
+				@include rwd (moblie) {						
+		    		width:20%;
+		    		left:-5%;
+		    		top:-35px;			    					
+				}
+			}	
+			.table{
+				width:60%;
+				margin:5% auto;
+				@include rwd (moblie) {						
+						width:80%;	 
+					}
+				.tr{
+					display:table-row;
+					margin:auto;
+					text-align:center;
+					margin-top:5%;
+					height:60px;
+					// vertical-align:middle;
+					@include rwd (moblie) {						
+						display:block;
+						// overflow:hidden;
+						height:100%;	 
+					}
+					.td{
+						width:30%;
+						display:table-cell;
+						vertical-align:middle;
+						&:first-child{
+							text-align:left;
+						}
+						&.radioAll{	
+						}
+						&.plant{
+							text-align:left;
+							label{font-size:14px;}
+						}
+						label{
+							font-size:18px;
+						}	
+						input{
+							width:100%;
+							border: 1px solid #759944;
+						    color: #759944;
+						    background-color: #FFF;
+						    // height: auto;
+						    padding-left: 3.5%;
+						    font-size: 18px;
+						    font-family:'微軟正黑體';
+						    font-weight: bold;
+						    line-height: 2;
+						    vertical-align: middle;
+						    display: inline-block;
+						    box-sizing: border-box;
+						    border-radius: 5px;
+						    // margin-top:5%;
+						    &.radio{
+						    	width:30%;
+						    	background-color:#FFF;
+						    }
+						    &.plant{
+						    	width:20%;
+						    	
+						    }   	
+						}
+						textarea{
+							background-color: rgba(255, 255, 255, .9);
+							outline: none;
+							// border: none;
+							border: 1px solid #759944;
+							border-radius: 6px;
+							resize: none;
+							font-size: 16px;
+							color: #759944;
+							width:100%;
+						}
+						#photo{
+							width:80%;
+						}
+						@include rwd (moblie) {						
+						    display:block;	
+						    margin:auto;
+						    text-align:center;
+						    width:80%;
+						    &:first-child{
+								text-align:center;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.formSubmit{
+			width: 200px;
+			height: 50px;
+			left:0;
+			right:0;
+			margin: auto;
+			text-align:center;
+		}
+	}//form結束
+}
+
+
+.two, .three{
+	width:50%;
+	margin:auto;
+	@include rwd (moblie) {						
+		width:90%;	
+		overflow:hidden;		    					
+	}
+
+	.applicationTitle{
+		width:100%;
+		margin:auto;
+		text-align:center;
+		@include rwd (moblie) {						
+		    width:100%;
+		    text-align:center;			    					
+		}
+		.item{
+			width:40%;
+			text-align:right;		
+			display:inline-block;
+			vertical-align: middle;
+			@include rwd (moblie) {						
+		    	width:35%;
+		    	h1{font-size:24px;}			    					
+			}
+			img{
+				width:200px;
+				@include rwd (moblie) {						
+		    		width:100%;		    					
+				}
+			}
+			h1{
+				text-align:left;
+			}
+		}
+	}
+	.form{	
+		box-shadow:1px 0 10px #ccc;
+		padding: 50px 0;;
+		background-color: #ece7d4;
+		// border:1px solid #ccc;
+		// font-weight:bold;
+		font-size:20px;
+		h4{
+			text-align:center;
+			span{color:#FF8888;}
+		}
+		.table{
+			width:80%;
+			margin:auto;
+			@include rwd (moblie) {						
+				margin:auto;	    					
+			}
+			.tr{
+				display:table-row;
+				height:80px;
+				margin:auto;
+				text-align:center;
+				@include rwd (moblie) {						
+					 display:block;
+					 overflow:hidden;	 
+				}
+				.td{
+					width:30%;
+					display:table-cell;
+					vertical-align:middle;
+					&:first-child{
+						text-align:left;
+					}
+					label{
+						font-size:18px;
+					}	
+					input{
+						width:100%;
+						border: 1px solid #759944;
+					    color: #759944;
+					    background-color: #FFF;
+					    // height: auto;
+					    padding-left: 3.5%;
+					    font-size: 18px;
+					    font-family:'微軟正黑體';
+					    font-weight: bold;
+					    line-height: 2;
+					    vertical-align: middle;
+					    display: inline-block;
+					    box-sizing: border-box;
+					    border-radius: 5px;
+					    @include rwd (moblie) {
+					    	width:80%;
+					    }
+					}
+					textarea{
+						background-color: rgba(255, 255, 255, .9);
+						outline: none;
+						border: none;
+						border-radius: 6px;
+						resize: none;
+						font-size: 16px;
+						color: #759944;
+						width:100%;
+					}
+					#photo{
+						width:80%;
+					}
+					@include rwd (moblie) {						
+					    display:block;	
+					    margin:auto;
+					    text-align:center;
+					    width:100%;
+					    &:first-child{
+							text-align:center;
+						}
+					}
+				}
+			}
+		}
+		.formSubmit{
+		width: 200px;
+		height: 50px;
+		left:0;
+		right:0;
+		margin: auto;
+		text-align:center;
+		margin:10% auto ;
+	}
+	}
+	
+}
+
+#showPanel{
+	position:relative;
+		#feedbackTable{
+		&:before{
+			content:'';
+			display:inline-block;
+			width:0;
+			height:0;
+			border:20px solid transparent;
+			border-bottom-color:#ddd0bb;
+			position:absolute;
+			left:46%;
+			top:-25%;
+			@include rwd (moblie) {						
+				top:-32%;	 
+			}
+		}
+		width:100%;
+		background-color:#ddd0bb;
+		color:#51504d;
+		text-align:center;
+		border-radius:10px;
+		@include rwd (moblie) {						
+				font-size:16px;	 
+			}
+		span{
+			display:inline-block;
+			padding-left:5%;
+			color:#000;
+			font-size:20px;
+			font-weight:bold;
+			text-align:center;
+			@include rwd (moblie) {						
+				display:block;	 
+			}
+		}
+	}
+}
+
+
+
+
+.navbar{
+	text-align: center;
+	width: 100%;
+	margin-top:10%;
+	.navbarli{
+		display: inline-block;
+		font-size: 24px;
+		padding:2px 2vw ;
+		border:2px solid #699c33;
+		cursor:pointer;
+
+		/* border-radius: 10%; */
+		/* margin: 0 2%; */
+		/* width: 100%; */
+		&.normal{
+			background-color: #fff;
+			color: #699c33;
+		}
+		&:hover{
+			background-color:#699c33;
+			color: #fff;
+			transition: .5s;
+		}
+	}
+	@include rwd (moblie) {
+			padding-top:15%;
+			box-sizing:border-box;			
+			.navbarli{
+				font-size: 18px;
+			}	 
+		}
+	
+}
+
+.barActive{
+	background-color:#699c33;
+	color: #fff;	
+}

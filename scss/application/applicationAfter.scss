@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@import "../mixins/media";
+
+body{
+	background-image:url('../../src/image/cart/cart-bg.png');
+}
+.container{
+
+	box-sizing:border-box;
+	padding:5% 10%;
+	width:50%;
+	margin:8% auto;
+	background-color:#ece7d4;
+	@include rwd (moblie) {						
+		width:80%;
+		margin:30% auto;
+		padding:10%;		 
+ 	}
+	
+	.feedback{
+		text-align:center;
+		.feedbackTitle{
+			// text-align:center;
+			h2{
+				font-size:30px;
+				color:rgba(0, 0, 0, 0.6);
+				@include rwd (moblie) {						
+					font-size:24px;		 
+ 				}
+			}
+		}
+		.feedbackCotent{
+			font-size:20px;
+			>div{
+				margin-top:5%;
+			}
+			// text-align:center;
+			span{
+				display:inline-block;
+				padding-left:5%;
+				color:#000;
+				font-size:20px;
+				font-weight:bold;
+				text-align:center;
+				@include rwd (moblie) {						
+					display:block;	 
+				}
+			}
+
+		}
+		button{
+			
+			margin-top:10%;
+			a{
+				text-decoration:none;
+				display:block;
+			}
+		}
+	}
+}
+
+// .feedback{
+// 	padding:5% 0;
+// 	width:100%;
+// 	background-color:#ece7d4;
+// 	color:#51504d;
+// 	// border-radius:2%;
+// 	text-align:center;
+	
+	
+	
+// 	.feedbackCotent{
+
+// 		width:50%;
+// 		text-align:left;
+// 		// padding-left:20%;
+// 		margin:auto;
+// 		>div{
+// 			margin:10% 0;
+// 		}
+// 		@include rwd (moblie) {						
+// 			text-align:center;	 
+// 		}
+// 	}
+// }

@@ -1,0 +1,376 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Apple LiGothic Medium, Microsoft JhengHei;
+	letter-spacing: 1px;	
+	background-color: rgba(255,245,230,0.65);
+}
+
+
+
+/*大區塊排版
+左側 .manage        綠色13% fixed(不佔位)
+
+右側 .content_form  全區100%
+  上方<nav>       寬87% position: sticky(佔位)
+  下方.myForm     寬87% float:right
+  下方分頁 .pages 寬87% float:right
+  	PS.myForm  為個人的頁面，統一設定在最下方*/
+  	
+
+.manage{
+	width:13%
+}
+.content_form{
+	width:100%; 
+	/*min-height:100vh;*/
+}
+nav{
+	width: 87%;
+}
+.myForm{
+	float:right;
+	width: 87%;
+}
+
+.clearfix{clear: both;}
+
+
+
+
+
+
+
+
+
+
+
+
+nav{
+	/*position: sticky;*/
+	position: fixed;
+	float: right;
+	right: 0px;
+	top: 0px;
+	background-color: #FFF8E6;
+	padding: 28px 40px 16px 60px;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 6px rgba(0,0,0,.3);
+	z-index: 98;
+}
+/* 如果沒有這行，把這裡打開 */
+/* .nav_item:nth-child(3){
+	opacity: 0;
+} */
+.nav_item{
+	box-sizing: border-box;
+	height: 60px;
+}
+.nav_item:first-child{
+	float: left;
+}
+.nav_item:not(:first-child){
+	float: right;
+	margin-left: 20px;
+}
+
+/* 標題 */
+.nav_item h2{
+	font-weight: 400;
+	position: relative;
+	font-size: 44px;
+	box-sizing: border-box;
+}
+ .nav_item h2:before{
+	content: "";
+	position: absolute; 
+	display: block;
+	background-color: #946134;
+	width: 3px;
+	height: 35px;
+	left: -20px;
+	top: 15px;
+	border-radius: 10px;
+} 
+
+/* 搜尋區塊 */
+.nav_item .search{
+	margin-top: 10px;
+	background-color: white;
+	border:1px solid #999;
+}
+.nav_item input{
+	background-color: white;
+	padding: 15px;
+	width: 120px;
+	border: none;
+}
+.nav_item .search button{
+	background: transparent;
+	border: none;
+	float: right;
+	padding: 10px;
+	position: relative;
+}
+.nav_item .search button:nth-child(2):before{
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 25px;
+	left: 1px;
+	background-color: gray;
+}
+
+
+/* 下拉式選單 */
+nav .select {
+	padding-top: 10px;
+}
+nav .select select{
+	background-color: white;
+	vertical-align: text-bottom;
+	min-width: 100px;
+	height: 48px;
+	padding: 10px;
+	vertical-align: middle;
+}
+nav .select span{
+	font-size: 20px;
+	/*display: inline-block;*/
+	height: 60px;
+	margin: auto;
+	vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 左邊選單 */
+	.manage{
+		height: 100vh;
+		position: fixed;
+		background-color: #ABCD87;
+		text-align: left;
+		z-index: 99;
+	}
+	.manage>ol a{
+		cursor: pointer;
+		text-decoration: none;
+	}
+		
+	.manage button{
+		cursor: pointer;
+	}	
+	/* LOGO */
+	.manage >ol >li:first-child{
+		margin: 10px 0px 10px 20px;		
+	}
+
+	/* 每個母選單*/
+	.manage >ol >li{
+		margin-top: 10px;
+		list-style: none;
+		overflow: hidden;
+	}
+	/*母選單標題*/
+	.motherTitle{
+		display: block;
+		padding: 10px 0 12px 30px;
+		cursor: pointer;
+		width: 	86%;
+		color: #000;
+	}
+	/* 子選單標題 */
+	.manage >ol >li >ol >li{
+		padding: 4px 0 6px 30px;
+		width: 60%;
+		cursor: pointer;
+	}
+	.manage >ol >li >ol >li >a{
+		width: 100%;
+	}
+	.motherTitle:hover,.manage >ol >li >ol >li:hover{
+		background-color: rgba(236,254,218,.6);
+		box-shadow: 0px 0px 6px rgba(0,0,0,.1);
+	}
+
+
+	/* 包 子選單的ol */
+	.manage  > ol .item{
+		margin-top: 0px;
+	}
+	.manage  > ol .item li+li{
+		margin: 2px 0;
+	}
+	/*加加減減的圖*/
+	.manage li:not(:first-child) img{
+		/*border: 1px solid blue;*/
+		display: inline-block;
+		position: relative;
+		right: 5px;
+	}
+
+
+
+
+	/* 子選單隱藏，點擊展開 */
+	.item{
+		display: none;
+		margin-left: 22px;
+		list-style: none;
+	}
+	/* 各個選單的標題 */
+	.itemClick,.slideButton{
+		display: inline-block;
+		/*width: 86%;*/
+		height: 20px;
+		color: black;
+		text-decoration: none;
+	}
+
+	/* 登出按鈕 */
+	.logout{
+		display: block;
+		width: 110px;
+		/*height: 30px;*/
+		text-align: center;
+		padding: 8px 0px;
+		margin: auto;
+		border-radius: 10px;
+		color: #946134;
+		position: absolute;
+		left:0px;
+		bottom: 50px;
+		right: 0px;
+		background: #d7fffe;	
+		padding: 4px;
+		text-decoration: none;
+		
+		box-shadow: 2px 2px 1px rgba(0,0,0,.2);
+	}
+	.logout:active{
+		transform: translate(2px ,2px);
+		box-shadow: none;
+	}
+
+
+	
+	/* 登入資訊 */
+	.manage .signInInfo{
+
+		position: absolute;
+		left:0px;
+		bottom: 110px;
+		right: 0px;
+		padding: 10px 20px;
+		
+		opacity: .5;
+		width: 80%;
+		margin: auto;
+	}
+
+
+
+
+/* 分頁區塊 */
+
+	.pages{
+		width: 87%;
+		float: right;
+		text-align: center;
+	}
+	.pages a{			
+		text-decoration: none;
+		padding:0px 2px 1px 2px;
+		color: #008000;
+	}
+	.pages a:hover{
+		color: #F29600;
+		font-weight: bold;
+	}
+	.pages a+a{
+		margin-left: 4px;
+	}
+
+/* 分頁code
+<div style="" class="pages">
+	<?php
+	//印可連結的頁數資料
+	echo "<a href='?pageNo=1'>第一頁</a>&nbsp";
+	for($i=1; $i <= $totalPage;$i++){
+	  if($i==$pageNo)
+	    echo "<a href='?pageNo=$i' style='color:#F29600;border-bottom:1px solid #F29600;'>",$i,"</a>&nbsp&nbsp";
+	  else
+	    echo "<a href='?pageNo=$i'>",$i,"</a>&nbsp&nbsp";
+	}
+	echo "<a href='?pageNo=$totalPage'>最末頁</a>&nbsp";
+	?>
+</div>
+*/
+
+
+
+
+
+
+
+/* 各自的表格 */
+	.myForm{
+		box-sizing: border-box;
+		padding: 2% 2.5%;
+		margin-top: 86px;
+	}
+
+	/*每個格子統一固定padding*/
+	.myForm th, .myForm td{      
+		padding:6px 10px;
+		text-align: left;
+
+		/* 自動斷行*/
+		word-break:break-all;
+		text-overflow : ellipsis;
+	}
+	.myForm input,.myForm textarea{
+		padding: 6px 10px;
+		background-color:  LemonChiffon;
+		border: none;
+	}
+	.myForm input:focus,.myForm textarea:focus{
+		outline-color: #F29600;
+	}
+
+	/*按鈕*/
+	.btn{
+		display: inline-block;
+		text-align: center;
+		background-color: LemonChiffon ;
+		padding:4px 6px;
+		border:none;
+		width: 60%;
+		margin: auto;
+		box-shadow: 2px 2px 1px rgba(0,0,0,.2);
+		border-radius: $btnRadius;
+		outline: none;
+		cursor: pointer;
+		color:#000;
+	}
+	.btn:active{
+		transform: translate(2px ,2px);
+		box-shadow: none;
+	}
+
+
+
+
+

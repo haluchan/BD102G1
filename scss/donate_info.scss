@@ -1,0 +1,749 @@
+@charset "UTF-8";
+@import "mixins/setting";
+// 基本設定
+
+
+//手機
+@include rwd_vivi(max-width,767,xs,12);
+//手機以上
+@include rwd_vivi(min-width,768,sm,12);
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+
+.h_100vh{
+	height: 100vh;
+}
+.h_100p{
+	height: 100%;
+}
+.w_100vw{
+	width: 100vw;
+}
+.w_100p{
+	width: 100%;
+}
+.oh{
+	overflow: hidden;
+}
+.clear{
+	clear: both;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.txt{
+	font-size: 10px;
+}
+.fixed{
+	position: fixed;
+	top: 0;
+	box-shadow: 0px 2px 8px #aaa;
+	z-index: 99;
+}
+button{
+	outline:none;
+
+}
+textarea{
+	resize: none;
+}
+body{
+	background-image: url("../src/image/cart/cart-bg.png");
+}
+.display{
+	display: none;
+}
+
+// ======================================================================
+
+$max-width :960px;
+.donate_info{
+	// max-width: 1440px;
+	max-width: $max-width;
+	margin: auto; 
+	margin-top: 5%;
+	@media screen and (max-width: 767px) {
+		margin-top: 20%;
+	}
+
+}
+
+
+.data_info{
+	width: 100%;
+	.case_title{
+		text-align: center;
+		line-height: 1.8;
+		margin: 2.5% 0;
+		color: #59493f;
+		h2{
+			color: #362e2b;
+		}
+		@media screen and (max-width: 767px) {
+			h2{
+				font-size: 24px;
+			}
+			h3{
+				font-size: 16px;
+			}
+			h4{
+				font-size: 12px;
+			}
+		}
+		h4{
+			span{
+				color:#a40000;  
+			}
+		}
+	}
+	.play-video{
+		.video_item{
+			width: 95%;
+			margin: 0 2.5%;
+			padding-bottom: 56.8125%;
+			position: relative;
+			.video{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+
+			}
+		}
+	}
+	.case_data{
+		background-image: url("../src/image/funded/sports_ouen.png");
+		background-size: 100%;
+		background-position: 0 -50px; //左右-上下
+		background-repeat: no-repeat;
+		@media screen and (max-width: 767px) {
+			background-image: none;
+		}
+		.case_tiem{
+			width: 90%;
+			margin: 0 5%;
+			p{
+				font-size: 42px;
+				line-height: 1.5;
+				color: #00561f;
+				span{
+					font-size: 16px;
+					color: #007130;
+				}
+			}
+			form{
+				margin-top: 25%;
+				select{
+					outline:none;
+				}
+				@media screen and (max-width: 767px) {
+					margin-top: 3%;
+				}
+
+				select{
+					width: 100%;
+					height: 25px;
+					color:#59493f;
+				}
+				button{
+					margin: 5% 0px;
+					width: 100%;
+					padding: 5px 0;
+					border-radius: 25px;
+					background-color: #59493f;
+					color:#fff;
+					border:0px;
+					&:hover{
+						background-color: #f1ece4;
+						color:#59493f;
+					}
+				}
+			}
+			.case_ing{
+				margin-top: 6%;
+				font-size: 14px;
+				border-left: 5px solid #59493f;
+				color: #59493f;
+				padding-left: 10px;
+				@media screen and (max-width: 767px) {
+					font-size: 10px;
+					margin: 2% 0 5%;
+					background-image: url("../src/image/funded/sports_ouen.png");
+					background-size: 30%;
+					background-repeat: no-repeat;
+					background-position: right bottom;
+				}
+
+			}
+		}	
+	}
+	.progress{
+		margin-top: 3%;
+		padding: 0 2%;
+		background-image: url("../src/image/funded/deco-wood-01.gif");
+		background-repeat: no-repeat;
+		background-position: 20px 3px;
+		@media screen and (max-width: 767px) {
+			background-size: 20%;
+			background-position: 10px -12px;
+		}
+		.progress_bar{
+			width: 100%;
+			height: 20px;
+			background-color: #ddd;
+			border-radius: 25px;
+			position: relative;
+			margin-top: 7.5%;
+			.bar{
+				position: absolute;
+				height: 20px;
+				border-radius: 25px;
+				background-color: #9BC044;
+				.running_man{
+					width: 70px;
+					vertical-align: middle;
+					position: absolute;
+					bottom: 20px;
+					right: 0;
+					@media screen and (max-width: 767px) {
+						width: 30px;
+					}
+				}
+
+			}
+		}
+		.amt{
+			line-height: 3;
+			font-size: 16px;
+			text-align: center;
+			color: #00561f;
+			
+			;
+
+		}
+	}
+
+}
+
+// nav=================================================
+
+
+.main-nav{
+	background-color: #f1ece4;
+	width: 100%;
+	height: 65px;
+	@media screen and (max-width: 767px) {
+		height: 60px;
+	}
+	.full-wrapper{
+		margin: auto;
+		overflow: hidden;
+		.inner-nav{
+			ul{
+				list-style: none;
+				li{
+					display: block;
+					float: left;
+					// padding: 20px 10px 15px;
+					text-align: center;
+					width: 15%;
+					@media screen and (max-width: 767px) {
+						font-size: 12px;
+					}
+
+					a{
+						display: inline-block;
+						// width: 100%;
+						padding-bottom: 5px;
+						padding: 20px 0 23px;
+						color:#59493f;
+						&:hover{
+							border-bottom:5px solid #59493f;
+							padding: 20px 0 18px;
+						}
+					}
+				}
+				.donate_nav{
+					width: 30%;
+					float: right;
+					padding: 0;
+					background-color: #FFF;
+					position: relative;
+					.want_donate{
+						width: 100%;
+						font-size: 18px;
+						text-align: center;
+						color: #fff;
+						background-color: #59493f;
+						border: 0px;
+						position: absolute;
+						bottom: -70px;
+						top: 0;
+						right: 0;
+						left: 0;
+						@media screen and (max-width: 767px) {
+							bottom: -60px;
+						}
+						&:hover{
+							background-color: #f1ece4;
+							color: #59493f;
+						}
+
+					}
+
+				}
+			}
+		}
+	}
+}
+
+
+// case_content=================================================================================
+
+.case_content{
+	width: 100%;
+	// background-color: steelblue;
+	.content_title{
+		width: 95%;
+		margin: 0 2.5% ;
+		.title{
+			font-size: 24px;
+			line-height: 2;
+			margin-top: 5%;
+			margin-bottom: 3%;
+			border-bottom: 2px solid #59493f;
+		}
+	}
+
+	.content_txt{
+
+		.content_item{
+			padding: 0 1.5%;
+			.txt{
+				font-size: 14px;
+				text-indent: 2.2em;
+				line-height: 2.1;
+			}
+		}
+		.content_img{
+			img{
+				width: 100%;
+			}&:last-child{
+				margin-top: 8%;
+			}
+		}
+	}
+
+
+
+	.food{
+		.food_title{
+			margin:2.5% 0;
+			font-size: 18px;
+		}
+		.food_item{
+			overflow: hidden;
+			.food_img1{
+				height: 130px;
+				margin: auto;
+				display: table;
+			}
+			.food_img2{
+				width: 85%;
+				margin: 5% auto 20%;
+				@media screen and (max-width: 767px) {
+					width: 60%;
+					margin: 5% auto 20%;
+				}
+				
+
+				p{
+					display: block;
+					max-height: 130px;
+					background-color: #1e8600;
+					padding: 30px 10px 50px;
+					text-align: center;
+					border-radius: 50%;
+					line-height: 1.5;
+					color: #fff;
+					font-size: 14px;
+					
+					span{
+						width: 100%;
+						padding: 0 35%;
+						border-bottom:1px solid #ccc;
+						
+					}
+				}
+
+			}
+		}
+	}
+
+}
+
+.food_hr{
+			width: 100%;
+		}
+
+
+
+// 進度回報========================================
+
+.progress_return{
+	width: 100%;
+	// background-image: url("../src/image/funded/deco-mainvisual-01.gif");
+	// // background-size: 40%;
+	// background-repeat: no-repeat;
+	// background-position: right top; 
+	
+	h2{
+		text-align: center;
+		line-height: 4;
+		background-image: url("../src/image/funded/deco-mainvisual-01.gif");
+		background-size: 20%;
+		background-repeat: no-repeat;
+		background-position: 80% center; 
+		@media screen and (max-width: 767px) {
+			font-size: 24px;
+			padding: 3%;
+			line-height: 3;
+		}
+	}
+	.type_1{
+		width: 80%;
+		margin-bottom: 5%;
+		padding: 0 10% 10%;
+		background-image: url("../src/image/funded/bg_foot01.png"), url("../src/image/funded/img_1400_sub.png");
+		background-repeat: no-repeat;
+		background-position: left bottom, right bottom;
+		.type_img{
+			img{
+				width: 100%;
+			}
+		}
+		.type_txt{
+			.title{
+				text-align: left;
+				color: #362e2b;
+				margin: 3% 0;
+				.date{
+					display: inline-block;
+					float: right;
+					// text-align: right;
+					font-size: 14px;
+					color: #7e6b5a;
+				}
+			}
+			.content{
+				font-size: 16px;
+				color: #59493f;
+				line-height: 2;
+
+			}
+
+		}
+
+	}
+	.type_2{
+		width: 80%;
+		margin: 0 auto;
+		padding-bottom: 15%;
+		background-image: url("../src/image/funded/bg_foot02.png"), url("../src/image/funded/img_830_sub.png");
+		background-repeat: no-repeat;
+		background-position: center bottom , right bottom;
+
+		.type_img{
+			img{
+				width: 95%;
+			}
+		}
+		.type_txt{
+			.title{
+				text-align: left;
+				color: #362e2b;
+				margin: 5% 0;
+				.date{
+					display: inline-block;
+					float: right;
+					// text-align: right;
+					font-size: 14px;
+					color: #7e6b5a;
+				}
+			}
+			.content{
+				font-size: 16px;
+				color: #59493f;
+				line-height: 2;
+			}
+
+		}
+
+	}
+	.type_3{
+		width: 80%;
+		margin: 0 auto;
+		padding-bottom: 15%;
+		background-image: url("../src/image/funded/bg_foot08.png"),url("../src/image/funded/img_500_sub.png");
+		background-repeat: no-repeat;
+		background-position: center bottom , left 300px;
+		.type_img{
+			float: right;
+			img{
+				width: 95%;
+			}
+		}
+		.type_txt{
+			.title{
+				text-align: left;
+				color: #362e2b;
+				margin: 5% 0;
+				.date{
+					display: inline-block;
+					float: right;
+					// text-align: right;
+					font-size: 14px;
+					color: #7e6b5a;
+				}
+			}
+			.content{
+				font-size: 16px;
+				color: #59493f;
+				line-height: 2;
+			}
+
+		}
+
+	}
+
+
+}
+
+
+
+
+//message====================================================
+.message{
+	width: 80%;
+	margin: auto;
+	
+	h2{
+		text-align: center;
+		line-height: 3;
+		background-image: url("../src/image/funded/deco-denim-01.png");
+		background-size: 30%;
+		background-repeat: no-repeat;
+		background-position: left center; 
+		@media screen and (max-width: 767px) {
+			font-size: 24px;
+			padding: 3%;
+			line-height: 2;
+		}
+	}
+.message_form{
+		margin: auto;
+		margin-bottom: 5%;
+		position: relative;
+
+	.message_box{
+		width: 100%;
+		padding: 3% 4% 2% 2%;
+		margin-bottom: 2%;
+		border-radius: 15px;
+		border:1px solid #ddd0bb;
+		.mem_photo{
+			text-align: right;
+			box-sizing:border-box;
+			padding:  2% 2%;
+			overflow: hidden;
+			
+			img{
+				width: 100%;
+				transform: scale(1.2);
+				border-radius: 50%;
+				// display: block;
+			}
+			
+		}
+		.mem_txt{
+			.content{
+				font-size: 16px;
+				line-height: 1.5;
+				background-color: #ddd0bb;
+				border-radius: 15px;
+				padding: 2%;
+				margin-left: 3%;
+				position: relative;
+
+				 @media screen and (max-width: 767px) {
+						font-size: 14px;
+						padding: 3%;
+					}
+				&:before{
+					content: '';
+				    display: inline-block;
+				    width: 0;
+				    height: 0;
+				    border: 13px solid transparent;
+				    border-top-color: #ddd0bb;
+				    border-right-color: #ddd0bb;
+				    position: absolute;
+				    left: -4%;
+				    @media screen and (max-width: 767px) {
+						content: '';
+					    display: inline-block;
+					    width: 0;
+					    height: 0;
+					    border: 9px solid transparent;
+					    border-top-color: #ddd0bb;
+					    border-right-color: #ddd0bb;
+					    position: absolute;
+					    left: -6%;
+							 
+					}
+				}
+				.date{
+					font-size: 12px;
+					text-align: right;
+					display: block;
+				}
+				.report{
+					width: 4%;
+					vertical-align: bottom;
+					cursor:pointer;
+				}
+				.click{
+					.report path{
+						fill: red;
+					}
+				}
+				.click circle{
+					stroke:red;
+				}
+			}
+		}
+// 留言表單================================================
+	}
+	// .message_form{
+	// 	margin: auto;
+	// 	margin-bottom: 5%;
+		.msg_box{
+			background-color: #f1ece4;
+			border-radius: 15px;
+			.mem_photo{
+				text-align: right;
+				box-sizing:border-box;
+				padding: 2% 2%;
+				img{
+					width: 100%;
+					border-radius: 50%;
+					display: block;
+				}
+			}
+			.mem_txt{
+				.content{
+					width: 92%;
+					font-size: 16px;
+					background-color: #fff;
+					padding: 2%;
+					text-align: left;
+					font-size: 14px;
+					font-weight: 200;
+					outline:none;
+				}
+			}
+		}
+		button{
+			float: right;
+			margin: 2% 1% 0;
+			width: 80%;
+			padding: 1%;
+			color:#fff;
+			font-size: 16px;
+			background-color: #a6937c;
+			border:0px;
+			&:hover{
+				background-color: #FFF;
+				color: #a6937c;
+				box-shadow: 0px 2px 8px #aaa;
+
+			}
+		}
+	// }
+	.report_box{
+		width: 50%;
+		border-radius: 5px;
+		border: 1px solid #a6937c;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-left: 25%;
+		margin-top: 25%;
+		box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .5);
+		display: none;
+		@media screen and (max-width: 767px) {
+			width: 80%;
+			margin-left: 10%;
+		}
+		.report_title{
+			padding: 10px;
+			background-color: #a6937c;
+			position: relative;
+			color: #fff;
+			@media screen and (max-width: 767px) {
+				p{
+					font-size: 16px;
+				}
+			}
+
+			.close{
+				position: absolute;
+				right: 10px;
+				top: 0;
+				margin-top: 5px;
+				font-size: 24px;
+				cursor:pointer;
+				@media screen and (max-width: 767px) {
+					font-size: 20px;
+					margin-top: 10px;
+				
+				}
+			}
+		}
+		.report_detail{
+			padding: 10px;
+			background-color: #fff;
+			@media screen and (max-width: 767px) {
+				p{
+					font-size: 16px;
+				}
+			}
+			ul{
+				padding: 20px;
+				li{
+					display: block;
+					@media screen and (max-width: 767px) {
+						font-size: 14px;
+					}
+				}
+			}
+			button{
+				margin: auto;
+				width: 100%;
+			}
+		}
+
+	}
+}
+}
+	

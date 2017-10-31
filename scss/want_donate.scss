@@ -1,0 +1,300 @@
+@charset "UTF-8";
+@import "mixins/setting";
+// 基本設定
+
+
+//手機
+@include rwd_vivi(max-width,767,xs,12);
+//手機以上
+@include rwd_vivi(min-width,768,sm,12);
+
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+button,select,textarea,input{
+	outline:none;
+}
+.clear{
+	clear: both;
+}
+body{
+	background-image: url("../src/image/cart/cart-bg.png");
+}
+
+
+$max-width :960px;
+
+.want_donate{
+	max-width: $max-width;
+	margin: auto;
+	margin-top: 3%;
+	@media screen and (max-width: 767px) {
+		margin-top: 18%;
+	}
+
+	.donate_title{
+		text-align: center;
+		line-height: 1.8;
+		margin: 2.5% 0;
+		color: #59493f;
+		h2{
+			color: #362e2b;
+			font-weight: 400;
+		}
+		h3,h4{
+			font-weight: 300;
+		}
+		@media screen and (max-width: 767px) {
+			h2{
+				font-size: 24px;
+			}
+			h3{
+				font-size: 16px;
+			}
+			h4{
+				font-size: 12px;
+			}
+		}
+		h4{
+			span{
+				color:#a40000;  
+			}
+		}
+
+	}
+
+
+
+
+
+	.donate_info{
+		padding: 3%;
+		box-sizing:border-box;
+		ul{
+			width: 100%;
+			border: 3px solid #759944;
+			padding-right: 2.5%;
+			box-sizing:border-box;
+			.dib{
+				display: inline-block;
+				margin-bottom: 1.5em;
+			}
+			.db{
+				display: block;
+				margin: 0 2.5% 1.5%;
+				.ta{
+					width: 100%;
+					padding: 5px;
+					border: 1px solid #ccc;
+					resize: none;
+				}
+			}
+			.your_itme{
+				margin: 2% 0;
+				padding: 0.4% 2%;
+				letter-spacing:4px;
+				color: #fff;
+				background-color: #759944;
+			}
+			.item_content{
+				p{
+					line-height: 1.7;
+					letter-spacing:3px;
+					@media screen and (max-width: 767px) {
+						font-size: 12px;
+					}
+				}
+
+			}
+			.group_3{
+				padding: 0 1.5%;
+				letter-spacing:2px;
+				&:nth-child(3){
+					margin-left: 2.5%;
+					font-weight: 600;
+					color: #759944;
+				}
+				&:nth-child(4){
+					border-right: 3px solid #ccc;
+					border-left: 3px solid #ccc;
+				}
+				select{
+					border: 1px solid #ccc;
+				}
+				.fa-question-circle{
+					cursor:pointer;
+				}
+				@media screen and (max-width: 767px) {
+						font-size: 12px;
+					}
+			}
+			.remark{
+				color: #555;
+				span{
+					color: #999;
+					font-size: 10px;
+				}
+				.fa{
+					font-weight: 900;
+					color:#759944;
+					font-size: 18px;
+					margin: 0 1%;
+
+				}
+			}
+		}
+	}
+	.donate_back{
+		width: 100%;
+		padding: 3%;
+		box-sizing: border-box;
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		position: relative;
+		.title{
+			color: #555;
+			margin: 2% 0;
+			span{
+				color: #999;
+				font-size: 10px;
+			}
+			.fa{
+				font-weight: 900;
+				color:#759944;
+				font-size: 18px;
+				margin: 0 1%;
+			}
+		}
+		.symbol{
+			position: absolute;
+			line-height: 2;
+			padding: 10px;
+			margin-top: -0.6%;
+			font-size: 24px;
+			font-weight: bold;
+			color: #759944;
+			@media screen and (max-width: 767px) {
+				margin-top: -1.5%;
+			}
+
+		}
+		.order_sum{
+			border: 1px solid #759944;
+			color: #759944;
+			background-color: #FFF;
+			height: auto;
+			margin: 0 15px 0 0;
+			padding-left: 3.5%;
+			font-size: 26px;
+			font-weight: bold;
+			line-height: 2;
+			vertical-align: middle;
+			display: inline-block;
+			box-sizing: border-box;
+			border-radius: 5px;
+			@media screen and (max-width: 767px) {
+				width: 100%;
+				padding-left: 10%;
+			}
+		}
+		.pay_way_radio{
+			position: absolute;
+			left: 4%;
+			margin-top: 2.5%;
+			@media screen and (max-width: 767px) {
+				margin-top: 3.5%;
+				margin-left: 2%;
+			}
+
+		}
+		.pay_way_label{
+			display: block;
+			border:1px solid #ccc;
+			padding: 2% 2% 2% 3.5%;
+			font-size: 14px;
+			transition: 0.3s ease-out; 
+			@media screen and (max-width: 767px) {
+				padding-left: 9%;
+			}
+		}
+		.border_bottom{
+			border-bottom:0px;
+		}
+		.pay_way_click + .pay_way_label{
+			border:1px solid #759944;
+			transition: 0.3s ease-in; 
+		}
+
+		.donate_detail{
+			margin-top: 3%;
+			display: none;
+			
+			.mem_info{
+				width: 100%;
+				padding: 1.5%;
+				border: 1px solid #ccc;
+				margin-top:2.5%;
+				box-sizing:border-box;
+				td{
+					.td_input{
+						width: 100%;
+						padding: 15px;
+						box-sizing: border-box;
+						border: none;
+					}
+					.ym{
+						padding: 14px;
+						box-sizing:border-box;
+						width: 80px;
+						@media screen and (max-width: 767px) {
+							width: 40px;
+							border:0px;
+						}
+					}
+
+				}
+				.td_title{
+					width:90px;
+					padding: 10px;
+					background-color: #F9F9F9;
+					letter-spacing:2px;
+				}
+				
+			}
+			.pay_for_card , .pay_for_atm{
+				box-sizing:border-box;
+			}
+			.btn_green{
+				margin-top: 2%;
+				width: 100%;
+				letter-spacing: 5px;
+			}
+			
+		}
+		
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
