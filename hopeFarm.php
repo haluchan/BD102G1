@@ -184,7 +184,7 @@ while( $eventRow = $event->fetchObject()){
 <!-- 抓資料 -->
 <?php
 require_once("php/connectGrowing_hope.php");
-$sql = " select * from count_donate_total where event_status='DI' order by dday";
+$sql = " select * from count_donate_total where event_status='DI' order by dday LIMIT 6";
 $event = $pdo->query( $sql);
 while( $eventRow = $event->fetchObject()){
 	// count bar
