@@ -337,7 +337,10 @@
 }
 #btn1:hover{
 	background-color: white;
-	color:black;
+	color:#699b34;
+}
+#btn2:hover{
+	color: #699b34;
 }
 .content{
 	position: absolute;
@@ -352,8 +355,6 @@
 	top: 23.5vh;
 	right: 19.5vh;
 	position: absolute;
-/* 	top: -18px; */
-
 }
 .windmill_bot{
 	width: 23px;
@@ -404,13 +405,14 @@
 }
 .land{
 	width: 100vw;
-	height: 100px;
+/* 	height: 100px; */
 	display: none;
 	position: absolute;
-	bottom: -10px;
+	top: 88%;
+	left: 5%;
 	z-index: 1;
 	box-sizing: border-box;
-	padding-left: 5vw;
+/* 	padding-left: 5vw; */
 
 }
 .carrot1, .carrot2, .carrot3, .carrot4, .carrot5, .carrot6,
@@ -501,10 +503,16 @@
     padding-right: 5%;
     padding-left: 5%;
     box-sizing: border-box;
-
 	}
-	.modal .one, .two, .three:hover{
+	.seedFirst:hover, .seedSecond:hover, .seedThird:hover {
+		display: block;
+		box-shadow: 1px 1px 5px black;
+	}
+	.modal #btn2, .one, .two, .three:hover{
 		cursor: pointer;
+	}
+	.btn2{
+		padding-top: 20px;
 	}
 	.title{
 		text-align: center;
@@ -566,6 +574,7 @@
 	width: 100%;
 	float: left;
 	margin: auto;
+	padding-top: 20px;
 }
 .sure button{
 	width: 80px;

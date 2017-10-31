@@ -42,7 +42,6 @@ $( function() {
     });
     
   } );
-
 // windmill
 $(document).ready(function(){
   var angle = 0;
