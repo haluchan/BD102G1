@@ -99,7 +99,7 @@ session_start(); ?>
 					<img src="src/image/index/4_cloud_buttom.svg" class="cloud margin-top-80" data-depth=".8">
 					<img src="src/image/index/logo2.svg" class="logo">
 					<img src="src/image/index/14_farmer_o.svg" class="farm">
-					<img src="src/image/index/16_farmer_close.svg" class="farm">
+					<!-- <img src="src/image/index/16_farmer_close.svg" class="farm"> -->
 			
 					<div class="title_info">
 						<h1 class="h1">發揚農民心血的募資平台</h1>

@@ -11,4 +11,5 @@ session_start();
  * @version $Id$
  */
 session_destroy();
+header("location:../index.php");
 ?>

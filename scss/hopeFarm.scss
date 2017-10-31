@@ -55,7 +55,8 @@ body{
 
 	.view{
 		width: 100%;
-		background-image: url("../src/image/hopeFarm/firstBg.jpg");
+		height: 40vw;
+		background-image: url("../src/image/hopeFarm/fBG.png");
 		background-repeat: no-repeat;
 		background-position:center;
 		background-position: top;
@@ -74,12 +75,12 @@ body{
 				.cloulds-1 img{
 					float: right;
 					width: 20%;
-					bottom: 18%;
+					//bottom: 18%;
 					position: absolute;
 					animation: clou 20s -1s linear infinite alternate;
 				}
 				.cloulds-2 img{
-					width: 18%;
+					width: 6%;
 					left: 28%;
 					position: absolute;
 					bottom: 38%;
@@ -116,20 +117,21 @@ body{
 			}
 			
 			
-			.for_h2{
-				width: 43%;
-				margin-top: 19%;
-				margin-right: 16%;
-				float: right;
-				margin-bottom: 20%;
-				h2{
-					width: 100%;
-					float: right;
-					margin: 1%;
-					color: #fff;
-					font-weight: normal;
-				}
-			}
+			// .for_h2{
+
+			// 	width: 43%;
+			// 	margin-top: 19%;
+			// 	margin-right: 16%;
+			// 	float: right;
+			// 	margin-bottom: 20%;
+			// 	h2{
+			// 		width: 100%;
+			// 		float: right;
+			// 		margin: 1%;
+			// 		color: #fff;
+			// 		font-weight: normal;
+			// 	}
+			// }
 		}
 	}
 	.hopefarmrwd-select{
@@ -405,7 +407,7 @@ body{
 		margin: auto;
 		margin-top: 10%;
 		.mark_title{
-			margin-bottom: 4%;
+			margin-bottom: -4%;
 				ul{
 					text-align: center;
 					li{
@@ -458,8 +460,11 @@ body{
 				display: none;
 				.mark_item{
 					margin: auto;
+
 					a{
+
 						.item-box{
+							margin-top: 10%;
 							position: relative;
 							.item-box-shadow{
 								background-color: #fff;
@@ -475,10 +480,9 @@ body{
 									
 									 .box-imgToHover{
 									 	overflow: hidden;
-									 	
+									 	border-radius: 5%;
 									 	.imgToHover{
 									 		transition:all 1.5s;
-									 		overflow: hidden;
 									 		&:hover{
 									 			transform: scale(1.5);
 									 		}
@@ -570,15 +574,15 @@ body{
 						}
 					}
 					
-					a:nth-child(4) .item-box{
-						margin-top: 10%;
-					}
-					a:nth-child(5) .item-box{
-						margin-top: 10%;
-					}
-					a:nth-child(6) .item-box{
-						margin-top: 10%;
-					}
+					// a:nth-child(4) .item-box{
+					// 	margin-top: 10%;
+					// }
+					// a:nth-child(5) .item-box{
+					// 	margin-top: 10%;
+					// }
+					// a:nth-child(6) .item-box{
+					// 	margin-top: 10%;
+					// }
 				}
 			}
 			.c1{
@@ -818,8 +822,6 @@ body{
 					.carousel_container{
 						.carouselson{
 							.carousel_shadow{
-
-								
 									.c_left{
 										img{}
 									}
@@ -865,34 +867,21 @@ body{
 			//========//latest
 			.purpose{
 				.purpose_img{
-					img{
-
-					}
+					img{}
 				}
 				.purpose_txt{
 					h2{}
 					.purp{
-						&:nth-child(2):before{
-						}
-						&:nth-child(2){
-						}
-						&:nth-child(3){
-						}
-						&:nth-child(4):before{
-						}
-						&:nth-child(4){
-						}
-						&:nth-child(5){
-						}
-						&:nth-child(6):before{
-						}
-						&:nth-child(6){
-						}
-						&:nth-child(7){
-						}
-
+						&:nth-child(2):before{}
+						&:nth-child(2){}
+						&:nth-child(3){}
+						&:nth-child(4):before{}
+						&:nth-child(4){}
+						&:nth-child(5){}
+						&:nth-child(6):before{}
+						&:nth-child(6){}
+						&:nth-child(7){}
 					}
-					
 				}
 			}
 			// ========//purpose
@@ -924,7 +913,6 @@ body{
 										.square{
 											img{}
 										}
-										
 									}
 									.box-fontt{
 										.txt_name{
@@ -948,18 +936,14 @@ body{
 											margin-top: 2px;
 											text-align: center;
 											width: 100%;
-											
 										}
 									}
 								}
 							}
-
 						}
-
 					}
 					.mark_deco{
-						img{
-						}
+						img{}
 					}
 					.mark_more{
 						img{}
@@ -977,15 +961,12 @@ body{
 										img{}
 										.square{
 												img{}
-
 										}
 										.square:before {}
 									}
 									.box-fontt{
 										.txt_name{}
-										.txt_title{
-
-										}
+										.txt_title{}
 										.JQellipsis{}
 										.bar{}
 										.coP{
@@ -995,21 +976,13 @@ body{
 												width: 100%;
 												text-align: center;
 											}
-										
-
 										}
-										
-										
-										
 									}	
 								}
 							}
 						}
 					}
 				}
-				// .c4{
-				// 	display: block;
-				// }
 			}
 			//========//bookmark
 			.risk{
@@ -1020,25 +993,13 @@ body{
 			//========//section06
 			.risk_container{
 				.risk_range{
-					
 					.risk_txt{
-						
 						p{
-							&:before{
-							
-							}
-							&:nth-child(2){
-							
-							}
-							&:nth-child(3){
-								
-							}
-							&:nth-child(4){
-								
-							}
-							&:nth-child(5){
-								
-							}
+							&:before{}
+							&:nth-child(2){}
+							&:nth-child(3){}
+							&:nth-child(4){}
+							&:nth-child(5){}
 						}
 					}
 					.risk_img{

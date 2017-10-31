@@ -11,7 +11,7 @@ session_start();
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
+<!--    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
 
  <!-- plugin -->
 <link rel="stylesheet" type="text/css" href="src/libs/slick/slick/slick.css"/>
@@ -69,7 +69,7 @@ try {
 
 	require_once("php/connectGrowing_hope.php");
 
-	$eventInfo = "select * from activity a , growing_hope.activityPhoto_vu ap where a.act_no=ap.act_no and ap.act_no = $act_no ";
+	$eventInfo = "select * from activity a , activityPhoto_vu ap where a.act_no=ap.act_no and ap.act_no = $act_no ";
 
 	$eventInsideInfo = $pdo->query( $eventInfo );
 	
@@ -115,7 +115,7 @@ try {
 						<p>農場主人：<?php echo $eventRow->act_host ?></p>	
 					</div>
 					<div class="main-img">
-							<img src="src/image/event-inside-page/main-img.png" alt="">
+							<img src="src/image/event-inside-page/<?php echo $eventRow->act_no,2;?>.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -202,7 +202,7 @@ try {
 
 
 	
-	for ($i=0 ; $i<$photosLength ; $i++) { 
+	for ($i=3 ; $i<$photosLength ; $i++) {
 		// echo $eventRow->act_no, $photosArry[$i];
 
 
@@ -253,14 +253,14 @@ try {
 		</div>
 	</div>
 
-	
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
 <script type ="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type ="text/javascript" src="src/libs/slick/slick/slick.min.js"></script>
 
 <script type="text/javascript" src="src/libs/lightbox2-master/src/js/lightbox.js" ></script>
 
-<script type="text/javascript" src="src/libs/jquery.sweet-modal-1.3.3/min/jquery.sweet-modal.min.js"></script>
+<!--<script type="text/javascript" src="src/libs/jquery.sweet-modal-1.3.3/min/jquery.sweet-modal.min.js"></script>-->
 
 <script type="text/javascript" src="js/header.js"></script>
 

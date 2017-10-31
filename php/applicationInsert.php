@@ -70,8 +70,8 @@
 				}
 				require_once("connectPon.php");//之後要換成connectGrowing_hope.php
 
-	    		$sql = "insert into event(event_no,event_name,event_idno,event_account,event_birth,event_gender,event_add,event_tel,event_mail,event_need,event_date,event_title,event_title_2,event_dept,event_video,event_txe_title,event_txt,event_pho,event_plant,event_status)
-	    		values(:event_no, :name, :id,:account,:birth,:gender, :add, :tel, :mail, :need,current_date(),:title, :title_2, :dept, :cover,:txtTitle, :txt,:pho, :plant, :status)";
+	    		$sql = "insert into event(event_no,event_name,event_idno,event_account,event_birth,event_gender,event_add,event_tel,event_mail,event_need,event_date,event_title,event_title_2,event_dept,event_video,event_txe_title,event_txt,event_pho,event_plant,event_status,event_title_pho)
+	    		values(:event_no, :name, :id,:account,:birth,:gender, :add, :tel, :mail, :need,current_date(),:title, :title_2, :dept, :video,:txtTitle, :txt,:pho, :plant, :status, :cover)";
 				$event=$pdo->prepare($sql);
 				
 				$event->bindValue(":event_no",null);
@@ -94,6 +94,7 @@
 				$event->bindValue(":dept",$_REQUEST["dept"]);
 				$event->bindValue(":need",$_REQUEST["need"]);
 				$event->bindValue(":account",$_REQUEST["account"]);
+				$event->bindValue(":video",$_REQUEST["covernouse"]);
 				$event->bindValue(":status","F");
 				$event->execute();
 

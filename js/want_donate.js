@@ -1,5 +1,7 @@
 $(function(){
 
+	
+
 	$(".pay_way_radio").on("click",function(){
 		$('.pay_way_radio').removeClass("pay_way_click");
 		$(this).addClass("pay_way_click");
