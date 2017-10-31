@@ -19,7 +19,15 @@ session_start();
 <body>
 	<?php require_once('Header.php'); ?>
 		<?php 
-		$eve=$_SESSION["mem_no"];
+		// $eve=$_SESSION["mem_no"];
+		if( isset($_SESSION["mem_no"]) === false){
+			$eve=99;
+		}else{
+			$eve=$_SESSION["mem_no"];
+		}
+
+
+
 		// if( isset($_SESSION["mem_no"]) === false){
 		  // 		$_SESSION["where"] = $_SERVER["PHP_SELF"];
 		//   		echo "<script>alert('還沒登入喔');location=history.back(-1);</script>";
@@ -28,20 +36,22 @@ session_start();
 
 			require_once("php/connectBeck.php");
 	
-	 		$sql = "select dona_price,date(dona_date) as dona_date,event_title
-				from growing_hope.event, donate 
+	 		$sql = "select donate.dona_price,date(donate.dona_date) as dona_date,event.event_title
+				from bd102g1.event, bd102g1.donate 
 				where event.event_no = donate.event_no 
-				and mem_no = '$eve';"; 
+				and donate.mem_no = $eve"; 
 	    
 	 	  	$event= $pdo->query($sql);	
 		
 			// while($resultset = $event ->fetchObject()) {
 	 	  	$resultset = $event ->fetchObject();
 			// $mem_no = $resultset->mem_no ;
-			$sql = "select pro_name,date(order_date) as order_date,orderItem_qty
-				from orderItem,ordermaster
-				where orderitem.order_no=ordermaster.order_no
-				 and mem_no= '$eve' and pro_no not in(13,14);";
+			$sql = "select orderItem.pro_name, date(ordermaster.order_date) as order_date, orderItem.orderItem_qty
+				FROM orderItem, ordermaster
+				WHERE ordermaster.order_no = orderItem.order_no
+				AND ordermaster.mem_no =$eve
+				AND orderItem.pro_no NOT 
+				IN ( 13, 14 ) ";
 	    
 	 	  	$event= $pdo->query($sql);	
 		

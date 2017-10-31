@@ -324,8 +324,8 @@
 	.show img{
 		/* -webkit-border-radius:50%;
 		overflow: hidden;  */
-		width: 26vmin;
-		min-width: 200px;
+		/* width: 26vmin; */
+		/* min-width: 200px; */
 		position: relative;
 	}
 	
@@ -358,19 +358,19 @@
 	}
 	@media screen and (max-width: 767px) {
 		.show{
-		margin:5% 14%;
+		/* margin:5% 0; */
 		position: relative;
 		float: left;
-		display: block;
+		/* display: block; */
 
 	}
 	}
 	@media screen and (min-width: 768px) {
 		.show{
-		margin:5% 7% ;
+		/* margin:5% 0 ; */
 		position: relative;
 		float: left;
-		display: block;
+		/* display: block; */
 
 	}	
 	}

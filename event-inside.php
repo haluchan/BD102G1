@@ -69,7 +69,7 @@ try {
 
 	require_once("php/connectGrowing_hope.php");
 
-	$eventInfo = "select * from activity a , growing_hope.activityPhoto_vu ap where a.act_no=ap.act_no and ap.act_no = $act_no ";
+	$eventInfo = "select * from activity a , activityPhoto_vu ap where a.act_no=ap.act_no and ap.act_no = $act_no ";
 
 	$eventInsideInfo = $pdo->query( $eventInfo );
 	

@@ -81,7 +81,7 @@ session_start();
 <?php try {
 			require_once("php/connectBeck.php");
 	
-    $sql = "select * from activity a , growing_hope.activityPhoto_vu ap where a.act_no=ap.act_no and ap.act_no and act_date > '2017-10-25'";
+    $sql = "select * from activity a , activityPhoto_vu ap where a.act_no=ap.act_no and ap.act_no and act_date > '2017-10-25'";
     
     $activity = $pdo->query($sql);	
 	
@@ -159,7 +159,7 @@ session_start();
 
 <?php 
 
-	$overdate = "select * from activity a , growing_hope.activityPhoto_vu ap where a.act_no=ap.act_no and act_date < '2017-06-20 00:00:00'";
+	$overdate = "select * from activity a , activityPhoto_vu ap where a.act_no=ap.act_no and act_date < '2017-06-20 00:00:00'";
    
     $over_act = $pdo->query($overdate);	
 
