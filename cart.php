@@ -247,24 +247,24 @@ if (isset($_REQUEST["cartCount"]) === false) {
 							收件人姓名
 							<span class="required">*</span><br>
 						</label>
-						<input class="form-control" name="ShippingInfo_name" id="ShippingInfo_full_name" type="text" value="<?php echo $mem_name; ?>"><br>
+						<input class="form-control" name="ShippingInfo_name" id="ShippingInfo_full_name" type="text" required value="<?php echo $mem_name; ?>"><br>
 						<label for="ShippingInfo_full_phone"  class="required">
 							收件人電話
 							<span class="required">*</span><br>
 						</label>
-						<input class="form-control" name="ShippingInfo_phone" id="ShippingInfo_full_phone" type="text" maxlength="10" value="<?php echo $mem_phone; ?>">
+						<input class="form-control" name="ShippingInfo_phone" id="ShippingInfo_full_phone" type="text" required maxlength="10" value="<?php echo $mem_phone; ?>">
 					</div>
 					<div class="form-group">
 						<label for="ShippingInfo_full_name" class="required">
 							電子信箱
 							<span class="required">*</span><br>
 						</label>
-						<input class="form-control" name="ShippingInfo_mail" id="ShippingInfo_full_mail" type="text" value="<?php echo $mem_mail; ?>"><br>
+						<input class="form-control" name="ShippingInfo_mail" id="ShippingInfo_full_mail" type="text" required value="<?php echo $mem_mail; ?>"><br>
 						<label for="ShippingInfo_full_address" class="required">
 							地址
 							<span class="required">*</span><br>
 						</label>
-						<input class="form-control" name="ShippingInfo_add" id="ShippingInfo_full_address" type="text" value="<?php echo $mem_add; ?>">
+						<input class="form-control" name="ShippingInfo_add" id="ShippingInfo_full_address" type="text" required value="<?php echo $mem_add; ?>">
 					</div>
 			
 			</div>
@@ -591,12 +591,16 @@ payWay.addEventListener("change" ,
 	var ShippingInfo_full_address =document.getElementById("ShippingInfo_full_address").value;
 
 	checkToPay.addEventListener('click', function pushSubmit() {
+        if(document.getElementById("spanLogin").innerHTML=="註冊/登入"){
 
-		if(ShippingInfo_full_name == false && ShippingInfo_full_phone == false && ShippingInfo_full_mail == false && ShippingInfo_full_address == false ){
-			alert("還有東西沒填完喔！！");
-		}else{
-			document.getElementById("checkToPaySubmit").submit();
-		}
+            alert("請先登入");
+
+//            if(ShippingInfo_full_name == false && ShippingInfo_full_phone == false && ShippingInfo_full_mail == false && ShippingInfo_full_address == false ){
+//                alert("還有東西沒填完喔！！");
+            }else{
+                document.getElementById("checkToPaySubmit").submit();
+            }
+
 	}
 	,false);
 

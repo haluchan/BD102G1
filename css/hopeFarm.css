@@ -263,8 +263,6 @@ body {
               text-decoration: none;
               cursor: pointer;
               letter-spacing: 1px;
-              -webkit-transition: .4s;
-              -o-transition: .4s;
               transition: .4s; }
             .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_btn h2:hover {
               background: #ffffff;
@@ -272,8 +270,6 @@ body {
               color: #6cbecc;
               cursor: pointer;
               letter-spacing: 1px;
-              -webkit-transition: .4s;
-              -o-transition: .4s;
               transition: .4s; }
     .containerhope .latest .carousel .slick-prev {
       left: -54px; }
@@ -382,8 +378,6 @@ body {
           padding: 10px 20px 10px 20px;
           margin: 0 0.5%;
           cursor: pointer;
-          -webkit-transition: .4s;
-          -o-transition: .4s;
           transition: .4s;
           text-align: center;
           letter-spacing: 4px; }
@@ -393,8 +387,6 @@ body {
             border: 2px solid #699c33;
             color: #ffffff;
             cursor: pointer;
-            -webkit-transition: .4s;
-            -o-transition: .4s;
             transition: .4s; }
         .containerhope .bookmark .mark_title ul .active01 {
           background: #699c33;
@@ -402,8 +394,6 @@ body {
           border: 2px solid #699c33;
           color: #ffffff;
           cursor: pointer;
-          -webkit-transition: .4s;
-          -o-transition: .4s;
           transition: .4s; }
       .containerhope .bookmark .mark_title img {
         left: 0;
@@ -418,7 +408,6 @@ body {
           position: relative; }
           .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow {
             background-color: #fff;
-            -webkit-box-shadow: 0px 0px 5px 0px #ccc;
             box-shadow: 0px 0px 5px 0px #ccc;
             border-radius: 30px;
             border: 1px solid transparent; }
@@ -431,14 +420,7 @@ body {
                 overflow: hidden;
                 border-radius: 5%; }
                 .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover .imgToHover {
-                  -webkit-transition: all 1.5s;
-                  -o-transition: all 1.5s;
-<<<<<<< HEAD
                   transition: all 1.5s; }
-=======
-                  transition: all 1.5s;
-                  overflow: hidden; }
->>>>>>> 78f69280afda35d42b5619c69f7260ddf8401abc
                   .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-img .box-imgToHover .imgToHover:hover {
                     -webkit-transform: scale(1.5);
                     -ms-transform: scale(1.5);
@@ -474,7 +456,6 @@ body {
             .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt {
               width: 100%;
               padding: 4%;
-              -webkit-box-sizing: border-box;
               box-sizing: border-box;
               float: left;
               padding-bottom: 6%;
@@ -487,7 +468,6 @@ body {
                 width: 100%;
                 margin-top: 5%;
                 overflow: hidden;
-                -o-text-overflow: ellipsis;
                 text-overflow: ellipsis;
                 white-space: nowrap; }
               .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .JQellipsis {
@@ -622,73 +602,61 @@ body {
   .col-lg-1 {
     float: left;
     width: 8.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-lg-2 {
     float: left;
     width: 16.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-lg-3 {
     float: left;
     width: 25%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-lg-4 {
     float: left;
     width: 33.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-lg-5 {
     float: left;
     width: 41.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-lg-6 {
     float: left;
     width: 50%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-lg-7 {
     float: left;
     width: 58.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-lg-8 {
     float: left;
     width: 66.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-lg-9 {
     float: left;
     width: 75%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-lg-10 {
     float: left;
     width: 83.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-lg-11 {
     float: left;
     width: 91.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-lg-12 {
     float: left;
     width: 100%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; } }
 
@@ -696,73 +664,61 @@ body {
   .col-sm-1 {
     float: left;
     width: 8.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-2 {
     float: left;
     width: 16.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-3 {
     float: left;
     width: 25%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-4 {
     float: left;
     width: 33.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-5 {
     float: left;
     width: 41.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-6 {
     float: left;
     width: 50%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-7 {
     float: left;
     width: 58.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-8 {
     float: left;
     width: 66.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-9 {
     float: left;
     width: 75%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-10 {
     float: left;
     width: 83.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-11 {
     float: left;
     width: 91.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-sm-12 {
     float: left;
     width: 100%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .containerhope .latest .carousel .carousel_container .carouselson .carousel_shadow .c_right .coName {
@@ -811,73 +767,61 @@ body {
   .col-xs-1 {
     float: left;
     width: 8.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-2 {
     float: left;
     width: 16.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-3 {
     float: left;
     width: 25%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-4 {
     float: left;
     width: 33.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-5 {
     float: left;
     width: 41.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-6 {
     float: left;
     width: 50%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-7 {
     float: left;
     width: 58.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-8 {
     float: left;
     width: 66.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-9 {
     float: left;
     width: 75%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-10 {
     float: left;
     width: 83.333333%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-11 {
     float: left;
     width: 91.666666%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .col-xs-12 {
     float: left;
     width: 100%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0 10px; }
   .containerhope {
@@ -917,8 +861,6 @@ body {
           border: 1px solid #699c33;
           background-color: #ffffff;
           cursor: pointer;
-          -webkit-transition: .4s;
-          -o-transition: .4s;
           transition: .4s;
           text-align: center;
           padding: 0 0; }
@@ -934,8 +876,6 @@ body {
           border: 1px solid #699c33;
           color: #ffffff;
           cursor: pointer;
-          -webkit-transition: .4s;
-          -o-transition: .4s;
           transition: .4s; }
           .containerhope .hopefarmrwd-select ul .active01 h2 {
             color: #ffffff; }
@@ -956,7 +896,6 @@ body {
           font-weight: 500;
           margin-bottom: 0; }
         .containerhope .purpose .purpose_txt .purp {
-          -o-text-overflow: ellipsis;
           text-overflow: ellipsis;
           font-size: 16px; }
           .containerhope .purpose .purpose_txt .purp:nth-child(2):before {
@@ -1010,7 +949,6 @@ body {
     .containerhope .bookmark .mark_container .mark_item a .item-box {
       padding: 0 7%; }
       .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow {
-        -webkit-box-shadow: 0 0 8px 0 #ccc;
         box-shadow: 0 0 8px 0 #ccc; }
         .containerhope .bookmark .mark_container .mark_item a .item-box .item-box-shadow .box-fontt .txt_name {
           margin-top: -9px;
