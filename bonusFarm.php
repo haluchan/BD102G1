@@ -14,7 +14,7 @@
 </head>
 <body>
 	<!-- 撥雲見氣球 -->
-	<!-- <div class="move_cloud">
+	<div class="move_cloud">
         <p class="opcloud1"><img src="src/image/bonusFarm/op_cloud1.png" alt=""></p>
         <p class="opcloud2"><img src="src/image/bonusFarm/op_cloud2.png" alt=""></p>
         <p class="opcloud3"><img src="src/image/bonusFarm/op_cloud3.png" alt=""></p>
@@ -33,7 +33,7 @@
       <p class="opballoon6"><img src="src/image/bonusFarm/op_balloon6.png" alt=""></p>
       <p class="opballoon7"><img src="src/image/bonusFarm/op_balloon7.png" alt=""></p>
       <p class="opballoon8"><img src="src/image/bonusFarm/op_balloon8.png" alt=""></p>
-    </div> -->
+    </div>
 
 
 	<div class="container">
